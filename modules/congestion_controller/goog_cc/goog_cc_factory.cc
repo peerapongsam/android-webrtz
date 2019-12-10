@@ -20,7 +20,7 @@ GoogCcNetworkControllerFactory::GoogCcNetworkControllerFactory(
 NetworkControllerInterface::uptr GoogCcNetworkControllerFactory::Create(
     NetworkControllerObserver* observer,
     NetworkControllerConfig config) {
-  return rtc::MakeUnique<webrtc_cc::GoogCcNetworkController>(event_log_,
+  return rtc::MakeUnique<webrtz_cc::GoogCcNetworkController>(event_log_,
                                                              observer, config);
 }
 

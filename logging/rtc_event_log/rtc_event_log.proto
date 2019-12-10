@@ -1,6 +1,6 @@
 syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
-package webrtc.rtclog;
+package webrtz.rtclog;
 
 enum MediaType {
   ANY = 0;

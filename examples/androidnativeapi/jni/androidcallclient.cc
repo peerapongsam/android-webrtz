@@ -282,5 +282,5 @@ void SetLocalSessionDescriptionObserver::OnFailure(const std::string& error) {
 static jlong JNI_CallClient_CreateClient(
     JNIEnv* env,
     const webrtz::JavaParamRef<jclass>& cls) {
-  return webrtz::NativeToJavaPointer(new webrtc_examples::AndroidCallClient());
+  return webrtz::NativeToJavaPointer(new webrtz_examples::AndroidCallClient());
 }

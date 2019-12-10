@@ -22,7 +22,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import javax.annotation.Nullable;
 import org.webrtz.ContextUtils;
-import org.webrtc.Logging;
+import org.webrtz.Logging;
 
 // WebRtcAudioManager handles tasks that uses android.media.AudioManager.
 // At construction, storeAudioParameters() is called and it retrieves

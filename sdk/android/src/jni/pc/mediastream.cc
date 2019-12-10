@@ -97,7 +97,7 @@ void JavaMediaStream::OnVideoTrackRemovedFromStream(
 }
 
 jclass GetMediaStreamClass(JNIEnv* env) {
-  return org_webrtc_MediaStream_clazz(env);
+  return org_webrtz_MediaStream_clazz(env);
 }
 
 static jboolean JNI_MediaStream_AddAudioTrackToNativeStream(

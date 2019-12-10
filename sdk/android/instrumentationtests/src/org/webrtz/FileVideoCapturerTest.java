@@ -76,7 +76,7 @@ public class FileVideoCapturerTest {
 
     final FileVideoCapturer fileVideoCapturer =
         new FileVideoCapturer(Environment.getExternalStorageDirectory().getPath()
-            + "/chromium_tests_root/sdk/android/instrumentationtests/src/org/webrtc/"
+            + "/chromium_tests_root/sdk/android/instrumentationtests/src/org/webrtz/"
             + "capturetestvideo.y4m");
     final MockCapturerObserver capturerObserver = new MockCapturerObserver();
     fileVideoCapturer.initialize(

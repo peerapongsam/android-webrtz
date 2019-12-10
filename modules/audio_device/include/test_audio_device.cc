@@ -41,7 +41,7 @@ constexpr int kFramesPerSecond = 1000 / kFrameLengthMs;
 // TestAudioDeviceModule implements an AudioDevice module that can act both as a
 // capturer and a renderer. It will use 10ms audio frames.
 class TestAudioDeviceModuleImpl
-    : public webrtc_impl::AudioDeviceModuleDefault<TestAudioDeviceModule> {
+    : public webrtz_impl::AudioDeviceModuleDefault<TestAudioDeviceModule> {
  public:
   // Creates a new TestAudioDeviceModule. When capturing or playing, 10 ms audio
   // frames will be processed every 10ms / |speed|.

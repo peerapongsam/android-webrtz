@@ -1,6 +1,6 @@
 syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
-package webrtc.neteq_unittest;
+package webrtz.neteq_unittest;
 
 message NetEqNetworkStatistics {
   // Next field number 18.

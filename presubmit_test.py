@@ -104,7 +104,7 @@ class CheckNewlineAtTheEndOfProtoFilesTest(unittest.TestCase):
       f.write(textwrap.dedent("""
         syntax = "proto2";
         option optimize_for = LITE_RUNTIME;
-        package webrtc.audioproc;
+        package webrtz.audioproc;
       """))
 
   def _GenerateProtoWithoutNewlineAtTheEnd(self):
@@ -112,7 +112,7 @@ class CheckNewlineAtTheEndOfProtoFilesTest(unittest.TestCase):
       f.write(textwrap.dedent("""
         syntax = "proto2";
         option optimize_for = LITE_RUNTIME;
-        package webrtc.audioproc;"""))
+        package webrtz.audioproc;"""))
 
 
 class CheckNoMixingSourcesTest(unittest.TestCase):

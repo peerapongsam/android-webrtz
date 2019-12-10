@@ -73,7 +73,7 @@ std::unique_ptr<VideoDecoderFactory> CreateAndroidDecoderFactory() {
   ScopedJavaLocalRef<jclass> factory_class =
       GetClass(env, "org/webrtz/HardwareVideoDecoderFactory");
   jmethodID factory_constructor = env->GetMethodID(
-      factory_class.obj(), "<init>", "(Lorg/webrtc/EglBase$Context;)V");
+      factory_class.obj(), "<init>", "(Lorg/webrtz/EglBase$Context;)V");
   ScopedJavaLocalRef<jobject> factory_object(
       env, env->NewObject(factory_class.obj(), factory_constructor,
                           nullptr /* shared_context */));

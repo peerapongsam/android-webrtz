@@ -1,6 +1,6 @@
 syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
-package webrtc.network_tester.packet;
+package webrtz.network_tester.packet;
 
 message NetworkTesterPacket {
   enum Type {

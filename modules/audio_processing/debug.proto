@@ -1,6 +1,6 @@
 syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
-package webrtc.audioproc;
+package webrtz.audioproc;
 
 // Contains the format of input/output/reverse audio. An Init message is added
 // when any of the fields are changed.

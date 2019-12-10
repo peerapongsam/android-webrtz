@@ -1,6 +1,6 @@
 syntax = "proto2";
 option optimize_for = LITE_RUNTIME;
-package webrtc.audioproc;
+package webrtz.audioproc;
 
 message Test {
   optional int32 num_reverse_channels = 1;
