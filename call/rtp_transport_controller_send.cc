@@ -20,7 +20,7 @@
 namespace webrtz {
 namespace {
 const char kTaskQueueExperiment[] = "WebRTC-TaskQueueCongestionControl";
-using TaskQueueController = webrtz::webrtc_cc::SendSideCongestionController;
+using TaskQueueController = webrtz::webrtz_cc::SendSideCongestionController;
 
 bool TaskQueueExperimentEnabled() {
   std::string trial = webrtz::field_trial::FindFullName(kTaskQueueExperiment);
@@ -34,7 +34,7 @@ std::unique_ptr<SendSideCongestionControllerInterface> CreateController(
     const BitrateConstraints& bitrate_config,
     bool task_queue_controller) {
   if (task_queue_controller) {
-    return rtc::MakeUnique<webrtz::webrtc_cc::SendSideCongestionController>(
+    return rtc::MakeUnique<webrtz::webrtz_cc::SendSideCongestionController>(
         clock, event_log, pacer, bitrate_config.start_bitrate_bps,
         bitrate_config.min_bitrate_bps, bitrate_config.max_bitrate_bps);
   }

@@ -53,7 +53,7 @@ class RefCountedObject : public T {
  protected:
   virtual ~RefCountedObject() {}
 
-  mutable webrtz::webrtc_impl::RefCounter ref_count_{0};
+  mutable webrtz::webrtz_impl::RefCounter ref_count_{0};
 
   RTC_DISALLOW_COPY_AND_ASSIGN(RefCountedObject);
 };
