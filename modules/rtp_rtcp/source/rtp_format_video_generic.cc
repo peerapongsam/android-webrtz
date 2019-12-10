@@ -15,7 +15,7 @@
 #include "modules/rtp_rtcp/source/rtp_packet_to_send.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const size_t kGenericHeaderLength = 1;
 
@@ -140,4 +140,4 @@ bool RtpDepacketizerGeneric::Parse(ParsedPayload* parsed_payload,
   parsed_payload->payload_length = payload_data_length;
   return true;
 }
-}  // namespace webrtc
+}  // namespace webrtz

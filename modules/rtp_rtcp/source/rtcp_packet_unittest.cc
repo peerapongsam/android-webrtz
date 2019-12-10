@@ -17,8 +17,8 @@ namespace {
 
 using ::testing::_;
 using ::testing::MockFunction;
-using ::webrtc::rtcp::ReceiverReport;
-using ::webrtc::rtcp::ReportBlock;
+using ::webrtz::rtcp::ReceiverReport;
+using ::webrtz::rtcp::ReportBlock;
 
 const uint32_t kSenderSsrc = 0x12345678;
 

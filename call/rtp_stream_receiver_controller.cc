@@ -13,7 +13,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpStreamReceiverController::Receiver::Receiver(
     RtpStreamReceiverController* controller,
@@ -67,4 +67,4 @@ size_t RtpStreamReceiverController::RemoveSink(
   return demuxer_.RemoveSink(sink);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SplitBySamplesTest : public ::testing::TestWithParam<NetEqDecoder> {
  protected:
@@ -167,4 +167,4 @@ INSTANTIATE_TEST_CASE_P(
                       NetEqDecoder::kDecoderPCM16Bswb48kHz_2ch,
                       NetEqDecoder::kDecoderPCM16B_5ch));
 
-}  // namespace webrtc
+}  // namespace webrtz

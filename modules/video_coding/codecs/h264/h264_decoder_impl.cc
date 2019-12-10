@@ -28,7 +28,7 @@ extern "C" {
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -348,7 +348,7 @@ int32_t H264DecoderImpl::Decode(const EncodedImage& input_image,
   VideoFrame* video_frame = static_cast<VideoFrame*>(
       av_buffer_get_opaque(av_frame_->buf[0]));
   RTC_DCHECK(video_frame);
-  rtc::scoped_refptr<webrtc::I420BufferInterface> i420_buffer =
+  rtc::scoped_refptr<webrtz::I420BufferInterface> i420_buffer =
       video_frame->video_frame_buffer()->GetI420();
   RTC_CHECK_EQ(av_frame_->data[kYPlaneIndex], i420_buffer->DataY());
   RTC_CHECK_EQ(av_frame_->data[kUPlaneIndex], i420_buffer->DataU());
@@ -419,4 +419,4 @@ void H264DecoderImpl::ReportError() {
   has_reported_error_ = true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

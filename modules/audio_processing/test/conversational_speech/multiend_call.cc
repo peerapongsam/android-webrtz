@@ -16,7 +16,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/pathutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace conversational_speech {
 
@@ -186,4 +186,4 @@ bool MultiEndCall::CheckTiming() {
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "modules/desktop_capture/desktop_capture_types.h"
 #include "modules/desktop_capture/desktop_geometry.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A cross-process lock to ensure only one ScreenDrawer can be used at a certain
 // time.
@@ -78,6 +78,6 @@ class ScreenDrawer {
   virtual WindowId window_id() const = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_SCREEN_DRAWER_H_

@@ -21,7 +21,7 @@
 #include "modules/audio_processing/test/bitexactness_tools.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kChunkSizeMs = 10;
@@ -372,4 +372,4 @@ TEST(BeamformerBitExactnessTest,
                       TargetDirection1, kOutputReference);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

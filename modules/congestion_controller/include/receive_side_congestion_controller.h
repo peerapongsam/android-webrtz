@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 class RemoteBitrateEstimator;
 class RemoteBitrateObserver;
 
@@ -99,6 +99,6 @@ class ReceiveSideCongestionController : public CallStatsObserver,
   RemoteEstimatorProxy remote_estimator_proxy_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_INCLUDE_RECEIVE_SIDE_CONGESTION_CONTROLLER_H_

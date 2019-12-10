@@ -13,7 +13,7 @@
 #include "rtc_base/numerics/sequence_number_util.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 class TestSeqNumUtil : public ::testing::Test {
  protected:
   // Can't use std::numeric_limits<unsigned long>::max() since
@@ -317,4 +317,4 @@ TEST(SeqNumUnwrapper, ManyBackwardWraps) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

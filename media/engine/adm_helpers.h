@@ -13,7 +13,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceModule;
 
@@ -22,6 +22,6 @@ namespace adm_helpers {
 void Init(AudioDeviceModule* adm);
 
 }  // namespace adm_helpers
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_ENGINE_ADM_HELPERS_H_

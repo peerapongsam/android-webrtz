@@ -19,7 +19,7 @@
 #include "rtc_base/strings/string_builder.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kAdmMaxDeviceNameSize = 128;
 static const int kAdmMaxFileNameSize = 512;
@@ -152,6 +152,6 @@ class AudioParameters {
   size_t frames_per_10ms_buffer_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_INCLUDE_AUDIO_DEVICE_DEFINES_H_

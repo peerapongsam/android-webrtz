@@ -22,7 +22,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPFragmentationHeader;
 // TODO(pbos): Expose these through a public (root) header or change these APIs.
@@ -207,5 +207,5 @@ class VideoEncoder {
   virtual bool SupportsNativeHandle() const;
   virtual const char* ImplementationName() const;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // API_VIDEO_CODECS_VIDEO_ENCODER_H_

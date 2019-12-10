@@ -12,7 +12,7 @@
 
 #include "modules/rtp_rtcp/source/rtp_packet_to_send.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventRtpPacketOutgoing::RtcEventRtpPacketOutgoing(
     const RtpPacketToSend& packet,
@@ -31,4 +31,4 @@ bool RtcEventRtpPacketOutgoing::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

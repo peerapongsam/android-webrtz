@@ -15,7 +15,7 @@
 #include "modules/video_coding/session_info.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TestSessionInfo : public ::testing::Test {
  protected:
@@ -557,4 +557,4 @@ TEST_F(TestNalUnits, ReorderWrapLosses) {
   EXPECT_EQ(0U, session_.SessionLength());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

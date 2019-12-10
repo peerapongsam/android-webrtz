@@ -59,7 +59,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 template <typename R>
 class ReturnType {
@@ -567,6 +567,6 @@ class MethodCall5 : public rtc::Message,
     return call.Marshal(RTC_FROM_HERE, worker_thread_);                    \
   }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  //  API_PROXY_H_

@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 typedef std::numeric_limits<int16_t> limits_int16;
 
@@ -209,6 +209,6 @@ void DownmixInterleavedToMono<int16_t>(const int16_t* interleaved,
                                        int num_channels,
                                        int16_t* deinterleaved);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_INCLUDE_AUDIO_UTIL_H_

@@ -18,7 +18,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 struct NativeHandleImpl;
@@ -77,6 +77,6 @@ void SurfaceTextureHelperTextureToYUV(
     const NativeHandleImpl& native_handle);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_SURFACETEXTUREHELPER_H_

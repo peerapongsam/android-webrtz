@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 bool AdaptiveThresholdExperimentIsDisabled();
 
@@ -57,6 +57,6 @@ class OveruseDetector {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(OveruseDetector);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_OVERUSE_DETECTOR_H_

@@ -13,7 +13,7 @@
 #include "modules/desktop_capture/desktop_geometry.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Outputs the window rect. The returned DesktopRect is in system coordinates,
 // i.e. the primary monitor on the system always starts from (0, 0). This
@@ -72,4 +72,4 @@ class AeroChecker {
   RTC_DISALLOW_COPY_AND_ASSIGN(AeroChecker);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz

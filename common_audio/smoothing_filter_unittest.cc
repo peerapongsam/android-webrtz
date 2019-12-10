@@ -15,7 +15,7 @@
 #include "rtc_base/fakeclock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -160,4 +160,4 @@ TEST(SmoothingFilterTest, CannotChangeTimeConstantDuringInitialization) {
                   states.smoothing_filter.alpha());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

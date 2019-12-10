@@ -22,7 +22,7 @@
 #include "rtc_base/random.h"
 #include "test/fuzzers/fuzz_data_helper.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 // Generate a mixture of sine wave and gaussian noise.
@@ -205,4 +205,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   test::FuzzOneInputTest(data, size);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

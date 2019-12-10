@@ -21,7 +21,7 @@
 #define ALIGN16_END __attribute__((aligned(16)))
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 // These tables used to be computed at run-time. For example, refer to:
 // https://code.google.com/p/webrtc/source/browse/trunk/webrtc/modules/audio_processing/utility/apm_rdft.c?r=6564
@@ -89,6 +89,6 @@ ALIGN16_BEG const float ALIGN16_END cftmdl_wk1r[4] = {
 };
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_UTILITY_OOURA_FFT_TABLES_NEON_SSE2_H_

@@ -20,7 +20,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 int ParseVP8PictureID(RTPVideoHeaderVP8* vp8,
                       const uint8_t** data,
@@ -545,4 +545,4 @@ bool RtpDepacketizerVp8::Parse(ParsedPayload* parsed_payload,
   parsed_payload->payload_length = payload_data_length;
   return true;
 }
-}  // namespace webrtc
+}  // namespace webrtz

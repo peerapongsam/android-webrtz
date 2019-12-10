@@ -15,7 +15,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceModule : public rtc::RefCountInterface {
  public:
@@ -164,6 +164,6 @@ class AudioDeviceModule : public rtc::RefCountInterface {
   ~AudioDeviceModule() override {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_INCLUDE_AUDIO_DEVICE_H_

@@ -442,8 +442,8 @@ if (is_ios || is_mac) {
     # This target depends on the objc_peeerconnectionfactory_base which still
     # includes some audio/video related objects such as RTCAudioSource because
     # these objects are just thin wrappers of native C++ interfaces required
-    # when implementing webrtc::PeerConnectionFactoryInterface and
-    # webrtc::PeerConnectionInterface.
+    # when implementing webrtz::PeerConnectionFactoryInterface and
+    # webrtz::PeerConnectionInterface.
     # The applications which only use WebRTC DataChannel can depend on this.
     rtc_static_library("peerconnectionfactory_no_media_objc") {
       visibility = [ "*" ]

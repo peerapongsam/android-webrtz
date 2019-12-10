@@ -24,7 +24,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -182,6 +182,6 @@ class PacketBuffer {
 };
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_PACKET_BUFFER_H_

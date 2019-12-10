@@ -13,7 +13,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventProbeClusterCreated final : public RtcEvent {
  public:
@@ -33,6 +33,6 @@ class RtcEventProbeClusterCreated final : public RtcEvent {
   const int min_bytes_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_PROBE_CLUSTER_CREATED_H_

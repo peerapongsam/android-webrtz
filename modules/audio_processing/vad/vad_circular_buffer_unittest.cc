@@ -16,7 +16,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kWidthThreshold = 7;
 static const double kValThreshold = 1.0;
@@ -131,4 +131,4 @@ TEST(VadCircularBufferTest, TransientDetection) {
   EXPECT_DOUBLE_EQ(num_non_zero_elements * push_val / kLongBuffSize, mean_val);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

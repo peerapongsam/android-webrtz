@@ -10,8 +10,8 @@
 
 #include "call/syncable.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Syncable::~Syncable() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -23,7 +23,7 @@
 
 // Reference on memory alignment:
 // http://stackoverflow.com/questions/227897/solve-the-memory-alignment-in-c-interview-question-that-stumped-me
-namespace webrtc {
+namespace webrtz {
 
 uintptr_t GetRightAlign(uintptr_t start_pos, size_t alignment) {
   // The pointer should be aligned with |alignment| bytes. The - 1 guarantees
@@ -97,4 +97,4 @@ void AlignedFree(void* mem_block) {
   free(memory_start);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

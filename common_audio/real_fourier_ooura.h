@@ -16,7 +16,7 @@
 
 #include "common_audio/real_fourier.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RealFourierOoura : public RealFourier {
  public:
@@ -39,7 +39,7 @@ class RealFourierOoura : public RealFourier {
   const std::unique_ptr<float[]> work_w_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_REAL_FOURIER_OOURA_H_
 

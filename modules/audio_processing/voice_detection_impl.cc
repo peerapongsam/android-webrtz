@@ -14,7 +14,7 @@
 #include "modules/audio_processing/audio_buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 class VoiceDetectionImpl::Vad {
  public:
   Vad() {
@@ -152,4 +152,4 @@ int VoiceDetectionImpl::frame_size_ms() const {
   rtc::CritScope cs(crit_);
   return frame_size_ms_;
 }
-}  // namespace webrtc
+}  // namespace webrtz

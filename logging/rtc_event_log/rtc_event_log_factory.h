@@ -16,7 +16,7 @@
 #include "logging/rtc_event_log/rtc_event_log_factory_interface.h"
 #include "rtc_base/task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLogFactory : public RtcEventLogFactoryInterface {
  public:
@@ -31,6 +31,6 @@ class RtcEventLogFactory : public RtcEventLogFactoryInterface {
 };
 
 std::unique_ptr<RtcEventLogFactoryInterface> CreateRtcEventLogFactory();
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_RTC_EVENT_LOG_FACTORY_H_

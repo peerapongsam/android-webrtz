@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecInst;
 
@@ -93,6 +93,6 @@ class AudioEncoderIsacT final : public AudioEncoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioEncoderIsacT);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_ISAC_AUDIO_ENCODER_ISAC_T_H_

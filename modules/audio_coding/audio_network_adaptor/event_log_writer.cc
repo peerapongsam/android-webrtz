@@ -17,7 +17,7 @@
 #include "modules/audio_coding/audio_network_adaptor/event_log_writer.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 EventLogWriter::EventLogWriter(RtcEventLog* event_log,
                                int min_bitrate_change_bps,
@@ -69,4 +69,4 @@ void EventLogWriter::LogEncoderConfig(const AudioEncoderRuntimeConfig& config) {
   last_logged_config_ = config;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,7 +17,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioEncoderFactoryTest
     : public ::testing::TestWithParam<rtc::scoped_refptr<AudioEncoderFactory>> {
@@ -142,4 +142,4 @@ TEST(BuiltinAudioEncoderFactoryTest, SupportsTheExpectedFormats) {
 
   ASSERT_THAT(supported_formats, ElementsAreArray(expected_formats));
 }
-}  // namespace webrtc
+}  // namespace webrtz

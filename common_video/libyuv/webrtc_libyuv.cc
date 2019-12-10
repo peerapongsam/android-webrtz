@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "third_party/libyuv/include/libyuv.h"
 
-namespace webrtc {
+namespace webrtz {
 
 size_t CalcBufferSize(VideoType type, int width, int height) {
   RTC_DCHECK_GE(width, 0);
@@ -206,8 +206,8 @@ int ConvertFromI420(const VideoFrame& src_frame,
 }
 
 // Helper functions for keeping references alive.
-void KeepBufferRefs(rtc::scoped_refptr<webrtc::VideoFrameBuffer>,
-                    rtc::scoped_refptr<webrtc::VideoFrameBuffer>) {}
+void KeepBufferRefs(rtc::scoped_refptr<webrtz::VideoFrameBuffer>,
+                    rtc::scoped_refptr<webrtz::VideoFrameBuffer>) {}
 
 rtc::scoped_refptr<I420ABufferInterface> ScaleI420ABuffer(
     const I420ABufferInterface& buffer,
@@ -475,4 +475,4 @@ void NV12ToI420Scaler::NV12ToI420Scale(
                     libyuv::kFilterBox);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "modules/audio_processing/audio_buffer.h"
 #include "modules/audio_processing/rms_level.h"
 
-namespace webrtc {
+namespace webrtz {
 
 LevelEstimatorImpl::LevelEstimatorImpl(rtc::CriticalSection* crit)
     : crit_(crit), rms_(new RmsLevel()) {
@@ -63,4 +63,4 @@ int LevelEstimatorImpl::RMS() {
 
   return rms_->Average();
 }
-}  // namespace webrtc
+}  // namespace webrtz

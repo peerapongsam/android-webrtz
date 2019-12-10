@@ -20,7 +20,7 @@
 // TODO(palmkvist): make logging more informative in the absence of a file name
 // (or get one)
 
-namespace webrtc {
+namespace webrtz {
 
 const size_t kIvfHeaderSize = 32;
 
@@ -198,4 +198,4 @@ bool IvfFileWriter::Close() {
   return ret;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

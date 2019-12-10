@@ -25,22 +25,22 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/native_api/video/wrapper.h"
 
-namespace webrtc_examples {
+namespace webrtz_examples {
 
-class AndroidCallClient::PCObserver : public webrtc::PeerConnectionObserver {
+class AndroidCallClient::PCObserver : public webrtz::PeerConnectionObserver {
  public:
   explicit PCObserver(AndroidCallClient* client);
 
   void OnSignalingChange(
-      webrtc::PeerConnectionInterface::SignalingState new_state) override;
+      webrtz::PeerConnectionInterface::SignalingState new_state) override;
   void OnDataChannel(
-      rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel) override;
+      rtc::scoped_refptr<webrtz::DataChannelInterface> data_channel) override;
   void OnRenegotiationNeeded() override;
   void OnIceConnectionChange(
-      webrtc::PeerConnectionInterface::IceConnectionState new_state) override;
+      webrtz::PeerConnectionInterface::IceConnectionState new_state) override;
   void OnIceGatheringChange(
-      webrtc::PeerConnectionInterface::IceGatheringState new_state) override;
-  void OnIceCandidate(const webrtc::IceCandidateInterface* candidate) override;
+      webrtz::PeerConnectionInterface::IceGatheringState new_state) override;
+  void OnIceCandidate(const webrtz::IceCandidateInterface* candidate) override;
 
  private:
   const AndroidCallClient* client_;
@@ -48,26 +48,26 @@ class AndroidCallClient::PCObserver : public webrtc::PeerConnectionObserver {
 
 namespace {
 
-class CreateOfferObserver : public webrtc::CreateSessionDescriptionObserver {
+class CreateOfferObserver : public webrtz::CreateSessionDescriptionObserver {
  public:
   explicit CreateOfferObserver(
-      rtc::scoped_refptr<webrtc::PeerConnectionInterface> pc);
+      rtc::scoped_refptr<webrtz::PeerConnectionInterface> pc);
 
-  void OnSuccess(webrtc::SessionDescriptionInterface* desc) override;
+  void OnSuccess(webrtz::SessionDescriptionInterface* desc) override;
   void OnFailure(const std::string& error) override;
 
  private:
-  const rtc::scoped_refptr<webrtc::PeerConnectionInterface> pc_;
+  const rtc::scoped_refptr<webrtz::PeerConnectionInterface> pc_;
 };
 
 class SetRemoteSessionDescriptionObserver
-    : public webrtc::SetRemoteDescriptionObserverInterface {
+    : public webrtz::SetRemoteDescriptionObserverInterface {
  public:
-  void OnSetRemoteDescriptionComplete(webrtc::RTCError error) override;
+  void OnSetRemoteDescriptionComplete(webrtz::RTCError error) override;
 };
 
 class SetLocalSessionDescriptionObserver
-    : public webrtc::SetSessionDescriptionObserver {
+    : public webrtz::SetSessionDescriptionObserver {
  public:
   void OnSuccess() override;
   void OnFailure(const std::string& error) override;
@@ -82,9 +82,9 @@ AndroidCallClient::AndroidCallClient()
 }
 
 void AndroidCallClient::Call(JNIEnv* env,
-                             const webrtc::JavaRef<jobject>& cls,
-                             const webrtc::JavaRef<jobject>& local_sink,
-                             const webrtc::JavaRef<jobject>& remote_sink) {
+                             const webrtz::JavaRef<jobject>& cls,
+                             const webrtz::JavaRef<jobject>& local_sink,
+                             const webrtz::JavaRef<jobject>& remote_sink) {
   RTC_DCHECK_RUN_ON(&thread_checker_);
 
   rtc::CritScope lock(&pc_mutex_);
@@ -94,8 +94,8 @@ void AndroidCallClient::Call(JNIEnv* env,
   }
   call_started_ = true;
 
-  local_sink_ = webrtc::JavaToNativeVideoSink(env, local_sink.obj());
-  remote_sink_ = webrtc::JavaToNativeVideoSink(env, remote_sink.obj());
+  local_sink_ = webrtz::JavaToNativeVideoSink(env, local_sink.obj());
+  remote_sink_ = webrtz::JavaToNativeVideoSink(env, remote_sink.obj());
 
   // The fake video source wants to be created on the same thread as it is
   // destroyed. It is destroyed on the signaling thread so we have to invoke
@@ -103,9 +103,9 @@ void AndroidCallClient::Call(JNIEnv* env,
   // TODO(sakal): Get picture from camera?
   video_source_ = pcf_->CreateVideoSource(
       signaling_thread_
-          ->Invoke<std::unique_ptr<webrtc::FakePeriodicVideoCapturer>>(
+          ->Invoke<std::unique_ptr<webrtz::FakePeriodicVideoCapturer>>(
               RTC_FROM_HERE, [&] {
-                return rtc::MakeUnique<webrtc::FakePeriodicVideoCapturer>();
+                return rtc::MakeUnique<webrtz::FakePeriodicVideoCapturer>();
               }));
 
   CreatePeerConnection();
@@ -113,7 +113,7 @@ void AndroidCallClient::Call(JNIEnv* env,
 }
 
 void AndroidCallClient::Hangup(JNIEnv* env,
-                               const webrtc::JavaRef<jobject>& cls) {
+                               const webrtz::JavaRef<jobject>& cls) {
   RTC_DCHECK_RUN_ON(&thread_checker_);
 
   call_started_ = false;
@@ -132,7 +132,7 @@ void AndroidCallClient::Hangup(JNIEnv* env,
 }
 
 void AndroidCallClient::Delete(JNIEnv* env,
-                               const webrtc::JavaRef<jobject>& cls) {
+                               const webrtz::JavaRef<jobject>& cls) {
   RTC_DCHECK_RUN_ON(&thread_checker_);
 
   delete this;
@@ -153,24 +153,24 @@ void AndroidCallClient::CreatePeerConnectionFactory() {
 
   std::unique_ptr<cricket::MediaEngineInterface> media_engine =
       cricket::WebRtcMediaEngineFactory::Create(
-          nullptr /* adm */, webrtc::CreateBuiltinAudioEncoderFactory(),
-          webrtc::CreateBuiltinAudioDecoderFactory(),
-          rtc::MakeUnique<webrtc::InternalEncoderFactory>(),
-          rtc::MakeUnique<webrtc::InternalDecoderFactory>(),
-          nullptr /* audio_mixer */, webrtc::AudioProcessingBuilder().Create());
+          nullptr /* adm */, webrtz::CreateBuiltinAudioEncoderFactory(),
+          webrtz::CreateBuiltinAudioDecoderFactory(),
+          rtc::MakeUnique<webrtz::InternalEncoderFactory>(),
+          rtc::MakeUnique<webrtz::InternalDecoderFactory>(),
+          nullptr /* audio_mixer */, webrtz::AudioProcessingBuilder().Create());
   RTC_LOG(LS_INFO) << "Media engine created: " << media_engine.get();
 
   pcf_ = CreateModularPeerConnectionFactory(
       network_thread_.get(), worker_thread_.get(), signaling_thread_.get(),
-      std::move(media_engine), webrtc::CreateCallFactory(),
-      webrtc::CreateRtcEventLogFactory());
+      std::move(media_engine), webrtz::CreateCallFactory(),
+      webrtz::CreateRtcEventLogFactory());
   RTC_LOG(LS_INFO) << "PeerConnectionFactory created: " << pcf_;
 }
 
 void AndroidCallClient::CreatePeerConnection() {
   rtc::CritScope lock(&pc_mutex_);
-  webrtc::PeerConnectionInterface::RTCConfiguration config;
-  config.sdp_semantics = webrtc::SdpSemantics::kUnifiedPlan;
+  webrtz::PeerConnectionInterface::RTCConfiguration config;
+  config.sdp_semantics = webrtz::SdpSemantics::kUnifiedPlan;
   // DTLS SRTP has to be disabled for loopback to work.
   config.enable_dtls_srtp = false;
   pc_ = pcf_->CreatePeerConnection(config, nullptr /* port_allocator */,
@@ -178,19 +178,19 @@ void AndroidCallClient::CreatePeerConnection() {
                                    pc_observer_.get());
   RTC_LOG(LS_INFO) << "PeerConnection created: " << pc_;
 
-  rtc::scoped_refptr<webrtc::VideoTrackInterface> local_video_track =
+  rtc::scoped_refptr<webrtz::VideoTrackInterface> local_video_track =
       pcf_->CreateVideoTrack("video", video_source_);
   local_video_track->AddOrUpdateSink(local_sink_.get(), rtc::VideoSinkWants());
   pc_->AddTransceiver(local_video_track);
   RTC_LOG(LS_INFO) << "Local video sink set up: " << local_video_track;
 
-  for (const rtc::scoped_refptr<webrtc::RtpTransceiverInterface>& tranceiver :
+  for (const rtc::scoped_refptr<webrtz::RtpTransceiverInterface>& tranceiver :
        pc_->GetTransceivers()) {
-    rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track =
+    rtc::scoped_refptr<webrtz::MediaStreamTrackInterface> track =
         tranceiver->receiver()->track();
     if (track &&
-        track->kind() == webrtc::MediaStreamTrackInterface::kVideoKind) {
-      static_cast<webrtc::VideoTrackInterface*>(track.get())
+        track->kind() == webrtz::MediaStreamTrackInterface::kVideoKind) {
+      static_cast<webrtz::VideoTrackInterface*>(track.get())
           ->AddOrUpdateSink(remote_sink_.get(), rtc::VideoSinkWants());
       RTC_LOG(LS_INFO) << "Remote video sink set up: " << track;
       break;
@@ -201,19 +201,19 @@ void AndroidCallClient::CreatePeerConnection() {
 void AndroidCallClient::Connect() {
   rtc::CritScope lock(&pc_mutex_);
   pc_->CreateOffer(new rtc::RefCountedObject<CreateOfferObserver>(pc_),
-                   webrtc::PeerConnectionInterface::RTCOfferAnswerOptions());
+                   webrtz::PeerConnectionInterface::RTCOfferAnswerOptions());
 }
 
 AndroidCallClient::PCObserver::PCObserver(AndroidCallClient* client)
     : client_(client) {}
 
 void AndroidCallClient::PCObserver::OnSignalingChange(
-    webrtc::PeerConnectionInterface::SignalingState new_state) {
+    webrtz::PeerConnectionInterface::SignalingState new_state) {
   RTC_LOG(LS_INFO) << "OnSignalingChange: " << new_state;
 }
 
 void AndroidCallClient::PCObserver::OnDataChannel(
-    rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel) {
+    rtc::scoped_refptr<webrtz::DataChannelInterface> data_channel) {
   RTC_LOG(LS_INFO) << "OnDataChannel";
 }
 
@@ -222,17 +222,17 @@ void AndroidCallClient::PCObserver::OnRenegotiationNeeded() {
 }
 
 void AndroidCallClient::PCObserver::OnIceConnectionChange(
-    webrtc::PeerConnectionInterface::IceConnectionState new_state) {
+    webrtz::PeerConnectionInterface::IceConnectionState new_state) {
   RTC_LOG(LS_INFO) << "OnIceConnectionChange: " << new_state;
 }
 
 void AndroidCallClient::PCObserver::OnIceGatheringChange(
-    webrtc::PeerConnectionInterface::IceGatheringState new_state) {
+    webrtz::PeerConnectionInterface::IceGatheringState new_state) {
   RTC_LOG(LS_INFO) << "OnIceGatheringChange: " << new_state;
 }
 
 void AndroidCallClient::PCObserver::OnIceCandidate(
-    const webrtc::IceCandidateInterface* candidate) {
+    const webrtz::IceCandidateInterface* candidate) {
   RTC_LOG(LS_INFO) << "OnIceCandidate: " << candidate->server_url();
   rtc::CritScope lock(&client_->pc_mutex_);
   RTC_DCHECK(client_->pc_ != nullptr);
@@ -240,10 +240,10 @@ void AndroidCallClient::PCObserver::OnIceCandidate(
 }
 
 CreateOfferObserver::CreateOfferObserver(
-    rtc::scoped_refptr<webrtc::PeerConnectionInterface> pc)
+    rtc::scoped_refptr<webrtz::PeerConnectionInterface> pc)
     : pc_(pc) {}
 
-void CreateOfferObserver::OnSuccess(webrtc::SessionDescriptionInterface* desc) {
+void CreateOfferObserver::OnSuccess(webrtz::SessionDescriptionInterface* desc) {
   std::string sdp;
   desc->ToString(&sdp);
   RTC_LOG(LS_INFO) << "Created offer: " << sdp;
@@ -253,8 +253,8 @@ void CreateOfferObserver::OnSuccess(webrtc::SessionDescriptionInterface* desc) {
       new rtc::RefCountedObject<SetLocalSessionDescriptionObserver>(), desc);
 
   // Generate a fake answer.
-  std::unique_ptr<webrtc::SessionDescriptionInterface> answer(
-      webrtc::CreateSessionDescription(webrtc::SdpType::kAnswer, sdp));
+  std::unique_ptr<webrtz::SessionDescriptionInterface> answer(
+      webrtz::CreateSessionDescription(webrtz::SdpType::kAnswer, sdp));
   pc_->SetRemoteDescription(
       std::move(answer),
       new rtc::RefCountedObject<SetRemoteSessionDescriptionObserver>());
@@ -265,7 +265,7 @@ void CreateOfferObserver::OnFailure(const std::string& error) {
 }
 
 void SetRemoteSessionDescriptionObserver::OnSetRemoteDescriptionComplete(
-    webrtc::RTCError error) {
+    webrtz::RTCError error) {
   RTC_LOG(LS_INFO) << "Set remote description: " << error.message();
 }
 
@@ -277,10 +277,10 @@ void SetLocalSessionDescriptionObserver::OnFailure(const std::string& error) {
   RTC_LOG(LS_INFO) << "Set local description failure: " << error;
 }
 
-}  // namespace webrtc_examples
+}  // namespace webrtz_examples
 
 static jlong JNI_CallClient_CreateClient(
     JNIEnv* env,
-    const webrtc::JavaParamRef<jclass>& cls) {
-  return webrtc::NativeToJavaPointer(new webrtc_examples::AndroidCallClient());
+    const webrtz::JavaParamRef<jclass>& cls) {
+  return webrtz::NativeToJavaPointer(new webrtc_examples::AndroidCallClient());
 }

@@ -15,7 +15,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 TEST(JavaTypesTest, TestJavaToNativeStringMap) {
@@ -32,4 +32,4 @@ TEST(JavaTypesTest, TestJavaToNativeStringMap) {
 }
 }  // namespace
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

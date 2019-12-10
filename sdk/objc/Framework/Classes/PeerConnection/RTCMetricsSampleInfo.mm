@@ -23,7 +23,7 @@
 #pragma mark - Private
 
 - (instancetype)initWithNativeSampleInfo:
-    (const webrtc::metrics::SampleInfo &)info {
+    (const webrtz::metrics::SampleInfo &)info {
   if (self = [super init]) {
     _name = [NSString stringForStdString:info.name];
     _min = info.min;

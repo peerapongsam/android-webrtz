@@ -14,7 +14,7 @@
 
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Desktop::Desktop(HDESK desktop, bool own) : desktop_(desktop), own_(own) {
 }
@@ -108,4 +108,4 @@ Desktop* Desktop::GetThreadDesktop() {
   return new Desktop(desktop, false);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

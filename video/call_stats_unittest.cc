@@ -27,7 +27,7 @@ using ::testing::AnyNumber;
 using ::testing::InvokeWithoutArgs;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 class MockStatsObserver : public CallStatsObserver {
  public:
@@ -317,4 +317,4 @@ TEST_F(CallStatsTest, ProducesHistogramMetrics) {
                    "WebRTC.Video.AverageRoundTripTimeInMilliseconds", kRtt));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

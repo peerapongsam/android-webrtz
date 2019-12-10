@@ -22,7 +22,7 @@
 #endif
 
 #ifdef __cplusplus
-namespace webrtc {
+namespace webrtz {
 #endif
 
 extern ALIGN16_BEG const float ALIGN16_END WebRtcAec_sqrtHanning[65];
@@ -33,7 +33,7 @@ extern const float WebRtcAec_kNormalSmoothingCoefficients[2][2];
 extern const float WebRtcAec_kMinFarendPSD;
 
 #ifdef __cplusplus
-}  // namespace webrtc
+}  // namespace webrtz
 #endif
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_AEC_COMMON_H_

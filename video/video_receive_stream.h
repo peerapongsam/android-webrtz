@@ -29,7 +29,7 @@
 #include "video/transport_adapter.h"
 #include "video/video_stream_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class CallStats;
 class IvfFileWriter;
@@ -43,7 +43,7 @@ class VCMJitterEstimator;
 
 namespace internal {
 
-class VideoReceiveStream : public webrtc::VideoReceiveStream,
+class VideoReceiveStream : public webrtz::VideoReceiveStream,
                            public rtc::VideoSinkInterface<VideoFrame>,
                            public EncodedImageCallback,
                            public NackSender,
@@ -67,11 +67,11 @@ class VideoReceiveStream : public webrtc::VideoReceiveStream,
 
   void SetSync(Syncable* audio_syncable);
 
-  // Implements webrtc::VideoReceiveStream.
+  // Implements webrtz::VideoReceiveStream.
   void Start() override;
   void Stop() override;
 
-  webrtc::VideoReceiveStream::Stats GetStats() const override;
+  webrtz::VideoReceiveStream::Stats GetStats() const override;
 
   // Takes ownership of the file, is responsible for closing it later.
   // Calling this method will close and finalize any current log.
@@ -162,6 +162,6 @@ class VideoReceiveStream : public webrtc::VideoReceiveStream,
   int64_t last_keyframe_request_ms_ = 0;
 };
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_VIDEO_RECEIVE_STREAM_H_

@@ -18,7 +18,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // This constant affects the way scaling factors are interpolated for the first
@@ -129,4 +129,4 @@ void GainCurveApplier::SetSampleRate(size_t sample_rate_hz) {
                 kMaximalNumberOfSamplesPerChannel * 1000 / kFrameDurationMs);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

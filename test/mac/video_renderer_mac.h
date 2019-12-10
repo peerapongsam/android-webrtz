@@ -16,7 +16,7 @@
 
 @class CocoaWindow;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MacRenderer : public GlRenderer {

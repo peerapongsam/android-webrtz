@@ -18,7 +18,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/random.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace fec {
 
@@ -126,6 +126,6 @@ class UlpfecPacketGenerator : public AugmentedPacketGenerator {
 
 }  // namespace fec
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_FEC_TEST_HELPER_H_

@@ -118,8 +118,8 @@
   }
 }
 
-- (webrtc::PeerConnectionInterface::IceServer)nativeServer {
-  __block webrtc::PeerConnectionInterface::IceServer iceServer;
+- (webrtz::PeerConnectionInterface::IceServer)nativeServer {
+  __block webrtz::PeerConnectionInterface::IceServer iceServer;
 
   iceServer.username = [NSString stdStringForString:_username];
   iceServer.password = [NSString stdStringForString:_credential];
@@ -142,18 +142,18 @@
   switch (_tlsCertPolicy) {
     case RTCTlsCertPolicySecure:
       iceServer.tls_cert_policy =
-          webrtc::PeerConnectionInterface::kTlsCertPolicySecure;
+          webrtz::PeerConnectionInterface::kTlsCertPolicySecure;
       break;
     case RTCTlsCertPolicyInsecureNoCheck:
       iceServer.tls_cert_policy =
-          webrtc::PeerConnectionInterface::kTlsCertPolicyInsecureNoCheck;
+          webrtz::PeerConnectionInterface::kTlsCertPolicyInsecureNoCheck;
       break;
   }
   return iceServer;
 }
 
 - (instancetype)initWithNativeServer:
-    (webrtc::PeerConnectionInterface::IceServer)nativeServer {
+    (webrtz::PeerConnectionInterface::IceServer)nativeServer {
   NSMutableArray *urls =
       [NSMutableArray arrayWithCapacity:nativeServer.urls.size()];
   for (auto const &url : nativeServer.urls) {
@@ -175,10 +175,10 @@
   RTCTlsCertPolicy tlsCertPolicy;
 
   switch (nativeServer.tls_cert_policy) {
-    case webrtc::PeerConnectionInterface::kTlsCertPolicySecure:
+    case webrtz::PeerConnectionInterface::kTlsCertPolicySecure:
       tlsCertPolicy = RTCTlsCertPolicySecure;
       break;
-    case webrtc::PeerConnectionInterface::kTlsCertPolicyInsecureNoCheck:
+    case webrtz::PeerConnectionInterface::kTlsCertPolicyInsecureNoCheck:
       tlsCertPolicy = RTCTlsCertPolicyInsecureNoCheck;
       break;
   }

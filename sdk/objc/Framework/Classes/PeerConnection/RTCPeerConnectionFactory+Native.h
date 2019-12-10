@@ -12,7 +12,7 @@
 
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceModule;
 class AudioEncoderFactory;
@@ -21,7 +21,7 @@ class VideoEncoderFactory;
 class VideoDecoderFactory;
 class AudioProcessing;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #if defined(USE_BUILTIN_SW_CODECS)
 namespace cricket {
@@ -46,17 +46,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 /* Initialize object with injectable native audio/video encoder/decoder factories */
 - (instancetype)initWithNativeAudioEncoderFactory:
-                    (rtc::scoped_refptr<webrtc::AudioEncoderFactory>)audioEncoderFactory
+                    (rtc::scoped_refptr<webrtz::AudioEncoderFactory>)audioEncoderFactory
                         nativeAudioDecoderFactory:
-                            (rtc::scoped_refptr<webrtc::AudioDecoderFactory>)audioDecoderFactory
+                            (rtc::scoped_refptr<webrtz::AudioDecoderFactory>)audioDecoderFactory
                         nativeVideoEncoderFactory:
-                            (std::unique_ptr<webrtc::VideoEncoderFactory>)videoEncoderFactory
+                            (std::unique_ptr<webrtz::VideoEncoderFactory>)videoEncoderFactory
                         nativeVideoDecoderFactory:
-                            (std::unique_ptr<webrtc::VideoDecoderFactory>)videoDecoderFactory
+                            (std::unique_ptr<webrtz::VideoDecoderFactory>)videoDecoderFactory
                                 audioDeviceModule:
-                                    (nullable webrtc::AudioDeviceModule *)audioDeviceModule
+                                    (nullable webrtz::AudioDeviceModule *)audioDeviceModule
                             audioProcessingModule:
-                                (rtc::scoped_refptr<webrtc::AudioProcessing>)audioProcessingModule;
+                                (rtc::scoped_refptr<webrtz::AudioProcessing>)audioProcessingModule;
 
 #if defined(USE_BUILTIN_SW_CODECS)
 /* Initialize object with legacy injectable native audio/video encoder/decoder factories
@@ -64,12 +64,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)
     initWithNativeAudioEncoderFactory:
-        (rtc::scoped_refptr<webrtc::AudioEncoderFactory>)audioEncoderFactory
+        (rtc::scoped_refptr<webrtz::AudioEncoderFactory>)audioEncoderFactory
             nativeAudioDecoderFactory:
-                (rtc::scoped_refptr<webrtc::AudioDecoderFactory>)audioDecoderFactory
+                (rtc::scoped_refptr<webrtz::AudioDecoderFactory>)audioDecoderFactory
       legacyNativeVideoEncoderFactory:(cricket::WebRtcVideoEncoderFactory*)videoEncoderFactory
       legacyNativeVideoDecoderFactory:(cricket::WebRtcVideoDecoderFactory*)videoDecoderFactory
-                    audioDeviceModule:(nullable webrtc::AudioDeviceModule *)audioDeviceModule;
+                    audioDeviceModule:(nullable webrtz::AudioDeviceModule *)audioDeviceModule;
 #endif
 
 @end

@@ -14,7 +14,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 void RunOnConstantLevel(int num_iterations,
                         VadWithLevel::LevelAndProbability vad_data,
@@ -112,4 +112,4 @@ TEST(AutomaticGainController2AdaptiveModeLevelEstimator, TimeToAdapt) {
               kMaxDifferenceDb);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

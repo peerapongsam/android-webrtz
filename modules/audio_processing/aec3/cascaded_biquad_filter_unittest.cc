@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -95,4 +95,4 @@ TEST(CascadedBiquadFilter, InputSizeCheckVerification) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

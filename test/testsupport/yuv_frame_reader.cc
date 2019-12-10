@@ -14,7 +14,7 @@
 #include "test/frame_utils.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 YuvFrameReaderImpl::YuvFrameReaderImpl(std::string input_filename,
@@ -88,4 +88,4 @@ int YuvFrameReaderImpl::NumberOfFrames() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

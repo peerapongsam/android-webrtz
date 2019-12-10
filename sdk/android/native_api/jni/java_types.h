@@ -35,7 +35,7 @@
   RTC_CHECK(!jni->ExceptionCheck()) \
       << (jni->ExceptionDescribe(), jni->ExceptionClear(), "")
 
-namespace webrtc {
+namespace webrtz {
 
 // ---------------
 // -- Utilities --
@@ -325,6 +325,6 @@ inline std::map<std::string, std::string> JavaToStdMapStrings(JNIEnv* jni,
   return JavaToStdMapStrings(jni, JavaParamRef<jobject>(j_map));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_JNI_JAVA_TYPES_H_

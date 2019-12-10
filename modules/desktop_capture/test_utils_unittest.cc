@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -104,4 +104,4 @@ TEST(TestUtilsTest, DifferentStrideShouldBeComparable) {
   ASSERT_TRUE(DesktopFrameDataEquals(frame, other));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockDelayPeakDetector : public DelayPeakDetector {
  public:
@@ -31,5 +31,5 @@ class MockDelayPeakDetector : public DelayPeakDetector {
   MOCK_METHOD2(Update, bool(int inter_arrival_time, int target_level));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_DELAY_PEAK_DETECTOR_H_

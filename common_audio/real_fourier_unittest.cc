@@ -19,7 +19,7 @@
 #include "common_audio/real_fourier_openmax.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -108,4 +108,4 @@ TYPED_TEST(RealFourierTest, SimpleBackwardTransform) {
   EXPECT_NEAR(this->real_buffer_[3], 4.0f, 1e-8f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

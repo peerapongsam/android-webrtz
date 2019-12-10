@@ -20,7 +20,7 @@
 #include "third_party/libyuv/include/libyuv/planar_functions.h"
 #include "third_party/libyuv/include/libyuv/scale.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -258,4 +258,4 @@ rtc::scoped_refptr<PlanarYuvBuffer> WrapYuvBuffer(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

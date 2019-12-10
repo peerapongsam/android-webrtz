@@ -21,7 +21,7 @@
 #include "p2p/base/transportdescription.h"
 #include "rtc_base/stringencode.h"
 
-namespace webrtc {
+namespace webrtz {
 class MetricsObserverInterface;
 }
 
@@ -231,7 +231,7 @@ class IceTransportInternal : public rtc::PacketTransportInternal {
   virtual void MaybeStartGathering() = 0;
 
   virtual void SetMetricsObserver(
-      webrtc::MetricsObserverInterface* observer) = 0;
+      webrtz::MetricsObserverInterface* observer) = 0;
 
   virtual void AddRemoteCandidate(const Candidate& candidate) = 0;
 

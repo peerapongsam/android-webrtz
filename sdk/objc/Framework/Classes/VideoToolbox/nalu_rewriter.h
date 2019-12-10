@@ -21,9 +21,9 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/buffer.h"
 
-using webrtc::H264::NaluIndex;
+using webrtz::H264::NaluIndex;
 
-namespace webrtc {
+namespace webrtz {
 
 // Converts a sample buffer emitted from the VideoToolbox encoder into a buffer
 // suitable for RTP. The sample buffer is in avcc format whereas the rtp buffer
@@ -111,6 +111,6 @@ class AvccBufferWriter final {
   const size_t length_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_CLASSES_VIDEOTOOLBOX_NALU_REWRITER_H_

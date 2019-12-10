@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoder;
 
@@ -35,6 +35,6 @@ void FuzzAudioDecoder(DecoderFunctionType decode_type,
 void FuzzAudioDecoderIncomingPacket(const uint8_t* data,
                                     size_t size,
                                     AudioDecoder* decoder);
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FUZZERS_AUDIO_DECODER_FUZZER_H_

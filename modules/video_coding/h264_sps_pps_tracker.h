@@ -18,7 +18,7 @@
 
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMPacket;
 
@@ -52,6 +52,6 @@ class H264SpsPpsTracker {
 };
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_H264_SPS_PPS_TRACKER_H_

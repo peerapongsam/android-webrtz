@@ -14,7 +14,7 @@
 #include "api/proxy.h"
 #include "api/mediastreaminterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Makes sure the real VideoTrackSourceInterface implementation is destroyed on
 // the signaling thread and marshals all method calls to the signaling thread.
@@ -36,6 +36,6 @@ BEGIN_PROXY_MAP(VideoTrackSource)
   PROXY_METHOD1(void, UnregisterObserver, ObserverInterface*)
 END_PROXY_MAP()
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEOSOURCEPROXY_H_

@@ -52,7 +52,7 @@ bool VadTest::ValidRatesAndFrameLengths(int rate, size_t frame_length) {
   return false;
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 TEST_F(VadTest, ApiTest) {
@@ -154,4 +154,4 @@ TEST_F(VadTest, ValidRatesFrameLengths) {
 // TODO(bjornv): Add a process test, run on file.
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

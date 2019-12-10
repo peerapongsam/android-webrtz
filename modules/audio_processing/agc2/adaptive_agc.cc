@@ -17,7 +17,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "modules/audio_processing/vad/voice_activity_detector.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AdaptiveAgc::AdaptiveAgc(ApmDataDumper* apm_data_dumper)
     : speech_level_estimator_(apm_data_dumper),
@@ -61,4 +61,4 @@ void AdaptiveAgc::Process(AudioFrameView<float> float_frame) {
                         float_frame);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

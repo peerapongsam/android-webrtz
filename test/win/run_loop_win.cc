@@ -15,7 +15,7 @@
 #include <stdio.h>
 #include <Windows.h>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 void PressEnterToContinue() {
@@ -30,4 +30,4 @@ void PressEnterToContinue() {
   }
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

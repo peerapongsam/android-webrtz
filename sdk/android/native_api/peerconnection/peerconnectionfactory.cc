@@ -16,18 +16,18 @@
 
 #include "sdk/android/src/jni/pc/peerconnectionfactory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 jobject NativeToJavaPeerConnectionFactory(
     JNIEnv* jni,
-    rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> pcf,
+    rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> pcf,
     std::unique_ptr<rtc::Thread> network_thread,
     std::unique_ptr<rtc::Thread> worker_thread,
     std::unique_ptr<rtc::Thread> signaling_thread,
     rtc::NetworkMonitorFactory* network_monitor_factory) {
-  return webrtc::jni::NativeToJavaPeerConnectionFactory(
+  return webrtz::jni::NativeToJavaPeerConnectionFactory(
       jni, pcf, std::move(network_thread), std::move(worker_thread),
       std::move(signaling_thread), network_monitor_factory);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

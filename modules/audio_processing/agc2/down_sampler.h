@@ -15,7 +15,7 @@
 #include "modules/audio_processing/agc2/biquad_filter.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 
@@ -35,6 +35,6 @@ class DownSampler {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(DownSampler);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_DOWN_SAMPLER_H_

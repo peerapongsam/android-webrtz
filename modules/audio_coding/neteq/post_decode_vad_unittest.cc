@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(PostDecodeVad, CreateAndDestroy) {
   PostDecodeVad vad;
@@ -22,4 +22,4 @@ TEST(PostDecodeVad, CreateAndDestroy) {
 
 // TODO(hlundin): Write more tests.
 
-}  // namespace webrtc
+}  // namespace webrtz

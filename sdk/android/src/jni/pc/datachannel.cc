@@ -20,7 +20,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/pc/datachannel.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -154,4 +154,4 @@ static jboolean JNI_DataChannel_Send(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

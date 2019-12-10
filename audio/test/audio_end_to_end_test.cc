@@ -14,7 +14,7 @@
 #include "system_wrappers/include/sleep.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 // Wait half a second between stopping sending and stopping receiving audio.
@@ -77,7 +77,7 @@ void AudioEndToEndTest::ModifyAudioConfigs(
   AudioSendStream::Config* send_config,
   std::vector<AudioReceiveStream::Config>* receive_configs) {
   // Large bitrate by default.
-  const webrtc::SdpAudioFormat kDefaultFormat("opus", 48000, 2,
+  const webrtz::SdpAudioFormat kDefaultFormat("opus", 48000, 2,
                                               {{"stereo", "1"}});
   send_config->send_codec_spec = AudioSendStream::Config::SendCodecSpec(
       test::CallTest::kAudioSendPayloadType, kDefaultFormat);
@@ -100,4 +100,4 @@ void AudioEndToEndTest::PerformTest() {
   SleepMs(GetNetworkPipeConfig().queue_delay_ms + kExtraRecordTimeMs);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

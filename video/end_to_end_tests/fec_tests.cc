@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FecEndToEndTest : public test::CallTest,
                         public testing::WithParamInterface<std::string> {
@@ -487,10 +487,10 @@ TEST_P(FecEndToEndTest, ReceivedUlpfecPacketsNotNacked) {
     uint16_t ulpfec_sequence_number_ RTC_GUARDED_BY(&crit_);
     bool has_last_sequence_number_;
     uint16_t last_sequence_number_;
-    std::unique_ptr<webrtc::VideoEncoder> encoder_;
-    std::unique_ptr<webrtc::VideoDecoder> decoder_;
+    std::unique_ptr<webrtz::VideoEncoder> encoder_;
+    std::unique_ptr<webrtz::VideoDecoder> decoder_;
   } test;
 
   RunBaseTest(&test);
 }
-}  // namespace webrtc
+}  // namespace webrtz

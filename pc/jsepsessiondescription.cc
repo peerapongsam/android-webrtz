@@ -21,7 +21,7 @@
 
 using cricket::SessionDescription;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // RFC 5245
@@ -315,4 +315,4 @@ int JsepSessionDescription::GetMediasectionIndex(
   return -1;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

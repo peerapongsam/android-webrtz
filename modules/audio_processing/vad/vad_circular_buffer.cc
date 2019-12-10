@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-namespace webrtc {
+namespace webrtz {
 
 VadCircularBuffer::VadCircularBuffer(int buffer_size)
     : buffer_(new double[buffer_size]),
@@ -134,4 +134,4 @@ int VadCircularBuffer::RemoveTransient(int width_threshold,
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

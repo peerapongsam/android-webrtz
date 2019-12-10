@@ -32,7 +32,7 @@
 #include "rtc_base/atomicops.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -288,4 +288,4 @@ EchoRemover* EchoRemover::Create(const EchoCanceller3Config& config,
   return new EchoRemoverImpl(config, sample_rate_hz);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

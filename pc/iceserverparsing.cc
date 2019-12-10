@@ -15,7 +15,7 @@
 
 #include "rtc_base/arraysize.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The min number of tokens must present in Turn host uri.
 // e.g. user@turn.example.org
@@ -312,4 +312,4 @@ RTCErrorType ParseIceServers(
   return RTCErrorType::NONE;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

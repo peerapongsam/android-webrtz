@@ -24,7 +24,7 @@ static const int kWidth = 176;        // Width of the input image.
 static const int kHeight = 144;       // Height of the input image.
 static const int kMaxFramerate = 30;  // Arbitrary value.
 
-namespace webrtc {
+namespace webrtz {
 
 EncodedImageCallback::Result
 VideoCodecUnitTest::FakeEncodeCompleteCallback::OnEncodedImage(
@@ -59,7 +59,7 @@ void VideoCodecUnitTest::FakeDecodeCompleteCallback::Decoded(
 }
 
 void VideoCodecUnitTest::SetUp() {
-  webrtc::test::CodecSettings(kVideoCodecVP8, &codec_settings_);
+  webrtz::test::CodecSettings(kVideoCodecVP8, &codec_settings_);
   codec_settings_.startBitrate = kStartBitrate;
   codec_settings_.targetBitrate = kTargetBitrate;
   codec_settings_.maxBitrate = kMaxBitrate;
@@ -157,4 +157,4 @@ bool VideoCodecUnitTest::WaitForDecodedFrame(std::unique_ptr<VideoFrame>* frame,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

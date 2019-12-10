@@ -17,7 +17,7 @@
 #include "modules/audio_processing/splitting_filter.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const size_t kSamplesPer16kHzChannel = 160;
@@ -103,4 +103,4 @@ TEST(SplittingFilterTest, SplitsIntoThreeBandsAndReconstructs) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

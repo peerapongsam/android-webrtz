@@ -19,7 +19,7 @@
 #include "rtc_base/thread_checker.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Delta times between two successive playout callbacks are limited to this
 // value before added to an internal array.
@@ -240,6 +240,6 @@ class AudioDeviceBuffer {
 #endif
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_AUDIO_DEVICE_BUFFER_H_

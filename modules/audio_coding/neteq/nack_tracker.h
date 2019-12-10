@@ -46,7 +46,7 @@
 // Please note that this class in not thread safe. The class must be protected
 // if different APIs are called from different threads.
 //
-namespace webrtc {
+namespace webrtz {
 
 class NackTracker {
  public:
@@ -203,6 +203,6 @@ class NackTracker {
   size_t max_nack_list_size_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_NETEQ_NACK_TRACKER_H_

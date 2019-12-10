@@ -13,7 +13,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/pc/peerconnectionfactory.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 PeerConnectionFactoryInterface* factoryFromJava(jlong j_p) {
@@ -38,4 +38,4 @@ void OwnedFactoryAndThreads::InvokeJavaCallbacksOnFactoryThreads() {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

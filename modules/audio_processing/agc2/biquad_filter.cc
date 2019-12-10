@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/agc2/biquad_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This method applies a biquad filter to an input signal x to produce an
 // output signal y. The biquad coefficients are specified at the construction
@@ -32,4 +32,4 @@ void BiQuadFilter::Process(rtc::ArrayView<const float> x,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

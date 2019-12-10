@@ -13,7 +13,7 @@
 #include "modules/audio_coding/codecs/legacy_encoded_audio_frame.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(IlbcTest, BadPacket) {
   // Get a good packet.
@@ -136,4 +136,4 @@ TEST(IlbcTest, SplitUnevenPayload) {
   EXPECT_TRUE(results.empty());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

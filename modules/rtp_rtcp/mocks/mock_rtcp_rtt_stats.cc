@@ -10,9 +10,9 @@
 
 #include "modules/rtp_rtcp/mocks/mock_rtcp_rtt_stats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockRtcpRttStats::MockRtcpRttStats() = default;
 MockRtcpRttStats::~MockRtcpRttStats() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

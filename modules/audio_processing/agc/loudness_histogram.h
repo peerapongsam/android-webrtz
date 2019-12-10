@@ -17,7 +17,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // This class implements the histogram of loudness with circular buffers so that
 // the histogram tracks the last T seconds of the loudness.
@@ -87,6 +87,6 @@ class LoudnessHistogram {
   int len_high_activity_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC_LOUDNESS_HISTOGRAM_H_

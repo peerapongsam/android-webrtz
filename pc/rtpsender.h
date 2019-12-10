@@ -27,7 +27,7 @@
 #include "media/base/mediachannel.h"
 #include "pc/dtmfsender.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class StatsCollector;
 
@@ -261,6 +261,6 @@ class VideoRtpSender : public ObserverInterface,
   int attachment_id_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPSENDER_H_

@@ -14,7 +14,7 @@
 
 #include "api/videosinkinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 class VideoFrame;
 
 namespace test {
@@ -36,6 +36,6 @@ class VideoRenderer : public rtc::VideoSinkInterface<VideoFrame> {
   VideoRenderer() {}
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_VIDEO_RENDERER_H_

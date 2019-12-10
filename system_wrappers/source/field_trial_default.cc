@@ -14,7 +14,7 @@
 
 // Simple field trial implementation, which allows client to
 // specify desired flags in InitFieldTrialsFromString.
-namespace webrtc {
+namespace webrtz {
 namespace field_trial {
 
 static const char* trials_init_string = NULL;
@@ -62,4 +62,4 @@ const char* GetFieldTrialString() {
 }
 
 }  // namespace field_trial
-}  // namespace webrtc
+}  // namespace webrtz

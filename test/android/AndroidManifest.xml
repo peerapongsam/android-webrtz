@@ -10,7 +10,7 @@ be found in the AUTHORS file in the root of the source tree.
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="org.webrtc.native_test"
+      package="org.webrtz.native_test"
       android:versionCode="1"
       android:versionName="1.0">
 
@@ -40,7 +40,7 @@ be found in the AUTHORS file in the root of the source tree.
     </application>
 
     <instrumentation android:name="org.chromium.native_test.NativeTestInstrumentationTestRunner"
-            android:targetPackage="org.webrtc.native_test"
-            android:label="Instrumentation entry point for org.webrtc.native_test"/>
+            android:targetPackage="org.webrtz.native_test"
+            android:label="Instrumentation entry point for org.webrtz.native_test"/>
 
 </manifest>

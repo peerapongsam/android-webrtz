@@ -12,7 +12,7 @@
 #include "test/gtest.h"
 #include "test/null_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ConfigEndToEndTest : public test::CallTest {};
 
@@ -90,4 +90,4 @@ TEST_F(ConfigEndToEndTest, VerifyDefaultFlexfecReceiveConfigParameters) {
       << "Enabling FlexFEC requires ssrc-group: FEC-FR negotiation.";
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

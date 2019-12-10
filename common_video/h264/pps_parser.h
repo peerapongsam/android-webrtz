@@ -17,7 +17,7 @@ namespace rtc {
 class BitBuffer;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // A class for parsing out picture parameter set (PPS) data from a H264 NALU.
 class PpsParser {
@@ -57,6 +57,6 @@ class PpsParser {
                                   uint32_t* sps_id);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_H264_PPS_PARSER_H_

@@ -10,7 +10,7 @@
 
 #include "pc/rtpmediautils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpTransceiverDirection RtpTransceiverDirectionFromSendRecv(bool send,
                                                             bool recv) {
@@ -79,4 +79,4 @@ const char* RtpTransceiverDirectionToString(RtpTransceiverDirection direction) {
   return "";
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

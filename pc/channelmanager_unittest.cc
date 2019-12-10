@@ -52,21 +52,21 @@ class ChannelManagerTest : public testing::Test {
     fme_->SetVideoCodecs(MAKE_VECTOR(kVideoCodecs));
   }
 
-  std::unique_ptr<webrtc::RtpTransportInternal> CreateDtlsSrtpTransport() {
+  std::unique_ptr<webrtz::RtpTransportInternal> CreateDtlsSrtpTransport() {
     rtp_dtls_transport_ = rtc::MakeUnique<FakeDtlsTransport>(
         "fake_dtls_transport", cricket::ICE_CANDIDATE_COMPONENT_RTP);
     auto rtp_transport =
-        rtc::MakeUnique<webrtc::RtpTransport>(/*rtcp_mux_required=*/true);
+        rtc::MakeUnique<webrtz::RtpTransport>(/*rtcp_mux_required=*/true);
     auto srtp_transport =
-        rtc::MakeUnique<webrtc::SrtpTransport>(std::move(rtp_transport));
+        rtc::MakeUnique<webrtz::SrtpTransport>(std::move(rtp_transport));
     auto dtls_srtp_transport =
-        rtc::MakeUnique<webrtc::DtlsSrtpTransport>(std::move(srtp_transport));
+        rtc::MakeUnique<webrtz::DtlsSrtpTransport>(std::move(srtp_transport));
     dtls_srtp_transport->SetDtlsTransports(rtp_dtls_transport_.get(),
                                            /*rtcp_dtls_transport=*/nullptr);
     return dtls_srtp_transport;
   }
 
-  void TestCreateDestroyChannels(webrtc::RtpTransportInternal* rtp_transport) {
+  void TestCreateDestroyChannels(webrtz::RtpTransportInternal* rtp_transport) {
     cricket::VoiceChannel* voice_channel = cm_->CreateVoiceChannel(
         &fake_call_, cricket::MediaConfig(), rtp_transport,
         rtc::Thread::Current(), cricket::CN_AUDIO, kDefaultSrtpRequired,

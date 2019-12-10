@@ -13,7 +13,7 @@
 
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 Statistics::Statistics()
@@ -55,4 +55,4 @@ double Statistics::StandardDeviation() const {
   return sqrt(Variance());
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

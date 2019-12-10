@@ -13,11 +13,11 @@
 #include "rtc_base/ptr_util.h"
 #include "sdk/objc/Framework/Native/src/objc_video_renderer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<rtc::VideoSinkInterface<VideoFrame>> ObjCToNativeVideoRenderer(
     id<RTCVideoRenderer> objc_video_renderer) {
   return rtc::MakeUnique<ObjCVideoRenderer>(objc_video_renderer);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

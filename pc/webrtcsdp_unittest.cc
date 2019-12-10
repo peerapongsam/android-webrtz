@@ -51,15 +51,15 @@ using cricket::TransportDescription;
 using cricket::TransportInfo;
 using cricket::VideoCodec;
 using cricket::VideoContentDescription;
-using webrtc::IceCandidateCollection;
-using webrtc::IceCandidateInterface;
-using webrtc::JsepIceCandidate;
-using webrtc::JsepSessionDescription;
-using webrtc::RtpExtension;
-using webrtc::RtpTransceiverDirection;
-using webrtc::SdpParseError;
-using webrtc::SdpType;
-using webrtc::SessionDescriptionInterface;
+using webrtz::IceCandidateCollection;
+using webrtz::IceCandidateInterface;
+using webrtz::JsepIceCandidate;
+using webrtz::JsepSessionDescription;
+using webrtz::RtpExtension;
+using webrtz::RtpTransceiverDirection;
+using webrtz::SdpParseError;
+using webrtz::SdpType;
+using webrtz::SessionDescriptionInterface;
 
 typedef std::vector<AudioCodec> AudioCodecs;
 typedef std::vector<Candidate> Candidates;
@@ -783,12 +783,12 @@ static SdpType kDummyType = SdpType::kOffer;
 
 static bool SdpDeserialize(const std::string& message,
                            JsepSessionDescription* jdesc) {
-  return webrtc::SdpDeserialize(message, jdesc, NULL);
+  return webrtz::SdpDeserialize(message, jdesc, NULL);
 }
 
 static bool SdpDeserializeCandidate(const std::string& message,
                                     JsepIceCandidate* candidate) {
-  return webrtc::SdpDeserializeCandidate(message, candidate, NULL);
+  return webrtz::SdpDeserializeCandidate(message, candidate, NULL);
 }
 
 // Add some extra |newlines| to the |message| after |line|.
@@ -813,7 +813,7 @@ static void ExpectParseFailure(const std::string& bad_sdp,
                                const std::string& bad_part) {
   JsepSessionDescription desc(kDummyType);
   SdpParseError error;
-  bool ret = webrtc::SdpDeserialize(bad_sdp, &desc, &error);
+  bool ret = webrtz::SdpDeserialize(bad_sdp, &desc, &error);
   EXPECT_FALSE(ret);
   EXPECT_NE(std::string::npos, error.line.find(bad_part.c_str()));
 }
@@ -875,7 +875,7 @@ class WebRtcSdpTest : public testing::Test {
  public:
   WebRtcSdpTest() : jdesc_(kDummyType) {
 #ifdef WEBRTC_ANDROID
-    webrtc::InitializeAndroidObjects();
+    webrtz::InitializeAndroidObjects();
 #endif
     // AudioContentDescription
     audio_desc_ = CreateAudioContentDescription();
@@ -1560,7 +1560,7 @@ class WebRtcSdpTest : public testing::Test {
                            jdesc_.session_version())) {
       return false;
     }
-    std::string message = webrtc::SdpSerialize(jdesc_);
+    std::string message = webrtz::SdpSerialize(jdesc_);
     EXPECT_EQ(new_sdp, message);
     return true;
   }
@@ -1585,7 +1585,7 @@ class WebRtcSdpTest : public testing::Test {
 
     JsepSessionDescription jdesc_no_candidates(kDummyType);
     MakeDescriptionWithoutCandidates(&jdesc_no_candidates);
-    std::string message = webrtc::SdpSerialize(jdesc_no_candidates);
+    std::string message = webrtz::SdpSerialize(jdesc_no_candidates);
     EXPECT_EQ(new_sdp, message);
     return true;
   }
@@ -1699,7 +1699,7 @@ class WebRtcSdpTest : public testing::Test {
     // media level.
     if (session_level && media_level) {
       SdpParseError error;
-      EXPECT_FALSE(webrtc::SdpDeserialize(sdp_with_extmap,
+      EXPECT_FALSE(webrtz::SdpDeserialize(sdp_with_extmap,
                    &jdesc_with_extmap, &error));
       EXPECT_NE(std::string::npos, error.description.find("a=extmap"));
     } else {
@@ -1755,7 +1755,7 @@ class WebRtcSdpTest : public testing::Test {
 
     // Deserialize
     SdpParseError error;
-    EXPECT_TRUE(webrtc::SdpDeserialize(sdp, jdesc_output, &error));
+    EXPECT_TRUE(webrtz::SdpDeserialize(sdp, jdesc_output, &error));
 
     const AudioContentDescription* acd =
         GetFirstAudioContentDescription(jdesc_output->description());
@@ -1816,7 +1816,7 @@ class WebRtcSdpTest : public testing::Test {
     std::string sdp = os.str();
     // Deserialize
     SdpParseError error;
-    EXPECT_TRUE(webrtc::SdpDeserialize(sdp, jdesc_output, &error));
+    EXPECT_TRUE(webrtz::SdpDeserialize(sdp, jdesc_output, &error));
     const AudioContentDescription* acd =
         GetFirstAudioContentDescription(jdesc_output->description());
     ASSERT_TRUE(acd);
@@ -1832,7 +1832,7 @@ class WebRtcSdpTest : public testing::Test {
     ASSERT_TRUE(vcd);
     ASSERT_FALSE(vcd->codecs().empty());
     cricket::VideoCodec vp8 = vcd->codecs()[0];
-    EXPECT_STREQ(webrtc::JsepSessionDescription::kDefaultVideoCodecName,
+    EXPECT_STREQ(webrtz::JsepSessionDescription::kDefaultVideoCodecName,
                  vp8.name.c_str());
     EXPECT_EQ(101, vp8.id);
     EXPECT_TRUE(vp8.HasFeedbackParam(
@@ -1856,10 +1856,10 @@ class WebRtcSdpTest : public testing::Test {
   // deserializing and comparing JsepSessionDescription will test
   // the serializer sufficiently.
   void TestSerialize(const JsepSessionDescription& jdesc) {
-    std::string message = webrtc::SdpSerialize(jdesc);
+    std::string message = webrtz::SdpSerialize(jdesc);
     JsepSessionDescription jdesc_output_des(kDummyType);
     SdpParseError error;
-    EXPECT_TRUE(webrtc::SdpDeserialize(message, &jdesc_output_des, &error));
+    EXPECT_TRUE(webrtz::SdpDeserialize(message, &jdesc_output_des, &error));
     EXPECT_TRUE(CompareSessionDescription(jdesc, jdesc_output_des));
   }
 
@@ -1901,13 +1901,13 @@ void TestMismatch(const std::string& string1, const std::string& string2) {
 
 TEST_F(WebRtcSdpTest, SerializeSessionDescription) {
   // SessionDescription with desc and candidates.
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   TestMismatch(std::string(kSdpFullString), message);
 }
 
 TEST_F(WebRtcSdpTest, SerializeSessionDescriptionEmpty) {
   JsepSessionDescription jdesc_empty(kDummyType);
-  EXPECT_EQ("", webrtc::SdpSerialize(jdesc_empty));
+  EXPECT_EQ("", webrtz::SdpSerialize(jdesc_empty));
 }
 
 // This tests serialization of SDP with a=crypto and a=fingerprint, as would be
@@ -1916,7 +1916,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithFingerprint) {
   AddFingerprint();
   JsepSessionDescription jdesc_with_fingerprint(kDummyType);
   MakeDescriptionWithoutCandidates(&jdesc_with_fingerprint);
-  std::string message = webrtc::SdpSerialize(jdesc_with_fingerprint);
+  std::string message = webrtz::SdpSerialize(jdesc_with_fingerprint);
 
   std::string sdp_with_fingerprint = kSdpString;
   InjectAfter(kAttributeIcePwdVoice,
@@ -1934,7 +1934,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithFingerprintNoCryptos) {
   RemoveCryptos();
   JsepSessionDescription jdesc_with_fingerprint(kDummyType);
   MakeDescriptionWithoutCandidates(&jdesc_with_fingerprint);
-  std::string message = webrtc::SdpSerialize(jdesc_with_fingerprint);
+  std::string message = webrtz::SdpSerialize(jdesc_with_fingerprint);
 
   std::string sdp_with_fingerprint = kSdpString;
   Replace(kAttributeCryptoVoice, "", &sdp_with_fingerprint);
@@ -1951,7 +1951,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithoutCandidates) {
   // JsepSessionDescription with desc but without candidates.
   JsepSessionDescription jdesc_no_candidates(kDummyType);
   MakeDescriptionWithoutCandidates(&jdesc_no_candidates);
-  std::string message = webrtc::SdpSerialize(jdesc_no_candidates);
+  std::string message = webrtz::SdpSerialize(jdesc_no_candidates);
   EXPECT_EQ(std::string(kSdpString), message);
 }
 
@@ -1963,7 +1963,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithBundle) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_bundle = kSdpFullString;
   InjectAfter(kSessionTime,
               "a=group:BUNDLE audio_content_name video_content_name\r\n",
@@ -1979,7 +1979,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithBandwidth) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_bandwidth = kSdpFullString;
   InjectAfter("c=IN IP4 74.125.224.39\r\n",
               "b=AS:100\r\n",
@@ -2002,7 +2002,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithIceOptions) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_ice_options = kSdpFullString;
   InjectAfter(kAttributeIcePwdVoice,
               "a=ice-options:iceoption1 iceoption3\r\n",
@@ -2042,7 +2042,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithRtpDataChannel) {
   JsepSessionDescription jsep_desc(kDummyType);
 
   MakeDescriptionWithoutCandidates(&jsep_desc);
-  std::string message = webrtc::SdpSerialize(jsep_desc);
+  std::string message = webrtz::SdpSerialize(jsep_desc);
 
   std::string expected_sdp = kSdpString;
   expected_sdp.append(kSdpRtpDataChannelString);
@@ -2055,7 +2055,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithSctpDataChannel) {
   JsepSessionDescription jsep_desc(kDummyType);
 
   MakeDescriptionWithoutCandidates(&jsep_desc);
-  std::string message = webrtc::SdpSerialize(jsep_desc);
+  std::string message = webrtz::SdpSerialize(jsep_desc);
 
   std::string expected_sdp = kSdpString;
   expected_sdp.append(kSdpSctpDataChannelString);
@@ -2078,7 +2078,7 @@ TEST_F(WebRtcSdpTest, SerializeWithSctpDataChannelAndNewPort) {
   codec.SetParam(cricket::kCodecParamPort, kNewPort);
   dcdesc->AddOrReplaceCodec(codec);
 
-  std::string message = webrtc::SdpSerialize(jsep_desc);
+  std::string message = webrtz::SdpSerialize(jsep_desc);
 
   std::string expected_sdp = kSdpString;
   expected_sdp.append(kSdpSctpDataChannelString);
@@ -2100,7 +2100,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithDataChannelAndBandwidth) {
   AddRtpDataChannel();
   data_desc_->set_bandwidth(100*1000);
   MakeDescriptionWithoutCandidates(&jsep_desc);
-  std::string message = webrtc::SdpSerialize(jsep_desc);
+  std::string message = webrtz::SdpSerialize(jsep_desc);
 
   std::string expected_sdp = kSdpString;
   expected_sdp.append(kSdpRtpDataChannelString);
@@ -2116,7 +2116,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithExtmap) {
   AddExtmap(encrypted);
   JsepSessionDescription desc_with_extmap(kDummyType);
   MakeDescriptionWithoutCandidates(&desc_with_extmap);
-  std::string message = webrtc::SdpSerialize(desc_with_extmap);
+  std::string message = webrtz::SdpSerialize(desc_with_extmap);
 
   std::string sdp_with_extmap = kSdpString;
   InjectAfter("a=mid:audio_content_name\r\n",
@@ -2137,26 +2137,26 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithExtmapEncrypted) {
 }
 
 TEST_F(WebRtcSdpTest, SerializeCandidates) {
-  std::string message = webrtc::SdpSerializeCandidate(*jcandidate_);
+  std::string message = webrtz::SdpSerializeCandidate(*jcandidate_);
   EXPECT_EQ(std::string(kRawCandidate), message);
 
   Candidate candidate_with_ufrag(candidates_.front());
   candidate_with_ufrag.set_username("ABC");
   jcandidate_.reset(new JsepIceCandidate(std::string("audio_content_name"), 0,
                                          candidate_with_ufrag));
-  message = webrtc::SdpSerializeCandidate(*jcandidate_);
+  message = webrtz::SdpSerializeCandidate(*jcandidate_);
   EXPECT_EQ(std::string(kRawCandidate) + " ufrag ABC", message);
 
   Candidate candidate_with_network_info(candidates_.front());
   candidate_with_network_info.set_network_id(1);
   jcandidate_.reset(new JsepIceCandidate(std::string("audio"), 0,
                                          candidate_with_network_info));
-  message = webrtc::SdpSerializeCandidate(*jcandidate_);
+  message = webrtz::SdpSerializeCandidate(*jcandidate_);
   EXPECT_EQ(std::string(kRawCandidate) + " network-id 1", message);
   candidate_with_network_info.set_network_cost(999);
   jcandidate_.reset(new JsepIceCandidate(std::string("audio"), 0,
                                          candidate_with_network_info));
-  message = webrtc::SdpSerializeCandidate(*jcandidate_);
+  message = webrtz::SdpSerializeCandidate(*jcandidate_);
   EXPECT_EQ(std::string(kRawCandidate) + " network-id 1 network-cost 999",
             message);
 }
@@ -2172,7 +2172,7 @@ TEST_F(WebRtcSdpTest, SerializeTcpCandidates) {
   std::unique_ptr<IceCandidateInterface> jcandidate(
       new JsepIceCandidate(std::string("audio_content_name"), 0, candidate));
 
-  std::string message = webrtc::SdpSerializeCandidate(*jcandidate);
+  std::string message = webrtz::SdpSerializeCandidate(*jcandidate);
   EXPECT_EQ(std::string(kSdpTcpActiveCandidate), message);
 }
 
@@ -2185,7 +2185,7 @@ TEST_F(WebRtcSdpTest, SerializeSessionDescriptionWithH264) {
 
   jdesc_.Initialize(desc_.Copy(), kSessionId, kSessionVersion);
 
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   size_t after_pt = message.find(" H264/90000");
   ASSERT_NE(after_pt, std::string::npos);
   size_t before_pt = message.rfind("a=rtpmap:", after_pt);
@@ -2812,7 +2812,7 @@ TEST_F(WebRtcSdpTest, DeserializeSessionDescriptionWithoutEndLineBreak) {
   sdp = sdp.substr(0, sdp.size() - 2);  // Remove \r\n at the end.
   // Deserialize
   SdpParseError error;
-  EXPECT_FALSE(webrtc::SdpDeserialize(sdp, &jdesc, &error));
+  EXPECT_FALSE(webrtz::SdpDeserialize(sdp, &jdesc, &error));
   const std::string lastline = "a=ssrc:3 label:video_track_id_1";
   EXPECT_EQ(lastline, error.line);
   EXPECT_EQ("Invalid SDP line.", error.description);
@@ -2869,7 +2869,7 @@ TEST_F(WebRtcSdpTest, SerializeSdpWithConferenceFlag) {
   // We tested deserialization already above, so just test that if we serialize
   // and deserialize the flag doesn't disappear.
   EXPECT_TRUE(SdpDeserialize(kSdpConferenceString, &jdesc));
-  std::string reserialized = webrtc::SdpSerialize(jdesc);
+  std::string reserialized = webrtz::SdpSerialize(jdesc);
   EXPECT_TRUE(SdpDeserialize(reserialized, &jdesc));
 
   // Verify.
@@ -3039,7 +3039,7 @@ TEST_F(WebRtcSdpTest, DeserializeVideoFmtp) {
   // Deserialize
   SdpParseError error;
   EXPECT_TRUE(
-      webrtc::SdpDeserialize(kSdpWithFmtpString, &jdesc_output, &error));
+      webrtz::SdpDeserialize(kSdpWithFmtpString, &jdesc_output, &error));
 
   const VideoContentDescription* vcd =
       GetFirstVideoContentDescription(jdesc_output.description());
@@ -3073,7 +3073,7 @@ TEST_F(WebRtcSdpTest, DeserializeVideoFmtpWithSprops) {
   // Deserialize.
   SdpParseError error;
   EXPECT_TRUE(
-      webrtc::SdpDeserialize(kSdpWithFmtpString, &jdesc_output, &error));
+      webrtz::SdpDeserialize(kSdpWithFmtpString, &jdesc_output, &error));
 
   const VideoContentDescription* vcd =
       GetFirstVideoContentDescription(jdesc_output.description());
@@ -3105,7 +3105,7 @@ TEST_F(WebRtcSdpTest, DeserializeVideoFmtpWithSpace) {
 
   // Deserialize
   SdpParseError error;
-  EXPECT_TRUE(webrtc::SdpDeserialize(kSdpWithFmtpString, &jdesc_output,
+  EXPECT_TRUE(webrtz::SdpDeserialize(kSdpWithFmtpString, &jdesc_output,
                                      &error));
 
   const VideoContentDescription* vcd =
@@ -3134,7 +3134,7 @@ TEST_F(WebRtcSdpTest, SerializeAudioFmtpWithUnknownParameter) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_fmtp = kSdpFullString;
   InjectAfter("a=rtpmap:111 opus/48000/2\r\n",
               "a=fmtp:111 unknown-future-parameter=SomeFutureValue\r\n",
@@ -3152,7 +3152,7 @@ TEST_F(WebRtcSdpTest, SerializeAudioFmtpWithKnownFmtpParameter) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_fmtp = kSdpFullString;
   InjectAfter("a=rtpmap:111 opus/48000/2\r\n",
               "a=fmtp:111 stereo=1\r\n",
@@ -3171,7 +3171,7 @@ TEST_F(WebRtcSdpTest, SerializeAudioFmtpWithPTimeAndMaxPTime) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_fmtp = kSdpFullString;
   InjectAfter("a=rtpmap:104 ISAC/32000\r\n",
               "a=maxptime:120\r\n"  // No comma here. String merging!
@@ -3190,7 +3190,7 @@ TEST_F(WebRtcSdpTest, SerializeVideoFmtp) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_fmtp = kSdpFullString;
   InjectAfter("a=rtpmap:120 VP8/90000\r\n",
               "a=fmtp:120 x-google-min-bitrate=10\r\n",
@@ -3230,7 +3230,7 @@ TEST_F(WebRtcSdpTest, RoundTripSdpWithSctpDataChannelsWithCandidates) {
   JsepSessionDescription jdesc_output(kDummyType);
 
   EXPECT_TRUE(SdpDeserialize(sdp_with_data, &jdesc_output));
-  EXPECT_EQ(sdp_with_data, webrtc::SdpSerialize(jdesc_output));
+  EXPECT_EQ(sdp_with_data, webrtz::SdpSerialize(jdesc_output));
 }
 
 TEST_F(WebRtcSdpTest, SerializeDtlsSetupAttribute) {
@@ -3258,7 +3258,7 @@ TEST_F(WebRtcSdpTest, SerializeDtlsSetupAttribute) {
   ASSERT_TRUE(jdesc_.Initialize(desc_.Copy(),
                                 jdesc_.session_id(),
                                 jdesc_.session_version()));
-  std::string message = webrtc::SdpSerialize(jdesc_);
+  std::string message = webrtz::SdpSerialize(jdesc_);
   std::string sdp_with_dtlssetup = kSdpFullString;
 
   // Fingerprint attribute is necessary to add DTLS setup attribute.
@@ -3329,7 +3329,7 @@ TEST_F(WebRtcSdpTest, MediaContentOrderMaintainedRoundTrip) {
       EXPECT_EQ(media_types[media_content_in_sdp[i]], mdesc->type());
     }
 
-    std::string serialized_sdp = webrtc::SdpSerialize(jdesc);
+    std::string serialized_sdp = webrtz::SdpSerialize(jdesc);
     EXPECT_EQ(sdp_string, serialized_sdp);
   }
 }
@@ -3469,7 +3469,7 @@ const char kSsrcAttributeMsidLine[] =
 
 TEST_F(WebRtcSdpTest, SerializeOnlyMediaSectionMsid) {
   jdesc_.description()->set_msid_signaling(cricket::kMsidSignalingMediaSection);
-  std::string sdp = webrtc::SdpSerialize(jdesc_);
+  std::string sdp = webrtz::SdpSerialize(jdesc_);
 
   EXPECT_NE(std::string::npos, sdp.find(kMediaSectionMsidLine));
   EXPECT_EQ(std::string::npos, sdp.find(kSsrcAttributeMsidLine));
@@ -3478,7 +3478,7 @@ TEST_F(WebRtcSdpTest, SerializeOnlyMediaSectionMsid) {
 TEST_F(WebRtcSdpTest, SerializeOnlySsrcAttributeMsid) {
   jdesc_.description()->set_msid_signaling(
       cricket::kMsidSignalingSsrcAttribute);
-  std::string sdp = webrtc::SdpSerialize(jdesc_);
+  std::string sdp = webrtz::SdpSerialize(jdesc_);
 
   EXPECT_EQ(std::string::npos, sdp.find(kMediaSectionMsidLine));
   EXPECT_NE(std::string::npos, sdp.find(kSsrcAttributeMsidLine));
@@ -3488,7 +3488,7 @@ TEST_F(WebRtcSdpTest, SerializeBothMediaSectionAndSsrcAttributeMsid) {
   jdesc_.description()->set_msid_signaling(
       cricket::kMsidSignalingMediaSection |
       cricket::kMsidSignalingSsrcAttribute);
-  std::string sdp = webrtc::SdpSerialize(jdesc_);
+  std::string sdp = webrtz::SdpSerialize(jdesc_);
 
   EXPECT_NE(std::string::npos, sdp.find(kMediaSectionMsidLine));
   EXPECT_NE(std::string::npos, sdp.find(kSsrcAttributeMsidLine));
@@ -3743,7 +3743,7 @@ TEST_F(WebRtcSdpTest, SerializeAndDeserializeWithConnectionAddress) {
   JsepSessionDescription expected_jsep(kDummyType);
   MakeDescriptionWithoutCandidates(&expected_jsep);
   // Serialization.
-  std::string message = webrtc::SdpSerialize(expected_jsep);
+  std::string message = webrtz::SdpSerialize(expected_jsep);
   // Deserialization.
   JsepSessionDescription jdesc(kDummyType);
   EXPECT_TRUE(SdpDeserialize(message, &jdesc));

@@ -12,7 +12,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ExtendedReportsEndToEndTest : public test::CallTest {};
 
@@ -202,4 +202,4 @@ TEST_F(ExtendedReportsEndToEndTest,
                       /*enable_zero_target_bitrate=*/true);
   RunBaseTest(&test);
 }
-}  // namespace webrtc
+}  // namespace webrtz

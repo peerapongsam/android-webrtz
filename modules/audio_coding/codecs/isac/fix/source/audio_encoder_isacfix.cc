@@ -12,9 +12,9 @@
 
 #include "modules/audio_coding/codecs/isac/audio_encoder_isac_t_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Explicit instantiation:
 template class AudioEncoderIsacT<IsacFix>;
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -184,4 +184,4 @@ int64_t BitrateProber::GetNextProbeTime(const ProbeCluster& cluster) {
 }
 
 
-}  // namespace webrtc
+}  // namespace webrtz

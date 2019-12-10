@@ -20,7 +20,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoder {
  public:
@@ -173,5 +173,5 @@ class AudioDecoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioDecoder);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // API_AUDIO_CODECS_AUDIO_DECODER_H_

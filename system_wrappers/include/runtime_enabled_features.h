@@ -22,7 +22,7 @@
 // This interface requires manual translation from feature name to
 // Chrome feature class in third_party/webrtc_overrides.
 
-namespace webrtc {
+namespace webrtz {
 namespace runtime_enabled_features {
 
 const char kDualStreamModeFeatureName[] = "WebRtcDualStreamMode";
@@ -30,6 +30,6 @@ const char kDualStreamModeFeatureName[] = "WebRtcDualStreamMode";
 bool IsFeatureEnabled(std::string feature_name);
 
 }  // namespace runtime_enabled_features
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_INCLUDE_RUNTIME_ENABLED_FEATURES_H_

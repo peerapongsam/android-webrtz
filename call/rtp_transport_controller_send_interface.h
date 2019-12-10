@@ -22,7 +22,7 @@ namespace rtc {
 struct SentPacket;
 struct NetworkRoute;
 }  // namespace rtc
-namespace webrtc {
+namespace webrtz {
 
 class CallStatsObserver;
 class TargetTransferRateObserver;
@@ -50,13 +50,13 @@ class TransportFeedbackObserver;
 // direct accessors like packet_router() should be removed.
 //
 // This should also have a reference to the underlying
-// webrtc::Transport(s). Currently, webrtc::Transport is implemented by
+// webrtz::Transport(s). Currently, webrtz::Transport is implemented by
 // WebRtcVideoChannel and WebRtcVoiceMediaChannel, and owned by
 // WebrtcSession. Video and audio always uses different transport
 // objects, even in the common case where they are bundled over the
 // same underlying transport.
 //
-// Extracting the logic of the webrtc::Transport from BaseChannel and
+// Extracting the logic of the webrtz::Transport from BaseChannel and
 // subclasses into a separate class seems to be a prerequesite for
 // moving the transport here.
 class RtpTransportControllerSendInterface {
@@ -109,6 +109,6 @@ class RtpTransportControllerSendInterface {
       const BitrateConstraintsMask& preferences) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_TRANSPORT_CONTROLLER_SEND_INTERFACE_H_

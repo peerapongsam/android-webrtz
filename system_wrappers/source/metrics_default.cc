@@ -18,7 +18,7 @@
 // Default implementation of histogram methods for WebRTC clients that do not
 // want to provide their own implementation.
 
-namespace webrtc {
+namespace webrtz {
 namespace metrics {
 class Histogram;
 
@@ -300,4 +300,4 @@ int MinSample(const std::string& name) {
 }
 
 }  // namespace metrics
-}  // namespace webrtc
+}  // namespace webrtz

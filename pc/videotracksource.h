@@ -18,7 +18,7 @@
 #include "rtc_base/thread_checker.h"
 
 // VideoTrackSource implements VideoTrackSourceInterface.
-namespace webrtc {
+namespace webrtz {
 
 class VideoTrackSource : public Notifier<VideoTrackSourceInterface> {
  public:
@@ -49,6 +49,6 @@ class VideoTrackSource : public Notifier<VideoTrackSourceInterface> {
   const bool remote_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  //  PC_VIDEOTRACKSOURCE_H_

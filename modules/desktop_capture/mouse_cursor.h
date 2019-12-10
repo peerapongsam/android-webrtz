@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_geometry.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DesktopFrame;
 
@@ -44,6 +44,6 @@ class MouseCursor {
   RTC_DISALLOW_COPY_AND_ASSIGN(MouseCursor);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MOUSE_CURSOR_H_

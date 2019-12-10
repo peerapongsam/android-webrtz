@@ -16,7 +16,7 @@
 #include "modules/audio_coding/codecs/legacy_encoded_audio_frame.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioDecoderG722Impl::AudioDecoderG722Impl() {
   WebRtcG722_CreateDecoder(&dec_state_);
@@ -159,4 +159,4 @@ void AudioDecoderG722StereoImpl::SplitStereoPacket(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

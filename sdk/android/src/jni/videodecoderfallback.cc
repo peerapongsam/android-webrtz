@@ -15,7 +15,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/wrappednativecodec.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static jlong JNI_VideoDecoderFallback_CreateDecoder(
@@ -36,4 +36,4 @@ static jlong JNI_VideoDecoderFallback_CreateDecoder(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/sleep.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum AudioDeviceMessageType : uint32_t {
   kMessageInputStreamDisconnected,
@@ -218,4 +218,4 @@ void AAudioRecorder::HandleStreamDisconnected() {
   InitRecording();
   StartRecording();
 }
-}  // namespace webrtc
+}  // namespace webrtz

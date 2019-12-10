@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(ScreenCaptureUtilsTest, GetScreenList) {
   DesktopCapturer::SourceList screens;
@@ -29,4 +29,4 @@ TEST(ScreenCaptureUtilsTest, GetScreenList) {
   ASSERT_EQ(screens.size(), device_names.size());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

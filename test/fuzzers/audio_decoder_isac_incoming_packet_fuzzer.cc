@@ -11,9 +11,9 @@
 #include "modules/audio_coding/codecs/isac/main/include/audio_decoder_isac.h"
 #include "test/fuzzers/audio_decoder_fuzzer.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   AudioDecoderIsacFloatImpl dec(16000);
   FuzzAudioDecoderIncomingPacket(data, size, &dec);
 }
-}  // namespace webrtc
+}  // namespace webrtz

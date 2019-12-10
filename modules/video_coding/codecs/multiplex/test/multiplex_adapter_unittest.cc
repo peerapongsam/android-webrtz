@@ -26,7 +26,7 @@
 using testing::_;
 using testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 constexpr const char* kMultiplexAssociatedCodecName = cricket::kVp9CodecName;
 const VideoCodecType kMultiplexAssociatedCodecType =
@@ -35,8 +35,8 @@ const VideoCodecType kMultiplexAssociatedCodecType =
 class TestMultiplexAdapter : public VideoCodecUnitTest {
  public:
   TestMultiplexAdapter()
-      : decoder_factory_(new webrtc::MockVideoDecoderFactory),
-        encoder_factory_(new webrtc::MockVideoEncoderFactory) {}
+      : decoder_factory_(new webrtz::MockVideoDecoderFactory),
+        encoder_factory_(new webrtz::MockVideoEncoderFactory) {}
 
  protected:
   std::unique_ptr<VideoDecoder> CreateDecoder() override {
@@ -50,15 +50,15 @@ class TestMultiplexAdapter : public VideoCodecUnitTest {
   }
 
   void ModifyCodecSettings(VideoCodec* codec_settings) override {
-    webrtc::test::CodecSettings(kMultiplexAssociatedCodecType, codec_settings);
+    webrtz::test::CodecSettings(kMultiplexAssociatedCodecType, codec_settings);
     codec_settings->VP9()->numberOfTemporalLayers = 1;
     codec_settings->VP9()->numberOfSpatialLayers = 1;
-    codec_settings->codecType = webrtc::kVideoCodecMultiplex;
+    codec_settings->codecType = webrtz::kVideoCodecMultiplex;
   }
 
   std::unique_ptr<VideoFrame> CreateI420AInputFrame() {
     VideoFrame* input_frame = NextInputFrame();
-    rtc::scoped_refptr<webrtc::I420BufferInterface> yuv_buffer =
+    rtc::scoped_refptr<webrtz::I420BufferInterface> yuv_buffer =
         input_frame->video_frame_buffer()->ToI420();
     rtc::scoped_refptr<I420ABufferInterface> yuva_buffer = WrapI420ABuffer(
         yuv_buffer->width(), yuv_buffer->height(), yuv_buffer->DataY(),
@@ -104,8 +104,8 @@ class TestMultiplexAdapter : public VideoCodecUnitTest {
     VideoCodecUnitTest::SetUp();
   }
 
-  const std::unique_ptr<webrtc::MockVideoDecoderFactory> decoder_factory_;
-  const std::unique_ptr<webrtc::MockVideoEncoderFactory> encoder_factory_;
+  const std::unique_ptr<webrtz::MockVideoDecoderFactory> decoder_factory_;
+  const std::unique_ptr<webrtz::MockVideoEncoderFactory> encoder_factory_;
 };
 
 // TODO(emircan): Currently VideoCodecUnitTest tests do a complete setup
@@ -223,4 +223,4 @@ TEST_F(TestMultiplexAdapter, ImageIndexIncreases) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

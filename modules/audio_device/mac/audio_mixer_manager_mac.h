@@ -18,7 +18,7 @@
 
 #include <CoreAudio/CoreAudio.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioMixerManagerMac {
  public:
@@ -67,6 +67,6 @@ class AudioMixerManagerMac {
   uint16_t _noOutputChannels;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_MIXER_MAC_H

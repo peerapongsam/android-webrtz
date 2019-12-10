@@ -16,7 +16,7 @@
 
 #include "media/base/rtputils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RTCErrorOr<cricket::FeedbackParam> ToCricketFeedbackParam(
     const RtcpFeedback& feedback) {
@@ -451,4 +451,4 @@ template RtpParameters ToRtpParameters<cricket::VideoCodec>(
     const cricket::RtpHeaderExtensions& cricket_extensions,
     const cricket::StreamParamsVec& stream_params);
 
-}  // namespace webrtc
+}  // namespace webrtz

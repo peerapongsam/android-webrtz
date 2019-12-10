@@ -16,7 +16,7 @@
 #include <dlfcn.h>
 #endif
 
-namespace webrtc {
+namespace webrtz {
 namespace adm_linux {
 
 inline static const char* GetDllError() {
@@ -102,4 +102,4 @@ bool InternalLoadSymbols(DllHandle handle,
 }
 
 }  // namespace adm_linux
-}  // namespace webrtc
+}  // namespace webrtz

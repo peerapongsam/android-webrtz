@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct RTPHeader;
 
@@ -40,5 +40,5 @@ class RtpHeaderParser {
   // De-registers an RTP header extension.
   virtual bool DeregisterRtpHeaderExtension(RTPExtensionType type) = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_INCLUDE_RTP_HEADER_PARSER_H_

@@ -14,7 +14,7 @@
 #include "modules/video_capture/device_info_impl.h"
 #include "modules/video_capture/video_capture_impl.h"
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -49,5 +49,5 @@ private:
     bool IsDeviceNameMatches(const char* name, const char* deviceUniqueIdUTF8);
 };
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 #endif // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_LINUX_DEVICE_INFO_LINUX_H_

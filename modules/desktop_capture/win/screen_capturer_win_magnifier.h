@@ -24,7 +24,7 @@
 #include "modules/desktop_capture/win/scoped_thread_desktop.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DesktopFrame;
 class DesktopRect;
@@ -134,6 +134,6 @@ class ScreenCapturerWinMagnifier : public DesktopCapturer {
   RTC_DISALLOW_COPY_AND_ASSIGN(ScreenCapturerWinMagnifier);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_SCREEN_CAPTURER_WIN_MAGNIFIER_H_

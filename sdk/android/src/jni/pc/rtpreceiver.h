@@ -16,7 +16,7 @@
 #include "api/rtpreceiverinterface.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 ScopedJavaLocalRef<jobject> NativeToJavaRtpReceiver(
@@ -36,6 +36,6 @@ class JavaRtpReceiverGlobalOwner {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_RTPRECEIVER_H_

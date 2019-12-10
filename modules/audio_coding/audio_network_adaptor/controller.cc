@@ -10,10 +10,10 @@
 
 #include "modules/audio_coding/audio_network_adaptor/controller.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Controller::NetworkMetrics::NetworkMetrics() = default;
 
 Controller::NetworkMetrics::~NetworkMetrics() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

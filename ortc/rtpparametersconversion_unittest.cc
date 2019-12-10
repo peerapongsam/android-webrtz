@@ -14,7 +14,7 @@
 #include "ortc/testrtpparameters.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(RtpParametersConversionTest, ToCricketFeedbackParam) {
   auto result = ToCricketFeedbackParam(
@@ -642,4 +642,4 @@ TEST(RtpParametersConversionTest, ToRtpParameters) {
   EXPECT_EQ(1234u, rtp_parameters.encodings[0].ssrc);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

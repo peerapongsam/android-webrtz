@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(RgbaColorTest, ConvertFromAndToUInt32) {
   static const std::vector<uint32_t> cases{
@@ -41,4 +41,4 @@ TEST(RgbaColorTest, AlphaChannelEquality) {
   ASSERT_NE(left, right);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

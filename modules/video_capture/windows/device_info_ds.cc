@@ -19,7 +19,7 @@
 #include <dvdmedia.h>
 #include <streams.h>
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 
 // static
@@ -634,4 +634,4 @@ int32_t DeviceInfoDS::DisplayCaptureSettingsDialogBox(
   return 0;
 }
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

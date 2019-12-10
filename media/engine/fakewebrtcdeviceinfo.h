@@ -17,22 +17,22 @@
 #include "media/engine/webrtcvideocapturer.h"
 #include "rtc_base/stringutils.h"
 
-// Fake class for mocking out webrtc::VideoCaptureModule::DeviceInfo.
-class FakeWebRtcDeviceInfo : public webrtc::VideoCaptureModule::DeviceInfo {
+// Fake class for mocking out webrtz::VideoCaptureModule::DeviceInfo.
+class FakeWebRtcDeviceInfo : public webrtz::VideoCaptureModule::DeviceInfo {
  public:
   struct Device {
     Device(const std::string& n, const std::string& i) : name(n), id(i) {}
     std::string name;
     std::string id;
     std::string product;
-    std::vector<webrtc::VideoCaptureCapability> caps;
+    std::vector<webrtz::VideoCaptureCapability> caps;
   };
   FakeWebRtcDeviceInfo() {}
   void AddDevice(const std::string& device_name, const std::string& device_id) {
     devices_.push_back(Device(device_name, device_id));
   }
   void AddCapability(const std::string& device_id,
-                     const webrtc::VideoCaptureCapability& cap) {
+                     const webrtz::VideoCaptureCapability& cap) {
     Device* dev = GetDeviceById(
         reinterpret_cast<const char*>(device_id.c_str()));
     if (!dev) return;
@@ -67,7 +67,7 @@ class FakeWebRtcDeviceInfo : public webrtc::VideoCaptureModule::DeviceInfo {
   }
   virtual int32_t GetCapability(const char* device_id,
                                 const uint32_t device_cap_num,
-                                webrtc::VideoCaptureCapability& cap) {
+                                webrtz::VideoCaptureCapability& cap) {
     Device* dev = GetDeviceById(device_id);
     if (!dev) return -1;
     if (device_cap_num >= dev->caps.size()) return -1;
@@ -75,13 +75,13 @@ class FakeWebRtcDeviceInfo : public webrtc::VideoCaptureModule::DeviceInfo {
     return 0;
   }
   virtual int32_t GetOrientation(const char* device_id,
-                                 webrtc::VideoRotation& rotation) {
+                                 webrtz::VideoRotation& rotation) {
     return -1;  // not implemented
   }
   virtual int32_t GetBestMatchedCapability(
       const char* device_id,
-      const webrtc::VideoCaptureCapability& requested,
-      webrtc::VideoCaptureCapability& resulting) {
+      const webrtz::VideoCaptureCapability& requested,
+      webrtz::VideoCaptureCapability& resulting) {
     return -1;  // not implemented
   }
   virtual int32_t DisplayCaptureSettingsDialogBox(

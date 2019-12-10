@@ -10,7 +10,7 @@
 
 #include "api/audio_codecs/opus/audio_encoder_opus_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -67,4 +67,4 @@ bool AudioEncoderOpusConfig::IsOk() const {
     return false;
   return true;
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/platform_thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 JVM* g_jvm;
 
@@ -27,10 +27,10 @@ struct {
   const char* name;
   jclass clazz;
 } loaded_classes[] = {
-  {"org/webrtc/voiceengine/BuildInfo", nullptr},
-  {"org/webrtc/voiceengine/WebRtcAudioManager", nullptr},
-  {"org/webrtc/voiceengine/WebRtcAudioRecord", nullptr},
-  {"org/webrtc/voiceengine/WebRtcAudioTrack", nullptr},
+  {"org/webrtz/voiceengine/BuildInfo", nullptr},
+  {"org/webrtz/voiceengine/WebRtcAudioManager", nullptr},
+  {"org/webrtz/voiceengine/WebRtcAudioRecord", nullptr},
+  {"org/webrtz/voiceengine/WebRtcAudioTrack", nullptr},
 };
 
 // Android's FindClass() is trickier than usual because the app-specific
@@ -226,7 +226,7 @@ void JVM::Initialize(JavaVM* jvm, jobject context) {
 
   // Pass in the context to the new ContextUtils class.
   JNIEnv* jni = g_jvm->jni();
-  jclass context_utils = FindClass(jni, "org/webrtc/ContextUtils");
+  jclass context_utils = FindClass(jni, "org/webrtz/ContextUtils");
   jmethodID initialize_method = jni->GetStaticMethodID(
       context_utils, "initialize", "(Landroid/content/Context;)V");
   jni->CallStaticVoidMethod(context_utils, initialize_method, context);
@@ -281,4 +281,4 @@ JavaClass JVM::GetClass(const char* name) {
   return JavaClass(jni(), LookUpClass(name));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

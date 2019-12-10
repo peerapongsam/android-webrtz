@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 namespace plotting {
 
 class TriageNotification {
@@ -148,6 +148,6 @@ class OutgoingHighLoss : public TriageNotification {
 };
 
 }  // namespace plotting
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_EVENT_LOG_VISUALIZER_TRIAGE_NOTIFICATIONS_H_

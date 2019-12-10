@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The method loops through a list of packets {A, B, C, ...}. Each packet is
 // split into its corresponding RED payloads, {A1, A2, ...}, which is
@@ -159,4 +159,4 @@ int RedPayloadSplitter::CheckRedPayloads(
   return num_deleted_packets;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

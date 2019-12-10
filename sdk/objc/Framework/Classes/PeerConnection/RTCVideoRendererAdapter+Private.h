@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The Objective-C video renderer passed to this adapter during construction.
- * Calls made to the webrtc::VideoRenderInterface will be adapted and passed to
+ * Calls made to the webrtz::VideoRenderInterface will be adapted and passed to
  * this video renderer.
  */
 @property(nonatomic, readonly) id<RTCVideoRenderer> videoRenderer;
@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  * during construction. This pointer is unsafe and owned by this class.
  */
 @property(nonatomic, readonly)
-    rtc::VideoSinkInterface<webrtc::VideoFrame> *nativeVideoRenderer;
+    rtc::VideoSinkInterface<webrtz::VideoFrame> *nativeVideoRenderer;
 
 /** Initialize an RTCVideoRendererAdapter with an RTCVideoRenderer. */
 - (instancetype)initWithNativeRenderer:(id<RTCVideoRenderer>)videoRenderer

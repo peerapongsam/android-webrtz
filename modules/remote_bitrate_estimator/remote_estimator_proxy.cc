@@ -19,7 +19,7 @@
 #include "rtc_base/numerics/safe_minmax.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(sprang): Tune these!
 const int RemoteEstimatorProxy::kBackWindowMs = 500;
@@ -198,4 +198,4 @@ bool RemoteEstimatorProxy::BuildFeedbackPacket(
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

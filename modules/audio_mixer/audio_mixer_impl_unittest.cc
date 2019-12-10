@@ -29,7 +29,7 @@ using testing::Exactly;
 using testing::Invoke;
 using testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -531,4 +531,4 @@ TEST(AudioMixer, AnyRateIsPossibleWithNoLimiter) {
     }
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

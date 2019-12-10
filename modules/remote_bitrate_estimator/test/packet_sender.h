@@ -22,7 +22,7 @@
 #include "modules/remote_bitrate_estimator/test/bwe_test_framework.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -203,5 +203,5 @@ class TcpSender : public PacketSender {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_PACKET_SENDER_H_

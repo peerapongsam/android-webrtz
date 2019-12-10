@@ -16,7 +16,7 @@
 #include "modules/bitrate_controller/send_side_bandwidth_estimation.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MATCHER(LossBasedBweUpdateWithBitrateOnly, "") {
   if (arg->GetType() != RtcEvent::Type::BweUpdateLossBased) {
@@ -165,4 +165,4 @@ TEST(SendSideBweTest, SettingSendBitrateOverridesDelayBasedEstimate) {
 }
 
 
-}  // namespace webrtc
+}  // namespace webrtz

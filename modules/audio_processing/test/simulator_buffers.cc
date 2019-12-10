@@ -13,7 +13,7 @@
 #include "modules/audio_processing/test/audio_buffer_tools.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 SimulatorBuffers::SimulatorBuffers(int render_input_sample_rate_hz,
@@ -82,4 +82,4 @@ void SimulatorBuffers::UpdateInputBuffers() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

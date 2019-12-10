@@ -17,9 +17,9 @@
 #include "api/mediaconstraintsinterface.h"
 #include "rtc_base/stringencode.h"
 
-namespace webrtc {
+namespace webrtz {
 
-class FakeConstraints : public webrtc::MediaConstraintsInterface {
+class FakeConstraints : public webrtz::MediaConstraintsInterface {
  public:
   FakeConstraints() { }
   virtual ~FakeConstraints() { }
@@ -111,6 +111,6 @@ class FakeConstraints : public webrtc::MediaConstraintsInterface {
   Constraints optional_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_TEST_FAKECONSTRAINTS_H_

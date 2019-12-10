@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class NullRenderer : public VideoRenderer {
@@ -30,4 +30,4 @@ VideoRenderer* VideoRenderer::Create(const char* window_title,
   return new NullRenderer();
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "rtc_base/buffer.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Struct for holding RTP packets.
 struct Packet {
@@ -120,5 +120,5 @@ struct Packet {
 // A list of packets.
 typedef std::list<Packet> PacketList;
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_PACKET_H_

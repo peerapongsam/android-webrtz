@@ -43,7 +43,7 @@ struct SenderOptions {
 struct MediaDescriptionOptions {
   MediaDescriptionOptions(MediaType type,
                           const std::string& mid,
-                          webrtc::RtpTransceiverDirection direction,
+                          webrtz::RtpTransceiverDirection direction,
                           bool stopped)
       : type(type), mid(mid), direction(direction), stopped(stopped) {}
 
@@ -61,7 +61,7 @@ struct MediaDescriptionOptions {
 
   MediaType type;
   std::string mid;
-  webrtc::RtpTransceiverDirection direction;
+  webrtz::RtpTransceiverDirection direction;
   bool stopped;
   TransportOptions transport_options;
   // Note: There's no equivalent "RtpReceiverOptions" because only send
@@ -128,8 +128,8 @@ class MediaSessionDescriptionFactory {
     RtpHeaderExtensions extensions = audio_rtp_extensions_;
     // If we are Unified Plan, also offer the MID header extension.
     if (unified_plan) {
-      extensions.push_back(webrtc::RtpExtension(
-          webrtc::RtpExtension::kMidUri, webrtc::RtpExtension::kMidDefaultId));
+      extensions.push_back(webrtz::RtpExtension(
+          webrtz::RtpExtension::kMidUri, webrtz::RtpExtension::kMidDefaultId));
     }
     return extensions;
   }
@@ -142,8 +142,8 @@ class MediaSessionDescriptionFactory {
     RtpHeaderExtensions extensions = video_rtp_extensions_;
     // If we are Unified Plan, also offer the MID header extension.
     if (unified_plan) {
-      extensions.push_back(webrtc::RtpExtension(
-          webrtc::RtpExtension::kMidUri, webrtc::RtpExtension::kMidDefaultId));
+      extensions.push_back(webrtz::RtpExtension(
+          webrtz::RtpExtension::kMidUri, webrtz::RtpExtension::kMidDefaultId));
     }
     return extensions;
   }
@@ -166,10 +166,10 @@ class MediaSessionDescriptionFactory {
 
  private:
   const AudioCodecs& GetAudioCodecsForOffer(
-      const webrtc::RtpTransceiverDirection& direction) const;
+      const webrtz::RtpTransceiverDirection& direction) const;
   const AudioCodecs& GetAudioCodecsForAnswer(
-      const webrtc::RtpTransceiverDirection& offer,
-      const webrtc::RtpTransceiverDirection& answer) const;
+      const webrtz::RtpTransceiverDirection& offer,
+      const webrtz::RtpTransceiverDirection& answer) const;
   void GetCodecsForOffer(const SessionDescription* current_description,
                          AudioCodecs* audio_codecs,
                          VideoCodecs* video_codecs,

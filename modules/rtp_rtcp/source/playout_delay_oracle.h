@@ -18,7 +18,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class tracks the application requests to limit minimum and maximum
 // playout delay and makes a decision on whether the current RTP frame
@@ -76,6 +76,6 @@ class PlayoutDelayOracle {
   RTC_DISALLOW_COPY_AND_ASSIGN(PlayoutDelayOracle);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_PLAYOUT_DELAY_ORACLE_H_

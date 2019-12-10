@@ -27,7 +27,7 @@
 #include "rtc_base/refcount.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -436,4 +436,4 @@ TEST_F(TrackMediaInfoMapDeathTest, MultipleMultiSsrcReceiversPerTrack) {
 
 #endif  // RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
-}  // namespace webrtc
+}  // namespace webrtz

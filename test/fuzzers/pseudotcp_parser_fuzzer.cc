@@ -14,7 +14,7 @@
 #include "p2p/base/pseudotcp.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 class FakeIPseudoTcpNotify : public cricket::IPseudoTcpNotify {
  public:
   void OnTcpOpen(cricket::PseudoTcp* tcp) {}
@@ -45,4 +45,4 @@ Environment* env = new Environment(new FakeIPseudoTcpNotify());
 void FuzzOneInput(const uint8_t* data, size_t size) {
   env->ptcp.NotifyPacket(reinterpret_cast<const char*>(data), size);
 }
-}  // namespace webrtc
+}  // namespace webrtz

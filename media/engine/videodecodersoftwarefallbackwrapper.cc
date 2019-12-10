@@ -19,7 +19,7 @@
 #include "rtc_base/system/fallthrough.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VideoDecoderSoftwareFallbackWrapper::VideoDecoderSoftwareFallbackWrapper(
     std::unique_ptr<VideoDecoder> sw_fallback_decoder,
@@ -167,4 +167,4 @@ VideoDecoder& VideoDecoderSoftwareFallbackWrapper::active_decoder() const {
                                                  : *hw_decoder_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

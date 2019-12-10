@@ -16,7 +16,7 @@
 #include "modules/audio_processing/beamformer/matrix.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -91,6 +91,6 @@ class ComplexMatrix : public Matrix<complex<T> > {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_BEAMFORMER_COMPLEX_MATRIX_H_

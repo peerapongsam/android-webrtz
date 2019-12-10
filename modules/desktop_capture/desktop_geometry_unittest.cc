@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(DesktopRectTest, UnionBetweenTwoNonEmptyRects) {
   DesktopRect rect = DesktopRect::MakeLTRB(1, 1, 2, 2);
@@ -103,4 +103,4 @@ TEST(DesktopRectTest, Scale) {
   ASSERT_EQ(rect.height(), 110);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

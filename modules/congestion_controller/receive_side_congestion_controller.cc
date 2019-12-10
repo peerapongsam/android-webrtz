@@ -15,7 +15,7 @@
 #include "modules/remote_bitrate_estimator/remote_bitrate_estimator_single_stream.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const uint32_t kTimeOffsetSwitchThreshold = 30;
@@ -172,4 +172,4 @@ void ReceiveSideCongestionController::Process() {
   remote_bitrate_estimator_.Process();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

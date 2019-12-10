@@ -410,42 +410,42 @@ static const char kDtlsSdesFallbackSdp[] =
 using ::testing::Exactly;
 using ::testing::Values;
 using cricket::StreamParams;
-using webrtc::AudioSourceInterface;
-using webrtc::AudioTrack;
-using webrtc::AudioTrackInterface;
-using webrtc::DataBuffer;
-using webrtc::DataChannelInterface;
-using webrtc::FakeConstraints;
-using webrtc::IceCandidateInterface;
-using webrtc::MediaConstraintsInterface;
-using webrtc::MediaStream;
-using webrtc::MediaStreamInterface;
-using webrtc::MediaStreamTrackInterface;
-using webrtc::MockCreateSessionDescriptionObserver;
-using webrtc::MockDataChannelObserver;
-using webrtc::MockPeerConnectionObserver;
-using webrtc::MockSetSessionDescriptionObserver;
-using webrtc::MockStatsObserver;
-using webrtc::NotifierInterface;
-using webrtc::ObserverInterface;
-using webrtc::PeerConnectionInterface;
-using webrtc::PeerConnectionObserver;
-using webrtc::RTCError;
-using webrtc::RTCErrorType;
-using webrtc::RtpReceiverInterface;
-using webrtc::RtpSenderInterface;
-using webrtc::RtpSenderProxyWithInternal;
-using webrtc::RtpSenderInternal;
-using webrtc::RtpTransceiverDirection;
-using webrtc::SdpParseError;
-using webrtc::SdpSemantics;
-using webrtc::SdpType;
-using webrtc::SessionDescriptionInterface;
-using webrtc::StreamCollection;
-using webrtc::StreamCollectionInterface;
-using webrtc::VideoTrackSourceInterface;
-using webrtc::VideoTrack;
-using webrtc::VideoTrackInterface;
+using webrtz::AudioSourceInterface;
+using webrtz::AudioTrack;
+using webrtz::AudioTrackInterface;
+using webrtz::DataBuffer;
+using webrtz::DataChannelInterface;
+using webrtz::FakeConstraints;
+using webrtz::IceCandidateInterface;
+using webrtz::MediaConstraintsInterface;
+using webrtz::MediaStream;
+using webrtz::MediaStreamInterface;
+using webrtz::MediaStreamTrackInterface;
+using webrtz::MockCreateSessionDescriptionObserver;
+using webrtz::MockDataChannelObserver;
+using webrtz::MockPeerConnectionObserver;
+using webrtz::MockSetSessionDescriptionObserver;
+using webrtz::MockStatsObserver;
+using webrtz::NotifierInterface;
+using webrtz::ObserverInterface;
+using webrtz::PeerConnectionInterface;
+using webrtz::PeerConnectionObserver;
+using webrtz::RTCError;
+using webrtz::RTCErrorType;
+using webrtz::RtpReceiverInterface;
+using webrtz::RtpSenderInterface;
+using webrtz::RtpSenderProxyWithInternal;
+using webrtz::RtpSenderInternal;
+using webrtz::RtpTransceiverDirection;
+using webrtz::SdpParseError;
+using webrtz::SdpSemantics;
+using webrtz::SdpType;
+using webrtz::SessionDescriptionInterface;
+using webrtz::StreamCollection;
+using webrtz::StreamCollectionInterface;
+using webrtz::VideoTrackSourceInterface;
+using webrtz::VideoTrack;
+using webrtz::VideoTrackInterface;
 
 using RTCConfiguration = PeerConnectionInterface::RTCConfiguration;
 using RTCOfferAnswerOptions = PeerConnectionInterface::RTCOfferAnswerOptions;
@@ -469,7 +469,7 @@ bool GetFirstSsrc(const cricket::ContentInfo* content_info, int* ssrc) {
 // Get the ufrags out of an SDP blob. Useful for testing ICE restart
 // behavior.
 std::vector<std::string> GetUfrags(
-    const webrtc::SessionDescriptionInterface* desc) {
+    const webrtz::SessionDescriptionInterface* desc) {
   std::vector<std::string> ufrags;
   for (const cricket::TransportInfo& info :
        desc->description()->transport_infos()) {
@@ -538,20 +538,20 @@ rtc::scoped_refptr<StreamCollection> CreateStreamCollection(
       StreamCollection::Create());
 
   for (int i = 0; i < number_of_streams; ++i) {
-    rtc::scoped_refptr<webrtc::MediaStreamInterface> stream(
-        webrtc::MediaStream::Create(kStreams[i]));
+    rtc::scoped_refptr<webrtz::MediaStreamInterface> stream(
+        webrtz::MediaStream::Create(kStreams[i]));
 
     for (int j = 0; j < tracks_per_stream; ++j) {
       // Add a local audio track.
-      rtc::scoped_refptr<webrtc::AudioTrackInterface> audio_track(
-          webrtc::AudioTrack::Create(kAudioTracks[i * tracks_per_stream + j],
+      rtc::scoped_refptr<webrtz::AudioTrackInterface> audio_track(
+          webrtz::AudioTrack::Create(kAudioTracks[i * tracks_per_stream + j],
                                      nullptr));
       stream->AddTrack(audio_track);
 
       // Add a local video track.
-      rtc::scoped_refptr<webrtc::VideoTrackInterface> video_track(
-          webrtc::VideoTrack::Create(kVideoTracks[i * tracks_per_stream + j],
-                                     webrtc::FakeVideoTrackSource::Create(),
+      rtc::scoped_refptr<webrtz::VideoTrackInterface> video_track(
+          webrtz::VideoTrack::Create(kVideoTracks[i * tracks_per_stream + j],
+                                     webrtz::FakeVideoTrackSource::Create(),
                                      rtc::Thread::Current()));
       stream->AddTrack(video_track);
     }
@@ -572,10 +572,10 @@ bool CompareStreamCollections(StreamCollectionInterface* s1,
     if (s1->at(i)->id() != s2->at(i)->id()) {
       return false;
     }
-    webrtc::AudioTrackVector audio_tracks1 = s1->at(i)->GetAudioTracks();
-    webrtc::AudioTrackVector audio_tracks2 = s2->at(i)->GetAudioTracks();
-    webrtc::VideoTrackVector video_tracks1 = s1->at(i)->GetVideoTracks();
-    webrtc::VideoTrackVector video_tracks2 = s2->at(i)->GetVideoTracks();
+    webrtz::AudioTrackVector audio_tracks1 = s1->at(i)->GetAudioTracks();
+    webrtz::AudioTrackVector audio_tracks2 = s2->at(i)->GetAudioTracks();
+    webrtz::VideoTrackVector video_tracks1 = s1->at(i)->GetVideoTracks();
+    webrtz::VideoTrackVector video_tracks2 = s2->at(i)->GetVideoTracks();
 
     if (audio_tracks1.size() != audio_tracks2.size()) {
       return false;
@@ -626,12 +626,12 @@ class MockTrackObserver : public ObserverInterface {
 // constraints are propagated into the PeerConnection's MediaConfig. These
 // settings are intended for MediaChannel constructors, but that is not
 // exercised by these unittest.
-class PeerConnectionFactoryForTest : public webrtc::PeerConnectionFactory {
+class PeerConnectionFactoryForTest : public webrtz::PeerConnectionFactory {
  public:
   static rtc::scoped_refptr<PeerConnectionFactoryForTest>
   CreatePeerConnectionFactoryForTest() {
-    auto audio_encoder_factory = webrtc::CreateBuiltinAudioEncoderFactory();
-    auto audio_decoder_factory = webrtc::CreateBuiltinAudioDecoderFactory();
+    auto audio_encoder_factory = webrtz::CreateBuiltinAudioEncoderFactory();
+    auto audio_decoder_factory = webrtz::CreateBuiltinAudioDecoderFactory();
 
     // Use fake audio device module since we're only testing the interface
     // level, and using a real one could make tests flaky when run in parallel.
@@ -639,13 +639,13 @@ class PeerConnectionFactoryForTest : public webrtc::PeerConnectionFactory {
         cricket::WebRtcMediaEngineFactory::Create(
             FakeAudioCaptureModule::Create(), audio_encoder_factory,
             audio_decoder_factory, nullptr, nullptr, nullptr,
-            webrtc::AudioProcessingBuilder().Create()));
+            webrtz::AudioProcessingBuilder().Create()));
 
-    std::unique_ptr<webrtc::CallFactoryInterface> call_factory =
-        webrtc::CreateCallFactory();
+    std::unique_ptr<webrtz::CallFactoryInterface> call_factory =
+        webrtz::CreateCallFactory();
 
-    std::unique_ptr<webrtc::RtcEventLogFactoryInterface> event_log_factory =
-        webrtc::CreateRtcEventLogFactory();
+    std::unique_ptr<webrtz::RtcEventLogFactoryInterface> event_log_factory =
+        webrtz::CreateRtcEventLogFactory();
 
     return new rtc::RefCountedObject<PeerConnectionFactoryForTest>(
         rtc::Thread::Current(), rtc::Thread::Current(), rtc::Thread::Current(),
@@ -658,9 +658,9 @@ class PeerConnectionFactoryForTest : public webrtc::PeerConnectionFactory {
       rtc::Thread* worker_thread,
       rtc::Thread* signaling_thread,
       std::unique_ptr<cricket::MediaEngineInterface> media_engine,
-      std::unique_ptr<webrtc::CallFactoryInterface> call_factory,
-      std::unique_ptr<webrtc::RtcEventLogFactoryInterface> event_log_factory)
-      : webrtc::PeerConnectionFactory(network_thread,
+      std::unique_ptr<webrtz::CallFactoryInterface> call_factory,
+      std::unique_ptr<webrtz::RtcEventLogFactoryInterface> event_log_factory)
+      : webrtz::PeerConnectionFactory(network_thread,
                                       worker_thread,
                                       signaling_thread,
                                       std::move(media_engine),
@@ -678,7 +678,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
         main_(vss_.get()),
         sdp_semantics_(sdp_semantics) {
 #ifdef WEBRTC_ANDROID
-    webrtc::InitializeAndroidObjects();
+    webrtz::InitializeAndroidObjects();
 #endif
   }
 
@@ -686,10 +686,10 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     // Use fake audio capture module since we're only testing the interface
     // level, and using a real one could make tests flaky when run in parallel.
     fake_audio_capture_module_ = FakeAudioCaptureModule::Create();
-    pc_factory_ = webrtc::CreatePeerConnectionFactory(
+    pc_factory_ = webrtz::CreatePeerConnectionFactory(
         rtc::Thread::Current(), rtc::Thread::Current(), rtc::Thread::Current(),
-        fake_audio_capture_module_, webrtc::CreateBuiltinAudioEncoderFactory(),
-        webrtc::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr);
+        fake_audio_capture_module_, webrtz::CreateBuiltinAudioEncoderFactory(),
+        webrtz::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr);
     ASSERT_TRUE(pc_factory_);
     pc_factory_for_test_ =
         PeerConnectionFactoryForTest::CreatePeerConnectionFactoryForTest();
@@ -705,13 +705,13 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
   void CreatePeerConnectionWithoutDtls() {
     FakeConstraints no_dtls_constraints;
     no_dtls_constraints.AddMandatory(
-        webrtc::MediaConstraintsInterface::kEnableDtlsSrtp, false);
+        webrtz::MediaConstraintsInterface::kEnableDtlsSrtp, false);
 
     CreatePeerConnection(PeerConnectionInterface::RTCConfiguration(),
                          &no_dtls_constraints);
   }
 
-  void CreatePeerConnection(webrtc::MediaConstraintsInterface* constraints) {
+  void CreatePeerConnection(webrtz::MediaConstraintsInterface* constraints) {
     CreatePeerConnection(PeerConnectionInterface::RTCConfiguration(),
                          constraints);
   }
@@ -735,7 +735,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
 
   void CreatePeerConnection(
       const PeerConnectionInterface::RTCConfiguration& config,
-      webrtc::MediaConstraintsInterface* constraints) {
+      webrtz::MediaConstraintsInterface* constraints) {
     std::unique_ptr<cricket::FakePortAllocator> port_allocator(
         new cricket::FakePortAllocator(rtc::Thread::Current(), nullptr));
     port_allocator_ = port_allocator.get();
@@ -745,7 +745,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     std::unique_ptr<rtc::RTCCertificateGeneratorInterface> cert_generator;
     bool dtls;
     if (FindConstraint(constraints,
-                       webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+                       webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                        &dtls,
                        nullptr) && dtls) {
       fake_certificate_generator_ = new FakeRTCCertificateGenerator();
@@ -952,8 +952,8 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
 
   // Call the standards-compliant GetStats function.
   bool DoGetRTCStats() {
-    rtc::scoped_refptr<webrtc::MockRTCStatsCollectorCallback> callback(
-        new rtc::RefCountedObject<webrtc::MockRTCStatsCollectorCallback>());
+    rtc::scoped_refptr<webrtz::MockRTCStatsCollectorCallback> callback(
+        new rtc::RefCountedObject<webrtz::MockRTCStatsCollectorCallback>());
     pc_->GetStats(callback);
     EXPECT_TRUE_WAIT(callback->called(), kTimeout);
     return callback->called();
@@ -993,14 +993,14 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     std::string sdp;
     EXPECT_TRUE(offer->ToString(&sdp));
     std::unique_ptr<SessionDescriptionInterface> remote_offer(
-        webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
     EXPECT_TRUE(DoSetRemoteDescription(std::move(remote_offer)));
     EXPECT_EQ(PeerConnectionInterface::kHaveRemoteOffer, observer_.state_);
   }
 
   void CreateAndSetRemoteOffer(const std::string& sdp) {
     std::unique_ptr<SessionDescriptionInterface> remote_offer(
-        webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
     EXPECT_TRUE(DoSetRemoteDescription(std::move(remote_offer)));
     EXPECT_EQ(PeerConnectionInterface::kHaveRemoteOffer, observer_.state_);
   }
@@ -1019,7 +1019,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     std::string sdp;
     EXPECT_TRUE(answer->ToString(&sdp));
     std::unique_ptr<SessionDescriptionInterface> new_answer(
-        webrtc::CreateSessionDescription(SdpType::kAnswer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kAnswer, sdp));
     EXPECT_TRUE(DoSetLocalDescription(std::move(new_answer)));
     EXPECT_EQ(PeerConnectionInterface::kStable, observer_.state_);
   }
@@ -1031,7 +1031,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     std::string sdp;
     EXPECT_TRUE(answer->ToString(&sdp));
     std::unique_ptr<SessionDescriptionInterface> pr_answer(
-        webrtc::CreateSessionDescription(SdpType::kPrAnswer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kPrAnswer, sdp));
     EXPECT_TRUE(DoSetLocalDescription(std::move(pr_answer)));
     EXPECT_EQ(PeerConnectionInterface::kHaveLocalPrAnswer, observer_.state_);
   }
@@ -1056,7 +1056,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     std::string sdp;
     EXPECT_TRUE(offer->ToString(&sdp));
     std::unique_ptr<SessionDescriptionInterface> new_offer(
-        webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
 
     EXPECT_TRUE(DoSetLocalDescription(std::move(new_offer)));
     EXPECT_EQ(PeerConnectionInterface::kHaveLocalOffer, observer_.state_);
@@ -1066,7 +1066,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
 
   void CreateAnswerAsRemoteDescription(const std::string& sdp) {
     std::unique_ptr<SessionDescriptionInterface> answer(
-        webrtc::CreateSessionDescription(SdpType::kAnswer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kAnswer, sdp));
     ASSERT_TRUE(answer);
     EXPECT_TRUE(DoSetRemoteDescription(std::move(answer)));
     EXPECT_EQ(PeerConnectionInterface::kStable, observer_.state_);
@@ -1074,12 +1074,12 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
 
   void CreatePrAnswerAndAnswerAsRemoteDescription(const std::string& sdp) {
     std::unique_ptr<SessionDescriptionInterface> pr_answer(
-        webrtc::CreateSessionDescription(SdpType::kPrAnswer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kPrAnswer, sdp));
     ASSERT_TRUE(pr_answer);
     EXPECT_TRUE(DoSetRemoteDescription(std::move(pr_answer)));
     EXPECT_EQ(PeerConnectionInterface::kHaveRemotePrAnswer, observer_.state_);
     std::unique_ptr<SessionDescriptionInterface> answer(
-        webrtc::CreateSessionDescription(SdpType::kAnswer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kAnswer, sdp));
     ASSERT_TRUE(answer);
     EXPECT_TRUE(DoSetRemoteDescription(std::move(answer)));
     EXPECT_EQ(PeerConnectionInterface::kStable, observer_.state_);
@@ -1123,8 +1123,8 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
 
     std::string mediastream_id = kStreams[0];
 
-    rtc::scoped_refptr<webrtc::MediaStreamInterface> stream(
-        webrtc::MediaStream::Create(mediastream_id));
+    rtc::scoped_refptr<webrtz::MediaStreamInterface> stream(
+        webrtz::MediaStream::Create(mediastream_id));
     reference_collection_->AddStream(stream);
 
     if (number_of_audio_tracks > 0) {
@@ -1148,21 +1148,21 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     }
 
     return std::unique_ptr<SessionDescriptionInterface>(
-        webrtc::CreateSessionDescription(SdpType::kOffer, sdp_ms1));
+        webrtz::CreateSessionDescription(SdpType::kOffer, sdp_ms1));
   }
 
   void AddAudioTrack(const std::string& track_id,
                      MediaStreamInterface* stream) {
-    rtc::scoped_refptr<webrtc::AudioTrackInterface> audio_track(
-        webrtc::AudioTrack::Create(track_id, nullptr));
+    rtc::scoped_refptr<webrtz::AudioTrackInterface> audio_track(
+        webrtz::AudioTrack::Create(track_id, nullptr));
     ASSERT_TRUE(stream->AddTrack(audio_track));
   }
 
   void AddVideoTrack(const std::string& track_id,
                      MediaStreamInterface* stream) {
-    rtc::scoped_refptr<webrtc::VideoTrackInterface> video_track(
-        webrtc::VideoTrack::Create(track_id,
-                                   webrtc::FakeVideoTrackSource::Create(),
+    rtc::scoped_refptr<webrtz::VideoTrackInterface> video_track(
+        webrtz::VideoTrack::Create(track_id,
+                                   webrtz::FakeVideoTrackSource::Create(),
                                    rtc::Thread::Current()));
     ASSERT_TRUE(stream->AddTrack(video_track));
   }
@@ -1223,7 +1223,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     std::string sdp;
     EXPECT_TRUE((*desc)->ToString(&sdp));
     std::unique_ptr<SessionDescriptionInterface> remote_offer(
-        webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
     EXPECT_TRUE(DoSetRemoteDescription(std::move(remote_offer)));
     EXPECT_EQ(PeerConnectionInterface::kHaveRemoteOffer, observer_.state_);
   }
@@ -1236,7 +1236,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
     std::string sdp;
     EXPECT_TRUE((*desc)->ToString(&sdp));
     std::unique_ptr<SessionDescriptionInterface> new_offer(
-        webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+        webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
 
     EXPECT_TRUE(DoSetLocalDescription(std::move(new_offer)));
     EXPECT_EQ(PeerConnectionInterface::kHaveLocalOffer, observer_.state_);
@@ -1275,7 +1275,7 @@ class PeerConnectionInterfaceBaseTest : public testing::Test {
   rtc::scoped_refptr<FakeAudioCaptureModule> fake_audio_capture_module_;
   cricket::FakePortAllocator* port_allocator_ = nullptr;
   FakeRTCCertificateGenerator* fake_certificate_generator_ = nullptr;
-  rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> pc_factory_;
+  rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> pc_factory_;
   rtc::scoped_refptr<PeerConnectionFactoryForTest> pc_factory_for_test_;
   rtc::scoped_refptr<PeerConnectionInterface> pc_;
   MockPeerConnectionObserver observer_;
@@ -1393,12 +1393,12 @@ TEST_P(PeerConnectionInterfaceTest,
   config.prune_turn_ports = true;
 
   // Create the PC factory and PC with the above config.
-  rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> pc_factory(
-      webrtc::CreatePeerConnectionFactory(
+  rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> pc_factory(
+      webrtz::CreatePeerConnectionFactory(
           rtc::Thread::Current(), rtc::Thread::Current(),
           rtc::Thread::Current(), fake_audio_capture_module_,
-          webrtc::CreateBuiltinAudioEncoderFactory(),
-          webrtc::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr));
+          webrtz::CreateBuiltinAudioEncoderFactory(),
+          webrtz::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr));
   rtc::scoped_refptr<PeerConnectionInterface> pc(
       pc_factory->CreatePeerConnection(
           config, nullptr, std::move(port_allocator), nullptr, &observer_));
@@ -1421,12 +1421,12 @@ TEST_P(PeerConnectionInterfaceTest,
   std::unique_ptr<rtc::Thread> network_thread(
       rtc::Thread::CreateWithSocketServer());
   network_thread->Start();
-  rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> pc_factory(
-      webrtc::CreatePeerConnectionFactory(
+  rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> pc_factory(
+      webrtz::CreatePeerConnectionFactory(
           network_thread.get(), rtc::Thread::Current(), rtc::Thread::Current(),
           fake_audio_capture_module_,
-          webrtc::CreateBuiltinAudioEncoderFactory(),
-          webrtc::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr));
+          webrtz::CreateBuiltinAudioEncoderFactory(),
+          webrtz::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr));
   std::unique_ptr<cricket::FakePortAllocator> port_allocator(
       new cricket::FakePortAllocator(network_thread.get(), nullptr));
   cricket::FakePortAllocator* raw_port_allocator = port_allocator.get();
@@ -1873,7 +1873,7 @@ TEST_P(PeerConnectionInterfaceTest, CreateDtmfSenderWithInvalidParams) {
   CreatePeerConnection();
   AddAudioTrack(kAudioTracks[0]);
   EXPECT_EQ(nullptr, pc_->CreateDtmfSender(nullptr));
-  rtc::scoped_refptr<webrtc::AudioTrackInterface> non_localtrack(
+  rtc::scoped_refptr<webrtz::AudioTrackInterface> non_localtrack(
       pc_factory_->CreateAudioTrack("dummy_track", nullptr));
   EXPECT_EQ(nullptr, pc_->CreateDtmfSender(non_localtrack));
 }
@@ -2092,7 +2092,7 @@ TEST_P(PeerConnectionInterfaceTest, CreateReliableRtpDataChannelShouldFail) {
   CreatePeerConnection(&constraints);
 
   std::string label = "test";
-  webrtc::DataChannelInit config;
+  webrtz::DataChannelInit config;
   config.reliable = true;
   rtc::scoped_refptr<DataChannelInterface> channel =
       pc_->CreateDataChannel(label, &config);
@@ -2122,7 +2122,7 @@ TEST_P(PeerConnectionInterfaceTest, CreateSctpDataChannel) {
   constraints.SetAllowDtlsSctpDataChannels();
   CreatePeerConnection(&constraints);
 
-  webrtc::DataChannelInit config;
+  webrtz::DataChannelInit config;
 
   rtc::scoped_refptr<DataChannelInterface> channel =
       pc_->CreateDataChannel("1", &config);
@@ -2161,7 +2161,7 @@ TEST_P(PeerConnectionInterfaceTest,
   CreatePeerConnection(&constraints);
 
   std::string label = "test";
-  webrtc::DataChannelInit config;
+  webrtz::DataChannelInit config;
   config.maxRetransmits = 0;
   config.maxRetransmitTime = 0;
 
@@ -2178,7 +2178,7 @@ TEST_P(PeerConnectionInterfaceTest,
   constraints.SetAllowDtlsSctpDataChannels();
   CreatePeerConnection(&constraints);
 
-  webrtc::DataChannelInit config;
+  webrtz::DataChannelInit config;
   rtc::scoped_refptr<DataChannelInterface> channel;
 
   config.id = 1;
@@ -2202,7 +2202,7 @@ TEST_P(PeerConnectionInterfaceTest,
 // Verifies that duplicated label is allowed for SCTP data channel.
 TEST_P(PeerConnectionInterfaceTest, SctpDuplicatedLabelAllowed) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
 
@@ -2273,7 +2273,7 @@ TEST_P(PeerConnectionInterfaceTest, TestRejectRtpDataChannelInAnswer) {
   std::string sdp;
   EXPECT_TRUE(pc_->local_description()->ToString(&sdp));
   std::unique_ptr<SessionDescriptionInterface> answer(
-      webrtc::CreateSessionDescription(SdpType::kAnswer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kAnswer, sdp));
   ASSERT_TRUE(answer);
   cricket::ContentInfo* data_info =
       cricket::GetFirstDataContent(answer->description());
@@ -2302,7 +2302,7 @@ TEST_P(PeerConnectionInterfaceTest, DISABLED_TestRejectSctpDataChannelInAnswer)
   std::string sdp;
   EXPECT_TRUE(pc_->local_description()->ToString(&sdp));
   std::unique_ptr<SessionDescriptionInterface> answer(
-      webrtc::CreateSessionDescription(SdpType::kAnswer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kAnswer, sdp));
   ASSERT_TRUE(answer);
   cricket::ContentInfo* data_info =
       cricket::GetFirstDataContent(answer->description());
@@ -2317,14 +2317,14 @@ TEST_P(PeerConnectionInterfaceTest, DISABLED_TestRejectSctpDataChannelInAnswer)
 // the answer as a local description.
 TEST_P(PeerConnectionInterfaceTest, ReceiveFireFoxOffer) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   AddAudioTrack("audio_label");
   AddVideoTrack("video_label");
   std::unique_ptr<SessionDescriptionInterface> desc(
-      webrtc::CreateSessionDescription(SdpType::kOffer,
-                                       webrtc::kFireFoxSdpOffer, nullptr));
+      webrtz::CreateSessionDescription(SdpType::kOffer,
+                                       webrtz::kFireFoxSdpOffer, nullptr));
   EXPECT_TRUE(DoSetSessionDescription(std::move(desc), false));
   CreateAnswerAsLocalDescription();
   ASSERT_TRUE(pc_->local_description() != NULL);
@@ -2352,7 +2352,7 @@ TEST_P(PeerConnectionInterfaceTest, ReceiveFireFoxOffer) {
 // and because it's non-standard.
 TEST_P(PeerConnectionInterfaceTest, DtlsSdesFallbackNotSupported) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   // Wait for fake certificate to be generated. Previously, this is what caused
@@ -2363,7 +2363,7 @@ TEST_P(PeerConnectionInterfaceTest, DtlsSdesFallbackNotSupported) {
   EXPECT_EQ_WAIT(1, fake_certificate_generator_->generated_certificates(),
                  kTimeout);
   std::unique_ptr<SessionDescriptionInterface> desc(
-      webrtc::CreateSessionDescription(SdpType::kOffer, kDtlsSdesFallbackSdp,
+      webrtz::CreateSessionDescription(SdpType::kOffer, kDtlsSdesFallbackSdp,
                                        nullptr));
   EXPECT_FALSE(DoSetSessionDescription(std::move(desc), /*local=*/false));
 }
@@ -2377,18 +2377,18 @@ TEST_P(PeerConnectionInterfaceTest, ReceiveUpdatedAudioOfferWithBadCodecs) {
   CreateOfferAsLocalDescription();
 
   const char* answer_sdp =
-      (sdp_semantics_ == SdpSemantics::kPlanB ? webrtc::kAudioSdpPlanB
-                                              : webrtc::kAudioSdpUnifiedPlan);
+      (sdp_semantics_ == SdpSemantics::kPlanB ? webrtz::kAudioSdpPlanB
+                                              : webrtz::kAudioSdpUnifiedPlan);
   std::unique_ptr<SessionDescriptionInterface> answer(
-      webrtc::CreateSessionDescription(SdpType::kAnswer, answer_sdp, nullptr));
+      webrtz::CreateSessionDescription(SdpType::kAnswer, answer_sdp, nullptr));
   EXPECT_TRUE(DoSetSessionDescription(std::move(answer), false));
 
   const char* reoffer_sdp =
       (sdp_semantics_ == SdpSemantics::kPlanB
-           ? webrtc::kAudioSdpWithUnsupportedCodecsPlanB
-           : webrtc::kAudioSdpWithUnsupportedCodecsUnifiedPlan);
+           ? webrtz::kAudioSdpWithUnsupportedCodecsPlanB
+           : webrtz::kAudioSdpWithUnsupportedCodecsUnifiedPlan);
   std::unique_ptr<SessionDescriptionInterface> updated_offer(
-      webrtc::CreateSessionDescription(SdpType::kOffer, reoffer_sdp, nullptr));
+      webrtz::CreateSessionDescription(SdpType::kOffer, reoffer_sdp, nullptr));
   EXPECT_TRUE(DoSetSessionDescription(std::move(updated_offer), false));
   CreateAnswerAsLocalDescription();
 }
@@ -2397,7 +2397,7 @@ TEST_P(PeerConnectionInterfaceTest, ReceiveUpdatedAudioOfferWithBadCodecs) {
 // will have m-lines with a=recvonly.
 TEST_P(PeerConnectionInterfaceTest, CreateSubsequentRecvOnlyOffer) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(GetSdpStringWithStream1());
@@ -2424,7 +2424,7 @@ TEST_P(PeerConnectionInterfaceTest, CreateSubsequentRecvOnlyOffer) {
 // false, the generated m-lines will be a=inactive.
 TEST_P(PeerConnectionInterfaceTest, CreateSubsequentInactiveOffer) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(GetSdpStringWithStream1());
@@ -2436,9 +2436,9 @@ TEST_P(PeerConnectionInterfaceTest, CreateSubsequentInactiveOffer) {
   std::unique_ptr<SessionDescriptionInterface> offer;
   FakeConstraints offer_constraints;
   offer_constraints.AddMandatory(
-      webrtc::MediaConstraintsInterface::kOfferToReceiveVideo, false);
+      webrtz::MediaConstraintsInterface::kOfferToReceiveVideo, false);
   offer_constraints.AddMandatory(
-      webrtc::MediaConstraintsInterface::kOfferToReceiveAudio, false);
+      webrtz::MediaConstraintsInterface::kOfferToReceiveAudio, false);
   DoCreateOffer(&offer, &offer_constraints);
 
   const cricket::ContentInfo* video_content =
@@ -2735,7 +2735,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, CloseAndTestMethods) {
   EXPECT_FALSE(pc_->AddStream(local_stream));
 
   ASSERT_FALSE(local_stream->GetAudioTracks().empty());
-  rtc::scoped_refptr<webrtc::DtmfSenderInterface> dtmf_sender(
+  rtc::scoped_refptr<webrtz::DtmfSenderInterface> dtmf_sender(
       pc_->CreateDtmfSender(local_stream->GetAudioTracks()[0]));
   EXPECT_TRUE(NULL == dtmf_sender);  // local stream has been removed.
 
@@ -2752,12 +2752,12 @@ TEST_F(PeerConnectionInterfaceTestPlanB, CloseAndTestMethods) {
   std::string sdp;
   ASSERT_TRUE(pc_->remote_description()->ToString(&sdp));
   std::unique_ptr<SessionDescriptionInterface> remote_offer(
-      webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
   EXPECT_FALSE(DoSetRemoteDescription(std::move(remote_offer)));
 
   ASSERT_TRUE(pc_->local_description()->ToString(&sdp));
   std::unique_ptr<SessionDescriptionInterface> local_offer(
-      webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
   EXPECT_FALSE(DoSetLocalDescription(std::move(local_offer)));
 }
 
@@ -2777,7 +2777,7 @@ TEST_P(PeerConnectionInterfaceTest, CloseAndGetStats) {
 // signaled.
 TEST_P(PeerConnectionInterfaceTest, UpdateRemoteStreams) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(GetSdpStringWithStream1());
@@ -2804,7 +2804,7 @@ TEST_P(PeerConnectionInterfaceTest, UpdateRemoteStreams) {
 TEST_F(PeerConnectionInterfaceTestPlanB,
        AddRemoveTrackFromExistingRemoteMediaStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   std::unique_ptr<SessionDescriptionInterface> desc_ms1 =
@@ -2821,10 +2821,10 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
                                        reference_collection_));
   rtc::scoped_refptr<AudioTrackInterface> audio_track2 =
       observer_.remote_streams()->at(0)->GetAudioTracks()[1];
-  EXPECT_EQ(webrtc::MediaStreamTrackInterface::kLive, audio_track2->state());
+  EXPECT_EQ(webrtz::MediaStreamTrackInterface::kLive, audio_track2->state());
   rtc::scoped_refptr<VideoTrackInterface> video_track2 =
       observer_.remote_streams()->at(0)->GetVideoTracks()[1];
-  EXPECT_EQ(webrtc::MediaStreamTrackInterface::kLive, video_track2->state());
+  EXPECT_EQ(webrtz::MediaStreamTrackInterface::kLive, video_track2->state());
 
   // Remove the extra audio and video tracks.
   std::unique_ptr<SessionDescriptionInterface> desc_ms2 =
@@ -2838,9 +2838,9 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
   EXPECT_TRUE(CompareStreamCollections(observer_.remote_streams(),
                                        reference_collection_));
   // Track state may be updated asynchronously.
-  EXPECT_EQ_WAIT(webrtc::MediaStreamTrackInterface::kEnded,
+  EXPECT_EQ_WAIT(webrtz::MediaStreamTrackInterface::kEnded,
                  audio_track2->state(), kTimeout);
-  EXPECT_EQ_WAIT(webrtc::MediaStreamTrackInterface::kEnded,
+  EXPECT_EQ_WAIT(webrtz::MediaStreamTrackInterface::kEnded,
                  video_track2->state(), kTimeout);
 }
 
@@ -2848,7 +2848,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 // that rejects the media content type.
 TEST_P(PeerConnectionInterfaceTest, RejectMediaContent) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   // First create and set a remote offer, then reject its video content in our
@@ -2861,7 +2861,7 @@ TEST_P(PeerConnectionInterfaceTest, RejectMediaContent) {
 
   rtc::scoped_refptr<MediaStreamTrackInterface> remote_audio =
       audio_receiver->track();
-  EXPECT_EQ(webrtc::MediaStreamTrackInterface::kLive, remote_audio->state());
+  EXPECT_EQ(webrtz::MediaStreamTrackInterface::kLive, remote_audio->state());
   rtc::scoped_refptr<MediaStreamTrackInterface> remote_video =
       video_receiver->track();
   EXPECT_EQ(MediaStreamTrackInterface::kLive, remote_video->state());
@@ -2898,7 +2898,7 @@ TEST_P(PeerConnectionInterfaceTest, RejectMediaContent) {
 // Don't run under Unified Plan since the stream API is not available.
 TEST_F(PeerConnectionInterfaceTestPlanB, RemoveTrackThenRejectMediaContent) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(GetSdpStringWithStream1());
@@ -2907,7 +2907,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, RemoveTrackThenRejectMediaContent) {
   remote_stream->RemoveTrack(remote_stream->GetAudioTracks()[0]);
 
   std::unique_ptr<SessionDescriptionInterface> local_answer(
-      webrtc::CreateSessionDescription(SdpType::kAnswer,
+      webrtz::CreateSessionDescription(SdpType::kAnswer,
                                        GetSdpStringWithStream1(), nullptr));
   cricket::ContentInfo* video_info =
       local_answer->description()->GetContentByName("video");
@@ -2925,7 +2925,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, RemoveTrackThenRejectMediaContent) {
 // See: https://code.google.com/p/webrtc/issues/detail?id=5054
 TEST_P(PeerConnectionInterfaceTest, RecvonlyDescriptionDoesntCreateStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
 
@@ -2944,7 +2944,7 @@ TEST_P(PeerConnectionInterfaceTest, RecvonlyDescriptionDoesntCreateStream) {
 // Don't run under Unified Plan since this behavior is Plan B specific.
 TEST_F(PeerConnectionInterfaceTestPlanB, SdpWithoutMsidCreatesDefaultStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(kSdpStringWithoutStreamsAudioOnly);
@@ -2974,7 +2974,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, SdpWithoutMsidCreatesDefaultStream) {
 TEST_F(PeerConnectionInterfaceTestPlanB,
        SendOnlySdpWithoutMsidCreatesDefaultStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(kSdpStringSendOnlyWithoutStreams);
@@ -2992,7 +2992,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 // Don't run under Unified Plan since this behavior is Plan B specific.
 TEST_F(PeerConnectionInterfaceTestPlanB, RemoveAlreadyGoneRemoteStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(GetSdpStringWithStream1());
@@ -3012,7 +3012,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, RemoveAlreadyGoneRemoteStream) {
 TEST_F(PeerConnectionInterfaceTestPlanB,
        SdpWithoutMsidAndStreamsCreatesDefaultStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(kSdpStringWithoutStreams);
@@ -3028,7 +3028,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 // Don't run under Unified Plan since this behavior is Plan B specific.
 TEST_F(PeerConnectionInterfaceTestPlanB, SdpWithMsidDontCreatesDefaultStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(kSdpStringWithMsidWithoutStreams);
@@ -3042,7 +3042,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, SdpWithMsidDontCreatesDefaultStream) {
 TEST_F(PeerConnectionInterfaceTestPlanB,
        DefaultTracksNotDestroyedAndRecreated) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(kSdpStringWithoutStreamsAudioOnly);
@@ -3064,7 +3064,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 // Don't run under Unified Plan since this behavior is Plan B specific.
 TEST_F(PeerConnectionInterfaceTestPlanB, VerifyDefaultStreamIsNotCreated) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(GetSdpStringWithStream1());
@@ -3081,7 +3081,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, VerifyDefaultStreamIsNotCreated) {
 TEST_F(PeerConnectionInterfaceTestPlanB,
        SdpWithMsidWithoutSsrcCreatesDefaultStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   std::string sdp_string = kSdpStringWithoutStreamsAudioOnly;
@@ -3105,7 +3105,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 TEST_F(PeerConnectionInterfaceTestPlanB,
        SdpWithEmptyMsidAndSsrcCreatesDefaultStreamId) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   // Add a a=msid line to the SDP. This is prioritized when parsing the SDP, so
@@ -3144,7 +3144,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 // Don't run under Unified Plan since this behavior is Plan B specific.
 TEST_F(PeerConnectionInterfaceTestPlanB, LocalDescriptionChanged) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
 
@@ -3184,7 +3184,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB, LocalDescriptionChanged) {
 TEST_F(PeerConnectionInterfaceTestPlanB,
        AddLocalStreamAfterLocalDescriptionChanged) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
 
@@ -3214,7 +3214,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 TEST_P(PeerConnectionInterfaceTest,
        ChangeSsrcOnTrackInLocalSessionDescription) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
 
@@ -3224,7 +3224,7 @@ TEST_P(PeerConnectionInterfaceTest,
   ASSERT_TRUE(DoCreateOffer(&offer, nullptr));
   // Grab a copy of the offer before it gets passed into the PC.
   auto modified_offer =
-      rtc::MakeUnique<webrtc::JsepSessionDescription>(webrtc::SdpType::kOffer);
+      rtc::MakeUnique<webrtz::JsepSessionDescription>(webrtz::SdpType::kOffer);
   modified_offer->Initialize(offer->description()->Copy(), offer->session_id(),
                              offer->session_version());
   EXPECT_TRUE(DoSetLocalDescription(std::move(offer)));
@@ -3268,7 +3268,7 @@ TEST_P(PeerConnectionInterfaceTest,
 TEST_F(PeerConnectionInterfaceTestPlanB,
        SignalSameTracksInSeparateMediaStream) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
 
@@ -3285,8 +3285,8 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
   EXPECT_TRUE(ContainsSender(senders, kVideoTracks[0], kStreams[0]));
 
   // Add a new MediaStream but with the same tracks as in the first stream.
-  rtc::scoped_refptr<webrtc::MediaStreamInterface> stream_1(
-      webrtc::MediaStream::Create(kStreams[1]));
+  rtc::scoped_refptr<webrtz::MediaStreamInterface> stream_1(
+      webrtz::MediaStream::Create(kStreams[1]));
   stream_1->AddTrack(stream_collection->at(0)->GetVideoTracks()[0]);
   stream_1->AddTrack(stream_collection->at(0)->GetAudioTracks()[0]);
   pc_->AddStream(stream_1);
@@ -3306,7 +3306,7 @@ TEST_F(PeerConnectionInterfaceTestPlanB,
 // This tests that PeerConnectionObserver::OnAddTrack is correctly called.
 TEST_P(PeerConnectionInterfaceTest, OnAddTrackCallback) {
   FakeConstraints constraints;
-  constraints.AddMandatory(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+  constraints.AddMandatory(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                            true);
   CreatePeerConnection(&constraints);
   CreateAndSetRemoteOffer(kSdpStringWithStream1AudioTrackOnly);
@@ -3420,8 +3420,8 @@ TEST_P(PeerConnectionInterfaceTest, SetConfigurationCausingPartialIceRestart) {
   EXPECT_TRUE(pc_->SetConfiguration(config));
 
   // Do ICE restart for the first m= section, initiated by remote peer.
-  std::unique_ptr<webrtc::SessionDescriptionInterface> remote_offer(
-      webrtc::CreateSessionDescription(SdpType::kOffer,
+  std::unique_ptr<webrtz::SessionDescriptionInterface> remote_offer(
+      webrtz::CreateSessionDescription(SdpType::kOffer,
                                        GetSdpStringWithStream1(), nullptr));
   ASSERT_TRUE(remote_offer);
   remote_offer->description()->transport_infos()[0].description.ice_ufrag =
@@ -3468,7 +3468,7 @@ TEST_P(PeerConnectionInterfaceTest, CurrentAndPendingDescriptions) {
 
   // Set remote pranswer.
   std::unique_ptr<SessionDescriptionInterface> remote_pranswer(
-      webrtc::CreateSessionDescription(SdpType::kPrAnswer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kPrAnswer, sdp));
   SessionDescriptionInterface* remote_pranswer_ptr = remote_pranswer.get();
   EXPECT_TRUE(DoSetRemoteDescription(std::move(remote_pranswer)));
   EXPECT_EQ(local_offer_ptr, pc_->pending_local_description());
@@ -3478,7 +3478,7 @@ TEST_P(PeerConnectionInterfaceTest, CurrentAndPendingDescriptions) {
 
   // Set remote answer.
   std::unique_ptr<SessionDescriptionInterface> remote_answer(
-      webrtc::CreateSessionDescription(SdpType::kAnswer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kAnswer, sdp));
   SessionDescriptionInterface* remote_answer_ptr = remote_answer.get();
   EXPECT_TRUE(DoSetRemoteDescription(std::move(remote_answer)));
   EXPECT_EQ(nullptr, pc_->pending_local_description());
@@ -3488,7 +3488,7 @@ TEST_P(PeerConnectionInterfaceTest, CurrentAndPendingDescriptions) {
 
   // Set remote offer.
   std::unique_ptr<SessionDescriptionInterface> remote_offer(
-      webrtc::CreateSessionDescription(SdpType::kOffer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kOffer, sdp));
   SessionDescriptionInterface* remote_offer_ptr = remote_offer.get();
   EXPECT_TRUE(DoSetRemoteDescription(std::move(remote_offer)));
   EXPECT_EQ(remote_offer_ptr, pc_->pending_remote_description());
@@ -3498,7 +3498,7 @@ TEST_P(PeerConnectionInterfaceTest, CurrentAndPendingDescriptions) {
 
   // Set local pranswer.
   std::unique_ptr<SessionDescriptionInterface> local_pranswer(
-      webrtc::CreateSessionDescription(SdpType::kPrAnswer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kPrAnswer, sdp));
   SessionDescriptionInterface* local_pranswer_ptr = local_pranswer.get();
   EXPECT_TRUE(DoSetLocalDescription(std::move(local_pranswer)));
   EXPECT_EQ(remote_offer_ptr, pc_->pending_remote_description());
@@ -3508,7 +3508,7 @@ TEST_P(PeerConnectionInterfaceTest, CurrentAndPendingDescriptions) {
 
   // Set local answer.
   std::unique_ptr<SessionDescriptionInterface> local_answer(
-      webrtc::CreateSessionDescription(SdpType::kAnswer, sdp));
+      webrtz::CreateSessionDescription(SdpType::kAnswer, sdp));
   SessionDescriptionInterface* local_answer_ptr = local_answer.get();
   EXPECT_TRUE(DoSetLocalDescription(std::move(local_answer)));
   EXPECT_EQ(nullptr, pc_->pending_remote_description());
@@ -3527,7 +3527,7 @@ TEST_P(PeerConnectionInterfaceTest,
   pc_->Close();
 
   auto test_info = ::testing::UnitTest::GetInstance()->current_test_info();
-  std::string filename = webrtc::test::OutputPath() +
+  std::string filename = webrtz::test::OutputPath() +
                          test_info->test_case_name() + test_info->name();
   rtc::PlatformFile file = rtc::CreatePlatformFile(filename);
 
@@ -3554,8 +3554,8 @@ TEST_P(PeerConnectionInterfaceTest,
   rtc::PlatformFile file = 0;
   int64_t max_size_bytes = 1024;
   EXPECT_FALSE(pc_->StartRtcEventLog(
-      rtc::MakeUnique<webrtc::RtcEventLogOutputFile>(file, max_size_bytes),
-      webrtc::RtcEventLog::kImmediateOutput));
+      rtc::MakeUnique<webrtz::RtcEventLogOutputFile>(file, max_size_bytes),
+      webrtz::RtcEventLog::kImmediateOutput));
   pc_->StopRtcEventLog();
 }
 
@@ -4054,7 +4054,7 @@ TEST_F(PeerConnectionMediaConfigTest, TestDscpConstraintTrue) {
   PeerConnectionInterface::RTCConfiguration config;
   FakeConstraints constraints;
 
-  constraints.AddOptional(webrtc::MediaConstraintsInterface::kEnableDscp, true);
+  constraints.AddOptional(webrtz::MediaConstraintsInterface::kEnableDscp, true);
   const cricket::MediaConfig& media_config =
       TestCreatePeerConnection(config, &constraints);
 
@@ -4068,7 +4068,7 @@ TEST_F(PeerConnectionMediaConfigTest, TestCpuOveruseConstraintFalse) {
   FakeConstraints constraints;
 
   constraints.AddOptional(
-      webrtc::MediaConstraintsInterface::kCpuOveruseDetection, false);
+      webrtz::MediaConstraintsInterface::kCpuOveruseDetection, false);
   const cricket::MediaConfig media_config =
       TestCreatePeerConnection(config, &constraints);
 
@@ -4109,7 +4109,7 @@ TEST_F(PeerConnectionMediaConfigTest,
   FakeConstraints constraints;
 
   constraints.AddOptional(
-      webrtc::MediaConstraintsInterface::kEnableVideoSuspendBelowMinBitrate,
+      webrtz::MediaConstraintsInterface::kEnableVideoSuspendBelowMinBitrate,
       true);
   const cricket::MediaConfig media_config =
       TestCreatePeerConnection(config, &constraints);

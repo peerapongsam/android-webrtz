@@ -12,10 +12,10 @@
 
 #include "sdk/objc/Framework/Native/src/objc_video_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RTCVideoFrame* NativeToObjCVideoFrame(const VideoFrame& frame) {
   return ToObjCVideoFrame(frame);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,13 +12,13 @@
 #ifndef SYSTEM_WRAPPERS_INCLUDE_SLEEP_H_
 #define SYSTEM_WRAPPERS_INCLUDE_SLEEP_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // This function sleeps for the specified number of milliseconds.
 // It may return early if the thread is woken by some other event,
 // such as the delivery of a signal on Unix.
 void SleepMs(int msecs);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_INCLUDE_SLEEP_H_

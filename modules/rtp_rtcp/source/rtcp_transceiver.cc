@@ -18,7 +18,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcpTransceiver::RtcpTransceiver(const RtcpTransceiverConfig& config)
     : task_queue_(config.task_queue),
@@ -178,4 +178,4 @@ void RtcpTransceiver::SendFullIntraRequest(std::vector<uint32_t> ssrcs) {
   task_queue_->PostTask(Closure{ptr_, std::move(ssrcs)});
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

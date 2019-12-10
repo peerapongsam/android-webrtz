@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "modules/desktop_capture/rgba_color.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A DesktopCapturer wrapper detects the return value of its owned
 // DesktopCapturer implementation. If sampled pixels returned by the
@@ -69,6 +69,6 @@ class BlankDetectorDesktopCapturerWrapper final
   DesktopCapturer::Callback* callback_ = nullptr;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_BLANK_DETECTOR_DESKTOP_CAPTURER_WRAPPER_H_

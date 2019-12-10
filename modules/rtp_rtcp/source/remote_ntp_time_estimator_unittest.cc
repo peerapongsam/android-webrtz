@@ -19,7 +19,7 @@ using ::testing::DoAll;
 using ::testing::Return;
 using ::testing::SetArgPointee;
 
-namespace webrtc {
+namespace webrtz {
 
 static const int64_t kTestRtt = 10;
 static const int64_t kLocalClockInitialTimeMs = 123;
@@ -141,4 +141,4 @@ TEST_F(RemoteNtpTimeEstimatorTest, AveragesErrorsOut) {
   EXPECT_EQ(capture_ntp_time_ms, estimator_->Estimate(rtp_timestamp));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

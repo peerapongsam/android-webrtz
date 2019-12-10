@@ -16,7 +16,7 @@
 #include "rtc_base/timeutils.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // We use this constant internally to signal that a module has requested
@@ -221,4 +221,4 @@ bool ProcessThreadImpl::Process() {
 
   return true;
 }
-}  // namespace webrtc
+}  // namespace webrtz

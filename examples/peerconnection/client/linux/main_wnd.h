@@ -42,9 +42,9 @@ class GtkMainWnd : public MainWindow {
   virtual void MessageBox(const char* caption, const char* text,
                           bool is_error);
   virtual MainWindow::UI current_ui();
-  virtual void StartLocalRenderer(webrtc::VideoTrackInterface* local_video);
+  virtual void StartLocalRenderer(webrtz::VideoTrackInterface* local_video);
   virtual void StopLocalRenderer();
-  virtual void StartRemoteRenderer(webrtc::VideoTrackInterface* remote_video);
+  virtual void StartRemoteRenderer(webrtz::VideoTrackInterface* remote_video);
   virtual void StopRemoteRenderer();
 
   virtual void QueueUIThreadCallback(int msg_id, void* data);
@@ -75,14 +75,14 @@ class GtkMainWnd : public MainWindow {
   void Draw(GtkWidget* widget, cairo_t* cr);
 
  protected:
-  class VideoRenderer : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+  class VideoRenderer : public rtc::VideoSinkInterface<webrtz::VideoFrame> {
    public:
     VideoRenderer(GtkMainWnd* main_wnd,
-                  webrtc::VideoTrackInterface* track_to_render);
+                  webrtz::VideoTrackInterface* track_to_render);
     virtual ~VideoRenderer();
 
     // VideoSinkInterface implementation
-    void OnFrame(const webrtc::VideoFrame& frame) override;
+    void OnFrame(const webrtz::VideoFrame& frame) override;
 
     const uint8_t* image() const { return image_.get(); }
 
@@ -100,7 +100,7 @@ class GtkMainWnd : public MainWindow {
     int width_;
     int height_;
     GtkMainWnd* main_wnd_;
-    rtc::scoped_refptr<webrtc::VideoTrackInterface> rendered_track_;
+    rtc::scoped_refptr<webrtz::VideoTrackInterface> rendered_track_;
   };
 
  protected:

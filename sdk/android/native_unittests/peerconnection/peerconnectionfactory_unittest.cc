@@ -22,12 +22,12 @@
 #include "sdk/android/native_api/jni/jvm.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
 // Create native peer connection factory, that will be wrapped by java one
-rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> CreateTestPCF(
+rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> CreateTestPCF(
     rtc::Thread* network_thread,
     rtc::Thread* worker_thread,
     rtc::Thread* signaling_thread) {
@@ -40,16 +40,16 @@ rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> CreateTestPCF(
 
   std::unique_ptr<cricket::MediaEngineInterface> media_engine =
       cricket::WebRtcMediaEngineFactory::Create(
-          nullptr /* adm */, webrtc::CreateBuiltinAudioEncoderFactory(),
-          webrtc::CreateBuiltinAudioDecoderFactory(),
-          rtc::MakeUnique<webrtc::InternalEncoderFactory>(),
-          rtc::MakeUnique<webrtc::InternalDecoderFactory>(),
-          nullptr /* audio_mixer */, webrtc::AudioProcessingBuilder().Create());
+          nullptr /* adm */, webrtz::CreateBuiltinAudioEncoderFactory(),
+          webrtz::CreateBuiltinAudioDecoderFactory(),
+          rtc::MakeUnique<webrtz::InternalEncoderFactory>(),
+          rtc::MakeUnique<webrtz::InternalDecoderFactory>(),
+          nullptr /* audio_mixer */, webrtz::AudioProcessingBuilder().Create());
   RTC_LOG(LS_INFO) << "Media engine created: " << media_engine.get();
 
   auto factory = CreateModularPeerConnectionFactory(
       network_thread, worker_thread, signaling_thread, std::move(media_engine),
-      webrtc::CreateCallFactory(), webrtc::CreateRtcEventLogFactory());
+      webrtz::CreateCallFactory(), webrtz::CreateRtcEventLogFactory());
   RTC_LOG(LS_INFO) << "PeerConnectionFactory created: " << factory;
   RTC_CHECK(factory) << "Failed to create the peer connection factory; "
                      << "WebRTC/libjingle init likely failed on this device";
@@ -78,7 +78,7 @@ TEST(PeerConnectionFactoryTest, NativeToJavaPeerConnectionFactory) {
   signaling_thread->SetName("signaling_thread", NULL);
   RTC_CHECK(signaling_thread->Start()) << "Failed to start thread";
 
-  rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> factory =
+  rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> factory =
       CreateTestPCF(network_thread.get(), worker_thread.get(),
                     signaling_thread.get());
 
@@ -93,4 +93,4 @@ TEST(PeerConnectionFactoryTest, NativeToJavaPeerConnectionFactory) {
 
 }  // namespace
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

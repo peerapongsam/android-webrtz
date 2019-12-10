@@ -13,7 +13,7 @@
 #include <string>
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -273,4 +273,4 @@ rtc::Optional<int> TrackMediaInfoMap::GetAttachmentIdByTrack(
                                              : rtc::nullopt;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

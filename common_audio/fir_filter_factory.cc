@@ -20,7 +20,7 @@
 #include "common_audio/fir_filter_sse.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 FIRFilter* CreateFirFilter(const float* coefficients,
                            size_t coefficients_length,
@@ -55,4 +55,4 @@ FIRFilter* CreateFirFilter(const float* coefficients,
   return filter;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

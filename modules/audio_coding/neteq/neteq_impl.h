@@ -29,7 +29,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class Accelerate;
@@ -58,7 +58,7 @@ struct DtmfEvent;
 struct ExpandFactory;
 struct PreemptiveExpandFactory;
 
-class NetEqImpl : public webrtc::NetEq {
+class NetEqImpl : public webrtz::NetEq {
  public:
   enum class OutputType {
     kNormalSpeech,
@@ -445,5 +445,5 @@ class NetEqImpl : public webrtc::NetEq {
   RTC_DISALLOW_COPY_AND_ASSIGN(NetEqImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_NETEQ_IMPL_H_

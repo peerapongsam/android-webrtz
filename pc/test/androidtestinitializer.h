@@ -11,10 +11,10 @@
 #ifndef PC_TEST_ANDROIDTESTINITIALIZER_H_
 #define PC_TEST_ANDROIDTESTINITIALIZER_H_
 
-namespace webrtc {
+namespace webrtz {
 
 void InitializeAndroidObjects();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_ANDROIDTESTINITIALIZER_H_

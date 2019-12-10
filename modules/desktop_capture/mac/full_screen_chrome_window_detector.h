@@ -17,7 +17,7 @@
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This is a work around for the Chrome tab full-screen behavior: Chrome
 // creates a new window in full-screen mode to show a tab full-screen and
@@ -57,6 +57,6 @@ class FullScreenChromeWindowDetector : public rtc::RefCountedBase {
   RTC_DISALLOW_COPY_AND_ASSIGN(FullScreenChromeWindowDetector);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MAC_FULL_SCREEN_CHROME_WINDOW_DETECTOR_H_

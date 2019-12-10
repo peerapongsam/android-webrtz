@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/win32.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool GetWindowRect(HWND window, DesktopRect* result) {
   RECT rect;
@@ -153,4 +153,4 @@ bool AeroChecker::IsAeroEnabled() {
   return result != FALSE;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

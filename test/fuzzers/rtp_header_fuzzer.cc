@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/source/rtp_packet_received.h"
 #include "modules/rtp_rtcp/source/rtp_utility.h"
 
-namespace webrtc {
+namespace webrtz {
 // We decide which header extensions to register by reading two bytes
 // from the beginning of |data| and interpreting it as a bitmask over
 // the RTPExtensionType enum. This assert ensures two bytes are enough.
@@ -47,4 +47,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   RtpUtility::RtpHeaderParser rtp_parser(data, size);
   rtp_parser.Parse(&rtp_header, &extensions);
 }
-}  // namespace webrtc
+}  // namespace webrtz

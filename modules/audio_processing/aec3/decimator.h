@@ -18,7 +18,7 @@
 #include "modules/audio_processing/aec3/cascaded_biquad_filter.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Provides functionality for decimating a signal.
 class Decimator {
@@ -34,6 +34,6 @@ class Decimator {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(Decimator);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_DECIMATOR_H_

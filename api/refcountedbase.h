@@ -33,7 +33,7 @@ class RefCountedBase {
   virtual ~RefCountedBase() = default;
 
  private:
-  mutable webrtc::webrtc_impl::RefCounter ref_count_{0};
+  mutable webrtz::webrtc_impl::RefCounter ref_count_{0};
 
   RTC_DISALLOW_COPY_AND_ASSIGN(RefCountedBase);
 };

@@ -15,7 +15,7 @@
 #include "rtc_base/format_macros.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 NetEqExternalDecoderTest::NetEqExternalDecoderTest(NetEqDecoder codec,
@@ -56,4 +56,4 @@ void NetEqExternalDecoderTest::GetOutputAudio(AudioFrame* output) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

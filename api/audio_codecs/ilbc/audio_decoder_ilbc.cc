@@ -17,7 +17,7 @@
 #include "modules/audio_coding/codecs/ilbc/audio_decoder_ilbc.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioDecoderIlbc::Config> AudioDecoderIlbc::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -38,4 +38,4 @@ std::unique_ptr<AudioDecoder> AudioDecoderIlbc::MakeAudioDecoder(
   return rtc::MakeUnique<AudioDecoderIlbcImpl>();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

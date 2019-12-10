@@ -12,7 +12,7 @@
 #include "modules/remote_bitrate_estimator/remote_bitrate_estimator_unittest_helper.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RemoteBitrateEstimatorAbsSendTimeTest :
     public RemoteBitrateEstimatorTest {
@@ -286,4 +286,4 @@ TEST_F(RemoteBitrateEstimatorAbsSendTimeTest, ProbingIgnoresSmallPackets) {
   EXPECT_TRUE(bitrate_observer_->updated());
   EXPECT_NEAR(bitrate_observer_->latest_bitrate(), 800000u, 10000);
 }
-}  // namespace webrtc
+}  // namespace webrtz

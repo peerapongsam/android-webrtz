@@ -76,11 +76,11 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  webrtc::test::SetExecutablePath(argv[0]);
-  webrtc::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
+  webrtz::test::SetExecutablePath(argv[0]);
+  webrtz::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
   // InitFieldTrialsFromString stores the char*, so the char array must outlive
   // the application.
-  webrtc::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
+  webrtz::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
 
 #if defined(WEBRTC_WIN)
   if (!FLAG_default_error_handlers) {

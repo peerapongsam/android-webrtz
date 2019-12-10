@@ -23,7 +23,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace acm2 {
 namespace {
@@ -504,4 +504,4 @@ TEST_F(AcmReceiverTestOldApi, MAYBE_LastAudioCodec) {
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz

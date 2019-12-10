@@ -21,14 +21,14 @@
 #include "system_wrappers/include/clock.h"
 #include "call/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class FrameGeneratorCapturer::InsertFrameTask : public rtc::QueuedTask {
  public:
   // Repeats in |repeat_interval_ms|. One-time if |repeat_interval_ms| == 0.
   InsertFrameTask(
-      webrtc::test::FrameGeneratorCapturer* frame_generator_capturer,
+      webrtz::test::FrameGeneratorCapturer* frame_generator_capturer,
       uint32_t repeat_interval_ms)
       : frame_generator_capturer_(frame_generator_capturer),
         repeat_interval_ms_(repeat_interval_ms),
@@ -79,7 +79,7 @@ class FrameGeneratorCapturer::InsertFrameTask : public rtc::QueuedTask {
     return task_completed;
   }
 
-  webrtc::test::FrameGeneratorCapturer* const frame_generator_capturer_;
+  webrtz::test::FrameGeneratorCapturer* const frame_generator_capturer_;
   const uint32_t repeat_interval_ms_;
   int64_t intended_run_time_ms_;
 };
@@ -260,4 +260,4 @@ int FrameGeneratorCapturer::GetCurrentConfiguredFramerate() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

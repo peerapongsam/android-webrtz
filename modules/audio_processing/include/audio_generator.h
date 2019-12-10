@@ -13,7 +13,7 @@
 
 #include "modules/audio_processing/include/audio_frame_view.h"
 
-namespace webrtc {
+namespace webrtz {
 // This class is used as input sink for the APM, for diagnostic purposes.
 // Generates an infinite audio signal, [-1, 1] floating point values, in frames
 // of fixed channel count and sample rate.
@@ -31,6 +31,6 @@ class AudioGenerator {
   virtual size_t SampleRateHz() = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INCLUDE_AUDIO_GENERATOR_H_

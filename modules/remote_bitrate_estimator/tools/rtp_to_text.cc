@@ -20,23 +20,23 @@
 #include "test/rtp_file_reader.h"
 
 int main(int argc, char* argv[]) {
-  webrtc::test::RtpFileReader* reader;
-  webrtc::RtpHeaderParser* parser;
+  webrtz::test::RtpFileReader* reader;
+  webrtz::RtpHeaderParser* parser;
   if (!ParseArgsAndSetupEstimator(argc, argv, NULL, NULL, &reader, &parser,
                                   NULL, NULL)) {
     return -1;
   }
   bool arrival_time_only = (argc >= 5 && strncmp(argv[4], "-t", 2) == 0);
-  std::unique_ptr<webrtc::test::RtpFileReader> rtp_reader(reader);
-  std::unique_ptr<webrtc::RtpHeaderParser> rtp_parser(parser);
+  std::unique_ptr<webrtz::test::RtpFileReader> rtp_reader(reader);
+  std::unique_ptr<webrtz::RtpHeaderParser> rtp_parser(parser);
   fprintf(stdout, "seqnum timestamp ts_offset abs_sendtime recvtime "
           "markerbit ssrc size original_size\n");
   int packet_counter = 0;
   int non_zero_abs_send_time = 0;
   int non_zero_ts_offsets = 0;
-  webrtc::test::RtpPacket packet;
+  webrtz::test::RtpPacket packet;
   while (rtp_reader->NextPacket(&packet)) {
-    webrtc::RTPHeader header;
+    webrtz::RTPHeader header;
     parser->Parse(packet.data, packet.length, &header);
     if (header.extension.absoluteSendTime != 0)
       ++non_zero_abs_send_time;

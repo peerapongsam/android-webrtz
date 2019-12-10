@@ -19,7 +19,7 @@
 #include "modules/rtp_rtcp/source/rtp_utility.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoCodec;
 
@@ -82,6 +82,6 @@ class RTPPayloadRegistry {
 #endif
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_INCLUDE_RTP_PAYLOAD_REGISTRY_H_

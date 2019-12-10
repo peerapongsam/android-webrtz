@@ -18,7 +18,7 @@
 #include "modules/desktop_capture/win/scoped_gdi_object.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -87,4 +87,4 @@ TEST(MouseCursorTest, MatchCursors) {
                                             IDD_CURSOR3_32BPP));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

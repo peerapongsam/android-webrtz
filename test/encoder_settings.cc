@@ -20,7 +20,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "test/fake_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const size_t DefaultVideoStreamFactory::kMaxNumberOfStreams;
@@ -33,7 +33,7 @@ const int DefaultVideoStreamFactory::kDefaultMinBitratePerStream[] = {
 std::vector<VideoStream> CreateVideoStreams(
     int width,
     int height,
-    const webrtc::VideoEncoderConfig& encoder_config) {
+    const webrtz::VideoEncoderConfig& encoder_config) {
   RTC_DCHECK(encoder_config.number_of_streams <=
              DefaultVideoStreamFactory::kMaxNumberOfStreams);
 
@@ -101,7 +101,7 @@ DefaultVideoStreamFactory::DefaultVideoStreamFactory() {}
 std::vector<VideoStream> DefaultVideoStreamFactory::CreateEncoderStreams(
     int width,
     int height,
-    const webrtc::VideoEncoderConfig& encoder_config) {
+    const webrtz::VideoEncoderConfig& encoder_config) {
   return CreateVideoStreams(width, height, encoder_config);
 }
 
@@ -149,4 +149,4 @@ VideoReceiveStream::Decoder CreateMatchingDecoder(
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

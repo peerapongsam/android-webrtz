@@ -22,7 +22,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -258,4 +258,4 @@ bool GetWindowRect(::Display* display,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

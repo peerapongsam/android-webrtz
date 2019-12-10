@@ -11,31 +11,31 @@
 #ifndef SDK_ANDROID_SRC_JNI_CLASSREFERENCEHOLDER_H_
 #define SDK_ANDROID_SRC_JNI_CLASSREFERENCEHOLDER_H_
 
-// TODO(magjed): Update external clients to call webrtc::jni::InitClassLoader
+// TODO(magjed): Update external clients to call webrtz::jni::InitClassLoader
 // immediately instead.
 #include "sdk/android/native_api/jni/class_loader.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
-// Deprecated. Call webrtc::jni::InitClassLoader() immediately instead..
+// Deprecated. Call webrtz::jni::InitClassLoader() immediately instead..
 inline void LoadGlobalClassReferenceHolder() {
-  webrtc::InitClassLoader(GetEnv());
+  webrtz::InitClassLoader(GetEnv());
 }
 
 // Deprecated. Do not call at all.
 inline void FreeGlobalClassReferenceHolder() {}
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 // TODO(magjed): Remove once external clients are updated.
-namespace webrtc_jni {
+namespace webrtz_jni {
 
-using webrtc::jni::LoadGlobalClassReferenceHolder;
-using webrtc::jni::FreeGlobalClassReferenceHolder;
+using webrtz::jni::LoadGlobalClassReferenceHolder;
+using webrtz::jni::FreeGlobalClassReferenceHolder;
 
-}  // namespace webrtc_jni
+}  // namespace webrtz_jni
 
 #endif  // SDK_ANDROID_SRC_JNI_CLASSREFERENCEHOLDER_H_

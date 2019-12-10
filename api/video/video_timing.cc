@@ -12,7 +12,7 @@
 
 #include <sstream>
 
-namespace webrtc {
+namespace webrtz {
 
 TimingFrameInfo::TimingFrameInfo()
     : rtp_timestamp(0),
@@ -75,4 +75,4 @@ std::string TimingFrameInfo::ToString() const {
   return out.str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

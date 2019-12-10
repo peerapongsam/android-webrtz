@@ -16,7 +16,7 @@
 #include "third_party/libyuv/include/libyuv/compare.h"
 #include "third_party/libyuv/include/libyuv/convert.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Handles a conversion between a set of RGBA frames to a YUV (I420) video.
@@ -104,6 +104,6 @@ class Converter {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_CONVERTER_CONVERTER_H_

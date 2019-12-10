@@ -17,7 +17,7 @@
 #include "modules/audio_processing/aec3/aec3_fft.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for computing an echo suppression gain based on the coherence measure.
 class CoherenceGain {
@@ -72,6 +72,6 @@ class CoherenceGain {
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(CoherenceGain);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_COHERENCE_GAIN_H_

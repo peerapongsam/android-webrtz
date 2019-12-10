@@ -17,7 +17,7 @@
 #include "modules/remote_bitrate_estimator/test/bwe_test_logging.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 constexpr unsigned int kDeltaCounterMax = 1000;
 
@@ -90,4 +90,4 @@ void MedianSlopeEstimator::Update(double recv_delta_ms,
   BWE_TEST_LOGGING_PLOT(1, "trendline_slope", arrival_time_ms, trendline_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

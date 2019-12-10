@@ -21,7 +21,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -1160,4 +1160,4 @@ TYPED_TEST(RtpFecTest, FecRecoveryNonConsecutivePacketsWrap) {
   EXPECT_FALSE(this->IsRecoveryComplete());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

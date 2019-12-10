@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -222,4 +222,4 @@ TEST(SwapQueueTest, OneSlotQueue) {
   EXPECT_FALSE(queue.Remove(&i));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

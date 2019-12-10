@@ -15,7 +15,7 @@
 #include "modules/audio_processing/utility/ooura_fft_tables_common.h"
 #include "modules/audio_processing/utility/ooura_fft_tables_neon_sse2.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(WEBRTC_ARCH_X86_FAMILY)
 
@@ -435,4 +435,4 @@ void rftbsub_128_SSE2(float* a) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

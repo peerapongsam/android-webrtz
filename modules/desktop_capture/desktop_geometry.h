@@ -14,7 +14,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // A vector in the 2D integer space. E.g. can be used to represent screen DPI.
 class DesktopVector {
@@ -160,7 +160,7 @@ class DesktopRect {
   int32_t bottom_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_GEOMETRY_H_
 

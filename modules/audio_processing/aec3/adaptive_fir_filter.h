@@ -23,7 +23,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 // Computes and stores the frequency response of the filter.
 void UpdateFrequencyResponse(
@@ -172,6 +172,6 @@ class AdaptiveFirFilter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(AdaptiveFirFilter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ADAPTIVE_FIR_FILTER_H_

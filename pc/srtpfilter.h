@@ -60,7 +60,7 @@ class SrtpFilter {
   // TODO(zhihuang): Make SetOffer/ProvisionalAnswer/Answer private as helper
   // methods once start using Process.
   bool Process(const std::vector<CryptoParams>& cryptos,
-               webrtc::SdpType type,
+               webrtz::SdpType type,
                ContentSource source);
 
   // Indicates which crypto algorithms and keys were contained in the offer.

@@ -19,7 +19,7 @@
 
 using testing::InitGoogleTest;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 static const int kInputSampleRateKhz = 8;
@@ -76,4 +76,4 @@ TEST_F(NetEqIlbcQualityTest, Test) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

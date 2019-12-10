@@ -16,7 +16,7 @@
 #include "api/video/video_frame_buffer.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // This function wraps the C++ I420 buffer and returns a Java
@@ -26,6 +26,6 @@ ScopedJavaLocalRef<jobject> WrapI420Buffer(
     const rtc::scoped_refptr<I420BufferInterface>& i420_buffer);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_WRAPPED_NATIVE_I420_BUFFER_H_

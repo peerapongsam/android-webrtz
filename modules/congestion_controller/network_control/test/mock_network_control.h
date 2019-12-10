@@ -14,7 +14,7 @@
 #include "modules/congestion_controller/network_control/include/network_control.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 class MockNetworkControllerObserver : public NetworkControllerObserver {
  public:
@@ -24,6 +24,6 @@ class MockNetworkControllerObserver : public NetworkControllerObserver {
   MOCK_METHOD1(OnTargetTransferRate, void(TargetTransferRate));
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_NETWORK_CONTROL_TEST_MOCK_NETWORK_CONTROL_H_

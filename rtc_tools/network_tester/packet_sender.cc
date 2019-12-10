@@ -18,7 +18,7 @@
 #include "rtc_tools/network_tester/config_reader.h"
 #include "rtc_tools/network_tester/test_controller.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -130,4 +130,4 @@ void PacketSender::UpdateTestSetting(size_t packet_size,
   packet_size_ = packet_size;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

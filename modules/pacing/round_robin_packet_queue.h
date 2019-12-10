@@ -18,7 +18,7 @@
 #include "modules/pacing/packet_queue_interface.h"
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RoundRobinPacketQueue : public PacketQueueInterface {
  public:
@@ -106,6 +106,6 @@ class RoundRobinPacketQueue : public PacketQueueInterface {
   // the age of the oldest packet in the queue.
   std::multiset<int64_t> enqueue_times_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_PACING_ROUND_ROBIN_PACKET_QUEUE_H_

@@ -53,7 +53,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -772,4 +772,4 @@ INSTANTIATE_TEST_CASE_P(
     ::testing::Combine(::testing::Values(1234567, 7654321),
                        ::testing::Values(RtcEventLog::kImmediateOutput, 1, 5)));
 
-}  // namespace webrtc
+}  // namespace webrtz

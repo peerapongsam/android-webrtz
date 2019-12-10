@@ -11,7 +11,7 @@
 #ifndef MODULES_VIDEO_PROCESSING_UTIL_SKIN_DETECTION_H_
 #define MODULES_VIDEO_PROCESSING_UTIL_SKIN_DETECTION_H_
 
-namespace webrtc {
+namespace webrtz {
 
 #define MODEL_MODE 0
 
@@ -25,6 +25,6 @@ bool MbHasSkinColor(const uint8_t* y_src,
                     const int mb_row,
                     const int mb_col);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_PROCESSING_UTIL_SKIN_DETECTION_H_

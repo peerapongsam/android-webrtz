@@ -19,7 +19,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct RtpExtensionSize {
   RTPExtensionType type;
@@ -75,6 +75,6 @@ class RtpHeaderExtensionMap {
   uint8_t ids_[kRtpExtensionNumberOfExtensions];
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_INCLUDE_RTP_HEADER_EXTENSION_MAP_H_

@@ -13,7 +13,7 @@
 #include "modules/desktop_capture/desktop_capture_options.h"
 #include "modules/desktop_capture/desktop_capturer_differ_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DesktopCapturer::~DesktopCapturer() = default;
 
@@ -60,4 +60,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateScreenCapturer(
   return capturer;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

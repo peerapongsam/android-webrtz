@@ -13,7 +13,7 @@
 
 #include <stdint.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcpNackStats {
  public:
@@ -36,5 +36,5 @@ class RtcpNackStats {
   uint32_t unique_requests_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_NACK_STATS_H_

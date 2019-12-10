@@ -19,15 +19,15 @@
 #include "modules/audio_device/include/audio_device.h"
 #include "modules/audio_processing/include/audio_processing.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 CallFactoryInterface* CreateCallFactory() {
-  return webrtc::CreateCallFactory().release();
+  return webrtz::CreateCallFactory().release();
 }
 
 RtcEventLogFactoryInterface* CreateRtcEventLogFactory() {
-  return webrtc::CreateRtcEventLogFactory().release();
+  return webrtz::CreateRtcEventLogFactory().release();
 }
 
 #if defined(USE_BUILTIN_SW_CODECS)
@@ -61,4 +61,4 @@ cricket::MediaEngineInterface* CreateMediaEngine(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

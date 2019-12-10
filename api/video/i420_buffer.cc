@@ -23,7 +23,7 @@
 // Aligning pointer to 64 bytes for improved performance, e.g. use SIMD.
 static const int kBufferAlignment = 64;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -112,12 +112,12 @@ rtc::scoped_refptr<I420Buffer> I420Buffer::Rotate(
 
   int rotated_width = src.width();
   int rotated_height = src.height();
-  if (rotation == webrtc::kVideoRotation_90 ||
-      rotation == webrtc::kVideoRotation_270) {
+  if (rotation == webrtz::kVideoRotation_90 ||
+      rotation == webrtz::kVideoRotation_270) {
     std::swap(rotated_width, rotated_height);
   }
 
-  rtc::scoped_refptr<webrtc::I420Buffer> buffer =
+  rtc::scoped_refptr<webrtz::I420Buffer> buffer =
       I420Buffer::Create(rotated_width, rotated_height);
 
   RTC_CHECK_EQ(0, libyuv::I420Rotate(
@@ -236,4 +236,4 @@ void I420Buffer::ScaleFrom(const I420BufferInterface& src) {
   CropAndScaleFrom(src, 0, 0, src.width(), src.height());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

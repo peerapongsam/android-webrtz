@@ -16,7 +16,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -145,4 +145,4 @@ TEST(RtxReceiveStreamTest, CopiesRtpHeaderExtensions) {
   rtx_sink.OnRtpPacket(rtx_packet);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

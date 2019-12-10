@@ -14,7 +14,7 @@
 #include "modules/audio_coding/codecs/isac/fix/include/isacfix.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class IsacFix {
  public:
@@ -119,5 +119,5 @@ class IsacFix {
   enum { kFixSampleRate = 16000 };
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_CODECS_ISAC_FIX_SOURCE_ISAC_FIX_TYPE_H_

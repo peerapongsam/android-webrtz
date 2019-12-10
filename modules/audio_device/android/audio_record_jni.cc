@@ -22,7 +22,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Scoped class which logs its time of life as a UMA statistic. It generates
@@ -99,11 +99,11 @@ AudioRecordJni::AudioRecordJni(AudioManager* audio_manager)
   JNINativeMethod native_methods[] = {
       {"nativeCacheDirectBufferAddress", "(Ljava/nio/ByteBuffer;J)V",
        reinterpret_cast<void*>(
-           &webrtc::AudioRecordJni::CacheDirectBufferAddress)},
+           &webrtz::AudioRecordJni::CacheDirectBufferAddress)},
       {"nativeDataIsRecorded", "(IJ)V",
-       reinterpret_cast<void*>(&webrtc::AudioRecordJni::DataIsRecorded)}};
+       reinterpret_cast<void*>(&webrtz::AudioRecordJni::DataIsRecorded)}};
   j_native_registration_ = j_environment_->RegisterNatives(
-      "org/webrtc/voiceengine/WebRtcAudioRecord", native_methods,
+      "org/webrtz/voiceengine/WebRtcAudioRecord", native_methods,
       arraysize(native_methods));
   j_audio_record_.reset(
       new JavaAudioRecord(j_native_registration_.get(),
@@ -234,8 +234,8 @@ void JNICALL AudioRecordJni::CacheDirectBufferAddress(JNIEnv* env,
                                                       jobject obj,
                                                       jobject byte_buffer,
                                                       jlong nativeAudioRecord) {
-  webrtc::AudioRecordJni* this_object =
-      reinterpret_cast<webrtc::AudioRecordJni*>(nativeAudioRecord);
+  webrtz::AudioRecordJni* this_object =
+      reinterpret_cast<webrtz::AudioRecordJni*>(nativeAudioRecord);
   this_object->OnCacheDirectBufferAddress(env, byte_buffer);
 }
 
@@ -255,8 +255,8 @@ void JNICALL AudioRecordJni::DataIsRecorded(JNIEnv* env,
                                             jobject obj,
                                             jint length,
                                             jlong nativeAudioRecord) {
-  webrtc::AudioRecordJni* this_object =
-      reinterpret_cast<webrtc::AudioRecordJni*>(nativeAudioRecord);
+  webrtz::AudioRecordJni* this_object =
+      reinterpret_cast<webrtz::AudioRecordJni*>(nativeAudioRecord);
   this_object->OnDataIsRecorded(length);
 }
 
@@ -279,4 +279,4 @@ void AudioRecordJni::OnDataIsRecorded(int length) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

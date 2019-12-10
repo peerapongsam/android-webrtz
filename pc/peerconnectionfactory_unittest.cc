@@ -28,14 +28,14 @@
 #include "pc/test/fakertccertificategenerator.h"
 #include "pc/test/fakevideotrackrenderer.h"
 
-using webrtc::DataChannelInterface;
-using webrtc::FakeVideoTrackRenderer;
-using webrtc::MediaStreamInterface;
-using webrtc::PeerConnectionFactoryInterface;
-using webrtc::PeerConnectionInterface;
-using webrtc::PeerConnectionObserver;
-using webrtc::VideoTrackSourceInterface;
-using webrtc::VideoTrackInterface;
+using webrtz::DataChannelInterface;
+using webrtz::FakeVideoTrackRenderer;
+using webrtz::MediaStreamInterface;
+using webrtz::PeerConnectionFactoryInterface;
+using webrtz::PeerConnectionInterface;
+using webrtz::PeerConnectionObserver;
+using webrtz::VideoTrackSourceInterface;
+using webrtz::VideoTrackInterface;
 
 namespace {
 
@@ -79,7 +79,7 @@ class NullPeerConnectionObserver : public PeerConnectionObserver {
   void OnIceGatheringChange(
       PeerConnectionInterface::IceGatheringState new_state) override {}
   void OnIceCandidate(
-      const webrtc::IceCandidateInterface* candidate) override {}
+      const webrtz::IceCandidateInterface* candidate) override {}
 };
 
 }  // namespace
@@ -87,16 +87,16 @@ class NullPeerConnectionObserver : public PeerConnectionObserver {
 class PeerConnectionFactoryTest : public testing::Test {
   void SetUp() {
 #ifdef WEBRTC_ANDROID
-    webrtc::InitializeAndroidObjects();
+    webrtz::InitializeAndroidObjects();
 #endif
     // Use fake audio device module since we're only testing the interface
     // level, and using a real one could make tests flaky e.g. when run in
     // parallel.
-    factory_ = webrtc::CreatePeerConnectionFactory(
+    factory_ = webrtz::CreatePeerConnectionFactory(
         rtc::Thread::Current(), rtc::Thread::Current(),
         FakeAudioCaptureModule::Create(),
-        webrtc::CreateBuiltinAudioEncoderFactory(),
-        webrtc::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr);
+        webrtz::CreateBuiltinAudioEncoderFactory(),
+        webrtz::CreateBuiltinAudioDecoderFactory(), nullptr, nullptr);
 
     ASSERT_TRUE(factory_.get() != NULL);
     port_allocator_.reset(
@@ -142,16 +142,16 @@ class PeerConnectionFactoryTest : public testing::Test {
 // See https://bugs.chromium.org/p/webrtc/issues/detail?id=7806 for details.
 TEST(PeerConnectionFactoryTestInternal, DISABLED_CreatePCUsingInternalModules) {
 #ifdef WEBRTC_ANDROID
-  webrtc::InitializeAndroidObjects();
+  webrtz::InitializeAndroidObjects();
 #endif
 
   rtc::scoped_refptr<PeerConnectionFactoryInterface> factory(
-      webrtc::CreatePeerConnectionFactory(
-          webrtc::CreateBuiltinAudioEncoderFactory(),
-          webrtc::CreateBuiltinAudioDecoderFactory()));
+      webrtz::CreatePeerConnectionFactory(
+          webrtz::CreateBuiltinAudioEncoderFactory(),
+          webrtz::CreateBuiltinAudioDecoderFactory()));
 
   NullPeerConnectionObserver observer;
-  webrtc::PeerConnectionInterface::RTCConfiguration config;
+  webrtz::PeerConnectionInterface::RTCConfiguration config;
 
   std::unique_ptr<FakeRTCCertificateGenerator> cert_generator(
       new FakeRTCCertificateGenerator());
@@ -165,7 +165,7 @@ TEST(PeerConnectionFactoryTestInternal, DISABLED_CreatePCUsingInternalModules) {
 // configuration. Also verifies the URL's parsed correctly as expected.
 TEST_F(PeerConnectionFactoryTest, CreatePCUsingIceServers) {
   PeerConnectionInterface::RTCConfiguration config;
-  webrtc::PeerConnectionInterface::IceServer ice_server;
+  webrtz::PeerConnectionInterface::IceServer ice_server;
   ice_server.uri = kStunIceServer;
   config.servers.push_back(ice_server);
   ice_server.uri = kTurnIceServer;
@@ -198,7 +198,7 @@ TEST_F(PeerConnectionFactoryTest, CreatePCUsingIceServers) {
 // configuration. Also verifies the list of URL's parsed correctly as expected.
 TEST_F(PeerConnectionFactoryTest, CreatePCUsingIceServersUrls) {
   PeerConnectionInterface::RTCConfiguration config;
-  webrtc::PeerConnectionInterface::IceServer ice_server;
+  webrtz::PeerConnectionInterface::IceServer ice_server;
   ice_server.urls.push_back(kStunIceServer);
   ice_server.urls.push_back(kTurnIceServer);
   ice_server.urls.push_back(kTurnIceServerWithTransport);
@@ -226,7 +226,7 @@ TEST_F(PeerConnectionFactoryTest, CreatePCUsingIceServersUrls) {
 
 TEST_F(PeerConnectionFactoryTest, CreatePCUsingNoUsernameInUri) {
   PeerConnectionInterface::RTCConfiguration config;
-  webrtc::PeerConnectionInterface::IceServer ice_server;
+  webrtz::PeerConnectionInterface::IceServer ice_server;
   ice_server.uri = kStunIceServer;
   config.servers.push_back(ice_server);
   ice_server.uri = kTurnIceServerWithNoUsernameInUri;
@@ -250,7 +250,7 @@ TEST_F(PeerConnectionFactoryTest, CreatePCUsingNoUsernameInUri) {
 // has transport parameter in it.
 TEST_F(PeerConnectionFactoryTest, CreatePCUsingTurnUrlWithTransportParam) {
   PeerConnectionInterface::RTCConfiguration config;
-  webrtc::PeerConnectionInterface::IceServer ice_server;
+  webrtz::PeerConnectionInterface::IceServer ice_server;
   ice_server.uri = kTurnIceServerWithTransport;
   ice_server.password = kTurnPassword;
   config.servers.push_back(ice_server);
@@ -269,7 +269,7 @@ TEST_F(PeerConnectionFactoryTest, CreatePCUsingTurnUrlWithTransportParam) {
 
 TEST_F(PeerConnectionFactoryTest, CreatePCUsingSecureTurnUrl) {
   PeerConnectionInterface::RTCConfiguration config;
-  webrtc::PeerConnectionInterface::IceServer ice_server;
+  webrtz::PeerConnectionInterface::IceServer ice_server;
   ice_server.uri = kSecureTurnIceServer;
   ice_server.password = kTurnPassword;
   config.servers.push_back(ice_server);
@@ -302,7 +302,7 @@ TEST_F(PeerConnectionFactoryTest, CreatePCUsingSecureTurnUrl) {
 
 TEST_F(PeerConnectionFactoryTest, CreatePCUsingIPLiteralAddress) {
   PeerConnectionInterface::RTCConfiguration config;
-  webrtc::PeerConnectionInterface::IceServer ice_server;
+  webrtz::PeerConnectionInterface::IceServer ice_server;
   ice_server.uri = kStunIceServerWithIPv4Address;
   config.servers.push_back(ice_server);
   ice_server.uri = kStunIceServerWithIPv4AddressWithoutPort;

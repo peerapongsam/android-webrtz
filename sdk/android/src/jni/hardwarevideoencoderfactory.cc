@@ -15,7 +15,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static jboolean JNI_HardwareVideoEncoderFactory_IsSameH264Profile(
@@ -28,4 +28,4 @@ static jboolean JNI_HardwareVideoEncoderFactory_IsSameH264Profile(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

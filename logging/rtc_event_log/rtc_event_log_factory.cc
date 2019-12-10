@@ -14,7 +14,7 @@
 
 #include "logging/rtc_event_log/rtc_event_log.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<RtcEventLog> RtcEventLogFactory::CreateRtcEventLog(
     RtcEventLog::EncodingType encoding_type) {
@@ -31,4 +31,4 @@ std::unique_ptr<RtcEventLogFactoryInterface> CreateRtcEventLogFactory() {
   return std::unique_ptr<RtcEventLogFactoryInterface>(new RtcEventLogFactory());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

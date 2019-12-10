@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 bool EnableSoftTransparentMode() {
@@ -247,4 +247,4 @@ void ResidualEchoEstimator::RenderNoisePower(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

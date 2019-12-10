@@ -15,7 +15,7 @@
 
 #include <xmmintrin.h>
 
-namespace webrtc {
+namespace webrtz {
 
 float SincResampler::Convolve_SSE(const float* input_ptr, const float* k1,
                                   const float* k2,
@@ -56,4 +56,4 @@ float SincResampler::Convolve_SSE(const float* input_ptr, const float* k1,
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

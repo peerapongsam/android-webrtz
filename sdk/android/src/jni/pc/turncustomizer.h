@@ -14,7 +14,7 @@
 #include "api/turncustomizer.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 TurnCustomizer* GetNativeTurnCustomizer(
@@ -22,6 +22,6 @@ TurnCustomizer* GetNativeTurnCustomizer(
     const JavaRef<jobject>& j_turn_customizer);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_TURNCUSTOMIZER_H_

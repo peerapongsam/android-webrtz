@@ -19,7 +19,7 @@
 
 #include "common_audio/real_fourier.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RealFourierOpenmax : public RealFourier {
  public:
@@ -42,6 +42,6 @@ class RealFourierOpenmax : public RealFourier {
   OMXFFTSpec_R_F32_* const omx_spec_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_REAL_FOURIER_OPENMAX_H_

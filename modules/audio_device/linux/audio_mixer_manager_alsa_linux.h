@@ -18,7 +18,7 @@
 
 #include <alsa/asoundlib.h>
 
-namespace webrtc
+namespace webrtz
 {
 
 class AudioMixerManagerLinuxALSA

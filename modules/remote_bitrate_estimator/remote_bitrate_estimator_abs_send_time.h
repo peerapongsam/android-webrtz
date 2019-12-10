@@ -27,7 +27,7 @@
 #include "rtc_base/race_checker.h"
 #include "rtc_base/rate_statistics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct Probe {
   Probe(int64_t send_time_ms, int64_t recv_time_ms, size_t payload_size)
@@ -137,6 +137,6 @@ class RemoteBitrateEstimatorAbsSendTime : public RemoteBitrateEstimator {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RemoteBitrateEstimatorAbsSendTime);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_REMOTE_BITRATE_ESTIMATOR_ABS_SEND_TIME_H_

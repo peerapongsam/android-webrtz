@@ -15,10 +15,10 @@
 #import "WebRTC/RTCLogging.h"
 
 @implementation RTCAudioSessionDelegateAdapter {
-  webrtc::AudioSessionObserver *_observer;
+  webrtz::AudioSessionObserver *_observer;
 }
 
-- (instancetype)initWithObserver:(webrtc::AudioSessionObserver *)observer {
+- (instancetype)initWithObserver:(webrtz::AudioSessionObserver *)observer {
   NSParameterAssert(observer);
   if (self = [super init]) {
     _observer = observer;

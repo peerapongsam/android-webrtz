@@ -15,7 +15,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper class with generators for various signal transform windows.
 class WindowGenerator {
@@ -27,7 +27,7 @@ class WindowGenerator {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(WindowGenerator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_WINDOW_GENERATOR_H_
 

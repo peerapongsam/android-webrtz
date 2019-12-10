@@ -14,7 +14,7 @@
 
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class NtpTime {
  public:
@@ -60,5 +60,5 @@ inline bool operator!=(const NtpTime& n1, const NtpTime& n2) {
   return !(n1 == n2);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // SYSTEM_WRAPPERS_INCLUDE_NTP_TIME_H_

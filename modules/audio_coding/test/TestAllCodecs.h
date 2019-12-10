@@ -18,7 +18,7 @@
 #include "modules/audio_coding/test/PCMFile.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class TestPack : public AudioPacketizationCallback {
  public:
@@ -78,6 +78,6 @@ class TestAllCodecs : public ACMTest {
   size_t packet_size_bytes_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_TESTALLCODECS_H_

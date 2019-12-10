@@ -13,7 +13,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int kDefaultProcessIntervalMs = 2000;
 const uint32_t kStreamId = 123456;
@@ -600,4 +600,4 @@ TEST_F(StatsCounterTest, TestRateAccCounter_IntervalsWithoutSamplesIgnored) {
   EXPECT_EQ(24, observer->last_sample_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

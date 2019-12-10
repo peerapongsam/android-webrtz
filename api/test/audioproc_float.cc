@@ -14,7 +14,7 @@
 
 #include "modules/audio_processing/test/audioproc_float_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 int AudioprocFloat(std::unique_ptr<AudioProcessingBuilder> ap_builder,
@@ -24,4 +24,4 @@ int AudioprocFloat(std::unique_ptr<AudioProcessingBuilder> ap_builder,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

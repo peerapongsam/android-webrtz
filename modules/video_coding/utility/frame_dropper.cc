@@ -12,7 +12,7 @@
 
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -263,4 +263,4 @@ void FrameDropper::CapAccumulator() {
     accumulator_ = max_accumulator;
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

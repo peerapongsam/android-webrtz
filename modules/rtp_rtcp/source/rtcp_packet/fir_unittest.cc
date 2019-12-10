@@ -20,9 +20,9 @@ using testing::ElementsAreArray;
 using testing::Eq;
 using testing::Field;
 using testing::make_tuple;
-using webrtc::rtcp::Fir;
+using webrtz::rtcp::Fir;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr uint32_t kSenderSsrc = 0x12345678;
@@ -96,4 +96,4 @@ TEST(RtcpPacketFirTest, ParseFailsOnFractionalFciEntries) {
   EXPECT_FALSE(test::ParseSinglePacket(kPacketWithOneAndHalfFci, &parsed));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

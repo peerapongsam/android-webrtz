@@ -22,7 +22,7 @@
 #include "rtc_base/bitrateallocationstrategy.h"
 #include "rtc_base/sequenced_task_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -227,5 +227,5 @@ class BitrateAllocator {
   uint8_t transmission_max_bitrate_multiplier_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // CALL_BITRATE_ALLOCATOR_H_

@@ -20,7 +20,7 @@
 
 namespace {
 const std::string& DefaultArtifactPath() {
-  static const std::string path = webrtc::test::OutputPath();
+  static const std::string path = webrtz::test::OutputPath();
   return path;
 }
 }
@@ -29,7 +29,7 @@ DEFINE_string(test_artifacts_dir,
               DefaultArtifactPath().c_str(),
               "The output folder where test output should be saved.");
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 bool GetTestArtifactsDir(std::string* out_dir) {
@@ -67,4 +67,4 @@ bool WriteToTestArtifactsDir(const char* filename, const std::string& content) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

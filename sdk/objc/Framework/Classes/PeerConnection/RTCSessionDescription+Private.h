@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  * RTCSessionDescription object. This is needed to pass to the underlying C++
  * APIs.
  */
-@property(nonatomic, readonly, nullable) webrtc::SessionDescriptionInterface *nativeDescription;
+@property(nonatomic, readonly, nullable) webrtz::SessionDescriptionInterface *nativeDescription;
 
 /**
  * Initialize an RTCSessionDescription from a native
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
  * description.
  */
 - (instancetype)initWithNativeDescription:
-    (const webrtc::SessionDescriptionInterface *)nativeDescription;
+    (const webrtz::SessionDescriptionInterface *)nativeDescription;
 
 + (std::string)stdStringForType:(RTCSdpType)type;
 

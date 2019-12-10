@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 
 // Tests that the skew ends up as it should after a skew change.
@@ -121,4 +121,4 @@ TEST(SkewEstimator, NullEstimate) {
   }
 }
 }  // namespace aec3
-}  // namespace webrtc
+}  // namespace webrtz

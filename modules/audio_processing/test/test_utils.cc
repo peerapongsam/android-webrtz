@@ -13,7 +13,7 @@
 #include "modules/audio_processing/test/test_utils.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RawFile::RawFile(const std::string& filename)
     : file_handle_(fopen(filename.c_str(), "wb")) {}
@@ -155,4 +155,4 @@ std::vector<Point> ParseArrayGeometry(const std::string& mic_positions,
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

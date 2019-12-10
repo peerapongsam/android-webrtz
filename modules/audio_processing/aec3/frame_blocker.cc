@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FrameBlocker::FrameBlocker(size_t num_bands)
     : num_bands_(num_bands), buffer_(num_bands_) {
@@ -68,4 +68,4 @@ void FrameBlocker::ExtractBlock(std::vector<std::vector<float>>* block) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

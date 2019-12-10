@@ -13,7 +13,7 @@
 #include "rtc_base/logging.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int kSsrc = 100;
@@ -66,4 +66,4 @@ TEST_F(PlayoutDelayOracleTest, SendPlayoutDelayUntilSeqNumberExceeds) {
   EXPECT_FALSE(playout_delay_oracle_.send_playout_delay());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

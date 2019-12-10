@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(ClockTest, NtpTime) {
   Clock* clock = Clock::GetRealTimeClock();
@@ -31,4 +31,4 @@ TEST(ClockTest, NtpTime) {
   EXPECT_GE(milliseconds_upper_bound + 1, ntp_time.ToMs());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

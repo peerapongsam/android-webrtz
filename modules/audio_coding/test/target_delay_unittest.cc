@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TargetDelayTest : public ::testing::Test {
  protected:
@@ -255,4 +255,4 @@ TEST_F(TargetDelayTest, MAYBE_TargetDelayBufferMinMax) {
   TargetDelayBufferMinMax();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/rtpfb.h"
 #include "modules/rtp_rtcp/source/rtcp_packet/sender_report.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<uint32_t> ParseRtcpPacketSenderSsrc(
     rtc::ArrayView<const uint8_t> packet) {
@@ -52,4 +52,4 @@ rtc::Optional<uint32_t> ParseRtcpPacketSenderSsrc(
   return rtc::nullopt;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

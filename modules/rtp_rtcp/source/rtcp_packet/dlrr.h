@@ -16,7 +16,7 @@
 
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 struct ReceiveTimeInfo {
   // RFC 3611 4.5
@@ -65,5 +65,5 @@ class Dlrr {
   std::vector<ReceiveTimeInfo> sub_blocks_;
 };
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_DLRR_H_

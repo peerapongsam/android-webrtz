@@ -13,19 +13,19 @@
 
 #include "system_wrappers/include/event_wrapper.h"
 
-class NullEventFactory : public webrtc::EventFactory {
+class NullEventFactory : public webrtz::EventFactory {
  public:
   virtual ~NullEventFactory() {}
 
-  webrtc::EventWrapper* CreateEvent() override { return new NullEvent; }
+  webrtz::EventWrapper* CreateEvent() override { return new NullEvent; }
  private:
   // Private class to avoid more dependencies on it in tests.
-  class NullEvent : public webrtc::EventWrapper {
+  class NullEvent : public webrtz::EventWrapper {
    public:
     ~NullEvent() override {}
     bool Set() override { return true; }
-    webrtc::EventTypeWrapper Wait(unsigned long max_time) override {  // NOLINT
-      return webrtc::kEventTimeout;
+    webrtz::EventTypeWrapper Wait(unsigned long max_time) override {  // NOLINT
+      return webrtz::kEventTimeout;
     }
   };
 };

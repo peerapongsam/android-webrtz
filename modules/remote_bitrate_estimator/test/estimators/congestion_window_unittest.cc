@@ -13,7 +13,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 namespace {
@@ -60,4 +60,4 @@ TEST(CongestionWindowTest, CalculateCongestionWindow) {
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

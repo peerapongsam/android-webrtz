@@ -13,7 +13,7 @@
 #include <algorithm>
 #include <numeric>
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -82,4 +82,4 @@ void ErlEstimator::Update(rtc::ArrayView<const float> render_spectrum,
                          : std::min(kMaxErl, 2.f * erl_time_domain_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

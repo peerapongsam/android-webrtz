@@ -16,7 +16,7 @@
 #include "modules/audio_processing/aec/aec_core.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 typedef void (*WebRtcAecFilterFar)(
     int num_partitions,
@@ -75,6 +75,6 @@ extern WebRtcAecStoreAsComplex WebRtcAec_StoreAsComplex;
 typedef void (*WebRtcAecWindowData)(float* x_windowed, const float* x);
 extern WebRtcAecWindowData WebRtcAec_WindowData;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_AEC_CORE_OPTIMIZED_METHODS_H_

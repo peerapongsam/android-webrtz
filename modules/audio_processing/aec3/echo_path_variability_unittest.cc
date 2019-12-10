@@ -11,7 +11,7 @@
 #include "modules/audio_processing/aec3/echo_path_variability.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(EchoPathVariability, CorrectBehavior) {
   // Test correct passing and reporting of the gain change information.
@@ -46,4 +46,4 @@ TEST(EchoPathVariability, CorrectBehavior) {
   EXPECT_FALSE(v.clock_drift);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

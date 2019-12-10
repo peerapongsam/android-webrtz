@@ -29,7 +29,7 @@
 #include "media/base/videocommon.h"
 #include "rtc_base/platform_file.h"
 
-namespace webrtc {
+namespace webrtz {
 class AudioDeviceModule;
 class AudioMixer;
 class AudioProcessing;
@@ -39,7 +39,7 @@ class Call;
 namespace cricket {
 
 struct RtpCapabilities {
-  std::vector<webrtc::RtpExtension> header_extensions;
+  std::vector<webrtz::RtpExtension> header_extensions;
 };
 
 // MediaEngineInterface is an abstraction of a media engine which can be
@@ -54,17 +54,17 @@ class MediaEngineInterface {
   // Starts the engine.
   virtual bool Init() = 0;
   // TODO(solenberg): Remove once VoE API refactoring is done.
-  virtual rtc::scoped_refptr<webrtc::AudioState> GetAudioState() const = 0;
+  virtual rtc::scoped_refptr<webrtz::AudioState> GetAudioState() const = 0;
 
   // MediaChannel creation
   // Creates a voice media channel. Returns NULL on failure.
-  virtual VoiceMediaChannel* CreateChannel(webrtc::Call* call,
+  virtual VoiceMediaChannel* CreateChannel(webrtz::Call* call,
                                            const MediaConfig& config,
                                            const AudioOptions& options) = 0;
   // Creates a video media channel, paired with the specified voice channel.
   // Returns NULL on failure.
   virtual VideoMediaChannel* CreateVideoChannel(
-      webrtc::Call* call,
+      webrtz::Call* call,
       const MediaConfig& config,
       const VideoOptions& options) = 0;
 
@@ -102,15 +102,15 @@ class CompositeMediaEngine : public MediaEngineInterface {
     return true;
   }
 
-  virtual rtc::scoped_refptr<webrtc::AudioState> GetAudioState() const {
+  virtual rtc::scoped_refptr<webrtz::AudioState> GetAudioState() const {
     return voice().GetAudioState();
   }
-  virtual VoiceMediaChannel* CreateChannel(webrtc::Call* call,
+  virtual VoiceMediaChannel* CreateChannel(webrtz::Call* call,
                                            const MediaConfig& config,
                                            const AudioOptions& options) {
     return voice().CreateChannel(call, config, options);
   }
-  virtual VideoMediaChannel* CreateVideoChannel(webrtc::Call* call,
+  virtual VideoMediaChannel* CreateVideoChannel(webrtz::Call* call,
                                                 const MediaConfig& config,
                                                 const VideoOptions& options) {
     return video().CreateChannel(call, config, options);
@@ -155,8 +155,8 @@ class DataEngineInterface {
   virtual const std::vector<DataCodec>& data_codecs() = 0;
 };
 
-webrtc::RtpParameters CreateRtpParametersWithOneEncoding();
-webrtc::RtpParameters CreateRtpParametersWithEncodings(StreamParams sp);
+webrtz::RtpParameters CreateRtpParametersWithOneEncoding();
+webrtz::RtpParameters CreateRtpParametersWithEncodings(StreamParams sp);
 
 }  // namespace cricket
 

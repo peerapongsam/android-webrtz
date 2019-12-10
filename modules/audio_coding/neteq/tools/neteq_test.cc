@@ -14,7 +14,7 @@
 
 #include "api/audio_codecs/builtin_audio_decoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 void DefaultNetEqTestErrorCallback::OnInsertPacketError(
@@ -137,4 +137,4 @@ void NetEqTest::RegisterExternalDecoders(const ExtDecoderMap& codecs) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

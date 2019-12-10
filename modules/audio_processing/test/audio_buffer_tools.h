@@ -16,7 +16,7 @@
 #include "modules/audio_processing/audio_buffer.h"
 #include "modules/audio_processing/include/audio_processing.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Copies a vector into an audiobuffer.
@@ -30,6 +30,6 @@ void ExtractVectorFromAudioBuffer(const StreamConfig& stream_config,
                                   std::vector<float>* destination);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_AUDIO_BUFFER_TOOLS_H_

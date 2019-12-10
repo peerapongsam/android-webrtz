@@ -12,7 +12,7 @@
 #include "rtc_base/bitbuffer.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #define RETURN_FALSE_IF_ERROR(x) \
   if (!(x)) {                    \
@@ -269,4 +269,4 @@ bool GetQp(const uint8_t* buf, size_t length, int* qp) {
 
 }  // namespace vp9
 
-}  // namespace webrtc
+}  // namespace webrtz

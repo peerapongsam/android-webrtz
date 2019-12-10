@@ -25,7 +25,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class DecoderDatabase {
  public:
@@ -252,5 +252,5 @@ class DecoderDatabase {
   RTC_DISALLOW_COPY_AND_ASSIGN(DecoderDatabase);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_DECODER_DATABASE_H_

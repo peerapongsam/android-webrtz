@@ -16,7 +16,7 @@
 #include "call/flexfec_receive_stream.h"
 #include "call/rtp_packet_sink_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FlexfecReceiver;
 class ProcessThread;
@@ -59,6 +59,6 @@ class FlexfecReceiveStreamImpl : public FlexfecReceiveStream {
   std::unique_ptr<RtpStreamReceiverInterface> rtp_stream_receiver_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_FLEXFEC_RECEIVE_STREAM_IMPL_H_

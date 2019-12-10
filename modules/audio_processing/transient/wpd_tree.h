@@ -15,7 +15,7 @@
 
 #include "modules/audio_processing/transient/wpd_node.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Tree of a Wavelet Packet Decomposition (WPD).
 //
@@ -87,6 +87,6 @@ class WPDTree {
   std::unique_ptr<std::unique_ptr<WPDNode>[]> nodes_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_WPD_TREE_H_

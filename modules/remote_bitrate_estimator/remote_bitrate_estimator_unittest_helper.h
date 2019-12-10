@@ -22,7 +22,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 class TestBitrateObserver : public RemoteBitrateObserver {
@@ -216,6 +216,6 @@ class RemoteBitrateEstimatorTest : public ::testing::Test {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(RemoteBitrateEstimatorTest);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_REMOTE_BITRATE_ESTIMATOR_UNITTEST_HELPER_H_

@@ -18,7 +18,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace audio_decoder_factory_template_impl {
 
@@ -165,6 +165,6 @@ rtc::scoped_refptr<AudioDecoderFactory> CreateAudioDecoderFactory() {
           audio_decoder_factory_template_impl::AudioDecoderFactoryT<Ts...>>());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_AUDIO_DECODER_FACTORY_TEMPLATE_H_

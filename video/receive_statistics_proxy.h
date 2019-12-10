@@ -32,7 +32,7 @@
 #include "video/stats_counter.h"
 #include "video/video_stream_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class ViECodec;
@@ -84,7 +84,7 @@ class ReceiveStatisticsProxy : public VCMReceiveStatisticsCallback,
   void OnTimingFrameInfoUpdated(const TimingFrameInfo& info) override;
 
   // Overrides RtcpStatisticsCallback.
-  void StatisticsUpdated(const webrtc::RtcpStatistics& statistics,
+  void StatisticsUpdated(const webrtz::RtcpStatistics& statistics,
                          uint32_t ssrc) override;
   void CNameChanged(const char* cname, uint32_t ssrc) override;
 
@@ -93,7 +93,7 @@ class ReceiveStatisticsProxy : public VCMReceiveStatisticsCallback,
       uint32_t ssrc,
       const RtcpPacketTypeCounter& packet_counter) override;
   // Overrides StreamDataCountersCallback.
-  void DataCountersUpdated(const webrtc::StreamDataCounters& counters,
+  void DataCountersUpdated(const webrtz::StreamDataCounters& counters,
                            uint32_t ssrc) override;
 
   // Implements CallStatsObserver.
@@ -202,5 +202,5 @@ class ReceiveStatisticsProxy : public VCMReceiveStatisticsCallback,
   rtc::ThreadChecker main_thread_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // VIDEO_RECEIVE_STATISTICS_PROXY_H_

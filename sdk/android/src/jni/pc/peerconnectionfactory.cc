@@ -40,7 +40,7 @@
 // clients should be able to provide their own implementation.
 #include "system_wrappers/include/field_trial_default.h"  // nogncheck
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -101,7 +101,7 @@ void PeerConnectionFactorySignalingThreadReady() {
 
 jobject NativeToJavaPeerConnectionFactory(
     JNIEnv* jni,
-    rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> pcf,
+    rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> pcf,
     std::unique_ptr<rtc::Thread> network_thread,
     std::unique_ptr<rtc::Thread> worker_thread,
     std::unique_ptr<rtc::Thread> signaling_thread,
@@ -527,4 +527,4 @@ static jlong JNI_PeerConnectionFactory_GetNativePeerConnectionFactory(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

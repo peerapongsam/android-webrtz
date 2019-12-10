@@ -13,7 +13,7 @@
 
 #include "modules/video_capture/device_info_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 
 // Provides video capture device information using the Media Foundation API.
@@ -38,6 +38,6 @@ class DeviceInfoMF : public DeviceInfoImpl {
 };
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CAPTURE_WINDOWS_DEVICE_INFO_MF_H_

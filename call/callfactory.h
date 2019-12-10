@@ -13,7 +13,7 @@
 
 #include "api/call/callfactoryinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class CallFactory : public CallFactoryInterface {
   ~CallFactory() override {}
@@ -21,6 +21,6 @@ class CallFactory : public CallFactoryInterface {
   Call* CreateCall(const CallConfig& config) override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_CALLFACTORY_H_

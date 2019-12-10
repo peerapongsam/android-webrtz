@@ -20,7 +20,7 @@
 #include "modules/audio_processing/echo_detector/normalized_covariance_estimator.h"
 #include "modules/audio_processing/include/audio_processing.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 class AudioBuffer;
@@ -85,6 +85,6 @@ class ResidualEchoDetector : public EchoDetector {
   int log_counter_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_RESIDUAL_ECHO_DETECTOR_H_

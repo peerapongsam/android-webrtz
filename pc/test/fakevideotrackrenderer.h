@@ -14,7 +14,7 @@
 #include "api/mediastreaminterface.h"
 #include "media/base/fakevideorenderer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FakeVideoTrackRenderer : public cricket::FakeVideoRenderer {
  public:
@@ -28,6 +28,6 @@ class FakeVideoTrackRenderer : public cricket::FakeVideoRenderer {
   rtc::scoped_refptr<VideoTrackInterface> video_track_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_FAKEVIDEOTRACKRENDERER_H_

@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RTCTestStats1 : public RTCStats {
  public:
@@ -145,4 +145,4 @@ TEST(RTCStatsReport, TakeMembersFrom) {
   EXPECT_EQ(i, static_cast<int64_t>(6));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

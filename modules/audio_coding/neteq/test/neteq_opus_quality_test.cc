@@ -15,7 +15,7 @@
 
 using testing::InitGoogleTest;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -171,4 +171,4 @@ TEST_F(NetEqOpusQualityTest, Test) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

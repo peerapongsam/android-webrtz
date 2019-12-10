@@ -28,7 +28,7 @@
 #include "rtc_base/virtualsocketserver.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using BundlePolicy = PeerConnectionInterface::BundlePolicy;
 using RTCConfiguration = PeerConnectionInterface::RTCConfiguration;
@@ -841,4 +841,4 @@ TEST_F(PeerConnectionBundleTestUnifiedPlan,
   EXPECT_TRUE(bundle_group->content_names().empty());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

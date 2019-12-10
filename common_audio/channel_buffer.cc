@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 IFChannelBuffer::IFChannelBuffer(size_t num_frames,
                                  size_t num_channels,
@@ -76,4 +76,4 @@ void IFChannelBuffer::RefreshI() const {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

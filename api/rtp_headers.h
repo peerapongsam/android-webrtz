@@ -28,7 +28,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Class to represent the value of RTP header extensions that are
 // variable-length strings (e.g., RtpStreamId and RtpMid).
@@ -168,6 +168,6 @@ struct RtpKeepAliveConfig final {
   bool operator!=(const RtpKeepAliveConfig& o) const { return !(*this == o); }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_RTP_HEADERS_H_

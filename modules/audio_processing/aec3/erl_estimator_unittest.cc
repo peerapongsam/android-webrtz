@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -69,4 +69,4 @@ TEST(ErlEstimator, Estimates) {
   VerifyErl(estimator.Erl(), estimator.ErlTimeDomain(), 1000.f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "rtc_base/numerics/percentile_filter.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class PercentileFilterTest : public ::testing::TestWithParam<float> {
  public:
@@ -138,4 +138,4 @@ TEST_P(PercentileFilterTest, InsertAndEraseTenValuesInRandomOrder) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

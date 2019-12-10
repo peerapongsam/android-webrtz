@@ -16,7 +16,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "common_video/include/video_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Struct describing the whole bundle of multiple frames of an image.
 // This struct is expected to be the set in the beginning of a picture's
@@ -101,6 +101,6 @@ class MultiplexEncodedImagePacker {
   static MultiplexImage Unpack(const EncodedImage& combined_image);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_MULTIPLEX_INCLUDE_MULTIPLEX_ENCODED_IMAGE_PACKER_H_

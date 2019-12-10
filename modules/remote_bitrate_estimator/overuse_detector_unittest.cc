@@ -24,7 +24,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 const double kRtpTimestampToMs = 1.0 / 90.0;
@@ -776,4 +776,4 @@ TEST_F(OveruseDetectorExperimentTest, DoesntAdaptToSpikes) {
   EXPECT_TRUE(overuse_detected);
 }
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

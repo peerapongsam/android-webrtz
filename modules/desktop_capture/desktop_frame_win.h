@@ -19,7 +19,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // DesktopFrame implementation used by screen and window captures on Windows.
 // Frame data is stored in a GDI bitmap.
@@ -45,7 +45,7 @@ class DesktopFrameWin : public DesktopFrame {
   RTC_DISALLOW_COPY_AND_ASSIGN(DesktopFrameWin);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_FRAME_WIN_H_
 

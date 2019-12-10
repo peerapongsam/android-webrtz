@@ -21,7 +21,7 @@
 // enables).
 #define LEGACY_BITEXACT
 
-namespace webrtc {
+namespace webrtz {
 
 DtmfBuffer::DtmfBuffer(int fs_hz) {
   SetSampleRate(fs_hz);
@@ -245,4 +245,4 @@ bool DtmfBuffer::CompareEvents(const DtmfEvent& a, const DtmfEvent& b) {
   // Take wrap-around into account.
   return (static_cast<uint32_t>(b.timestamp - a.timestamp) < 0xFFFFFFFF / 2);
 }
-}  // namespace webrtc
+}  // namespace webrtz

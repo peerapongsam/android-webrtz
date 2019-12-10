@@ -13,7 +13,7 @@
 
 #include <stdint.h>
 
-namespace webrtc {
+namespace webrtz {
 
 // Size (in pixels) of each square block used for diffing. This must be a
 // multiple of sizeof(uint64)/8.
@@ -39,6 +39,6 @@ bool BlockDifference(const uint8_t* image1,
                      const uint8_t* image2,
                      int stride);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DIFFER_BLOCK_H_

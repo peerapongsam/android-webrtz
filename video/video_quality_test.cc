@@ -63,18 +63,18 @@ constexpr uint32_t kThumbnailRtxSsrcStart = 0xF0000;
 constexpr int kDefaultMaxQp = cricket::WebRtcVideoChannel::kDefaultQpMax;
 
 class VideoStreamFactory
-    : public webrtc::VideoEncoderConfig::VideoStreamFactoryInterface {
+    : public webrtz::VideoEncoderConfig::VideoStreamFactoryInterface {
  public:
-  explicit VideoStreamFactory(const std::vector<webrtc::VideoStream>& streams)
+  explicit VideoStreamFactory(const std::vector<webrtz::VideoStream>& streams)
       : streams_(streams) {}
 
  private:
-  std::vector<webrtc::VideoStream> CreateEncoderStreams(
+  std::vector<webrtz::VideoStream> CreateEncoderStreams(
       int width,
       int height,
-      const webrtc::VideoEncoderConfig& encoder_config) override {
+      const webrtz::VideoEncoderConfig& encoder_config) override {
     // The highest layer must match the incoming resolution.
-    std::vector<webrtc::VideoStream> streams = streams_;
+    std::vector<webrtz::VideoStream> streams = streams_;
     streams[streams_.size() - 1].height = height;
     streams[streams_.size() - 1].width = width;
 
@@ -82,16 +82,16 @@ class VideoStreamFactory
     return streams;
   }
 
-  std::vector<webrtc::VideoStream> streams_;
+  std::vector<webrtz::VideoStream> streams_;
 };
 
 bool IsFlexfec(int payload_type) {
-  return payload_type == webrtc::VideoQualityTest::kFlexfecPayloadType;
+  return payload_type == webrtz::VideoQualityTest::kFlexfecPayloadType;
 }
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoAnalyzer : public PacketReceiver,
                       public Transport,
@@ -1082,9 +1082,9 @@ VideoQualityTest::VideoQualityTest()
              payload_type_map_.end());
   RTC_DCHECK(payload_type_map_.find(kPayloadTypeVP9) ==
              payload_type_map_.end());
-  payload_type_map_[kPayloadTypeH264] = webrtc::MediaType::VIDEO;
-  payload_type_map_[kPayloadTypeVP8] = webrtc::MediaType::VIDEO;
-  payload_type_map_[kPayloadTypeVP9] = webrtc::MediaType::VIDEO;
+  payload_type_map_[kPayloadTypeH264] = webrtz::MediaType::VIDEO;
+  payload_type_map_[kPayloadTypeVP8] = webrtz::MediaType::VIDEO;
+  payload_type_map_[kPayloadTypeVP9] = webrtz::MediaType::VIDEO;
 }
 
 VideoQualityTest::VideoQualityTest(
@@ -1263,13 +1263,13 @@ void VideoQualityTest::FillScalabilitySettings(
     const std::vector<std::string>& sl_descriptors) {
   if (params->ss[video_idx].streams.empty() &&
       params->ss[video_idx].infer_streams) {
-    webrtc::VideoEncoderConfig encoder_config;
+    webrtz::VideoEncoderConfig encoder_config;
     encoder_config.codec_type =
         PayloadStringToCodecType(params->video[video_idx].codec);
     encoder_config.content_type =
         params->screenshare[video_idx].enabled
-            ? webrtc::VideoEncoderConfig::ContentType::kScreen
-            : webrtc::VideoEncoderConfig::ContentType::kRealtimeVideo;
+            ? webrtz::VideoEncoderConfig::ContentType::kScreen
+            : webrtz::VideoEncoderConfig::ContentType::kRealtimeVideo;
     encoder_config.max_bitrate_bps = params->video[video_idx].max_bitrate_bps;
     encoder_config.min_transmit_bitrate_bps =
         params->video[video_idx].min_transmit_bps;
@@ -2061,7 +2061,7 @@ void VideoQualityTest::SetupAudio(Transport* transport,
   audio_send_config_.rtp.extensions.clear();
   if (params_.call.send_side_bwe) {
     audio_send_config_.rtp.extensions.push_back(
-        webrtc::RtpExtension(webrtc::RtpExtension::kTransportSequenceNumberUri,
+        webrtz::RtpExtension(webrtz::RtpExtension::kTransportSequenceNumberUri,
                              test::kTransportSequenceNumberExtensionId));
     audio_send_config_.min_bitrate_bps = kOpusMinBitrateBps;
     audio_send_config_.max_bitrate_bps = kOpusBitrateFbBps;
@@ -2271,4 +2271,4 @@ void VideoQualityTest::StartEncodedFrameLogs(VideoReceiveStream* stream) {
                                         100000000);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

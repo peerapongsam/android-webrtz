@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "modules/desktop_capture/desktop_capture_options.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // WindowCapturer implementation that uses a screen capturer to capture the
 // whole screen and crops the video frame to the window area when the captured
@@ -73,7 +73,7 @@ class CroppingWindowCapturer : public DesktopCapturer,
   WindowId excluded_window_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_CROPPING_WINDOW_CAPTURER_H_
 

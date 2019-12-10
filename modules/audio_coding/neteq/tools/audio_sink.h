@@ -15,7 +15,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Interface class for an object receiving raw output audio from test
@@ -67,5 +67,5 @@ class VoidAudioSink : public AudioSink {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_AUDIO_SINK_H_

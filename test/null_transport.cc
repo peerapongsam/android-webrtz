@@ -9,7 +9,7 @@
  */
 #include "test/null_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 bool NullTransport::SendRtp(const uint8_t* packet,
@@ -23,4 +23,4 @@ bool NullTransport::SendRtcp(const uint8_t* packet, size_t length) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

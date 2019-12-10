@@ -17,17 +17,17 @@
 
 #include "sdk/objc/Framework/Native/api/video_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoRendererAdapter
-    : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+    : public rtc::VideoSinkInterface<webrtz::VideoFrame> {
  public:
   VideoRendererAdapter(RTCVideoRendererAdapter* adapter) {
     adapter_ = adapter;
     size_ = CGSizeZero;
   }
 
-  void OnFrame(const webrtc::VideoFrame& nativeVideoFrame) override {
+  void OnFrame(const webrtz::VideoFrame& nativeVideoFrame) override {
     RTCVideoFrame* videoFrame = NativeToObjCVideoFrame(nativeVideoFrame);
 
     CGSize current_size = (videoFrame.rotation % 180 == 0)
@@ -48,7 +48,7 @@ class VideoRendererAdapter
 }
 
 @implementation RTCVideoRendererAdapter {
-  std::unique_ptr<webrtc::VideoRendererAdapter> _adapter;
+  std::unique_ptr<webrtz::VideoRendererAdapter> _adapter;
 }
 
 @synthesize videoRenderer = _videoRenderer;
@@ -57,12 +57,12 @@ class VideoRendererAdapter
   NSParameterAssert(videoRenderer);
   if (self = [super init]) {
     _videoRenderer = videoRenderer;
-    _adapter.reset(new webrtc::VideoRendererAdapter(self));
+    _adapter.reset(new webrtz::VideoRendererAdapter(self));
   }
   return self;
 }
 
-- (rtc::VideoSinkInterface<webrtc::VideoFrame> *)nativeVideoRenderer {
+- (rtc::VideoSinkInterface<webrtz::VideoFrame> *)nativeVideoRenderer {
   return _adapter.get();
 }
 

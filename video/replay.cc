@@ -62,7 +62,7 @@ bool ValidateInputFilenameNotEmpty(const std::string& string) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 namespace flags {
 
 // TODO(pbos): Multiple receivers.
@@ -221,7 +221,7 @@ void RtpReplay() {
   FileRenderPassthrough file_passthrough(flags::OutBase(),
                                          playback_video.get());
 
-  webrtc::RtcEventLogNullImpl event_log;
+  webrtz::RtcEventLogNullImpl event_log;
   std::unique_ptr<Call> call(Call::Create(Call::Config(&event_log)));
 
   test::NullTransport transport;
@@ -306,7 +306,7 @@ void RtpReplay() {
 
     ++num_packets;
     switch (call->Receiver()->DeliverPacket(
-        webrtc::MediaType::VIDEO,
+        webrtz::MediaType::VIDEO,
         rtc::CopyOnWriteBuffer(packet.data, packet.length), PacketTime())) {
       case PacketReceiver::DELIVERY_OK:
         break;
@@ -344,32 +344,32 @@ void RtpReplay() {
 
   delete decoder.decoder;
 }
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
   if (rtc::FlagList::SetFlagsFromCommandLine(&argc, argv, true)) {
     return 1;
   }
-  if (webrtc::flags::FLAG_help) {
+  if (webrtz::flags::FLAG_help) {
     rtc::FlagList::Print(nullptr, false);
     return 0;
   }
 
-  RTC_CHECK(ValidatePayloadType(webrtc::flags::FLAG_media_payload_type));
-  RTC_CHECK(ValidatePayloadType(webrtc::flags::FLAG_media_payload_type_rtx));
-  RTC_CHECK(ValidateOptionalPayloadType(webrtc::flags::FLAG_red_payload_type));
+  RTC_CHECK(ValidatePayloadType(webrtz::flags::FLAG_media_payload_type));
+  RTC_CHECK(ValidatePayloadType(webrtz::flags::FLAG_media_payload_type_rtx));
+  RTC_CHECK(ValidateOptionalPayloadType(webrtz::flags::FLAG_red_payload_type));
   RTC_CHECK(
-      ValidateOptionalPayloadType(webrtc::flags::FLAG_red_payload_type_rtx));
+      ValidateOptionalPayloadType(webrtz::flags::FLAG_red_payload_type_rtx));
   RTC_CHECK(
-      ValidateOptionalPayloadType(webrtc::flags::FLAG_ulpfec_payload_type));
-  RTC_CHECK(ValidateSsrc(webrtc::flags::FLAG_ssrc));
-  RTC_CHECK(ValidateSsrc(webrtc::flags::FLAG_ssrc_rtx));
-  RTC_CHECK(ValidateRtpHeaderExtensionId(webrtc::flags::FLAG_abs_send_time_id));
+      ValidateOptionalPayloadType(webrtz::flags::FLAG_ulpfec_payload_type));
+  RTC_CHECK(ValidateSsrc(webrtz::flags::FLAG_ssrc));
+  RTC_CHECK(ValidateSsrc(webrtz::flags::FLAG_ssrc_rtx));
+  RTC_CHECK(ValidateRtpHeaderExtensionId(webrtz::flags::FLAG_abs_send_time_id));
   RTC_CHECK(ValidateRtpHeaderExtensionId(
-      webrtc::flags::FLAG_transmission_offset_id));
-  RTC_CHECK(ValidateInputFilenameNotEmpty(webrtc::flags::FLAG_input_file));
+      webrtz::flags::FLAG_transmission_offset_id));
+  RTC_CHECK(ValidateInputFilenameNotEmpty(webrtz::flags::FLAG_input_file));
 
-  webrtc::test::RunTest(webrtc::RtpReplay);
+  webrtz::test::RunTest(webrtz::RtpReplay);
   return 0;
 }

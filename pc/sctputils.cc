@@ -14,7 +14,7 @@
 #include "rtc_base/copyonwritebuffer.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Format defined at
 // http://tools.ietf.org/html/draft-ietf-rtcweb-data-protocol-01#section
@@ -186,4 +186,4 @@ void WriteDataChannelOpenAckMessage(rtc::CopyOnWriteBuffer* payload) {
   payload->SetData(&data, sizeof(data));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

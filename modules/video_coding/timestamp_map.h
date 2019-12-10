@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct VCMFrameInformation;
 
@@ -43,6 +43,6 @@ class VCMTimestampMap {
   size_t next_pop_idx_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_TIMESTAMP_MAP_H_

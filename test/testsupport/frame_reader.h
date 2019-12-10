@@ -18,7 +18,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 class I420Buffer;
 namespace test {
 
@@ -70,6 +70,6 @@ class YuvFrameReaderImpl : public FrameReader {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_TESTSUPPORT_FRAME_READER_H_

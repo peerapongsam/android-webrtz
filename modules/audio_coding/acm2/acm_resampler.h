@@ -14,7 +14,7 @@
 #include "common_audio/resampler/include/push_resampler.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace acm2 {
 
 class ACMResampler {
@@ -34,6 +34,6 @@ class ACMResampler {
 };
 
 }  // namespace acm2
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_ACM2_ACM_RESAMPLER_H_

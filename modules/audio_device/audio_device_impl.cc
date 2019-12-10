@@ -66,7 +66,7 @@
     }                            \
   }
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 rtc::scoped_refptr<AudioDeviceModule> AudioDeviceModule::Create(
@@ -907,4 +907,4 @@ AudioDeviceModule::AudioLayer AudioDeviceModuleImpl::PlatformAudioLayer()
   return audio_layer_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

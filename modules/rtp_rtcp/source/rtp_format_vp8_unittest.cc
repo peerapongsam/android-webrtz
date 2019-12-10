@@ -21,7 +21,7 @@
   static_assert(expected_size == sizeof(array) / sizeof(array[0]), \
                 "check array size");
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::ElementsAreArray;
@@ -482,4 +482,4 @@ TEST_F(RtpDepacketizerVp8Test, TestEmptyPayload) {
   RtpDepacketizer::ParsedPayload payload;
   EXPECT_FALSE(depacketizer_->Parse(&payload, garbage_ptr, 0));
 }
-}  // namespace webrtc
+}  // namespace webrtz

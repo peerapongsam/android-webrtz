@@ -12,7 +12,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -235,4 +235,4 @@ TEST_F(AudioSendStreamCallTest, SendDtmf) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

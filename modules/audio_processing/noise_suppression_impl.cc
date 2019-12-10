@@ -28,7 +28,7 @@ typedef NsHandle NsState;
 typedef NsxHandle NsState;
 #endif
 
-namespace webrtc {
+namespace webrtz {
 class NoiseSuppressionImpl::Suppressor {
  public:
   explicit Suppressor(int sample_rate_hz) {
@@ -210,4 +210,4 @@ size_t NoiseSuppressionImpl::num_noise_bins() {
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

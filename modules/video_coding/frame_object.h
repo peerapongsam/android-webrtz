@@ -16,7 +16,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 class PacketBuffer;
@@ -58,6 +58,6 @@ class RtpFrameObject : public EncodedFrame {
 };
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_FRAME_OBJECT_H_

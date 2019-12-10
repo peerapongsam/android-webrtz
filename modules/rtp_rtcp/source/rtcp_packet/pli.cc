@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Pli::kFeedbackMessageType;
 // RFC 4585: Feedback format.
@@ -70,4 +70,4 @@ bool Pli::Create(uint8_t* packet,
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

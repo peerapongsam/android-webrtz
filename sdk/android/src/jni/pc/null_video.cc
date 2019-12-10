@@ -10,7 +10,7 @@
 
 #include "sdk/android/src/jni/pc/video.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 VideoEncoderFactory* CreateVideoEncoderFactory(
@@ -74,4 +74,4 @@ VideoDecoderFactory* WrapLegacyVideoDecoderFactory(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

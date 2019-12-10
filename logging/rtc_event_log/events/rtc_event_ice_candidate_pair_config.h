@@ -17,7 +17,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(qingsi): Change the names of candidate types to "host", "srflx", "prflx"
 // and "relay" after the naming is spec-compliant in the signaling part
@@ -87,6 +87,6 @@ class RtcEventIceCandidatePairConfig final : public RtcEvent {
   const IceCandidatePairDescription candidate_pair_desc_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_ICE_CANDIDATE_PAIR_CONFIG_H_

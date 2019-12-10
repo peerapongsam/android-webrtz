@@ -11,7 +11,7 @@
 #include "api/ortc/sessiondescription.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SessionDescriptionTest : public testing::Test {};
 

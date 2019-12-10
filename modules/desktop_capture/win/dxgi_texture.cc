@@ -20,7 +20,7 @@
 
 using Microsoft::WRL::ComPtr;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -78,4 +78,4 @@ DXGI_MAPPED_RECT* DxgiTexture::rect() {
   return &rect_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/neteq/post_decode_vad.h"
 
-namespace webrtc {
+namespace webrtz {
 
 PostDecodeVad::~PostDecodeVad() {
   if (vad_instance_)
@@ -86,4 +86,4 @@ void PostDecodeVad::Update(int16_t* signal, size_t length,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

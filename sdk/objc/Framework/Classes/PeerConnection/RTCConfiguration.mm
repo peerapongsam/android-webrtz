@@ -48,16 +48,16 @@
 
 - (instancetype)init {
   // Copy defaults.
-  webrtc::PeerConnectionInterface::RTCConfiguration config(
-    webrtc::PeerConnectionInterface::RTCConfigurationType::kAggressive);
+  webrtz::PeerConnectionInterface::RTCConfiguration config(
+    webrtz::PeerConnectionInterface::RTCConfigurationType::kAggressive);
   return [self initWithNativeConfiguration:config];
 }
 
 - (instancetype)initWithNativeConfiguration:
-    (const webrtc::PeerConnectionInterface::RTCConfiguration &)config {
+    (const webrtz::PeerConnectionInterface::RTCConfiguration &)config {
   if (self = [super init]) {
     NSMutableArray *iceServers = [NSMutableArray array];
-    for (const webrtc::PeerConnectionInterface::IceServer& server : config.servers) {
+    for (const webrtz::PeerConnectionInterface::IceServer& server : config.servers) {
       RTCIceServer *iceServer = [[RTCIceServer alloc] initWithNativeServer:server];
       [iceServers addObject:iceServer];
     }
@@ -72,7 +72,7 @@
         config.tcp_candidate_policy];
     _candidateNetworkPolicy = [[self class]
         candidateNetworkPolicyForNativePolicy:config.candidate_network_policy];
-    webrtc::PeerConnectionInterface::ContinualGatheringPolicy nativePolicy =
+    webrtz::PeerConnectionInterface::ContinualGatheringPolicy nativePolicy =
     config.continual_gathering_policy;
     _continualGatheringPolicy =
         [[self class] continualGatheringPolicyForNativePolicy:nativePolicy];
@@ -133,11 +133,11 @@
 
 #pragma mark - Private
 
-- (webrtc::PeerConnectionInterface::RTCConfiguration *)
+- (webrtz::PeerConnectionInterface::RTCConfiguration *)
     createNativeConfiguration {
-  std::unique_ptr<webrtc::PeerConnectionInterface::RTCConfiguration>
-      nativeConfig(new webrtc::PeerConnectionInterface::RTCConfiguration(
-          webrtc::PeerConnectionInterface::RTCConfigurationType::kAggressive));
+  std::unique_ptr<webrtz::PeerConnectionInterface::RTCConfiguration>
+      nativeConfig(new webrtz::PeerConnectionInterface::RTCConfiguration(
+          webrtz::PeerConnectionInterface::RTCConfigurationType::kAggressive));
 
   for (RTCIceServer *iceServer in _iceServers) {
     nativeConfig->servers.push_back(iceServer.nativeServer);
@@ -197,30 +197,30 @@
   return nativeConfig.release();
 }
 
-+ (webrtc::PeerConnectionInterface::IceTransportsType)
++ (webrtz::PeerConnectionInterface::IceTransportsType)
     nativeTransportsTypeForTransportPolicy:(RTCIceTransportPolicy)policy {
   switch (policy) {
     case RTCIceTransportPolicyNone:
-      return webrtc::PeerConnectionInterface::kNone;
+      return webrtz::PeerConnectionInterface::kNone;
     case RTCIceTransportPolicyRelay:
-      return webrtc::PeerConnectionInterface::kRelay;
+      return webrtz::PeerConnectionInterface::kRelay;
     case RTCIceTransportPolicyNoHost:
-      return webrtc::PeerConnectionInterface::kNoHost;
+      return webrtz::PeerConnectionInterface::kNoHost;
     case RTCIceTransportPolicyAll:
-      return webrtc::PeerConnectionInterface::kAll;
+      return webrtz::PeerConnectionInterface::kAll;
   }
 }
 
 + (RTCIceTransportPolicy)transportPolicyForTransportsType:
-    (webrtc::PeerConnectionInterface::IceTransportsType)nativeType {
+    (webrtz::PeerConnectionInterface::IceTransportsType)nativeType {
   switch (nativeType) {
-    case webrtc::PeerConnectionInterface::kNone:
+    case webrtz::PeerConnectionInterface::kNone:
       return RTCIceTransportPolicyNone;
-    case webrtc::PeerConnectionInterface::kRelay:
+    case webrtz::PeerConnectionInterface::kRelay:
       return RTCIceTransportPolicyRelay;
-    case webrtc::PeerConnectionInterface::kNoHost:
+    case webrtz::PeerConnectionInterface::kNoHost:
       return RTCIceTransportPolicyNoHost;
-    case webrtc::PeerConnectionInterface::kAll:
+    case webrtz::PeerConnectionInterface::kAll:
       return RTCIceTransportPolicyAll;
   }
 }
@@ -238,26 +238,26 @@
   }
 }
 
-+ (webrtc::PeerConnectionInterface::BundlePolicy)nativeBundlePolicyForPolicy:
++ (webrtz::PeerConnectionInterface::BundlePolicy)nativeBundlePolicyForPolicy:
     (RTCBundlePolicy)policy {
   switch (policy) {
     case RTCBundlePolicyBalanced:
-      return webrtc::PeerConnectionInterface::kBundlePolicyBalanced;
+      return webrtz::PeerConnectionInterface::kBundlePolicyBalanced;
     case RTCBundlePolicyMaxCompat:
-      return webrtc::PeerConnectionInterface::kBundlePolicyMaxCompat;
+      return webrtz::PeerConnectionInterface::kBundlePolicyMaxCompat;
     case RTCBundlePolicyMaxBundle:
-      return webrtc::PeerConnectionInterface::kBundlePolicyMaxBundle;
+      return webrtz::PeerConnectionInterface::kBundlePolicyMaxBundle;
   }
 }
 
 + (RTCBundlePolicy)bundlePolicyForNativePolicy:
-    (webrtc::PeerConnectionInterface::BundlePolicy)nativePolicy {
+    (webrtz::PeerConnectionInterface::BundlePolicy)nativePolicy {
   switch (nativePolicy) {
-    case webrtc::PeerConnectionInterface::kBundlePolicyBalanced:
+    case webrtz::PeerConnectionInterface::kBundlePolicyBalanced:
       return RTCBundlePolicyBalanced;
-    case webrtc::PeerConnectionInterface::kBundlePolicyMaxCompat:
+    case webrtz::PeerConnectionInterface::kBundlePolicyMaxCompat:
       return RTCBundlePolicyMaxCompat;
-    case webrtc::PeerConnectionInterface::kBundlePolicyMaxBundle:
+    case webrtz::PeerConnectionInterface::kBundlePolicyMaxBundle:
       return RTCBundlePolicyMaxBundle;
   }
 }
@@ -273,22 +273,22 @@
   }
 }
 
-+ (webrtc::PeerConnectionInterface::RtcpMuxPolicy)nativeRtcpMuxPolicyForPolicy:
++ (webrtz::PeerConnectionInterface::RtcpMuxPolicy)nativeRtcpMuxPolicyForPolicy:
     (RTCRtcpMuxPolicy)policy {
   switch (policy) {
     case RTCRtcpMuxPolicyNegotiate:
-      return webrtc::PeerConnectionInterface::kRtcpMuxPolicyNegotiate;
+      return webrtz::PeerConnectionInterface::kRtcpMuxPolicyNegotiate;
     case RTCRtcpMuxPolicyRequire:
-      return webrtc::PeerConnectionInterface::kRtcpMuxPolicyRequire;
+      return webrtz::PeerConnectionInterface::kRtcpMuxPolicyRequire;
   }
 }
 
 + (RTCRtcpMuxPolicy)rtcpMuxPolicyForNativePolicy:
-    (webrtc::PeerConnectionInterface::RtcpMuxPolicy)nativePolicy {
+    (webrtz::PeerConnectionInterface::RtcpMuxPolicy)nativePolicy {
   switch (nativePolicy) {
-    case webrtc::PeerConnectionInterface::kRtcpMuxPolicyNegotiate:
+    case webrtz::PeerConnectionInterface::kRtcpMuxPolicyNegotiate:
       return RTCRtcpMuxPolicyNegotiate;
-    case webrtc::PeerConnectionInterface::kRtcpMuxPolicyRequire:
+    case webrtz::PeerConnectionInterface::kRtcpMuxPolicyRequire:
       return RTCRtcpMuxPolicyRequire;
   }
 }
@@ -302,32 +302,32 @@
   }
 }
 
-+ (webrtc::PeerConnectionInterface::TcpCandidatePolicy)
++ (webrtz::PeerConnectionInterface::TcpCandidatePolicy)
     nativeTcpCandidatePolicyForPolicy:(RTCTcpCandidatePolicy)policy {
   switch (policy) {
     case RTCTcpCandidatePolicyEnabled:
-      return webrtc::PeerConnectionInterface::kTcpCandidatePolicyEnabled;
+      return webrtz::PeerConnectionInterface::kTcpCandidatePolicyEnabled;
     case RTCTcpCandidatePolicyDisabled:
-      return webrtc::PeerConnectionInterface::kTcpCandidatePolicyDisabled;
+      return webrtz::PeerConnectionInterface::kTcpCandidatePolicyDisabled;
   }
 }
 
-+ (webrtc::PeerConnectionInterface::CandidateNetworkPolicy)
++ (webrtz::PeerConnectionInterface::CandidateNetworkPolicy)
     nativeCandidateNetworkPolicyForPolicy:(RTCCandidateNetworkPolicy)policy {
   switch (policy) {
     case RTCCandidateNetworkPolicyAll:
-      return webrtc::PeerConnectionInterface::kCandidateNetworkPolicyAll;
+      return webrtz::PeerConnectionInterface::kCandidateNetworkPolicyAll;
     case RTCCandidateNetworkPolicyLowCost:
-      return webrtc::PeerConnectionInterface::kCandidateNetworkPolicyLowCost;
+      return webrtz::PeerConnectionInterface::kCandidateNetworkPolicyLowCost;
   }
 }
 
 + (RTCTcpCandidatePolicy)tcpCandidatePolicyForNativePolicy:
-    (webrtc::PeerConnectionInterface::TcpCandidatePolicy)nativePolicy {
+    (webrtz::PeerConnectionInterface::TcpCandidatePolicy)nativePolicy {
   switch (nativePolicy) {
-    case webrtc::PeerConnectionInterface::kTcpCandidatePolicyEnabled:
+    case webrtz::PeerConnectionInterface::kTcpCandidatePolicyEnabled:
       return RTCTcpCandidatePolicyEnabled;
-    case webrtc::PeerConnectionInterface::kTcpCandidatePolicyDisabled:
+    case webrtz::PeerConnectionInterface::kTcpCandidatePolicyDisabled:
       return RTCTcpCandidatePolicyDisabled;
   }
 }
@@ -342,11 +342,11 @@
 }
 
 + (RTCCandidateNetworkPolicy)candidateNetworkPolicyForNativePolicy:
-    (webrtc::PeerConnectionInterface::CandidateNetworkPolicy)nativePolicy {
+    (webrtz::PeerConnectionInterface::CandidateNetworkPolicy)nativePolicy {
   switch (nativePolicy) {
-    case webrtc::PeerConnectionInterface::kCandidateNetworkPolicyAll:
+    case webrtz::PeerConnectionInterface::kCandidateNetworkPolicyAll:
       return RTCCandidateNetworkPolicyAll;
-    case webrtc::PeerConnectionInterface::kCandidateNetworkPolicyLowCost:
+    case webrtz::PeerConnectionInterface::kCandidateNetworkPolicyLowCost:
       return RTCCandidateNetworkPolicyLowCost;
   }
 }
@@ -361,23 +361,23 @@
   }
 }
 
-+ (webrtc::PeerConnectionInterface::ContinualGatheringPolicy)
++ (webrtz::PeerConnectionInterface::ContinualGatheringPolicy)
     nativeContinualGatheringPolicyForPolicy:
         (RTCContinualGatheringPolicy)policy {
   switch (policy) {
     case RTCContinualGatheringPolicyGatherOnce:
-      return webrtc::PeerConnectionInterface::GATHER_ONCE;
+      return webrtz::PeerConnectionInterface::GATHER_ONCE;
     case RTCContinualGatheringPolicyGatherContinually:
-      return webrtc::PeerConnectionInterface::GATHER_CONTINUALLY;
+      return webrtz::PeerConnectionInterface::GATHER_CONTINUALLY;
   }
 }
 
 + (RTCContinualGatheringPolicy)continualGatheringPolicyForNativePolicy:
-    (webrtc::PeerConnectionInterface::ContinualGatheringPolicy)nativePolicy {
+    (webrtz::PeerConnectionInterface::ContinualGatheringPolicy)nativePolicy {
   switch (nativePolicy) {
-    case webrtc::PeerConnectionInterface::GATHER_ONCE:
+    case webrtz::PeerConnectionInterface::GATHER_ONCE:
       return RTCContinualGatheringPolicyGatherOnce;
-    case webrtc::PeerConnectionInterface::GATHER_CONTINUALLY:
+    case webrtz::PeerConnectionInterface::GATHER_CONTINUALLY:
       return RTCContinualGatheringPolicyGatherContinually;
   }
 }
@@ -402,24 +402,24 @@
   }
 }
 
-+ (webrtc::SdpSemantics)nativeSdpSemanticsForSdpSemantics:(RTCSdpSemantics)sdpSemantics {
++ (webrtz::SdpSemantics)nativeSdpSemanticsForSdpSemantics:(RTCSdpSemantics)sdpSemantics {
   switch (sdpSemantics) {
     case RTCSdpSemanticsDefault:
-      return webrtc::SdpSemantics::kDefault;
+      return webrtz::SdpSemantics::kDefault;
     case RTCSdpSemanticsPlanB:
-      return webrtc::SdpSemantics::kPlanB;
+      return webrtz::SdpSemantics::kPlanB;
     case RTCSdpSemanticsUnifiedPlan:
-      return webrtc::SdpSemantics::kUnifiedPlan;
+      return webrtz::SdpSemantics::kUnifiedPlan;
   }
 }
 
-+ (RTCSdpSemantics)sdpSemanticsForNativeSdpSemantics:(webrtc::SdpSemantics)sdpSemantics {
++ (RTCSdpSemantics)sdpSemanticsForNativeSdpSemantics:(webrtz::SdpSemantics)sdpSemantics {
   switch (sdpSemantics) {
-    case webrtc::SdpSemantics::kDefault:
+    case webrtz::SdpSemantics::kDefault:
       return RTCSdpSemanticsDefault;
-    case webrtc::SdpSemantics::kPlanB:
+    case webrtz::SdpSemantics::kPlanB:
       return RTCSdpSemanticsPlanB;
-    case webrtc::SdpSemantics::kUnifiedPlan:
+    case webrtz::SdpSemantics::kUnifiedPlan:
       return RTCSdpSemanticsUnifiedPlan;
   }
 }

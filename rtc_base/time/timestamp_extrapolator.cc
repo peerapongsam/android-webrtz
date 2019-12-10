@@ -12,7 +12,7 @@
 
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 
 TimestampExtrapolator::TimestampExtrapolator(int64_t start_ms)
     : _rwLock(RWLockWrapper::CreateRWLock()),
@@ -207,4 +207,4 @@ bool TimestampExtrapolator::DelayChangeDetection(double error) {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

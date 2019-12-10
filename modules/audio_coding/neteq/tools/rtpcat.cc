@@ -16,8 +16,8 @@
 #include "test/rtp_file_reader.h"
 #include "test/rtp_file_writer.h"
 
-using webrtc::test::RtpFileReader;
-using webrtc::test::RtpFileWriter;
+using webrtz::test::RtpFileReader;
+using webrtz::test::RtpFileWriter;
 
 int main(int argc, char* argv[]) {
   if (argc < 3) {
@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
     RTC_CHECK(input.get() != NULL) << "Cannot open input file " << argv[i];
     printf("Input RTP file: %s\n", argv[i]);
 
-    webrtc::test::RtpPacket packet;
+    webrtz::test::RtpPacket packet;
     while (input->NextPacket(&packet))
       RTC_CHECK(output->WritePacket(&packet));
   }

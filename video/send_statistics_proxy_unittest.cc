@@ -20,7 +20,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kFirstSsrc = 17;
 const uint32_t kSecondSsrc = 42;
@@ -2231,4 +2231,4 @@ TEST_F(ForcedFallbackEnabled, FallbackIfAtMaxPixels) {
   EXPECT_EQ(1, metrics::NumSamples(kPrefix + "FallbackChangesPerMinute.Vp8"));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

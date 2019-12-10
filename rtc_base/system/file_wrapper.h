@@ -21,7 +21,7 @@
 // Implementation of an InStream and OutStream that can read (exclusive) or
 // write from/to a file.
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(tommi): Remove the base classes, rename to rtc::File and move to base.
 class FileWrapper : public InStream, public OutStream {
@@ -83,6 +83,6 @@ class FileWrapper : public InStream, public OutStream {
   FileWrapper& operator=(const FileWrapper&) = delete;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_SYSTEM_FILE_WRAPPER_H_

@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/differ_vector_sse2.h"
 #include "system_wrappers/include/cpu_features_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -68,4 +68,4 @@ bool BlockDifference(const uint8_t* image1, const uint8_t* image2, int stride) {
   return BlockDifference(image1, image2, kBlockSize, stride);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

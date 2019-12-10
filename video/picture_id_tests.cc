@@ -15,7 +15,7 @@
 #include "rtc_base/numerics/sequence_number_util.h"
 #include "test/call_test.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int kFrameMaxWidth = 1280;
 const int kFrameMaxHeight = 720;
@@ -438,4 +438,4 @@ TEST_P(PictureIdTest, IncreasingAfterRecreateStreamVp9) {
   TestPictureIdIncreaseAfterRecreateStreams({1, 1});
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

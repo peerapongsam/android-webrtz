@@ -18,7 +18,7 @@
 #include "api/rtpparameters.h"
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace rtclog {
 
 struct StreamConfig {
@@ -53,6 +53,6 @@ struct StreamConfig {
 };
 
 }  // namespace rtclog
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_RTC_STREAM_CONFIG_H_

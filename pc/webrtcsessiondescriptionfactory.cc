@@ -24,7 +24,7 @@
 
 using cricket::MediaSessionOptions;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 static const char kFailedDueToIdentityFailed[] =
     " failed because DTLS identity request failed";
@@ -67,13 +67,13 @@ enum {
 
 struct CreateSessionDescriptionMsg : public rtc::MessageData {
   explicit CreateSessionDescriptionMsg(
-      webrtc::CreateSessionDescriptionObserver* observer)
+      webrtz::CreateSessionDescriptionObserver* observer)
       : observer(observer) {
   }
 
-  rtc::scoped_refptr<webrtc::CreateSessionDescriptionObserver> observer;
+  rtc::scoped_refptr<webrtz::CreateSessionDescriptionObserver> observer;
   std::string error;
-  std::unique_ptr<webrtc::SessionDescriptionInterface> description;
+  std::unique_ptr<webrtz::SessionDescriptionInterface> description;
 };
 }  // namespace
 
@@ -478,4 +478,4 @@ void WebRtcSessionDescriptionFactory::SetCertificate(
     create_session_description_requests_.pop();
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

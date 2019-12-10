@@ -27,27 +27,27 @@
 #include "sdk/objc/Framework/Native/api/video_encoder_factory.h"
 #include "sdk/objc/Framework/Native/api/video_renderer.h"
 
-namespace webrtc_examples {
+namespace webrtz_examples {
 
 namespace {
 
-class CreateOfferObserver : public webrtc::CreateSessionDescriptionObserver {
+class CreateOfferObserver : public webrtz::CreateSessionDescriptionObserver {
  public:
-  explicit CreateOfferObserver(rtc::scoped_refptr<webrtc::PeerConnectionInterface> pc);
+  explicit CreateOfferObserver(rtc::scoped_refptr<webrtz::PeerConnectionInterface> pc);
 
-  void OnSuccess(webrtc::SessionDescriptionInterface* desc) override;
+  void OnSuccess(webrtz::SessionDescriptionInterface* desc) override;
   void OnFailure(const std::string& error) override;
 
  private:
-  const rtc::scoped_refptr<webrtc::PeerConnectionInterface> pc_;
+  const rtc::scoped_refptr<webrtz::PeerConnectionInterface> pc_;
 };
 
-class SetRemoteSessionDescriptionObserver : public webrtc::SetRemoteDescriptionObserverInterface {
+class SetRemoteSessionDescriptionObserver : public webrtz::SetRemoteDescriptionObserverInterface {
  public:
-  void OnSetRemoteDescriptionComplete(webrtc::RTCError error) override;
+  void OnSetRemoteDescriptionComplete(webrtz::RTCError error) override;
 };
 
-class SetLocalSessionDescriptionObserver : public webrtc::SetSessionDescriptionObserver {
+class SetLocalSessionDescriptionObserver : public webrtz::SetSessionDescriptionObserver {
  public:
   void OnSuccess() override;
   void OnFailure(const std::string& error) override;
@@ -71,10 +71,10 @@ void ObjCCallClient::Call(RTCVideoCapturer* capturer, id<RTCVideoRenderer> remot
   }
   call_started_ = true;
 
-  remote_sink_ = webrtc::ObjCToNativeVideoRenderer(remote_renderer);
+  remote_sink_ = webrtz::ObjCToNativeVideoRenderer(remote_renderer);
 
   video_source_ =
-      webrtc::ObjCToNativeVideoCapturer(capturer, signaling_thread_.get(), worker_thread_.get());
+      webrtz::ObjCToNativeVideoCapturer(capturer, signaling_thread_.get(), worker_thread_.get());
 
   CreatePeerConnection();
   Connect();
@@ -110,50 +110,50 @@ void ObjCCallClient::CreatePeerConnectionFactory() {
   signaling_thread_->SetName("signaling_thread", nullptr);
   RTC_CHECK(signaling_thread_->Start()) << "Failed to start thread";
 
-  std::unique_ptr<webrtc::VideoDecoderFactory> videoDecoderFactory =
-      webrtc::ObjCToNativeVideoDecoderFactory([[RTCDefaultVideoDecoderFactory alloc] init]);
-  std::unique_ptr<webrtc::VideoEncoderFactory> videoEncoderFactory =
-      webrtc::ObjCToNativeVideoEncoderFactory([[RTCDefaultVideoEncoderFactory alloc] init]);
+  std::unique_ptr<webrtz::VideoDecoderFactory> videoDecoderFactory =
+      webrtz::ObjCToNativeVideoDecoderFactory([[RTCDefaultVideoDecoderFactory alloc] init]);
+  std::unique_ptr<webrtz::VideoEncoderFactory> videoEncoderFactory =
+      webrtz::ObjCToNativeVideoEncoderFactory([[RTCDefaultVideoEncoderFactory alloc] init]);
 
   std::unique_ptr<cricket::MediaEngineInterface> media_engine =
       cricket::WebRtcMediaEngineFactory::Create(nullptr /* adm */,
-                                                webrtc::CreateBuiltinAudioEncoderFactory(),
-                                                webrtc::CreateBuiltinAudioDecoderFactory(),
+                                                webrtz::CreateBuiltinAudioEncoderFactory(),
+                                                webrtz::CreateBuiltinAudioDecoderFactory(),
                                                 std::move(videoEncoderFactory),
                                                 std::move(videoDecoderFactory),
                                                 nullptr /* audio_mixer */,
-                                                webrtc::AudioProcessingBuilder().Create());
+                                                webrtz::AudioProcessingBuilder().Create());
   RTC_LOG(LS_INFO) << "Media engine created: " << media_engine.get();
 
-  pcf_ = webrtc::CreateModularPeerConnectionFactory(network_thread_.get(),
+  pcf_ = webrtz::CreateModularPeerConnectionFactory(network_thread_.get(),
                                                     worker_thread_.get(),
                                                     signaling_thread_.get(),
                                                     std::move(media_engine),
-                                                    webrtc::CreateCallFactory(),
-                                                    webrtc::CreateRtcEventLogFactory());
+                                                    webrtz::CreateCallFactory(),
+                                                    webrtz::CreateRtcEventLogFactory());
   RTC_LOG(LS_INFO) << "PeerConnectionFactory created: " << pcf_;
 }
 
 void ObjCCallClient::CreatePeerConnection() {
   rtc::CritScope lock(&pc_mutex_);
-  webrtc::PeerConnectionInterface::RTCConfiguration config;
-  config.sdp_semantics = webrtc::SdpSemantics::kUnifiedPlan;
+  webrtz::PeerConnectionInterface::RTCConfiguration config;
+  config.sdp_semantics = webrtz::SdpSemantics::kUnifiedPlan;
   // DTLS SRTP has to be disabled for loopback to work.
   config.enable_dtls_srtp = false;
   pc_ = pcf_->CreatePeerConnection(
       config, nullptr /* port_allocator */, nullptr /* cert_generator */, pc_observer_.get());
   RTC_LOG(LS_INFO) << "PeerConnection created: " << pc_;
 
-  rtc::scoped_refptr<webrtc::VideoTrackInterface> local_video_track =
+  rtc::scoped_refptr<webrtz::VideoTrackInterface> local_video_track =
       pcf_->CreateVideoTrack("video", video_source_);
   pc_->AddTransceiver(local_video_track);
   RTC_LOG(LS_INFO) << "Local video sink set up: " << local_video_track;
 
-  for (const rtc::scoped_refptr<webrtc::RtpTransceiverInterface>& tranceiver :
+  for (const rtc::scoped_refptr<webrtz::RtpTransceiverInterface>& tranceiver :
        pc_->GetTransceivers()) {
-    rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track = tranceiver->receiver()->track();
-    if (track && track->kind() == webrtc::MediaStreamTrackInterface::kVideoKind) {
-      static_cast<webrtc::VideoTrackInterface*>(track.get())
+    rtc::scoped_refptr<webrtz::MediaStreamTrackInterface> track = tranceiver->receiver()->track();
+    if (track && track->kind() == webrtz::MediaStreamTrackInterface::kVideoKind) {
+      static_cast<webrtz::VideoTrackInterface*>(track.get())
           ->AddOrUpdateSink(remote_sink_.get(), rtc::VideoSinkWants());
       RTC_LOG(LS_INFO) << "Remote video sink set up: " << track;
       break;
@@ -164,18 +164,18 @@ void ObjCCallClient::CreatePeerConnection() {
 void ObjCCallClient::Connect() {
   rtc::CritScope lock(&pc_mutex_);
   pc_->CreateOffer(new rtc::RefCountedObject<CreateOfferObserver>(pc_),
-                   webrtc::PeerConnectionInterface::RTCOfferAnswerOptions());
+                   webrtz::PeerConnectionInterface::RTCOfferAnswerOptions());
 }
 
 ObjCCallClient::PCObserver::PCObserver(ObjCCallClient* client) : client_(client) {}
 
 void ObjCCallClient::PCObserver::OnSignalingChange(
-    webrtc::PeerConnectionInterface::SignalingState new_state) {
+    webrtz::PeerConnectionInterface::SignalingState new_state) {
   RTC_LOG(LS_INFO) << "OnSignalingChange: " << new_state;
 }
 
 void ObjCCallClient::PCObserver::OnDataChannel(
-    rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel) {
+    rtc::scoped_refptr<webrtz::DataChannelInterface> data_channel) {
   RTC_LOG(LS_INFO) << "OnDataChannel";
 }
 
@@ -184,26 +184,26 @@ void ObjCCallClient::PCObserver::OnRenegotiationNeeded() {
 }
 
 void ObjCCallClient::PCObserver::OnIceConnectionChange(
-    webrtc::PeerConnectionInterface::IceConnectionState new_state) {
+    webrtz::PeerConnectionInterface::IceConnectionState new_state) {
   RTC_LOG(LS_INFO) << "OnIceConnectionChange: " << new_state;
 }
 
 void ObjCCallClient::PCObserver::OnIceGatheringChange(
-    webrtc::PeerConnectionInterface::IceGatheringState new_state) {
+    webrtz::PeerConnectionInterface::IceGatheringState new_state) {
   RTC_LOG(LS_INFO) << "OnIceGatheringChange: " << new_state;
 }
 
-void ObjCCallClient::PCObserver::OnIceCandidate(const webrtc::IceCandidateInterface* candidate) {
+void ObjCCallClient::PCObserver::OnIceCandidate(const webrtz::IceCandidateInterface* candidate) {
   RTC_LOG(LS_INFO) << "OnIceCandidate: " << candidate->server_url();
   rtc::CritScope lock(&client_->pc_mutex_);
   RTC_DCHECK(client_->pc_ != nullptr);
   client_->pc_->AddIceCandidate(candidate);
 }
 
-CreateOfferObserver::CreateOfferObserver(rtc::scoped_refptr<webrtc::PeerConnectionInterface> pc)
+CreateOfferObserver::CreateOfferObserver(rtc::scoped_refptr<webrtz::PeerConnectionInterface> pc)
     : pc_(pc) {}
 
-void CreateOfferObserver::OnSuccess(webrtc::SessionDescriptionInterface* desc) {
+void CreateOfferObserver::OnSuccess(webrtz::SessionDescriptionInterface* desc) {
   std::string sdp;
   desc->ToString(&sdp);
   RTC_LOG(LS_INFO) << "Created offer: " << sdp;
@@ -212,8 +212,8 @@ void CreateOfferObserver::OnSuccess(webrtc::SessionDescriptionInterface* desc) {
   pc_->SetLocalDescription(new rtc::RefCountedObject<SetLocalSessionDescriptionObserver>(), desc);
 
   // Generate a fake answer.
-  std::unique_ptr<webrtc::SessionDescriptionInterface> answer(
-      webrtc::CreateSessionDescription(webrtc::SdpType::kAnswer, sdp));
+  std::unique_ptr<webrtz::SessionDescriptionInterface> answer(
+      webrtz::CreateSessionDescription(webrtz::SdpType::kAnswer, sdp));
   pc_->SetRemoteDescription(std::move(answer),
                             new rtc::RefCountedObject<SetRemoteSessionDescriptionObserver>());
 }
@@ -222,7 +222,7 @@ void CreateOfferObserver::OnFailure(const std::string& error) {
   RTC_LOG(LS_INFO) << "Failed to create offer: " << error;
 }
 
-void SetRemoteSessionDescriptionObserver::OnSetRemoteDescriptionComplete(webrtc::RTCError error) {
+void SetRemoteSessionDescriptionObserver::OnSetRemoteDescriptionComplete(webrtz::RTCError error) {
   RTC_LOG(LS_INFO) << "Set remote description: " << error.message();
 }
 
@@ -234,4 +234,4 @@ void SetLocalSessionDescriptionObserver::OnFailure(const std::string& error) {
   RTC_LOG(LS_INFO) << "Set local description failure: " << error;
 }
 
-}  // namespace webrtc_examples
+}  // namespace webrtz_examples

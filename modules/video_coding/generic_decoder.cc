@@ -20,7 +20,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMDecodedFrameCallback::VCMDecodedFrameCallback(VCMTiming* timing,
                                                  Clock* clock)
@@ -258,4 +258,4 @@ bool VCMGenericDecoder::PrefersLateDecoding() const {
   return decoder_->PrefersLateDecoding();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

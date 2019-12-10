@@ -20,7 +20,7 @@
 #include "rtc_base/base64.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // The following is the enum RTCStatsIceCandidateType from
@@ -294,7 +294,7 @@ void ExtractStats(const cricket::VideoReceiverInfo& info, StatsReport* report) {
 
   report->AddString(
       StatsReport::kStatsValueNameContentType,
-      webrtc::videocontenttypehelpers::ToString(info.content_type));
+      webrtz::videocontenttypehelpers::ToString(info.content_type));
 }
 
 void ExtractStats(const cricket::VideoSenderInfo& info, StatsReport* report) {
@@ -335,7 +335,7 @@ void ExtractStats(const cricket::VideoSenderInfo& info, StatsReport* report) {
   report->AddString(StatsReport::kStatsValueNameMediaType, "video");
   report->AddString(
       StatsReport::kStatsValueNameContentType,
-      webrtc::videocontenttypehelpers::ToString(info.content_type));
+      webrtz::videocontenttypehelpers::ToString(info.content_type));
 }
 
 void ExtractStats(const cricket::BandwidthEstimationInfo& info,
@@ -862,7 +862,7 @@ void StatsCollector::ExtractBweInfo() {
   if (pc_->signaling_state() == PeerConnectionInterface::kClosed)
     return;
 
-  webrtc::Call::Stats call_stats = pc_->GetCallStats();
+  webrtz::Call::Stats call_stats = pc_->GetCallStats();
   cricket::BandwidthEstimationInfo bwe_info;
   bwe_info.available_send_bandwidth = call_stats.send_bandwidth_bps;
   bwe_info.available_recv_bandwidth = call_stats.recv_bandwidth_bps;
@@ -1135,4 +1135,4 @@ void StatsCollector::ClearUpdateStatsCacheForTest() {
   stats_gathering_started_ = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

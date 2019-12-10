@@ -17,7 +17,7 @@
 #include "modules/desktop_capture/mouse_cursor.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MouseCursorMonitorTest : public testing::Test,
                                public MouseCursorMonitor::Callback {
@@ -66,7 +66,7 @@ TEST_F(MouseCursorMonitorTest, MAYBE(FromScreen)) {
   std::unique_ptr<MouseCursorMonitor> capturer(
       MouseCursorMonitor::CreateForScreen(
           DesktopCaptureOptions::CreateDefault(),
-          webrtc::kFullDesktopScreenId));
+          webrtz::kFullDesktopScreenId));
   assert(capturer.get());
   capturer->Init(this, MouseCursorMonitor::SHAPE_AND_POSITION);
   capturer->Capture();
@@ -119,7 +119,7 @@ TEST_F(MouseCursorMonitorTest, MAYBE(ShapeOnly)) {
   std::unique_ptr<MouseCursorMonitor> capturer(
       MouseCursorMonitor::CreateForScreen(
           DesktopCaptureOptions::CreateDefault(),
-          webrtc::kFullDesktopScreenId));
+          webrtz::kFullDesktopScreenId));
   assert(capturer.get());
   capturer->Init(this, MouseCursorMonitor::SHAPE_ONLY);
   capturer->Capture();
@@ -128,4 +128,4 @@ TEST_F(MouseCursorMonitorTest, MAYBE(ShapeOnly)) {
   EXPECT_FALSE(position_received_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

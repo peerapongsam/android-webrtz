@@ -15,7 +15,7 @@
 #include "modules/video_coding/codecs/vp9/svc_config.h"
 #include "test/video_codec_settings.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const size_t kWidth = 1280;
@@ -33,7 +33,7 @@ class TestVp9Impl : public VideoCodecUnitTest {
   }
 
   void ModifyCodecSettings(VideoCodec* codec_settings) override {
-    webrtc::test::CodecSettings(kVideoCodecVP9, codec_settings);
+    webrtz::test::CodecSettings(kVideoCodecVP9, codec_settings);
     codec_settings->width = kWidth;
     codec_settings->height = kHeight;
     codec_settings->VP9()->numberOfTemporalLayers = 1;
@@ -318,4 +318,4 @@ TEST_F(TestVp9Impl, EndOfSuperframe) {
   EXPECT_TRUE(codec_specific[0].codecSpecific.VP9.end_of_superframe);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

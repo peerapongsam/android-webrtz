@@ -18,7 +18,7 @@
 #include "modules/audio_coding/neteq/tools/audio_sink.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class OutputAudioFile : public AudioSink {
@@ -46,5 +46,5 @@ class OutputAudioFile : public AudioSink {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_OUTPUT_AUDIO_FILE_H_

@@ -31,7 +31,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/runtime_enabled_features.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const char kCwndExperiment[] = "WebRTC-CwndExperiment";
@@ -40,7 +40,7 @@ const int64_t kDefaultAcceptedQueueMs = 250;
 
 bool CwndExperimentEnabled() {
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kCwndExperiment);
+      webrtz::field_trial::FindFullName(kCwndExperiment);
   // The experiment is enabled iff the field trial string begins with "Enabled".
   return experiment_string.find("Enabled") == 0;
 }
@@ -48,7 +48,7 @@ bool CwndExperimentEnabled() {
 bool ReadCwndExperimentParameter(int64_t* accepted_queue_ms) {
   RTC_DCHECK(accepted_queue_ms);
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kCwndExperiment);
+      webrtz::field_trial::FindFullName(kCwndExperiment);
   int parsed_values =
       sscanf(experiment_string.c_str(), "Enabled-%" PRId64, accepted_queue_ms);
   if (parsed_values == 1) {
@@ -76,12 +76,12 @@ static void ClampBitrates(int* bitrate_bps,
     *bitrate_bps = std::max(*min_bitrate_bps, *bitrate_bps);
 }
 
-std::vector<webrtc::PacketFeedback> ReceivedPacketFeedbackVector(
-    const std::vector<webrtc::PacketFeedback>& input) {
+std::vector<webrtz::PacketFeedback> ReceivedPacketFeedbackVector(
+    const std::vector<webrtz::PacketFeedback>& input) {
   std::vector<PacketFeedback> received_packet_feedback_vector;
-  auto is_received = [](const webrtc::PacketFeedback& packet_feedback) {
+  auto is_received = [](const webrtz::PacketFeedback& packet_feedback) {
     return packet_feedback.arrival_time_ms !=
-           webrtc::PacketFeedback::kNotReceived;
+           webrtz::PacketFeedback::kNotReceived;
   };
   std::copy_if(input.begin(), input.end(),
                std::back_inserter(received_packet_feedback_vector),
@@ -90,16 +90,16 @@ std::vector<webrtc::PacketFeedback> ReceivedPacketFeedbackVector(
 }
 
 void SortPacketFeedbackVector(
-    std::vector<webrtc::PacketFeedback>* const input) {
+    std::vector<webrtz::PacketFeedback>* const input) {
   RTC_DCHECK(input);
   std::sort(input->begin(), input->end(), PacketFeedbackComparator());
 }
 
 bool IsPacerPushbackExperimentEnabled() {
-  return webrtc::field_trial::IsEnabled(kPacerPushbackExperiment) || (
-      !webrtc::field_trial::IsDisabled(kPacerPushbackExperiment) &&
-      webrtc::runtime_enabled_features::IsFeatureEnabled(
-          webrtc::runtime_enabled_features::kDualStreamModeFeatureName));
+  return webrtz::field_trial::IsEnabled(kPacerPushbackExperiment) || (
+      !webrtz::field_trial::IsDisabled(kPacerPushbackExperiment) &&
+      webrtz::runtime_enabled_features::IsFeatureEnabled(
+          webrtz::runtime_enabled_features::kDualStreamModeFeatureName));
 }
 
 }  // namespace
@@ -133,7 +133,7 @@ SendSideCongestionController::SendSideCongestionController(
       accepted_queue_ms_(kDefaultAcceptedQueueMs),
       was_in_alr_(false),
       send_side_bwe_with_overhead_(
-          webrtc::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
+          webrtz::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
       transport_overhead_bytes_per_packet_(0),
       pacer_pushback_experiment_(IsPacerPushbackExperimentEnabled()) {
   delay_based_bwe_->SetMinBitrate(min_bitrate_bps_);
@@ -491,4 +491,4 @@ bool SendSideCongestionController::IsNetworkDown() const {
   return network_state_ == kNetworkDown;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

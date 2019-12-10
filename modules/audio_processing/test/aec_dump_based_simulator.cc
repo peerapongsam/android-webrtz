@@ -15,14 +15,14 @@
 #include "modules/audio_processing/test/protobuf_utils.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
 // Verify output bitexactness for the fixed interface.
 // TODO(peah): Check whether it would make sense to add a threshold
 // to use for checking the bitexactness in a soft manner.
-bool VerifyFixedBitExactness(const webrtc::audioproc::Stream& msg,
+bool VerifyFixedBitExactness(const webrtz::audioproc::Stream& msg,
                              const AudioFrame& frame) {
   if ((sizeof(int16_t) * frame.samples_per_channel_ * frame.num_channels_) !=
       msg.output_data().size()) {
@@ -40,7 +40,7 @@ bool VerifyFixedBitExactness(const webrtc::audioproc::Stream& msg,
 }
 
 // Verify output bitexactness for the float interface.
-bool VerifyFloatBitExactness(const webrtc::audioproc::Stream& msg,
+bool VerifyFloatBitExactness(const webrtz::audioproc::Stream& msg,
                              const StreamConfig& out_config,
                              const ChannelBuffer<float>& out_buf) {
   if (static_cast<size_t>(msg.output_channel_size()) !=
@@ -70,7 +70,7 @@ AecDumpBasedSimulator::AecDumpBasedSimulator(
 AecDumpBasedSimulator::~AecDumpBasedSimulator() = default;
 
 void AecDumpBasedSimulator::PrepareProcessStreamCall(
-    const webrtc::audioproc::Stream& msg) {
+    const webrtz::audioproc::Stream& msg) {
   if (msg.has_input_data()) {
     // Fixed interface processing.
     // Verify interface invariance.
@@ -165,7 +165,7 @@ void AecDumpBasedSimulator::PrepareProcessStreamCall(
 }
 
 void AecDumpBasedSimulator::VerifyProcessStreamBitExactness(
-    const webrtc::audioproc::Stream& msg) {
+    const webrtz::audioproc::Stream& msg) {
   if (bitexact_output_) {
     if (interface_used_ == InterfaceType::kFixedInterface) {
       bitexact_output_ = VerifyFixedBitExactness(msg, fwd_frame_);
@@ -176,7 +176,7 @@ void AecDumpBasedSimulator::VerifyProcessStreamBitExactness(
 }
 
 void AecDumpBasedSimulator::PrepareReverseProcessStreamCall(
-    const webrtc::audioproc::ReverseStream& msg) {
+    const webrtz::audioproc::ReverseStream& msg) {
   if (msg.has_data()) {
     // Fixed interface processing.
     // Verify interface invariance.
@@ -229,24 +229,24 @@ void AecDumpBasedSimulator::Process() {
         rtc::CheckedDivExact(sample_rate_hz, kChunksPerSecond), 1));
   }
 
-  webrtc::audioproc::Event event_msg;
+  webrtz::audioproc::Event event_msg;
   int num_forward_chunks_processed = 0;
   while (ReadMessageFromFile(dump_input_file_, &event_msg)) {
     switch (event_msg.type()) {
-      case webrtc::audioproc::Event::INIT:
+      case webrtz::audioproc::Event::INIT:
         RTC_CHECK(event_msg.has_init());
         HandleMessage(event_msg.init());
         break;
-      case webrtc::audioproc::Event::STREAM:
+      case webrtz::audioproc::Event::STREAM:
         RTC_CHECK(event_msg.has_stream());
         HandleMessage(event_msg.stream());
         ++num_forward_chunks_processed;
         break;
-      case webrtc::audioproc::Event::REVERSE_STREAM:
+      case webrtz::audioproc::Event::REVERSE_STREAM:
         RTC_CHECK(event_msg.has_reverse_stream());
         HandleMessage(event_msg.reverse_stream());
         break;
-      case webrtc::audioproc::Event::CONFIG:
+      case webrtz::audioproc::Event::CONFIG:
         RTC_CHECK(event_msg.has_config());
         HandleMessage(event_msg.config());
         break;
@@ -261,7 +261,7 @@ void AecDumpBasedSimulator::Process() {
 }
 
 void AecDumpBasedSimulator::HandleMessage(
-    const webrtc::audioproc::Config& msg) {
+    const webrtz::audioproc::Config& msg) {
   if (settings_.use_verbose_logging) {
     std::cout << "Config at frame:" << std::endl;
     std::cout << " Forward: " << get_num_process_stream_calls() << std::endl;
@@ -329,7 +329,7 @@ void AecDumpBasedSimulator::HandleMessage(
       RTC_CHECK_EQ(
           AudioProcessing::kNoError,
           ap_->echo_cancellation()->set_suppression_level(
-              static_cast<webrtc::EchoCancellation::SuppressionLevel>(level)));
+              static_cast<webrtz::EchoCancellation::SuppressionLevel>(level)));
       if (settings_.use_verbose_logging) {
         std::cout << " aec_suppression_level: " << level << std::endl;
       }
@@ -365,7 +365,7 @@ void AecDumpBasedSimulator::HandleMessage(
                              : msg.aecm_routing_mode();
       RTC_CHECK_EQ(AudioProcessing::kNoError,
                    ap_->echo_control_mobile()->set_routing_mode(
-                       static_cast<webrtc::EchoControlMobile::RoutingMode>(
+                       static_cast<webrtz::EchoControlMobile::RoutingMode>(
                            routing_mode)));
       if (settings_.use_verbose_logging) {
         std::cout << " aecm_routing_mode: " << routing_mode << std::endl;
@@ -386,7 +386,7 @@ void AecDumpBasedSimulator::HandleMessage(
       int mode = settings_.agc_mode ? *settings_.agc_mode : msg.agc_mode();
       RTC_CHECK_EQ(AudioProcessing::kNoError,
                    ap_->gain_control()->set_mode(
-                       static_cast<webrtc::GainControl::Mode>(mode)));
+                       static_cast<webrtz::GainControl::Mode>(mode)));
       if (settings_.use_verbose_logging) {
         std::cout << " agc_mode: " << mode << std::endl;
       }
@@ -484,7 +484,7 @@ void AecDumpBasedSimulator::HandleMessage(
   }
 }
 
-void AecDumpBasedSimulator::HandleMessage(const webrtc::audioproc::Init& msg) {
+void AecDumpBasedSimulator::HandleMessage(const webrtz::audioproc::Init& msg) {
   RTC_CHECK(msg.has_sample_rate());
   RTC_CHECK(msg.has_num_input_channels());
   RTC_CHECK(msg.has_num_reverse_channels());
@@ -539,17 +539,17 @@ void AecDumpBasedSimulator::HandleMessage(const webrtc::audioproc::Init& msg) {
 }
 
 void AecDumpBasedSimulator::HandleMessage(
-    const webrtc::audioproc::Stream& msg) {
+    const webrtz::audioproc::Stream& msg) {
   PrepareProcessStreamCall(msg);
   ProcessStream(interface_used_ == InterfaceType::kFixedInterface);
   VerifyProcessStreamBitExactness(msg);
 }
 
 void AecDumpBasedSimulator::HandleMessage(
-    const webrtc::audioproc::ReverseStream& msg) {
+    const webrtz::audioproc::ReverseStream& msg) {
   PrepareReverseProcessStreamCall(msg);
   ProcessReverseStream(interface_used_ == InterfaceType::kFixedInterface);
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 
 #include "modules/video_coding/codecs/vp9/vp9_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ScreenshareLayersVP9 {
  public:
@@ -61,6 +61,6 @@ class ScreenshareLayersVP9 {
   bool timestamp_initialized_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP9_SCREENSHARE_LAYERS_H_

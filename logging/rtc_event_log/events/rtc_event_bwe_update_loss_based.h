@@ -13,7 +13,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventBweUpdateLossBased final : public RtcEvent {
  public:
@@ -31,6 +31,6 @@ class RtcEventBweUpdateLossBased final : public RtcEvent {
   const int32_t total_packets_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_BWE_UPDATE_LOSS_BASED_H_

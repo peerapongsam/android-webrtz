@@ -25,7 +25,7 @@
 #define log2(x) (log(x) / log(2))
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // TODO(nisse): Delete, delegate to encoders.
@@ -165,4 +165,4 @@ void QualityScaler::ClearSamples() {
   framedrop_percent_.Reset();
   average_qp_.Reset();
 }
-}  // namespace webrtc
+}  // namespace webrtz

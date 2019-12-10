@@ -17,7 +17,7 @@
 #include "modules/audio_coding/neteq/decoder_database.h"
 #include "modules/audio_coding/neteq/sync_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Operations DecisionLogicFax::GetDecisionSpecialized(
     const SyncBuffer& sync_buffer,
@@ -100,4 +100,4 @@ Operations DecisionLogicFax::GetDecisionSpecialized(
 }
 
 
-}  // namespace webrtc
+}  // namespace webrtz

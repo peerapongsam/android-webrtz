@@ -23,7 +23,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -241,4 +241,4 @@ TEST(UlpfecHeaderReaderWriterTest, WriteAndReadLargeHeader) {
                 *written_packet, *read_packet);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

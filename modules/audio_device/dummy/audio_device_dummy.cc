@@ -10,7 +10,7 @@
 
 #include "modules/audio_device/dummy/audio_device_dummy.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int32_t AudioDeviceDummy::ActiveAudioLayer(
     AudioDeviceModule::AudioLayer& audioLayer) const {
@@ -153,4 +153,4 @@ int32_t AudioDeviceDummy::StereoRecording(bool& enabled) const { return -1; }
 int32_t AudioDeviceDummy::PlayoutDelay(uint16_t& delayMS) const { return -1; }
 
 void AudioDeviceDummy::AttachAudioBuffer(AudioDeviceBuffer* audioBuffer) {}
-}  // namespace webrtc
+}  // namespace webrtz

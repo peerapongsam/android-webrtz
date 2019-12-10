@@ -18,7 +18,7 @@
 #include "rtc_base/ptr_util.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -361,4 +361,4 @@ TEST(SingleThreadedTaskQueueForTestingTest,
 
 }  // namespace
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/source/byte_io.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 // VoIP Metrics Report Block (RFC 3611).
 //
@@ -104,4 +104,4 @@ void VoipMetric::Create(uint8_t* buffer) const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

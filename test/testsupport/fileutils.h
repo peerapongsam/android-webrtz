@@ -18,7 +18,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // This is the "directory" returned if the ProjectPath() function fails
@@ -111,6 +111,6 @@ size_t GetFileSize(const std::string& filename);
 void SetExecutablePath(const std::string& path_to_executable);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_TESTSUPPORT_FILEUTILS_H_

@@ -21,7 +21,7 @@
 #include "rtc_base/rate_statistics.h"
 #include "system_wrappers/include/ntp_time.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class StreamStatisticianImpl : public StreamStatistician {
  public:
@@ -131,5 +131,5 @@ class ReceiveStatisticsImpl : public ReceiveStatistics,
   RtcpStatisticsCallback* rtcp_stats_callback_;
   StreamDataCountersCallback* rtp_stats_callback_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RECEIVE_STATISTICS_IMPL_H_

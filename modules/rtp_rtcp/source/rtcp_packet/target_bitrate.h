@@ -15,7 +15,7 @@
 
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 class TargetBitrate {
@@ -58,5 +58,5 @@ class TargetBitrate {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_TARGET_BITRATE_H_

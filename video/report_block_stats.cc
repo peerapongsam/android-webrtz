@@ -10,7 +10,7 @@
 
 #include "video/report_block_stats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 int FractionLost(uint32_t num_lost_sequence_numbers,
@@ -109,5 +109,5 @@ int ReportBlockStats::FractionLostInPercent() const {
       num_lost_sequence_numbers_, num_sequence_numbers_) * 100 / 255;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

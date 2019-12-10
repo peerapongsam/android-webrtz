@@ -17,7 +17,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/rate_statistics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -51,6 +51,6 @@ class RateLimiter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RateLimiter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_RATE_LIMITER_H_

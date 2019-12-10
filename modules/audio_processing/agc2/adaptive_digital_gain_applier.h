@@ -14,7 +14,7 @@
 #include "modules/audio_processing/include/audio_frame_view.h"
 #include "modules/audio_processing/vad/vad_with_level.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 
@@ -42,6 +42,6 @@ class AdaptiveDigitalGainApplier {
   bool gain_increase_allowed_ = true;
   ApmDataDumper* apm_data_dumper_ = nullptr;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_ADAPTIVE_DIGITAL_GAIN_APPLIER_H_

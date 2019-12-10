@@ -31,7 +31,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // A class to perform video frame capturing for Linux.
@@ -416,4 +416,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawScreenCapturer(
   return std::move(capturer);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,7 +17,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockPacedSender : public PacedSender {
  public:
@@ -40,6 +40,6 @@ class MockPacedSender : public PacedSender {
   MOCK_METHOD0(Process, void());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_PACING_MOCK_MOCK_PACED_SENDER_H_

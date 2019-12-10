@@ -15,7 +15,7 @@
 #include <stdint.h>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(holmer): Look into unifying this with the PacketOptions in
 // asyncpacketsocket.h.
@@ -42,6 +42,6 @@ class Transport {
   virtual ~Transport() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_CALL_TRANSPORT_H_

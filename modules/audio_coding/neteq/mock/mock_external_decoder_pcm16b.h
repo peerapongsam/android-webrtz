@@ -17,7 +17,7 @@
 #include "test/gmock.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::_;
 using ::testing::Invoke;
@@ -94,5 +94,5 @@ class MockExternalPcm16B : public AudioDecoder {
   ExternalPcm16B real_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_EXTERNAL_DECODER_PCM16B_H_

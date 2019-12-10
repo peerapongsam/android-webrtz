@@ -23,7 +23,7 @@
 #include "common_video/h264/h264_common.h"
 #include "common_video/h264/sps_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The maximum expected growth from adding a VUI to the SPS. It's actually
 // closer to 24 or so, but better safe than sorry.
@@ -313,7 +313,7 @@ bool CopyHrdParameters(rtc::BitBuffer* source,
   return true;
 }
 
-// These functions are similar to webrtc::H264SpsParser::Parse, and based on the
+// These functions are similar to webrtz::H264SpsParser::Parse, and based on the
 // same version of the H.264 standard. You can find it here:
 // http://www.itu.int/rec/T-REC-H.264
 
@@ -360,4 +360,4 @@ bool CopyRemainingBits(rtc::BitBuffer* source,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

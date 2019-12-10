@@ -16,7 +16,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 ScopedJavaLocalRef<jobject> NativeToJavaFrameType(JNIEnv* env,
@@ -44,9 +44,9 @@ ScopedJavaLocalRef<jobjectArray> NativeToJavaFrameTypeArray(
     JNIEnv* env,
     const std::vector<FrameType>& frame_types) {
   return NativeToJavaObjectArray(
-      env, frame_types, org_webrtc_EncodedImage_00024FrameType_clazz(env),
+      env, frame_types, org_webrtz_EncodedImage_00024FrameType_clazz(env),
       &NativeToJavaFrameType);
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

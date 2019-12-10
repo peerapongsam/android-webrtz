@@ -21,15 +21,15 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
 const int kIsacNumberOfSamples = 32 * 60;  // 60 ms at 32 kHz
 
 std::vector<int16_t> LoadSpeechData() {
-  webrtc::test::InputAudioFile input_file(
-      webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm"));
+  webrtz::test::InputAudioFile input_file(
+      webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm"));
   std::vector<int16_t> speech_data(kIsacNumberOfSamples);
   input_file.Read(kIsacNumberOfSamples, speech_data.data());
   return speech_data;
@@ -254,4 +254,4 @@ std::vector<IsacTestParam> TestCases() {
 
 INSTANTIATE_TEST_CASE_P(, IsacCommonTest, testing::ValuesIn(TestCases()));
 
-}  // namespace webrtc
+}  // namespace webrtz

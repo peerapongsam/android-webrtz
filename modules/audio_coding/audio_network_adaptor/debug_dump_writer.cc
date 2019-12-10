@@ -25,7 +25,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 RTC_POP_IGNORING_WUNDEF()
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 #if WEBRTC_ENABLE_PROTOBUF
 namespace {
@@ -163,4 +163,4 @@ std::unique_ptr<DebugDumpWriter> DebugDumpWriter::Create(FILE* file_handle) {
   return std::unique_ptr<DebugDumpWriter>(new DebugDumpWriterImpl(file_handle));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

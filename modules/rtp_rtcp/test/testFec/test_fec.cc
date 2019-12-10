@@ -27,7 +27,7 @@
 
 // #define VERBOSE_OUTPUT
 
-namespace webrtc {
+namespace webrtz {
 namespace fec_private_tables {
 extern const uint8_t** kPacketMaskBurstyTbl[12];
 }
@@ -126,7 +126,7 @@ void RunTest(bool use_flexfec) {
   // reproduce past results.
   const unsigned int random_seed = static_cast<unsigned int>(time(nullptr));
   Random random(random_seed);
-  std::string filename = webrtc::test::OutputPath() + "randomSeedLog.txt";
+  std::string filename = webrtz::test::OutputPath() + "randomSeedLog.txt";
   FILE* random_seed_file = fopen(filename.c_str(), "a");
   fprintf(random_seed_file, "%u\n", random_seed);
   fclose(random_seed_file);
@@ -475,4 +475,4 @@ TEST(FecTest, FlexfecTest) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -11,7 +11,7 @@
 #ifndef SYSTEM_WRAPPERS_INCLUDE_EVENT_WRAPPER_H_
 #define SYSTEM_WRAPPERS_INCLUDE_EVENT_WRAPPER_H_
 
-namespace webrtc {
+namespace webrtz {
 enum EventTypeWrapper {
   kEventSignaled = 1,
   kEventError = 2,
@@ -64,6 +64,6 @@ class EventTimerWrapper : public EventWrapper {
   virtual bool StopTimer() = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_INCLUDE_EVENT_WRAPPER_H_

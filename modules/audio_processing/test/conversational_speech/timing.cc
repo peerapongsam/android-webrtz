@@ -15,7 +15,7 @@
 
 #include "rtc_base/stringencode.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace conversational_speech {
 
@@ -68,4 +68,4 @@ void SaveTiming(const std::string& timing_filepath,
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

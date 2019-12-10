@@ -16,7 +16,7 @@
 #include <sstream>
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Prints numerical information to stdout in a controlled format, for
@@ -77,6 +77,6 @@ void SetPerfResultsOutput(FILE* output);
 void ClearPerfResults();
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_TESTSUPPORT_PERF_TEST_H_

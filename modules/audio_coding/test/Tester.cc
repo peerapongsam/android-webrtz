@@ -31,7 +31,7 @@
 #define ACM_TEST_MODE 0
 
 TEST(AudioCodingModuleTest, TestAllCodecs) {
-  webrtc::TestAllCodecs(ACM_TEST_MODE).Perform();
+  webrtz::TestAllCodecs(ACM_TEST_MODE).Perform();
 }
 
 #if defined(WEBRTC_ANDROID)
@@ -39,7 +39,7 @@ TEST(AudioCodingModuleTest, DISABLED_TestEncodeDecode) {
 #else
 TEST(AudioCodingModuleTest, TestEncodeDecode) {
 #endif
-  webrtc::EncodeDecodeTest(ACM_TEST_MODE).Perform();
+  webrtz::EncodeDecodeTest(ACM_TEST_MODE).Perform();
 }
 
 #if defined(WEBRTC_CODEC_RED)
@@ -48,7 +48,7 @@ TEST(AudioCodingModuleTest, DISABLED_TestRedFec) {
 #else
 TEST(AudioCodingModuleTest, TestRedFec) {
 #endif
-  webrtc::TestRedFec().Perform();
+  webrtz::TestRedFec().Perform();
 }
 #endif
 
@@ -58,7 +58,7 @@ TEST(AudioCodingModuleTest, DISABLED_TestIsac) {
 #else
 TEST(AudioCodingModuleTest, TestIsac) {
 #endif
-  webrtc::ISACTest(ACM_TEST_MODE).Perform();
+  webrtz::ISACTest(ACM_TEST_MODE).Perform();
 }
 #endif
 
@@ -69,7 +69,7 @@ TEST(AudioCodingModuleTest, DISABLED_TwoWayCommunication) {
 #else
 TEST(AudioCodingModuleTest, TwoWayCommunication) {
 #endif
-  webrtc::TwoWayCommunication(ACM_TEST_MODE).Perform();
+  webrtz::TwoWayCommunication(ACM_TEST_MODE).Perform();
 }
 #endif
 
@@ -79,7 +79,7 @@ TEST(AudioCodingModuleTest, DISABLED_TestStereo) {
 #else
 TEST(AudioCodingModuleTest, TestStereo) {
 #endif
-  webrtc::TestStereo(ACM_TEST_MODE).Perform();
+  webrtz::TestStereo(ACM_TEST_MODE).Perform();
 }
 
 // Disabled on ios as flaky, see https://crbug.com/webrtc/7057
@@ -88,11 +88,11 @@ TEST(AudioCodingModuleTest, DISABLED_TestWebRtcVadDtx) {
 #else
 TEST(AudioCodingModuleTest, TestWebRtcVadDtx) {
 #endif
-  webrtc::TestWebRtcVadDtx().Perform();
+  webrtz::TestWebRtcVadDtx().Perform();
 }
 
 TEST(AudioCodingModuleTest, TestOpusDtx) {
-  webrtc::TestOpusDtx().Perform();
+  webrtz::TestOpusDtx().Perform();
 }
 
 // Disabled on ios as flaky, see https://crbug.com/webrtc/7057
@@ -101,15 +101,15 @@ TEST(AudioCodingModuleTest, DISABLED_TestOpus) {
 #else
 TEST(AudioCodingModuleTest, TestOpus) {
 #endif
-  webrtc::OpusTest().Perform();
+  webrtz::OpusTest().Perform();
 }
 
 TEST(AudioCodingModuleTest, TestPacketLoss) {
-  webrtc::PacketLossTest(1, 10, 10, 1).Perform();
+  webrtz::PacketLossTest(1, 10, 10, 1).Perform();
 }
 
 TEST(AudioCodingModuleTest, TestPacketLossBurst) {
-  webrtc::PacketLossTest(1, 10, 10, 2).Perform();
+  webrtz::PacketLossTest(1, 10, 10, 2).Perform();
 }
 
 // Disabled on ios as flake, see https://crbug.com/webrtc/7057
@@ -118,7 +118,7 @@ TEST(AudioCodingModuleTest, DISABLED_TestPacketLossStereo) {
 #else
   TEST(AudioCodingModuleTest, TestPacketLossStereo) {
 #endif
-  webrtc::PacketLossTest(2, 10, 10, 1).Perform();
+  webrtz::PacketLossTest(2, 10, 10, 1).Perform();
 }
 
 // Disabled on ios as flake, see https://crbug.com/webrtc/7057
@@ -127,13 +127,13 @@ TEST(AudioCodingModuleTest, DISABLED_TestPacketLossStereoBurst) {
 #else
 TEST(AudioCodingModuleTest, TestPacketLossStereoBurst) {
 #endif
-  webrtc::PacketLossTest(2, 10, 10, 2).Perform();
+  webrtz::PacketLossTest(2, 10, 10, 2).Perform();
 }
 
 // The full API test is too long to run automatically on bots, but can be used
 // for offline testing. User interaction is needed.
 #ifdef ACM_TEST_FULL_API
   TEST(AudioCodingModuleTest, TestAPI) {
-    webrtc::APITest().Perform();
+    webrtz::APITest().Perform();
   }
 #endif

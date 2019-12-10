@@ -15,7 +15,7 @@
 
 #include "modules/congestion_controller/network_control/include/network_control.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BbrNetworkControllerFactory : public NetworkControllerFactoryInterface {
  public:
@@ -25,6 +25,6 @@ class BbrNetworkControllerFactory : public NetworkControllerFactoryInterface {
       NetworkControllerConfig config) override;
   TimeDelta GetProcessInterval() const override;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_BBR_BBR_FACTORY_H_

@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "modules/desktop_capture/desktop_capturer_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A DesktopCapturerWrapper implementation to capture the result of
 // |base_capturer|. Derived classes are expected to provide a ResultObserver
@@ -59,6 +59,6 @@ class CaptureResultDesktopCapturerWrapper
   Callback* callback_ = nullptr;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_CAPTURE_RESULT_DESKTOP_CAPTURER_WRAPPER_H_

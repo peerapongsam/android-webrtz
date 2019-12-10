@@ -15,7 +15,7 @@
 
 #include "modules/audio_processing/include/audio_frame_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A construct consisting of a multi-channel audio frame, and a FloatFrame view
 // of it.
@@ -37,6 +37,6 @@ class VectorFloatFrame {
   AudioFrameView<float> float_frame_view_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_VECTOR_FLOAT_FRAME_H_

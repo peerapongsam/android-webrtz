@@ -14,7 +14,7 @@
 #include "modules/include/module_common_types.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 void FillFrameWithConstants(size_t samples_per_channel,
@@ -63,4 +63,4 @@ TEST(AudioFrameManipulator, CompareBackwardRampWithExpectedResultMono) {
       std::equal(frame_data, frame_data + total_samples, expected_result));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

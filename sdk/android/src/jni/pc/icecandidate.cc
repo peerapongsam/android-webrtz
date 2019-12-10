@@ -17,7 +17,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/pc/mediastreamtrack.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -73,7 +73,7 @@ ScopedJavaLocalRef<jobjectArray> NativeToJavaCandidateArray(
     JNIEnv* jni,
     const std::vector<cricket::Candidate>& candidates) {
   return NativeToJavaObjectArray(jni, candidates,
-                                 org_webrtc_IceCandidate_clazz(jni),
+                                 org_webrtz_IceCandidate_clazz(jni),
                                  &NativeToJavaCandidate);
 }
 
@@ -235,4 +235,4 @@ rtc::Optional<rtc::AdapterType> JavaToNativeNetworkPreference(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

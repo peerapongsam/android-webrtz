@@ -16,7 +16,7 @@
 
 #include "modules/desktop_capture/desktop_capturer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Output the list of active screens into |screens|. Returns true if succeeded,
 // or false if it fails to enumerate the display devices. If the |device_names|
@@ -42,6 +42,6 @@ DesktopRect GetFullscreenRect();
 DesktopRect GetScreenRect(DesktopCapturer::SourceId screen,
                           const std::wstring& device_key);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_SCREEN_CAPTURE_UTILS_H_

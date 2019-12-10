@@ -30,7 +30,7 @@
 #include "rtc_base/virtualsocketserver.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using SignalingState = PeerConnectionInterface::SignalingState;
 using RTCConfiguration = PeerConnectionInterface::RTCConfiguration;
@@ -500,4 +500,4 @@ INSTANTIATE_TEST_CASE_P(PeerConnectionSignalingTest,
                         Values(SdpSemantics::kPlanB,
                                SdpSemantics::kUnifiedPlan));
 
-}  // namespace webrtc
+}  // namespace webrtz

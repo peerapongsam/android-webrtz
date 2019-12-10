@@ -16,7 +16,7 @@
 #include "modules/include/module_common_types.h"
 #include "modules/video_processing/util/denoiser_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #define DISPLAY 0      // Rectangle diagnostics
 #define DISPLAYNEON 0  // Rectangle diagnostics on NEON
@@ -58,6 +58,6 @@ class NoiseEstimation {
   std::unique_ptr<uint32_t[]> consec_low_var_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_PROCESSING_UTIL_NOISE_ESTIMATION_H_

@@ -15,7 +15,7 @@
 #include "api/optional.h"
 #include "modules/audio_coding/audio_network_adaptor/include/audio_network_adaptor_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // An AudioNetworkAdaptor optimizes the audio experience by suggesting a
 // suitable runtime configuration (bit rate, frame length, FEC, etc.) to the
@@ -47,6 +47,6 @@ class AudioNetworkAdaptor {
   virtual ANAStats GetStats() const = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_INCLUDE_AUDIO_NETWORK_ADAPTOR_H_

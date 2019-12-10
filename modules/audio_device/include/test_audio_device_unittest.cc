@@ -20,7 +20,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -199,4 +199,4 @@ TEST(PulsedNoiseCapturerTest, SetMaxAmplitude) {
   EXPECT_GT(max_sample, kAmplitude);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

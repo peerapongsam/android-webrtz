@@ -19,7 +19,7 @@
 #include "modules/audio_processing/utility/ooura_fft.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Wrapper class that provides 128 point real valued FFT functionality with the
 // FftData type.
@@ -68,6 +68,6 @@ class Aec3Fft {
   RTC_DISALLOW_COPY_AND_ASSIGN(Aec3Fft);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_AEC3_FFT_H_

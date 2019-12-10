@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/stringutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -276,4 +276,4 @@ rtc::Optional<RtpUtility::Payload> RTPPayloadRegistry::PayloadTypeToPayload(
              : rtc::Optional<RtpUtility::Payload>(it->second);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

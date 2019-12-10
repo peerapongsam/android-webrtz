@@ -17,7 +17,7 @@
 
 #include "common_audio/sparse_fir_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // An implementation of a 3-band FIR filter-bank with DCT modulation, similar to
 // the proposed in "Multirate Signal Processing for Communication Systems" by
@@ -64,6 +64,6 @@ class ThreeBandFilterBank final {
   std::vector<std::vector<float>> dct_modulation_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_THREE_BAND_FILTER_BANK_H_

@@ -20,7 +20,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -571,4 +571,4 @@ INSTANTIATE_TEST_CASE_P(_,
                         TransportFeedbackPacketLossTrackerTest,
                         testing::ValuesIn(kBases));
 
-}  // namespace webrtc
+}  // namespace webrtz

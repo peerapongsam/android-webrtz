@@ -10,7 +10,7 @@
 
 #include "modules/video_coding/fec_controller_default.h"
 
-namespace webrtc {
+namespace webrtz {
 using rtc::CritScope;
 FecControllerDefault::FecControllerDefault(
     Clock* clock,
@@ -167,4 +167,4 @@ void FecControllerDefault::UpdateWithEncodedData(
     }
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

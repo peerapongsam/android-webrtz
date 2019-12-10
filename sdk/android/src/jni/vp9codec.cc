@@ -15,7 +15,7 @@
 #include "sdk/android/generated_vp9_jni/jni/VP9Encoder_jni.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static jlong JNI_VP9Encoder_CreateEncoder(JNIEnv* jni,
@@ -39,4 +39,4 @@ static jboolean JNI_VP9Decoder_IsSupported(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 
 #include "api/stats/rtcstats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RTCTestStats : public RTCStats {
  public:
@@ -42,6 +42,6 @@ class RTCTestStats : public RTCStats {
   RTCStatsMember<std::vector<std::string>> m_sequence_string;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // STATS_TEST_RTCTESTSTATS_H_

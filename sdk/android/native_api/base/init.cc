@@ -14,11 +14,11 @@
 #include "sdk/android/native_api/jni/class_loader.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void InitAndroid(JavaVM* jvm) {
   RTC_CHECK_GE(jni::InitGlobalJniVariables(jvm), 0);
   InitClassLoader(jni::GetEnv());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 TurnCustomizer* GetNativeTurnCustomizer(
@@ -21,7 +21,7 @@ TurnCustomizer* GetNativeTurnCustomizer(
     const JavaRef<jobject>& j_turn_customizer) {
   if (IsNull(env, j_turn_customizer))
     return nullptr;
-  return reinterpret_cast<webrtc::TurnCustomizer*>(
+  return reinterpret_cast<webrtz::TurnCustomizer*>(
       Java_TurnCustomizer_getNativeTurnCustomizer(env, j_turn_customizer));
 }
 
@@ -33,4 +33,4 @@ static void JNI_TurnCustomizer_FreeTurnCustomizer(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

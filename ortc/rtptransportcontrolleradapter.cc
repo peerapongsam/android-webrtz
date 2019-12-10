@@ -26,7 +26,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Note: It's assumed that each individual list doesn't have conflicts, since
 // they should have been detected already by rtpparametersconversion.cc. This
@@ -55,10 +55,10 @@ static RTCError CheckForIdConflicts(
   }
   // Audio and video *may* use the same header extensions, so use a map.
   std::unordered_map<int, std::string> seen_extensions;
-  for (const webrtc::RtpExtension& extension : extensions_a) {
+  for (const webrtz::RtpExtension& extension : extensions_a) {
     seen_extensions[extension.id] = extension.uri;
   }
-  for (const webrtc::RtpExtension& extension : extensions_b) {
+  for (const webrtz::RtpExtension& extension : extensions_b) {
     if (seen_extensions.find(extension.id) != seen_extensions.end() &&
         seen_extensions.at(extension.id) != extension.uri) {
       oss << "Same ID used for different RTP header extensions: "
@@ -95,7 +95,7 @@ std::unique_ptr<RtpTransportControllerInterface>
 RtpTransportControllerAdapter::CreateProxied(
     const cricket::MediaConfig& config,
     cricket::ChannelManager* channel_manager,
-    webrtc::RtcEventLog* event_log,
+    webrtz::RtcEventLog* event_log,
     rtc::Thread* signaling_thread,
     rtc::Thread* worker_thread,
     rtc::Thread* network_thread) {
@@ -610,7 +610,7 @@ RTCError RtpTransportControllerAdapter::ValidateAndApplyVideoReceiverParameters(
 RtpTransportControllerAdapter::RtpTransportControllerAdapter(
     const cricket::MediaConfig& config,
     cricket::ChannelManager* channel_manager,
-    webrtc::RtcEventLog* event_log,
+    webrtz::RtcEventLog* event_log,
     rtc::Thread* signaling_thread,
     rtc::Thread* worker_thread,
     rtc::Thread* network_thread)
@@ -650,7 +650,7 @@ void RtpTransportControllerAdapter::Init_w() {
   const int kStartBandwidthBps = 300000;
   const int kMaxBandwidthBps = 2000000;
 
-  webrtc::Call::Config call_config(event_log_);
+  webrtz::Call::Config call_config(event_log_);
   call_config.audio_state = channel_manager_->media_engine()->GetAudioState();
   call_config.bitrate_config.min_bitrate_bps = kMinBandwidthBps;
   call_config.bitrate_config.start_bitrate_bps = kStartBandwidthBps;
@@ -659,7 +659,7 @@ void RtpTransportControllerAdapter::Init_w() {
       rtc::MakeUnique<RtpTransportControllerSend>(
           Clock::GetRealTimeClock(), event_log_, call_config.bitrate_config);
   call_send_rtp_transport_controller_ = controller_send.get();
-  call_.reset(webrtc::Call::Create(call_config, std::move(controller_send)));
+  call_.reset(webrtz::Call::Create(call_config, std::move(controller_send)));
 }
 
 void RtpTransportControllerAdapter::Close_w() {
@@ -931,7 +931,7 @@ RtpTransportControllerAdapter::MakeSendStreamParamsVec(
     const std::string& cname,
     const cricket::MediaContentDescription& description) const {
   if (encodings.size() > 1u) {
-    LOG_AND_RETURN_ERROR(webrtc::RTCErrorType::UNSUPPORTED_PARAMETER,
+    LOG_AND_RETURN_ERROR(webrtz::RTCErrorType::UNSUPPORTED_PARAMETER,
                          "ORTC API implementation doesn't currently "
                          "support simulcast or layered encodings.");
   } else if (encodings.empty()) {
@@ -974,4 +974,4 @@ RtpTransportControllerAdapter::MakeSendStreamParamsVec(
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

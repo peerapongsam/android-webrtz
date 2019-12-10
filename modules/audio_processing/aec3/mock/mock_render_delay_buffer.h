@@ -19,7 +19,7 @@
 #include "modules/audio_processing/aec3/render_delay_buffer.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockRenderDelayBuffer : public RenderDelayBuffer {
@@ -68,6 +68,6 @@ class MockRenderDelayBuffer : public RenderDelayBuffer {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_MOCK_MOCK_RENDER_DELAY_BUFFER_H_

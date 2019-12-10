@@ -18,7 +18,7 @@
 #include "rtc_tools/frame_editing/frame_editing_lib.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 int EditFrames(const std::string& in_path, int width, int height,
                int first_frame_to_process, int interval,
@@ -84,4 +84,4 @@ int EditFrames(const std::string& in_path, int width, int height,
   printf("Done editing!\n");
   return 0;
 }
-}  // namespace webrtc
+}  // namespace webrtz

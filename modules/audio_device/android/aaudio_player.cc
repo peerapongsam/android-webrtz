@@ -16,7 +16,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum AudioDeviceMessageType : uint32_t {
   kMessageOutputStreamDisconnected,
@@ -224,4 +224,4 @@ void AAudioPlayer::HandleStreamDisconnected() {
   InitPlayout();
   StartPlayout();
 }
-}  // namespace webrtc
+}  // namespace webrtz

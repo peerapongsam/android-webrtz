@@ -15,9 +15,9 @@
 #include "test/rtcp_packet_parser.h"
 
 using testing::ElementsAre;
-using webrtc::rtcp::Bye;
+using webrtz::rtcp::Bye;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345678;
 const uint32_t kCsrc1 = 0x22232425;
@@ -144,4 +144,4 @@ TEST(RtcpPacketByeTest, ParseFailOnInvalidReasonLength) {
   EXPECT_FALSE(test::ParseSinglePacket(raw, &parsed_bye));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "api/audio_codecs/builtin_audio_decoder_factory.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(AudioDecoderFactoryTest, CreateUnknownDecoder) {
   rtc::scoped_refptr<AudioDecoderFactory> adf =
@@ -164,4 +164,4 @@ TEST(AudioDecoderFactoryTest, CreateOpus) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

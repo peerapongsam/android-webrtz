@@ -17,7 +17,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Update bitrate at most once every second.
 const uint32_t BitrateAdjuster::kBitrateUpdateIntervalMs = 1000;
@@ -159,4 +159,4 @@ void BitrateAdjuster::UpdateBitrate(uint32_t current_time_ms) {
   last_adjusted_target_bitrate_bps_ = target_bitrate_bps_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

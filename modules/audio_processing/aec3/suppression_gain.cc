@@ -24,7 +24,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 bool EnableTransparencyImprovements() {
@@ -556,4 +556,4 @@ bool SuppressionGain::LowNoiseRenderDetector::Detect(
   return low_noise_render;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

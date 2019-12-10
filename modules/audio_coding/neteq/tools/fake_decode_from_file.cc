@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 int FakeDecodeFromFile::DecodeInternal(const uint8_t* encoded,
@@ -99,4 +99,4 @@ void FakeDecodeFromFile::PrepareEncoded(uint32_t timestamp,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

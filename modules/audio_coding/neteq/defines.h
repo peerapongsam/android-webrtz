@@ -11,7 +11,7 @@
 #ifndef MODULES_AUDIO_CODING_NETEQ_DEFINES_H_
 #define MODULES_AUDIO_CODING_NETEQ_DEFINES_H_
 
-namespace webrtc {
+namespace webrtz {
 
 enum Operations {
   kNormal = 0,
@@ -48,5 +48,5 @@ enum Modes {
   kModeUndefined = -1
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_DEFINES_H_

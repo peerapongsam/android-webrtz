@@ -20,7 +20,7 @@
 #include "rtc_base/gunit.h"
 #include "rtc_base/random.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 Random rand_gen(42);
 ApmDataDumper data_dumper(0);
@@ -80,4 +80,4 @@ TEST(AutomaticGainController2NoiseEstimator, PulseTone) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

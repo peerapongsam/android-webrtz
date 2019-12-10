@@ -17,7 +17,7 @@
 #include "system_wrappers/include/clock.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoStreamEncoder;
 
@@ -40,6 +40,6 @@ class EncoderRtcpFeedback : public RtcpIntraFrameObserver {
   std::vector<int64_t> time_last_intra_request_ms_ RTC_GUARDED_BY(crit_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_ENCODER_RTCP_FEEDBACK_H_

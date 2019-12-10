@@ -19,7 +19,7 @@
 
 using std::complex;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 DEFINE_string(clear_file, "speech.wav", "Input file with clear speech.");
@@ -89,8 +89,8 @@ int int_main(int argc, char* argv[]) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
-  return webrtc::int_main(argc, argv);
+  return webrtz::int_main(argc, argv);
 }

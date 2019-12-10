@@ -13,8 +13,8 @@
 
 #include "modules/audio_device/include/audio_device.h"
 
-namespace webrtc {
-namespace webrtc_impl {
+namespace webrtz {
+namespace webrtz_impl {
 
 // AudioDeviceModuleDefault template adds default implementation for all
 // AudioDeviceModule methods to the class, which inherits from
@@ -124,7 +124,7 @@ class AudioDeviceModuleDefault : public T {
 #endif  // WEBRTC_IOS
 };
 
-}  // namespace webrtc_impl
-}  // namespace webrtc
+}  // namespace webrtz_impl
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_INCLUDE_AUDIO_DEVICE_DEFAULT_H_

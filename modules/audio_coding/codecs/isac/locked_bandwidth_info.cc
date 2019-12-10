@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/codecs/isac/locked_bandwidth_info.h"
 
-namespace webrtc {
+namespace webrtz {
 
 LockedIsacBandwidthInfo::LockedIsacBandwidthInfo() : ref_count_(0) {
   bwinfo_.in_use = 0;
@@ -18,4 +18,4 @@ LockedIsacBandwidthInfo::LockedIsacBandwidthInfo() : ref_count_(0) {
 
 LockedIsacBandwidthInfo::~LockedIsacBandwidthInfo() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

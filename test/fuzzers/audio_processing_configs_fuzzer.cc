@@ -14,7 +14,7 @@
 #include "test/fuzzers/audio_processing_fuzzer_helper.h"
 #include "test/fuzzers/fuzz_data_helper.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 std::unique_ptr<AudioProcessing> CreateApm(test::FuzzDataHelper* fuzz_data) {
   // Parse boolean values for optionally enabling different
@@ -56,8 +56,8 @@ std::unique_ptr<AudioProcessing> CreateApm(test::FuzzDataHelper* fuzz_data) {
     return nullptr;
   }
 
-  // Components can be enabled through webrtc::Config and
-  // webrtc::AudioProcessingConfig.
+  // Components can be enabled through webrtz::Config and
+  // webrtz::AudioProcessingConfig.
   Config config;
 
   std::unique_ptr<EchoControlFactory> echo_control_factory;
@@ -80,7 +80,7 @@ std::unique_ptr<AudioProcessing> CreateApm(test::FuzzDataHelper* fuzz_data) {
           .SetEchoControlFactory(std::move(echo_control_factory))
           .Create(config));
 
-  webrtc::AudioProcessing::Config apm_config;
+  webrtz::AudioProcessing::Config apm_config;
   apm_config.residual_echo_detector.enabled = red;
   apm_config.high_pass_filter.enabled = hpf;
   apm_config.gain_controller2.enabled = use_agc2_limiter;
@@ -109,4 +109,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
     FuzzAudioProcessing(&fuzz_data, std::move(apm));
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

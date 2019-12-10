@@ -11,7 +11,7 @@
 #ifndef MODULES_AUDIO_PROCESSING_AEC3_DELAY_ESTIMATE_H_
 #define MODULES_AUDIO_PROCESSING_AEC3_DELAY_ESTIMATE_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // Stores delay_estimates.
 struct DelayEstimate {
@@ -26,6 +26,6 @@ struct DelayEstimate {
   size_t blocks_since_last_update = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_DELAY_ESTIMATE_H_

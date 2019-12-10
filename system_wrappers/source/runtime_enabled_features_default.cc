@@ -18,7 +18,7 @@ DEFINE_bool(enable_dual_stream_mode,
             "Enables dual video stream mode.");
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace runtime_enabled_features {
 
 bool IsFeatureEnabled(std::string feature_name) {
@@ -28,4 +28,4 @@ bool IsFeatureEnabled(std::string feature_name) {
 }
 
 }  // namespace runtime_enabled_features
-}  // namespace webrtc
+}  // namespace webrtz

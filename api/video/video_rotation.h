@@ -11,7 +11,7 @@
 #ifndef API_VIDEO_VIDEO_ROTATION_H_
 #define API_VIDEO_VIDEO_ROTATION_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // enum for clockwise rotation.
 enum VideoRotation {
@@ -21,6 +21,6 @@ enum VideoRotation {
   kVideoRotation_270 = 270
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_VIDEO_ROTATION_H_

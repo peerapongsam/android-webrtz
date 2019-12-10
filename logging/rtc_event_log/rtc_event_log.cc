@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/rtc_event_log.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool RtcEventLogNullImpl::StartLogging(
     std::unique_ptr<RtcEventLogOutput> output,
@@ -18,4 +18,4 @@ bool RtcEventLogNullImpl::StartLogging(
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

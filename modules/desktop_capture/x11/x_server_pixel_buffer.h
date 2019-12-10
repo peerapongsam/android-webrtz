@@ -19,7 +19,7 @@
 #include <X11/Xutil.h>
 #include <X11/extensions/XShm.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class DesktopFrame;
 
@@ -79,6 +79,6 @@ class XServerPixelBuffer {
   RTC_DISALLOW_COPY_AND_ASSIGN(XServerPixelBuffer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_X11_X_SERVER_PIXEL_BUFFER_H_

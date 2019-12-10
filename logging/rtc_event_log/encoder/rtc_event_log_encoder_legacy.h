@@ -20,7 +20,7 @@
 
 #if defined(ENABLE_RTC_EVENT_LOG)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace rtclog {
 class Event;  // Auto-generated from protobuf.
@@ -103,7 +103,7 @@ class RtcEventLogEncoderLegacy final : public RtcEventLogEncoder {
   std::string Serialize(rtclog::Event* event);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ENABLE_RTC_EVENT_LOG
 

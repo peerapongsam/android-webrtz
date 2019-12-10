@@ -22,7 +22,7 @@
 #include "modules/audio_coding/neteq/expand.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int Normal::Process(const int16_t* input,
                     size_t length,
@@ -213,4 +213,4 @@ int Normal::Process(const int16_t* input,
   return static_cast<int>(length);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

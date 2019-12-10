@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/include/aec_dump.h"
 
-namespace webrtc {
+namespace webrtz {
 InternalAPMConfig::InternalAPMConfig() = default;
 InternalAPMConfig::InternalAPMConfig(const InternalAPMConfig&) = default;
 InternalAPMConfig::InternalAPMConfig(InternalAPMConfig&&) = default;
@@ -37,4 +37,4 @@ bool InternalAPMConfig::operator==(const InternalAPMConfig& other) {
          noise_robust_agc_enabled == other.noise_robust_agc_enabled &&
          experiments_description == other.experiments_description;
 }
-}  // namespace webrtc
+}  // namespace webrtz

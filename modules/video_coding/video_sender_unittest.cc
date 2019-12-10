@@ -37,9 +37,9 @@ using ::testing::Pointee;
 using ::testing::Return;
 using ::testing::FloatEq;
 using std::vector;
-using webrtc::test::FrameGenerator;
+using webrtz::test::FrameGenerator;
 
-namespace webrtc {
+namespace webrtz {
 namespace vcm {
 namespace {
 static const int kDefaultHeight = 720;
@@ -78,7 +78,7 @@ class EmptyFrameGenerator : public FrameGenerator {
   EmptyFrameGenerator(int width, int height) : width_(width), height_(height) {}
   VideoFrame* NextFrame() override {
     frame_.reset(new VideoFrame(I420Buffer::Create(width_, height_),
-                                webrtc::kVideoRotation_0, 0));
+                                webrtz::kVideoRotation_0, 0));
     return frame_.get();
   }
 
@@ -207,7 +207,7 @@ class TestVideoSenderWithMockEncoder : public TestVideoSender {
   void SetUp() override {
     TestVideoSender::SetUp();
     sender_->RegisterExternalEncoder(&encoder_, false);
-    webrtc::test::CodecSettings(kVideoCodecVP8, &settings_);
+    webrtz::test::CodecSettings(kVideoCodecVP8, &settings_);
     settings_.numberOfSimulcastStreams = kNumberOfStreams;
     ConfigureStream(kDefaultWidth / 4, kDefaultHeight / 4, 100,
                     &settings_.simulcastStream[0]);
@@ -424,7 +424,7 @@ class TestVideoSenderWithVp8 : public TestVideoSender {
                                       int height,
                                       int temporal_layers) {
     VideoCodec codec;
-    webrtc::test::CodecSettings(kVideoCodecVP8, &codec);
+    webrtz::test::CodecSettings(kVideoCodecVP8, &codec);
     codec.width = width;
     codec.height = height;
     codec.VP8()->numberOfTemporalLayers = temporal_layers;
@@ -487,4 +487,4 @@ TEST_F(TestVideoSenderWithVp8, MAYBE_FixedTemporalLayersStrategy) {
 
 }  // namespace
 }  // namespace vcm
-}  // namespace webrtc
+}  // namespace webrtz

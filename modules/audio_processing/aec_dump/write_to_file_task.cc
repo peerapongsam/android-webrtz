@@ -12,9 +12,9 @@
 
 #include "rtc_base/protobuf_utils.h"
 
-namespace webrtc {
+namespace webrtz {
 
-WriteToFileTask::WriteToFileTask(webrtc::FileWrapper* debug_file,
+WriteToFileTask::WriteToFileTask(webrtz::FileWrapper* debug_file,
                                  int64_t* num_bytes_left_for_log)
     : debug_file_(debug_file),
       num_bytes_left_for_log_(num_bytes_left_for_log) {}
@@ -65,4 +65,4 @@ bool WriteToFileTask::Run() {
   return true;  // Delete task from queue at once.
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "modules/audio_processing/include/audio_processing.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 class AudioBuffer;
@@ -49,6 +49,6 @@ class GainController2 {
   RTC_DISALLOW_COPY_AND_ASSIGN(GainController2);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_GAIN_CONTROLLER2_H_

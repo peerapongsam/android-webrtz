@@ -20,7 +20,7 @@
 #include "modules/desktop_capture/shared_desktop_frame.h"  // Remove
 
 
-namespace webrtc {
+namespace webrtz {
 
 // Represents a queue of reusable video frames. Provides access to the 'current'
 // frame - the frame that the caller is working with at the moment, and to the
@@ -80,6 +80,6 @@ class ScreenCaptureFrameQueue {
   RTC_DISALLOW_COPY_AND_ASSIGN(ScreenCaptureFrameQueue);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_SCREEN_CAPTURE_FRAME_QUEUE_H_

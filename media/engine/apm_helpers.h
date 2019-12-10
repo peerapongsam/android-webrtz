@@ -13,7 +13,7 @@
 
 #include <cstdint>
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioProcessing;
 
@@ -45,6 +45,6 @@ void SetNsStatus(AudioProcessing* apm, bool enable);
 void SetTypingDetectionStatus(AudioProcessing* apm, bool enable);
 
 }  // namespace apm_helpers
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_ENGINE_APM_HELPERS_H_

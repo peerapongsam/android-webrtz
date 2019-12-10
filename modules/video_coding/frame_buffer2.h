@@ -25,7 +25,7 @@
 #include "rtc_base/numerics/sequence_number_util.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class VCMReceiveStatisticsCallback;
@@ -175,6 +175,6 @@ class FrameBuffer {
 };
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_FRAME_BUFFER2_H_

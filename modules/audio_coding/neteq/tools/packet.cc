@@ -18,7 +18,7 @@
 #include "modules/rtp_rtcp/include/rtp_header_parser.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 Packet::Packet(uint8_t* packet_memory,
@@ -167,4 +167,4 @@ void Packet::CopyToHeader(RTPHeader* destination) const {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

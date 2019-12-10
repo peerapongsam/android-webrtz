@@ -26,7 +26,7 @@
 #include "rtc_base/random.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketToSend;
 
@@ -88,6 +88,6 @@ class FlexfecSender {
   const size_t header_extensions_size_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_INCLUDE_FLEXFEC_SENDER_H_

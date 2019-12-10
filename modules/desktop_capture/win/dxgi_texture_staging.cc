@@ -21,7 +21,7 @@
 
 using Microsoft::WRL::ComPtr;
 
-namespace webrtc {
+namespace webrtz {
 
 DxgiTextureStaging::DxgiTextureStaging(const D3dDevice& device)
     : device_(device) {}
@@ -130,4 +130,4 @@ bool DxgiTextureStaging::DoRelease() {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

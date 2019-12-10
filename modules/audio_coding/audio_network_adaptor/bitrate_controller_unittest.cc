@@ -13,7 +13,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace audio_network_adaptor {
 
 namespace {
@@ -246,4 +246,4 @@ TEST(AnaBitrateControllerTest, CheckBehaviorOnChangingCondition) {
 }
 
 }  // namespace audio_network_adaptor
-}  // namespace webrtc
+}  // namespace webrtz

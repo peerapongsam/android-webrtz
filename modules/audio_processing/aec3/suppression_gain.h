@@ -21,7 +21,7 @@
 #include "modules/audio_processing/aec3/render_signal_analyzer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SuppressionGain {
  public:
@@ -89,6 +89,6 @@ class SuppressionGain {
   RTC_DISALLOW_COPY_AND_ASSIGN(SuppressionGain);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_SUPPRESSION_GAIN_H_

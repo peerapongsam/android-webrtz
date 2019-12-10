@@ -31,7 +31,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(deadbeef): This should be part of /api/, but currently it's not and
 // including its header violates checkdeps rules.
@@ -227,6 +227,6 @@ class OrtcFactoryInterface {
       AudioSourceInterface* source) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_ORTCFACTORYINTERFACE_H_

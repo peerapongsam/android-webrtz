@@ -75,7 +75,7 @@ int32_t FakeAudioCaptureModule::ActiveAudioLayer(
 }
 
 int32_t FakeAudioCaptureModule::RegisterAudioCallback(
-    webrtc::AudioTransport* audio_callback) {
+    webrtz::AudioTransport* audio_callback) {
   rtc::CritScope cs(&crit_callback_);
   audio_callback_ = audio_callback;
   return 0;
@@ -108,16 +108,16 @@ int16_t FakeAudioCaptureModule::RecordingDevices() {
 
 int32_t FakeAudioCaptureModule::PlayoutDeviceName(
     uint16_t /*index*/,
-    char /*name*/[webrtc::kAdmMaxDeviceNameSize],
-    char /*guid*/[webrtc::kAdmMaxGuidSize]) {
+    char /*name*/[webrtz::kAdmMaxDeviceNameSize],
+    char /*guid*/[webrtz::kAdmMaxGuidSize]) {
   RTC_NOTREACHED();
   return 0;
 }
 
 int32_t FakeAudioCaptureModule::RecordingDeviceName(
     uint16_t /*index*/,
-    char /*name*/[webrtc::kAdmMaxDeviceNameSize],
-    char /*guid*/[webrtc::kAdmMaxGuidSize]) {
+    char /*name*/[webrtz::kAdmMaxDeviceNameSize],
+    char /*guid*/[webrtz::kAdmMaxGuidSize]) {
   RTC_NOTREACHED();
   return 0;
 }

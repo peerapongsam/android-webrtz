@@ -24,7 +24,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum { kMaxReceiverDelayMs = 10000 };
 
@@ -288,4 +288,4 @@ void VCMReceiver::RegisterStatsCallback(
   jitter_buffer_.RegisterStatsCallback(callback);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

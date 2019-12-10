@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "sdk/android/generated_video_jni/jni/NV12Buffer_jni.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static void JNI_NV12Buffer_CropAndScale(JNIEnv* jni,
@@ -78,4 +78,4 @@ static void JNI_NV12Buffer_CropAndScale(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "modules/audio_processing/vad/voice_gmm_tables.h"
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static_assert(kNoiseGmmDim == kVoiceGmmDim,
               "noise and voice gmm dimension not equal");
@@ -120,4 +120,4 @@ int PitchBasedVad::UpdatePrior(double p) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

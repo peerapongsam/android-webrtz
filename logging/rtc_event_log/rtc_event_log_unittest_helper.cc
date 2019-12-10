@@ -29,7 +29,7 @@
 #include "logging/rtc_event_log/rtc_event_log.pb.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -616,4 +616,4 @@ void RtcEventLogTestHelper::VerifyProbeResultFailure(
   // TODO(philipel): Verify the parser when parsing has been implemented.
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

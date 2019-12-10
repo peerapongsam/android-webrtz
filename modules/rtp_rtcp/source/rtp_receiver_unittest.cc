@@ -20,7 +20,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::NiceMock;
@@ -469,4 +469,4 @@ TEST_F(RtpReceiverTest, UpdatesTimestampsWhenStreamResets) {
   EXPECT_EQ(latest_receive_time_ms, receive_time_2);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

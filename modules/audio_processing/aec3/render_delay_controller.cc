@@ -24,7 +24,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -278,4 +278,4 @@ RenderDelayController* RenderDelayController::Create(
                                        sample_rate_hz);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

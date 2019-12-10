@@ -19,7 +19,7 @@
 #include "modules/audio_coding/neteq/include/neteq.h"
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 // This test class provides a way run NetEQ with an external decoder.
 class NetEqExternalDecoderTest {
@@ -60,6 +60,6 @@ class NetEqExternalDecoderTest {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_NETEQ_EXTERNAL_DECODER_TEST_H_

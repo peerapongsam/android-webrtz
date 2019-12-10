@@ -22,7 +22,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #include "modules/audio_processing/debug.pb.h"
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class DebugDumpReplayer {
@@ -72,6 +72,6 @@ class DebugDumpReplayer {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_DEBUG_DUMP_REPLAYER_H_

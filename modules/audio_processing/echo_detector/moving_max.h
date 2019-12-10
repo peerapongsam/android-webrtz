@@ -13,7 +13,7 @@
 
 #include <stddef.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class MovingMax {
  public:
@@ -31,6 +31,6 @@ class MovingMax {
   size_t window_size_ = 1;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_ECHO_DETECTOR_MOVING_MAX_H_

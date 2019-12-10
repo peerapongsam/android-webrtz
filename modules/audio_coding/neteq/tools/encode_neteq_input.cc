@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 EncodeNetEqInput::EncodeNetEqInput(std::unique_ptr<Generator> generator,
@@ -85,4 +85,4 @@ void EncodeNetEqInput::CreatePacket() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

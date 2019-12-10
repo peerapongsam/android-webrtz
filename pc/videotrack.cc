@@ -13,7 +13,7 @@
 #include "pc/videotrack.h"
 #include "rtc_base/refcountedobject.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VideoTrack::VideoTrack(const std::string& label,
                        VideoTrackSourceInterface* video_source,
@@ -94,4 +94,4 @@ rtc::scoped_refptr<VideoTrack> VideoTrack::Create(
   return track;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 SplittingFilter::SplittingFilter(size_t num_channels,
                                  size_t num_bands,
@@ -105,4 +105,4 @@ void SplittingFilter::ThreeBandsSynthesis(const IFChannelBuffer* bands,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

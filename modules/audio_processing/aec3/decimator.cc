@@ -11,7 +11,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // b, a = signal.butter(2, 3400/8000.0, 'lowpass', analog=False) which are the
@@ -67,4 +67,4 @@ void Decimator::Decimate(rtc::ArrayView<const float> in,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

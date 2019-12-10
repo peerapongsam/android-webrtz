@@ -13,7 +13,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventAudioPlayout final : public RtcEvent {
  public:
@@ -27,6 +27,6 @@ class RtcEventAudioPlayout final : public RtcEvent {
   const uint32_t ssrc_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_AUDIO_PLAYOUT_H_

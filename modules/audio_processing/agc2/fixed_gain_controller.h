@@ -14,7 +14,7 @@
 #include "modules/audio_processing/agc2/gain_curve_applier.h"
 #include "modules/audio_processing/include/audio_frame_view.h"
 
-namespace webrtc {
+namespace webrtz {
 class ApmDataDumper;
 
 class FixedGainController {
@@ -34,6 +34,6 @@ class FixedGainController {
   GainCurveApplier gain_curve_applier_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_FIXED_GAIN_CONTROLLER_H_

@@ -17,7 +17,7 @@
 #include "api/mediaconstraintsinterface.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 std::unique_ptr<MediaConstraintsInterface> JavaToNativeMediaConstraints(
@@ -25,6 +25,6 @@ std::unique_ptr<MediaConstraintsInterface> JavaToNativeMediaConstraints(
     const JavaRef<jobject>& j_constraints);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_MEDIACONSTRAINTS_H_

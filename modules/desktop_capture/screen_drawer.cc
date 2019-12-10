@@ -10,7 +10,7 @@
 
 #include "modules/desktop_capture/screen_drawer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 std::unique_ptr<ScreenDrawerLock> g_screen_drawer_lock;
@@ -27,4 +27,4 @@ ScreenDrawer::~ScreenDrawer() {
   g_screen_drawer_lock.reset();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

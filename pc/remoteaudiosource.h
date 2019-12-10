@@ -25,7 +25,7 @@ struct Message;
 class Thread;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 
 // This class implements the audio source used by the remote audio track.
 // This class works by configuring itself as a sink with the underlying media
@@ -71,6 +71,6 @@ class RemoteAudioSource : public Notifier<AudioSourceInterface>,
   SourceState state_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_REMOTEAUDIOSOURCE_H_

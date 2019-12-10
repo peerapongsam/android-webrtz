@@ -19,7 +19,7 @@
 #include "rtc_base/macutils.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -186,4 +186,4 @@ void FullScreenChromeWindowDetector::UpdateWindowListIfNeeded(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

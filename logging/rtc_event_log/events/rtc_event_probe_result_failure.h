@@ -13,7 +13,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum class ProbeFailureReason {
   kInvalidSendReceiveInterval = 0,
@@ -35,6 +35,6 @@ class RtcEventProbeResultFailure final : public RtcEvent {
   const ProbeFailureReason failure_reason_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_PROBE_RESULT_FAILURE_H_

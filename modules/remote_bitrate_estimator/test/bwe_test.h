@@ -21,7 +21,7 @@
 #include "rtc_base/constructormagic.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace testing {
 namespace bwe {
@@ -191,6 +191,6 @@ struct DefaultEvaluationFilter {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_BWE_TEST_H_

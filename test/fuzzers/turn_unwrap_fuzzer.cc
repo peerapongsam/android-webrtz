@@ -13,10 +13,10 @@
 
 #include "media/base/turnutils.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   size_t content_position;
   size_t content_size;
   cricket::UnwrapTurnPacket(data, size, &content_position, &content_size);
 }
-}  // namespace webrtc
+}  // namespace webrtz

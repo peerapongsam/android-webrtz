@@ -46,18 +46,18 @@ class FakeVideoCapturer : public cricket::VideoCapturer {
   bool IsScreencast() const override;
   bool GetPreferredFourccs(std::vector<uint32_t>* fourccs) override;
 
-  void SetRotation(webrtc::VideoRotation rotation);
+  void SetRotation(webrtz::VideoRotation rotation);
 
-  webrtc::VideoRotation GetRotation();
+  webrtz::VideoRotation GetRotation();
 
  private:
-  bool CaptureFrame(const webrtc::VideoFrame& frame);
+  bool CaptureFrame(const webrtz::VideoFrame& frame);
 
   bool running_;
   const bool is_screencast_;
   // Duplicates FakeFrameSource::rotation_, but needed to support
   // SetRotation before Start.
-  webrtc::VideoRotation rotation_;
+  webrtz::VideoRotation rotation_;
   std::unique_ptr<FakeFrameSource> frame_source_;
 };
 

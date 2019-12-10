@@ -20,7 +20,7 @@ namespace rtc {
 class BitBuffer;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // A class that can parse an SPS block of a NAL unit and if necessary
 // creates a copy with updated settings to allow for faster decoding for streams
@@ -49,6 +49,6 @@ class SpsVuiRewriter : private SpsParser {
                                         rtc::Buffer* destination);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_H264_SPS_VUI_REWRITER_H_

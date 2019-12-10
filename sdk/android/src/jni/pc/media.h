@@ -15,7 +15,7 @@
 
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 class AudioDeviceModule;
 class CallFactoryInterface;
 class AudioEncoderFactory;
@@ -25,7 +25,7 @@ class AudioMixer;
 class AudioProcessing;
 class VideoEncoderFactory;
 class VideoDecoderFactory;
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace cricket {
 class MediaEngineInterface;
@@ -33,7 +33,7 @@ class WebRtcVideoEncoderFactory;
 class WebRtcVideoDecoderFactory;
 }  // namespace cricket
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 CallFactoryInterface* CreateCallFactory();
@@ -58,6 +58,6 @@ cricket::MediaEngineInterface* CreateMediaEngine(
     rtc::scoped_refptr<AudioProcessing> audio_processor);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_MEDIA_H_

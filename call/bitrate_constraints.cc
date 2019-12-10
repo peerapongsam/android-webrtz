@@ -10,9 +10,9 @@
 
 #include "call/bitrate_constraints.h"
 
-namespace webrtc {
+namespace webrtz {
 BitrateConstraintsMask::BitrateConstraintsMask() = default;
 BitrateConstraintsMask::~BitrateConstraintsMask() = default;
 BitrateConstraintsMask::BitrateConstraintsMask(const BitrateConstraintsMask&) =
     default;
-}  // namespace webrtc
+}  // namespace webrtz

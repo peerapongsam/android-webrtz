@@ -14,9 +14,9 @@
 
 void DrawGradientInRGBPixelBuffer(CVPixelBufferRef pixelBuffer);
 
-rtc::scoped_refptr<webrtc::I420Buffer> CreateI420Gradient(int width,
+rtc::scoped_refptr<webrtz::I420Buffer> CreateI420Gradient(int width,
                                                           int height);
 
 void CopyI420BufferToCVPixelBuffer(
-    rtc::scoped_refptr<webrtc::I420Buffer> i420Buffer,
+    rtc::scoped_refptr<webrtz::I420Buffer> i420Buffer,
     CVPixelBufferRef pixelBuffer);

@@ -14,7 +14,7 @@
 #include <map>
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 // SDP specification for a single video codec.
 // NOTE: This class is still under development and may change without notice.
@@ -39,6 +39,6 @@ struct SdpVideoFormat {
   Parameters parameters;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_CODECS_SDP_VIDEO_FORMAT_H_

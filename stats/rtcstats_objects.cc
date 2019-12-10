@@ -10,7 +10,7 @@
 
 #include "api/stats/rtcstats_objects.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const char* const RTCDataChannelState::kConnecting = "connecting";
 const char* const RTCDataChannelState::kOpen = "open";
@@ -716,4 +716,4 @@ RTCTransportStats::RTCTransportStats(
 RTCTransportStats::~RTCTransportStats() {
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

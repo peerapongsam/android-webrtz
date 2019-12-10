@@ -15,7 +15,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class QualityThreshold {
  public:
@@ -47,6 +47,6 @@ class QualityThreshold {
   int num_certain_states_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_QUALITY_THRESHOLD_H_

@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace H264 {
 
 TEST(H264ProfileLevelId, TestParsingInvalid) {
@@ -193,4 +193,4 @@ TEST(H264ProfileLevelId,
 }
 
 }  // namespace H264
-}  // namespace webrtc
+}  // namespace webrtz

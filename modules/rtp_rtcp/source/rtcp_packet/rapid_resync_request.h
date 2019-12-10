@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/rtpfb.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 
@@ -37,5 +37,5 @@ class RapidResyncRequest : public Rtpfb {
               PacketReadyCallback callback) const override;
 };
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_RAPID_RESYNC_REQUEST_H_

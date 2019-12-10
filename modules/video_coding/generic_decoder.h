@@ -21,7 +21,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMReceiveCallback;
 
@@ -113,6 +113,6 @@ class VCMGenericDecoder {
   VideoContentType _last_keyframe_content_type;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_GENERIC_DECODER_H_

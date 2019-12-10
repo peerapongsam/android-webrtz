@@ -20,7 +20,7 @@
 #include "rtc_base/thread.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceBuffer;
 class FineAudioBuffer;
@@ -123,6 +123,6 @@ class AAudioRecorder : public AAudioObserverInterface,
   bool first_data_callback_ = true;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_AAUDIO_RECORDER_H_

@@ -15,7 +15,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/** RTCVideoEncoderFactory is an Objective-C version of webrtc::VideoEncoderFactory. */
+/** RTCVideoEncoderFactory is an Objective-C version of webrtz::VideoEncoderFactory. */
 RTC_EXPORT
 @protocol RTCVideoEncoderFactory <NSObject>
 
@@ -24,7 +24,7 @@ RTC_EXPORT
 
 @end
 
-/** RTCVideoDecoderFactory is an Objective-C version of webrtc::VideoDecoderFactory. */
+/** RTCVideoDecoderFactory is an Objective-C version of webrtz::VideoDecoderFactory. */
 RTC_EXPORT
 @protocol RTCVideoDecoderFactory <NSObject>
 

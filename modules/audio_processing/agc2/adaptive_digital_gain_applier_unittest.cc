@@ -18,7 +18,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Constants used in place of estimated noise levels.
 constexpr float kNoNoiseDbfs = -90.f;
@@ -182,4 +182,4 @@ TEST(AutomaticGainController2AdaptiveGainApplier, NoiseLimitsGain) {
     EXPECT_NEAR(maximal_ratio, 1.f, 0.001f);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

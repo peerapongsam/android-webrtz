@@ -15,7 +15,7 @@
 #include "common_audio/include/audio_util.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 PushSincResampler::PushSincResampler(size_t source_frames,
                                      size_t destination_frames)
@@ -100,4 +100,4 @@ void PushSincResampler::Run(size_t frames, float* destination) {
   source_available_ -= frames;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

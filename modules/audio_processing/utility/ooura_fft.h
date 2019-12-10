@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(WEBRTC_ARCH_X86_FAMILY)
 void cft1st_128_SSE2(float* a);
@@ -55,6 +55,6 @@ class OouraFft {
   bool use_sse2_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_UTILITY_OOURA_FFT_H_

@@ -19,7 +19,7 @@
 #include "rtc_base/buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecInst;
 
@@ -64,5 +64,5 @@ class AudioEncoderG722Impl final : public AudioEncoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioEncoderG722Impl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_CODECS_G722_AUDIO_ENCODER_G722_H_

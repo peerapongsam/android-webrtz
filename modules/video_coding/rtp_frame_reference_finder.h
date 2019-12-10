@@ -23,7 +23,7 @@
 #include "rtc_base/numerics/sequence_number_util.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 class EncodedFrame;
@@ -226,6 +226,6 @@ class RtpFrameReferenceFinder {
 };
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_RTP_FRAME_REFERENCE_FINDER_H_

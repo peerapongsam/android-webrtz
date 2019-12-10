@@ -13,7 +13,7 @@
 #include "modules/audio_coding/neteq/tools/fake_decode_from_file.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 NetEqReplacementInput::NetEqReplacementInput(
@@ -106,4 +106,4 @@ void NetEqReplacementInput::ReplacePacket() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

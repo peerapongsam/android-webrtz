@@ -32,7 +32,7 @@
     }                                                                         \
   } while (0)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -496,4 +496,4 @@ bool AAudioWrapper::OptimizeBuffers() {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

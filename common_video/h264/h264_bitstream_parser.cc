@@ -24,7 +24,7 @@ const int kMinQpValue = 0;
 const int kMaxQpValue = 51;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 #define RETURN_ON_FAIL(x, res)            \
   if (!(x)) {                             \
@@ -314,4 +314,4 @@ bool H264BitstreamParser::GetLastSliceQp(int* qp) const {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

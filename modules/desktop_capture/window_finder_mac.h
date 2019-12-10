@@ -14,7 +14,7 @@
 #include "modules/desktop_capture/window_finder.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DesktopConfigurationMonitor;
 
@@ -32,6 +32,6 @@ class WindowFinderMac final : public WindowFinder {
   const rtc::scoped_refptr<DesktopConfigurationMonitor> configuration_monitor_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WINDOW_FINDER_MAC_H_

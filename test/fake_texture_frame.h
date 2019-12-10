@@ -15,7 +15,7 @@
 #include "common_video/include/video_frame_buffer.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class FakeNativeBuffer : public VideoFrameBuffer {
@@ -44,5 +44,5 @@ class FakeNativeBuffer : public VideoFrameBuffer {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  //  TEST_FAKE_TEXTURE_FRAME_H_

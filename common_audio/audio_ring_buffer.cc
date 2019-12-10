@@ -15,7 +15,7 @@
 
 // This is a simple multi-channel wrapper over the ring_buffer.h C interface.
 
-namespace webrtc {
+namespace webrtz {
 
 AudioRingBuffer::AudioRingBuffer(size_t channels, size_t max_frames) {
   buffers_.reserve(channels);
@@ -72,4 +72,4 @@ void AudioRingBuffer::MoveReadPositionBackward(size_t frames) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

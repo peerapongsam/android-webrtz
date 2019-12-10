@@ -15,7 +15,7 @@
 #include "test/testsupport/fileutils.h"
 #include "test/testsupport/frame_writer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -34,7 +34,7 @@ class Y4mFrameWriterTest : public testing::Test {
   ~Y4mFrameWriterTest() override = default;
 
   void SetUp() override {
-    temp_filename_ = webrtc::test::TempFilename(webrtc::test::OutputPath(),
+    temp_filename_ = webrtz::test::TempFilename(webrtz::test::OutputPath(),
                                                 "y4m_frame_writer_unittest");
     frame_writer_.reset(new Y4mFrameWriterImpl(temp_filename_, kFrameWidth,
                                                kFrameHeight, kFrameRate));
@@ -74,4 +74,4 @@ TEST_F(Y4mFrameWriterTest, WriteFrameUninitialized) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

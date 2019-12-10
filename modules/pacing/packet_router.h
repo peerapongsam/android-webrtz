@@ -23,7 +23,7 @@
 #include "rtc_base/race_checker.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpRtcp;
 namespace rtcp {
@@ -121,5 +121,5 @@ class PacketRouter : public PacedSender::PacketSender,
 
   RTC_DISALLOW_COPY_AND_ASSIGN(PacketRouter);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_PACING_PACKET_ROUTER_H_

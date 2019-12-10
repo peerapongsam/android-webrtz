@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const float kSpatialLayeringRateScalingFactor = 0.55f;
@@ -146,4 +146,4 @@ std::vector<size_t> SvcRateAllocator::SplitBitrate(size_t num_layers,
   return bitrates;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

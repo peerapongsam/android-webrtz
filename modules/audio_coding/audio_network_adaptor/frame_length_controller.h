@@ -17,7 +17,7 @@
 #include "modules/audio_coding/audio_network_adaptor/controller.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Determines target frame length based on the network metrics and the decision
 // of FEC controller.
@@ -86,6 +86,6 @@ class FrameLengthController final : public Controller {
   RTC_DISALLOW_COPY_AND_ASSIGN(FrameLengthController);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_FRAME_LENGTH_CONTROLLER_H_

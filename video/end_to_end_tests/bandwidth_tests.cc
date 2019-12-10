@@ -17,7 +17,7 @@
 #include "test/rtcp_packet_parser.h"
 #include "test/rtp_rtcp_observer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BandwidthEndToEndTest : public test::CallTest,
                               public testing::WithParamInterface<std::string> {
@@ -355,4 +355,4 @@ TEST_P(BandwidthEndToEndTest, ReportsSetEncoderRates) {
 
   RunBaseTest(&test);
 }
-}  // namespace webrtc
+}  // namespace webrtz

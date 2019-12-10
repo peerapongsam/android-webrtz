@@ -12,7 +12,7 @@
 #include "common_video/libyuv/include/webrtc_libyuv.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 #define D3DFVF_CUSTOMVERTEX (D3DFVF_XYZ|D3DFVF_TEX1)
@@ -192,7 +192,7 @@ void D3dRenderer::Resize(size_t width, size_t height) {
   vertex_buffer_->Unlock();
 }
 
-void D3dRenderer::OnFrame(const webrtc::VideoFrame& frame) {
+void D3dRenderer::OnFrame(const webrtz::VideoFrame& frame) {
   if (static_cast<size_t>(frame.width()) != width_ ||
       static_cast<size_t>(frame.height()) != height_) {
     Resize(static_cast<size_t>(frame.width()),
@@ -217,4 +217,4 @@ void D3dRenderer::OnFrame(const webrtc::VideoFrame& frame) {
   d3d_device_->Present(NULL, NULL, NULL, NULL);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

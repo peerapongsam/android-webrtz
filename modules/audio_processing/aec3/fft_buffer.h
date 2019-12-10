@@ -16,7 +16,7 @@
 #include "modules/audio_processing/aec3/fft_data.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Struct for bundling a circular buffer of FftData objects together with the
 // read and write indices.
@@ -53,6 +53,6 @@ struct FftBuffer {
   int read = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_FFT_BUFFER_H_

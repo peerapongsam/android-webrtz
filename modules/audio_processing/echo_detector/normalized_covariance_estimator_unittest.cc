@@ -12,7 +12,7 @@
 #include "modules/audio_processing/echo_detector/normalized_covariance_estimator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(NormalizedCovarianceEstimatorTests, IdenticalSignalTest) {
   NormalizedCovarianceEstimator test_estimator;
@@ -37,4 +37,4 @@ TEST(NormalizedCovarianceEstimatorTests, OppositeSignalTest) {
   EXPECT_NEAR(-1.f, test_estimator.normalized_cross_correlation(), 0.01f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

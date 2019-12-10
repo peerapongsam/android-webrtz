@@ -21,7 +21,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 FILE* FileOpen(const char* file_name_utf8, bool read_only) {
 #if defined(_WIN32)
@@ -151,4 +151,4 @@ int FileWrapper::FlushImpl() {
   return (file_ != nullptr) ? fflush(file_) : -1;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

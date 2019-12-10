@@ -19,7 +19,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -143,4 +143,4 @@ Stats<double> PacketReceiver::GetDelayStats() const {
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

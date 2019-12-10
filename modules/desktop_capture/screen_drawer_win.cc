@@ -15,7 +15,7 @@
 #include "modules/desktop_capture/screen_drawer.h"
 #include "system_wrappers/include/sleep.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -206,4 +206,4 @@ std::unique_ptr<ScreenDrawer> ScreenDrawer::Create() {
   return std::unique_ptr<ScreenDrawer>(new ScreenDrawerWin());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

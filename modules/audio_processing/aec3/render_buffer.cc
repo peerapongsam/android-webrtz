@@ -15,7 +15,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RenderBuffer::RenderBuffer(MatrixBuffer* block_buffer,
                            VectorBuffer* spectrum_buffer,
@@ -47,4 +47,4 @@ void RenderBuffer::SpectralSum(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

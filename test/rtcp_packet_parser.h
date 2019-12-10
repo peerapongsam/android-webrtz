@@ -31,7 +31,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/transport_feedback.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 // Parse RTCP packet of given type. Assumes RTCP header is valid and that there
 // is excatly one packet of correct type in the buffer.
@@ -117,5 +117,5 @@ class RtcpPacketParser {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // TEST_RTCP_PACKET_PARSER_H_

@@ -17,7 +17,7 @@
 
 #include "modules/rtp_rtcp/source/rtcp_packet.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 
@@ -55,5 +55,5 @@ class Bye : public RtcpPacket {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_BYE_H_

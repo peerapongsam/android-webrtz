@@ -14,7 +14,7 @@
 
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 #if defined(WEBRTC_USE_H264)
@@ -82,4 +82,4 @@ TEST_F(VideoProcessorIntegrationTestOpenH264, SingleNalUnit) {
 #endif  // defined(WEBRTC_USE_H264)
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

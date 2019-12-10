@@ -54,7 +54,7 @@ const char kBweWindowSizeInPacketsExperiment[] =
 
 size_t ReadTrendlineFilterWindowSize() {
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kBweWindowSizeInPacketsExperiment);
+      webrtz::field_trial::FindFullName(kBweWindowSizeInPacketsExperiment);
   size_t window_size;
   int parsed_values =
       sscanf(experiment_string.c_str(), "Enabled-%zu", &window_size);
@@ -69,8 +69,8 @@ size_t ReadTrendlineFilterWindowSize() {
 }
 }  // namespace
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 
 DelayBasedBwe::Result::Result()
     : updated(false),
@@ -94,7 +94,7 @@ DelayBasedBwe::DelayBasedBwe(RtcEventLog* event_log)
       uma_recorded_(false),
       probe_bitrate_estimator_(event_log),
       trendline_window_size_(
-          webrtc::field_trial::IsEnabled(kBweWindowSizeInPacketsExperiment)
+          webrtz::field_trial::IsEnabled(kBweWindowSizeInPacketsExperiment)
               ? ReadTrendlineFilterWindowSize()
               : kDefaultTrendlineWindowSize),
       trendline_smoothing_coeff_(kDefaultTrendlineSmoothingCoeff),
@@ -327,5 +327,5 @@ void DelayBasedBwe::SetMinBitrate(int min_bitrate_bps) {
 int64_t DelayBasedBwe::GetExpectedBwePeriodMs() const {
   return rate_control_.GetExpectedBandwidthPeriodMs();
 }
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

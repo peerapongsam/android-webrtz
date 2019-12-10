@@ -17,7 +17,7 @@
 
 #include "common_video/include/video_bitrate_allocator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SvcRateAllocator : public VideoBitrateAllocator {
  public:
@@ -35,6 +35,6 @@ class SvcRateAllocator : public VideoBitrateAllocator {
   const VideoCodec codec_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP9_SVC_RATE_ALLOCATOR_H_

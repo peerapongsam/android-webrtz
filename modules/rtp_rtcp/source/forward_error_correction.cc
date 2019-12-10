@@ -25,7 +25,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/numerics/mod_ops.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Transport header size in bytes. Assume UDP/IPv4 as a reasonable minimum.
@@ -779,4 +779,4 @@ size_t FecHeaderWriter::MaxPacketOverhead() const {
   return max_packet_overhead_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

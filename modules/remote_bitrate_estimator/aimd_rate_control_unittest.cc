@@ -14,7 +14,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr int64_t kClockInitialTime = 123456;
@@ -247,4 +247,4 @@ TEST(AimdRateControlTest, BandwidthPeriodIsNotAboveMaxNoSmoothingExp) {
             states.aimd_rate_control->GetExpectedBandwidthPeriodMs());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

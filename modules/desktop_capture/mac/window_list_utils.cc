@@ -19,10 +19,10 @@
 #include "rtc_base/macutils.h"
 
 static_assert(
-    static_cast<webrtc::WindowId>(kCGNullWindowID) == webrtc::kNullWindowId,
+    static_cast<webrtz::WindowId>(kCGNullWindowID) == webrtz::kNullWindowId,
     "kNullWindowId needs to equal to kCGNullWindowID.");
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -306,4 +306,4 @@ DesktopRect GetWindowBounds(const MacDesktopConfiguration& desktop_config,
   return ApplyScaleFactorOfRect(desktop_config, rect);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

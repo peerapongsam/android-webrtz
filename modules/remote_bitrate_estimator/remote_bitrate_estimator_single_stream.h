@@ -21,7 +21,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/rate_statistics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RemoteBitrateEstimatorSingleStream : public RemoteBitrateEstimator {
  public:
@@ -70,6 +70,6 @@ class RemoteBitrateEstimatorSingleStream : public RemoteBitrateEstimator {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RemoteBitrateEstimatorSingleStream);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_REMOTE_BITRATE_ESTIMATOR_SINGLE_STREAM_H_

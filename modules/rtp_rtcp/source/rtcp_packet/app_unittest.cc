@@ -14,12 +14,12 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::ElementsAreArray;
 using ::testing::make_tuple;
-using ::webrtc::rtcp::App;
+using ::webrtz::rtcp::App;
 
 constexpr uint32_t kName = ((uint32_t)'n' << 24) | ((uint32_t)'a' << 16) |
                            ((uint32_t)'m' << 8) | (uint32_t)'e';
@@ -107,4 +107,4 @@ TEST(RtcpPacketAppTest, ParseFailsOnUnalignedPayload) {
   EXPECT_FALSE(test::ParseSinglePacket(kPacketWithUnalignedPayload, &parsed));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -27,7 +27,7 @@ const int kMaxPicInitQpDeltaValue = 25;
 const int kMinPicInitQpDeltaValue = -26;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // General note: this is based off the 02/2014 version of the H.264 standard.
 // You can find it on this page:
@@ -198,4 +198,4 @@ bool PpsParser::ParsePpsIdsInternal(rtc::BitBuffer* bit_buffer,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

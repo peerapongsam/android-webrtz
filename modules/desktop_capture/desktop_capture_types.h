@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Type used to identify windows on the desktop. Values are platform-specific:
 //   - On Windows: HWND cast to intptr_t.
@@ -54,6 +54,6 @@ namespace DesktopCapturerId {
       CreateFourCC('D', 'X', 'G', 'I');
 }  // namespace DesktopCapturerId
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURE_TYPES_H_

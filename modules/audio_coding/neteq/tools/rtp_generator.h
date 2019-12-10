@@ -16,7 +16,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Class for generating RTP headers.
@@ -80,5 +80,5 @@ class TimestampJumpRtpGenerator : public RtpGenerator {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_RTP_GENERATOR_H_

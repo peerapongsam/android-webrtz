@@ -16,7 +16,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr float kPi = 3.141592f;
@@ -208,4 +208,4 @@ TEST(SuppressionFilter, Delay) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

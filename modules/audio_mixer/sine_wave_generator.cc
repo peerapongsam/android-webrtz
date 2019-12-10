@@ -14,7 +14,7 @@
 
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr float kPi = 3.14159265f;
@@ -31,4 +31,4 @@ void SineWaveGenerator::GenerateNextFrame(AudioFrame* frame) {
     phase_ += wave_frequency_hz_ * 2 * kPi / frame->sample_rate_hz_;
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

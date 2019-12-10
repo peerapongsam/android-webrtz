@@ -14,14 +14,14 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceModule;
 class AudioProcessing;
 class AudioTransport;
 
 // AudioState holds the state which must be shared between multiple instances of
-// webrtc::Call for audio processing purposes.
+// webrtz::Call for audio processing purposes.
 class AudioState : public rtc::RefCountInterface {
  public:
   struct Config {
@@ -30,10 +30,10 @@ class AudioState : public rtc::RefCountInterface {
     rtc::scoped_refptr<AudioMixer> audio_mixer;
 
     // The audio processing module.
-    rtc::scoped_refptr<webrtc::AudioProcessing> audio_processing;
+    rtc::scoped_refptr<webrtz::AudioProcessing> audio_processing;
 
     // TODO(solenberg): Temporary: audio device module.
-    rtc::scoped_refptr<webrtc::AudioDeviceModule> audio_device_module;
+    rtc::scoped_refptr<webrtz::AudioDeviceModule> audio_device_module;
   };
 
   struct Stats {
@@ -67,6 +67,6 @@ class AudioState : public rtc::RefCountInterface {
 
   virtual ~AudioState() {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_AUDIO_STATE_H_

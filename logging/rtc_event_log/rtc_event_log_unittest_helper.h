@@ -16,7 +16,7 @@
 #include "modules/rtp_rtcp/source/rtp_packet_received.h"
 #include "modules/rtp_rtcp/source/rtp_packet_to_send.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLogTestHelper {
  public:
@@ -86,6 +86,6 @@ class RtcEventLogTestHelper {
                                        ProbeFailureReason failure_reason);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_RTC_EVENT_LOG_UNITTEST_HELPER_H_

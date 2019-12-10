@@ -19,7 +19,7 @@
 #include "rtc_base/random.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -180,4 +180,4 @@ bool BlackWhiteDesktopFramePainter::Paint(DesktopFrame* frame,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

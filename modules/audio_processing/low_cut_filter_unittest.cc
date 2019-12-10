@@ -16,7 +16,7 @@
 #include "modules/audio_processing/test/bitexactness_tools.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Process one frame of data and produce the output.
@@ -679,4 +679,4 @@ TEST(LowCutFilterBitExactnessTest, Stereo16kHzConverged) {
       16000, 2, CreateVector(rtc::ArrayView<const float>(kReferenceInput)),
       CreateVector(rtc::ArrayView<const float>(kReference)));
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/random.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Randomizes the elements in a vector with values -32767.f:32767.f.
 void RandomizeSampleVector(Random* random_generator, rtc::ArrayView<float> v);
@@ -39,6 +39,6 @@ class DelayBuffer {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(DelayBuffer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_ECHO_CANCELLER_TEST_TOOLS_H_

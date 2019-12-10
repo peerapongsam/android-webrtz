@@ -11,7 +11,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 struct MyExperiment {
@@ -80,4 +80,4 @@ TEST(Config, SupportsPolymorphism) {
   EXPECT_EQ(25, config.Get<Algo1_CostFunction>().cost(5));
 }
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

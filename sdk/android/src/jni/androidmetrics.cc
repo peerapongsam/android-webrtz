@@ -18,7 +18,7 @@
 #include "system_wrappers/include/metrics_default.h"
 
 // Enables collection of native histograms and creating them.
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static void JNI_Metrics_Enable(JNIEnv* jni, const JavaParamRef<jclass>&) {
@@ -50,4 +50,4 @@ static ScopedJavaLocalRef<jobject> JNI_Metrics_GetAndReset(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

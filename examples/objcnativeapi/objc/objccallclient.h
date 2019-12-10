@@ -22,7 +22,7 @@
 @class RTCVideoCapturer;
 @protocol RTCVideoRenderer;
 
-namespace webrtc_examples {
+namespace webrtz_examples {
 
 class ObjCCallClient {
  public:
@@ -32,21 +32,21 @@ class ObjCCallClient {
   void Hangup();
 
  private:
-  class PCObserver : public webrtc::PeerConnectionObserver {
+  class PCObserver : public webrtz::PeerConnectionObserver {
    public:
     explicit PCObserver(ObjCCallClient* client);
 
     void OnSignalingChange(
-        webrtc::PeerConnectionInterface::SignalingState new_state) override;
+        webrtz::PeerConnectionInterface::SignalingState new_state) override;
     void OnDataChannel(
-        rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel) override;
+        rtc::scoped_refptr<webrtz::DataChannelInterface> data_channel) override;
     void OnRenegotiationNeeded() override;
     void OnIceConnectionChange(
-        webrtc::PeerConnectionInterface::IceConnectionState new_state) override;
+        webrtz::PeerConnectionInterface::IceConnectionState new_state) override;
     void OnIceGatheringChange(
-        webrtc::PeerConnectionInterface::IceGatheringState new_state) override;
+        webrtz::PeerConnectionInterface::IceGatheringState new_state) override;
     void OnIceCandidate(
-        const webrtc::IceCandidateInterface* candidate) override;
+        const webrtz::IceCandidateInterface* candidate) override;
 
    private:
     const ObjCCallClient* client_;
@@ -62,23 +62,23 @@ class ObjCCallClient {
 
   const std::unique_ptr<PCObserver> pc_observer_;
 
-  rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface> pcf_
+  rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface> pcf_
       RTC_GUARDED_BY(thread_checker_);
   std::unique_ptr<rtc::Thread> network_thread_ RTC_GUARDED_BY(thread_checker_);
   std::unique_ptr<rtc::Thread> worker_thread_ RTC_GUARDED_BY(thread_checker_);
   std::unique_ptr<rtc::Thread> signaling_thread_
       RTC_GUARDED_BY(thread_checker_);
 
-  std::unique_ptr<rtc::VideoSinkInterface<webrtc::VideoFrame>> remote_sink_
+  std::unique_ptr<rtc::VideoSinkInterface<webrtz::VideoFrame>> remote_sink_
       RTC_GUARDED_BY(thread_checker_);
-  rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> video_source_
+  rtc::scoped_refptr<webrtz::VideoTrackSourceInterface> video_source_
       RTC_GUARDED_BY(thread_checker_);
 
   rtc::CriticalSection pc_mutex_;
-  rtc::scoped_refptr<webrtc::PeerConnectionInterface> pc_
+  rtc::scoped_refptr<webrtz::PeerConnectionInterface> pc_
       RTC_GUARDED_BY(pc_mutex_);
 };
 
-}  // namespace webrtc_examples
+}  // namespace webrtz_examples
 
 #endif  // EXAMPLES_OBJCNATIVEAPI_OBJCCALLCLIENT_H_

@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kInputSamples = 50;
 
@@ -100,4 +100,4 @@ TEST_F(PoleZeroFilterTest, FiftySubframes) {
   FilterSubframes(50);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_probe_result_failure.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventProbeResultFailure::RtcEventProbeResultFailure(
     int id,
@@ -25,4 +25,4 @@ bool RtcEventProbeResultFailure::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

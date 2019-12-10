@@ -26,7 +26,7 @@ extern "C" {
 }
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The following structures are declared anonymous in iSAC's structs.h. To
 // forward declare them, we use this derived class trick.
@@ -273,4 +273,4 @@ void VadAudioProc::Rms(double* rms, size_t length_rms) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include <math.h>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int16_t kReliabilityThreshold = 100;
@@ -56,4 +56,4 @@ float GainChangeCalculator::CalculateDifferences(
   }
   return res;
 }
-}  // namespace webrtc
+}  // namespace webrtz

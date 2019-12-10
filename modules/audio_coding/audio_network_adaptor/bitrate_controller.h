@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/controller.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace audio_network_adaptor {
 
 class BitrateController final : public Controller {
@@ -49,6 +49,6 @@ class BitrateController final : public Controller {
 };
 
 }  // namespace audio_network_adaptor
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_BITRATE_CONTROLLER_H_

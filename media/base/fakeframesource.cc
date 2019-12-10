@@ -21,31 +21,31 @@ FakeFrameSource::FakeFrameSource(int width, int height, int interval_us)
   RTC_CHECK_GT(interval_us_, 0);
 }
 
-webrtc::VideoRotation FakeFrameSource::GetRotation() {
+webrtz::VideoRotation FakeFrameSource::GetRotation() {
   return rotation_;
 }
 
-void FakeFrameSource::SetRotation(webrtc::VideoRotation rotation) {
+void FakeFrameSource::SetRotation(webrtz::VideoRotation rotation) {
   rotation_ = rotation;
 }
 
-webrtc::VideoFrame FakeFrameSource::GetFrame() {
+webrtz::VideoFrame FakeFrameSource::GetFrame() {
   return GetFrame(width_, height_, interval_us_);
 }
 
-webrtc::VideoFrame FakeFrameSource::GetFrame(int width,
+webrtz::VideoFrame FakeFrameSource::GetFrame(int width,
                                              int height,
                                              int interval_us) {
   RTC_CHECK_GT(width, 0);
   RTC_CHECK_GT(height, 0);
   RTC_CHECK_GT(interval_us, 0);
 
-  rtc::scoped_refptr<webrtc::I420Buffer> buffer(
-      webrtc::I420Buffer::Create(width, height));
+  rtc::scoped_refptr<webrtz::I420Buffer> buffer(
+      webrtz::I420Buffer::Create(width, height));
 
   buffer->InitializeData();
-  webrtc::VideoFrame frame =
-      webrtc::VideoFrame(buffer, rotation_, next_timestamp_us_);
+  webrtz::VideoFrame frame =
+      webrtz::VideoFrame(buffer, rotation_, next_timestamp_us_);
 
   next_timestamp_us_ += interval_us;
   return frame;

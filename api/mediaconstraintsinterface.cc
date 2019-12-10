@@ -26,7 +26,7 @@ namespace {
 // first instance has an unrecognized value are not handled precisely in
 // accordance with the specification.
 template <typename T>
-bool FindConstraint(const webrtc::MediaConstraintsInterface* constraints,
+bool FindConstraint(const webrtz::MediaConstraintsInterface* constraints,
                     const std::string& key,
                     T* value,
                     size_t* mandatory_constraints) {
@@ -39,7 +39,7 @@ bool FindConstraint(const webrtc::MediaConstraintsInterface* constraints,
 
 // Specialization for std::string, since a string doesn't need conversion.
 template <>
-bool FindConstraint(const webrtc::MediaConstraintsInterface* constraints,
+bool FindConstraint(const webrtz::MediaConstraintsInterface* constraints,
                     const std::string& key,
                     std::string* value,
                     size_t* mandatory_constraints) {
@@ -61,7 +61,7 @@ bool FindConstraint(const webrtc::MediaConstraintsInterface* constraints,
 // Converts a constraint (mandatory takes precedence over optional) to an
 // rtc::Optional.
 template <typename T>
-void ConstraintToOptional(const webrtc::MediaConstraintsInterface* constraints,
+void ConstraintToOptional(const webrtz::MediaConstraintsInterface* constraints,
                           const std::string& key,
                           rtc::Optional<T>* value_out) {
   T value;
@@ -72,7 +72,7 @@ void ConstraintToOptional(const webrtc::MediaConstraintsInterface* constraints,
 }
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 const char MediaConstraintsInterface::kValueTrue[] = "true";
 const char MediaConstraintsInterface::kValueFalse[] = "false";
@@ -263,4 +263,4 @@ void CopyConstraintsIntoAudioOptions(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DefaultTemporalLayers : public TemporalLayers {
  public:
@@ -80,5 +80,5 @@ class DefaultTemporalLayersChecker : public TemporalLayersChecker {
   uint8_t pattern_idx_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_DEFAULT_TEMPORAL_LAYERS_H_

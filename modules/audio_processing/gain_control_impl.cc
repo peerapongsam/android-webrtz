@@ -16,7 +16,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 typedef void Handle;
 
@@ -436,4 +436,4 @@ int GainControlImpl::Configure() {
   }
   return error;
 }
-}  // namespace webrtc
+}  // namespace webrtz

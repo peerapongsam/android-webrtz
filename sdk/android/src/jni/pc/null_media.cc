@@ -10,7 +10,7 @@
 
 #include "sdk/android/src/jni/pc/media.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 CallFactoryInterface* CreateCallFactory() {
@@ -44,4 +44,4 @@ cricket::MediaEngineInterface* CreateMediaEngine(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

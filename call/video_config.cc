@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/strings/string_builder.h"
 
-namespace webrtc {
+namespace webrtz {
 VideoStream::VideoStream()
     : width(0),
       height(0),
@@ -138,4 +138,4 @@ void VideoEncoderConfig::Vp9EncoderSpecificSettings::FillVideoCodecVp9(
   *vp9_settings = specifics_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

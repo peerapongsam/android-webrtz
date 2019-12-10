@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -128,4 +128,4 @@ void Aec3Fft::PaddedFft(rtc::ArrayView<const float> x,
   Fft(&fft, X);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

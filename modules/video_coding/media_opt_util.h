@@ -20,7 +20,7 @@
 #include "rtc_base/numerics/exp_filter.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace media_optimization {
 
 // Number of time periods used for (max) window filter for packet loss
@@ -355,6 +355,6 @@ class VCMLossProtectionLogic {
 };
 
 }  // namespace media_optimization
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_MEDIA_OPT_UTIL_H_

@@ -18,7 +18,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 StreamGenerator::StreamGenerator(uint16_t start_seq_num, int64_t current_time)
     : packets_(), sequence_number_(start_seq_num), start_time_(current_time) {}
@@ -126,4 +126,4 @@ std::list<VCMPacket>::iterator StreamGenerator::GetPacketIterator(int index) {
   return it;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 
 #include <stdint.h>
 
-namespace webrtc {
+namespace webrtz {
 
 // Note: This interface will be deprecated in favor of the
 // TargetTransferRateObserver interface. The new interface provides more
@@ -37,5 +37,5 @@ class NetworkChangedObserver {
  protected:
   virtual ~NetworkChangedObserver() {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_CONGESTION_CONTROLLER_INCLUDE_NETWORK_CHANGED_OBSERVER_H_

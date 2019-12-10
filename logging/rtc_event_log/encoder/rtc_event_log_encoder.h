@@ -17,7 +17,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 class RtcEventLogEncoder {
  public:
   virtual ~RtcEventLogEncoder() = default;
@@ -30,6 +30,6 @@ class RtcEventLogEncoder {
       std::deque<std::unique_ptr<RtcEvent>>::const_iterator end) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_ENCODER_RTC_EVENT_LOG_ENCODER_H_

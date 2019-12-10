@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 namespace ios {
 
 bool CheckAndLogError(BOOL success, NSError* error);
@@ -71,6 +71,6 @@ bool GetLowPowerModeEnabled();
 #endif
 
 }  // namespace ios
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_CLASSES_COMMON_HELPERS_H_

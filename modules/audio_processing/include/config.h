@@ -16,7 +16,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Only add new values to the end of the enumeration and never remove (only
 // deprecate) to maintain binary compatibility.
@@ -128,6 +128,6 @@ void Config::Set(T* value) {
   delete it;
   it = new Option<T>(value);
 }
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INCLUDE_CONFIG_H_

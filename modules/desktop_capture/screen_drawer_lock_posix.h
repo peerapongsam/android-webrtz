@@ -15,7 +15,7 @@
 
 #include "modules/desktop_capture/screen_drawer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ScreenDrawerLockPosix final : public ScreenDrawerLock {
  public:
@@ -33,6 +33,6 @@ class ScreenDrawerLockPosix final : public ScreenDrawerLock {
   sem_t* semaphore_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_SCREEN_DRAWER_LOCK_POSIX_H_

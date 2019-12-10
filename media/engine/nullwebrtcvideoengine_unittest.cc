@@ -22,27 +22,27 @@ class WebRtcMediaEngineNullVideo
     : public CompositeMediaEngine<WebRtcVoiceEngine, NullWebRtcVideoEngine> {
  public:
   WebRtcMediaEngineNullVideo(
-      webrtc::AudioDeviceModule* adm,
-      const rtc::scoped_refptr<webrtc::AudioEncoderFactory>&
+      webrtz::AudioDeviceModule* adm,
+      const rtc::scoped_refptr<webrtz::AudioEncoderFactory>&
           audio_encoder_factory,
-      const rtc::scoped_refptr<webrtc::AudioDecoderFactory>&
+      const rtc::scoped_refptr<webrtz::AudioDecoderFactory>&
           audio_decoder_factory)
       : CompositeMediaEngine<WebRtcVoiceEngine, NullWebRtcVideoEngine>(
             std::forward_as_tuple(adm,
                                   audio_encoder_factory,
                                   audio_decoder_factory,
                                   nullptr,
-                                  webrtc::AudioProcessingBuilder().Create()),
+                                  webrtz::AudioProcessingBuilder().Create()),
             std::forward_as_tuple()) {}
 };
 
 // Simple test to check if NullWebRtcVideoEngine implements the methods
 // required by CompositeMediaEngine.
 TEST(NullWebRtcVideoEngineTest, CheckInterface) {
-  testing::NiceMock<webrtc::test::MockAudioDeviceModule> adm;
+  testing::NiceMock<webrtz::test::MockAudioDeviceModule> adm;
   WebRtcMediaEngineNullVideo engine(
-      &adm, webrtc::MockAudioEncoderFactory::CreateUnusedFactory(),
-      webrtc::MockAudioDecoderFactory::CreateUnusedFactory());
+      &adm, webrtz::MockAudioEncoderFactory::CreateUnusedFactory(),
+      webrtz::MockAudioDecoderFactory::CreateUnusedFactory());
   EXPECT_TRUE(engine.Init());
 }
 

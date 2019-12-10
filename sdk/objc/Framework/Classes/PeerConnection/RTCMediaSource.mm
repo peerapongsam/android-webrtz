@@ -19,7 +19,7 @@
 @synthesize nativeMediaSource = _nativeMediaSource;
 
 - (instancetype)initWithNativeMediaSource:
-   (rtc::scoped_refptr<webrtc::MediaSourceInterface>)nativeMediaSource
+   (rtc::scoped_refptr<webrtz::MediaSourceInterface>)nativeMediaSource
                                      type:(RTCMediaSourceType)type {
   RTC_DCHECK(nativeMediaSource);
   if (self = [super init]) {
@@ -35,30 +35,30 @@
 
 #pragma mark - Private
 
-+ (webrtc::MediaSourceInterface::SourceState)nativeSourceStateForState:
++ (webrtz::MediaSourceInterface::SourceState)nativeSourceStateForState:
     (RTCSourceState)state {
   switch (state) {
     case RTCSourceStateInitializing:
-      return webrtc::MediaSourceInterface::kInitializing;
+      return webrtz::MediaSourceInterface::kInitializing;
     case RTCSourceStateLive:
-      return webrtc::MediaSourceInterface::kLive;
+      return webrtz::MediaSourceInterface::kLive;
     case RTCSourceStateEnded:
-      return webrtc::MediaSourceInterface::kEnded;
+      return webrtz::MediaSourceInterface::kEnded;
     case RTCSourceStateMuted:
-      return webrtc::MediaSourceInterface::kMuted;
+      return webrtz::MediaSourceInterface::kMuted;
   }
 }
 
 + (RTCSourceState)sourceStateForNativeState:
-    (webrtc::MediaSourceInterface::SourceState)nativeState {
+    (webrtz::MediaSourceInterface::SourceState)nativeState {
   switch (nativeState) {
-    case webrtc::MediaSourceInterface::kInitializing:
+    case webrtz::MediaSourceInterface::kInitializing:
       return RTCSourceStateInitializing;
-    case webrtc::MediaSourceInterface::kLive:
+    case webrtz::MediaSourceInterface::kLive:
       return RTCSourceStateLive;
-    case webrtc::MediaSourceInterface::kEnded:
+    case webrtz::MediaSourceInterface::kEnded:
       return RTCSourceStateEnded;
-    case webrtc::MediaSourceInterface::kMuted:
+    case webrtz::MediaSourceInterface::kMuted:
       return RTCSourceStateMuted;
   }
 }

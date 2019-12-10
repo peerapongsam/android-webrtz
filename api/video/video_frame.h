@@ -16,7 +16,7 @@
 #include "api/video/video_rotation.h"
 #include "api/video/video_frame_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoFrame {
  public:
@@ -24,7 +24,7 @@ class VideoFrame {
   // cricket::WebRtcVideoFrame. We should consider whether or not we
   // want to stick to this style and deprecate the other constructor.
   VideoFrame(const rtc::scoped_refptr<VideoFrameBuffer>& buffer,
-             webrtc::VideoRotation rotation,
+             webrtz::VideoRotation rotation,
              int64_t timestamp_us);
 
   // Preferred constructor.
@@ -52,7 +52,7 @@ class VideoFrame {
   int64_t timestamp_us() const { return timestamp_us_; }
   void set_timestamp_us(int64_t timestamp_us) { timestamp_us_ = timestamp_us; }
 
-  // TODO(nisse): After the cricket::VideoFrame and webrtc::VideoFrame
+  // TODO(nisse): After the cricket::VideoFrame and webrtz::VideoFrame
   // merge, timestamps other than timestamp_us will likely be
   // deprecated.
 
@@ -93,7 +93,7 @@ class VideoFrame {
 
   // Return the underlying buffer. Never nullptr for a properly
   // initialized VideoFrame.
-  rtc::scoped_refptr<webrtc::VideoFrameBuffer> video_frame_buffer() const;
+  rtc::scoped_refptr<webrtz::VideoFrameBuffer> video_frame_buffer() const;
 
   // TODO(nisse): Deprecated.
   // Return true if the frame is stored in a texture.
@@ -103,13 +103,13 @@ class VideoFrame {
 
  private:
   // An opaque reference counted handle that stores the pixel data.
-  rtc::scoped_refptr<webrtc::VideoFrameBuffer> video_frame_buffer_;
+  rtc::scoped_refptr<webrtz::VideoFrameBuffer> video_frame_buffer_;
   uint32_t timestamp_rtp_;
   int64_t ntp_time_ms_;
   int64_t timestamp_us_;
   VideoRotation rotation_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_VIDEO_FRAME_H_

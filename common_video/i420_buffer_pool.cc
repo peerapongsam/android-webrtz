@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 I420BufferPool::I420BufferPool() : I420BufferPool(false) {}
 I420BufferPool::I420BufferPool(bool zero_initialize)
@@ -58,4 +58,4 @@ rtc::scoped_refptr<I420Buffer> I420BufferPool::CreateBuffer(int width,
   return buffer;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

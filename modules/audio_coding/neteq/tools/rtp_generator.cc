@@ -12,7 +12,7 @@
 
 #include "modules/audio_coding/neteq/tools/rtp_generator.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 uint32_t RtpGenerator::GetRtpHeader(uint8_t payload_type,
@@ -58,4 +58,4 @@ uint32_t TimestampJumpRtpGenerator::GetRtpHeader(uint8_t payload_type,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

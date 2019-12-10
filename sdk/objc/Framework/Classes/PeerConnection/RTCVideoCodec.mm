@@ -41,7 +41,7 @@ NSString *const kRTCLevel31ConstrainedBaseline = @"42e01f";
   return self;
 }
 
-- (instancetype)initWithNativeSdpVideoFormat:(webrtc::SdpVideoFormat)format {
+- (instancetype)initWithNativeSdpVideoFormat:(webrtz::SdpVideoFormat)format {
   NSMutableDictionary *params = [NSMutableDictionary dictionary];
   for (auto it = format.parameters.begin(); it != format.parameters.end(); ++it) {
     [params setObject:[NSString stringForStdString:it->second]
@@ -52,7 +52,7 @@ NSString *const kRTCLevel31ConstrainedBaseline = @"42e01f";
 
 - (instancetype)initWithNativeVideoCodec:(cricket::VideoCodec)videoCodec {
   return [self
-      initWithNativeSdpVideoFormat:webrtc::SdpVideoFormat(videoCodec.name, videoCodec.params)];
+      initWithNativeSdpVideoFormat:webrtz::SdpVideoFormat(videoCodec.name, videoCodec.params)];
 }
 
 - (BOOL)isEqualToCodecInfo:(RTCVideoCodecInfo *)info {
@@ -76,7 +76,7 @@ NSString *const kRTCLevel31ConstrainedBaseline = @"42e01f";
   return [self.name hash] ^ [self.parameters hash];
 }
 
-- (webrtc::SdpVideoFormat)nativeSdpVideoFormat {
+- (webrtz::SdpVideoFormat)nativeSdpVideoFormat {
   std::map<std::string, std::string> parameters;
   for (NSString *paramKey in _parameters.allKeys) {
     std::string key = [NSString stdStringForString:paramKey];
@@ -84,7 +84,7 @@ NSString *const kRTCLevel31ConstrainedBaseline = @"42e01f";
     parameters[key] = value;
   }
 
-  return webrtc::SdpVideoFormat([NSString stdStringForString:_name], parameters);
+  return webrtz::SdpVideoFormat([NSString stdStringForString:_name], parameters);
 }
 
 - (cricket::VideoCodec)nativeVideoCodec {

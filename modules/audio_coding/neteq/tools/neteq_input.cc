@@ -12,7 +12,7 @@
 
 #include <sstream>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 std::string NetEqInput::PacketData::ToString() const {
@@ -29,4 +29,4 @@ std::string NetEqInput::PacketData::ToString() const {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

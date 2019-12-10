@@ -22,7 +22,7 @@
 // supports Linux and pure C symbols.
 // See talk/sound/pulseaudiosymboltable.(h|cc) for an example.
 
-namespace webrtc {
+namespace webrtz {
 namespace adm_linux {
 
 #ifdef WEBRTC_LINUX
@@ -142,7 +142,7 @@ enum {
   extern const char* const                                     \
       ClassName##_kSymbolNames[ClassName##_SYMBOL_TABLE_SIZE]; \
                                                                \
-  typedef ::webrtc::adm_linux::LateBindingSymbolTable<         \
+  typedef ::webrtz::adm_linux::LateBindingSymbolTable<         \
       ClassName##_SYMBOL_TABLE_SIZE, ClassName##_kDllName,     \
       ClassName##_kSymbolNames>                                \
       ClassName;
@@ -173,6 +173,6 @@ const char *const ClassName##_kSymbolNames[ClassName##_SYMBOL_TABLE_SIZE] = {
       (inst)->GetSymbol(LATESYM_INDEXOF(ClassName, sym))))
 
 }  // namespace adm_linux
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ADM_LATEBINDINGSYMBOLTABLE_LINUX_H_

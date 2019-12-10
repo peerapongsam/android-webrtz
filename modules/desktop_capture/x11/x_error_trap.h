@@ -15,7 +15,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper class that registers X Window error handler. Caller can use
 // GetLastErrorAndDisable() to get the last error that was caught, if any.
@@ -34,6 +34,6 @@ class XErrorTrap {
   RTC_DISALLOW_COPY_AND_ASSIGN(XErrorTrap);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_X11_X_ERROR_TRAP_H_

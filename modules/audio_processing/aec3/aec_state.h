@@ -30,7 +30,7 @@
 #include "modules/audio_processing/aec3/suppression_gain_limiter.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 
@@ -177,6 +177,6 @@ class AecState {
   RTC_DISALLOW_COPY_AND_ASSIGN(AecState);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_AEC_STATE_H_

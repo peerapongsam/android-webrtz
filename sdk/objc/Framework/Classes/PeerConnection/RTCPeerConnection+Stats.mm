@@ -16,7 +16,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class StatsObserverAdapter : public StatsObserver {
  public:
@@ -44,7 +44,7 @@ class StatsObserverAdapter : public StatsObserver {
  private:
   void (^completion_handler_)(NSArray<RTCLegacyStatsReport *> *stats);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 @implementation RTCPeerConnection (Stats)
 
@@ -52,10 +52,10 @@ class StatsObserverAdapter : public StatsObserver {
      statsOutputLevel:(RTCStatsOutputLevel)statsOutputLevel
     completionHandler:
     (void (^)(NSArray<RTCLegacyStatsReport *> *stats))completionHandler {
-  rtc::scoped_refptr<webrtc::StatsObserverAdapter> observer(
-      new rtc::RefCountedObject<webrtc::StatsObserverAdapter>
+  rtc::scoped_refptr<webrtz::StatsObserverAdapter> observer(
+      new rtc::RefCountedObject<webrtz::StatsObserverAdapter>
           (completionHandler));
-  webrtc::PeerConnectionInterface::StatsOutputLevel nativeOutputLevel =
+  webrtz::PeerConnectionInterface::StatsOutputLevel nativeOutputLevel =
       [[self class] nativeStatsOutputLevelForLevel:statsOutputLevel];
   self.nativePeerConnection->GetStats(
       observer, mediaStreamTrack.nativeTrack, nativeOutputLevel);

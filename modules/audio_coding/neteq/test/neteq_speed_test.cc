@@ -33,7 +33,7 @@ int main(int argc, char* argv[]) {
       "  --lossrate=N           drop every N packets; default is 10\n"
       "  --drift=F              clockdrift factor between 0.0 and 1.0; "
       "default is 0.1\n";
-  webrtc::test::SetExecutablePath(argv[0]);
+  webrtz::test::SetExecutablePath(argv[0]);
   if (rtc::FlagList::SetFlagsFromCommandLine(&argc, argv, true) ||
       FLAG_help || argc != 1) {
     printf("%s", usage.c_str());
@@ -48,7 +48,7 @@ int main(int argc, char* argv[]) {
   RTC_CHECK(FLAG_drift >= 0.0 && FLAG_drift < 1.0);
 
   int64_t result =
-      webrtc::test::NetEqPerformanceTest::Run(FLAG_runtime_ms, FLAG_lossrate,
+      webrtz::test::NetEqPerformanceTest::Run(FLAG_runtime_ms, FLAG_lossrate,
                                               FLAG_drift);
   if (result <= 0) {
     std::cout << "There was an error" << std::endl;

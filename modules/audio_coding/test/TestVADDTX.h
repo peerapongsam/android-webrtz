@@ -19,7 +19,7 @@
 #include "modules/audio_coding/test/ACMTest.h"
 #include "modules/audio_coding/test/Channel.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ActivityMonitor : public ACMVADCallback {
  public:
@@ -98,6 +98,6 @@ class TestOpusDtx final : public TestVadDtx {
   void Perform() override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_TESTVADDTX_H_

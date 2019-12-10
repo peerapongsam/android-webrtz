@@ -14,7 +14,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SineWaveGenerator {
  public:
@@ -33,6 +33,6 @@ class SineWaveGenerator {
   const int16_t amplitude_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_MIXER_SINE_WAVE_GENERATOR_H_

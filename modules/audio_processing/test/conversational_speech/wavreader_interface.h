@@ -16,7 +16,7 @@
 #include "api/array_view.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace conversational_speech {
 
@@ -36,6 +36,6 @@ class WavReaderInterface {
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_CONVERSATIONAL_SPEECH_WAVREADER_INTERFACE_H_

@@ -31,7 +31,7 @@ void CompareFiles(const char* reference_file_name, const char* test_file_name,
 
   FILE* results_file = fopen(results_file_name, "w");
 
-  int size = webrtc::test::GetI420FrameSize(width, height);
+  int size = webrtz::test::GetI420FrameSize(width, height);
 
   // Allocate buffers for test and reference frames.
   uint8_t* test_frame = new uint8_t[size];
@@ -40,21 +40,21 @@ void CompareFiles(const char* reference_file_name, const char* test_file_name,
   bool read_result = true;
   for (int frame_counter = 0; frame_counter < MAX_NUM_FRAMES_PER_FILE;
       ++frame_counter) {
-    read_result &= (y4m_mode) ? webrtc::test::ExtractFrameFromY4mFile(
+    read_result &= (y4m_mode) ? webrtz::test::ExtractFrameFromY4mFile(
         reference_file_name, width, height, frame_counter, ref_frame):
-        webrtc::test::ExtractFrameFromYuvFile(reference_file_name, width,
+        webrtz::test::ExtractFrameFromYuvFile(reference_file_name, width,
                                               height, frame_counter, ref_frame);
-    read_result &=  webrtc::test::ExtractFrameFromYuvFile(test_file_name, width,
+    read_result &=  webrtz::test::ExtractFrameFromYuvFile(test_file_name, width,
         height, frame_counter, test_frame);
 
     if (!read_result)
       break;
 
     // Calculate the PSNR and SSIM.
-    double result_psnr = webrtc::test::CalculateMetrics(
-        webrtc::test::kPSNR, ref_frame, test_frame, width, height);
-    double result_ssim = webrtc::test::CalculateMetrics(
-        webrtc::test::kSSIM, ref_frame, test_frame, width, height);
+    double result_psnr = webrtz::test::CalculateMetrics(
+        webrtz::test::kPSNR, ref_frame, test_frame, width, height);
+    double result_ssim = webrtz::test::CalculateMetrics(
+        webrtz::test::kSSIM, ref_frame, test_frame, width, height);
     fprintf(results_file, "Frame: %d, PSNR: %f, SSIM: %f\n", frame_counter,
             result_psnr, result_ssim);
   }
@@ -98,7 +98,7 @@ int main(int argc, char* argv[]) {
       "  - results_file(string): The full name of the file where the results "
       "will be written. Default: results.txt\n";
 
-  webrtc::test::CommandLineParser parser;
+  webrtz::test::CommandLineParser parser;
 
   // Init the parser and set the usage message
   parser.Init(argc, argv);

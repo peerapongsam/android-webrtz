@@ -11,7 +11,7 @@
 #include "modules/video_coding/packet_buffer.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 class NullCallback : public video_coding::OnReceivedFrameCallback {
@@ -43,4 +43,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,11 +15,11 @@
 
 #include "modules/audio_processing/include/audio_processing.h"
 #include "test/fuzzers/fuzz_data_helper.h"
-namespace webrtc {
+namespace webrtz {
 
 void FuzzAudioProcessing(test::FuzzDataHelper* fuzz_data,
                          std::unique_ptr<AudioProcessing> apm);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FUZZERS_AUDIO_PROCESSING_FUZZER_HELPER_H_

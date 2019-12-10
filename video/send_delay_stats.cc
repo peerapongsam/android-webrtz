@@ -15,7 +15,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Packet with a larger delay are removed and excluded from the delay stats.
 // Set to larger than max histogram delay which is 10000.
@@ -117,4 +117,4 @@ void SendDelayStats::RemoveOld(int64_t now, PacketMap* packets) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 #include "pc/webrtcsdp.h"
 #include "rtc_base/stringencode.h"
 
-namespace webrtc {
+namespace webrtz {
 
 IceCandidateInterface* CreateIceCandidate(const std::string& sdp_mid,
                                           int sdp_mline_index,
@@ -92,4 +92,4 @@ size_t JsepCandidateCollection::remove(const cricket::Candidate& candidate) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

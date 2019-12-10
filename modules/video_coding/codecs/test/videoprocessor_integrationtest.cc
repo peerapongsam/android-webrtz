@@ -38,7 +38,7 @@
 #include "system_wrappers/include/sleep.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -58,23 +58,23 @@ bool RunEncodeInRealTime(const TestConfig& config) {
 }  // namespace
 
 void VideoProcessorIntegrationTest::H264KeyframeChecker::CheckEncodedFrame(
-    webrtc::VideoCodecType codec,
+    webrtz::VideoCodecType codec,
     const EncodedImage& encoded_frame) const {
   EXPECT_EQ(kVideoCodecH264, codec);
   bool contains_sps = false;
   bool contains_pps = false;
   bool contains_idr = false;
-  const std::vector<webrtc::H264::NaluIndex> nalu_indices =
-      webrtc::H264::FindNaluIndices(encoded_frame._buffer,
+  const std::vector<webrtz::H264::NaluIndex> nalu_indices =
+      webrtz::H264::FindNaluIndices(encoded_frame._buffer,
                                     encoded_frame._length);
-  for (const webrtc::H264::NaluIndex& index : nalu_indices) {
-    webrtc::H264::NaluType nalu_type = webrtc::H264::ParseNaluType(
+  for (const webrtz::H264::NaluIndex& index : nalu_indices) {
+    webrtz::H264::NaluType nalu_type = webrtz::H264::ParseNaluType(
         encoded_frame._buffer[index.payload_start_offset]);
-    if (nalu_type == webrtc::H264::NaluType::kSps) {
+    if (nalu_type == webrtz::H264::NaluType::kSps) {
       contains_sps = true;
-    } else if (nalu_type == webrtc::H264::NaluType::kPps) {
+    } else if (nalu_type == webrtz::H264::NaluType::kPps) {
       contains_pps = true;
-    } else if (nalu_type == webrtc::H264::NaluType::kIdr) {
+    } else if (nalu_type == webrtz::H264::NaluType::kIdr) {
       contains_idr = true;
     }
   }
@@ -483,4 +483,4 @@ void VideoProcessorIntegrationTest::PrintSettings(
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

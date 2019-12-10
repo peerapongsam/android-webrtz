@@ -70,11 +70,11 @@ DEFINE_bool(help, false, "Print this message.");
 
 bool ParseArgsAndSetupEstimator(int argc,
                                 char** argv,
-                                webrtc::Clock* clock,
-                                webrtc::RemoteBitrateObserver* observer,
-                                webrtc::test::RtpFileReader** rtp_reader,
-                                webrtc::RtpHeaderParser** parser,
-                                webrtc::RemoteBitrateEstimator** estimator,
+                                webrtz::Clock* clock,
+                                webrtz::RemoteBitrateObserver* observer,
+                                webrtz::test::RtpFileReader** rtp_reader,
+                                webrtz::RtpHeaderParser** parser,
+                                webrtz::RemoteBitrateEstimator** estimator,
                                 std::string* estimator_used) {
   if (rtc::FlagList::SetFlagsFromCommandLine(&argc, argv, true)) {
     return 1;
@@ -93,13 +93,13 @@ bool ParseArgsAndSetupEstimator(int argc,
   fprintf(stderr, "\n");
   if (filename.substr(filename.find_last_of(".")) == ".pcap") {
     fprintf(stderr, "Opening as pcap\n");
-    *rtp_reader = webrtc::test::RtpFileReader::Create(
-        webrtc::test::RtpFileReader::kPcap, filename.c_str(),
+    *rtp_reader = webrtz::test::RtpFileReader::Create(
+        webrtz::test::RtpFileReader::kPcap, filename.c_str(),
         flags::SsrcFilter());
   } else {
     fprintf(stderr, "Opening as rtp\n");
-    *rtp_reader = webrtc::test::RtpFileReader::Create(
-        webrtc::test::RtpFileReader::kRtpDump, filename.c_str());
+    *rtp_reader = webrtz::test::RtpFileReader::Create(
+        webrtz::test::RtpFileReader::kRtpDump, filename.c_str());
   }
   if (!*rtp_reader) {
     fprintf(stderr, "Cannot open input file %s\n", filename.c_str());
@@ -107,9 +107,9 @@ bool ParseArgsAndSetupEstimator(int argc,
   }
   fprintf(stderr, "Input file: %s\n\n", filename.c_str());
 
-  webrtc::RTPExtensionType extension = webrtc::kRtpExtensionAbsoluteSendTime;
+  webrtz::RTPExtensionType extension = webrtz::kRtpExtensionAbsoluteSendTime;
   if (flags::ExtensionType() == "tsoffset") {
-    extension = webrtc::kRtpExtensionTransmissionTimeOffset;
+    extension = webrtz::kRtpExtensionTransmissionTimeOffset;
     fprintf(stderr, "Extension: toffset\n");
   } else if (flags::ExtensionType() == "abs") {
     fprintf(stderr, "Extension: abs\n");
@@ -119,19 +119,19 @@ bool ParseArgsAndSetupEstimator(int argc,
   }
 
   // Setup the RTP header parser and the bitrate estimator.
-  *parser = webrtc::RtpHeaderParser::Create();
+  *parser = webrtz::RtpHeaderParser::Create();
   (*parser)->RegisterRtpHeaderExtension(extension, flags::ExtensionId());
   if (estimator) {
     switch (extension) {
-      case webrtc::kRtpExtensionAbsoluteSendTime: {
+      case webrtz::kRtpExtensionAbsoluteSendTime: {
         *estimator =
-            new webrtc::RemoteBitrateEstimatorAbsSendTime(observer, clock);
+            new webrtz::RemoteBitrateEstimatorAbsSendTime(observer, clock);
         *estimator_used = "AbsoluteSendTimeRemoteBitrateEstimator";
         break;
         }
-      case webrtc::kRtpExtensionTransmissionTimeOffset: {
+      case webrtz::kRtpExtensionTransmissionTimeOffset: {
         *estimator =
-            new webrtc::RemoteBitrateEstimatorSingleStream(observer, clock);
+            new webrtz::RemoteBitrateEstimatorSingleStream(observer, clock);
           *estimator_used = "RemoteBitrateEstimator";
           break;
         }

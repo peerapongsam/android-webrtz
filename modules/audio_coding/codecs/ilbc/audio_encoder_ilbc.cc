@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -152,4 +152,4 @@ size_t AudioEncoderIlbcImpl::RequiredOutputSizeBytes() const {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

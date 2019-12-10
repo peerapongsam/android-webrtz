@@ -22,7 +22,7 @@
 #include "call/rtp_packet_sink_interface.h"
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class FlexfecReceiveStream : public RtpPacketSinkInterface {
  public:
@@ -83,6 +83,6 @@ class FlexfecReceiveStream : public RtpPacketSinkInterface {
   virtual const Config& GetConfig() const = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_FLEXFEC_RECEIVE_STREAM_H_

@@ -10,7 +10,7 @@
 
 #include "modules/desktop_capture/desktop_capturer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawScreenCapturer(
@@ -18,4 +18,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawScreenCapturer(
   return nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

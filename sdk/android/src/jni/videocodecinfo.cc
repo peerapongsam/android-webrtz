@@ -14,7 +14,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 SdpVideoFormat VideoCodecInfoToSdpVideoFormat(JNIEnv* jni,
@@ -38,4 +38,4 @@ ScopedJavaLocalRef<jobject> SdpVideoFormatToVideoCodecInfo(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

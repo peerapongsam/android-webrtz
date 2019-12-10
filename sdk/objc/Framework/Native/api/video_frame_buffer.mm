@@ -12,7 +12,7 @@
 
 #include "sdk/objc/Framework/Native/src/objc_frame_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::scoped_refptr<VideoFrameBuffer> ObjCToNativeVideoFrameBuffer(
     id<RTCVideoFrameBuffer> objc_video_frame_buffer) {
@@ -24,4 +24,4 @@ id<RTCVideoFrameBuffer> NativeToObjCVideoFrameBuffer(
   return ToObjCVideoFrameBuffer(buffer);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

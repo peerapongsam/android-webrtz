@@ -18,7 +18,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -68,6 +68,6 @@ class MinRttFilter {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_ESTIMATORS_MIN_RTT_FILTER_H_

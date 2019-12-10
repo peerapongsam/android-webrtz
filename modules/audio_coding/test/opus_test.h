@@ -22,7 +22,7 @@
 #include "modules/audio_coding/test/PCMFile.h"
 #include "modules/audio_coding/test/TestStereo.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class OpusTest : public ACMTest {
  public:
@@ -56,6 +56,6 @@ class OpusTest : public ACMTest {
   WebRtcOpusDecInst* opus_stereo_decoder_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_OPUS_TEST_H_

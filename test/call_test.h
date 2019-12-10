@@ -25,7 +25,7 @@
 #include "test/rtp_rtcp_observer.h"
 #include "test/single_threaded_task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class BaseTest;
@@ -118,7 +118,7 @@ class CallTest : public ::testing::Test {
 
   Clock* const clock_;
 
-  std::unique_ptr<webrtc::RtcEventLog> event_log_;
+  std::unique_ptr<webrtz::RtcEventLog> event_log_;
   std::unique_ptr<Call> sender_call_;
   RtpTransportControllerSend* sender_call_transport_controller_;
   std::unique_ptr<PacketTransport> send_transport_;
@@ -215,7 +215,7 @@ class BaseTest : public RtpRtcpObserver {
 
   virtual void OnStreamsStopped();
 
-  std::unique_ptr<webrtc::RtcEventLog> event_log_;
+  std::unique_ptr<webrtz::RtcEventLog> event_log_;
 };
 
 class SendTest : public BaseTest {
@@ -234,6 +234,6 @@ class EndToEndTest : public BaseTest {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_CALL_TEST_H_

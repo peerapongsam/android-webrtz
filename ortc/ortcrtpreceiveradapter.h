@@ -22,7 +22,7 @@
 #include "rtc_base/sigslot.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of OrtcRtpReceiverInterface that works with
 // RtpTransportAdapter, and wraps a VideoRtpReceiver/AudioRtpReceiver that's
@@ -74,6 +74,6 @@ class OrtcRtpReceiverAdapter : public OrtcRtpReceiverInterface {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(OrtcRtpReceiverAdapter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ORTC_ORTCRTPRECEIVERADAPTER_H_

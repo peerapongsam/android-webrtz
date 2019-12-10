@@ -20,7 +20,7 @@
 #include "media/base/codec.h"
 #include "pc/mediasession.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // NOTE: Some functions are templated for convenience, such that template-based
 // code dealing with AudioContentDescription and VideoContentDescription can
@@ -28,13 +28,13 @@ namespace webrtc {
 // cricket::VideoCodec.
 
 //***************************************************************************
-// Functions for converting from new webrtc:: structures to old cricket::
+// Functions for converting from new webrtz:: structures to old cricket::
 // structures.
 //
 // As the return values imply, all of these functions do validation of the
 // parameters and return an error if they're invalid. It's expected that any
 // default values (such as video clock rate of 90000) have been filled by the
-// time the webrtc:: structure is being converted to the cricket:: one.
+// time the webrtz:: structure is being converted to the cricket:: one.
 //
 // These are expected to be used when parameters are passed into an RtpSender
 // or RtpReceiver, and need to be validated and converted so they can be
@@ -67,14 +67,14 @@ RTCErrorOr<cricket::StreamParamsVec> ToCricketStreamParamsVec(
     const std::vector<RtpEncodingParameters>& encodings);
 
 //*****************************************************************************
-// Functions for converting from old cricket:: structures to new webrtc::
+// Functions for converting from old cricket:: structures to new webrtz::
 // structures. Unlike the above functions, these are permissive with regards to
 // input validation; it's assumed that any necessary validation already
 // occurred.
 //
 // These are expected to be used either to convert from audio/video engine
 // capabilities to RtpCapabilities, or to convert from already-parsed SDP
-// (in the form of cricket:: structures) to webrtc:: structures. The latter
+// (in the form of cricket:: structures) to webrtz:: structures. The latter
 // functionality is not yet implemented.
 //*****************************************************************************
 
@@ -103,6 +103,6 @@ RtpParameters ToRtpParameters(
     const cricket::RtpHeaderExtensions& cricket_extensions,
     const cricket::StreamParamsVec& stream_params);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ORTC_RTPPARAMETERSCONVERSION_H_

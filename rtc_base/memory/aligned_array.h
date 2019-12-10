@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/memory/aligned_malloc.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Wrapper class for aligned arrays. Every row (and the first dimension) are
 // aligned to the given byte alignment.
@@ -73,6 +73,6 @@ class AlignedArray {
   T** head_row_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_MEMORY_ALIGNED_ARRAY_H_

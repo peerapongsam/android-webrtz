@@ -36,7 +36,7 @@
 #include "system_wrappers/include/clock.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcpBandwidthObserver;
 
@@ -468,6 +468,6 @@ class PeriodicKeyFrameSource : public AdaptiveVideoSource {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_BWE_TEST_FRAMEWORK_H_

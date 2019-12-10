@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 // Frame numbering starts at 1. The set of frames to be processed includes the
 // frame with the number: first_frame_to_process and last_frame_to_process.
@@ -34,6 +34,6 @@ namespace webrtc {
 int EditFrames(const std::string& in_path, int width, int height,
                 int first_frame_to_process, int interval,
                 int last_frame_to_process, const std::string& out_path);
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_FRAME_EDITING_FRAME_EDITING_LIB_H_

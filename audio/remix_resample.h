@@ -13,7 +13,7 @@
 
 #include "common_audio/resampler/include/push_resampler.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 
@@ -41,6 +41,6 @@ void RemixAndResample(const int16_t* src_data,
                       AudioFrame* dst_frame);
 
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_REMIX_RESAMPLE_H_

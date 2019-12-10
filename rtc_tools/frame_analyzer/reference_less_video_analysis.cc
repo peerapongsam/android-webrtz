@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
       "  - video_file(string): Path of the video "
       "file to be analyzed. Only y4m file format is supported.\n";
 
-  webrtc::test::CommandLineParser parser;
+  webrtz::test::CommandLineParser parser;
 
   // Init the parser and set the usage message.
   parser.Init(argc, argv);

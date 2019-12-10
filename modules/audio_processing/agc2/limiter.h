@@ -15,7 +15,7 @@
 
 #include "modules/audio_processing/agc2/agc2_testing_common.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A class for computing gain curve parameters. The gain curve is
 // defined by constants kLimiterMaxInputLevelDbFs, kLimiterKneeSmoothnessDb,
@@ -69,6 +69,6 @@ class Limiter {
   const double gain_curve_limiter_i2_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_LIMITER_H_

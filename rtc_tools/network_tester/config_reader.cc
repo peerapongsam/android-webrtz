@@ -12,7 +12,7 @@
 #include <string>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 ConfigReader::ConfigReader(const std::string& config_file_path)
     : proto_config_index_(0) {
@@ -47,4 +47,4 @@ rtc::Optional<ConfigReader::Config> ConfigReader::GetNextConfig() {
 #endif  //  WEBRTC_NETWORK_TESTER_PROTO
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

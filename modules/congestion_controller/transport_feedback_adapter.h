@@ -20,7 +20,7 @@
 #include "rtc_base/thread_checker.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class PacketFeedbackObserver;
 
@@ -75,6 +75,6 @@ class TransportFeedbackAdapter {
       RTC_GUARDED_BY(&observers_lock_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_TRANSPORT_FEEDBACK_ADAPTER_H_

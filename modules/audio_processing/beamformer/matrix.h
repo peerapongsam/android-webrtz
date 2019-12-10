@@ -35,7 +35,7 @@ std::complex<S> sqrt_wrapper(std::complex<S> x) {
 }
 } // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 // Matrix is a class for doing standard matrix operations on 2 dimensional
 // matrices of any size. Results of matrix operations are stored in the
@@ -364,6 +364,6 @@ class Matrix {
   RTC_DISALLOW_COPY_AND_ASSIGN(Matrix);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_BEAMFORMER_MATRIX_H_

@@ -16,7 +16,7 @@
 
 #include "modules/video_coding/include/video_codec_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VP9Encoder : public VideoEncoder {
  public:
@@ -33,6 +33,6 @@ class VP9Decoder : public VideoDecoder {
 
   ~VP9Decoder() override {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP9_INCLUDE_VP9_H_

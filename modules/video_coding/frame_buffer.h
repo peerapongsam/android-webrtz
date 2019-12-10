@@ -20,7 +20,7 @@
 #include "modules/video_coding/session_info.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMFrameBuffer : public VCMEncodedFrame {
  public:
@@ -76,7 +76,7 @@ class VCMFrameBuffer : public VCMEncodedFrame {
 
   int64_t LatestPacketTimeMs() const;
 
-  webrtc::FrameType FrameType() const;
+  webrtz::FrameType FrameType() const;
   void SetPreviousFrameLoss();
 
   // The number of packets discarded because the decoder can't make use of them.
@@ -91,6 +91,6 @@ class VCMFrameBuffer : public VCMEncodedFrame {
   int64_t _latestPacketTimeMs;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_FRAME_BUFFER_H_

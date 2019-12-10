@@ -16,7 +16,7 @@
 
 typedef struct iLBC_decinst_t_ IlbcDecoderInstance;
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoderIlbcImpl final : public AudioDecoder {
  public:
@@ -42,5 +42,5 @@ class AudioDecoderIlbcImpl final : public AudioDecoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioDecoderIlbcImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_CODECS_ILBC_AUDIO_DECODER_ILBC_H_

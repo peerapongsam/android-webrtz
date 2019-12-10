@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Random::Random(uint64_t seed) {
   RTC_DCHECK(seed != 0x0ull);
@@ -82,4 +82,4 @@ double Random::Exponential(double lambda) {
   return -log(uniform) / lambda;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

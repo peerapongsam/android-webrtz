@@ -17,7 +17,7 @@
 
 #include "rtc_base/networkmonitor.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Creates an Android-specific network monitor, which is capable of detecting
 // network changes as soon as they occur, requesting a cellular interface
@@ -31,6 +31,6 @@ std::unique_ptr<rtc::NetworkMonitorFactory> CreateAndroidNetworkMonitorFactory(
 std::unique_ptr<rtc::NetworkMonitorFactory>
 CreateAndroidNetworkMonitorFactory();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_BASE_NETWORKMONITOR_H_

@@ -15,7 +15,7 @@
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This function decides the overflow-protecting scaling and calls
 // WebRtcSpl_CrossCorrelation.
@@ -59,4 +59,4 @@ int CrossCorrelationWithAutoShift(const int16_t* sequence_1,
   return scaling;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

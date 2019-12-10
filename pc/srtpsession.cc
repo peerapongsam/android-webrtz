@@ -135,7 +135,7 @@ bool SrtpSession::UnprotectRtp(void* p, int in_len, int* out_len) {
     RTC_LOG(LS_WARNING) << "Failed to unprotect SRTP packet, err=" << err;
     if (metrics_observer_) {
       metrics_observer_->IncrementSparseEnumCounter(
-          webrtc::kEnumCounterSrtpUnprotectError, err);
+          webrtz::kEnumCounterSrtpUnprotectError, err);
     }
     return false;
   }
@@ -155,7 +155,7 @@ bool SrtpSession::UnprotectRtcp(void* p, int in_len, int* out_len) {
     RTC_LOG(LS_WARNING) << "Failed to unprotect SRTCP packet, err=" << err;
     if (metrics_observer_) {
       metrics_observer_->IncrementSparseEnumCounter(
-          webrtc::kEnumCounterSrtcpUnprotectError, err);
+          webrtz::kEnumCounterSrtcpUnprotectError, err);
     }
     return false;
   }
@@ -353,7 +353,7 @@ bool SrtpSession::UpdateKey(int type,
 }
 
 void SrtpSession::SetMetricsObserver(
-    rtc::scoped_refptr<webrtc::MetricsObserverInterface> metrics_observer) {
+    rtc::scoped_refptr<webrtz::MetricsObserverInterface> metrics_observer) {
   metrics_observer_ = metrics_observer;
 }
 

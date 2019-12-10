@@ -13,7 +13,7 @@
 #include "modules/video_coding/codecs/test/video_codec_unittest.h"
 #include "test/video_codec_settings.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TestH264Impl : public VideoCodecUnitTest {
  protected:
@@ -26,7 +26,7 @@ class TestH264Impl : public VideoCodecUnitTest {
   }
 
   void ModifyCodecSettings(VideoCodec* codec_settings) override {
-    webrtc::test::CodecSettings(kVideoCodecH264, codec_settings);
+    webrtz::test::CodecSettings(kVideoCodecH264, codec_settings);
   }
 };
 
@@ -74,4 +74,4 @@ TEST_F(TestH264Impl, MAYBE_DecodedQpEqualsEncodedQp) {
   EXPECT_EQ(encoded_frame.qp_, *decoded_qp);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

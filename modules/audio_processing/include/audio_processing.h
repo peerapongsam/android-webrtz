@@ -36,7 +36,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct AecCore;
 
@@ -342,7 +342,7 @@ class AudioProcessing : public rtc::RefCountInterface {
 
   // Pass down additional options which don't have explicit setters. This
   // ensures the options are applied immediately.
-  virtual void SetExtraOptions(const webrtc::Config& config) = 0;
+  virtual void SetExtraOptions(const webrtz::Config& config) = 0;
 
   // TODO(ajm): Only intended for internal use. Make private and friend the
   // necessary classes?
@@ -458,7 +458,7 @@ class AudioProcessing : public rtc::RefCountInterface {
   virtual void set_delay_offset_ms(int offset) = 0;
   virtual int delay_offset_ms() const = 0;
 
-  // Attaches provided webrtc::AecDump for recording debugging
+  // Attaches provided webrtz::AecDump for recording debugging
   // information. Log file and maximum file size logic is supposed to
   // be handled by implementing instance of AecDump. Calling this
   // method when another AecDump is attached resets the active AecDump
@@ -472,7 +472,7 @@ class AudioProcessing : public rtc::RefCountInterface {
   // all pending logging tasks are completed.
   virtual void DetachAecDump() = 0;
 
-  // Attaches provided webrtc::AudioGenerator for modifying playout audio.
+  // Attaches provided webrtz::AudioGenerator for modifying playout audio.
   // Calling this method when another AudioGenerator is attached replaces the
   // active AudioGenerator with a new one.
   virtual void AttachPlayoutAudioGenerator(
@@ -638,7 +638,7 @@ class AudioProcessingBuilder {
   // This creates an APM instance using the previously set components. Calling
   // the Create function resets the AudioProcessingBuilder to its initial state.
   AudioProcessing* Create();
-  AudioProcessing* Create(const webrtc::Config& config);
+  AudioProcessing* Create(const webrtz::Config& config);
 
  private:
   std::unique_ptr<EchoControlFactory> echo_control_factory_;
@@ -1168,6 +1168,6 @@ class VoiceDetection {
   virtual ~VoiceDetection() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INCLUDE_AUDIO_PROCESSING_H_

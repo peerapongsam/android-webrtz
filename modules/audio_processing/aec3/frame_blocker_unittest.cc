@@ -18,7 +18,7 @@
 #include "modules/audio_processing/aec3/block_framer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 float ComputeSampleValue(size_t chunk_counter,
@@ -338,4 +338,4 @@ TEST(FrameBlocker, BlockerAndFramer) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

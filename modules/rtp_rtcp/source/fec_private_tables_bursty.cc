@@ -638,7 +638,7 @@ namespace {
 // clang-format on
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 namespace fec_private_tables {
 
 const uint8_t kPacketMaskBurstyTbl[] = {
@@ -658,4 +658,4 @@ const uint8_t kPacketMaskBurstyTbl[] = {
 };
 
 }  // namespace fec_private_tables
-}  // namespace webrtc
+}  // namespace webrtz

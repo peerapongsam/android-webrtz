@@ -10,11 +10,11 @@
 
 #include "test/mock_audio_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockAudioDecoder::MockAudioDecoder() = default;
 MockAudioDecoder::~MockAudioDecoder() {
   Die();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

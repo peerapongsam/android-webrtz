@@ -16,7 +16,7 @@
 #include "api/array_view.h"
 #include "api/audio_codecs/audio_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class LegacyEncodedAudioFrame final : public AudioDecoder::EncodedAudioFrame {
  public:
@@ -43,6 +43,6 @@ class LegacyEncodedAudioFrame final : public AudioDecoder::EncodedAudioFrame {
   const rtc::Buffer payload_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_LEGACY_ENCODED_AUDIO_FRAME_H_

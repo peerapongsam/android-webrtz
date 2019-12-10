@@ -22,7 +22,7 @@
 
 using rtc::checked_cast;
 
-namespace webrtc {
+namespace webrtz {
 
 class CopyConverter : public AudioConverter {
  public:
@@ -204,4 +204,4 @@ void AudioConverter::CheckSizes(size_t src_size, size_t dst_capacity) const {
   RTC_CHECK_GE(dst_capacity, dst_channels() * dst_frames());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

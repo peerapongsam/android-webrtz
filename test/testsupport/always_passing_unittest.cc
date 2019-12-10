@@ -10,10 +10,10 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A test that always passes. Useful when all tests in a executable are
 // disabled, since a gtest returns exit code 1 if no tests have executed.
 TEST(AlwaysPassingTest, AlwaysPassingTest) {}
 
-}  // namespace webrtc
+}  // namespace webrtz

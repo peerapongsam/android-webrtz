@@ -20,7 +20,7 @@
 #include "test/gtest.h"
 #include "test/mock_audio_decoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(DecisionLogic, CreateAndDestroy) {
   int fs_hz = 8000;
@@ -52,4 +52,4 @@ TEST(DecisionLogic, CreateAndDestroy) {
 
 // TODO(hlundin): Write more tests.
 
-}  // namespace webrtc
+}  // namespace webrtz

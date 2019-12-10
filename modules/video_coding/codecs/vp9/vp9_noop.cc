@@ -16,7 +16,7 @@
 #include "modules/video_coding/codecs/vp9/include/vp9.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool VP9Encoder::IsSupported() {
   return false;
@@ -36,4 +36,4 @@ std::unique_ptr<VP9Decoder> VP9Decoder::Create() {
   return nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

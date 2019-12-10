@@ -16,7 +16,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
@@ -43,4 +43,4 @@ TEST(RenderBuffer, NullExternalBlockBuffer) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

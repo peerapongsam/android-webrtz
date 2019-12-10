@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "test/null_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class CallOperationEndToEndTest
     : public test::CallTest,
@@ -305,4 +305,4 @@ TEST_P(CallOperationEndToEndTestNoTaskQueueCongestionControl,
   });
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

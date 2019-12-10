@@ -21,7 +21,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // We write 16-bit PCM WAV files.
 static const WavFormat kWavFormat = kWavFormatPcm;
@@ -205,33 +205,33 @@ void WavWriter::Close() {
   file_handle_ = nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 rtc_WavWriter* rtc_WavOpen(const char* filename,
                            int sample_rate,
                            size_t num_channels) {
   return reinterpret_cast<rtc_WavWriter*>(
-      new webrtc::WavWriter(filename, sample_rate, num_channels));
+      new webrtz::WavWriter(filename, sample_rate, num_channels));
 }
 
 void rtc_WavClose(rtc_WavWriter* wf) {
-  delete reinterpret_cast<webrtc::WavWriter*>(wf);
+  delete reinterpret_cast<webrtz::WavWriter*>(wf);
 }
 
 void rtc_WavWriteSamples(rtc_WavWriter* wf,
                          const float* samples,
                          size_t num_samples) {
-  reinterpret_cast<webrtc::WavWriter*>(wf)->WriteSamples(samples, num_samples);
+  reinterpret_cast<webrtz::WavWriter*>(wf)->WriteSamples(samples, num_samples);
 }
 
 int rtc_WavSampleRate(const rtc_WavWriter* wf) {
-  return reinterpret_cast<const webrtc::WavWriter*>(wf)->sample_rate();
+  return reinterpret_cast<const webrtz::WavWriter*>(wf)->sample_rate();
 }
 
 size_t rtc_WavNumChannels(const rtc_WavWriter* wf) {
-  return reinterpret_cast<const webrtc::WavWriter*>(wf)->num_channels();
+  return reinterpret_cast<const webrtz::WavWriter*>(wf)->num_channels();
 }
 
 size_t rtc_WavNumSamples(const rtc_WavWriter* wf) {
-  return reinterpret_cast<const webrtc::WavWriter*>(wf)->num_samples();
+  return reinterpret_cast<const webrtz::WavWriter*>(wf)->num_samples();
 }

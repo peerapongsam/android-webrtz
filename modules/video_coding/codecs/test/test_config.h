@@ -19,7 +19,7 @@
 #include "modules/video_coding/codecs/h264/include/h264_globals.h"
 #include "modules/video_coding/include/video_codec_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 struct TestConfig {
@@ -27,7 +27,7 @@ struct TestConfig {
    public:
     virtual ~EncodedFrameChecker() = default;
 
-    virtual void CheckEncodedFrame(webrtc::VideoCodecType codec,
+    virtual void CheckEncodedFrame(webrtz::VideoCodecType codec,
                                    const EncodedImage& encoded_frame) const = 0;
   };
 
@@ -80,13 +80,13 @@ struct TestConfig {
   size_t keyframe_interval = 0;
 
   // Codec settings to use.
-  webrtc::VideoCodec codec_settings;
+  webrtz::VideoCodec codec_settings;
 
   // H.264 specific settings.
   struct H264CodecSettings {
     H264::Profile profile = H264::kProfileConstrainedBaseline;
     H264PacketizationMode packetization_mode =
-        webrtc::H264PacketizationMode::NonInterleaved;
+        webrtz::H264PacketizationMode::NonInterleaved;
   } h264_codec_settings;
 
   // Should hardware accelerated codecs be used?
@@ -108,6 +108,6 @@ struct TestConfig {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_TEST_TEST_CONFIG_H_

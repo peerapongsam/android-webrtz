@@ -13,10 +13,10 @@
 
 #include <memory>
 
-namespace webrtc {
+namespace webrtz {
 class VideoEncoderFactory;
 class VideoDecoderFactory;
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace cricket {
 
@@ -27,10 +27,10 @@ class WebRtcVideoDecoderFactory;
 // new type of codec factories. The purpose of these functions is to provide an
 // easy way for clients to migrate to the API with new factory types.
 // TODO(magjed): Remove once old factories are gone, webrtc:7925.
-std::unique_ptr<webrtc::VideoEncoderFactory> ConvertVideoEncoderFactory(
+std::unique_ptr<webrtz::VideoEncoderFactory> ConvertVideoEncoderFactory(
     std::unique_ptr<WebRtcVideoEncoderFactory> external_encoder_factory);
 
-std::unique_ptr<webrtc::VideoDecoderFactory> ConvertVideoDecoderFactory(
+std::unique_ptr<webrtz::VideoDecoderFactory> ConvertVideoDecoderFactory(
     std::unique_ptr<WebRtcVideoDecoderFactory> external_decoder_factory);
 
 }  // namespace cricket

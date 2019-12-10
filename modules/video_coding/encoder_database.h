@@ -15,7 +15,7 @@
 
 #include "modules/video_coding/generic_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMEncoderDataBase {
  public:
@@ -60,6 +60,6 @@ class VCMEncoderDataBase {
   std::unique_ptr<VCMGenericEncoder> ptr_encoder_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_ENCODER_DATABASE_H_

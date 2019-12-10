@@ -18,7 +18,7 @@
 #include "modules/audio_processing/residual_echo_detector.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void FuzzOneInput(const uint8_t* data, size_t size) {
   // Number of times to update the echo detector.
@@ -63,4 +63,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

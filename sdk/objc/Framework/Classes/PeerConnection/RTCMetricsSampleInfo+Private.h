@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Initialize an RTCMetricsSampleInfo object from native SampleInfo. */
 - (instancetype)initWithNativeSampleInfo:
-    (const webrtc::metrics::SampleInfo &)info;
+    (const webrtz::metrics::SampleInfo &)info;
 
 @end
 

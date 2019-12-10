@@ -20,7 +20,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // DesktopFrame represents a video frame captured from the screen.
 class DesktopFrame {
@@ -182,7 +182,7 @@ class SharedMemoryDesktopFrame : public DesktopFrame {
   RTC_DISALLOW_COPY_AND_ASSIGN(SharedMemoryDesktopFrame);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_FRAME_H_
 

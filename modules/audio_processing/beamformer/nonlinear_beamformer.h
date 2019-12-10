@@ -26,7 +26,7 @@
 #include "modules/audio_processing/beamformer/array_util.h"
 #include "modules/audio_processing/beamformer/complex_matrix.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class PostFilterTransform : public LappedTransform::Callback {
  public:
@@ -225,6 +225,6 @@ class NonlinearBeamformer : public LappedTransform::Callback {
   size_t interference_blocks_count_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_BEAMFORMER_NONLINEAR_BEAMFORMER_H_

@@ -16,7 +16,7 @@
 #include "modules/audio_processing/agc/agc.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 class DebugFile;
@@ -108,6 +108,6 @@ class AgcManagerDirect final {
   RTC_DISALLOW_COPY_AND_ASSIGN(AgcManagerDirect);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC_AGC_MANAGER_DIRECT_H_

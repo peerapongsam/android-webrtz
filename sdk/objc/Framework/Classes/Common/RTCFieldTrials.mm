@@ -66,5 +66,5 @@ void RTCInitFieldTrialDictionary(NSDictionary<NSString *, NSString *> *fieldTria
     RTCLogError(@"Failed to convert field trial string.");
     return;
   }
-  webrtc::field_trial::InitFieldTrialsFromString(gFieldTrialInitString.get());
+  webrtz::field_trial::InitFieldTrialsFromString(gFieldTrialInitString.get());
 }

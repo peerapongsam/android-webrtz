@@ -45,7 +45,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 struct ExtensionInfo {
@@ -596,4 +596,4 @@ INSTANTIATE_TEST_CASE_P(RandomSeeds,
                         RtcEventLogEncoderTest,
                         ::testing::Values(1, 2, 3, 4, 5));
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -20,7 +20,7 @@
 #include "api/video_codecs/video_decoder_factory.h"
 #include "modules/video_coding/codecs/multiplex/include/multiplex_encoder_adapter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MultiplexDecoderAdapter : public VideoDecoder {
  public:
@@ -70,6 +70,6 @@ class MultiplexDecoderAdapter : public VideoDecoder {
   std::map<uint32_t /* timestamp */, DecodedImageData> decoded_data_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_MULTIPLEX_INCLUDE_MULTIPLEX_DECODER_ADAPTER_H_

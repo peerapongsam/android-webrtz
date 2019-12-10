@@ -16,7 +16,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace win {
 
 // Scoper for GDI objects.
@@ -90,6 +90,6 @@ typedef ScopedGDIObject<HBITMAP, DeleteObjectTraits<HBITMAP> > ScopedBitmap;
 typedef ScopedGDIObject<HCURSOR, DestroyCursorTraits> ScopedCursor;
 
 }  // namespace win
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_SCOPED_GDI_HANDLE_H_

@@ -17,7 +17,7 @@
 #include "rtc_base/gunit.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr float kInputLevelLinear = 15000.f;
@@ -173,4 +173,4 @@ TEST(AutomaticGainController2FixedDigital, GainShouldChangeOnSetGain) {
       kInputLevel * 10);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

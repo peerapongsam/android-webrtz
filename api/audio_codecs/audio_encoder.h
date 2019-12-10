@@ -22,7 +22,7 @@
 #include "rtc_base/deprecation.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
@@ -246,5 +246,5 @@ class AudioEncoder {
                                  rtc::ArrayView<const int16_t> audio,
                                  rtc::Buffer* encoded) = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // API_AUDIO_CODECS_AUDIO_ENCODER_H_

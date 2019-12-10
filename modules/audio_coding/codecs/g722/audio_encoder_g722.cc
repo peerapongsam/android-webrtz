@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -159,4 +159,4 @@ size_t AudioEncoderG722Impl::SamplesPerChannel() const {
   return kSampleRateHz / 100 * num_10ms_frames_per_packet_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

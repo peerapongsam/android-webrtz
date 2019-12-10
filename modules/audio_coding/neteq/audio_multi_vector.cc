@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 AudioMultiVector::AudioMultiVector(size_t N) {
   assert(N > 0);
@@ -219,4 +219,4 @@ AudioVector& AudioMultiVector::operator[](size_t index) {
   return *(channels_[index]);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

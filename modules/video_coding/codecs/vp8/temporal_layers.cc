@@ -25,7 +25,7 @@
 #include "system_wrappers/include/clock.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 uint8_t NumTemporalLayers(const VideoCodec& codec, int spatial_id) {
   uint8_t num_temporal_layers =
@@ -83,7 +83,7 @@ bool TemporalLayersChecker::CheckAndUpdateBufferState(
     bool* need_sync,
     bool frame_is_keyframe,
     uint8_t temporal_layer,
-    webrtc::TemporalLayers::BufferFlags flags,
+    webrtz::TemporalLayers::BufferFlags flags,
     uint32_t sequence_number,
     uint32_t* lowest_sequence_referenced) {
   if (flags & TemporalLayers::BufferFlags::kReference) {
@@ -180,4 +180,4 @@ bool TemporalLayersChecker::CheckTemporalConfig(
   }
   return true;
 }
-}  // namespace webrtc
+}  // namespace webrtz

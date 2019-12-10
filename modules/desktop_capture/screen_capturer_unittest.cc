@@ -28,7 +28,7 @@ using ::testing::_;
 
 const int kTestSharedMemoryId = 123;
 
-namespace webrtc {
+namespace webrtz {
 
 class ScreenCapturerTest : public testing::Test {
  public:
@@ -103,7 +103,7 @@ ACTION_P(SaveUniquePtrArg, dest) {
 }
 
 TEST_F(ScreenCapturerTest, GetScreenListAndSelectScreen) {
-  webrtc::DesktopCapturer::SourceList screens;
+  webrtz::DesktopCapturer::SourceList screens;
   EXPECT_TRUE(capturer_->GetSourceList(&screens));
   for (const auto& screen : screens) {
     EXPECT_TRUE(capturer_->SelectSource(screen.id));
@@ -217,4 +217,4 @@ TEST_F(ScreenCapturerTest, UseDirectxCapturerWithSharedBuffers) {
 
 #endif  // defined(WEBRTC_WIN)
 
-}  // namespace webrtc
+}  // namespace webrtz

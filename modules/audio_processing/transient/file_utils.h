@@ -16,7 +16,7 @@
 #include "rtc_base/system/file_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // This is a copy of the cast included in the Chromium codebase here:
 // http://cs.chromium.org/src/third_party/cld/base/casts.h
@@ -113,6 +113,6 @@ size_t WriteDoubleBufferToFile(FileWrapper* file,
                                size_t length,
                                const double* buffer);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_FILE_UTILS_H_

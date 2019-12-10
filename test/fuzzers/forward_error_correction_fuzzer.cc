@@ -15,7 +15,7 @@
 #include "rtc_base/bytebuffer.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr uint32_t kMediaSsrc = 100200300;
@@ -111,4 +111,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

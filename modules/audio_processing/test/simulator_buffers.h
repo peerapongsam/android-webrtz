@@ -18,7 +18,7 @@
 #include "modules/audio_processing/include/audio_processing.h"
 #include "rtc_base/random.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 struct SimulatorBuffers {
@@ -61,6 +61,6 @@ struct SimulatorBuffers {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_SIMULATOR_BUFFERS_H_

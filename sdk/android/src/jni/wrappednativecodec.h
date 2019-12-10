@@ -18,7 +18,7 @@
 #include "api/video_codecs/video_encoder.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 /* If the j_decoder is a wrapped native decoder, unwrap it. If it is not,
@@ -38,6 +38,6 @@ std::unique_ptr<VideoEncoder> JavaToNativeVideoEncoder(
 bool IsWrappedSoftwareEncoder(JNIEnv* jni, const JavaRef<jobject>& j_encoder);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_WRAPPEDNATIVECODEC_H_

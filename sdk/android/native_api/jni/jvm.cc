@@ -12,10 +12,10 @@
 
 #include "sdk/android/src/jni/jvm.h"
 
-namespace webrtc {
+namespace webrtz {
 
 JNIEnv* AttachCurrentThreadIfNeeded() {
   return jni::AttachCurrentThreadIfNeeded();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "api/optional.h"
 #include "modules/audio_coding/audio_network_adaptor/include/audio_network_adaptor.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Controller {
  public:
@@ -38,6 +38,6 @@ class Controller {
   virtual void MakeDecision(AudioEncoderRuntimeConfig* config) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_CONTROLLER_H_

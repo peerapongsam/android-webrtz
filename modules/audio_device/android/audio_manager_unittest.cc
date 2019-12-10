@@ -19,7 +19,7 @@
 
 #define PRINT(...) fprintf(stderr, __VA_ARGS__);
 
-namespace webrtc {
+namespace webrtz {
 
 static const char kTag[] = "  ";
 
@@ -28,7 +28,7 @@ class AudioManagerTest : public ::testing::Test {
   AudioManagerTest() {
     // One-time initialization of JVM and application context. Ensures that we
     // can do calls between C++ and Java.
-    webrtc::audiodevicemodule::EnsureInitialized();
+    webrtz::audiodevicemodule::EnsureInitialized();
     audio_manager_.reset(new AudioManager());
     SetActiveAudioLayer();
     playout_parameters_ = audio_manager()->GetPlayoutAudioParameters();
@@ -237,5 +237,5 @@ TEST_F(AudioManagerTest, AudioParametersWithNonDefaultConstruction) {
   EXPECT_EQ(kBufferSizeInMs, params.GetBufferSizeInMilliseconds());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

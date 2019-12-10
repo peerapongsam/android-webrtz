@@ -17,7 +17,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class EventTimerWin : public EventTimerWrapper {
  public:
@@ -35,6 +35,6 @@ class EventTimerWin : public EventTimerWrapper {
   uint32_t timerID_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_SOURCE_EVENT_WIN_H_

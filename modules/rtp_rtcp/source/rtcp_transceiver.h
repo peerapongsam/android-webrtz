@@ -22,7 +22,7 @@
 #include "rtc_base/task_queue.h"
 #include "rtc_base/weak_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 //
 // Manage incoming and outgoing rtcp messages for multiple BUNDLED streams.
 //
@@ -90,6 +90,6 @@ class RtcpTransceiver : public RtcpFeedbackSenderInterface {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RtcpTransceiver);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_TRANSCEIVER_H_

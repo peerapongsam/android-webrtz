@@ -27,7 +27,7 @@
 #include "rtc_base/pathutils.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -236,4 +236,4 @@ std::unique_ptr<std::map<std::string, SpeakerOutputFilePaths>> Simulate(
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -206,13 +206,13 @@ class P2PTransportChannelTestBase : public testing::Test,
         CreateBasicPortAllocator(&ep1_.network_manager_, stun_servers,
                                  kTurnUdpIntAddr, rtc::SocketAddress()));
     ep1_.metrics_observer_ =
-        new rtc::RefCountedObject<webrtc::FakeMetricsObserver>();
+        new rtc::RefCountedObject<webrtz::FakeMetricsObserver>();
     ep1_.allocator_->SetMetricsObserver(ep1_.metrics_observer_);
     ep2_.allocator_.reset(
         CreateBasicPortAllocator(&ep2_.network_manager_, stun_servers,
                                  kTurnUdpIntAddr, rtc::SocketAddress()));
     ep2_.metrics_observer_ =
-        new rtc::RefCountedObject<webrtc::FakeMetricsObserver>();
+        new rtc::RefCountedObject<webrtz::FakeMetricsObserver>();
     ep2_.allocator_->SetMetricsObserver(ep2_.metrics_observer_);
   }
 
@@ -314,7 +314,7 @@ class P2PTransportChannelTestBase : public testing::Test,
     rtc::FakeNetworkManager network_manager_;
     // |metrics_observer_| should outlive |allocator_| as the former may be
     // used by the latter.
-    rtc::scoped_refptr<webrtc::FakeMetricsObserver> metrics_observer_;
+    rtc::scoped_refptr<webrtz::FakeMetricsObserver> metrics_observer_;
     std::unique_ptr<BasicPortAllocator> allocator_;
     ChannelData cd1_;
     ChannelData cd2_;
@@ -435,7 +435,7 @@ class P2PTransportChannelTestBase : public testing::Test,
   BasicPortAllocator* GetAllocator(int endpoint) {
     return GetEndpoint(endpoint)->allocator_.get();
   }
-  webrtc::FakeMetricsObserver* GetMetricsObserver(int endpoint) {
+  webrtz::FakeMetricsObserver* GetMetricsObserver(int endpoint) {
     return GetEndpoint(endpoint)->metrics_observer_;
   }
   void AddAddress(int endpoint, const SocketAddress& addr) {
@@ -1221,14 +1221,14 @@ TEST_F(P2PTransportChannelTest, TestUMAIceRestartWhileDisconnected) {
   ep1_ch1()->SetRemoteIceParameters(kIceParams[3]);
   ep1_ch1()->MaybeStartGathering();
   EXPECT_EQ(1, GetMetricsObserver(0)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRestart,
+                   webrtz::kEnumCounterIceRestart,
                    static_cast<int>(IceRestartState::DISCONNECTED)));
 
   ep2_ch1()->SetIceParameters(kIceParams[3]);
   ep2_ch1()->SetRemoteIceParameters(kIceParams[2]);
   ep2_ch1()->MaybeStartGathering();
   EXPECT_EQ(1, GetMetricsObserver(1)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRestart,
+                   webrtz::kEnumCounterIceRestart,
                    static_cast<int>(IceRestartState::DISCONNECTED)));
 
   DestroyChannels();
@@ -1250,14 +1250,14 @@ TEST_F(P2PTransportChannelTest, TestUMAIceRestartWhileConnected) {
   ep1_ch1()->SetRemoteIceParameters(kIceParams[3]);
   ep1_ch1()->MaybeStartGathering();
   EXPECT_EQ(1, GetMetricsObserver(0)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRestart,
+                   webrtz::kEnumCounterIceRestart,
                    static_cast<int>(IceRestartState::CONNECTED)));
 
   ep2_ch1()->SetIceParameters(kIceParams[3]);
   ep2_ch1()->SetRemoteIceParameters(kIceParams[2]);
   ep2_ch1()->MaybeStartGathering();
   EXPECT_EQ(1, GetMetricsObserver(1)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRestart,
+                   webrtz::kEnumCounterIceRestart,
                    static_cast<int>(IceRestartState::CONNECTED)));
 
   DestroyChannels();
@@ -1276,14 +1276,14 @@ TEST_F(P2PTransportChannelTest, TestUMAIceRestartWhileConnecting) {
   ep1_ch1()->SetRemoteIceParameters(kIceParams[3]);
   ep1_ch1()->MaybeStartGathering();
   EXPECT_EQ(1, GetMetricsObserver(0)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRestart,
+                   webrtz::kEnumCounterIceRestart,
                    static_cast<int>(IceRestartState::CONNECTING)));
 
   ep2_ch1()->SetIceParameters(kIceParams[3]);
   ep2_ch1()->SetRemoteIceParameters(kIceParams[2]);
   ep2_ch1()->MaybeStartGathering();
   EXPECT_EQ(1, GetMetricsObserver(1)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRestart,
+                   webrtz::kEnumCounterIceRestart,
                    static_cast<int>(IceRestartState::CONNECTING)));
 
   DestroyChannels();
@@ -1311,7 +1311,7 @@ TEST_F(P2PTransportChannelTest,
   AddAddress(0, kAlternateAddrs[0]);
   EXPECT_EQ_SIMULATED_WAIT(
       1, GetMetricsObserver(0)->GetEnumCounter(
-             webrtc::kEnumCounterIceRegathering,
+             webrtz::kEnumCounterIceRegathering,
              static_cast<int>(IceRegatheringReason::NETWORK_CHANGE)),
       kDefaultTimeout, clock);
 
@@ -1323,7 +1323,7 @@ TEST_F(P2PTransportChannelTest,
   SIMULATED_WAIT(false, kDefaultTimeout, clock);
   // ep2 has not enabled continual gathering.
   EXPECT_EQ(0, GetMetricsObserver(1)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRegathering,
+                   webrtz::kEnumCounterIceRegathering,
                    static_cast<int>(IceRegatheringReason::NETWORK_CHANGE)));
 
   DestroyChannels();
@@ -1353,10 +1353,10 @@ TEST_F(P2PTransportChannelTest,
   const int kNetworkFailureTimeout = 35000;
   SIMULATED_WAIT(false, kNetworkFailureTimeout, clock);
   EXPECT_LE(1, GetMetricsObserver(0)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRegathering,
+                   webrtz::kEnumCounterIceRegathering,
                    static_cast<int>(IceRegatheringReason::NETWORK_FAILURE)));
   EXPECT_EQ(0, GetMetricsObserver(1)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRegathering,
+                   webrtz::kEnumCounterIceRegathering,
                    static_cast<int>(IceRegatheringReason::NETWORK_FAILURE)));
 
   DestroyChannels();
@@ -1387,11 +1387,11 @@ TEST_F(P2PTransportChannelTest, TestIceRegatherOnAllNetworksContinual) {
   SIMULATED_WAIT(false, kNetworkGatherDuration, clock);
   // Expect regathering to happen 5 times in 11s with 2s interval.
   EXPECT_LE(5, GetMetricsObserver(0)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRegathering,
+                   webrtz::kEnumCounterIceRegathering,
                    static_cast<int>(IceRegatheringReason::OCCASIONAL_REFRESH)));
   // Expect no regathering if continual gathering not configured.
   EXPECT_EQ(0, GetMetricsObserver(1)->GetEnumCounter(
-                   webrtc::kEnumCounterIceRegathering,
+                   webrtz::kEnumCounterIceRegathering,
                    static_cast<int>(IceRegatheringReason::OCCASIONAL_REFRESH)));
 
   DestroyChannels();
@@ -1439,7 +1439,7 @@ class P2PTransportRegatherAllNetworksTest : public P2PTransportChannelTest {
         kRegatherInterval * kNumRegathers + kRegatherInterval / 2;
     SIMULATED_WAIT(false, kWaitRegather, clock);
     EXPECT_EQ(kNumRegathers, GetMetricsObserver(0)->GetEnumCounter(
-        webrtc::kEnumCounterIceRegathering,
+        webrtz::kEnumCounterIceRegathering,
         static_cast<int>(IceRegatheringReason::OCCASIONAL_REFRESH)));
 
     const Connection* new_selected = ep1_ch1()->selected_connection();

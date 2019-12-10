@@ -21,7 +21,7 @@
 
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This method should be called from JNI_OnLoad and before any calls to
 // FindClass. This is normally called by InitAndroid.
@@ -35,6 +35,6 @@ void InitClassLoader(JNIEnv* env);
 // and should rarely be used manually.
 ScopedJavaLocalRef<jclass> GetClass(JNIEnv* env, const char* name);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_JNI_CLASS_LOADER_H_

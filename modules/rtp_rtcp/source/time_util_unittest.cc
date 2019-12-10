@@ -14,7 +14,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(TimeUtilTest, TimeMicrosToNtpDoesntChangeBetweenRuns) {
   rtc::ScopedFakeClock clock;
@@ -114,4 +114,4 @@ TEST(TimeUtilTest, SaturatedUsToCompactNtp) {
   EXPECT_EQ(CompactNtpRttToMs(SaturatedUsToCompactNtp(5515)), 6);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

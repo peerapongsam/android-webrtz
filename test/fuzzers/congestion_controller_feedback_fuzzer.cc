@@ -13,7 +13,7 @@
 #include "modules/remote_bitrate_estimator/include/remote_bitrate_estimator.h"
 #include "modules/rtp_rtcp/source/byte_io.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void FuzzOneInput(const uint8_t* data, size_t size) {
   size_t i = 0;
@@ -46,4 +46,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   }
   rbe->Process();
 }
-}  // namespace webrtc
+}  // namespace webrtz

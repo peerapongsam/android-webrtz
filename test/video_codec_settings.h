@@ -12,7 +12,7 @@
 
 #include "api/video_codecs/video_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const uint16_t kTestWidth = 352;
@@ -80,6 +80,6 @@ static void CodecSettings(VideoCodecType codec_type, VideoCodec* settings) {
   }
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_VIDEO_CODEC_SETTINGS_H_

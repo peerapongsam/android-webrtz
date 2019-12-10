@@ -24,14 +24,14 @@
 #include "rtc_base/buffer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr uint32_t kSsrc = 8374;
 }  // namespace
 
 TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_ByePacket) {
-  webrtc::rtcp::Bye rtcp_packet;
+  webrtz::rtcp::Bye rtcp_packet;
   rtcp_packet.SetSenderSsrc(kSsrc);
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
@@ -41,7 +41,7 @@ TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_ByePacket) {
 
 TEST(RtpRtcpDemuxerHelperTest,
      ParseRtcpPacketSenderSsrc_ExtendedReportsPacket) {
-  webrtc::rtcp::ExtendedReports rtcp_packet;
+  webrtz::rtcp::ExtendedReports rtcp_packet;
   rtcp_packet.SetSenderSsrc(kSsrc);
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
@@ -50,7 +50,7 @@ TEST(RtpRtcpDemuxerHelperTest,
 }
 
 TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_PsfbPacket) {
-  webrtc::rtcp::Pli rtcp_packet;  // Psfb is abstract; use a subclass.
+  webrtz::rtcp::Pli rtcp_packet;  // Psfb is abstract; use a subclass.
   rtcp_packet.SetSenderSsrc(kSsrc);
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
@@ -59,7 +59,7 @@ TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_PsfbPacket) {
 }
 
 TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_ReceiverReportPacket) {
-  webrtc::rtcp::ReceiverReport rtcp_packet;
+  webrtz::rtcp::ReceiverReport rtcp_packet;
   rtcp_packet.SetSenderSsrc(kSsrc);
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
@@ -69,7 +69,7 @@ TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_ReceiverReportPacket) {
 
 TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_RtpfbPacket) {
   // Rtpfb is abstract; use a subclass.
-  webrtc::rtcp::RapidResyncRequest rtcp_packet;
+  webrtz::rtcp::RapidResyncRequest rtcp_packet;
   rtcp_packet.SetSenderSsrc(kSsrc);
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
@@ -78,7 +78,7 @@ TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_RtpfbPacket) {
 }
 
 TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_SenderReportPacket) {
-  webrtc::rtcp::SenderReport rtcp_packet;
+  webrtz::rtcp::SenderReport rtcp_packet;
   rtcp_packet.SetSenderSsrc(kSsrc);
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
@@ -96,7 +96,7 @@ TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_MalformedRtcpPacket) {
 
 TEST(RtpRtcpDemuxerHelperTest,
      ParseRtcpPacketSenderSsrc_RtcpMessageWithoutSenderSsrc) {
-  webrtc::rtcp::ExtendedJitterReport rtcp_packet;  // Has no sender SSRC.
+  webrtz::rtcp::ExtendedJitterReport rtcp_packet;  // Has no sender SSRC.
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
   rtc::Optional<uint32_t> ssrc = ParseRtcpPacketSenderSsrc(raw_packet);
@@ -104,7 +104,7 @@ TEST(RtpRtcpDemuxerHelperTest,
 }
 
 TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_TruncatedRtcpMessage) {
-  webrtc::rtcp::Bye rtcp_packet;
+  webrtz::rtcp::Bye rtcp_packet;
   rtcp_packet.SetSenderSsrc(kSsrc);
   rtc::Buffer raw_packet = rtcp_packet.Build();
 
@@ -116,4 +116,4 @@ TEST(RtpRtcpDemuxerHelperTest, ParseRtcpPacketSenderSsrc_TruncatedRtcpMessage) {
   EXPECT_FALSE(ssrc);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

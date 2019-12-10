@@ -49,7 +49,7 @@ void HandleBrowserRequest(DataSocket* ds, bool* quit) {
 int main(int argc, char* argv[]) {
   std::string program_name = argv[0];
   std::string usage = "Example usage: " + program_name + " --port=8888";
-  webrtc::test::CommandLineParser parser;
+  webrtz::test::CommandLineParser parser;
   parser.Init(argc, argv);
   parser.SetUsageMessage(usage);
   parser.SetFlag("port", "8888");

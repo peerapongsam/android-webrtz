@@ -23,7 +23,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 
 #if defined(WEBRTC_HAS_NEON)
@@ -455,4 +455,4 @@ void MatchedFilter::LogFilterProperties(int sample_rate_hz,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

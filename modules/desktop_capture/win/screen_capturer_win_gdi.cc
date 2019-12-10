@@ -24,7 +24,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -98,7 +98,7 @@ void ScreenCapturerWinGdi::CaptureFrame() {
 }
 
 bool ScreenCapturerWinGdi::GetSourceList(SourceList* sources) {
-  return webrtc::GetScreenList(sources);
+  return webrtz::GetScreenList(sources);
 }
 
 bool ScreenCapturerWinGdi::SelectSource(SourceId id) {
@@ -221,4 +221,4 @@ bool ScreenCapturerWinGdi::CaptureImage() {
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

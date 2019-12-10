@@ -25,7 +25,7 @@ bool DecodeAndConvert(const std::string& base64, std::vector<uint8_t>* binary) {
 }
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 bool H264SpropParameterSets::DecodeSprop(const std::string& sprop) {
   size_t separator_pos = sprop.find(',');
@@ -48,4 +48,4 @@ bool H264SpropParameterSets::DecodeSprop(const std::string& sprop) {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

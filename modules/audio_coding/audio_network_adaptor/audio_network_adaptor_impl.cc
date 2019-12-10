@@ -16,7 +16,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int kEventLogMinBitrateChangeBps = 5000;
@@ -43,14 +43,14 @@ AudioNetworkAdaptorImpl::AudioNetworkAdaptorImpl(
                                    kEventLogMinPacketLossChangeFraction)
               : nullptr),
       enable_bitrate_adaptation_(
-          webrtc::field_trial::IsEnabled("WebRTC-Audio-BitrateAdaptation")),
+          webrtz::field_trial::IsEnabled("WebRTC-Audio-BitrateAdaptation")),
       enable_dtx_adaptation_(
-          webrtc::field_trial::IsEnabled("WebRTC-Audio-DtxAdaptation")),
+          webrtz::field_trial::IsEnabled("WebRTC-Audio-DtxAdaptation")),
       enable_fec_adaptation_(
-          webrtc::field_trial::IsEnabled("WebRTC-Audio-FecAdaptation")),
+          webrtz::field_trial::IsEnabled("WebRTC-Audio-FecAdaptation")),
       enable_channel_adaptation_(
-          webrtc::field_trial::IsEnabled("WebRTC-Audio-ChannelAdaptation")),
-      enable_frame_length_adaptation_(webrtc::field_trial::IsEnabled(
+          webrtz::field_trial::IsEnabled("WebRTC-Audio-ChannelAdaptation")),
+      enable_frame_length_adaptation_(webrtz::field_trial::IsEnabled(
           "WebRTC-Audio-FrameLengthAdaptation")) {
   RTC_DCHECK(controller_manager_);
 }
@@ -202,4 +202,4 @@ void AudioNetworkAdaptorImpl::UpdateNetworkMetrics(
     controller->UpdateNetworkMetrics(network_metrics);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

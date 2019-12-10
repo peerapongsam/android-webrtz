@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/include/receive_statistics.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -50,4 +50,4 @@ FeedbackPacket* TcpBweReceiver::GetFeedback(int64_t now_ms) {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

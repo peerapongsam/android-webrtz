@@ -11,7 +11,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 class NullModuleRtpRtcp : public RTCPReceiver::ModuleRtpRtcp {
@@ -33,5 +33,5 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
 
   receiver.IncomingPacket(data, size);
 }
-}  // namespace webrtc
+}  // namespace webrtz
 

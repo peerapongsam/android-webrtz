@@ -49,7 +49,7 @@ static int DetectNumberOfCores() {
 }
 }  // namespace internal
 
-namespace webrtc {
+namespace webrtz {
 
 uint32_t CpuInfo::DetectNumberOfCores() {
   // Statically cache the number of system cores available since if the process
@@ -62,4 +62,4 @@ uint32_t CpuInfo::DetectNumberOfCores() {
   return logical_cpus;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

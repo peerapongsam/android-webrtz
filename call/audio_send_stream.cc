@@ -13,7 +13,7 @@
 #include "rtc_base/strings/audio_format_to_string.h"
 #include "rtc_base/strings/string_builder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioSendStream::Stats::Stats() = default;
 AudioSendStream::Stats::~Stats() = default;
@@ -88,4 +88,4 @@ bool AudioSendStream::Config::SendCodecSpec::operator==(
   }
   return false;
 }
-}  // namespace webrtc
+}  // namespace webrtz

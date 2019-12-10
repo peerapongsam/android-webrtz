@@ -31,7 +31,7 @@
 #include "rtc_base/task_queue.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #ifdef ENABLE_RTC_EVENT_LOG
 
@@ -391,4 +391,4 @@ std::unique_ptr<RtcEventLog> RtcEventLog::CreateNull() {
   return std::unique_ptr<RtcEventLog>(new RtcEventLogNullImpl());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

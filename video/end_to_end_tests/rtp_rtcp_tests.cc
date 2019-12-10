@@ -13,7 +13,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpRtcpEndToEndTest : public test::CallTest {
  protected:
@@ -329,7 +329,7 @@ void RtpRtcpEndToEndTest::TestRtpStatePreservation(
         // to wait for a second for periodic Sender Report.
         rtcp::RapidResyncRequest force_send_sr_back_request;
         rtc::Buffer packet = force_send_sr_back_request.Build();
-        static_cast<webrtc::test::DirectTransport*>(receive_transport.get())
+        static_cast<webrtz::test::DirectTransport*>(receive_transport.get())
             ->SendRtcp(packet.data(), packet.size());
       }
       CreateFrameGeneratorCapturer(30, 1280, 720);
@@ -574,4 +574,4 @@ TEST_F(RtpRtcpEndToEndTest, TestFlexfecRtpStatePreservation) {
     DestroyCalls();
   });
 }
-}  // namespace webrtc
+}  // namespace webrtz

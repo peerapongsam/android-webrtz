@@ -28,7 +28,7 @@ jclass LazyGetClass(JNIEnv* env,
       rtc::AtomicOps::AcquireLoadPtr(atomic_class_id);
   if (value)
     return reinterpret_cast<jclass>(value);
-  webrtc::ScopedJavaGlobalRef<jclass> clazz(webrtc::GetClass(env, class_name));
+  webrtz::ScopedJavaGlobalRef<jclass> clazz(webrtz::GetClass(env, class_name));
   RTC_CHECK(!clazz.is_null()) << class_name;
   base::subtle::AtomicWord null_aw = nullptr;
   base::subtle::AtomicWord cas_result = rtc::AtomicOps::CompareAndSwapPtr(

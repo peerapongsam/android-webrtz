@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BitrateControllerImpl::RtcpBandwidthObserverImpl
     : public RtcpBandwidthObserver {
@@ -289,4 +289,4 @@ bool BitrateControllerImpl::AvailableBandwidth(uint32_t* bandwidth) const {
   }
   return false;
 }
-}  // namespace webrtc
+}  // namespace webrtz

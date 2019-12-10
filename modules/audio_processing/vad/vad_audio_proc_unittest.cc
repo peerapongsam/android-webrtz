@@ -24,7 +24,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(AudioProcessingTest, DISABLED_ComputingFirstSpectralPeak) {
   VadAudioProc audioproc;
@@ -60,4 +60,4 @@ TEST(AudioProcessingTest, DISABLED_ComputingFirstSpectralPeak) {
   fclose(pcm_file);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

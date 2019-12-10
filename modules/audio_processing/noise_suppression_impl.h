@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioBuffer;
 
@@ -51,6 +51,6 @@ class NoiseSuppressionImpl : public NoiseSuppression {
   std::vector<std::unique_ptr<Suppressor>> suppressors_ RTC_GUARDED_BY(crit_);
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(NoiseSuppressionImpl);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_NOISE_SUPPRESSION_IMPL_H_

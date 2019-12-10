@@ -17,7 +17,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 void VerifyHeader(const RTPVideoHeaderVP9& expected,
                   const RTPVideoHeaderVP9& actual) {
@@ -792,4 +792,4 @@ TEST_F(RtpDepacketizerVp9Test, ParseFailsForTooShortBufferToFitPayload) {
   EXPECT_FALSE(depacketizer_->Parse(&parsed, packet, sizeof(packet)));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

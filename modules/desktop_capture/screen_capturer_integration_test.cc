@@ -38,7 +38,7 @@
 
 using ::testing::_;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -380,4 +380,4 @@ TEST_F(ScreenCapturerIntegrationTest,
 
 #endif  // defined(WEBRTC_WIN)
 
-}  // namespace webrtc
+}  // namespace webrtz

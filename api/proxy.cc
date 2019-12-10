@@ -10,7 +10,7 @@
 
 #include "api/proxy.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace internal {
 
 SynchronousMethodCall::SynchronousMethodCall(rtc::MessageHandler* proxy)
@@ -35,4 +35,4 @@ void SynchronousMethodCall::OnMessage(rtc::Message*) {
 }
 
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz

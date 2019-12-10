@@ -78,9 +78,9 @@ class JsepTransport2 : public sigslot::has_slots<> {
   JsepTransport2(
       const std::string& mid,
       const rtc::scoped_refptr<rtc::RTCCertificate>& local_certificate,
-      std::unique_ptr<webrtc::RtpTransport> unencrypted_rtp_transport,
-      std::unique_ptr<webrtc::SrtpTransport> sdes_transport,
-      std::unique_ptr<webrtc::DtlsSrtpTransport> dtls_srtp_transport,
+      std::unique_ptr<webrtz::RtpTransport> unencrypted_rtp_transport,
+      std::unique_ptr<webrtz::SrtpTransport> sdes_transport,
+      std::unique_ptr<webrtz::DtlsSrtpTransport> dtls_srtp_transport,
       std::unique_ptr<DtlsTransportInternal> rtp_dtls_transport,
       std::unique_ptr<DtlsTransportInternal> rtcp_dtls_transport);
 
@@ -101,17 +101,17 @@ class JsepTransport2 : public sigslot::has_slots<> {
     return local_certificate_;
   }
 
-  webrtc::RTCError SetLocalJsepTransportDescription(
+  webrtz::RTCError SetLocalJsepTransportDescription(
       const JsepTransportDescription& jsep_description,
-      webrtc::SdpType type);
+      webrtz::SdpType type);
 
   // Set the remote TransportDescription to be used by DTLS and ICE channels
   // that are part of this Transport.
-  webrtc::RTCError SetRemoteJsepTransportDescription(
+  webrtz::RTCError SetRemoteJsepTransportDescription(
       const JsepTransportDescription& jsep_description,
-      webrtc::SdpType type);
+      webrtz::SdpType type);
 
-  webrtc::RTCError AddRemoteCandidates(const Candidates& candidates);
+  webrtz::RTCError AddRemoteCandidates(const Candidates& candidates);
 
   // Set the "needs-ice-restart" flag as described in JSEP. After the flag is
   // set, offers should generate new ufrags/passwords until an ICE restart
@@ -140,7 +140,7 @@ class JsepTransport2 : public sigslot::has_slots<> {
     return remote_description_.get();
   }
 
-  webrtc::RtpTransportInternal* rtp_transport() const {
+  webrtz::RtpTransportInternal* rtp_transport() const {
     if (dtls_srtp_transport_) {
       return dtls_srtp_transport_.get();
     } else if (sdes_transport_) {
@@ -169,18 +169,18 @@ class JsepTransport2 : public sigslot::has_slots<> {
 
   // Returns an error if the certificate's identity does not match the
   // fingerprint, or either is NULL.
-  webrtc::RTCError VerifyCertificateFingerprint(
+  webrtz::RTCError VerifyCertificateFingerprint(
       const rtc::RTCCertificate* certificate,
       const rtc::SSLFingerprint* fingerprint) const;
 
  private:
-  bool SetRtcpMux(bool enable, webrtc::SdpType type, ContentSource source);
+  bool SetRtcpMux(bool enable, webrtz::SdpType type, ContentSource source);
 
   void ActivateRtcpMux();
 
   bool SetSdes(const std::vector<CryptoParams>& cryptos,
                const std::vector<int>& encrypted_extension_ids,
-               webrtc::SdpType type,
+               webrtz::SdpType type,
                ContentSource source);
 
   // Negotiates and sets the DTLS parameters based on the current local and
@@ -188,14 +188,14 @@ class JsepTransport2 : public sigslot::has_slots<> {
   // DTLS should be activated.
   //
   // Called when an answer TransportDescription is applied.
-  webrtc::RTCError NegotiateAndSetDtlsParameters(
-      webrtc::SdpType local_description_type);
+  webrtz::RTCError NegotiateAndSetDtlsParameters(
+      webrtz::SdpType local_description_type);
 
   // Negotiates the DTLS role based off the offer and answer as specified by
   // RFC 4145, section-4.1. Returns an RTCError if role cannot be determined
   // from the local description and remote description.
-  webrtc::RTCError NegotiateDtlsRole(
-      webrtc::SdpType local_description_type,
+  webrtz::RTCError NegotiateDtlsRole(
+      webrtz::SdpType local_description_type,
       ConnectionRole local_connection_role,
       ConnectionRole remote_connection_role,
       rtc::Optional<rtc::SSLRole>* negotiated_dtls_role);
@@ -208,7 +208,7 @@ class JsepTransport2 : public sigslot::has_slots<> {
   void SetRemoteIceParameters(IceTransportInternal* ice);
 
   // Pushes down the DTLS parameters obtained via negotiation.
-  webrtc::RTCError SetNegotiatedDtlsParameters(
+  webrtz::RTCError SetNegotiatedDtlsParameters(
       DtlsTransportInternal* dtls_transport,
       rtc::Optional<rtc::SSLRole> dtls_role,
       rtc::SSLFingerprint* remote_fingerprint);
@@ -225,9 +225,9 @@ class JsepTransport2 : public sigslot::has_slots<> {
 
   // To avoid downcasting and make it type safe, keep three unique pointers for
   // different SRTP mode and only one of these is non-nullptr.
-  std::unique_ptr<webrtc::RtpTransport> unencrypted_rtp_transport_;
-  std::unique_ptr<webrtc::SrtpTransport> sdes_transport_;
-  std::unique_ptr<webrtc::DtlsSrtpTransport> dtls_srtp_transport_;
+  std::unique_ptr<webrtz::RtpTransport> unencrypted_rtp_transport_;
+  std::unique_ptr<webrtz::SrtpTransport> sdes_transport_;
+  std::unique_ptr<webrtz::DtlsSrtpTransport> dtls_srtp_transport_;
 
   std::unique_ptr<DtlsTransportInternal> rtp_dtls_transport_;
   std::unique_ptr<DtlsTransportInternal> rtcp_dtls_transport_;

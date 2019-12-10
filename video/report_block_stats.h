@@ -17,7 +17,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper class for rtcp statistics.
 class ReportBlockStats {
@@ -56,7 +56,7 @@ class ReportBlockStats {
   ReportBlockMap prev_report_blocks_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_REPORT_BLOCK_STATS_H_
 

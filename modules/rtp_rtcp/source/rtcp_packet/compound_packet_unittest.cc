@@ -22,15 +22,15 @@
 using ::testing::_;
 using ::testing::Invoke;
 using ::testing::MockFunction;
-using webrtc::rtcp::Bye;
-using webrtc::rtcp::CompoundPacket;
-using webrtc::rtcp::Fir;
-using webrtc::rtcp::ReceiverReport;
-using webrtc::rtcp::ReportBlock;
-using webrtc::rtcp::SenderReport;
-using webrtc::test::RtcpPacketParser;
+using webrtz::rtcp::Bye;
+using webrtz::rtcp::CompoundPacket;
+using webrtz::rtcp::Fir;
+using webrtz::rtcp::ReceiverReport;
+using webrtz::rtcp::ReportBlock;
+using webrtz::rtcp::SenderReport;
+using webrtz::test::RtcpPacketParser;
 
-namespace webrtc {
+namespace webrtz {
 
 const uint32_t kSenderSsrc = 0x12345678;
 const uint32_t kRemoteSsrc = 0x23456789;
@@ -148,4 +148,4 @@ TEST(RtcpCompoundPacketTest, BuildWithTooSmallBuffer_FragmentedSend) {
   EXPECT_TRUE(compound.Build(kBufferSize, callback.AsStdFunction()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

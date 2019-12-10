@@ -17,7 +17,7 @@
 #include "rtc_base/numerics/moving_median_filter.h"
 #include "system_wrappers/include/rtp_to_ntp_estimator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -48,6 +48,6 @@ class RemoteNtpTimeEstimator {
   RTC_DISALLOW_COPY_AND_ASSIGN(RemoteNtpTimeEstimator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_INCLUDE_REMOTE_NTP_TIME_ESTIMATOR_H_

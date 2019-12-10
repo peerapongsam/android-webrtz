@@ -14,7 +14,7 @@
 #include "modules/video_coding/packet_buffer.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 RtpFrameObject::RtpFrameObject(PacketBuffer* packet_buffer,
@@ -165,4 +165,4 @@ rtc::Optional<RTPVideoTypeHeader> RtpFrameObject::GetCodecHeader() const {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

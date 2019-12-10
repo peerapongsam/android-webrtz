@@ -18,7 +18,7 @@
 #include "pc/mediastreamobserver.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 class JavaMediaStream : public sigslot::has_slots<> {
@@ -49,6 +49,6 @@ class JavaMediaStream : public sigslot::has_slots<> {
 jclass GetMediaStreamClass(JNIEnv* env);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_MEDIASTREAM_H_

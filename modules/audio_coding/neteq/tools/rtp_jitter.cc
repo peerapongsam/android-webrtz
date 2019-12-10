@@ -20,7 +20,7 @@
 #include "rtc_base/flags.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -145,8 +145,8 @@ int RunRtpJitter(int argc, char* argv[]) {
 
 }  // namespace
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
-  return webrtc::test::RunRtpJitter(argc, argv);
+  return webrtz::test::RunRtpJitter(argc, argv);
 }

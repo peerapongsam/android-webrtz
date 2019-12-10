@@ -13,7 +13,7 @@
 #include <algorithm>
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 RtpParameters MakeMinimalOpusParameters() {
   RtpParameters parameters;
@@ -312,4 +312,4 @@ RtpParameters MakeFullVp9Parameters() {
   return MakeFullVideoParameters(101);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

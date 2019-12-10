@@ -17,7 +17,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLogOutputFileTest : public ::testing::Test {
  public:
@@ -162,4 +162,4 @@ TEST_F(RtcEventLogOutputFileTest, DisallowUnreasonableFileSizeLimits) {
 #endif  // !WEBRTC_USE_MEMCHECK
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

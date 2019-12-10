@@ -19,7 +19,7 @@
 
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class PacketQueueInterface {
  public:
@@ -64,6 +64,6 @@ class PacketQueueInterface {
   virtual void SetPauseState(bool paused, int64_t timestamp_ms) = 0;
   virtual int64_t AverageQueueTimeMs() const = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_PACING_PACKET_QUEUE_INTERFACE_H_

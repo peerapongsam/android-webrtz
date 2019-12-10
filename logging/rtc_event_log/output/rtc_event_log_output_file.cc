@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Together with the assumption of no single Write() would ever be called on
 // an input with length greater-than-or-equal-to (max(size_t) / 2), this
@@ -98,4 +98,4 @@ bool RtcEventLogOutputFile::IsActiveInternal() const {
   return file_ != nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

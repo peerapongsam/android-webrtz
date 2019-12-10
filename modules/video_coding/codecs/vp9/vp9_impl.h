@@ -22,7 +22,7 @@
 #include "vpx/vpx_decoder.h"
 #include "vpx/vpx_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ScreenshareLayersVP9;
 
@@ -165,6 +165,6 @@ class VP9DecoderImpl : public VP9Decoder {
   vpx_codec_ctx_t* decoder_;
   bool key_frame_required_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP9_VP9_IMPL_H_

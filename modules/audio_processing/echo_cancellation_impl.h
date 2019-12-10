@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioBuffer;
 
@@ -41,7 +41,7 @@ class EchoCancellationImpl : public EchoCancellation {
                   size_t num_reverse_channels_,
                   size_t num_output_channels_,
                   size_t num_proc_channels_);
-  void SetExtraOptions(const webrtc::Config& config);
+  void SetExtraOptions(const webrtz::Config& config);
   bool is_delay_agnostic_enabled() const;
   bool is_extended_filter_enabled() const;
   std::string GetExperimentsDescription();
@@ -114,6 +114,6 @@ class EchoCancellationImpl : public EchoCancellation {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(EchoCancellationImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_ECHO_CANCELLATION_IMPL_H_

@@ -26,8 +26,8 @@
 #include "modules/congestion_controller/network_control/include/network_control.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 
 class GoogCcNetworkController : public NetworkControllerInterface {
  public:
@@ -92,7 +92,7 @@ class GoogCcNetworkController : public NetworkControllerInterface {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(GoogCcNetworkController);
 };
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_GOOG_CC_GOOG_CC_NETWORK_CONTROL_H_

@@ -28,7 +28,7 @@
 #include "rtc_base/macutils.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -89,7 +89,7 @@ WindowCapturerMac::WindowCapturerMac(
 WindowCapturerMac::~WindowCapturerMac() {}
 
 bool WindowCapturerMac::GetSourceList(SourceList* sources) {
-  return webrtc::GetWindowList(sources, true);
+  return webrtz::GetWindowList(sources, true);
 }
 
 bool WindowCapturerMac::SelectSource(SourceId id) {
@@ -233,4 +233,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawWindowCapturer(
                             options.configuration_monitor()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

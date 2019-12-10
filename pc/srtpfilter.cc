@@ -37,17 +37,17 @@ bool SrtpFilter::IsActive() const {
 }
 
 bool SrtpFilter::Process(const std::vector<CryptoParams>& cryptos,
-                         webrtc::SdpType type,
+                         webrtz::SdpType type,
                          ContentSource source) {
   bool ret = false;
   switch (type) {
-    case webrtc::SdpType::kOffer:
+    case webrtz::SdpType::kOffer:
       ret = SetOffer(cryptos, source);
       break;
-    case webrtc::SdpType::kPrAnswer:
+    case webrtz::SdpType::kPrAnswer:
       ret = SetProvisionalAnswer(cryptos, source);
       break;
-    case webrtc::SdpType::kAnswer:
+    case webrtz::SdpType::kAnswer:
       ret = SetAnswer(cryptos, source);
       break;
     default:

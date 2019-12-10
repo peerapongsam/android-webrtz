@@ -15,7 +15,7 @@
 
 namespace {
 
-using webrtc::RateStatistics;
+using webrtz::RateStatistics;
 
 const int64_t kWindowMs = 500;
 

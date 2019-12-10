@@ -18,7 +18,7 @@
 #include "modules/audio_processing/transient/dyadic_decimator.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 WPDNode::WPDNode(size_t length,
                  const float* coefficients,
@@ -70,4 +70,4 @@ int WPDNode::set_data(const float* new_data, size_t length) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

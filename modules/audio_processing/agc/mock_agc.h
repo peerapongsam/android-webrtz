@@ -16,7 +16,7 @@
 #include "modules/include/module_common_types.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockAgc : public Agc {
  public:
@@ -31,6 +31,6 @@ class MockAgc : public Agc {
   MOCK_CONST_METHOD0(standalone_vad_enabled, bool());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC_MOCK_AGC_H_

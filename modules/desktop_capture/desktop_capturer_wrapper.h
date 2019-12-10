@@ -15,7 +15,7 @@
 
 #include "modules/desktop_capture/desktop_capturer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Wraps a DesktopCapturer and forwards all the function calls to it.
 class DesktopCapturerWrapper : public DesktopCapturer {
@@ -40,6 +40,6 @@ class DesktopCapturerWrapper : public DesktopCapturer {
   const std::unique_ptr<DesktopCapturer> base_capturer_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURER_WRAPPER_H_

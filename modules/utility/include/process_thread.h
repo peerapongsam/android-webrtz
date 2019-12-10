@@ -29,7 +29,7 @@ namespace rtc {
 class Location;
 }
 
-namespace webrtc {
+namespace webrtz {
 class Module;
 
 // TODO(tommi): ProcessThread probably doesn't need to be a virtual
@@ -72,6 +72,6 @@ class ProcessThread {
   virtual void DeRegisterModule(Module* module) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif // MODULES_UTILITY_INCLUDE_PROCESS_THREAD_H_

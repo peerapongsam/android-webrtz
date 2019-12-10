@@ -20,7 +20,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/field_trial_default.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 bool field_trials_initiated_ = false;
 }  // namespace
@@ -62,7 +62,7 @@ void ValidateFieldTrialsStringOrDie(const std::string& trials_string) {
 
     // Successfully parsed all field trials from the string.
     if (next_item == trials_string.length()) {
-      // webrtc::field_trial::InitFieldTrialsFromString(trials_string.c_str());
+      // webrtz::field_trial::InitFieldTrialsFromString(trials_string.c_str());
       return;
     }
   }
@@ -74,20 +74,20 @@ void ValidateFieldTrialsStringOrDie(const std::string& trials_string) {
 }
 
 ScopedFieldTrials::ScopedFieldTrials(const std::string& config)
-  : previous_field_trials_(webrtc::field_trial::GetFieldTrialString()) {
+  : previous_field_trials_(webrtz::field_trial::GetFieldTrialString()) {
   assert(field_trials_initiated_);
   field_trials_initiated_ = false;
   current_field_trials_ = config;
   ValidateFieldTrialsStringOrDie(current_field_trials_);
-  webrtc::field_trial::InitFieldTrialsFromString(current_field_trials_.c_str());
+  webrtz::field_trial::InitFieldTrialsFromString(current_field_trials_.c_str());
 }
 
 ScopedFieldTrials::~ScopedFieldTrials() {
   // Should still be initialized, since InitFieldTrials is called from ctor.
   // That's why we don't restore the flag.
   assert(field_trials_initiated_);
-  webrtc::field_trial::InitFieldTrialsFromString(previous_field_trials_);
+  webrtz::field_trial::InitFieldTrialsFromString(previous_field_trials_);
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

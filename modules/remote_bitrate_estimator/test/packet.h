@@ -20,7 +20,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "modules/remote_bitrate_estimator/include/remote_bitrate_estimator.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -216,5 +216,5 @@ typedef std::list<Packet*>::const_iterator PacketsConstIt;
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_PACKET_H_

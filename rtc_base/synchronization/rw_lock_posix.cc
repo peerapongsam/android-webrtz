@@ -10,7 +10,7 @@
 
 #include "rtc_base/synchronization/rw_lock_posix.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RWLockPosix::RWLockPosix() : lock_() {}
 
@@ -47,4 +47,4 @@ void RWLockPosix::ReleaseLockShared() {
   pthread_rwlock_unlock(&lock_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

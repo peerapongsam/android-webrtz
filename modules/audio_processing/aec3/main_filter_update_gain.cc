@@ -18,7 +18,7 @@
 #include "rtc_base/atomicops.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr float kHErrorInitial = 10000.f;
@@ -154,4 +154,4 @@ void MainFilterUpdateGain::UpdateCurrentConfig() {
   RTC_DCHECK_LE(0, config_change_counter_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

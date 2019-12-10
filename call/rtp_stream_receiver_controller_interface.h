@@ -14,7 +14,7 @@
 
 #include "call/rtp_packet_sink_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // An RtpStreamReceiver is responsible for the rtp-specific but
 // media-independent state needed for receiving an RTP stream.
@@ -42,6 +42,6 @@ class RtpStreamReceiverControllerInterface {
   virtual size_t RemoveSink(const RtpPacketSinkInterface* sink) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_STREAM_RECEIVER_CONTROLLER_INTERFACE_H_

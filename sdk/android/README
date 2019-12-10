@@ -1,4 +1,4 @@
-This directory holds a Java implementation of the webrtc::PeerConnection API, as
+This directory holds a Java implementation of the webrtz::PeerConnection API, as
 well as the JNI glue C++ code that lets the Java implementation reuse the C++
 implementation of the same API.
 
@@ -16,6 +16,6 @@ app can be found at:
 https://webrtc.org/native-code/android/
 
 To use the Java API, start by looking at the public interface of
-org.webrtc.PeerConnection{,Factory} and the org.webrtc.PeerConnectionTest.
+org.webrtz.PeerConnection{,Factory} and the org.webrtz.PeerConnectionTest.
 
 To understand the implementation of the API, see the native code in src/jni/pc/.

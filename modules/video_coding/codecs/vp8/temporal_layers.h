@@ -21,7 +21,7 @@
 #define VP8_TS_MAX_PERIODICITY 16
 #define VP8_TS_MAX_LAYERS 5
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecSpecificInfoVP8;
 
@@ -161,7 +161,7 @@ class TemporalLayersChecker {
                                  bool* need_sync,
                                  bool frame_is_keyframe,
                                  uint8_t temporal_layer,
-                                 webrtc::TemporalLayers::BufferFlags flags,
+                                 webrtz::TemporalLayers::BufferFlags flags,
                                  uint32_t sequence_number,
                                  uint32_t* lowest_sequence_referenced);
   BufferState last_;
@@ -173,5 +173,5 @@ class TemporalLayersChecker {
   uint32_t last_tl0_sequence_number_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_TEMPORAL_LAYERS_H_

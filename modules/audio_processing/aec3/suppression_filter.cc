@@ -19,7 +19,7 @@
 #include "modules/audio_processing/utility/ooura_fft.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Hanning window from Matlab command win = sqrt(hanning(128)).
@@ -163,4 +163,4 @@ void SuppressionFilter::ApplyGain(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "typedefs.h"  // NOLINT(build/include)
 #include "system_wrappers/include/cpu_features_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Aec3Optimization DetectOptimization() {
 #if defined(WEBRTC_ARCH_X86_FAMILY)
@@ -29,4 +29,4 @@ Aec3Optimization DetectOptimization() {
   return Aec3Optimization::kNone;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

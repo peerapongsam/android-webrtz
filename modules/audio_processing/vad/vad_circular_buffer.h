@@ -13,7 +13,7 @@
 
 #include <memory>
 
-namespace webrtc {
+namespace webrtz {
 
 // A circular buffer tailored to the need of this project. It stores last
 // K samples of the input, and keeps track of the mean of the last samples.
@@ -65,5 +65,5 @@ class VadCircularBuffer {
   double sum_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_PROCESSING_VAD_VAD_CIRCULAR_BUFFER_H_

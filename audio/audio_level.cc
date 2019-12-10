@@ -13,7 +13,7 @@
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace voe {
 
 AudioLevel::AudioLevel()
@@ -83,4 +83,4 @@ void AudioLevel::ComputeLevel(const AudioFrame& audioFrame, double duration) {
 }
 
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz

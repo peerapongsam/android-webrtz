@@ -16,7 +16,7 @@
 #include "modules/audio_processing/aec3/aec3_fft.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
@@ -155,4 +155,4 @@ TEST(EchoRemoverMetrics, NormalUsage) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

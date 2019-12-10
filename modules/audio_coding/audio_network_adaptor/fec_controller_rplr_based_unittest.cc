@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/fec_controller_rplr_based.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -517,4 +517,4 @@ TEST(FecControllerRplrBasedDeathTest, InvalidConfig) {
       "Check failed");
 }
 #endif
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/stringutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RTPHeaderExtension::RTPHeaderExtension()
     : hasTransmissionTimeOffset(false),
@@ -59,4 +59,4 @@ RTPHeader::RTPHeader(const RTPHeader& other) = default;
 
 RTPHeader& RTPHeader::operator=(const RTPHeader& other) = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

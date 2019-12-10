@@ -16,7 +16,7 @@ extern "C" {
 #include "common_audio/vad/vad_gmm.h"
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 TEST_F(VadTest, vad_gmm) {
@@ -42,4 +42,4 @@ TEST_F(VadTest, vad_gmm) {
   EXPECT_EQ(13440, delta);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

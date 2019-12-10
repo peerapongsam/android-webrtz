@@ -17,7 +17,7 @@ namespace cricket {
 FakeVideoCapturer::FakeVideoCapturer(bool is_screencast)
     : running_(false),
       is_screencast_(is_screencast),
-      rotation_(webrtc::kVideoRotation_0) {
+      rotation_(webrtz::kVideoRotation_0) {
   // Default supported formats. Use ResetSupportedFormats to over write.
   using cricket::VideoFormat;
   static const VideoFormat formats[] = {
@@ -57,7 +57,7 @@ bool FakeVideoCapturer::CaptureCustomFrame(int width, int height) {
       frame_source_->GetFrame(width, height, rtc::kNumMicrosecsPerSec / 30));
 }
 
-bool FakeVideoCapturer::CaptureFrame(const webrtc::VideoFrame& frame) {
+bool FakeVideoCapturer::CaptureFrame(const webrtz::VideoFrame& frame) {
   if (!running_) {
     return false;
   }
@@ -77,11 +77,11 @@ bool FakeVideoCapturer::CaptureFrame(const webrtc::VideoFrame& frame) {
   if (AdaptFrame(frame.width(), frame.height(), frame.timestamp_us(),
                  frame.timestamp_us(), &adapted_width, &adapted_height,
                  &crop_width, &crop_height, &crop_x, &crop_y, nullptr)) {
-    rtc::scoped_refptr<webrtc::I420Buffer> buffer(
-        webrtc::I420Buffer::Create(adapted_width, adapted_height));
+    rtc::scoped_refptr<webrtz::I420Buffer> buffer(
+        webrtz::I420Buffer::Create(adapted_width, adapted_height));
     buffer->InitializeData();
 
-    OnFrame(webrtc::VideoFrame(buffer, frame.rotation(), frame.timestamp_us()),
+    OnFrame(webrtz::VideoFrame(buffer, frame.rotation(), frame.timestamp_us()),
             frame.width(), frame.height());
   }
 
@@ -120,13 +120,13 @@ bool FakeVideoCapturer::GetPreferredFourccs(std::vector<uint32_t>* fourccs) {
   return true;
 }
 
-void FakeVideoCapturer::SetRotation(webrtc::VideoRotation rotation) {
+void FakeVideoCapturer::SetRotation(webrtz::VideoRotation rotation) {
   rotation_ = rotation;
   if (frame_source_)
     frame_source_->SetRotation(rotation_);
 }
 
-webrtc::VideoRotation FakeVideoCapturer::GetRotation() {
+webrtz::VideoRotation FakeVideoCapturer::GetRotation() {
   return rotation_;
 }
 

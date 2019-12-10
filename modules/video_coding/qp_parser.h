@@ -13,7 +13,7 @@
 
 #include "modules/video_coding/encoded_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class QpParser {
  public:
@@ -25,6 +25,6 @@ class QpParser {
   bool GetQp(const VCMEncodedFrame& frame, int* qp);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_QP_PARSER_H_

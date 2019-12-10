@@ -22,7 +22,7 @@ extern "C" {
 #include "modules/audio_processing/aec/aec_core_optimized_methods.h"
 #include "modules/audio_processing/utility/ooura_fft.h"
 
-namespace webrtc {
+namespace webrtz {
 
 extern const float WebRtcAec_weightCurve[65];
 extern const float WebRtcAec_overDriveCurve[65];
@@ -487,4 +487,4 @@ void WebRtcAec_InitAec_mips(void) {
   WebRtcAec_Overdrive = WebRtcAec_Overdrive_mips;
   WebRtcAec_Suppress = WebRtcAec_Suppress_mips;
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -34,7 +34,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 RTC_POP_IGNORING_WUNDEF()
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -438,4 +438,4 @@ float ControllerManagerImpl::ScoringPoint::SquaredDistanceTo(
          std::pow(diff_normalized_packet_loss, 2);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

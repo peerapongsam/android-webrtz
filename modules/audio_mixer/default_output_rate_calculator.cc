@@ -14,7 +14,7 @@
 
 #include "modules/audio_processing/include/audio_processing.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int DefaultOutputRateCalculator::CalculateOutputRate(
     const std::vector<int>& preferred_sample_rates) {
@@ -36,4 +36,4 @@ int DefaultOutputRateCalculator::CalculateOutputRate(
   RTC_DCHECK(rounded_up_index != std::end(native_rates));
   return *rounded_up_index;
 }
-}  // namespace webrtc
+}  // namespace webrtz

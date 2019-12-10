@@ -17,7 +17,7 @@
 #include "sdk/android/generated_video_jni/jni/AndroidVideoTrackSourceObserver_jni.h"
 #include "sdk/android/generated_video_jni/jni/VideoSource_jni.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -321,4 +321,4 @@ static void JNI_VideoSource_AdaptOutputFormat(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

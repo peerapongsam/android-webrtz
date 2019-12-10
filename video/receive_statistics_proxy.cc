@@ -22,7 +22,7 @@
 #include "system_wrappers/include/clock.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Periodic time interval for processing samples for |freq_offset_counter_|.
 const int64_t kFreqOffsetProcessIntervalMs = 40000;
@@ -625,7 +625,7 @@ void ReceiveStatisticsProxy::RtcpPacketTypesCounterUpdated(
 }
 
 void ReceiveStatisticsProxy::StatisticsUpdated(
-    const webrtc::RtcpStatistics& statistics,
+    const webrtz::RtcpStatistics& statistics,
     uint32_t ssrc) {
   rtc::CritScope lock(&crit_);
   // TODO(pbos): Handle both local and remote ssrcs here and RTC_DCHECK that we
@@ -649,7 +649,7 @@ void ReceiveStatisticsProxy::CNameChanged(const char* cname, uint32_t ssrc) {
 }
 
 void ReceiveStatisticsProxy::DataCountersUpdated(
-    const webrtc::StreamDataCounters& counters,
+    const webrtz::StreamDataCounters& counters,
     uint32_t ssrc) {
   size_t last_total_bytes = 0;
   size_t total_bytes = 0;
@@ -879,4 +879,4 @@ void ReceiveStatisticsProxy::ContentSpecificStats::Add(
   frame_counts.delta_frames += other.frame_counts.delta_frames;
   interframe_delay_percentiles.Add(other.interframe_delay_percentiles);
 }
-}  // namespace webrtc
+}  // namespace webrtz

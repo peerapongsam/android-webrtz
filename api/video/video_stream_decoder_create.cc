@@ -13,7 +13,7 @@
 #include "rtc_base/ptr_util.h"
 #include "video/video_stream_decoder_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 std::unique_ptr<VideoStreamDecoder> CreateVideoStreamDecoder(
     VideoStreamDecoder::Callbacks* callbacks,
     VideoDecoderFactory* decoder_factory,
@@ -21,4 +21,4 @@ std::unique_ptr<VideoStreamDecoder> CreateVideoStreamDecoder(
   return rtc::MakeUnique<VideoStreamDecoderImpl>(callbacks, decoder_factory,
                                                  std::move(decoder_settings));
 }
-}  // namespace webrtc
+}  // namespace webrtz

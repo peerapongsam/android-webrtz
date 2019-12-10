@@ -22,7 +22,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class TransportFeedback;
 }  // namespace rtcp
@@ -87,6 +87,6 @@ inline bool RemoteBitrateEstimator::GetStats(
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_INCLUDE_REMOTE_BITRATE_ESTIMATOR_H_

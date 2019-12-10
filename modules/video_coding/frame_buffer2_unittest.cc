@@ -28,7 +28,7 @@
 using testing::_;
 using testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 class VCMTimingFake : public VCMTiming {
@@ -576,4 +576,4 @@ TEST_F(TestFrameBuffer2, KeyframeClearsFullBuffer) {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

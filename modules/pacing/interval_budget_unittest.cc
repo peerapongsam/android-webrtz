@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int kWindowMs = 500;
@@ -116,4 +116,4 @@ TEST(IntervalBudgetTest, CanNotBuildUpUnderuseWhenConfigured) {
             TimeToBytes(kBitrateKbps, delta_time_ms));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

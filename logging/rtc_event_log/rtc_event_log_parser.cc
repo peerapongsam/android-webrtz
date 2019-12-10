@@ -27,7 +27,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/protobuf_utils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 RtcpMode GetRuntimeRtcpMode(rtclog::VideoReceiveConfig::RtcpMode rtcp_mode) {
@@ -385,7 +385,7 @@ ParsedRtcEventLog::EventType ParsedRtcEventLog::GetEventType(
 }
 
 // The header must have space for at least IP_PACKET_SIZE bytes.
-webrtc::RtpHeaderExtensionMap* ParsedRtcEventLog::GetRtpHeader(
+webrtz::RtpHeaderExtensionMap* ParsedRtcEventLog::GetRtpHeader(
     size_t index,
     PacketDirection* incoming,
     uint8_t* header,
@@ -842,4 +842,4 @@ ParsedRtcEventLog::MediaType ParsedRtcEventLog::GetMediaType(
   }
   return MediaType::ANY;
 }
-}  // namespace webrtc
+}  // namespace webrtz

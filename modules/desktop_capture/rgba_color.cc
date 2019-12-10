@@ -12,7 +12,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -58,4 +58,4 @@ uint32_t RgbaColor::ToUInt32() const {
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

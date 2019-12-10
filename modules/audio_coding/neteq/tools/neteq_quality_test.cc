@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const uint8_t kPayloadType = 95;
@@ -188,16 +188,16 @@ NetEqQualityTest::NetEqQualityTest(int block_duration_ms,
       out_filename.substr(out_filename.size() - 4) == ".wav") {
     // Open a wav file.
     output_.reset(
-        new webrtc::test::OutputWavFile(out_filename, 1000 * out_sampling_khz));
+        new webrtz::test::OutputWavFile(out_filename, 1000 * out_sampling_khz));
   } else {
     // Open a pcm file.
-    output_.reset(new webrtc::test::OutputAudioFile(out_filename));
+    output_.reset(new webrtz::test::OutputAudioFile(out_filename));
   }
 
   NetEq::Config config;
   config.sample_rate_hz = out_sampling_khz_ * 1000;
   neteq_.reset(
-      NetEq::Create(config, webrtc::CreateBuiltinAudioDecoderFactory()));
+      NetEq::Create(config, webrtz::CreateBuiltinAudioDecoderFactory()));
   max_payload_bytes_ = in_size_samples_ * channels_ * sizeof(int16_t);
   in_data_.reset(new int16_t[in_size_samples_ * channels_]);
 }
@@ -429,4 +429,4 @@ void NetEqQualityTest::Simulate() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

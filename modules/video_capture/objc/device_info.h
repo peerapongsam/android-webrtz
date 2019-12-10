@@ -16,7 +16,7 @@
 #include <map>
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 class DeviceInfoIos : public DeviceInfoImpl {
  public:
@@ -56,6 +56,6 @@ class DeviceInfoIos : public DeviceInfoImpl {
 };
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CAPTURE_OBJC_DEVICE_INFO_H_

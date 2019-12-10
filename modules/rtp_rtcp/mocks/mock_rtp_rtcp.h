@@ -24,7 +24,7 @@
 #include "rtc_base/checks.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtpData : public RtpData {
  public:
@@ -213,6 +213,6 @@ class MockRtpRtcp : public RtpRtcp {
   virtual int64_t TimeUntilNextProcess() { return 0xffffffff; }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_MOCKS_MOCK_RTP_RTCP_H_

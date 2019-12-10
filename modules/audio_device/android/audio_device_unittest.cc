@@ -51,7 +51,7 @@ using ::testing::Return;
 #endif
 #define PRINT(...) fprintf(stderr, __VA_ARGS__);
 
-namespace webrtc {
+namespace webrtz {
 
 // Number of callbacks (input or output) the tests waits for before we set
 // an event indicating that the test was OK.
@@ -478,7 +478,7 @@ class AudioDeviceTest : public ::testing::Test {
     // One-time initialization of JVM and application context. Ensures that we
     // can do calls between C++ and Java. Initializes both Java and OpenSL ES
     // implementations.
-    webrtc::audiodevicemodule::EnsureInitialized();
+    webrtz::audiodevicemodule::EnsureInitialized();
     // Creates an audio device using a default audio layer.
     audio_device_ = CreateAudioDevice(AudioDeviceModule::kPlatformDefaultAudio);
     EXPECT_NE(audio_device_.get(), nullptr);
@@ -550,7 +550,7 @@ class AudioDeviceTest : public ::testing::Test {
              sizeof(fname),
              "audio_device/audio_short%d",
              sample_rate / 1000);
-    std::string file_name(webrtc::test::ResourcePath(fname, "pcm"));
+    std::string file_name(webrtz::test::ResourcePath(fname, "pcm"));
     EXPECT_TRUE(test::FileExists(file_name));
 #ifdef ENABLE_PRINTF
     PRINT("file name: %s\n", file_name.c_str());
@@ -1052,4 +1052,4 @@ TEST_F(AudioDeviceTest, DISABLED_MeasureLoopbackLatency) {
   latency_audio_stream->PrintResults();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

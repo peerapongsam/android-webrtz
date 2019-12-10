@@ -22,7 +22,7 @@
 #include "system_wrappers/include/metrics_default.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int64_t kFreqOffsetProcessIntervalInMs = 40000;
 const uint32_t kLocalSsrc = 123;
@@ -32,7 +32,7 @@ const int kMinRequiredSamples = 200;
 
 // TODO(sakal): ReceiveStatisticsProxy is lacking unittesting.
 class ReceiveStatisticsProxyTest
-    : public ::testing::TestWithParam<webrtc::VideoContentType> {
+    : public ::testing::TestWithParam<webrtz::VideoContentType> {
  public:
   ReceiveStatisticsProxyTest() : fake_clock_(1234), config_(GetTestConfig()) {}
   virtual ~ReceiveStatisticsProxyTest() {}
@@ -222,8 +222,8 @@ TEST_F(ReceiveStatisticsProxyTest, OnDecodedFrameWithoutQpResetsQpSum) {
 
 TEST_F(ReceiveStatisticsProxyTest, OnRenderedFrameIncreasesFramesRendered) {
   EXPECT_EQ(0u, statistics_proxy_->GetStats().frames_rendered);
-  webrtc::VideoFrame frame(webrtc::I420Buffer::Create(1, 1), 0, 0,
-                           webrtc::kVideoRotation_0);
+  webrtz::VideoFrame frame(webrtz::I420Buffer::Create(1, 1), 0, 0,
+                           webrtz::kVideoRotation_0);
   for (uint32_t i = 1; i <= 3; ++i) {
     statistics_proxy_->OnRenderedFrame(frame);
     EXPECT_EQ(i, statistics_proxy_->GetStats().frames_rendered);
@@ -1029,4 +1029,4 @@ TEST_P(ReceiveStatisticsProxyTest, StatsAreSlicedOnSimulcastAndExperiment) {
                   "WebRTC.Video.InterframeDelayInMs.ExperimentGroup0"));
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

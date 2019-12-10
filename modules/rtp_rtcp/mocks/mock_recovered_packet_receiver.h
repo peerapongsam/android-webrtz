@@ -15,7 +15,7 @@
 #include "rtc_base/basictypes.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRecoveredPacketReceiver : public RecoveredPacketReceiver {
  public:
@@ -24,6 +24,6 @@ class MockRecoveredPacketReceiver : public RecoveredPacketReceiver {
   MOCK_METHOD2(OnRecoveredPacket, void(const uint8_t* packet, size_t length));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_MOCKS_MOCK_RECOVERED_PACKET_RECEIVER_H_

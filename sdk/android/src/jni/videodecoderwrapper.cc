@@ -22,7 +22,7 @@
 #include "sdk/android/src/jni/videocodecstatus.h"
 #include "sdk/android/src/jni/videoframe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -265,4 +265,4 @@ rtc::Optional<uint8_t> VideoDecoderWrapper::ParseQP(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

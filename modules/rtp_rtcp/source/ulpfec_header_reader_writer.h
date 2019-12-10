@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/source/forward_error_correction.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // FEC Level 0 Header, 10 bytes.
 //    0                   1                   2                   3
@@ -62,6 +62,6 @@ class UlpfecHeaderWriter : public FecHeaderWriter {
       ForwardErrorCorrection::Packet* fec_packet) const override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_ULPFEC_HEADER_READER_WRITER_H_

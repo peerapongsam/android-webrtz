@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/source/forward_error_correction.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // FlexFEC header, minimum 20 bytes.
 //     0                   1                   2                   3
@@ -81,6 +81,6 @@ class FlexfecHeaderWriter : public FecHeaderWriter {
       ForwardErrorCorrection::Packet* fec_packet) const override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_FLEXFEC_HEADER_READER_WRITER_H_

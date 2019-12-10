@@ -10,7 +10,7 @@
 
 #import "sdk/objc/Framework/Headers/WebRTC/RTCAudioSession.h"
 
-namespace webrtc {
+namespace webrtz {
 class AudioSessionObserver;
 }
 
@@ -24,7 +24,7 @@ class AudioSessionObserver;
 /** |observer| is a raw pointer and should be kept alive
  *  for this object's lifetime.
  */
-- (instancetype)initWithObserver:(webrtc::AudioSessionObserver *)observer
+- (instancetype)initWithObserver:(webrtz::AudioSessionObserver *)observer
     NS_DESIGNATED_INITIALIZER;
 
 @end

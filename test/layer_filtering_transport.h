@@ -17,7 +17,7 @@
 #include "test/direct_transport.h"
 #include "test/single_threaded_task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace test {
 
@@ -76,6 +76,6 @@ class LayerFilteringTransport : public test::DirectTransport {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_LAYER_FILTERING_TRANSPORT_H_

@@ -14,7 +14,7 @@
 #include "modules/congestion_controller/include/network_changed_observer.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockCongestionObserver : public NetworkChangedObserver {
@@ -27,5 +27,5 @@ class MockCongestionObserver : public NetworkChangedObserver {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_CONGESTION_CONTROLLER_INCLUDE_MOCK_MOCK_CONGESTION_OBSERVER_H_

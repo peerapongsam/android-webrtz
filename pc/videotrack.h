@@ -19,7 +19,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoTrack : public MediaStreamTrack<VideoTrackInterface>,
                    public rtc::VideoSourceBase,
@@ -58,6 +58,6 @@ class VideoTrack : public MediaStreamTrack<VideoTrackInterface>,
   ContentHint content_hint_ RTC_GUARDED_BY(signaling_thread_checker_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_VIDEOTRACK_H_

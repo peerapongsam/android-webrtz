@@ -14,11 +14,11 @@
 #include <string>
 #include <map>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Parses enabled field trials from a string config, such as the one passed
-// to chrome's argument --force-fieldtrials and initializes webrtc::field_trial
+// to chrome's argument --force-fieldtrials and initializes webrtz::field_trial
 // with such a config.
 //  E.g.:
 //    "WebRTC-experimentFoo/Enabled/WebRTC-experimentBar/Enabled100kbps/"
@@ -44,6 +44,6 @@ class ScopedFieldTrials {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FIELD_TRIAL_H_

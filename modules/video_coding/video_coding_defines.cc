@@ -10,7 +10,7 @@
 
 #include "modules/video_coding/include/video_coding_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int32_t VCMReceiveCallback::ReceivedDecodedReferenceFrame(
     const uint64_t pictureId) {
@@ -20,4 +20,4 @@ void VCMReceiveCallback::OnIncomingPayloadType(int payload_type) {}
 void VCMReceiveCallback::OnDecoderImplementationName(
     const char* implementation_name) {}
 
-}  // namespace webrtc
+}  // namespace webrtz

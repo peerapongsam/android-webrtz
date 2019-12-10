@@ -14,7 +14,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AdaptiveModeLevelEstimator::AdaptiveModeLevelEstimator(
     ApmDataDumper* apm_data_dumper)
@@ -66,4 +66,4 @@ void AdaptiveModeLevelEstimator::DebugDumpEstimate() {
                             LatestLevelEstimate());
   saturation_protector_.DebugDumpEstimate();
 }
-}  // namespace webrtc
+}  // namespace webrtz

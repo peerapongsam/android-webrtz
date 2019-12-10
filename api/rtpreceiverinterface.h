@@ -24,7 +24,7 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum class RtpSourceType {
   SSRC,
@@ -140,6 +140,6 @@ BEGIN_SIGNALING_PROXY_MAP(RtpReceiver)
   PROXY_CONSTMETHOD0(std::vector<RtpSource>, GetSources);
   END_PROXY_MAP()
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_RTPRECEIVERINTERFACE_H_

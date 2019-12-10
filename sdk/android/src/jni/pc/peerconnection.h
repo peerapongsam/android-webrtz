@@ -22,7 +22,7 @@
 #include "sdk/android/src/jni/pc/mediastream.h"
 #include "sdk/android/src/jni/pc/rtpreceiver.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 void JavaToNativeRTCConfiguration(
@@ -117,6 +117,6 @@ class OwnedPeerConnection {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_PEERCONNECTION_H_

@@ -295,7 +295,7 @@ OCMLocation *OCMMakeLocation(id testCase, const char *fileCString, int line){
 
 @end
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioSessionTest : public ::testing::Test {
  protected:
@@ -347,4 +347,4 @@ TEST_F(AudioSessionTest, AudioVolumeDidNotify) {
   [test testAudioVolumeDidNotify];
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,4 +10,4 @@
 
 #include "api/ortc/sessiondescription.h"
 
-namespace webrtc {}
+namespace webrtz {}

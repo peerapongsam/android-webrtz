@@ -15,7 +15,7 @@
 #include "call/video_receive_stream.h"
 #include "call/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class DefaultVideoStreamFactory
@@ -43,7 +43,7 @@ class DefaultVideoStreamFactory
 std::vector<VideoStream> CreateVideoStreams(
     int width,
     int height,
-    const webrtc::VideoEncoderConfig& encoder_config);
+    const webrtz::VideoEncoderConfig& encoder_config);
 
 void FillEncoderConfiguration(VideoCodecType codec_type, size_t num_streams,
                               VideoEncoderConfig* configuration);
@@ -54,6 +54,6 @@ VideoReceiveStream::Decoder CreateMatchingDecoder(
 VideoReceiveStream::Decoder CreateMatchingDecoder(
     const VideoSendStream::Config& config);
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_ENCODER_SETTINGS_H_

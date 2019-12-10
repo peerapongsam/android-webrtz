@@ -27,7 +27,7 @@
 #include "rtc_base/thread_checker.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace vcm {
 
 int64_t VCMProcessTimer::Period() const {
@@ -227,4 +227,4 @@ VideoCodingModule* VideoCodingModule::Create(Clock* clock,
                                    nullptr);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

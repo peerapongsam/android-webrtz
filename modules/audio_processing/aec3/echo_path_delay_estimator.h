@@ -22,7 +22,7 @@
 #include "modules/audio_processing/aec3/matched_filter_lag_aggregator.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 
@@ -60,6 +60,6 @@ class EchoPathDelayEstimator {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(EchoPathDelayEstimator);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ECHO_PATH_DELAY_ESTIMATOR_H_

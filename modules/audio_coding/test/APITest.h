@@ -21,7 +21,7 @@
 #include "rtc_base/synchronization/rw_lock_wrapper.h"
 #include "system_wrappers/include/event_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum APITESTAction {
   TEST_CHANGE_CODEC_ONLY = 0,
@@ -157,6 +157,6 @@ class APITest : public ACMTest {
   int _testNumB;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_APITEST_H_

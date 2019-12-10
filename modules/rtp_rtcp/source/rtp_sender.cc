@@ -35,7 +35,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Max in the RFC 3550 is 255 bytes, we limit it to be modulus 32 for SRTP.
@@ -154,7 +154,7 @@ RTPSender::RTPSender(
       overhead_observer_(overhead_observer),
       populate_network2_timestamp_(populate_network2_timestamp),
       send_side_bwe_with_overhead_(
-          webrtc::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")) {
+          webrtz::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")) {
   // This random initialization is not intended to be cryptographic strong.
   timestamp_offset_ = random_.Rand<uint32_t>();
   // Random start, 16 bits. Can't be 0.
@@ -1381,4 +1381,4 @@ void RTPSender::SetRtt(int64_t rtt_ms) {
   packet_history_.SetRtt(rtt_ms);
   flexfec_packet_history_.SetRtt(rtt_ms);
 }
-}  // namespace webrtc
+}  // namespace webrtz

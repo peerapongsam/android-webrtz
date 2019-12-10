@@ -17,7 +17,7 @@
 #include "modules/audio_coding/codecs/g711/g711_interface.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -139,4 +139,4 @@ AudioEncoder::CodecType AudioEncoderPcmU::GetCodecType() const {
   return AudioEncoder::CodecType::kPcmU;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

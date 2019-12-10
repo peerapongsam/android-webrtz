@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 BlockFramer::BlockFramer(size_t num_bands)
     : num_bands_(num_bands),
@@ -56,4 +56,4 @@ void BlockFramer::InsertBlockAndExtractSubFrame(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

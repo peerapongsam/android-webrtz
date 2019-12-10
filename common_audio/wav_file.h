@@ -20,7 +20,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/platform_file.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Interface to provide access to WAV file parameters.
 class WavFile {
@@ -100,7 +100,7 @@ class WavReader final : public WavFile {
   RTC_DISALLOW_COPY_AND_ASSIGN(WavReader);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 extern "C" {
 #endif  // __cplusplus

@@ -32,7 +32,7 @@
 // For now these semantics are only available when configuring the
 // PeerConnection with Unified Plan, but eventually that will be the default.
 
-namespace webrtc {
+namespace webrtz {
 
 using cricket::MediaContentDescription;
 using RTCConfiguration = PeerConnectionInterface::RTCConfiguration;
@@ -1277,4 +1277,4 @@ TEST_F(PeerConnectionJsepTest, AnswerBeforeOfferFails) {
   EXPECT_EQ(RTCErrorType::INVALID_STATE, error_out.type());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

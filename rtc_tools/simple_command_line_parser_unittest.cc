@@ -11,7 +11,7 @@
 #include "test/gtest.h"
 #include "rtc_tools/simple_command_line_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class CommandLineParserTest : public ::testing::Test {
@@ -83,4 +83,4 @@ TEST_F(CommandLineParserTest, GetCommandLineFlagValue) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

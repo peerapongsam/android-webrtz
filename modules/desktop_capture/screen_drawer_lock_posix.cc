@@ -16,7 +16,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -55,4 +55,4 @@ void ScreenDrawerLockPosix::Unlink(const char* name) {
   sem_unlink(name);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

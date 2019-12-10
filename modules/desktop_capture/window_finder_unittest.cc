@@ -32,7 +32,7 @@
 #include "modules/desktop_capture/win/window_capture_utils.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -166,4 +166,4 @@ TEST(WindowFinderTest, ShouldReturnNullWindowIfSpotIsOutOfScreen) {
 
 }  // namespace
 
-}  // namespace webrtc
+}  // namespace webrtz

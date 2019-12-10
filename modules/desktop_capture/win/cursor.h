@@ -13,13 +13,13 @@
 
 #include <windows.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class MouseCursor;
 
 // Converts an HCURSOR into a |MouseCursor| instance.
 MouseCursor* CreateMouseCursorFromHCursor(HDC dc, HCURSOR cursor);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_CURSOR_H_

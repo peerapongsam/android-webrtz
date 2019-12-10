@@ -18,7 +18,7 @@
 #include "rtc_base/numerics/mod_ops.h"
 #include "rtc_base/numerics/safe_compare.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Test if the sequence number |a| is ahead or at sequence number |b|.
 //
@@ -123,6 +123,6 @@ class SeqNumUnwrapper {
   rtc::Optional<T> last_value_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_NUMERICS_SEQUENCE_NUMBER_UTIL_H_

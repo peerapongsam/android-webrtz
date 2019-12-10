@@ -19,7 +19,7 @@
 #include "api/rtp_headers.h"
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpTransportAdapter;
 
@@ -119,6 +119,6 @@ class RtpTransportInterface {
   friend class RtpTransportAdapter;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_RTPTRANSPORTINTERFACE_H_

@@ -16,7 +16,7 @@
 #include "test/call_test.h"
 #include "test/single_threaded_task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class AudioBweTest : public test::EndToEndTest {
@@ -51,6 +51,6 @@ class AudioBweTest : public test::EndToEndTest {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_TEST_AUDIO_BWE_INTEGRATION_TEST_H_

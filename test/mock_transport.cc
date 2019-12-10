@@ -10,9 +10,9 @@
 
 #include "test/mock_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockTransport::MockTransport() = default;
 MockTransport::~MockTransport() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

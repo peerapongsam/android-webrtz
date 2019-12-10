@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(USE_BUILTIN_SW_CODECS)
 // Create an internal Decoder given a codec type
@@ -241,4 +241,4 @@ const VCMExtDecoderMapItem* VCMDecoderDataBase::FindExternalDecoderItem(
   return nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

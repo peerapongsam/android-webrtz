@@ -17,10 +17,10 @@
 using testing::ElementsAreArray;
 using testing::IsEmpty;
 using testing::make_tuple;
-using webrtc::rtcp::TmmbItem;
-using webrtc::rtcp::Tmmbn;
+using webrtz::rtcp::TmmbItem;
+using webrtz::rtcp::Tmmbn;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345678;
 const uint32_t kRemoteSsrc = 0x23456789;
@@ -105,4 +105,4 @@ TEST(RtcpPacketTmmbnTest, ParseFailsOnUnAlignedPacket) {
   Tmmbn tmmbn;
   EXPECT_FALSE(test::ParseSinglePacket(kUnalignedPacket, &tmmbn));
 }
-}  // namespace webrtc
+}  // namespace webrtz

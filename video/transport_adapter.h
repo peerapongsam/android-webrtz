@@ -15,7 +15,7 @@
 #include "api/call/transport.h"
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace internal {
 
 class TransportAdapter : public Transport {
@@ -35,6 +35,6 @@ class TransportAdapter : public Transport {
   std::atomic<bool> enabled_;
 };
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_TRANSPORT_ADAPTER_H_

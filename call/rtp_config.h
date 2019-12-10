@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 // Settings for NACK, see RFC 4585 for details.
 struct NackConfig {
   NackConfig() : rtp_history_ms(0) {}
@@ -44,5 +44,5 @@ struct UlpfecConfig {
   // RTX payload type for RED payload.
   int red_rtx_payload_type;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // CALL_RTP_CONFIG_H_

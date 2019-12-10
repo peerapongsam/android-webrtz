@@ -24,7 +24,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class TestBitrateObserver : public RemoteBitrateObserver {
@@ -173,6 +173,6 @@ class LegacyDelayBasedBweTest : public ::testing::Test {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(LegacyDelayBasedBweTest);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_DELAY_BASED_BWE_UNITTEST_HELPER_H_

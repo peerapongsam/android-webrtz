@@ -22,7 +22,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -494,4 +494,4 @@ TEST_F(FilterTest, ExponentialSmoothingInitialPertubation) {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

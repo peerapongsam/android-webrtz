@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 using BitrateItem = rtcp::TargetBitrate::BitrateItem;
 using rtcp::TargetBitrate;
@@ -93,4 +93,4 @@ TEST(TargetBitrateTest, ParseNullBitratePacket) {
   EXPECT_TRUE(target_bitrate.GetTargetBitrates().empty());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

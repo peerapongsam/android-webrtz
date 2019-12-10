@@ -22,7 +22,7 @@
 #include "modules/audio_coding/neteq/tick_timer.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Predicate used when inserting packets in the buffer list.
 // Operator() returns true when |packet| goes before |new_packet|.
@@ -290,4 +290,4 @@ void PacketBuffer::BufferStat(int* num_packets, int* max_num_packets) const {
   *max_num_packets = static_cast<int>(max_number_of_packets_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

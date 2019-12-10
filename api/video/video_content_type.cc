@@ -26,7 +26,7 @@
 // c - content type. 0 means real-time video, 1 means screenshare.
 //
 
-namespace webrtc {
+namespace webrtz {
 namespace videocontenttypehelpers {
 
 namespace {
@@ -93,4 +93,4 @@ const char* ToString(const VideoContentType& content_type) {
   return IsScreenshare(content_type) ? "screen" : "realtime";
 }
 }  // namespace videocontenttypehelpers
-}  // namespace webrtc
+}  // namespace webrtz

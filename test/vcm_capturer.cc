@@ -13,7 +13,7 @@
 #include "modules/video_capture/video_capture_factory.h"
 #include "rtc_base/logging.h"
 #include "call/video_send_stream.h"
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 VcmCapturer::VcmCapturer() : started_(false), sink_(nullptr), vcm_(nullptr) {}
@@ -34,7 +34,7 @@ bool VcmCapturer::Init(size_t width,
     return false;
   }
 
-  vcm_ = webrtc::VideoCaptureFactory::Create(unique_name);
+  vcm_ = webrtz::VideoCaptureFactory::Create(unique_name);
   vcm_->RegisterCaptureDataCallback(this);
 
   device_info->GetCapability(vcm_->CurrentDeviceName(), 0, capability_);

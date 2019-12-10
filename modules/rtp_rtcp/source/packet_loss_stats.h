@@ -14,7 +14,7 @@
 #include <stdint.h>
 #include <set>
 
-namespace webrtc {
+namespace webrtz {
 
 // Keeps track of statistics of packet loss including whether losses are a
 // single packet or multiple packets in a row.
@@ -52,6 +52,6 @@ class PacketLossStats {
   void PruneBuffer();
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_PACKET_LOSS_STATS_H_

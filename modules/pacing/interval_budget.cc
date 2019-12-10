@@ -13,7 +13,7 @@
 #include "modules/pacing/interval_budget.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 constexpr int kWindowMs = 500;
 }
@@ -65,4 +65,4 @@ int IntervalBudget::target_rate_kbps() const {
   return target_rate_kbps_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

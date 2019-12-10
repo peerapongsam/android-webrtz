@@ -23,7 +23,7 @@
 #include "pc/test/fakedatachannelprovider.h"
 #include "pc/test/fakepeerconnectionbase.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Fake VoiceMediaChannel where the result of GetStats can be configured.
 class FakeVoiceMediaChannelForStats : public cricket::FakeVoiceMediaChannel {
@@ -383,6 +383,6 @@ class FakePeerConnectionForStats : public FakePeerConnectionBase {
       remote_cert_chains_by_transport_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_FAKEPEERCONNECTIONFORSTATS_H_

@@ -25,15 +25,15 @@
 @interface RTCVideoCaptureIosObjC
     : NSObject<AVCaptureVideoDataOutputSampleBufferDelegate>
 
-@property webrtc::VideoRotation frameRotation;
+@property webrtz::VideoRotation frameRotation;
 
 // custom initializer. Instance of VideoCaptureIos is needed
 // for callback purposes.
 // default init methods have been overridden to return nil.
-- (id)initWithOwner:(webrtc::videocapturemodule::VideoCaptureIos*)owner;
+- (id)initWithOwner:(webrtz::videocapturemodule::VideoCaptureIos*)owner;
 - (BOOL)setCaptureDeviceByUniqueId:(NSString*)uniqueId;
 - (BOOL)startCaptureWithCapability:
-    (const webrtc::VideoCaptureCapability&)capability;
+    (const webrtz::VideoCaptureCapability&)capability;
 - (BOOL)stopCapture;
 
 @end

@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtcpBandwidthObserver : public RtcpBandwidthObserver {
  public:
@@ -25,5 +25,5 @@ class MockRtcpBandwidthObserver : public RtcpBandwidthObserver {
   MOCK_METHOD3(OnReceivedRtcpReceiverReport,
                void(const ReportBlockList&, int64_t, int64_t));
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_MOCKS_MOCK_RTCP_BANDWIDTH_OBSERVER_H_

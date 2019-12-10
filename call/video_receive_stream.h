@@ -28,7 +28,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "rtc_base/platform_file.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketSinkInterface;
 class VideoDecoder;
@@ -104,7 +104,7 @@ class VideoReceiveStream {
 
     // Timing frame info: all important timestamps for a full lifetime of a
     // single 'timing frame'.
-    rtc::Optional<webrtc::TimingFrameInfo> timing_frame_info;
+    rtc::Optional<webrtz::TimingFrameInfo> timing_frame_info;
   };
 
   struct Config {
@@ -255,6 +255,6 @@ class VideoReceiveStream {
   virtual ~VideoReceiveStream() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_VIDEO_RECEIVE_STREAM_H_

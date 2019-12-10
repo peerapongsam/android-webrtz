@@ -15,7 +15,7 @@
 #include "rtc_base/ptr_util.h"
 #include "sdk/android/src/jni/androidnetworkmonitor.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<rtc::NetworkMonitorFactory> CreateAndroidNetworkMonitorFactory(
     JNIEnv* env,
@@ -29,4 +29,4 @@ CreateAndroidNetworkMonitorFactory() {
   return rtc::MakeUnique<jni::AndroidNetworkMonitorFactory>();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

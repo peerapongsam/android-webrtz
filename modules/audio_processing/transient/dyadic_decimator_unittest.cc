@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const size_t kEvenBufferLength = 6;
 static const size_t kOddBufferLength = 5;
@@ -123,4 +123,4 @@ TEST(DyadicDecimatorTest, DyadicDecimateOddLengthOddSequence) {
   EXPECT_EQ(3, test_buffer_out[1]);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

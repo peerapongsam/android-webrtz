@@ -15,7 +15,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Format conversion (remixing and resampling) for audio. Only simple remixing
 // conversions are supported: downmix to mono (i.e. |dst_channels| == 1) or
@@ -62,6 +62,6 @@ class AudioConverter {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioConverter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_AUDIO_CONVERTER_H_

@@ -25,12 +25,12 @@
 
 using cricket::FOURCC_I420;
 using cricket::VideoFormat;
-using webrtc::FakeConstraints;
-using webrtc::MediaConstraintsInterface;
-using webrtc::MediaSourceInterface;
-using webrtc::ObserverInterface;
-using webrtc::VideoCapturerTrackSource;
-using webrtc::VideoTrackSourceInterface;
+using webrtz::FakeConstraints;
+using webrtz::MediaConstraintsInterface;
+using webrtz::MediaSourceInterface;
+using webrtz::ObserverInterface;
+using webrtz::VideoCapturerTrackSource;
+using webrtz::VideoTrackSourceInterface;
 
 namespace {
 
@@ -113,7 +113,7 @@ class VideoCapturerTrackSourceTest : public testing::Test {
   void CreateVideoCapturerSource() { CreateVideoCapturerSource(NULL); }
 
   void CreateVideoCapturerSource(
-      const webrtc::MediaConstraintsInterface* constraints) {
+      const webrtz::MediaConstraintsInterface* constraints) {
     source_ = VideoCapturerTrackSource::Create(rtc::Thread::Current(),
                                                std::move(capturer_cleanup_),
                                                constraints, false);

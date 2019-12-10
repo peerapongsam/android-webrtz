@@ -12,7 +12,7 @@
 #include "modules/audio_processing/echo_detector/mean_variance_estimator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(MeanVarianceEstimatorTests, InsertTwoValues) {
   MeanVarianceEstimator test_estimator;
@@ -61,4 +61,4 @@ TEST(MeanVarianceEstimatorTests, AlternatingValueTest) {
   EXPECT_NEAR(1.0f, test_estimator.std_deviation(), 0.01f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

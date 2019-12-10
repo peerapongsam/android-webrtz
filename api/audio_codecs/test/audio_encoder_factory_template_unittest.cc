@@ -21,7 +21,7 @@
 #include "test/gtest.h"
 #include "test/mock_audio_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -260,4 +260,4 @@ TEST(AudioEncoderFactoryTemplateTest, Opus) {
   EXPECT_EQ(48000, enc->SampleRateHz());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 #define MODULES_CONGESTION_CONTROLLER_GOOG_CC_INCLUDE_GOOG_CC_FACTORY_H_
 #include "modules/congestion_controller/network_control/include/network_control.h"
 
-namespace webrtc {
+namespace webrtz {
 class Clock;
 class RtcEventLog;
 
@@ -28,6 +28,6 @@ class GoogCcNetworkControllerFactory
  private:
   RtcEventLog* const event_log_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_GOOG_CC_INCLUDE_GOOG_CC_FACTORY_H_

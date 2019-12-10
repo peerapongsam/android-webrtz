@@ -16,7 +16,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Configuration
 
@@ -164,6 +164,6 @@ struct TargetTransferRate {
 struct ProcessInterval {
   Timestamp at_time;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_NETWORK_CONTROL_INCLUDE_NETWORK_TYPES_H_

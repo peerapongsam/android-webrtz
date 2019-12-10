@@ -14,7 +14,7 @@
 #include "modules/audio_coding/codecs/isac/main/include/audio_decoder_isac.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioDecoderIsacFloat::Config> AudioDecoderIsacFloat::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -42,4 +42,4 @@ std::unique_ptr<AudioDecoder> AudioDecoderIsacFloat::MakeAudioDecoder(
   return rtc::MakeUnique<AudioDecoderIsacFloatImpl>(config.sample_rate_hz);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

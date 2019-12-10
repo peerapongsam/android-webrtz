@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace conversational_speech {
 
@@ -36,6 +36,6 @@ struct Config {
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_CONVERSATIONAL_SPEECH_CONFIG_H_

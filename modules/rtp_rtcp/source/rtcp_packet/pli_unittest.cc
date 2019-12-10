@@ -16,9 +16,9 @@
 
 using testing::ElementsAreArray;
 using testing::make_tuple;
-using webrtc::rtcp::Pli;
+using webrtz::rtcp::Pli;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345678;
 const uint32_t kRemoteSsrc = 0x23456789;
@@ -56,4 +56,4 @@ TEST(RtcpPacketPliTest, ParseFailsOnTooSmallPacket) {
   EXPECT_FALSE(test::ParseSinglePacket(kTooSmallPacket, &parsed));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

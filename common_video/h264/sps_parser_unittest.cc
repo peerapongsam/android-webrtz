@@ -16,7 +16,7 @@
 #include "rtc_base/buffer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Example SPS can be generated with ffmpeg. Here's an example set of commands,
 // runnable on OS X:
@@ -184,4 +184,4 @@ TEST_F(H264SpsParserTest, TestSampleSPSWithScalingLists) {
   EXPECT_EQ(1080u, sps_->height);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

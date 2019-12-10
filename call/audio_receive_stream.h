@@ -26,7 +26,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 class AudioSinkInterface;
 
 class AudioReceiveStream {
@@ -145,6 +145,6 @@ class AudioReceiveStream {
  protected:
   virtual ~AudioReceiveStream() {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_AUDIO_RECEIVE_STREAM_H_

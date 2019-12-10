@@ -22,7 +22,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -389,4 +389,4 @@ void IntelligibilityEnhancer::DelayHighBands(AudioBuffer* audio) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -26,7 +26,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BitrateControllerImpl : public BitrateController {
  public:
@@ -104,5 +104,5 @@ class BitrateControllerImpl : public BitrateController {
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(BitrateControllerImpl);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_BITRATE_CONTROLLER_BITRATE_CONTROLLER_IMPL_H_

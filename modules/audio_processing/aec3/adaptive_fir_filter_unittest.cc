@@ -32,7 +32,7 @@
 #include "system_wrappers/include/cpu_features_wrapper.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 namespace {
 
@@ -404,4 +404,4 @@ TEST(AdaptiveFirFilter, FilterAndAdapt) {
   }
 }
 }  // namespace aec3
-}  // namespace webrtc
+}  // namespace webrtz

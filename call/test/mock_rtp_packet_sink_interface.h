@@ -14,13 +14,13 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtpPacketSink : public RtpPacketSinkInterface {
  public:
   MOCK_METHOD1(OnRtpPacket, void(const RtpPacketReceived&));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_TEST_MOCK_RTP_PACKET_SINK_INTERFACE_H_

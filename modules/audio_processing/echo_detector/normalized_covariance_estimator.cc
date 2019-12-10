@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Parameter controlling the adaptation speed.
@@ -40,4 +40,4 @@ void NormalizedCovarianceEstimator::Clear() {
   normalized_cross_correlation_ = 0.f;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

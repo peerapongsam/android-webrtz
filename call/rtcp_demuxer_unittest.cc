@@ -24,7 +24,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -502,4 +502,4 @@ TEST_F(RtcpDemuxerTest, RsidMustNotExceedMaximumLength) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

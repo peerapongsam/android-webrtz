@@ -22,7 +22,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using Microsoft::WRL::ComPtr;
 
@@ -208,4 +208,4 @@ bool ScreenCapturerWinDirectx::SelectSource(SourceId id) {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

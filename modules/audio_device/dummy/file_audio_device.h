@@ -25,7 +25,7 @@ namespace rtc {
 class PlatformThread;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 class EventWrapper;
 
 // This is a fake audio device which plays audio from a file as its microphone
@@ -162,6 +162,6 @@ class FileAudioDevice : public AudioDeviceGeneric {
   std::string _inputFilename;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_DEVICE_FILE_AUDIO_DEVICE_H_

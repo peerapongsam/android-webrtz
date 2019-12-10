@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 SharedXDisplay::SharedXDisplay(Display* display)
   : display_(display) {
@@ -87,4 +87,4 @@ void SharedXDisplay::ProcessPendingXEvents() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -11,7 +11,7 @@
 #ifndef TEST_TESTSUPPORT_UNITTEST_UTILS_H_
 #define TEST_TESTSUPPORT_UNITTEST_UTILS_H_
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const size_t kPacketSizeInBytes = 1500;
@@ -51,6 +51,6 @@ class PacketRelatedTest: public testing::Test {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_TESTSUPPORT_UNITTEST_UTILS_H_

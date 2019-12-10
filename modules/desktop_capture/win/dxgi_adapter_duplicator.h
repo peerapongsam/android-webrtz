@@ -21,7 +21,7 @@
 #include "modules/desktop_capture/win/dxgi_context.h"
 #include "modules/desktop_capture/win/dxgi_output_duplicator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A container of DxgiOutputDuplicators to duplicate monitors attached to a
 // single video card.
@@ -87,6 +87,6 @@ class DxgiAdapterDuplicator {
   DesktopRect desktop_rect_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_ADAPTER_DUPLICATOR_H_

@@ -20,18 +20,18 @@
 
 class FakeWebRtcVcmFactory;
 
-// Fake class for mocking out webrtc::VideoCaptureModule.
-class FakeWebRtcVideoCaptureModule : public webrtc::VideoCaptureModule {
+// Fake class for mocking out webrtz::VideoCaptureModule.
+class FakeWebRtcVideoCaptureModule : public webrtz::VideoCaptureModule {
  public:
   explicit FakeWebRtcVideoCaptureModule(FakeWebRtcVcmFactory* factory)
       : factory_(factory), callback_(NULL), running_(false) {}
   ~FakeWebRtcVideoCaptureModule();
   void RegisterCaptureDataCallback(
-      rtc::VideoSinkInterface<webrtc::VideoFrame>* callback) override {
+      rtc::VideoSinkInterface<webrtz::VideoFrame>* callback) override {
     callback_ = callback;
   }
   void DeRegisterCaptureDataCallback() override { callback_ = NULL; }
-  int32_t StartCapture(const webrtc::VideoCaptureCapability& cap) override {
+  int32_t StartCapture(const webrtz::VideoCaptureCapability& cap) override {
     if (running_) return -1;
     cap_ = cap;
     running_ = true;
@@ -45,13 +45,13 @@ class FakeWebRtcVideoCaptureModule : public webrtc::VideoCaptureModule {
     return NULL;  // not implemented
   }
   bool CaptureStarted() override { return running_; }
-  int32_t CaptureSettings(webrtc::VideoCaptureCapability& settings) override {
+  int32_t CaptureSettings(webrtz::VideoCaptureCapability& settings) override {
     if (!running_) return -1;
     settings = cap_;
     return 0;
   }
 
-  int32_t SetCaptureRotation(webrtc::VideoRotation rotation) override {
+  int32_t SetCaptureRotation(webrtz::VideoRotation rotation) override {
     return -1;  // not implemented
   }
   bool SetApplyRotation(bool enable) override {
@@ -65,26 +65,26 @@ class FakeWebRtcVideoCaptureModule : public webrtc::VideoCaptureModule {
       return;
 
     task_queue_.SendTask([this, w, h]() {
-      rtc::scoped_refptr<webrtc::I420Buffer> buffer =
-          webrtc::I420Buffer::Create(w, h);
+      rtc::scoped_refptr<webrtz::I420Buffer> buffer =
+          webrtz::I420Buffer::Create(w, h);
       // Initialize memory to satisfy DrMemory tests. See
       // https://bugs.chromium.org/p/libyuv/issues/detail?id=377
       buffer->InitializeData();
       callback_->OnFrame(
-          webrtc::VideoFrame(buffer, 0, 0, webrtc::kVideoRotation_0));
+          webrtz::VideoFrame(buffer, 0, 0, webrtz::kVideoRotation_0));
     });
   }
 
-  const webrtc::VideoCaptureCapability& cap() const {
+  const webrtz::VideoCaptureCapability& cap() const {
     return cap_;
   }
 
  private:
   rtc::test::TaskQueueForTest task_queue_{"FakeWebRtcVideoCaptureModule"};
   FakeWebRtcVcmFactory* factory_;
-  rtc::VideoSinkInterface<webrtc::VideoFrame>* callback_;
+  rtc::VideoSinkInterface<webrtz::VideoFrame>* callback_;
   bool running_;
-  webrtc::VideoCaptureCapability cap_;
+  webrtz::VideoCaptureCapability cap_;
 };
 
 #endif  // MEDIA_ENGINE_FAKEWEBRTCVIDEOCAPTUREMODULE_H_

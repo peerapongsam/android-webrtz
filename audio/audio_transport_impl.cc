@@ -19,7 +19,7 @@
 #include "call/audio_send_stream.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -254,4 +254,4 @@ bool AudioTransportImpl::typing_noise_detected() const {
   rtc::CritScope lock(&capture_lock_);
   return typing_noise_detected_;
 }
-}  // namespace webrtc
+}  // namespace webrtz

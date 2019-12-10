@@ -12,7 +12,7 @@
 
 #include "modules/video_capture/video_capture_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::scoped_refptr<VideoCaptureModule> VideoCaptureFactory::Create(
     const char* deviceUniqueIdUTF8) {
@@ -36,4 +36,4 @@ VideoCaptureModule::DeviceInfo* VideoCaptureFactory::CreateDeviceInfo() {
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

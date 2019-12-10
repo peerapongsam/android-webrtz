@@ -13,7 +13,7 @@
 
 #include "api/array_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class GainChangeCalculator {
  public:
@@ -35,6 +35,6 @@ class GainChangeCalculator {
   float last_reliable_gain_ = 1.0f;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_MIXER_GAIN_CHANGE_CALCULATOR_H_

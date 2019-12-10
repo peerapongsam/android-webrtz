@@ -28,7 +28,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -1524,4 +1524,4 @@ TEST_F(RtpDemuxerTest,
 #endif
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

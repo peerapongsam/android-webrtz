@@ -24,7 +24,7 @@
 #include "api/rtcerror.h"
 #include "api/rtpparameters.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Note: Since sender capabilities may depend on how the OrtcFactory was
 // created, instead of a static "GetCapabilities" method on this interface,
@@ -72,6 +72,6 @@ class OrtcRtpSenderInterface {
   // TODO(deadbeef): SSRC conflict signal.
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_ORTCRTPSENDERINTERFACE_H_

@@ -13,7 +13,7 @@
 #include "modules/audio_coding/audio_network_adaptor/channel_controller.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -97,4 +97,4 @@ TEST(ChannelControllerTest, CheckBehaviorOnChangingUplinkBandwidth) {
   CheckDecision(controller.get(), kChannel2To1BandwidthBps, 1);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

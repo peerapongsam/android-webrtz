@@ -37,13 +37,13 @@ namespace rtc {
 struct SentPacket;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class RateLimiter;
 class RtcEventLog;
 
-namespace webrtc_cc {
+namespace webrtz_cc {
 
 namespace send_side_cc_internal {
 // This is used to observe the network controller state and route calls to
@@ -207,7 +207,7 @@ class SendSideCongestionController
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SendSideCongestionController);
 };
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_RTP_INCLUDE_SEND_SIDE_CONGESTION_CONTROLLER_H_

@@ -22,7 +22,7 @@
 #include "pc/rtpsender.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Audio/video tracks and sender/receiver statistical information are associated
 // with each other based on attachments to RTP senders/receivers. This class
@@ -125,6 +125,6 @@ class TrackMediaInfoMap {
   std::map<uint32_t, cricket::VideoReceiverInfo*> video_info_by_receiver_ssrc_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TRACKMEDIAINFOMAP_H_

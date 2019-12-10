@@ -23,7 +23,7 @@
 #include "modules/utility/include/jvm_android.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implements 16-bit mono PCM audio output support for Android using the Java
 // AudioTrack interface. Most of the work is done by its Java counterpart in
@@ -150,6 +150,6 @@ class AudioTrackJni {
   AudioDeviceBuffer* audio_device_buffer_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_AUDIO_TRACK_JNI_H_

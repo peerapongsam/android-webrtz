@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Modes we support
@@ -34,7 +34,7 @@ const size_t kFrameLengths[] = { 80, 120, 160, 240, 320, 480, 640, 960,
 const size_t kFrameLengthsSize = sizeof(kFrameLengths) / sizeof(*kFrameLengths);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 class VadTest : public ::testing::Test {
  protected:

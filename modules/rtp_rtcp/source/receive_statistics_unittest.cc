@@ -16,7 +16,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::SizeIs;
@@ -421,4 +421,4 @@ TEST_F(ReceiveStatisticsTest, RtpCallbacksFecFirst) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

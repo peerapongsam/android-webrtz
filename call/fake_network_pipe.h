@@ -27,7 +27,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class PacketReceiver;
@@ -260,6 +260,6 @@ class FakeNetworkPipe : public Transport, public PacketReceiver, public Module {
   RTC_DISALLOW_COPY_AND_ASSIGN(FakeNetworkPipe);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_FAKE_NETWORK_PIPE_H_

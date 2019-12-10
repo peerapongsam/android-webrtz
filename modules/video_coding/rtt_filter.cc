@@ -16,7 +16,7 @@
 
 #include "modules/video_coding/internal_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMRttFilter::VCMRttFilter()
     : _filtFactMax(35),
@@ -162,4 +162,4 @@ void VCMRttFilter::ShortRttFilter(int64_t* buf, uint32_t length) {
 int64_t VCMRttFilter::RttMs() const {
   return static_cast<int64_t>(_maxRtt + 0.5);
 }
-}  // namespace webrtc
+}  // namespace webrtz

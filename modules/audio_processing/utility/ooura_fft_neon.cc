@@ -21,7 +21,7 @@
 #include "modules/audio_processing/utility/ooura_fft_tables_common.h"
 #include "modules/audio_processing/utility/ooura_fft_tables_neon_sse2.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(WEBRTC_HAS_NEON)
 void cft1st_128_neon(float* a) {
@@ -349,4 +349,4 @@ void rftbsub_128_neon(float* a) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

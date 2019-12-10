@@ -25,7 +25,7 @@
 #include "vpx/vp8cx.h"
 #include "vpx/vpx_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class LibvpxVp8Encoder : public VP8Encoder {
  public:
@@ -106,6 +106,6 @@ class LibvpxVp8Encoder : public VP8Encoder {
   std::vector<vpx_rational_t> downsampling_factors_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_ENCODER_H_

@@ -11,7 +11,7 @@
 #include "api/fakemetricsobserver.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FakeMetricsObserver::FakeMetricsObserver() {
   Reset();
@@ -84,4 +84,4 @@ bool FakeMetricsObserver::ExpectOnlySingleEnumCount(
   return pass;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

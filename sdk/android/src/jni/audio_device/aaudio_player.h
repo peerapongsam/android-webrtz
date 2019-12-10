@@ -24,7 +24,7 @@
 #include "sdk/android/src/jni/audio_device/aaudio_wrapper.h"
 #include "sdk/android/src/jni/audio_device/audio_device_module.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceBuffer;
 class FineAudioBuffer;
@@ -148,6 +148,6 @@ class AAudioPlayer final : public AudioOutput,
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_AUDIO_DEVICE_AAUDIO_PLAYER_H_

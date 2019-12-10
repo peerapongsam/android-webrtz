@@ -14,7 +14,7 @@
 #include <vector>
 #include "modules/desktop_capture/desktop_region.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A DxgiOutputContext stores the status of a single DxgiFrame of
 // DxgiOutputDuplicator.
@@ -56,6 +56,6 @@ struct DxgiFrameContext final {
   std::vector<DxgiAdapterContext> contexts;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_CONTEXT_H_

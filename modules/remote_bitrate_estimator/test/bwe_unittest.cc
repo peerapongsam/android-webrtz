@@ -16,7 +16,7 @@
 #include "rtc_base/arraysize.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -394,4 +394,4 @@ TEST_F(BweReceiverTest, Loss) {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

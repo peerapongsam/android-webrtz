@@ -23,7 +23,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr float kPi = 3.141592f;
@@ -132,4 +132,4 @@ TEST(RenderSignalAnalyzer, NarrowBandDetection) {
   EXPECT_FALSE(analyzer.PoorSignalExcitation());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

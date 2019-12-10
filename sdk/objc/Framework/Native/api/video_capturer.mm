@@ -14,17 +14,17 @@
 #include "rtc_base/ptr_util.h"
 #include "sdk/objc/Framework/Native/src/objc_video_track_source.h"
 
-namespace webrtc {
+namespace webrtz {
 
-rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> ObjCToNativeVideoCapturer(
+rtc::scoped_refptr<webrtz::VideoTrackSourceInterface> ObjCToNativeVideoCapturer(
     RTCVideoCapturer *objc_video_capturer,
     rtc::Thread *signaling_thread,
     rtc::Thread *worker_thread) {
   RTCObjCVideoSourceAdapter *adapter = [[RTCObjCVideoSourceAdapter alloc] init];
-  rtc::scoped_refptr<webrtc::ObjCVideoTrackSource> objc_video_track_source(
-      new rtc::RefCountedObject<webrtc::ObjCVideoTrackSource>(adapter));
-  rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> video_source =
-      webrtc::VideoTrackSourceProxy::Create(
+  rtc::scoped_refptr<webrtz::ObjCVideoTrackSource> objc_video_track_source(
+      new rtc::RefCountedObject<webrtz::ObjCVideoTrackSource>(adapter));
+  rtc::scoped_refptr<webrtz::VideoTrackSourceInterface> video_source =
+      webrtz::VideoTrackSourceProxy::Create(
           signaling_thread, worker_thread, objc_video_track_source);
 
   objc_video_capturer.delegate = adapter;
@@ -32,4 +32,4 @@ rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> ObjCToNativeVideoCapturer(
   return video_source;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

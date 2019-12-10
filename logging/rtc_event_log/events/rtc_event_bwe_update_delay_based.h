@@ -13,7 +13,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum class BandwidthUsage;
 
@@ -31,6 +31,6 @@ class RtcEventBweUpdateDelayBased final : public RtcEvent {
   const BandwidthUsage detector_state_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_BWE_UPDATE_DELAY_BASED_H_

@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(WindowGeneratorTest, KaiserBesselDerived) {
   float window[7];
@@ -88,5 +88,5 @@ TEST(WindowGeneratorTest, Hanning) {
   ASSERT_NEAR(window[6], 0.0f, 1e-6f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

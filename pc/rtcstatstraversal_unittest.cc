@@ -21,7 +21,7 @@
 // This file contains tests for TakeReferencedStats().
 // GetStatsNeighborIds() is tested in rtcstats_integrationtest.cc.
 
-namespace webrtc {
+namespace webrtz {
 
 class RTCStatsTraversalTest : public testing::Test {
  public:
@@ -45,7 +45,7 @@ class RTCStatsTraversalTest : public testing::Test {
     for (const RTCStats* start_node : start_nodes) {
       start_ids.push_back(start_node->id());
     }
-    result_ = webrtc::TakeReferencedStats(initial_report_, start_ids);
+    result_ = webrtz::TakeReferencedStats(initial_report_, start_ids);
   }
 
   void EXPECT_VISITED(const RTCStats* stats) {
@@ -205,4 +205,4 @@ TEST_F(RTCStatsTraversalTest, MultipleStartsLeadingToSameNode) {
   EXPECT_VISITED(remote_candidate_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

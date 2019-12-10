@@ -12,7 +12,7 @@
 
 #include "api/call/transport.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class PacketReceiver;
 
@@ -25,6 +25,6 @@ class NullTransport : public Transport {
   bool SendRtcp(const uint8_t* packet, size_t length) override;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_NULL_TRANSPORT_H_

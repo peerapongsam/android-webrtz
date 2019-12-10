@@ -39,7 +39,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const size_t kNumBands = 3;
@@ -213,4 +213,4 @@ void ThreeBandFilterBank::UpModulate(const float* const* in,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

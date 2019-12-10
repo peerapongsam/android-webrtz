@@ -19,7 +19,7 @@
 #error "Must choose either fix or float"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 #if WEBRTC_USE_BUILTIN_ISAC_FIX
 using AudioDecoderIsac = AudioDecoderIsacFix;
@@ -27,6 +27,6 @@ using AudioDecoderIsac = AudioDecoderIsacFix;
 using AudioDecoderIsac = AudioDecoderIsacFloat;
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_ISAC_AUDIO_DECODER_ISAC_H_

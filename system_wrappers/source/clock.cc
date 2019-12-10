@@ -28,7 +28,7 @@
 #include "rtc_base/synchronization/rw_lock_wrapper.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RealTimeClock : public Clock {
   // Return a timestamp in milliseconds relative to some arbitrary source; the
@@ -264,4 +264,4 @@ void SimulatedClock::AdvanceTimeMicroseconds(int64_t microseconds) {
   time_us_ += microseconds;
 }
 
-};  // namespace webrtc
+};  // namespace webrtz

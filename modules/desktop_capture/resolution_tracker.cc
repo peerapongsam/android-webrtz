@@ -10,7 +10,7 @@
 
 #include "modules/desktop_capture/resolution_tracker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool ResolutionTracker::SetResolution(DesktopSize size) {
   if (!initialized_) {
@@ -31,4 +31,4 @@ void ResolutionTracker::Reset() {
   initialized_ = false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

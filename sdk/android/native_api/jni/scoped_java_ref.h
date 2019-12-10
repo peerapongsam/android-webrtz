@@ -20,7 +20,7 @@
 #include "rtc_base/constructormagic.h"
 #include "sdk/android/native_api/jni/jvm.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Generic base class for ScopedJavaLocalRef and ScopedJavaGlobalRef. Useful
 // for allowing functions to accept a reference without having to mandate
@@ -205,6 +205,6 @@ inline ScopedJavaLocalRef<T> static_java_ref_cast(JNIEnv* env,
   return ScopedJavaLocalRef<T>(env, static_cast<T>(owned_ref.Release()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_JNI_SCOPED_JAVA_REF_H_

@@ -80,7 +80,7 @@
 
 @end
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 VideoRenderer* VideoRenderer::CreatePlatformRenderer(const char* window_title,

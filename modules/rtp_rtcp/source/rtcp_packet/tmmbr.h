@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/tmmb_item.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 
@@ -51,5 +51,5 @@ class Tmmbr : public Rtpfb {
   std::vector<TmmbItem> items_;
 };
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_TMMBR_H_

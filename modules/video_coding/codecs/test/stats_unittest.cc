@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 const size_t kTimestamp = 12345;
@@ -62,4 +62,4 @@ TEST(StatsTest, AddFrameLayering) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

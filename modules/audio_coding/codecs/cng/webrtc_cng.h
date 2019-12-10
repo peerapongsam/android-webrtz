@@ -20,7 +20,7 @@
 
 #define WEBRTC_CNG_MAX_LPC_ORDER 12
 
-namespace webrtc {
+namespace webrtz {
 
 class ComfortNoiseDecoder {
  public:
@@ -94,6 +94,6 @@ class ComfortNoiseEncoder {
   uint32_t enc_seed_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_CNG_WEBRTC_CNG_H_

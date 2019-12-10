@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_region.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class WindowCapturerTest : public testing::Test,
                            public DesktopCapturer::Callback {
@@ -92,4 +92,4 @@ TEST_F(WindowCapturerTest, MAYBE_Capture) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -20,7 +20,7 @@
 #include "modules/include/module_common_types.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Error codes
 #define VCM_FRAME_NOT_READY 3
@@ -147,6 +147,6 @@ class KeyFrameRequestSender {
   virtual ~KeyFrameRequestSender() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INCLUDE_VIDEO_CODING_DEFINES_H_

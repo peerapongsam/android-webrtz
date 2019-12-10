@@ -28,7 +28,7 @@
 #include "rtc_base/timeutils.h"
 #include "sdk/objc/Framework/Native/src/objc_frame_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 class ObjCVideoDecoder : public VideoDecoder {
@@ -58,7 +58,7 @@ class ObjCVideoDecoder : public VideoDecoder {
     RTCRtpFragmentationHeader *header =
         [[RTCRtpFragmentationHeader alloc] initWithNativeFragmentationHeader:fragmentation];
 
-    // webrtc::CodecSpecificInfo only handles a hard coded list of codecs
+    // webrtz::CodecSpecificInfo only handles a hard coded list of codecs
     id<RTCCodecSpecificInfo> rtcCodecSpecificInfo = nil;
     if (codec_specific_info) {
       if (codec_specific_info->codecType == kVideoCodecH264) {
@@ -157,4 +157,4 @@ void ObjCVideoDecoderFactory::DestroyVideoDecoder(VideoDecoder *decoder) {
   decoder = nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

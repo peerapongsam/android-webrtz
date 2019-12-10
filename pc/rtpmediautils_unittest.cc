@@ -13,7 +13,7 @@
 #include "pc/rtpmediautils.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::Bool;
 using ::testing::Combine;
@@ -93,4 +93,4 @@ INSTANTIATE_TEST_CASE_P(RtpTransceiverDirectionTest,
                         EnumerateAllDirectionsAndBool,
                         Combine(ValuesIn(kAllDirections), Bool()));
 
-}  // namespace webrtc
+}  // namespace webrtz

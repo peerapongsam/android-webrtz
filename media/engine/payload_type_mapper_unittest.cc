@@ -83,7 +83,7 @@ TEST_F(PayloadTypeMapperTest, ValidDynamicPayloadTypes) {
   std::set<int> used_payload_types;
   for (int i = 0; i != 256; ++i) {
     std::string format_name = "unknown_format_" + std::to_string(i);
-    webrtc::SdpAudioFormat format(format_name.c_str(), i*100, (i % 2) + 1);
+    webrtz::SdpAudioFormat format(format_name.c_str(), i*100, (i % 2) + 1);
     auto opt_payload_type = mapper_.GetMappingFor(format);
     bool mapper_is_full = false;
 
@@ -117,7 +117,7 @@ TEST_F(PayloadTypeMapperTest, ValidDynamicPayloadTypes) {
 }
 
 TEST_F(PayloadTypeMapperTest, ToAudioCodec) {
-  webrtc::SdpAudioFormat format("unknown_format", 4711, 17);
+  webrtz::SdpAudioFormat format("unknown_format", 4711, 17);
   auto opt_payload_type = mapper_.GetMappingFor(format);
   EXPECT_TRUE(opt_payload_type);
   auto opt_audio_codec = mapper_.ToAudioCodec(format);

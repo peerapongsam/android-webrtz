@@ -21,7 +21,7 @@
 #include "rtc_base/thread_checker.h"
 #include "video/stream_synchronization.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Syncable;
 
@@ -61,6 +61,6 @@ class RtpStreamsSynchronizer : public Module {
   int64_t last_sync_time_ RTC_GUARDED_BY(&process_thread_checker_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_RTP_STREAMS_SYNCHRONIZER_H_

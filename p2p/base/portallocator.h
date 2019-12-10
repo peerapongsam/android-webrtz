@@ -23,7 +23,7 @@
 #include "rtc_base/sigslot.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 class MetricsObserverInterface;
 class TurnCustomizer;
 }
@@ -356,7 +356,7 @@ class PortAllocator : public sigslot::has_slots<> {
                         const std::vector<RelayServerConfig>& turn_servers,
                         int candidate_pool_size,
                         bool prune_turn_ports,
-                        webrtc::TurnCustomizer* turn_customizer = nullptr,
+                        webrtz::TurnCustomizer* turn_customizer = nullptr,
                         const rtc::Optional<int>&
                             stun_candidate_keepalive_interval = rtc::nullopt);
 
@@ -472,11 +472,11 @@ class PortAllocator : public sigslot::has_slots<> {
   const std::string& origin() const { return origin_; }
   void set_origin(const std::string& origin) { origin_ = origin; }
 
-  void SetMetricsObserver(webrtc::MetricsObserverInterface* observer) {
+  void SetMetricsObserver(webrtz::MetricsObserverInterface* observer) {
     metrics_observer_ = observer;
   }
 
-  webrtc::TurnCustomizer* turn_customizer() {
+  webrtz::TurnCustomizer* turn_customizer() {
     return turn_customizer_;
   }
 
@@ -495,7 +495,7 @@ class PortAllocator : public sigslot::has_slots<> {
       const std::string& ice_ufrag,
       const std::string& ice_pwd) = 0;
 
-  webrtc::MetricsObserverInterface* metrics_observer() {
+  webrtz::MetricsObserverInterface* metrics_observer() {
     return metrics_observer_;
   }
 
@@ -522,12 +522,12 @@ class PortAllocator : public sigslot::has_slots<> {
   bool candidate_pool_frozen_ = false;
   bool prune_turn_ports_ = false;
 
-  webrtc::MetricsObserverInterface* metrics_observer_ = nullptr;
+  webrtz::MetricsObserverInterface* metrics_observer_ = nullptr;
 
   // Customizer for TURN messages.
   // The instance is owned by application and will be shared among
   // all TurnPort(s) created.
-  webrtc::TurnCustomizer* turn_customizer_ = nullptr;
+  webrtz::TurnCustomizer* turn_customizer_ = nullptr;
 
   rtc::Optional<int> stun_candidate_keepalive_interval_;
 };

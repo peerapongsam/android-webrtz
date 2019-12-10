@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class HistogramTest : public test::CallTest {
  protected:
@@ -275,4 +275,4 @@ TEST_F(HistogramTest, VerifyHistogramStatsWithScreenshare) {
   VerifyHistogramStats(kEnabledRtx, kEnabledRed, kScreenshare);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

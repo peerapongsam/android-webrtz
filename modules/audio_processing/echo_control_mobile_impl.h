@@ -20,7 +20,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/swap_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioBuffer;
 
@@ -79,6 +79,6 @@ class EchoControlMobileImpl : public EchoControlMobile {
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(EchoControlMobileImpl);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_ECHO_CONTROL_MOBILE_IMPL_H_

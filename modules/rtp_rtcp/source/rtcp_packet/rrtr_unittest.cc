@@ -12,9 +12,9 @@
 
 #include "test/gtest.h"
 
-using webrtc::rtcp::Rrtr;
+using webrtz::rtcp::Rrtr;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const uint32_t kNtpSec = 0x12345678;
@@ -48,4 +48,4 @@ TEST(RtcpPacketRrtrTest, Parse) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

@@ -27,7 +27,7 @@
 // if different APIs are called from different threads.
 //
 
-namespace webrtc {
+namespace webrtz {
 
 namespace acm2 {
 
@@ -59,6 +59,6 @@ class CallStatistics {
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_ACM2_CALL_STATISTICS_H_

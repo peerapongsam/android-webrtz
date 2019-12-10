@@ -16,7 +16,7 @@
 
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class EncodedImage;
 
@@ -31,6 +31,6 @@ ScopedJavaLocalRef<jobjectArray> NativeToJavaFrameTypeArray(
     const std::vector<FrameType>& frame_types);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_ENCODEDIMAGE_H_

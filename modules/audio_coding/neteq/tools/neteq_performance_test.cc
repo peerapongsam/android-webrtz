@@ -22,21 +22,21 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-using webrtc::NetEq;
-using webrtc::test::AudioLoop;
-using webrtc::test::RtpGenerator;
+using webrtz::NetEq;
+using webrtz::test::AudioLoop;
+using webrtz::test::RtpGenerator;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 int64_t NetEqPerformanceTest::Run(int runtime_ms,
                                   int lossrate,
                                   double drift_factor) {
   const std::string kInputFileName =
-      webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+      webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
   const int kSampRateHz = 32000;
-  const webrtc::NetEqDecoder kDecoderType =
-      webrtc::NetEqDecoder::kDecoderPCM16Bswb32kHz;
+  const webrtz::NetEqDecoder kDecoderType =
+      webrtz::NetEqDecoder::kDecoderPCM16Bswb32kHz;
   const std::string kDecoderName = "pcm16-swb32";
   const int kPayloadType = 95;
 
@@ -75,7 +75,7 @@ int64_t NetEqPerformanceTest::Run(int runtime_ms,
   RTC_CHECK_EQ(sizeof(input_payload), payload_len);
 
   // Main loop.
-  webrtc::Clock* clock = webrtc::Clock::GetRealTimeClock();
+  webrtz::Clock* clock = webrtz::Clock::GetRealTimeClock();
   int64_t start_time_ms = clock->TimeInMilliseconds();
   AudioFrame out_frame;
   while (time_now_ms < runtime_ms) {
@@ -130,4 +130,4 @@ int64_t NetEqPerformanceTest::Run(int runtime_ms,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

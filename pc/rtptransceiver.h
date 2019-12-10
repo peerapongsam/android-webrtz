@@ -18,7 +18,7 @@
 #include "pc/rtpreceiver.h"
 #include "pc/rtpsender.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of the public RtpTransceiverInterface.
 //
@@ -206,6 +206,6 @@ PROXY_METHOD0(void, Stop);
 PROXY_METHOD1(void, SetCodecPreferences, rtc::ArrayView<RtpCodecCapability>);
 END_PROXY_MAP();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPTRANSCEIVER_H_

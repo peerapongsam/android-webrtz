@@ -14,7 +14,7 @@
 #include "api/audio_codecs/audio_decoder.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoderPcm16B final : public AudioDecoder {
  public:
@@ -39,6 +39,6 @@ class AudioDecoderPcm16B final : public AudioDecoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioDecoderPcm16B);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_PCM16B_AUDIO_DECODER_PCM16B_H_

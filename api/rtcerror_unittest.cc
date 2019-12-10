@@ -56,7 +56,7 @@ struct MoveOnlyInt2 {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 // Test that the default constructor creates a "no error" error.
 TEST(RTCErrorTest, DefaultConstructor) {
@@ -237,4 +237,4 @@ TEST(RTCErrorOrDeathTest, MoveErrorValue) {
 
 #endif  // RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
-}  // namespace webrtc
+}  // namespace webrtz

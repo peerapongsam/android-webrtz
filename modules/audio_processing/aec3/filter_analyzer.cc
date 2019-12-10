@@ -17,7 +17,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 size_t FindPeakIndex(rtc::ArrayView<const float> filter_time_domain) {
@@ -124,4 +124,4 @@ void FilterAnalyzer::UpdateFilterGain(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

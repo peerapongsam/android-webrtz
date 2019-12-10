@@ -11,7 +11,7 @@
 #include "system_wrappers/include/rtp_to_ntp_estimator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kOneMsInNtpFrac = 4294967;
 const uint32_t kTimestampTicksPerMs = 90;
@@ -292,4 +292,4 @@ TEST(RtpToNtpTests, FailsForNoParameters) {
   EXPECT_FALSE(estimator.Estimate(timestamp, &timestamp_ms));
 }
 
-};  // namespace webrtc
+};  // namespace webrtz

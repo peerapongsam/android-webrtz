@@ -16,7 +16,7 @@
 #include "modules/audio_processing/aec3/block_processor.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockBlockProcessor : public BlockProcessor {
@@ -35,6 +35,6 @@ class MockBlockProcessor : public BlockProcessor {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_MOCK_MOCK_BLOCK_PROCESSOR_H_

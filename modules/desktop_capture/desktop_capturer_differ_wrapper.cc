@@ -20,7 +20,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -222,4 +222,4 @@ void DesktopCapturerDifferWrapper::OnCaptureResult(
   callback_->OnCaptureResult(result, std::move(frame));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

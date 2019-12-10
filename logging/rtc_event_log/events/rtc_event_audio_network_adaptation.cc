@@ -14,7 +14,7 @@
 
 #include "modules/audio_coding/audio_network_adaptor/include/audio_network_adaptor_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventAudioNetworkAdaptation::RtcEventAudioNetworkAdaptation(
     std::unique_ptr<AudioEncoderRuntimeConfig> config)
@@ -30,4 +30,4 @@ bool RtcEventAudioNetworkAdaptation::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

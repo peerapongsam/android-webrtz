@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 bool ResampleInputAudioFile::Read(size_t samples,
@@ -45,4 +45,4 @@ void ResampleInputAudioFile::set_output_rate_hz(int rate_hz) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -24,7 +24,7 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FecHeaderReader;
 class FecHeaderWriter;
@@ -414,6 +414,6 @@ class FecHeaderWriter {
   const size_t max_packet_overhead_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_FORWARD_ERROR_CORRECTION_H_

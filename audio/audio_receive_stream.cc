@@ -27,7 +27,7 @@
 #include "rtc_base/strings/string_builder.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::string AudioReceiveStream::Config::Rtp::ToString() const {
   char ss_buf[1024];
@@ -64,9 +64,9 @@ std::string AudioReceiveStream::Config::ToString() const {
 namespace internal {
 namespace {
 std::unique_ptr<voe::ChannelProxy> CreateChannelAndProxy(
-    webrtc::AudioState* audio_state,
+    webrtz::AudioState* audio_state,
     ProcessThread* module_process_thread,
-    const webrtc::AudioReceiveStream::Config& config) {
+    const webrtz::AudioReceiveStream::Config& config) {
   RTC_DCHECK(audio_state);
   internal::AudioState* internal_audio_state =
       static_cast<internal::AudioState*>(audio_state);
@@ -83,9 +83,9 @@ AudioReceiveStream::AudioReceiveStream(
     RtpStreamReceiverControllerInterface* receiver_controller,
     PacketRouter* packet_router,
     ProcessThread* module_process_thread,
-    const webrtc::AudioReceiveStream::Config& config,
-    const rtc::scoped_refptr<webrtc::AudioState>& audio_state,
-    webrtc::RtcEventLog* event_log)
+    const webrtz::AudioReceiveStream::Config& config,
+    const rtc::scoped_refptr<webrtz::AudioState>& audio_state,
+    webrtz::RtcEventLog* event_log)
     : AudioReceiveStream(receiver_controller,
                          packet_router,
                          config,
@@ -98,9 +98,9 @@ AudioReceiveStream::AudioReceiveStream(
 AudioReceiveStream::AudioReceiveStream(
     RtpStreamReceiverControllerInterface* receiver_controller,
     PacketRouter* packet_router,
-    const webrtc::AudioReceiveStream::Config& config,
-    const rtc::scoped_refptr<webrtc::AudioState>& audio_state,
-    webrtc::RtcEventLog* event_log,
+    const webrtz::AudioReceiveStream::Config& config,
+    const rtc::scoped_refptr<webrtz::AudioState>& audio_state,
+    webrtz::RtcEventLog* event_log,
     std::unique_ptr<voe::ChannelProxy> channel_proxy)
     : audio_state_(audio_state),
       channel_proxy_(std::move(channel_proxy)) {
@@ -138,7 +138,7 @@ AudioReceiveStream::~AudioReceiveStream() {
 }
 
 void AudioReceiveStream::Reconfigure(
-    const webrtc::AudioReceiveStream::Config& config) {
+    const webrtz::AudioReceiveStream::Config& config) {
   RTC_DCHECK(worker_thread_checker_.CalledOnValidThread());
   ConfigureStream(this, config, false);
 }
@@ -163,15 +163,15 @@ void AudioReceiveStream::Stop() {
   audio_state()->RemoveReceivingStream(this);
 }
 
-webrtc::AudioReceiveStream::Stats AudioReceiveStream::GetStats() const {
+webrtz::AudioReceiveStream::Stats AudioReceiveStream::GetStats() const {
   RTC_DCHECK_RUN_ON(&worker_thread_checker_);
-  webrtc::AudioReceiveStream::Stats stats;
+  webrtz::AudioReceiveStream::Stats stats;
   stats.remote_ssrc = config_.rtp.remote_ssrc;
 
-  webrtc::CallStatistics call_stats = channel_proxy_->GetRTCPStatistics();
+  webrtz::CallStatistics call_stats = channel_proxy_->GetRTCPStatistics();
   // TODO(solenberg): Don't return here if we can't get the codec - return the
   //                  stats we *can* get.
-  webrtc::CodecInst codec_inst = {0};
+  webrtz::CodecInst codec_inst = {0};
   if (!channel_proxy_->GetRecCodec(&codec_inst)) {
     return stats;
   }
@@ -324,7 +324,7 @@ void AudioReceiveStream::OnRtpPacket(const RtpPacketReceived& packet) {
   channel_proxy_->OnRtpPacket(packet);
 }
 
-const webrtc::AudioReceiveStream::Config& AudioReceiveStream::config() const {
+const webrtz::AudioReceiveStream::Config& AudioReceiveStream::config() const {
   RTC_DCHECK_RUN_ON(&worker_thread_checker_);
   return config_;
 }
@@ -377,4 +377,4 @@ void AudioReceiveStream::ConfigureStream(AudioReceiveStream* stream,
   stream->config_ = new_config;
 }
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz

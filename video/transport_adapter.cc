@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace internal {
 
 TransportAdapter::TransportAdapter(Transport* transport)
@@ -45,4 +45,4 @@ void TransportAdapter::Disable() {
 }
 
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz

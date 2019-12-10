@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/aec3/fft_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FftBuffer::FftBuffer(size_t size) : size(static_cast<int>(size)), buffer(size) {
   for (auto& b : buffer) {
@@ -20,4 +20,4 @@ FftBuffer::FftBuffer(size_t size) : size(static_cast<int>(size)), buffer(size) {
 
 FftBuffer::~FftBuffer() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

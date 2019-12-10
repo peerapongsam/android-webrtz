@@ -22,7 +22,7 @@
 
 DECLARE_string(test_artifacts_dir);
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 TEST(IsolatedOutputTest, ShouldRejectInvalidIsolatedOutDir) {
@@ -58,4 +58,4 @@ TEST(IsolatedOutputTest, ShouldBeAbleToWriteContent) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

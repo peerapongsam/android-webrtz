@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DesktopFrame::DesktopFrame(DesktopSize size,
                            int stride,
@@ -139,4 +139,4 @@ SharedMemoryDesktopFrame::~SharedMemoryDesktopFrame() {
   delete shared_memory_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

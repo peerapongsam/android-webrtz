@@ -19,7 +19,7 @@
 #include "modules/desktop_capture/fake_desktop_capturer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BlankDetectorDesktopCapturerWrapperTest
     : public testing::Test,
@@ -160,4 +160,4 @@ TEST_F(BlankDetectorDesktopCapturerWrapperTest,
   PerfTest(capturer_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

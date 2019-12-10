@@ -16,7 +16,7 @@
 
 using ::std::get;
 
-namespace webrtc {
+namespace webrtz {
 
 AudioCodecSpeedTest::AudioCodecSpeedTest(int block_duration_ms,
                                          int input_sampling_khz,
@@ -124,4 +124,4 @@ void AudioCodecSpeedTest::EncodeDecode(size_t audio_duration_sec) {
          (decoding_time_ms_ / audio_duration_sec) / 10.0);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

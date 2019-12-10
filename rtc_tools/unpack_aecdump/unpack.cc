@@ -52,7 +52,7 @@ DEFINE_bool(help, false, "Print this message.");
     fprintf(settings_file, "  " #field_name ": %d\n", msg.field_name()); \
   }
 
-namespace webrtc {
+namespace webrtz {
 
 using audioproc::Event;
 using audioproc::ReverseStream;
@@ -339,8 +339,8 @@ int do_main(int argc, char* argv[]) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
-  return webrtc::do_main(argc, argv);
+  return webrtz::do_main(argc, argv);
 }

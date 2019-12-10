@@ -25,7 +25,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Merge::Merge(int fs_hz,
              size_t num_channels,
@@ -383,4 +383,4 @@ size_t Merge::RequiredFutureSamples() {
 }
 
 
-}  // namespace webrtc
+}  // namespace webrtz

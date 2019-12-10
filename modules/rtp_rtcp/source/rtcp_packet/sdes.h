@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 // Source Description (SDES) (RFC 3550).
@@ -52,5 +52,5 @@ class Sdes : public RtcpPacket {
   size_t block_length_;
 };
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_SDES_H_

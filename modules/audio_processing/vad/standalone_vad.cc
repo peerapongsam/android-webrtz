@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kDefaultStandaloneVadMode = 3;
 
@@ -89,4 +89,4 @@ int StandaloneVad::set_mode(int mode) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

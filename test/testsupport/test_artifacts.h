@@ -15,7 +15,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // If the test_artifacts_dir flag is set, returns true and copies the location
@@ -34,6 +34,6 @@ bool WriteToTestArtifactsDir(const char* filename,
 bool WriteToTestArtifactsDir(const char* filename, const std::string& content);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_TESTSUPPORT_TEST_ARTIFACTS_H_

@@ -135,29 +135,29 @@ TEST_F(VideoCapturerTest, TestRotationAppliedBySource) {
   // the rotation information, the renderer should be given the right dimension
   // such that the frame could be rendered.
 
-  capturer_->SetRotation(webrtc::kVideoRotation_90);
+  capturer_->SetRotation(webrtz::kVideoRotation_90);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   // Swapped width and height
   EXPECT_EQ(kWidth, renderer_.height());
   EXPECT_EQ(kHeight, renderer_.width());
-  EXPECT_EQ(webrtc::kVideoRotation_0, renderer_.rotation());
+  EXPECT_EQ(webrtz::kVideoRotation_0, renderer_.rotation());
 
-  capturer_->SetRotation(webrtc::kVideoRotation_270);
+  capturer_->SetRotation(webrtz::kVideoRotation_270);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   // Swapped width and height
   EXPECT_EQ(kWidth, renderer_.height());
   EXPECT_EQ(kHeight, renderer_.width());
-  EXPECT_EQ(webrtc::kVideoRotation_0, renderer_.rotation());
+  EXPECT_EQ(webrtz::kVideoRotation_0, renderer_.rotation());
 
-  capturer_->SetRotation(webrtc::kVideoRotation_180);
+  capturer_->SetRotation(webrtz::kVideoRotation_180);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   // Back to normal width and height
   EXPECT_EQ(kWidth, renderer_.width());
   EXPECT_EQ(kHeight, renderer_.height());
-  EXPECT_EQ(webrtc::kVideoRotation_0, renderer_.rotation());
+  EXPECT_EQ(webrtz::kVideoRotation_0, renderer_.rotation());
 }
 
 TEST_F(VideoCapturerTest, TestRotationAppliedBySinkByDefault) {
@@ -184,22 +184,22 @@ TEST_F(VideoCapturerTest, TestRotationAppliedBySinkByDefault) {
   // resolution won't match anymore.
 
   int frame_count = 0;
-  capturer_->SetRotation(webrtc::kVideoRotation_0);
+  capturer_->SetRotation(webrtz::kVideoRotation_0);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   EXPECT_EQ(capturer_->GetRotation(), renderer_.rotation());
 
-  capturer_->SetRotation(webrtc::kVideoRotation_90);
+  capturer_->SetRotation(webrtz::kVideoRotation_90);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   EXPECT_EQ(capturer_->GetRotation(), renderer_.rotation());
 
-  capturer_->SetRotation(webrtc::kVideoRotation_180);
+  capturer_->SetRotation(webrtz::kVideoRotation_180);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   EXPECT_EQ(capturer_->GetRotation(), renderer_.rotation());
 
-  capturer_->SetRotation(webrtc::kVideoRotation_270);
+  capturer_->SetRotation(webrtz::kVideoRotation_270);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   EXPECT_EQ(capturer_->GetRotation(), renderer_.rotation());
@@ -228,7 +228,7 @@ TEST_F(VideoCapturerTest, TestRotationAppliedBySourceWhenDifferentWants) {
   EXPECT_EQ(0, renderer_.num_rendered_frames());
 
   int frame_count = 0;
-  capturer_->SetRotation(webrtc::kVideoRotation_90);
+  capturer_->SetRotation(webrtz::kVideoRotation_90);
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   EXPECT_EQ(capturer_->GetRotation(), renderer_.rotation());
@@ -241,8 +241,8 @@ TEST_F(VideoCapturerTest, TestRotationAppliedBySourceWhenDifferentWants) {
   EXPECT_TRUE(capturer_->CaptureFrame());
   EXPECT_EQ(++frame_count, renderer_.num_rendered_frames());
   EXPECT_EQ(1, renderer2.num_rendered_frames());
-  EXPECT_EQ(webrtc::kVideoRotation_0, renderer_.rotation());
-  EXPECT_EQ(webrtc::kVideoRotation_0, renderer2.rotation());
+  EXPECT_EQ(webrtz::kVideoRotation_0, renderer_.rotation());
+  EXPECT_EQ(webrtz::kVideoRotation_0, renderer2.rotation());
 }
 
 // TODO(nisse): This test doesn't quite fit here. It tests two things:

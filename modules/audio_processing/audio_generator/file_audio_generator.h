@@ -17,10 +17,10 @@
 #include "modules/audio_processing/include/audio_generator.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Provides looping audio from a file. The file is read in its entirety on
-// construction and then closed. This class wraps a webrtc::WavReader, and is
+// construction and then closed. This class wraps a webrtz::WavReader, and is
 // hence unsuitable for non-diagnostic code.
 class FileAudioGenerator : public AudioGenerator {
  public:
@@ -43,6 +43,6 @@ class FileAudioGenerator : public AudioGenerator {
   RTC_DISALLOW_COPY_AND_ASSIGN(FileAudioGenerator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AUDIO_GENERATOR_FILE_AUDIO_GENERATOR_H_

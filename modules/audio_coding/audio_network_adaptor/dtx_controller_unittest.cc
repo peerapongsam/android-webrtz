@@ -13,7 +13,7 @@
 #include "modules/audio_coding/audio_network_adaptor/dtx_controller.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -78,4 +78,4 @@ TEST(DtxControllerTest, CheckBehaviorOnChangingUplinkBandwidth) {
   CheckDecision(controller.get(), kDtxDisablingBandwidthBps, false);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

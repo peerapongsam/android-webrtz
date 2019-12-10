@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(RtpHeaderExtensionTest, RegisterByType) {
   RtpHeaderExtensionMap map;
@@ -111,4 +111,4 @@ TEST(RtpHeaderExtensionTest, GetId) {
   EXPECT_EQ(3, map.GetId(TransmissionOffset::kId));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 VideoTrackSource::VideoTrackSource(
     rtc::VideoSourceInterface<VideoFrame>* source,
@@ -50,4 +50,4 @@ void VideoTrackSource::RemoveSink(rtc::VideoSinkInterface<VideoFrame>* sink) {
   source_->RemoveSink(sink);
 }
 
-}  //  namespace webrtc
+}  //  namespace webrtz

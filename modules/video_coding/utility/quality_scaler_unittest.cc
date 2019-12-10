@@ -17,7 +17,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 static const int kFramerate = 30;
 static const int kLowQp = 15;
@@ -198,5 +198,5 @@ TEST_F(QualityScalerTest, DoesNotScaleUntilEnoughFramesObserved) {
   EXPECT_EQ(0, observer_->adapt_down_events_);
   EXPECT_EQ(1, observer_->adapt_up_events_);
 }
-}  // namespace webrtc
+}  // namespace webrtz
 #undef DO_SYNC

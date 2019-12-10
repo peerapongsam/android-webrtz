@@ -22,7 +22,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class BackgroundNoise;
@@ -71,5 +71,5 @@ class Normal {
   RTC_DISALLOW_COPY_AND_ASSIGN(Normal);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_NORMAL_H_

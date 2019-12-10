@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 ConfigurableFrameSizeEncoder::ConfigurableFrameSizeEncoder(
@@ -86,4 +86,4 @@ int32_t ConfigurableFrameSizeEncoder::SetFrameSize(size_t size) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

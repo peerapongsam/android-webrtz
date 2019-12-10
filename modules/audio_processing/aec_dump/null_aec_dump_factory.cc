@@ -11,7 +11,7 @@
 #include "modules/audio_processing/aec_dump/aec_dump_factory.h"
 #include "modules/audio_processing/include/aec_dump.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<AecDump> AecDumpFactory::Create(rtc::PlatformFile file,
                                                 int64_t max_log_size_bytes,
@@ -30,4 +30,4 @@ std::unique_ptr<AecDump> AecDumpFactory::Create(FILE* handle,
                                                 rtc::TaskQueue* worker_queue) {
   return nullptr;
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "system_wrappers/include/rtp_to_ntp_estimator.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class StreamSynchronization {
  public:
@@ -58,6 +58,6 @@ class StreamSynchronization {
   int base_target_delay_ms_;
   int avg_diff_ms_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_STREAM_SYNCHRONIZATION_H_

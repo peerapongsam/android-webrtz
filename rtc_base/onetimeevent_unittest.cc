@@ -11,7 +11,7 @@
 #include "rtc_base/onetimeevent.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(OneTimeEventTest, ThreadSafe) {
   OneTimeEvent ot;
@@ -30,4 +30,4 @@ TEST(OneTimeEventTest, ThreadUnsafe) {
   EXPECT_FALSE(ot());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

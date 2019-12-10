@@ -86,7 +86,7 @@ class SrtpSession {
   bool IsExternalAuthActive() const;
 
   void SetMetricsObserver(
-      rtc::scoped_refptr<webrtc::MetricsObserverInterface> metrics_observer);
+      rtc::scoped_refptr<webrtz::MetricsObserverInterface> metrics_observer);
 
  private:
   bool DoSetKey(int type,
@@ -127,7 +127,7 @@ class SrtpSession {
   int last_send_seq_num_ = -1;
   bool external_auth_active_ = false;
   bool external_auth_enabled_ = false;
-  rtc::scoped_refptr<webrtc::MetricsObserverInterface> metrics_observer_;
+  rtc::scoped_refptr<webrtz::MetricsObserverInterface> metrics_observer_;
   RTC_DISALLOW_COPY_AND_ASSIGN(SrtpSession);
 };
 

@@ -18,7 +18,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
@@ -103,4 +103,4 @@ TEST(ResidualEchoEstimator, DISABLED_BasicTest) {
                 [&](float a) { EXPECT_NEAR(kLevel, a, 0.1f); });
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

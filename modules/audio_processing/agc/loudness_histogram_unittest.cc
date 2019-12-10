@@ -21,7 +21,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct InputOutput {
   double rms;
@@ -103,4 +103,4 @@ TEST_F(LoudnessHistogramTest, InactiveCircularBuffer) {
                      .c_str());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

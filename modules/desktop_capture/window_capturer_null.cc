@@ -14,7 +14,7 @@
 #include "modules/desktop_capture/desktop_frame.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -68,4 +68,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawWindowCapturer(
   return std::unique_ptr<DesktopCapturer>(new WindowCapturerNull());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

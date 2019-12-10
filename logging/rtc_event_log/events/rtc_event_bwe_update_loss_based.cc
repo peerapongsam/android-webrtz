@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_bwe_update_loss_based.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventBweUpdateLossBased::RtcEventBweUpdateLossBased(int32_t bitrate_bps,
                                                        uint8_t fraction_loss,
@@ -29,4 +29,4 @@ bool RtcEventBweUpdateLossBased::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

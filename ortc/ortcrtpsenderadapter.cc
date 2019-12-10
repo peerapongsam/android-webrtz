@@ -18,16 +18,16 @@
 
 namespace {
 
-void FillAudioSenderParameters(webrtc::RtpParameters* parameters) {
-  for (webrtc::RtpCodecParameters& codec : parameters->codecs) {
+void FillAudioSenderParameters(webrtz::RtpParameters* parameters) {
+  for (webrtz::RtpCodecParameters& codec : parameters->codecs) {
     if (!codec.num_channels) {
       codec.num_channels = 1;
     }
   }
 }
 
-void FillVideoSenderParameters(webrtc::RtpParameters* parameters) {
-  for (webrtc::RtpCodecParameters& codec : parameters->codecs) {
+void FillVideoSenderParameters(webrtz::RtpParameters* parameters) {
+  for (webrtz::RtpCodecParameters& codec : parameters->codecs) {
     if (!codec.clock_rate) {
       codec.clock_rate = cricket::kVideoCodecClockrate;
     }
@@ -36,7 +36,7 @@ void FillVideoSenderParameters(webrtc::RtpParameters* parameters) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 BEGIN_OWNED_PROXY_MAP(OrtcRtpSender)
 PROXY_SIGNALING_THREAD_DESTRUCTOR()
@@ -120,7 +120,7 @@ RTCError OrtcRtpSenderAdapter::Send(const RtpParameters& parameters) {
       break;
     case cricket::MEDIA_TYPE_DATA:
       RTC_NOTREACHED();
-      return webrtc::RTCError(webrtc::RTCErrorType::INTERNAL_ERROR);
+      return webrtz::RTCError(webrtz::RTCErrorType::INTERNAL_ERROR);
   }
   last_applied_parameters_ = filled_parameters;
 
@@ -185,4 +185,4 @@ void OrtcRtpSenderAdapter::CreateInternalSender() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

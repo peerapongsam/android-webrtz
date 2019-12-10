@@ -11,7 +11,7 @@
 #ifndef API_AUDIO_CODECS_ILBC_AUDIO_ENCODER_ILBC_CONFIG_H_
 #define API_AUDIO_CODECS_ILBC_AUDIO_ENCODER_ILBC_CONFIG_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // NOTE: This struct is still under development and may change without notice.
 struct AudioEncoderIlbcConfig {
@@ -24,6 +24,6 @@ struct AudioEncoderIlbcConfig {
   // them, and frame size 60 ms consists of two 30 ms frames.
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_ILBC_AUDIO_ENCODER_ILBC_CONFIG_H_

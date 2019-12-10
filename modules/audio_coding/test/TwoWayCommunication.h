@@ -19,7 +19,7 @@
 #include "modules/audio_coding/test/PCMFile.h"
 #include "modules/audio_coding/test/utility.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TwoWayCommunication : public ACMTest {
  public:
@@ -56,6 +56,6 @@ class TwoWayCommunication : public ACMTest {
   int _testMode;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_TWOWAYCOMMUNICATION_H_

@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcpTransceiverConfig::RtcpTransceiverConfig() = default;
 RtcpTransceiverConfig::RtcpTransceiverConfig(const RtcpTransceiverConfig&) =
@@ -80,4 +80,4 @@ bool RtcpTransceiverConfig::Validate() const {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

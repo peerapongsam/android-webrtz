@@ -32,7 +32,7 @@ static const char* kPathDelimiter = "/";
 static const char kTestName[] = "fileutils_unittest";
 static const char kExtension[] = "tmp";
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -75,7 +75,7 @@ class FileUtilsTest : public testing::Test {
   ~FileUtilsTest() override {}
   // Runs before the first test
   static void SetUpTestCase() {
-    original_working_dir_ = webrtc::test::WorkingDir();
+    original_working_dir_ = webrtz::test::WorkingDir();
   }
   void SetUp() override {
     ASSERT_EQ(chdir(original_working_dir_.c_str()), 0);
@@ -101,7 +101,7 @@ std::string FileUtilsTest::original_working_dir_ = "";
   OutputPathFromUnchangedWorkingDir
 #endif
 TEST_F(FileUtilsTest, MAYBE_OutputPathFromUnchangedWorkingDir) {
-  std::string path = webrtc::test::OutputPath();
+  std::string path = webrtz::test::OutputPath();
   std::string expected_end = "out";
   expected_end = kPathDelimiter + expected_end + kPathDelimiter;
   ASSERT_EQ(path.length() - expected_end.length(), path.find(expected_end));
@@ -116,21 +116,21 @@ TEST_F(FileUtilsTest, MAYBE_OutputPathFromUnchangedWorkingDir) {
 #endif
 TEST_F(FileUtilsTest, MAYBE_OutputPathFromRootWorkingDir) {
   ASSERT_EQ(0, chdir(kPathDelimiter));
-  ASSERT_EQ("./", webrtc::test::OutputPath());
+  ASSERT_EQ("./", webrtz::test::OutputPath());
 }
 
 TEST_F(FileUtilsTest, TempFilename) {
-  std::string temp_filename = webrtc::test::TempFilename(
-      webrtc::test::OutputPath(), "TempFilenameTest");
-  ASSERT_TRUE(webrtc::test::FileExists(temp_filename))
+  std::string temp_filename = webrtz::test::TempFilename(
+      webrtz::test::OutputPath(), "TempFilenameTest");
+  ASSERT_TRUE(webrtz::test::FileExists(temp_filename))
       << "Couldn't find file: " << temp_filename;
   remove(temp_filename.c_str());
 }
 
 TEST_F(FileUtilsTest, GenerateTempFilename) {
-  std::string temp_filename = webrtc::test::GenerateTempFilename(
-      webrtc::test::OutputPath(), "TempFilenameTest");
-  ASSERT_FALSE(webrtc::test::FileExists(temp_filename))
+  std::string temp_filename = webrtz::test::GenerateTempFilename(
+      webrtz::test::OutputPath(), "TempFilenameTest");
+  ASSERT_FALSE(webrtz::test::FileExists(temp_filename))
       << "File exists: " << temp_filename;
   FILE* file = fopen(temp_filename.c_str(), "wb");
   ASSERT_TRUE(file != NULL) << "Failed to open file: " << temp_filename;
@@ -150,14 +150,14 @@ TEST_F(FileUtilsTest, MAYBE_CreateDir) {
   std::string directory = "fileutils-unittest-empty-dir";
   // Make sure it's removed if a previous test has failed:
   remove(directory.c_str());
-  ASSERT_TRUE(webrtc::test::CreateDir(directory));
+  ASSERT_TRUE(webrtz::test::CreateDir(directory));
   remove(directory.c_str());
 }
 
 TEST_F(FileUtilsTest, WorkingDirReturnsValue) {
   // Hard to cover all platforms. Just test that it returns something without
   // crashing:
-  std::string working_dir = webrtc::test::WorkingDir();
+  std::string working_dir = webrtz::test::WorkingDir();
   ASSERT_GT(working_dir.length(), 0u);
 }
 
@@ -166,14 +166,14 @@ TEST_F(FileUtilsTest, WorkingDirReturnsValue) {
 // verified the result confirms with the specified documentation for the
 // function.
 TEST_F(FileUtilsTest, ResourcePathReturnsValue) {
-  std::string resource = webrtc::test::ResourcePath(kTestName, kExtension);
+  std::string resource = webrtz::test::ResourcePath(kTestName, kExtension);
   ASSERT_GT(resource.find(kTestName), 0u);
   ASSERT_GT(resource.find(kExtension), 0u);
 }
 
 TEST_F(FileUtilsTest, ResourcePathFromRootWorkingDir) {
   ASSERT_EQ(0, chdir(kPathDelimiter));
-  std::string resource = webrtc::test::ResourcePath(kTestName, kExtension);
+  std::string resource = webrtz::test::ResourcePath(kTestName, kExtension);
 #if !defined(WEBRTC_IOS)
   ASSERT_NE(resource.find("resources"), std::string::npos);
 #endif
@@ -183,37 +183,37 @@ TEST_F(FileUtilsTest, ResourcePathFromRootWorkingDir) {
 
 TEST_F(FileUtilsTest, GetFileSizeExistingFile) {
   // Create a file with some dummy data in.
-  std::string temp_filename = webrtc::test::TempFilename(
-      webrtc::test::OutputPath(), "fileutils_unittest");
+  std::string temp_filename = webrtz::test::TempFilename(
+      webrtz::test::OutputPath(), "fileutils_unittest");
   FILE* file = fopen(temp_filename.c_str(), "wb");
   ASSERT_TRUE(file != NULL) << "Failed to open file: " << temp_filename;
   ASSERT_GT(fprintf(file, "%s",  "Dummy data"), 0) <<
       "Failed to write to file: " << temp_filename;
   fclose(file);
-  ASSERT_GT(webrtc::test::GetFileSize(std::string(temp_filename.c_str())), 0u);
+  ASSERT_GT(webrtz::test::GetFileSize(std::string(temp_filename.c_str())), 0u);
   remove(temp_filename.c_str());
 }
 
 TEST_F(FileUtilsTest, GetFileSizeNonExistingFile) {
-  ASSERT_EQ(0u, webrtc::test::GetFileSize("non-existing-file.tmp"));
+  ASSERT_EQ(0u, webrtz::test::GetFileSize("non-existing-file.tmp"));
 }
 
 TEST_F(FileUtilsTest, DirExists) {
   // Check that an existing directory is recognized as such.
-  ASSERT_TRUE(webrtc::test::DirExists(webrtc::test::OutputPath()))
+  ASSERT_TRUE(webrtz::test::DirExists(webrtz::test::OutputPath()))
       << "Existing directory not found";
 
   // Check that a non-existing directory is recognized as such.
   std::string directory = "direxists-unittest-non_existing-dir";
-  ASSERT_FALSE(webrtc::test::DirExists(directory))
+  ASSERT_FALSE(webrtz::test::DirExists(directory))
       << "Non-existing directory found";
 
   // Check that an existing file is not recognized as an existing directory.
-  std::string temp_filename = webrtc::test::TempFilename(
-      webrtc::test::OutputPath(), "TempFilenameTest");
-  ASSERT_TRUE(webrtc::test::FileExists(temp_filename))
+  std::string temp_filename = webrtz::test::TempFilename(
+      webrtz::test::OutputPath(), "TempFilenameTest");
+  ASSERT_TRUE(webrtz::test::FileExists(temp_filename))
       << "Couldn't find file: " << temp_filename;
-  ASSERT_FALSE(webrtc::test::DirExists(temp_filename))
+  ASSERT_FALSE(webrtz::test::DirExists(temp_filename))
       << "Existing file recognized as existing directory";
   remove(temp_filename.c_str());
 }
@@ -250,4 +250,4 @@ TEST_F(FileUtilsTest, WriteReadDeleteFilesAndDirs) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

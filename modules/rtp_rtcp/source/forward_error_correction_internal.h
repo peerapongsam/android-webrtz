@@ -15,7 +15,7 @@
 
 #include "api/array_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Maximum number of media packets that can be protected
 // by these packet masks.
@@ -106,6 +106,6 @@ void CopyColumn(uint8_t* new_mask,
                 int old_bit_index);
 
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_FORWARD_ERROR_CORRECTION_INTERNAL_H_

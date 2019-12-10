@@ -17,7 +17,7 @@
 #include "modules/audio_processing/transient/moving_moments.h"
 #include "modules/audio_processing/transient/wpd_tree.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This is an implementation of the transient detector described in "Causal
 // Wavelet based transient detector".
@@ -82,6 +82,6 @@ class TransientDetector {
   bool using_reference_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_TRANSIENT_DETECTOR_H_

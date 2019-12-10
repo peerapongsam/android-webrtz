@@ -20,7 +20,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class CodecEndToEndTest : public test::CallTest,
                           public testing::WithParamInterface<std::string> {
@@ -47,8 +47,8 @@ class CodecObserver : public test::EndToEndTest,
   CodecObserver(int no_frames_to_wait_for,
                 VideoRotation rotation_to_test,
                 const std::string& payload_name,
-                std::unique_ptr<webrtc::VideoEncoder> encoder,
-                std::unique_ptr<webrtc::VideoDecoder> decoder)
+                std::unique_ptr<webrtz::VideoEncoder> encoder,
+                std::unique_ptr<webrtz::VideoDecoder> decoder)
       : EndToEndTest(4 * CodecEndToEndTest::kDefaultTimeoutMs),
         // TODO(hta): This timeout (120 seconds) is excessive.
         // https://bugs.webrtc.org/6830
@@ -97,8 +97,8 @@ class CodecObserver : public test::EndToEndTest,
   int no_frames_to_wait_for_;
   VideoRotation expected_rotation_;
   std::string payload_name_;
-  std::unique_ptr<webrtc::VideoEncoder> encoder_;
-  std::unique_ptr<webrtc::VideoDecoder> decoder_;
+  std::unique_ptr<webrtz::VideoEncoder> encoder_;
+  std::unique_ptr<webrtz::VideoDecoder> decoder_;
   int frame_counter_;
 };
 
@@ -197,4 +197,4 @@ TEST_P(EndToEndTestH264, SendsAndReceivesH264PacketizationMode1) {
 }
 #endif  // defined(WEBRTC_USE_H264)
 
-}  // namespace webrtc
+}  // namespace webrtz

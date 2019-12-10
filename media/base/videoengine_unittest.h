@@ -58,7 +58,7 @@ class VideoMediaChannelTest : public testing::Test,
                               public sigslot::has_slots<> {
  protected:
   VideoMediaChannelTest<E, C>()
-      : call_(webrtc::Call::Create(webrtc::Call::Config(&event_log_))),
+      : call_(webrtz::Call::Create(webrtz::Call::Config(&event_log_))),
         engine_(std::unique_ptr<cricket::WebRtcVideoEncoderFactory>(),
                 std::unique_ptr<cricket::WebRtcVideoDecoderFactory>()) {}
 
@@ -841,8 +841,8 @@ class VideoMediaChannelTest : public testing::Test,
     EXPECT_EQ(1, renderer2_.num_rendered_frames());
   }
 
-  webrtc::RtcEventLogNullImpl event_log_;
-  const std::unique_ptr<webrtc::Call> call_;
+  webrtz::RtcEventLogNullImpl event_log_;
+  const std::unique_ptr<webrtz::Call> call_;
   E engine_;
   std::unique_ptr<cricket::FakeVideoCapturerWithTaskQueue> video_capturer_;
   std::unique_ptr<cricket::FakeVideoCapturerWithTaskQueue> video_capturer_2_;

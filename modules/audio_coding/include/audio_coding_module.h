@@ -27,7 +27,7 @@
 #include "system_wrappers/include/clock.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // forward declarations
 struct CodecInst;
@@ -795,6 +795,6 @@ class AudioCodingModule {
   virtual ANAStats GetANAStats() const = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_INCLUDE_AUDIO_CODING_MODULE_H_

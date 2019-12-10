@@ -21,7 +21,7 @@
 #include "system_wrappers/include/metrics.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 enum { kTimestampGroupLengthMs = 5 };
 static const double kTimestampToMs = 1.0 / 90.0;
@@ -253,4 +253,4 @@ void RemoteBitrateEstimatorSingleStream::SetMinBitrate(int min_bitrate_bps) {
   remote_rate_->SetMinBitrate(min_bitrate_bps);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

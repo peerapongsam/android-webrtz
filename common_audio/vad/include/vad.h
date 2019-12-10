@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class Vad {
  public:
@@ -46,6 +46,6 @@ class Vad {
 // Returns a Vad instance that's implemented on top of WebRtcVad.
 std::unique_ptr<Vad> CreateVad(Vad::Aggressiveness aggressiveness);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_VAD_INCLUDE_VAD_H_

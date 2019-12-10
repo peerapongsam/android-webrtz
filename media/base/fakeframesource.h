@@ -21,19 +21,19 @@ class FakeFrameSource {
  public:
   FakeFrameSource(int width, int height, int interval_us);
 
-  webrtc::VideoRotation GetRotation();
-  void SetRotation(webrtc::VideoRotation rotation);
+  webrtz::VideoRotation GetRotation();
+  void SetRotation(webrtz::VideoRotation rotation);
 
-  webrtc::VideoFrame GetFrame();
+  webrtz::VideoFrame GetFrame();
   // Override default size and interval.
-  webrtc::VideoFrame GetFrame(int width, int height, int interval_us);
+  webrtz::VideoFrame GetFrame(int width, int height, int interval_us);
 
  private:
   const int width_;
   const int height_;
   const int interval_us_;
 
-  webrtc::VideoRotation rotation_ = webrtc::kVideoRotation_0;
+  webrtz::VideoRotation rotation_ = webrtz::kVideoRotation_0;
   int64_t next_timestamp_us_ = rtc::kNumMicrosecsPerMillisec;
 };
 

@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 XAtomCache::XAtomCache(::Display* display) : display_(display) {
   RTC_DCHECK(display_);
@@ -44,4 +44,4 @@ Atom XAtomCache::CreateIfNotExist(Atom* atom, const char* name) {
   return *atom;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

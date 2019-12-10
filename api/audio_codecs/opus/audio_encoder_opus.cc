@@ -12,7 +12,7 @@
 
 #include "modules/audio_coding/codecs/opus/audio_encoder_opus.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioEncoderOpusConfig> AudioEncoderOpus::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -36,4 +36,4 @@ std::unique_ptr<AudioEncoder> AudioEncoderOpus::MakeAudioEncoder(
   return AudioEncoderOpusImpl::MakeAudioEncoder(config, payload_type);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -27,7 +27,7 @@
 #error "Set WEBRTC_APM_DEBUG_DUMP to either 0 or 1"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 #if WEBRTC_APM_DEBUG_DUMP == 1
 // Functor used to use as a custom deleter in the map of file pointers to raw
@@ -207,6 +207,6 @@ class ApmDataDumper {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(ApmDataDumper);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_LOGGING_APM_DATA_DUMPER_H_

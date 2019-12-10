@@ -21,7 +21,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const int64_t kStatisticsTimeoutMs = 8000;
 const int64_t kStatisticsProcessIntervalMs = 1000;
@@ -502,4 +502,4 @@ std::vector<rtcp::ReportBlock> ReceiveStatisticsImpl::RtcpReportBlocks(
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

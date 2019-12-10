@@ -45,7 +45,7 @@ int main(int argc, char* argv[]) {
     "  - delete_frames(bool): Whether or not to delete the input frames after"
     " the conversion. Default: false.\n";
 
-  webrtc::test::CommandLineParser parser;
+  webrtz::test::CommandLineParser parser;
 
   // Init the parser and set the usage message
   parser.Init(argc, argv);
@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
 
   bool del_frames = (parser.GetFlag("delete_frames") == "true") ? true : false;
 
-  webrtc::test::Converter converter(width, height);
+  webrtz::test::Converter converter(width, height);
   bool success = converter.ConvertRGBAToI420Video(parser.GetFlag("frames_dir"),
                                                   parser.GetFlag("output_file"),
                                                   del_frames);

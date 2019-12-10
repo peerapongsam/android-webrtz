@@ -25,7 +25,7 @@
 
 namespace {
 
-using MediaType = webrtc::ParsedRtcEventLog::MediaType;
+using MediaType = webrtz::ParsedRtcEventLog::MediaType;
 
 DEFINE_bool(
     audio,
@@ -102,15 +102,15 @@ int main(int argc, char* argv[]) {
     RTC_CHECK(ParseSsrc(FLAG_ssrc, &ssrc_filter))
         << "Flag verification has failed.";
 
-  webrtc::ParsedRtcEventLog parsed_stream;
+  webrtz::ParsedRtcEventLog parsed_stream;
   if (!parsed_stream.ParseFile(input_file)) {
     std::cerr << "Error while parsing input file: " << input_file << std::endl;
     return -1;
   }
 
-  std::unique_ptr<webrtc::test::RtpFileWriter> rtp_writer(
-      webrtc::test::RtpFileWriter::Create(
-          webrtc::test::RtpFileWriter::FileFormat::kRtpDump, output_file));
+  std::unique_ptr<webrtz::test::RtpFileWriter> rtp_writer(
+      webrtz::test::RtpFileWriter::Create(
+          webrtz::test::RtpFileWriter::FileFormat::kRtpDump, output_file));
 
   if (!rtp_writer.get()) {
     std::cerr << "Error while opening output file: " << output_file
@@ -128,23 +128,23 @@ int main(int argc, char* argv[]) {
     // a softer failure option, but it does not seem useful to generate
     // RTP dumps based on broken event logs.
     if (FLAG_rtp &&
-        parsed_stream.GetEventType(i) == webrtc::ParsedRtcEventLog::RTP_EVENT) {
-      webrtc::test::RtpPacket packet;
-      webrtc::PacketDirection direction;
+        parsed_stream.GetEventType(i) == webrtz::ParsedRtcEventLog::RTP_EVENT) {
+      webrtz::test::RtpPacket packet;
+      webrtz::PacketDirection direction;
       parsed_stream.GetRtpHeader(i, &direction, packet.data, &packet.length,
                                  &packet.original_length, nullptr);
       if (packet.original_length > packet.length)
         header_only = true;
       packet.time_ms = parsed_stream.GetTimestamp(i) / 1000;
 
-      webrtc::RtpUtility::RtpHeaderParser rtp_parser(packet.data,
+      webrtz::RtpUtility::RtpHeaderParser rtp_parser(packet.data,
                                                      packet.length);
 
       // TODO(terelius): Maybe add a flag to dump outgoing traffic instead?
-      if (direction == webrtc::kOutgoingPacket)
+      if (direction == webrtz::kOutgoingPacket)
         continue;
 
-      webrtc::RTPHeader parsed_header;
+      webrtz::RTPHeader parsed_header;
       rtp_parser.Parse(&parsed_header);
       MediaType media_type =
           parsed_stream.GetMediaType(parsed_header.ssrc, direction);
@@ -156,7 +156,7 @@ int main(int argc, char* argv[]) {
         continue;
       if (strlen(FLAG_ssrc) > 0) {
         const uint32_t packet_ssrc =
-            webrtc::ByteReader<uint32_t>::ReadBigEndian(
+            webrtz::ByteReader<uint32_t>::ReadBigEndian(
                 reinterpret_cast<const uint8_t*>(packet.data + 8));
         if (packet_ssrc != ssrc_filter)
           continue;
@@ -166,9 +166,9 @@ int main(int argc, char* argv[]) {
       rtp_counter++;
     }
     if (FLAG_rtcp && parsed_stream.GetEventType(i) ==
-                         webrtc::ParsedRtcEventLog::RTCP_EVENT) {
-      webrtc::test::RtpPacket packet;
-      webrtc::PacketDirection direction;
+                         webrtz::ParsedRtcEventLog::RTCP_EVENT) {
+      webrtz::test::RtpPacket packet;
+      webrtz::PacketDirection direction;
       parsed_stream.GetRtcpPacket(i, &direction, packet.data, &packet.length);
       // For RTCP packets the original_length should be set to 0 in the
       // RTPdump format.
@@ -176,13 +176,13 @@ int main(int argc, char* argv[]) {
       packet.time_ms = parsed_stream.GetTimestamp(i) / 1000;
 
       // TODO(terelius): Maybe add a flag to dump outgoing traffic instead?
-      if (direction == webrtc::kOutgoingPacket)
+      if (direction == webrtz::kOutgoingPacket)
         continue;
 
       // Note that |packet_ssrc| is the sender SSRC. An RTCP message may contain
       // report blocks for many streams, thus several SSRCs and they doen't
       // necessarily have to be of the same media type.
-      const uint32_t packet_ssrc = webrtc::ByteReader<uint32_t>::ReadBigEndian(
+      const uint32_t packet_ssrc = webrtz::ByteReader<uint32_t>::ReadBigEndian(
           reinterpret_cast<const uint8_t*>(packet.data + 4));
       MediaType media_type = parsed_stream.GetMediaType(packet_ssrc, direction);
       if (!FLAG_audio && media_type == MediaType::AUDIO)

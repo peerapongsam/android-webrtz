@@ -42,7 +42,7 @@ namespace rtc {
 class TimestampWrapAroundHandler;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceModule;
 class PacketRouter;
@@ -410,6 +410,6 @@ class Channel
 };
 
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_CHANNEL_H_

@@ -134,14 +134,14 @@ bool VideoCapturer::GetInputSize(int* width, int* height) {
 }
 
 void VideoCapturer::RemoveSink(
-    rtc::VideoSinkInterface<webrtc::VideoFrame>* sink) {
+    rtc::VideoSinkInterface<webrtz::VideoFrame>* sink) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   broadcaster_.RemoveSink(sink);
   OnSinkWantsChanged(broadcaster_.wants());
 }
 
 void VideoCapturer::AddOrUpdateSink(
-    rtc::VideoSinkInterface<webrtc::VideoFrame>* sink,
+    rtc::VideoSinkInterface<webrtz::VideoFrame>* sink,
     const rtc::VideoSinkWants& wants) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   broadcaster_.AddOrUpdateSink(sink, wants);
@@ -179,7 +179,7 @@ bool VideoCapturer::AdaptFrame(int width,
   }
 
   bool simulcast_screenshare_enabled =
-      webrtc::field_trial::IsEnabled(kSimulcastScreenshareFieldTrialName);
+      webrtz::field_trial::IsEnabled(kSimulcastScreenshareFieldTrialName);
   if (enable_video_adapter_ &&
       (!IsScreencast() || simulcast_screenshare_enabled)) {
     if (!video_adapter_.AdaptFrameResolution(
@@ -203,17 +203,17 @@ bool VideoCapturer::AdaptFrame(int width,
   return true;
 }
 
-void VideoCapturer::OnFrame(const webrtc::VideoFrame& frame,
+void VideoCapturer::OnFrame(const webrtz::VideoFrame& frame,
                             int orig_width,
                             int orig_height) {
   // For a child class which implements rotation itself, we should
   // always have apply_rotation_ == false or frame.rotation() == 0.
   // Except possibly during races where apply_rotation_ is changed
   // mid-stream.
-  if (apply_rotation_ && frame.rotation() != webrtc::kVideoRotation_0) {
-    rtc::scoped_refptr<webrtc::VideoFrameBuffer> buffer(
+  if (apply_rotation_ && frame.rotation() != webrtz::kVideoRotation_0) {
+    rtc::scoped_refptr<webrtz::VideoFrameBuffer> buffer(
         frame.video_frame_buffer());
-    if (buffer->type() != webrtc::VideoFrameBuffer::Type::kI420) {
+    if (buffer->type() != webrtz::VideoFrameBuffer::Type::kI420) {
       // Sources producing non-I420 frames must handle apply_rotation
       // themselves. But even if they do, we may occasionally end up
       // in this case, for frames in flight at the time
@@ -222,9 +222,9 @@ void VideoCapturer::OnFrame(const webrtc::VideoFrame& frame,
       RTC_LOG(LS_WARNING) << "Non-I420 frame requiring rotation. Discarding.";
       return;
     }
-    broadcaster_.OnFrame(webrtc::VideoFrame(
-        webrtc::I420Buffer::Rotate(*buffer->GetI420(), frame.rotation()),
-        webrtc::kVideoRotation_0, frame.timestamp_us()));
+    broadcaster_.OnFrame(webrtz::VideoFrame(
+        webrtz::I420Buffer::Rotate(*buffer->GetI420(), frame.rotation()),
+        webrtz::kVideoRotation_0, frame.timestamp_us()));
   } else {
     broadcaster_.OnFrame(frame);
   }

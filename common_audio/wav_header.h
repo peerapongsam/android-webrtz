@@ -14,7 +14,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-namespace webrtc {
+namespace webrtz {
 
 static const size_t kWavHeaderSize = 44;
 
@@ -59,6 +59,6 @@ bool ReadWavHeader(ReadableWav* readable,
                    size_t* bytes_per_sample,
                    size_t* num_samples);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_WAV_HEADER_H_

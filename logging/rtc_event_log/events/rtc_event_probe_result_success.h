@@ -13,7 +13,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventProbeResultSuccess final : public RtcEvent {
  public:
@@ -28,6 +28,6 @@ class RtcEventProbeResultSuccess final : public RtcEvent {
   const int bitrate_bps_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_PROBE_RESULT_SUCCESS_H_

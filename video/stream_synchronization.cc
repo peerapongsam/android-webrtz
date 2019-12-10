@@ -18,7 +18,7 @@
 
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kMaxChangeMs = 80;
 static const int kMaxDeltaDelayMs = 10000;
@@ -196,4 +196,4 @@ void StreamSynchronization::SetTargetBufferingDelay(int target_delay_ms) {
   base_target_delay_ms_ = target_delay_ms;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

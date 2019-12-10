@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DxgiTextureMapping::DxgiTextureMapping(IDXGIOutputDuplication* duplication)
     : duplication_(duplication) {
@@ -55,4 +55,4 @@ bool DxgiTextureMapping::DoRelease() {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

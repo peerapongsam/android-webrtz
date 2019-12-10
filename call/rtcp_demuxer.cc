@@ -16,7 +16,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcpDemuxer::RtcpDemuxer() = default;
 
@@ -98,4 +98,4 @@ void RtcpDemuxer::OnSsrcBoundToRsid(const std::string& rsid, uint32_t ssrc) {
   rsid_sinks_.erase(it_range.first, it_range.second);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

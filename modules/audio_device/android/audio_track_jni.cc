@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/platform_thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // AudioTrackJni::JavaAudioTrack implementation.
 AudioTrackJni::JavaAudioTrack::JavaAudioTrack(
@@ -76,11 +76,11 @@ AudioTrackJni::AudioTrackJni(AudioManager* audio_manager)
   JNINativeMethod native_methods[] = {
       {"nativeCacheDirectBufferAddress", "(Ljava/nio/ByteBuffer;J)V",
        reinterpret_cast<void*>(
-           &webrtc::AudioTrackJni::CacheDirectBufferAddress)},
+           &webrtz::AudioTrackJni::CacheDirectBufferAddress)},
       {"nativeGetPlayoutData", "(IJ)V",
-       reinterpret_cast<void*>(&webrtc::AudioTrackJni::GetPlayoutData)}};
+       reinterpret_cast<void*>(&webrtz::AudioTrackJni::GetPlayoutData)}};
   j_native_registration_ = j_environment_->RegisterNatives(
-      "org/webrtc/voiceengine/WebRtcAudioTrack", native_methods,
+      "org/webrtz/voiceengine/WebRtcAudioTrack", native_methods,
       arraysize(native_methods));
   j_audio_track_.reset(
       new JavaAudioTrack(j_native_registration_.get(),
@@ -209,8 +209,8 @@ void JNICALL AudioTrackJni::CacheDirectBufferAddress(JNIEnv* env,
                                                      jobject obj,
                                                      jobject byte_buffer,
                                                      jlong nativeAudioTrack) {
-  webrtc::AudioTrackJni* this_object =
-      reinterpret_cast<webrtc::AudioTrackJni*>(nativeAudioTrack);
+  webrtz::AudioTrackJni* this_object =
+      reinterpret_cast<webrtz::AudioTrackJni*>(nativeAudioTrack);
   this_object->OnCacheDirectBufferAddress(env, byte_buffer);
 }
 
@@ -233,8 +233,8 @@ void JNICALL AudioTrackJni::GetPlayoutData(JNIEnv* env,
                                            jobject obj,
                                            jint length,
                                            jlong nativeAudioTrack) {
-  webrtc::AudioTrackJni* this_object =
-      reinterpret_cast<webrtc::AudioTrackJni*>(nativeAudioTrack);
+  webrtz::AudioTrackJni* this_object =
+      reinterpret_cast<webrtz::AudioTrackJni*>(nativeAudioTrack);
   this_object->OnGetPlayoutData(static_cast<size_t>(length));
 }
 
@@ -261,4 +261,4 @@ void AudioTrackJni::OnGetPlayoutData(size_t length) {
   RTC_DCHECK_EQ(length, bytes_per_frame * samples);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

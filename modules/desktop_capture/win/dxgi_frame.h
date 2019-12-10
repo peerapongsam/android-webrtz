@@ -22,7 +22,7 @@
 #include "modules/desktop_capture/shared_memory.h"
 #include "modules/desktop_capture/win/dxgi_context.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DxgiDuplicatorController;
 
@@ -58,6 +58,6 @@ class DxgiFrame final {
   Context context_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_FRAME_H_

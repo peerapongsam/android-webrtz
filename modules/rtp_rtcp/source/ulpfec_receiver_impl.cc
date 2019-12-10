@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 UlpfecReceiver* UlpfecReceiver::Create(uint32_t ssrc,
                                        RecoveredPacketReceiver* callback) {
@@ -264,4 +264,4 @@ int32_t UlpfecReceiverImpl::ProcessReceivedFec() {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

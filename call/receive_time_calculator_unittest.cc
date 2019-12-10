@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -71,4 +71,4 @@ TEST(ReceiveTimeCalculatorTest, CorrectsJumps) {
 
 }  // namespace test
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 #include "rtc_base/arraysize.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -142,4 +142,4 @@ SLObjectItf OpenSLEngineManager::GetOpenSLEngine() {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 
 #if RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
@@ -148,4 +148,4 @@ TEST(SuppressionGain, BasicGainComputation) {
 }
 
 }  // namespace aec3
-}  // namespace webrtc
+}  // namespace webrtz

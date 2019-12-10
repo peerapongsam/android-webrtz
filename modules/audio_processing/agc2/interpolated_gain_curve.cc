@@ -16,7 +16,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 void LogRegionStats(const InterpolatedGainCurve::Stats& stats) {
   using Region = InterpolatedGainCurve::GainCurveRegion;
@@ -150,4 +150,4 @@ float InterpolatedGainCurve::LookUpGainToApply(float input_level) const {
   return gain;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

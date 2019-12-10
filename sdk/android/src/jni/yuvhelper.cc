@@ -14,7 +14,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "third_party/libyuv/include/libyuv/convert.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 void JNI_YuvHelper_I420Copy(JNIEnv* jni,
@@ -118,4 +118,4 @@ void JNI_YuvHelper_I420Rotate(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

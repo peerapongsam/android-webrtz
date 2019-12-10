@@ -21,7 +21,7 @@
 #include "modules/audio_processing/aec3/vector_buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Provides a buffer of the render data for the echo remover.
 class RenderBuffer {
@@ -75,6 +75,6 @@ class RenderBuffer {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RenderBuffer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_RENDER_BUFFER_H_

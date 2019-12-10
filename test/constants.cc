@@ -10,7 +10,7 @@
 
 #include "test/constants.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const int kAudioLevelExtensionId = 5;
@@ -22,4 +22,4 @@ const int kVideoContentTypeExtensionId = 10;
 const int kVideoTimingExtensionId = 11;
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

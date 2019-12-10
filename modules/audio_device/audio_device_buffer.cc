@@ -23,7 +23,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const char kTimerQueueName[] = "AudioDeviceBufferTimer";
 
@@ -480,4 +480,4 @@ void AudioDeviceBuffer::UpdatePlayStats(int16_t max_abs,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

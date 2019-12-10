@@ -10,7 +10,7 @@
 
 #include "api/audio_codecs/audio_encoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<AudioEncoder> AudioEncoderFactory::MakeAudioEncoder(
     int payload_type,
@@ -25,4 +25,4 @@ std::unique_ptr<AudioEncoder> AudioEncoderFactory::MakeAudioEncoder(
   return MakeAudioEncoder(payload_type, format, rtc::nullopt);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

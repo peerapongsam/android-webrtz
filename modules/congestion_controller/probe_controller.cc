@@ -18,7 +18,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Maximum waiting time from the time of initiating probing to getting
@@ -72,7 +72,7 @@ constexpr char kBweRapidRecoveryExperiment[] =
 ProbeController::ProbeController(PacedSender* pacer, const Clock* clock)
     : pacer_(pacer), clock_(clock), enable_periodic_alr_probing_(false) {
   Reset();
-  in_rapid_recovery_experiment_ = webrtc::field_trial::FindFullName(
+  in_rapid_recovery_experiment_ = webrtz::field_trial::FindFullName(
                                       kBweRapidRecoveryExperiment) == "Enabled";
 }
 
@@ -322,4 +322,4 @@ void ProbeController::InitiateProbing(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -24,7 +24,7 @@ using ::testing::SetArgPointee;
 using ::testing::InSequence;
 using ::testing::Invoke;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const size_t kMaxNumSamples = 48 * 10 * 2;  // 10 ms @ 48 kHz stereo.
@@ -504,4 +504,4 @@ TEST_F(AudioEncoderCngDeathTest, EncoderFrameSizeTooLarge) {
 
 #endif  // GTEST_HAS_DEATH_TEST
 
-}  // namespace webrtc
+}  // namespace webrtz

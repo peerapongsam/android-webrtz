@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockPacketBuffer : public PacketBuffer {
  public:
@@ -64,5 +64,5 @@ class MockPacketBuffer : public PacketBuffer {
       int());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_PACKET_BUFFER_H_

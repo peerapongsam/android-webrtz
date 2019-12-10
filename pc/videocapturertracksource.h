@@ -26,7 +26,7 @@
 // The state is set depending on the result of starting the capturer.
 // If the constraint can't be met or the capturer fails to start, the state
 // transition to kEnded, otherwise it transitions to kLive.
-namespace webrtc {
+namespace webrtz {
 
 class MediaConstraintsInterface;
 
@@ -39,7 +39,7 @@ class VideoCapturerTrackSource : public VideoTrackSource,
   static rtc::scoped_refptr<VideoTrackSourceInterface> Create(
       rtc::Thread* worker_thread,
       std::unique_ptr<cricket::VideoCapturer> capturer,
-      const webrtc::MediaConstraintsInterface* constraints,
+      const webrtz::MediaConstraintsInterface* constraints,
       bool remote);
 
   static rtc::scoped_refptr<VideoTrackSourceInterface> Create(
@@ -57,7 +57,7 @@ class VideoCapturerTrackSource : public VideoTrackSource,
                            std::unique_ptr<cricket::VideoCapturer> capturer,
                            bool remote);
   virtual ~VideoCapturerTrackSource();
-  void Initialize(const webrtc::MediaConstraintsInterface* constraints);
+  void Initialize(const webrtz::MediaConstraintsInterface* constraints);
 
  private:
   void Stop();
@@ -74,6 +74,6 @@ class VideoCapturerTrackSource : public VideoTrackSource,
   rtc::Optional<bool> needs_denoising_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_VIDEOCAPTURERTRACKSOURCE_H_

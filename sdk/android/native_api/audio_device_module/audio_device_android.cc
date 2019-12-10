@@ -26,7 +26,7 @@
 #include "sdk/android/src/jni/audio_device/opensles_recorder.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -141,4 +141,4 @@ CreateJavaInputAndOpenSLESOutputAudioDeviceModule(JNIEnv* env,
       std::move(audio_input), std::move(audio_output));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 
 #include "modules/video_capture/video_capture_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 
 // VideoCapture implementation that uses the Media Foundation API on Windows.
@@ -38,6 +38,6 @@ class VideoCaptureMF : public VideoCaptureImpl {
 };
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CAPTURE_WINDOWS_VIDEO_CAPTURE_MF_H_

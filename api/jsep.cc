@@ -10,7 +10,7 @@
 
 #include "api/jsep.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::string IceCandidateInterface::server_url() const {
   return "";
@@ -21,4 +21,4 @@ size_t SessionDescriptionInterface::RemoveCandidates(
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

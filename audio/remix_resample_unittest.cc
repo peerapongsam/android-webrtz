@@ -17,7 +17,7 @@
 #include "rtc_base/format_macros.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace voe {
 namespace {
 
@@ -272,4 +272,4 @@ TEST_F(UtilityTest, RemixAndResampleSucceeds) {
 
 }  // namespace
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,13 +16,13 @@
 
 #include "system_wrappers/include/event_wrapper.h"
 #include "system_wrappers/include/sleep.h"
-webrtc::adm_linux_alsa::AlsaSymbolTable AlsaSymbolTable;
+webrtz::adm_linux_alsa::AlsaSymbolTable AlsaSymbolTable;
 
 // Accesses ALSA functions through our late-binding symbol table instead of
 // directly. This way we don't have to link to libasound, which means our binary
 // will work on systems that don't have it.
 #define LATE(sym) \
-  LATESYM_GET(webrtc::adm_linux_alsa::AlsaSymbolTable, &AlsaSymbolTable, sym)
+  LATESYM_GET(webrtz::adm_linux_alsa::AlsaSymbolTable, &AlsaSymbolTable, sym)
 
 // Redefine these here to be able to do late-binding
 #undef snd_ctl_card_info_alloca
@@ -48,7 +48,7 @@ void WebrtcAlsaErrorHandler(const char* file,
                             const char* fmt,
                             ...){};
 
-namespace webrtc {
+namespace webrtz {
 static const unsigned int ALSA_PLAYOUT_FREQ = 48000;
 static const unsigned int ALSA_PLAYOUT_CH = 2;
 static const unsigned int ALSA_PLAYOUT_LATENCY = 40 * 1000;  // in us
@@ -1646,4 +1646,4 @@ bool AudioDeviceLinuxALSA::KeyPressed() const {
   return false;
 #endif
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -199,4 +199,4 @@ TEST(TestPacket, RED) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

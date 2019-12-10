@@ -15,7 +15,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
@@ -210,4 +210,4 @@ TEST(Aec3Fft, PaddedFft) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

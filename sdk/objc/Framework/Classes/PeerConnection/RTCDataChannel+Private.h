@@ -21,10 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
  * The native DataBuffer representation of this RTCDatabuffer object. This is
  * needed to pass to the underlying C++ APIs.
  */
-@property(nonatomic, readonly) const webrtc::DataBuffer *nativeDataBuffer;
+@property(nonatomic, readonly) const webrtz::DataBuffer *nativeDataBuffer;
 
 /** Initialize an RTCDataBuffer from a native DataBuffer. */
-- (instancetype)initWithNativeBuffer:(const webrtc::DataBuffer&)nativeBuffer;
+- (instancetype)initWithNativeBuffer:(const webrtz::DataBuffer&)nativeBuffer;
 
 @end
 
@@ -33,14 +33,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Initialize an RTCDataChannel from a native DataChannelInterface. */
 - (instancetype)initWithNativeDataChannel:
-    (rtc::scoped_refptr<webrtc::DataChannelInterface>)nativeDataChannel
+    (rtc::scoped_refptr<webrtz::DataChannelInterface>)nativeDataChannel
     NS_DESIGNATED_INITIALIZER;
 
-+ (webrtc::DataChannelInterface::DataState)
++ (webrtz::DataChannelInterface::DataState)
     nativeDataChannelStateForState:(RTCDataChannelState)state;
 
 + (RTCDataChannelState)dataChannelStateForNativeState:
-    (webrtc::DataChannelInterface::DataState)nativeState;
+    (webrtz::DataChannelInterface::DataState)nativeState;
 
 + (NSString *)stringForState:(RTCDataChannelState)state;
 

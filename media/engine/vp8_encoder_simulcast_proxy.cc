@@ -14,7 +14,7 @@
 #include "media/engine/simulcast_encoder_adapter.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 VP8EncoderSimulcastProxy::VP8EncoderSimulcastProxy(VideoEncoderFactory* factory)
     : factory_(factory), callback_(nullptr) {
   encoder_ = factory_->CreateVideoEncoder(SdpVideoFormat("VP8"));
@@ -77,4 +77,4 @@ const char* VP8EncoderSimulcastProxy::ImplementationName() const {
   return encoder_->ImplementationName();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

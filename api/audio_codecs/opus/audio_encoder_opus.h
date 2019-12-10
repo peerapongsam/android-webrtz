@@ -20,7 +20,7 @@
 #include "api/audio_codecs/opus/audio_encoder_opus_config.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Opus encoder API for use as a template parameter to
 // CreateAudioEncoderFactory<...>().
@@ -38,6 +38,6 @@ struct AudioEncoderOpus {
       rtc::Optional<AudioCodecPairId> codec_pair_id = rtc::nullopt);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_OPUS_AUDIO_ENCODER_OPUS_H_

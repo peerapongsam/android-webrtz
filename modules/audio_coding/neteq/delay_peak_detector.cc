@@ -16,7 +16,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The DelayPeakDetector keeps track of severe inter-arrival times, called
 // delay peaks. When a peak is observed, the "height" (the time elapsed since
@@ -125,4 +125,4 @@ bool DelayPeakDetector::CheckPeakConditions() {
   }
   return peak_found_;
 }
-}  // namespace webrtc
+}  // namespace webrtz

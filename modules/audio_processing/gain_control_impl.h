@@ -21,7 +21,7 @@
 #include "rtc_base/swap_queue.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 class AudioBuffer;
@@ -92,6 +92,6 @@ class GainControlImpl : public GainControl {
   static int instance_counter_;
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(GainControlImpl);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_GAIN_CONTROL_IMPL_H_

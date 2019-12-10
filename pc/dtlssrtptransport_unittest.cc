@@ -27,9 +27,9 @@
 
 using cricket::FakeDtlsTransport;
 using cricket::FakeIceTransport;
-using webrtc::DtlsSrtpTransport;
-using webrtc::SrtpTransport;
-using webrtc::RtpTransport;
+using webrtz::DtlsSrtpTransport;
+using webrtz::SrtpTransport;
+using webrtz::RtpTransport;
 
 const int kRtpAuthTagLen = 10;
 

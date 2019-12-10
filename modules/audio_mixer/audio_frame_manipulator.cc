@@ -13,7 +13,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 uint32_t AudioMixerCalculateEnergy(const AudioFrame& audio_frame) {
   if (audio_frame.muted()) {
@@ -62,4 +62,4 @@ void RemixFrame(size_t target_number_of_channels, AudioFrame* frame) {
     AudioFrameOperations::StereoToMono(frame);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

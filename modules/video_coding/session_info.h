@@ -19,7 +19,7 @@
 #include "modules/video_coding/packet.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 // Used to pass data from jitter buffer to session info.
 // This data is then used in determining whether a frame is decodable.
 struct FrameData {
@@ -71,7 +71,7 @@ class VCMSessionInfo {
   bool HaveFirstPacket() const;
   bool HaveLastPacket() const;
   bool session_nack() const;
-  webrtc::FrameType FrameType() const { return frame_type_; }
+  webrtz::FrameType FrameType() const { return frame_type_; }
   int LowSequenceNumber() const;
 
   // Returns highest sequence number, media or empty.
@@ -146,7 +146,7 @@ class VCMSessionInfo {
   bool session_nack_;
   bool complete_;
   bool decodable_;
-  webrtc::FrameType frame_type_;
+  webrtz::FrameType frame_type_;
   // Packets in this frame.
   PacketList packets_;
   int empty_seq_num_low_;
@@ -161,6 +161,6 @@ class VCMSessionInfo {
   int last_packet_seq_num_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_SESSION_INFO_H_

@@ -14,7 +14,7 @@
 #include "rtc_base/event.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum class ThreadState {
   kNotStarted,
@@ -195,4 +195,4 @@ TEST_F(EventTimerPosixTest, WaiterBlocksUntilTimeoutProcessInactiveOnStart) {
   ASSERT_TRUE(AwaitProcessDone(kTimeoutMs));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

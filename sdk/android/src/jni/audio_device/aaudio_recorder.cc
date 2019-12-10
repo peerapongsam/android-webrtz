@@ -18,7 +18,7 @@
 
 #include "system_wrappers/include/sleep.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -239,4 +239,4 @@ void AAudioRecorder::HandleStreamDisconnected() {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

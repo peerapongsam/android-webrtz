@@ -21,7 +21,7 @@
 #include "system_wrappers/include/clock.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum { kStartupDelaySamples = 30 };
 enum { kFsAccuStartupSamples = 5 };
@@ -418,7 +418,7 @@ int VCMJitterEstimator::GetJitterEstimate(double rttMultiplier) {
 bool VCMJitterEstimator::LowRateExperimentEnabled() {
   if (low_rate_experiment_ == kInit) {
     std::string group =
-        webrtc::field_trial::FindFullName("WebRTC-ReducedJitterDelay");
+        webrtz::field_trial::FindFullName("WebRTC-ReducedJitterDelay");
     if (group == "Disabled") {
       low_rate_experiment_ = kDisabled;
     } else {
@@ -440,4 +440,4 @@ double VCMJitterEstimator::GetFrameRate() const {
   }
   return fps;
 }
-}  // namespace webrtc
+}  // namespace webrtz

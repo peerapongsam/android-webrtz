@@ -15,7 +15,7 @@
 #include <utility>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 namespace plotting {
 
 enum class LineStyle {
@@ -174,6 +174,6 @@ class PlotCollection {
 };
 
 }  // namespace plotting
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_EVENT_LOG_VISUALIZER_PLOT_BASE_H_

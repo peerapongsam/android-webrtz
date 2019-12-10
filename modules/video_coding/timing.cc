@@ -16,7 +16,7 @@
 #include "system_wrappers/include/clock.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMTiming::VCMTiming(Clock* clock, VCMTiming* master_timing)
     : clock_(clock),
@@ -282,4 +282,4 @@ rtc::Optional<TimingFrameInfo> VCMTiming::GetTimingFrameInfo() {
   return timing_frame_info_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

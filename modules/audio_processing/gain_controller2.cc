@@ -16,7 +16,7 @@
 #include "rtc_base/atomicops.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int GainController2::instance_count_ = 0;
 
@@ -65,4 +65,4 @@ std::string GainController2::ToString(
   return ss.str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

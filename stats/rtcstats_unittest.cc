@@ -18,7 +18,7 @@
 #include "rtc_base/json.h"
 #include "stats/test/rtcteststats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -349,4 +349,4 @@ TEST(RTCStatsDeathTest, InvalidCasting) {
 
 #endif  // RTC_DCHECK_IS_ON && GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
-}  // namespace webrtc
+}  // namespace webrtz

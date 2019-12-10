@@ -24,7 +24,7 @@
 #include "system_wrappers/include/ntp_time.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 class VideoBitrateAllocationObserver;
 namespace rtcp {
 class CommonHeader;
@@ -262,5 +262,5 @@ class RTCPReceiver {
   size_t num_skipped_packets_;
   int64_t last_skipped_packets_warning_ms_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_RECEIVER_H_

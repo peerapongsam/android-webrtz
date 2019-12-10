@@ -15,7 +15,7 @@
 
 #include "modules/audio_processing/agc2/agc2_common.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace test {
 
@@ -43,6 +43,6 @@ struct InterpolatedParameters {
 
 InterpolatedParameters ComputeInterpolatedGainCurveApproximationParams();
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_COMPUTE_INTERPOLATED_GAIN_CURVE_H_

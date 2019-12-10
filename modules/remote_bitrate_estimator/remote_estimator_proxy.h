@@ -18,7 +18,7 @@
 #include "modules/remote_bitrate_estimator/include/remote_bitrate_estimator.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class PacketRouter;
@@ -73,6 +73,6 @@ class RemoteEstimatorProxy : public RemoteBitrateEstimator {
   int64_t send_interval_ms_ RTC_GUARDED_BY(&lock_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  //  MODULES_REMOTE_BITRATE_ESTIMATOR_REMOTE_ESTIMATOR_PROXY_H_

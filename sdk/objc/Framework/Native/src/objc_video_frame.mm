@@ -13,7 +13,7 @@
 #include "rtc_base/timeutils.h"
 #include "sdk/objc/Framework/Native/src/objc_frame_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RTCVideoFrame *ToObjCVideoFrame(const VideoFrame &frame) {
   RTCVideoFrame *videoFrame =
@@ -25,4 +25,4 @@ RTCVideoFrame *ToObjCVideoFrame(const VideoFrame &frame) {
   return videoFrame;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

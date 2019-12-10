@@ -27,7 +27,7 @@
 #define IP_PACKET_SIZE 1500    // we assume ethernet
 #define MAX_NUMBER_OF_PARALLEL_TELEPHONE_EVENTS 10
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class TransportFeedback;
 }
@@ -590,5 +590,5 @@ class StreamDataCountersCallback {
                                    uint32_t ssrc) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_INCLUDE_RTP_RTCP_DEFINES_H_

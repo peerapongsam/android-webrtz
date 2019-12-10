@@ -16,7 +16,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // This class generates pseudo-random samples.
 class RandomVector {
@@ -46,5 +46,5 @@ class RandomVector {
   RTC_DISALLOW_COPY_AND_ASSIGN(RandomVector);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_RANDOM_VECTOR_H_

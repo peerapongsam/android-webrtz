@@ -21,22 +21,22 @@
 
 namespace cricket {
 FakeAudioSendStream::FakeAudioSendStream(
-    int id, const webrtc::AudioSendStream::Config& config)
+    int id, const webrtz::AudioSendStream::Config& config)
     : id_(id), config_(config) {
 }
 
 void FakeAudioSendStream::Reconfigure(
-    const webrtc::AudioSendStream::Config& config) {
+    const webrtz::AudioSendStream::Config& config) {
   config_ = config;
 }
 
-const webrtc::AudioSendStream::Config&
+const webrtz::AudioSendStream::Config&
     FakeAudioSendStream::GetConfig() const {
   return config_;
 }
 
 void FakeAudioSendStream::SetStats(
-    const webrtc::AudioSendStream::Stats& stats) {
+    const webrtz::AudioSendStream::Stats& stats) {
   stats_ = stats;
 }
 
@@ -59,27 +59,27 @@ void FakeAudioSendStream::SetMuted(bool muted) {
   muted_ = muted;
 }
 
-webrtc::AudioSendStream::Stats FakeAudioSendStream::GetStats() const {
+webrtz::AudioSendStream::Stats FakeAudioSendStream::GetStats() const {
   return stats_;
 }
 
-webrtc::AudioSendStream::Stats FakeAudioSendStream::GetStats(
+webrtz::AudioSendStream::Stats FakeAudioSendStream::GetStats(
     bool /*has_remote_tracks*/) const {
   return stats_;
 }
 
 FakeAudioReceiveStream::FakeAudioReceiveStream(
-    int id, const webrtc::AudioReceiveStream::Config& config)
+    int id, const webrtz::AudioReceiveStream::Config& config)
     : id_(id), config_(config) {
 }
 
-const webrtc::AudioReceiveStream::Config&
+const webrtz::AudioReceiveStream::Config&
     FakeAudioReceiveStream::GetConfig() const {
   return config_;
 }
 
 void FakeAudioReceiveStream::SetStats(
-    const webrtc::AudioReceiveStream::Stats& stats) {
+    const webrtz::AudioReceiveStream::Stats& stats) {
   stats_ = stats;
 }
 
@@ -90,22 +90,22 @@ bool FakeAudioReceiveStream::VerifyLastPacket(const uint8_t* data,
 
 bool FakeAudioReceiveStream::DeliverRtp(const uint8_t* packet,
                                         size_t length,
-                                        const webrtc::PacketTime& packet_time) {
+                                        const webrtz::PacketTime& packet_time) {
   ++received_packets_;
   last_packet_.SetData(packet, length);
   return true;
 }
 
 void FakeAudioReceiveStream::Reconfigure(
-    const webrtc::AudioReceiveStream::Config& config) {
+    const webrtz::AudioReceiveStream::Config& config) {
   config_ = config;
 }
 
-webrtc::AudioReceiveStream::Stats FakeAudioReceiveStream::GetStats() const {
+webrtz::AudioReceiveStream::Stats FakeAudioReceiveStream::GetStats() const {
   return stats_;
 }
 
-void FakeAudioReceiveStream::SetSink(webrtc::AudioSinkInterface* sink) {
+void FakeAudioReceiveStream::SetSink(webrtz::AudioSinkInterface* sink) {
   sink_ = sink;
 }
 
@@ -114,8 +114,8 @@ void FakeAudioReceiveStream::SetGain(float gain) {
 }
 
 FakeVideoSendStream::FakeVideoSendStream(
-    webrtc::VideoSendStream::Config config,
-    webrtc::VideoEncoderConfig encoder_config)
+    webrtz::VideoSendStream::Config config,
+    webrtz::VideoEncoderConfig encoder_config)
     : sending_(false),
       config_(std::move(config)),
       codec_settings_set_(false),
@@ -132,16 +132,16 @@ FakeVideoSendStream::~FakeVideoSendStream() {
     source_->RemoveSink(this);
 }
 
-const webrtc::VideoSendStream::Config& FakeVideoSendStream::GetConfig() const {
+const webrtz::VideoSendStream::Config& FakeVideoSendStream::GetConfig() const {
   return config_;
 }
 
-const webrtc::VideoEncoderConfig& FakeVideoSendStream::GetEncoderConfig()
+const webrtz::VideoEncoderConfig& FakeVideoSendStream::GetEncoderConfig()
     const {
   return encoder_config_;
 }
 
-const std::vector<webrtc::VideoStream>& FakeVideoSendStream::GetVideoStreams()
+const std::vector<webrtz::VideoStream>& FakeVideoSendStream::GetVideoStreams()
     const {
   return video_streams_;
 }
@@ -151,7 +151,7 @@ bool FakeVideoSendStream::IsSending() const {
 }
 
 bool FakeVideoSendStream::GetVp8Settings(
-    webrtc::VideoCodecVP8* settings) const {
+    webrtz::VideoCodecVP8* settings) const {
   if (!codec_settings_set_) {
     return false;
   }
@@ -161,7 +161,7 @@ bool FakeVideoSendStream::GetVp8Settings(
 }
 
 bool FakeVideoSendStream::GetVp9Settings(
-    webrtc::VideoCodecVP9* settings) const {
+    webrtz::VideoCodecVP9* settings) const {
   if (!codec_settings_set_) {
     return false;
   }
@@ -187,7 +187,7 @@ int64_t FakeVideoSendStream::GetLastTimestamp() const {
   return last_frame_->render_time_ms();
 }
 
-void FakeVideoSendStream::OnFrame(const webrtc::VideoFrame& frame) {
+void FakeVideoSendStream::OnFrame(const webrtz::VideoFrame& frame) {
   ++num_swapped_frames_;
   if (!last_frame_ ||
       frame.width() != last_frame_->width() ||
@@ -200,11 +200,11 @@ void FakeVideoSendStream::OnFrame(const webrtc::VideoFrame& frame) {
 }
 
 void FakeVideoSendStream::SetStats(
-    const webrtc::VideoSendStream::Stats& stats) {
+    const webrtz::VideoSendStream::Stats& stats) {
   stats_ = stats;
 }
 
-webrtc::VideoSendStream::Stats FakeVideoSendStream::GetStats() {
+webrtz::VideoSendStream::Stats FakeVideoSendStream::GetStats() {
   return stats_;
 }
 
@@ -216,7 +216,7 @@ void FakeVideoSendStream::EnableEncodedFrameRecording(
 }
 
 void FakeVideoSendStream::ReconfigureVideoEncoder(
-    webrtc::VideoEncoderConfig config) {
+    webrtz::VideoEncoderConfig config) {
   int width, height;
   if (last_frame_) {
     width = last_frame_->width();
@@ -269,8 +269,8 @@ void FakeVideoSendStream::Stop() {
 }
 
 void FakeVideoSendStream::SetSource(
-    rtc::VideoSourceInterface<webrtc::VideoFrame>* source,
-    const webrtc::VideoSendStream::DegradationPreference&
+    rtc::VideoSourceInterface<webrtz::VideoFrame>* source,
+    const webrtz::VideoSendStream::DegradationPreference&
         degradation_preference) {
   RTC_DCHECK(source != source_);
   if (source_)
@@ -307,13 +307,13 @@ void FakeVideoSendStream::InjectVideoSinkWants(
 }
 
 FakeVideoReceiveStream::FakeVideoReceiveStream(
-    webrtc::VideoReceiveStream::Config config)
+    webrtz::VideoReceiveStream::Config config)
     : config_(std::move(config)),
       receiving_(false),
       num_added_secondary_sinks_(0),
       num_removed_secondary_sinks_(0) {}
 
-const webrtc::VideoReceiveStream::Config& FakeVideoReceiveStream::GetConfig()
+const webrtz::VideoReceiveStream::Config& FakeVideoReceiveStream::GetConfig()
     const {
   return config_;
 }
@@ -322,11 +322,11 @@ bool FakeVideoReceiveStream::IsReceiving() const {
   return receiving_;
 }
 
-void FakeVideoReceiveStream::InjectFrame(const webrtc::VideoFrame& frame) {
+void FakeVideoReceiveStream::InjectFrame(const webrtz::VideoFrame& frame) {
   config_.renderer->OnFrame(frame);
 }
 
-webrtc::VideoReceiveStream::Stats FakeVideoReceiveStream::GetStats() const {
+webrtz::VideoReceiveStream::Stats FakeVideoReceiveStream::GetStats() const {
   return stats_;
 }
 
@@ -339,7 +339,7 @@ void FakeVideoReceiveStream::Stop() {
 }
 
 void FakeVideoReceiveStream::SetStats(
-    const webrtc::VideoReceiveStream::Stats& stats) {
+    const webrtz::VideoReceiveStream::Stats& stats) {
   stats_ = stats;
 }
 
@@ -349,12 +349,12 @@ void FakeVideoReceiveStream::EnableEncodedFrameRecording(rtc::PlatformFile file,
 }
 
 void FakeVideoReceiveStream::AddSecondarySink(
-    webrtc::RtpPacketSinkInterface* sink) {
+    webrtz::RtpPacketSinkInterface* sink) {
   ++num_added_secondary_sinks_;
 }
 
 void FakeVideoReceiveStream::RemoveSecondarySink(
-    const webrtc::RtpPacketSinkInterface* sink) {
+    const webrtz::RtpPacketSinkInterface* sink) {
   ++num_removed_secondary_sinks_;
 }
 
@@ -367,26 +367,26 @@ int FakeVideoReceiveStream::GetNumRemovedSecondarySinks() const {
 }
 
 FakeFlexfecReceiveStream::FakeFlexfecReceiveStream(
-    const webrtc::FlexfecReceiveStream::Config& config)
+    const webrtz::FlexfecReceiveStream::Config& config)
     : config_(config) {}
 
-const webrtc::FlexfecReceiveStream::Config&
+const webrtz::FlexfecReceiveStream::Config&
 FakeFlexfecReceiveStream::GetConfig() const {
   return config_;
 }
 
 // TODO(brandtr): Implement when the stats have been designed.
-webrtc::FlexfecReceiveStream::Stats FakeFlexfecReceiveStream::GetStats() const {
-  return webrtc::FlexfecReceiveStream::Stats();
+webrtz::FlexfecReceiveStream::Stats FakeFlexfecReceiveStream::GetStats() const {
+  return webrtz::FlexfecReceiveStream::Stats();
 }
 
-void FakeFlexfecReceiveStream::OnRtpPacket(const webrtc::RtpPacketReceived&) {
+void FakeFlexfecReceiveStream::OnRtpPacket(const webrtz::RtpPacketReceived&) {
   RTC_NOTREACHED() << "Not implemented.";
 }
 
 FakeCall::FakeCall()
-    : audio_network_state_(webrtc::kNetworkUp),
-      video_network_state_(webrtc::kNetworkUp),
+    : audio_network_state_(webrtz::kNetworkUp),
+      video_network_state_(webrtz::kNetworkUp),
       num_created_send_streams_(0),
       num_created_receive_streams_(0),
       audio_transport_overhead_(0),
@@ -438,26 +438,26 @@ FakeCall::GetFlexfecReceiveStreams() {
   return flexfec_receive_streams_;
 }
 
-webrtc::NetworkState FakeCall::GetNetworkState(webrtc::MediaType media) const {
+webrtz::NetworkState FakeCall::GetNetworkState(webrtz::MediaType media) const {
   switch (media) {
-    case webrtc::MediaType::AUDIO:
+    case webrtz::MediaType::AUDIO:
       return audio_network_state_;
-    case webrtc::MediaType::VIDEO:
+    case webrtz::MediaType::VIDEO:
       return video_network_state_;
-    case webrtc::MediaType::DATA:
-    case webrtc::MediaType::ANY:
+    case webrtz::MediaType::DATA:
+    case webrtz::MediaType::ANY:
       ADD_FAILURE() << "GetNetworkState called with unknown parameter.";
-      return webrtc::kNetworkDown;
+      return webrtz::kNetworkDown;
   }
   // Even though all the values for the enum class are listed above,the compiler
   // will emit a warning as the method may be called with a value outside of the
   // valid enum range, unless this case is also handled.
   ADD_FAILURE() << "GetNetworkState called with unknown parameter.";
-  return webrtc::kNetworkDown;
+  return webrtz::kNetworkDown;
 }
 
-webrtc::AudioSendStream* FakeCall::CreateAudioSendStream(
-    const webrtc::AudioSendStream::Config& config) {
+webrtz::AudioSendStream* FakeCall::CreateAudioSendStream(
+    const webrtz::AudioSendStream::Config& config) {
   FakeAudioSendStream* fake_stream = new FakeAudioSendStream(next_stream_id_++,
                                                              config);
   audio_send_streams_.push_back(fake_stream);
@@ -465,7 +465,7 @@ webrtc::AudioSendStream* FakeCall::CreateAudioSendStream(
   return fake_stream;
 }
 
-void FakeCall::DestroyAudioSendStream(webrtc::AudioSendStream* send_stream) {
+void FakeCall::DestroyAudioSendStream(webrtz::AudioSendStream* send_stream) {
   auto it = std::find(audio_send_streams_.begin(),
                       audio_send_streams_.end(),
                       static_cast<FakeAudioSendStream*>(send_stream));
@@ -477,8 +477,8 @@ void FakeCall::DestroyAudioSendStream(webrtc::AudioSendStream* send_stream) {
   }
 }
 
-webrtc::AudioReceiveStream* FakeCall::CreateAudioReceiveStream(
-    const webrtc::AudioReceiveStream::Config& config) {
+webrtz::AudioReceiveStream* FakeCall::CreateAudioReceiveStream(
+    const webrtz::AudioReceiveStream::Config& config) {
   audio_receive_streams_.push_back(new FakeAudioReceiveStream(next_stream_id_++,
                                                               config));
   ++num_created_receive_streams_;
@@ -486,7 +486,7 @@ webrtc::AudioReceiveStream* FakeCall::CreateAudioReceiveStream(
 }
 
 void FakeCall::DestroyAudioReceiveStream(
-    webrtc::AudioReceiveStream* receive_stream) {
+    webrtz::AudioReceiveStream* receive_stream) {
   auto it = std::find(audio_receive_streams_.begin(),
                       audio_receive_streams_.end(),
                       static_cast<FakeAudioReceiveStream*>(receive_stream));
@@ -498,9 +498,9 @@ void FakeCall::DestroyAudioReceiveStream(
   }
 }
 
-webrtc::VideoSendStream* FakeCall::CreateVideoSendStream(
-    webrtc::VideoSendStream::Config config,
-    webrtc::VideoEncoderConfig encoder_config) {
+webrtz::VideoSendStream* FakeCall::CreateVideoSendStream(
+    webrtz::VideoSendStream::Config config,
+    webrtz::VideoEncoderConfig encoder_config) {
   FakeVideoSendStream* fake_stream =
       new FakeVideoSendStream(std::move(config), std::move(encoder_config));
   video_send_streams_.push_back(fake_stream);
@@ -508,7 +508,7 @@ webrtc::VideoSendStream* FakeCall::CreateVideoSendStream(
   return fake_stream;
 }
 
-void FakeCall::DestroyVideoSendStream(webrtc::VideoSendStream* send_stream) {
+void FakeCall::DestroyVideoSendStream(webrtz::VideoSendStream* send_stream) {
   auto it = std::find(video_send_streams_.begin(),
                       video_send_streams_.end(),
                       static_cast<FakeVideoSendStream*>(send_stream));
@@ -520,8 +520,8 @@ void FakeCall::DestroyVideoSendStream(webrtc::VideoSendStream* send_stream) {
   }
 }
 
-webrtc::VideoReceiveStream* FakeCall::CreateVideoReceiveStream(
-    webrtc::VideoReceiveStream::Config config) {
+webrtz::VideoReceiveStream* FakeCall::CreateVideoReceiveStream(
+    webrtz::VideoReceiveStream::Config config) {
   video_receive_streams_.push_back(
       new FakeVideoReceiveStream(std::move(config)));
   ++num_created_receive_streams_;
@@ -529,7 +529,7 @@ webrtc::VideoReceiveStream* FakeCall::CreateVideoReceiveStream(
 }
 
 void FakeCall::DestroyVideoReceiveStream(
-    webrtc::VideoReceiveStream* receive_stream) {
+    webrtz::VideoReceiveStream* receive_stream) {
   auto it = std::find(video_receive_streams_.begin(),
                       video_receive_streams_.end(),
                       static_cast<FakeVideoReceiveStream*>(receive_stream));
@@ -541,8 +541,8 @@ void FakeCall::DestroyVideoReceiveStream(
   }
 }
 
-webrtc::FlexfecReceiveStream* FakeCall::CreateFlexfecReceiveStream(
-    const webrtc::FlexfecReceiveStream::Config& config) {
+webrtz::FlexfecReceiveStream* FakeCall::CreateFlexfecReceiveStream(
+    const webrtz::FlexfecReceiveStream::Config& config) {
   FakeFlexfecReceiveStream* fake_stream = new FakeFlexfecReceiveStream(config);
   flexfec_receive_streams_.push_back(fake_stream);
   ++num_created_receive_streams_;
@@ -550,7 +550,7 @@ webrtc::FlexfecReceiveStream* FakeCall::CreateFlexfecReceiveStream(
 }
 
 void FakeCall::DestroyFlexfecReceiveStream(
-    webrtc::FlexfecReceiveStream* receive_stream) {
+    webrtz::FlexfecReceiveStream* receive_stream) {
   auto it = std::find(flexfec_receive_streams_.begin(),
                       flexfec_receive_streams_.end(),
                       static_cast<FakeFlexfecReceiveStream*>(receive_stream));
@@ -563,29 +563,29 @@ void FakeCall::DestroyFlexfecReceiveStream(
   }
 }
 
-webrtc::PacketReceiver* FakeCall::Receiver() {
+webrtz::PacketReceiver* FakeCall::Receiver() {
   return this;
 }
 
 FakeCall::DeliveryStatus FakeCall::DeliverPacket(
-    webrtc::MediaType media_type,
+    webrtz::MediaType media_type,
     rtc::CopyOnWriteBuffer packet,
-    const webrtc::PacketTime& packet_time) {
+    const webrtz::PacketTime& packet_time) {
   EXPECT_GE(packet.size(), 12u);
-  RTC_DCHECK(media_type == webrtc::MediaType::AUDIO ||
-             media_type == webrtc::MediaType::VIDEO);
+  RTC_DCHECK(media_type == webrtz::MediaType::AUDIO ||
+             media_type == webrtz::MediaType::VIDEO);
 
   uint32_t ssrc;
   if (!GetRtpSsrc(packet.cdata(), packet.size(), &ssrc))
     return DELIVERY_PACKET_ERROR;
 
-  if (media_type == webrtc::MediaType::VIDEO) {
+  if (media_type == webrtz::MediaType::VIDEO) {
     for (auto receiver : video_receive_streams_) {
       if (receiver->GetConfig().rtp.remote_ssrc == ssrc)
         return DELIVERY_OK;
     }
   }
-  if (media_type == webrtc::MediaType::AUDIO) {
+  if (media_type == webrtz::MediaType::AUDIO) {
     for (auto receiver : audio_receive_streams_) {
       if (receiver->GetConfig().rtp.remote_ssrc == ssrc) {
         receiver->DeliverRtp(packet.cdata(), packet.size(), packet_time);
@@ -596,7 +596,7 @@ FakeCall::DeliveryStatus FakeCall::DeliverPacket(
   return DELIVERY_UNKNOWN_SSRC;
 }
 
-void FakeCall::SetStats(const webrtc::Call::Stats& stats) {
+void FakeCall::SetStats(const webrtz::Call::Stats& stats) {
   stats_ = stats;
 }
 
@@ -608,7 +608,7 @@ int FakeCall::GetNumCreatedReceiveStreams() const {
   return num_created_receive_streams_;
 }
 
-webrtc::Call::Stats FakeCall::GetStats() const {
+webrtz::Call::Stats FakeCall::GetStats() const {
   return stats_;
 }
 
@@ -618,33 +618,33 @@ void FakeCall::SetBitrateAllocationStrategy(
   // TODO(alexnarest): not implemented
 }
 
-void FakeCall::SignalChannelNetworkState(webrtc::MediaType media,
-                                         webrtc::NetworkState state) {
+void FakeCall::SignalChannelNetworkState(webrtz::MediaType media,
+                                         webrtz::NetworkState state) {
   switch (media) {
-    case webrtc::MediaType::AUDIO:
+    case webrtz::MediaType::AUDIO:
       audio_network_state_ = state;
       break;
-    case webrtc::MediaType::VIDEO:
+    case webrtz::MediaType::VIDEO:
       video_network_state_ = state;
       break;
-    case webrtc::MediaType::DATA:
-    case webrtc::MediaType::ANY:
+    case webrtz::MediaType::DATA:
+    case webrtz::MediaType::ANY:
       ADD_FAILURE()
           << "SignalChannelNetworkState called with unknown parameter.";
   }
 }
 
-void FakeCall::OnTransportOverheadChanged(webrtc::MediaType media,
+void FakeCall::OnTransportOverheadChanged(webrtz::MediaType media,
                                           int transport_overhead_per_packet) {
   switch (media) {
-    case webrtc::MediaType::AUDIO:
+    case webrtz::MediaType::AUDIO:
       audio_transport_overhead_ = transport_overhead_per_packet;
       break;
-    case webrtc::MediaType::VIDEO:
+    case webrtz::MediaType::VIDEO:
       video_transport_overhead_ = transport_overhead_per_packet;
       break;
-    case webrtc::MediaType::DATA:
-    case webrtc::MediaType::ANY:
+    case webrtz::MediaType::DATA:
+    case webrtz::MediaType::ANY:
       ADD_FAILURE()
           << "SignalChannelNetworkState called with unknown parameter.";
   }

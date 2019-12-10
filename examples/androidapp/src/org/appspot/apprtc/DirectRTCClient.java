@@ -16,9 +16,9 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.webrtc.IceCandidate;
-import org.webrtc.PeerConnection;
-import org.webrtc.SessionDescription;
+import org.webrtz.IceCandidate;
+import org.webrtz.PeerConnection;
+import org.webrtz.SessionDescription;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;

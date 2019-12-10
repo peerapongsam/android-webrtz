@@ -31,21 +31,21 @@
   RTCMediaConstraints *constraints = [[RTCMediaConstraints alloc]
       initWithMandatoryConstraints:mandatory
                optionalConstraints:optional];
-  std::unique_ptr<webrtc::MediaConstraints> nativeConstraints =
+  std::unique_ptr<webrtz::MediaConstraints> nativeConstraints =
       [constraints nativeConstraints];
 
-  webrtc::MediaConstraintsInterface::Constraints nativeMandatory =
+  webrtz::MediaConstraintsInterface::Constraints nativeMandatory =
       nativeConstraints->GetMandatory();
   [self expectConstraints:mandatory inNativeConstraints:nativeMandatory];
 
-  webrtc::MediaConstraintsInterface::Constraints nativeOptional =
+  webrtz::MediaConstraintsInterface::Constraints nativeOptional =
       nativeConstraints->GetOptional();
   [self expectConstraints:optional inNativeConstraints:nativeOptional];
 }
 
 - (void)expectConstraints:(NSDictionary *)constraints
       inNativeConstraints:
-    (webrtc::MediaConstraintsInterface::Constraints)nativeConstraints {
+    (webrtz::MediaConstraintsInterface::Constraints)nativeConstraints {
   EXPECT_EQ(constraints.count, nativeConstraints.size());
 
   for (NSString *key in constraints) {

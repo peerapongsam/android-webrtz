@@ -16,7 +16,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // An IsacBandwidthInfo that's safe to access from multiple threads because
 // it's protected by a mutex.
@@ -51,6 +51,6 @@ class LockedIsacBandwidthInfo final {
   IsacBandwidthInfo bwinfo_ RTC_GUARDED_BY(lock_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_ISAC_LOCKED_BANDWIDTH_INFO_H_

@@ -15,7 +15,7 @@
 
 #include "modules/desktop_capture/desktop_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A four-byte structure to store a color in BGRA format. This structure also
 // provides functions to be created from uint8_t array, say,
@@ -54,6 +54,6 @@ static_assert(
     DesktopFrame::kBytesPerPixel == sizeof(RgbaColor),
     "A pixel in DesktopFrame should be safe to be represented by a RgbaColor");
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_RGBA_COLOR_H_

@@ -15,9 +15,9 @@
 
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 void ComparePacketFeedbackVectors(const std::vector<PacketFeedback>& truth,
                                   const std::vector<PacketFeedback>& input);
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_CONGESTION_CONTROLLER_UNITTESTS_HELPER_H_

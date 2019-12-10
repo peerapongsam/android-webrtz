@@ -22,7 +22,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const float kEncodeTimeWeigthFactor = 0.5f;
 const size_t kMaxEncodedFrameMapSize = 150;
@@ -105,14 +105,14 @@ rtc::Optional<int> GetFallbackMaxPixels(const std::string& group) {
 
 rtc::Optional<int> GetFallbackMaxPixelsIfFieldTrialEnabled() {
   std::string group =
-      webrtc::field_trial::FindFullName(kVp8ForcedFallbackEncoderFieldTrial);
+      webrtz::field_trial::FindFullName(kVp8ForcedFallbackEncoderFieldTrial);
   return (group.find("Enabled") == 0) ? GetFallbackMaxPixels(group.substr(7))
                                       : rtc::Optional<int>();
 }
 
 rtc::Optional<int> GetFallbackMaxPixelsIfFieldTrialDisabled() {
   std::string group =
-      webrtc::field_trial::FindFullName(kVp8ForcedFallbackEncoderFieldTrial);
+      webrtz::field_trial::FindFullName(kVp8ForcedFallbackEncoderFieldTrial);
   return (group.find("Disabled") == 0) ? GetFallbackMaxPixels(group.substr(8))
                                        : rtc::Optional<int>();
 }
@@ -1215,4 +1215,4 @@ int SendStatisticsProxy::BoolSampleCounter::Fraction(
     return -1;
   return static_cast<int>((sum * multiplier / num_samples) + 0.5f);
 }
-}  // namespace webrtc
+}  // namespace webrtz

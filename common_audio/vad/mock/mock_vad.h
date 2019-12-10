@@ -14,7 +14,7 @@
 #include "common_audio/vad/include/vad.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockVad : public Vad {
  public:
@@ -28,6 +28,6 @@ class MockVad : public Vad {
   MOCK_METHOD0(Reset, void());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_VAD_MOCK_MOCK_VAD_H_

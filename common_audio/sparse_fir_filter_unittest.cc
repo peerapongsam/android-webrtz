@@ -17,7 +17,7 @@
 #include "rtc_base/arraysize.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 static const float kCoeffs[] = {0.2f, 0.3f, 0.5f, 0.7f, 0.11f};
@@ -229,4 +229,4 @@ TEST(SparseFIRFilterTest, SameOutputAsFIRFilterWhenSparsityOneAndOffsetZero) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

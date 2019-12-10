@@ -12,7 +12,7 @@
 #include "modules/remote_bitrate_estimator/remote_bitrate_estimator_unittest_helper.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RemoteBitrateEstimatorSingleTest :
     public RemoteBitrateEstimatorTest {
@@ -69,4 +69,4 @@ TEST_F(RemoteBitrateEstimatorSingleTest, CapacityDropThirtyStreamsWrap) {
 TEST_F(RemoteBitrateEstimatorSingleTest, TestTimestampGrouping) {
   TestTimestampGroupingTestHelper();
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 #include "rtc_base/messagehandler.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace internal {
 
 class NullAudioPoller final : public rtc::MessageHandler {
@@ -33,6 +33,6 @@ class NullAudioPoller final : public rtc::MessageHandler {
 };
 
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_NULL_AUDIO_POLLER_H_

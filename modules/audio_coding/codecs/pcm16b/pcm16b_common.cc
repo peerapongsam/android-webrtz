@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/codecs/pcm16b/pcm16b_common.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void Pcm16BAppendSupportedCodecSpecs(std::vector<AudioCodecSpec>* specs) {
   for (uint8_t num_channels : {1, 2}) {
@@ -22,4 +22,4 @@ void Pcm16BAppendSupportedCodecSpecs(std::vector<AudioCodecSpec>* specs) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

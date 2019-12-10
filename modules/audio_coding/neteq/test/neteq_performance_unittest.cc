@@ -21,13 +21,13 @@ TEST(NetEqPerformanceTest, Run) {
   const int kQuickSimulationTimeMs = 100000;
   const int kLossPeriod = 10;  // Drop every 10th packet.
   const double kDriftFactor = 0.1;
-  int64_t runtime = webrtc::test::NetEqPerformanceTest::Run(
-      webrtc::field_trial::IsEnabled("WebRTC-QuickPerfTest")
+  int64_t runtime = webrtz::test::NetEqPerformanceTest::Run(
+      webrtz::field_trial::IsEnabled("WebRTC-QuickPerfTest")
           ? kQuickSimulationTimeMs
           : kSimulationTimeMs,
       kLossPeriod, kDriftFactor);
   ASSERT_GT(runtime, 0);
-  webrtc::test::PrintResult(
+  webrtz::test::PrintResult(
       "neteq_performance", "", "10_pl_10_drift", runtime, "ms", true);
 }
 
@@ -39,12 +39,12 @@ TEST(NetEqPerformanceTest, RunClean) {
   const int kQuickSimulationTimeMs = 100000;
   const int kLossPeriod = 0;  // No losses.
   const double kDriftFactor = 0.0;  // No clock drift.
-  int64_t runtime = webrtc::test::NetEqPerformanceTest::Run(
-      webrtc::field_trial::IsEnabled("WebRTC-QuickPerfTest")
+  int64_t runtime = webrtz::test::NetEqPerformanceTest::Run(
+      webrtz::field_trial::IsEnabled("WebRTC-QuickPerfTest")
           ? kQuickSimulationTimeMs
           : kSimulationTimeMs,
       kLossPeriod, kDriftFactor);
   ASSERT_GT(runtime, 0);
-  webrtc::test::PrintResult(
+  webrtz::test::PrintResult(
       "neteq_performance", "", "0_pl_0_drift", runtime, "ms", true);
 }

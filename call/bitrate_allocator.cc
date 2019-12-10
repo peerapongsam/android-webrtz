@@ -23,7 +23,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Allow packets to be transmitted in up to 2 times max video bitrate if the
 // bandwidth estimate allows it.
@@ -73,7 +73,7 @@ BitrateAllocator::~BitrateAllocator() {
 }
 
 uint8_t BitrateAllocator::GetTransmissionMaxBitrateMultiplier() {
-  uint64_t multiplier = strtoul(webrtc::field_trial::FindFullName(
+  uint64_t multiplier = strtoul(webrtz::field_trial::FindFullName(
                                     "WebRTC-TransmissionMaxBitrateMultiplier")
                                     .c_str(),
                                 nullptr, 10);
@@ -588,4 +588,4 @@ void BitrateAllocator::DistributeBitrateRelatively(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

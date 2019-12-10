@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const int kWidth = 352;
@@ -30,7 +30,7 @@ class FrameEditingTest : public ::testing::Test {
  protected:
   virtual void SetUp() {
     reference_video_ = ResourcePath("foreman_cif", "yuv");
-    test_video_ = webrtc::test::TempFilename(webrtc::test::OutputPath(),
+    test_video_ = webrtz::test::TempFilename(webrtz::test::OutputPath(),
                                              "frame_editing_unittest.yuv");
 
     original_fid_ = fopen(reference_video_.c_str(), "rb");
@@ -213,4 +213,4 @@ TEST_F(FrameEditingTest, RepeatFrames) {
                   &edited_buffer_);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

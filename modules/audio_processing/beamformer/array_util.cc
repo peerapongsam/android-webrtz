@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const float kMaxDotProduct = 1e-6f;
@@ -116,4 +116,4 @@ Point AzimuthToPoint(float azimuth) {
   return Point(std::cos(azimuth), std::sin(azimuth), 0.f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

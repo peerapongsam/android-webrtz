@@ -19,18 +19,18 @@
 namespace cricket {
 
 // Faked video renderer that has a callback for actions on rendering.
-class FakeVideoRenderer : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+class FakeVideoRenderer : public rtc::VideoSinkInterface<webrtz::VideoFrame> {
  public:
   FakeVideoRenderer()
       : errors_(0),
         width_(0),
         height_(0),
-        rotation_(webrtc::kVideoRotation_0),
+        rotation_(webrtz::kVideoRotation_0),
         timestamp_us_(0),
         num_rendered_frames_(0),
         black_frame_(false) {}
 
-  virtual void OnFrame(const webrtc::VideoFrame& frame) {
+  virtual void OnFrame(const webrtz::VideoFrame& frame) {
     rtc::CritScope cs(&crit_);
     // TODO(zhurunz) Check with VP8 team to see if we can remove this
     // tolerance on Y values. Some unit tests produce Y values close
@@ -55,7 +55,7 @@ class FakeVideoRenderer : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
     rtc::CritScope cs(&crit_);
     return height_;
   }
-  webrtc::VideoRotation rotation() const {
+  webrtz::VideoRotation rotation() const {
     rtc::CritScope cs(&crit_);
     return rotation_;
   }
@@ -80,11 +80,11 @@ class FakeVideoRenderer : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
                                  uint8_t u_max,
                                  uint8_t v_min,
                                  uint8_t v_max,
-                                 const webrtc::VideoFrame* frame) {
+                                 const webrtz::VideoFrame* frame) {
     if (!frame || !frame->video_frame_buffer()) {
       return false;
     }
-    rtc::scoped_refptr<const webrtc::I420BufferInterface> i420_buffer =
+    rtc::scoped_refptr<const webrtz::I420BufferInterface> i420_buffer =
         frame->video_frame_buffer()->ToI420();
     // Y
     int y_width = frame->width();
@@ -130,7 +130,7 @@ class FakeVideoRenderer : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
   int errors_;
   int width_;
   int height_;
-  webrtc::VideoRotation rotation_;
+  webrtz::VideoRotation rotation_;
   int64_t timestamp_us_;
   int num_rendered_frames_;
   bool black_frame_;

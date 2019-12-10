@@ -18,7 +18,7 @@
 #include "api/stats/rtcstats_objects.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -117,4 +117,4 @@ std::vector<const std::string*> GetStatsReferencedIds(const RTCStats& stats) {
   return neighbor_ids;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

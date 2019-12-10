@@ -10,7 +10,7 @@
 
 #include "modules/rtp_rtcp/source/rtp_packet_to_send.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpPacketToSend::RtpPacketToSend(const ExtensionManager* extensions)
     : RtpPacket(extensions) {}
@@ -26,4 +26,4 @@ RtpPacketToSend& RtpPacketToSend::operator=(RtpPacketToSend&& packet) = default;
 
 RtpPacketToSend::~RtpPacketToSend() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

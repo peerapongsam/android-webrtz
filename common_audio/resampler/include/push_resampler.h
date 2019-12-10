@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class PushSincResampler;
 
@@ -48,6 +48,6 @@ class PushResampler {
   std::unique_ptr<T[]> dst_right_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_RESAMPLER_INCLUDE_PUSH_RESAMPLER_H_

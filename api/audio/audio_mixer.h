@@ -16,7 +16,7 @@
 #include "api/audio/audio_frame.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // WORK IN PROGRESS
 // This class is under development and is not yet intended for for use outside
@@ -75,6 +75,6 @@ class AudioMixer : public rtc::RefCountInterface {
   // called from any thread.
   ~AudioMixer() override {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_AUDIO_MIXER_H_

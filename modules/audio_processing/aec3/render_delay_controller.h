@@ -19,7 +19,7 @@
 #include "modules/audio_processing/aec3/render_delay_buffer.h"
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for aligning the render and capture signal using a RenderDelayBuffer.
 class RenderDelayController {
@@ -42,6 +42,6 @@ class RenderDelayController {
       const rtc::Optional<int>& echo_remover_delay,
       rtc::ArrayView<const float> capture) = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_RENDER_DELAY_CONTROLLER_H_

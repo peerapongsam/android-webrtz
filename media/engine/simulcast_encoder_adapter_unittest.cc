@@ -22,7 +22,7 @@
 #include "rtc_base/ptr_util.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 class TestSimulcastEncoderAdapter : public TestVp8Simulcast {
@@ -363,7 +363,7 @@ class TestSimulcastEncoderAdapterFake : public ::testing::Test,
     // stream 0, the lowest resolution stream.
     InitRefCodec(0, &ref_codec);
     ref_codec.qpMax = 45;
-    ref_codec.VP8()->complexity = webrtc::kComplexityHigher;
+    ref_codec.VP8()->complexity = webrtz::kComplexityHigher;
     ref_codec.VP8()->denoisingOn = false;
     ref_codec.startBitrate = 100;  // Should equal to the target bitrate.
     VerifyCodec(ref_codec, 0);
@@ -590,7 +590,7 @@ TEST_F(TestSimulcastEncoderAdapterFake, ReinitDoesNotReorderEncoderSettings) {
     const VideoCodec& codec_before = codecs_before[i];
     const VideoCodec& codec_after = encoders[i]->codec();
 
-    // webrtc::VideoCodec does not implement operator==.
+    // webrtz::VideoCodec does not implement operator==.
     EXPECT_EQ(codec_before.codecType, codec_after.codecType);
     EXPECT_EQ(codec_before.plType, codec_after.plType);
     EXPECT_EQ(codec_before.width, codec_after.width);
@@ -797,7 +797,7 @@ TEST_F(TestSimulcastEncoderAdapterFake, TestFailureReturnCodesFromEncodeCalls) {
   rtc::scoped_refptr<I420Buffer> input_buffer =
       I420Buffer::Create(kDefaultWidth, kDefaultHeight);
   input_buffer->InitializeData();
-  VideoFrame input_frame(input_buffer, 0, 0, webrtc::kVideoRotation_0);
+  VideoFrame input_frame(input_buffer, 0, 0, webrtz::kVideoRotation_0);
   std::vector<FrameType> frame_types(3, kVideoFrameKey);
   EXPECT_EQ(WEBRTC_VIDEO_CODEC_FALLBACK_SOFTWARE,
             adapter_->Encode(input_frame, nullptr, &frame_types));
@@ -815,4 +815,4 @@ TEST_F(TestSimulcastEncoderAdapterFake, TestInitFailureCleansUpEncoders) {
 }
 
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

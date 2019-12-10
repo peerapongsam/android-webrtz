@@ -13,9 +13,9 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-using webrtc::rtcp::Sdes;
+using webrtz::rtcp::Sdes;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345678;
 const uint8_t kPadding = 0;
@@ -246,4 +246,4 @@ TEST(RtcpPacketSdesTest, ParsedSdesCanBeReusedForBuilding) {
   EXPECT_EQ(kSenderSsrc + 1, destination.chunks()[1].ssrc);
   EXPECT_EQ(kBob, destination.chunks()[1].cname);
 }
-}  // namespace webrtc
+}  // namespace webrtz

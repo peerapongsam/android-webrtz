@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/source/byte_io.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr size_t CommonHeader::kHeaderSizeBytes;
 //    0                   1           1       2                   3
@@ -86,4 +86,4 @@ bool CommonHeader::Parse(const uint8_t* buffer, size_t size_bytes) {
   return true;
 }
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

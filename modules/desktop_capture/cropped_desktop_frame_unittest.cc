@@ -16,7 +16,7 @@
 #include "rtc_base/ptr_util.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<DesktopFrame> CreateTestFrame() {
   return rtc::MakeUnique<BasicDesktopFrame>(DesktopSize(10, 20));
@@ -63,4 +63,4 @@ TEST(CroppedDesktopFrameTest, SetTopLeft) {
   ASSERT_EQ(frame->top_left().y(), 203);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

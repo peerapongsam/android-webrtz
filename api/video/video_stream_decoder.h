@@ -20,7 +20,7 @@
 #include "api/video_codecs/sdp_video_format.h"
 #include "api/video_codecs/video_decoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 // NOTE: This class is still under development and may change without notice.
 class VideoStreamDecoder {
  public:
@@ -46,6 +46,6 @@ class VideoStreamDecoder {
   virtual void OnFrame(std::unique_ptr<video_coding::EncodedFrame> frame) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_VIDEO_STREAM_DECODER_H_

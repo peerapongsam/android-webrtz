@@ -16,7 +16,7 @@
 #include "modules/video_capture/video_capture.h"
 #include "rtc_base/synchronization/rw_lock_wrapper.h"
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -56,5 +56,5 @@ protected:
     uint32_t _lastUsedDeviceNameLength;
 };
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 #endif // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_DEVICE_INFO_IMPL_H_

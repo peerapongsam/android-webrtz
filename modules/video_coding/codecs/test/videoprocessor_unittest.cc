@@ -27,7 +27,7 @@ using ::testing::_;
 using ::testing::Property;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -184,4 +184,4 @@ TEST_F(VideoProcessorTest, SetRates) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

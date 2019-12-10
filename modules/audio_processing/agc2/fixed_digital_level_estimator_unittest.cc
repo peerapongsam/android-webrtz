@@ -19,7 +19,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr float kInputLevel = 10000.f;
@@ -155,4 +155,4 @@ TEST(AutomaticGainController2LevelEstimator,
   EXPECT_LE(time_to_decrease, kExpectedTime * 1.1);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

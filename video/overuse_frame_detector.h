@@ -22,7 +22,7 @@
 #include "rtc_base/task_queue.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoFrame;
 
@@ -162,6 +162,6 @@ class OveruseFrameDetector {
   RTC_DISALLOW_COPY_AND_ASSIGN(OveruseFrameDetector);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_OVERUSE_FRAME_DETECTOR_H_

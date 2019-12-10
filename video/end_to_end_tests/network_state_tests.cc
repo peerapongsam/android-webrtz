@@ -12,7 +12,7 @@
 #include "test/call_test.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 constexpr int kSilenceTimeoutMs = 2000;
 }
@@ -405,4 +405,4 @@ TEST_F(NetworkStateEndToEndTest, NewVideoReceiveStreamsIgnoreAudioNetworkDown) {
   VerifyNewVideoReceiveStreamsRespectNetworkState(MediaType::VIDEO, &transport);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

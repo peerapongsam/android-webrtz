@@ -21,7 +21,7 @@
 #include "test/gtest.h"
 #include "test/video_codec_settings.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 using ::testing::Return;
@@ -62,7 +62,7 @@ TEST(VP8EncoderSimulcastProxy, ChoosesCorrectImplementation) {
   const std::string kSimulcastAdaptedImplementationName =
       "SimulcastEncoderAdapter (Fake, Fake, Fake)";
   VideoCodec codec_settings;
-  webrtc::test::CodecSettings(kVideoCodecVP8, &codec_settings);
+  webrtz::test::CodecSettings(kVideoCodecVP8, &codec_settings);
   codec_settings.simulcastStream[0] = {
       test::kTestWidth, test::kTestHeight, 2, 2000, 1000, 1000, 56};
   codec_settings.simulcastStream[1] = {
@@ -134,4 +134,4 @@ TEST(VP8EncoderSimulcastProxy, ChoosesCorrectImplementation) {
 }
 
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

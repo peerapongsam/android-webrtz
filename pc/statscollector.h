@@ -25,7 +25,7 @@
 #include "api/statstypes.h"
 #include "pc/peerconnectioninternal.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Conversion function to convert candidate type string to the corresponding one
 // from  enum RTCStatsIceCandidateType.
@@ -116,7 +116,7 @@ class StatsCollector {
   void ExtractBweInfo();
   void ExtractMediaInfo();
   void ExtractSenderInfo();
-  webrtc::StatsReport* GetReport(const StatsReport::StatsType& type,
+  webrtz::StatsReport* GetReport(const StatsReport::StatsType& type,
                                  const std::string& id,
                                  StatsReport::Direction direction);
 
@@ -149,6 +149,6 @@ class StatsCollector {
   LocalAudioTrackVector local_audio_tracks_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_STATSCOLLECTOR_H_

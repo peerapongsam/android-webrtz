@@ -21,24 +21,24 @@ using testing::Matcher;
 using testing::StrictMock;
 
 namespace {
-std::unique_ptr<webrtc::AudioProcessing> CreateAudioProcessing() {
-  webrtc::Config config;
-  std::unique_ptr<webrtc::AudioProcessing> apm(
-      webrtc::AudioProcessingBuilder().Create(config));
+std::unique_ptr<webrtz::AudioProcessing> CreateAudioProcessing() {
+  webrtz::Config config;
+  std::unique_ptr<webrtz::AudioProcessing> apm(
+      webrtz::AudioProcessingBuilder().Create(config));
   RTC_DCHECK(apm);
   return apm;
 }
 
-std::unique_ptr<webrtc::test::MockAecDump> CreateMockAecDump() {
+std::unique_ptr<webrtz::test::MockAecDump> CreateMockAecDump() {
   auto mock_aec_dump =
-      rtc::MakeUnique<testing::StrictMock<webrtc::test::MockAecDump>>();
+      rtc::MakeUnique<testing::StrictMock<webrtz::test::MockAecDump>>();
   EXPECT_CALL(*mock_aec_dump.get(), WriteConfig(_)).Times(AtLeast(1));
   EXPECT_CALL(*mock_aec_dump.get(), WriteInitMessage(_)).Times(AtLeast(1));
-  return std::unique_ptr<webrtc::test::MockAecDump>(std::move(mock_aec_dump));
+  return std::unique_ptr<webrtz::test::MockAecDump>(std::move(mock_aec_dump));
 }
 
-std::unique_ptr<webrtc::AudioFrame> CreateFakeFrame() {
-  auto fake_frame = rtc::MakeUnique<webrtc::AudioFrame>();
+std::unique_ptr<webrtz::AudioFrame> CreateFakeFrame() {
+  auto fake_frame = rtc::MakeUnique<webrtz::AudioFrame>();
   fake_frame->num_channels_ = 1;
   fake_frame->sample_rate_hz_ = 48000;
   fake_frame->samples_per_channel_ = 480;
@@ -60,7 +60,7 @@ TEST(AecDumpIntegration,
   auto fake_frame = CreateFakeFrame();
 
   EXPECT_CALL(*mock_aec_dump.get(),
-              WriteRenderStreamMessage(Matcher<const webrtc::AudioFrame&>(_)))
+              WriteRenderStreamMessage(Matcher<const webrtz::AudioFrame&>(_)))
       .Times(Exactly(1));
 
   apm->AttachAecDump(std::move(mock_aec_dump));
@@ -73,11 +73,11 @@ TEST(AecDumpIntegration, CaptureStreamShouldBeLoggedOnceEveryProcessStream) {
   auto fake_frame = CreateFakeFrame();
 
   EXPECT_CALL(*mock_aec_dump.get(),
-              AddCaptureStreamInput(Matcher<const webrtc::AudioFrame&>(_)))
+              AddCaptureStreamInput(Matcher<const webrtz::AudioFrame&>(_)))
       .Times(AtLeast(1));
 
   EXPECT_CALL(*mock_aec_dump.get(),
-              AddCaptureStreamOutput(Matcher<const webrtc::AudioFrame&>(_)))
+              AddCaptureStreamOutput(Matcher<const webrtz::AudioFrame&>(_)))
       .Times(Exactly(1));
 
   EXPECT_CALL(*mock_aec_dump.get(), AddAudioProcessingState(_))

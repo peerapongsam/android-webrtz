@@ -16,7 +16,7 @@
 #include "modules/audio_processing/voice_detection_impl.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kNumFramesToProcess = 1000;
@@ -120,4 +120,4 @@ TEST(VoiceDetectionBitExactnessTest, Stereo48kHz) {
                       kLikelihoodReference);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

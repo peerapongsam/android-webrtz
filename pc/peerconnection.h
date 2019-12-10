@@ -29,7 +29,7 @@
 #include "pc/streamcollection.h"
 #include "pc/webrtcsessiondescriptionfactory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MediaStreamObserver;
 class VideoRtpReceiver;
@@ -119,7 +119,7 @@ class PeerConnection : public PeerConnectionInternal,
       const DataChannelInit* config) override;
   // WARNING: LEGACY. See peerconnectioninterface.h
   bool GetStats(StatsObserver* observer,
-                webrtc::MediaStreamTrackInterface* track,
+                webrtz::MediaStreamTrackInterface* track,
                 StatsOutputLevel level) override;
   // Spec-complaint GetStats(). See peerconnectioninterface.h
   void GetStats(RTCStatsCollectorCallback* callback) override;
@@ -651,7 +651,7 @@ class PeerConnection : public PeerConnectionInternal,
       IceTransportsType type,
       int candidate_pool_size,
       bool prune_turn_ports,
-      webrtc::TurnCustomizer* turn_customizer,
+      webrtz::TurnCustomizer* turn_customizer,
       rtc::Optional<int> stun_candidate_keepalive_interval);
 
   // Starts output of an RTC event log to the given output object.
@@ -997,6 +997,6 @@ class PeerConnection : public PeerConnectionInternal,
   cricket::VideoOptions video_options_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_PEERCONNECTION_H_

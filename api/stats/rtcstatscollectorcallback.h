@@ -15,7 +15,7 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RTCStatsCollectorCallback : public virtual rtc::RefCountInterface {
  public:
@@ -25,6 +25,6 @@ class RTCStatsCollectorCallback : public virtual rtc::RefCountInterface {
       const rtc::scoped_refptr<const RTCStatsReport>& report) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_STATS_RTCSTATSCOLLECTORCALLBACK_H_

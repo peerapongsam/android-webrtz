@@ -18,7 +18,7 @@
 #include "rtc_base/buffer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Contains enough of the image slice to contain slice QP.
@@ -221,4 +221,4 @@ TEST_F(PpsParserTest, PpsIdFromSlice) {
   EXPECT_EQ(2u, *pps_id);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

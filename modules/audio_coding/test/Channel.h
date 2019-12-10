@@ -18,7 +18,7 @@
 #include "rtc_base/criticalsection.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #define MAX_NUM_PAYLOADS   50
 #define MAX_NUM_FRAMESIZES  6
@@ -124,6 +124,6 @@ class Channel : public AudioPacketizationCallback {
   int num_packets_to_drop_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_CHANNEL_H_

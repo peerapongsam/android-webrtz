@@ -23,7 +23,7 @@
 #include "video/payload_router.h"
 #include "video/receive_statistics_proxy.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VideoStreamDecoder::VideoStreamDecoder(
     vcm::VideoReceiver* video_receiver,
@@ -128,4 +128,4 @@ void VideoStreamDecoder::OnCompleteFrame(bool is_keyframe,
 void VideoStreamDecoder::UpdateRtt(int64_t max_rtt_ms) {
   video_receiver_->SetReceiveChannelParameters(max_rtt_ms);
 }
-}  // namespace webrtc
+}  // namespace webrtz

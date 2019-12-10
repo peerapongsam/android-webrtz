@@ -19,7 +19,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -280,4 +280,4 @@ TEST(AudioStateTest,
       audio_buffer, n_samples_out, &elapsed_time_ms, &ntp_time_ms);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -23,7 +23,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/sleep.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 std::string DxgiDuplicatorController::ResultName(
@@ -454,7 +454,7 @@ bool DxgiDuplicatorController::EnsureFrameCaptured(Context* context,
     if (GetNumFramesCaptured() > 0) {
       // Sleep |ms_per_frame| before capturing next frame to ensure the screen
       // has been updated by the video adapter.
-      webrtc::SleepMs(
+      webrtz::SleepMs(
           ms_per_frame - (rtc::TimeMillis() - last_frame_start_ms));
     }
     last_frame_start_ms = rtc::TimeMillis();
@@ -481,4 +481,4 @@ void DxgiDuplicatorController::TranslateRect() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

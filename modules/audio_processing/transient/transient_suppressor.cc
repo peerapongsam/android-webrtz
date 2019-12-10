@@ -27,7 +27,7 @@
 #include "rtc_base/logging.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 static const float kMeanIIRCoefficient = 0.5f;
 static const float kVoiceThreshold = 0.02f;
@@ -421,4 +421,4 @@ void TransientSuppressor::SoftRestoration(float* spectral_mean) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

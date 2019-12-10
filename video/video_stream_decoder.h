@@ -24,7 +24,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class CallStatsObserver;
 class ChannelStatsObserver;
@@ -97,6 +97,6 @@ class VideoStreamDecoder : public VCMReceiveCallback,
   rtc::VideoSinkInterface<VideoFrame>* const incoming_video_stream_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_VIDEO_STREAM_DECODER_H_

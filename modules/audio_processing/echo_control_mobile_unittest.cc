@@ -16,7 +16,7 @@
 #include "modules/audio_processing/test/bitexactness_tools.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // TODO(peah): Increase the number of frames to proces when the issue of
@@ -221,4 +221,4 @@ TEST(EchoControlMobileBitExactnessTest,
                       kOutputReference);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

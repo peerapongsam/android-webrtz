@@ -17,7 +17,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr int kChunkSizeMs = 10;
@@ -95,4 +95,4 @@ void DownSampler::DownSample(rtc::ArrayView<const float> in,
   data_dumper_->DumpWav("lc_down_sampler_output", out, kSampleRate8kHz, 1);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

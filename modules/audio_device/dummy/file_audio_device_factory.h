@@ -13,7 +13,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class FileAudioDevice;
 
@@ -37,6 +37,6 @@ class FileAudioDeviceFactory {
   static char _outputAudioFilename[MAX_FILENAME_LEN];
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_DEVICE_FILE_AUDIO_DEVICE_FACTORY_H_

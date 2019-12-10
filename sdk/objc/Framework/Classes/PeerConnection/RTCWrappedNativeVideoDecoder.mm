@@ -14,10 +14,10 @@
 #import "RTCWrappedNativeVideoDecoder.h"
 
 @implementation RTCWrappedNativeVideoDecoder {
-  std::unique_ptr<webrtc::VideoDecoder> _wrappedDecoder;
+  std::unique_ptr<webrtz::VideoDecoder> _wrappedDecoder;
 }
 
-- (instancetype)initWithNativeDecoder:(std::unique_ptr<webrtc::VideoDecoder>)decoder {
+- (instancetype)initWithNativeDecoder:(std::unique_ptr<webrtz::VideoDecoder>)decoder {
   if (self = [super init]) {
     _wrappedDecoder = std::move(decoder);
   }
@@ -25,7 +25,7 @@
   return self;
 }
 
-- (std::unique_ptr<webrtc::VideoDecoder>)releaseWrappedDecoder {
+- (std::unique_ptr<webrtz::VideoDecoder>)releaseWrappedDecoder {
   return std::move(_wrappedDecoder);
 }
 

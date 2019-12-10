@@ -20,7 +20,7 @@
 #include "test/frame_generator.h"
 #include "test/layer_filtering_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoQualityTest : public test::CallTest {
  public:
@@ -112,7 +112,7 @@ class VideoQualityTest : public test::CallTest {
       const std::vector<std::string>& sl_descriptors);
 
  protected:
-  std::map<uint8_t, webrtc::MediaType> payload_type_map_;
+  std::map<uint8_t, webrtz::MediaType> payload_type_map_;
   std::unique_ptr<FecControllerFactoryInterface> fec_controller_factory_;
 
   // No-op implementation to be able to instantiate this class from non-TEST_F
@@ -170,12 +170,12 @@ class VideoQualityTest : public test::CallTest {
       VideoSendStream::DegradationPreference::kMaintainFramerate;
   Params params_;
 
-  std::unique_ptr<webrtc::RtcEventLog> recv_event_log_;
-  std::unique_ptr<webrtc::RtcEventLog> send_event_log_;
+  std::unique_ptr<webrtz::RtcEventLog> recv_event_log_;
+  std::unique_ptr<webrtz::RtcEventLog> send_event_log_;
 
   size_t num_video_streams_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_VIDEO_QUALITY_TEST_H_

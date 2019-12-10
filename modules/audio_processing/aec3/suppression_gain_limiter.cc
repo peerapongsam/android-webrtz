@@ -15,7 +15,7 @@
 
 #include "modules/audio_processing/aec3/aec3_common.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Computes the gain rampup factor to use.
@@ -89,4 +89,4 @@ void SuppressionGainUpperLimiter::Update(bool render_activity,
   RTC_DCHECK_GE(1.f, suppressor_gain_limit_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

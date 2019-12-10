@@ -24,7 +24,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RTPReceiverStrategy* RTPReceiverStrategy::CreateVideoStrategy(
     RtpData* data_callback) {
@@ -122,4 +122,4 @@ RTPAliveType RTPReceiverVideo::ProcessDeadOrAlive(
   return kRtpDead;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

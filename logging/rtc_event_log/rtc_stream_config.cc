@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/rtc_stream_config.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtclog {
 
 StreamConfig::StreamConfig() {}
@@ -38,4 +38,4 @@ bool StreamConfig::Codec::operator==(const Codec& other) const {
 }
 
 }  // namespace rtclog
-}  // namespace webrtc
+}  // namespace webrtz

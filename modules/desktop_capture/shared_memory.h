@@ -23,7 +23,7 @@
 #include "rtc_base/thread_checker.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // SharedMemory is a base class for shared memory. It stores all required
 // parameters of the buffer, but doesn't have any logic to allocate or destroy
@@ -77,7 +77,7 @@ class SharedMemoryFactory {
   RTC_DISALLOW_COPY_AND_ASSIGN(SharedMemoryFactory);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_SHARED_MEMORY_H_
 

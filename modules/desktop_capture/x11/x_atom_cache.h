@@ -14,7 +14,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xatom.h>
 
-namespace webrtc {
+namespace webrtz {
 
 // A cache of Atom. Each Atom object is created on demand.
 class XAtomCache final {
@@ -38,6 +38,6 @@ class XAtomCache final {
   Atom window_type_normal_ = None;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_X11_X_ATOM_CACHE_H_

@@ -15,7 +15,7 @@
 #include "rtc_base/rollingaccumulator.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -165,6 +165,6 @@ class VCMJitterEstimator {
   const Clock* clock_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_JITTER_ESTIMATOR_H_

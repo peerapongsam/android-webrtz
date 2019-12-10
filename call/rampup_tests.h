@@ -20,7 +20,7 @@
 #include "rtc_base/event.h"
 #include "test/call_test.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kTransmissionTimeOffsetExtensionId = 6;
 static const int kAbsSendTimeExtensionId = 7;
@@ -62,7 +62,7 @@ class RampUpTester : public test::EndToEndTest {
                     const std::string& units) const;
   void TriggerTestDone();
 
-  webrtc::RtcEventLogNullImpl event_log_;
+  webrtz::RtcEventLogNullImpl event_log_;
   rtc::Event stop_event_;
   Clock* const clock_;
   FakeNetworkPipe::Config forward_transport_config_;
@@ -156,5 +156,5 @@ class RampUpDownUpTester : public RampUpTester {
   int sent_bytes_;
   std::vector<int> loss_rates_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // CALL_RAMPUP_TESTS_H_

@@ -11,7 +11,7 @@
 
 #include "modules/remote_bitrate_estimator/test/estimators/max_bandwidth_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -83,4 +83,4 @@ bool MaxBandwidthFilter::FullBandwidthReached(float growth_target,
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

@@ -20,7 +20,7 @@ DEFINE_bool(quick, false,
             "Don't do the full audio recording. "
             "Used to quickly check that the test runs without crashing.");
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -41,7 +41,7 @@ class AudioQualityTest : public AudioEndToEndTest {
   std::string AudioOutputFile() const {
     const ::testing::TestInfo* const test_info =
         ::testing::UnitTest::GetInstance()->current_test_info();
-    return webrtc::test::OutputPath() + "LowBandwidth_" + test_info->name() +
+    return webrtz::test::OutputPath() + "LowBandwidth_" + test_info->name() +
         "_" + FileSampleRateSuffix() + ".wav";
   }
 
@@ -109,4 +109,4 @@ TEST_F(LowBandwidthAudioTest, Mobile2GNetwork) {
   RunBaseTest(&test);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

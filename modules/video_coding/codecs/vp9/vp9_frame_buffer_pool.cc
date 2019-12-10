@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/refcountedobject.h"
 
-namespace webrtc {
+namespace webrtz {
 
 uint8_t* Vp9FrameBufferPool::Vp9FrameBuffer::GetData() {
   return data_.data<uint8_t>();
@@ -137,4 +137,4 @@ int32_t Vp9FrameBufferPool::VpxReleaseFrameBuffer(void* user_priv,
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

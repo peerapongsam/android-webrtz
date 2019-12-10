@@ -13,7 +13,7 @@
 #include "logging/rtc_event_log/rtc_event_log.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 IceEventLog::IceEventLog() {}
 IceEventLog::~IceEventLog() {}
@@ -51,4 +51,4 @@ void IceEventLog::DumpCandidatePairDescriptionToMemoryAsConfigEvents() const {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

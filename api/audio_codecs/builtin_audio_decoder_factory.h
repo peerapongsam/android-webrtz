@@ -14,12 +14,12 @@
 #include "api/audio_codecs/audio_decoder_factory.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Creates a new factory that can create the built-in types of audio decoders.
 // NOTE: This function is still under development and may change without notice.
 rtc::scoped_refptr<AudioDecoderFactory> CreateBuiltinAudioDecoderFactory();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_BUILTIN_AUDIO_DECODER_FACTORY_H_

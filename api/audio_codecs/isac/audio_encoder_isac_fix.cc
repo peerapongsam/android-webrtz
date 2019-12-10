@@ -15,7 +15,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/string_to_number.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioEncoderIsacFix::Config> AudioEncoderIsacFix::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -59,4 +59,4 @@ std::unique_ptr<AudioEncoder> AudioEncoderIsacFix::MakeAudioEncoder(
   return rtc::MakeUnique<AudioEncoderIsacFixImpl>(c);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

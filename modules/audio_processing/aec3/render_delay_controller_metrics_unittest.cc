@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Verify the general functionality of RenderDelayControllerMetrics.
 TEST(RenderDelayControllerMetrics, NormalUsage) {
@@ -30,4 +30,4 @@ TEST(RenderDelayControllerMetrics, NormalUsage) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

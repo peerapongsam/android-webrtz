@@ -14,7 +14,7 @@
 #include "modules/audio_device/include/audio_device.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This interface will capture the raw PCM data of both the local captured as
 // well as the mixed/rendered remote audio.
@@ -47,6 +47,6 @@ rtc::scoped_refptr<AudioDeviceModule> CreateAudioDeviceWithDataObserver(
     const AudioDeviceModule::AudioLayer audio_layer,
     AudioDeviceDataObserver* observer);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_INCLUDE_AUDIO_DEVICE_DATA_OBSERVER_H_

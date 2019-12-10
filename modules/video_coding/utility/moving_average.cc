@@ -12,7 +12,7 @@
 
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 
 MovingAverage::MovingAverage(size_t s) : sum_history_(s + 1, 0) {}
 MovingAverage::~MovingAverage() = default;
@@ -44,4 +44,4 @@ size_t MovingAverage::size() const {
   return std::min(count_, sum_history_.size() - 1);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

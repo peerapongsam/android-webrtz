@@ -21,7 +21,7 @@
 #include "rtc_base/arraysize.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FakePeriodicVideoCapturer
     : public cricket::FakeVideoCapturerWithTaskQueue {
@@ -94,6 +94,6 @@ class FakePeriodicVideoCapturer
   bool deliver_frames_ RTC_GUARDED_BY(task_queue_) = false;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  //  PC_TEST_FAKEPERIODICVIDEOCAPTURER_H_

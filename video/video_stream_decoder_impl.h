@@ -25,7 +25,7 @@
 #include "rtc_base/thread_checker.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoStreamDecoderImpl : public VideoStreamDecoder,
                                private DecodedImageCallback {
@@ -87,6 +87,6 @@ class VideoStreamDecoderImpl : public VideoStreamDecoder,
   int next_start_time_index_ RTC_GUARDED_BY(bookkeeping_queue_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_VIDEO_STREAM_DECODER_IMPL_H_

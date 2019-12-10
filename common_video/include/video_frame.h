@@ -22,7 +22,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(pbos): Rename EncodedFrame and reformat this class' members.
 class EncodedImage {
@@ -72,6 +72,6 @@ class EncodedImage {
   } timing_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_INCLUDE_VIDEO_FRAME_H_

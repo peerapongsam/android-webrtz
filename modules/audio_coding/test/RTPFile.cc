@@ -25,7 +25,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 void RTPStream::ParseRTPHeader(WebRtcRTPHeader* rtpInfo,
                                const uint8_t* rtpHeader) {
@@ -224,4 +224,4 @@ size_t RTPFile::Read(WebRtcRTPHeader* rtpInfo, uint8_t* payloadData,
   return lengthBytes;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

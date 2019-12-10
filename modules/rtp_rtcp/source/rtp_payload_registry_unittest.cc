@@ -17,7 +17,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::Eq;
 using ::testing::Return;
@@ -198,4 +198,4 @@ INSTANTIATE_TEST_CASE_P(TestDynamicRange,
                         RtpPayloadRegistryGenericTest,
                         testing::Range(96, 127 + 1));
 
-}  // namespace webrtc
+}  // namespace webrtz

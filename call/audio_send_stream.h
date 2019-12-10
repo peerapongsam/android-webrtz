@@ -27,7 +27,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 
@@ -133,7 +133,7 @@ class AudioSendStream {
 
   virtual ~AudioSendStream() = default;
 
-  virtual const webrtc::AudioSendStream::Config& GetConfig() const = 0;
+  virtual const webrtz::AudioSendStream::Config& GetConfig() const = 0;
 
   // Reconfigure the stream according to the Configuration.
   virtual void Reconfigure(const Config& config) = 0;
@@ -147,7 +147,7 @@ class AudioSendStream {
 
   // Encode and send audio.
   virtual void SendAudioData(
-      std::unique_ptr<webrtc::AudioFrame> audio_frame) = 0;
+      std::unique_ptr<webrtz::AudioFrame> audio_frame) = 0;
 
   // TODO(solenberg): Make payload_type a config property instead.
   virtual bool SendTelephoneEvent(int payload_type, int payload_frequency,
@@ -158,6 +158,6 @@ class AudioSendStream {
   virtual Stats GetStats() const = 0;
   virtual Stats GetStats(bool has_remote_tracks) const = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_AUDIO_SEND_STREAM_H_

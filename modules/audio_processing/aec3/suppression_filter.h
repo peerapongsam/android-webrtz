@@ -18,7 +18,7 @@
 #include "modules/audio_processing/aec3/aec3_fft.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SuppressionFilter {
  public:
@@ -39,6 +39,6 @@ class SuppressionFilter {
   RTC_DISALLOW_COPY_AND_ASSIGN(SuppressionFilter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_SUPPRESSION_FILTER_H_

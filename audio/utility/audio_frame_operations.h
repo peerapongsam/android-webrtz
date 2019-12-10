@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 
@@ -118,6 +118,6 @@ class AudioFrameOperations {
   static int ScaleWithSat(float scale, AudioFrame* frame);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_UTILITY_AUDIO_FRAME_OPERATIONS_H_

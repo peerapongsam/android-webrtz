@@ -27,7 +27,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 bool EnableZeroExternalDelayHeadroom() {
@@ -455,4 +455,4 @@ RenderDelayBuffer* RenderDelayBuffer::Create(const EchoCanceller3Config& config,
   return new RenderDelayBufferImpl(config, num_bands);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

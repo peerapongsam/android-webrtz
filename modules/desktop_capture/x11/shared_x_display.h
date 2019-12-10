@@ -25,7 +25,7 @@
 typedef struct _XDisplay Display;
 typedef union _XEvent XEvent;
 
-namespace webrtc {
+namespace webrtz {
 
 // A ref-counted object to store XDisplay connection.
 class SharedXDisplay : public rtc::RefCountedBase {
@@ -76,6 +76,6 @@ class SharedXDisplay : public rtc::RefCountedBase {
   RTC_DISALLOW_COPY_AND_ASSIGN(SharedXDisplay);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_X11_SHARED_X_DISPLAY_H_

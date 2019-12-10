@@ -21,7 +21,7 @@
 #include "rtc_base/constructormagic.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -117,8 +117,8 @@ class BaseLineFileUpdate : public BaseLineFileInterface {
 
   virtual bool VerifyOrWrite() {
     if (!verifier_->VerifyOrWrite()) {
-      std::string dir_path = webrtc::test::OutputPath() + kResourceSubDir;
-      if (!webrtc::test::CreateDir(dir_path)) {
+      std::string dir_path = webrtz::test::OutputPath() + kResourceSubDir;
+      if (!webrtz::test::CreateDir(dir_path)) {
         printf("WARNING: Cannot create output dir: %s\n", dir_path.c_str());
         return false;
       }
@@ -165,4 +165,4 @@ BaseLineFileInterface* BaseLineFileInterface::Create(
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

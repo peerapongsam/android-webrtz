@@ -16,7 +16,7 @@
 
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 extern const int kMotionMagnitudeThreshold;
 extern const int kSumDiffThreshold;
@@ -51,6 +51,6 @@ class DenoiserFilter {
                                      int increase_denoising) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_PROCESSING_UTIL_DENOISER_FILTER_H_

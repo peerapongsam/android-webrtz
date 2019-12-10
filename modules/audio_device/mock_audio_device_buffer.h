@@ -14,7 +14,7 @@
 #include "modules/audio_device/audio_device_buffer.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockAudioDeviceBuffer : public AudioDeviceBuffer {
  public:
@@ -28,6 +28,6 @@ class MockAudioDeviceBuffer : public AudioDeviceBuffer {
   MOCK_METHOD0(DeliverRecordedData, int32_t());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_MOCK_AUDIO_DEVICE_BUFFER_H_

@@ -17,7 +17,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 class Clock;
 struct PacketFeedback;
 
@@ -51,5 +51,5 @@ class SendTimeHistory {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SendTimeHistory);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_CONGESTION_CONTROLLER_SEND_TIME_HISTORY_H_

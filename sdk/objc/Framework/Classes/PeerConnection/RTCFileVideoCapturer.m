@@ -13,7 +13,7 @@
 #import "WebRTC/RTCLogging.h"
 #import "WebRTC/RTCVideoFrameBuffer.h"
 
-NSString *const kRTCFileVideoCapturerErrorDomain = @"org.webrtc.RTCFileVideoCapturer";
+NSString *const kRTCFileVideoCapturerErrorDomain = @"org.webrtz.RTCFileVideoCapturer";
 
 typedef NS_ENUM(NSInteger, RTCFileVideoCapturerErrorCode) {
   RTCFileVideoCapturerErrorCode_CapturerRunning = 2000,
@@ -111,7 +111,7 @@ typedef NS_ENUM(NSInteger, RTCFileVideoCapturerStatus) {
 
 - (dispatch_queue_t)frameQueue {
   if (!_frameQueue) {
-    _frameQueue = dispatch_queue_create("org.webrtc.filecapturer.video", DISPATCH_QUEUE_SERIAL);
+    _frameQueue = dispatch_queue_create("org.webrtz.filecapturer.video", DISPATCH_QUEUE_SERIAL);
     dispatch_set_target_queue(_frameQueue,
                               dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0));
   }

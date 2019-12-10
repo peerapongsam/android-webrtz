@@ -19,7 +19,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RTCStatsMemberInterface;
 
@@ -142,11 +142,11 @@ class RTCStats {
  public:                                                                       \
   static const char kType[];                                                   \
                                                                                \
-  std::unique_ptr<webrtc::RTCStats> copy() const override;                     \
+  std::unique_ptr<webrtz::RTCStats> copy() const override;                     \
   const char* type() const override;                                           \
                                                                                \
  protected:                                                                    \
-  std::vector<const webrtc::RTCStatsMemberInterface*>                          \
+  std::vector<const webrtz::RTCStatsMemberInterface*>                          \
   MembersOfThisObjectAndAncestors(                                             \
       size_t local_var_additional_capacity) const override;                    \
                                                                                \
@@ -155,23 +155,23 @@ class RTCStats {
 #define WEBRTC_RTCSTATS_IMPL(this_class, parent_class, type_str, ...)          \
   const char this_class::kType[] = type_str;                                   \
                                                                                \
-  std::unique_ptr<webrtc::RTCStats> this_class::copy() const {                 \
-    return std::unique_ptr<webrtc::RTCStats>(new this_class(*this));           \
+  std::unique_ptr<webrtz::RTCStats> this_class::copy() const {                 \
+    return std::unique_ptr<webrtz::RTCStats>(new this_class(*this));           \
   }                                                                            \
                                                                                \
   const char* this_class::type() const {                                       \
     return this_class::kType;                                                  \
   }                                                                            \
                                                                                \
-  std::vector<const webrtc::RTCStatsMemberInterface*>                          \
+  std::vector<const webrtz::RTCStatsMemberInterface*>                          \
   this_class::MembersOfThisObjectAndAncestors(                                 \
       size_t local_var_additional_capacity) const {                            \
-    const webrtc::RTCStatsMemberInterface* local_var_members[] = {             \
+    const webrtz::RTCStatsMemberInterface* local_var_members[] = {             \
       __VA_ARGS__                                                              \
     };                                                                         \
     size_t local_var_members_count =                                           \
         sizeof(local_var_members) / sizeof(local_var_members[0]);              \
-    std::vector<const webrtc::RTCStatsMemberInterface*> local_var_members_vec =\
+    std::vector<const webrtz::RTCStatsMemberInterface*> local_var_members_vec =\
         parent_class::MembersOfThisObjectAndAncestors(                         \
             local_var_members_count + local_var_additional_capacity);          \
     RTC_DCHECK_GE(                                                             \
@@ -327,6 +327,6 @@ class RTCStatsMember : public RTCStatsMemberInterface {
   T value_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_STATS_RTCSTATS_H_

@@ -14,7 +14,7 @@
 
 #include "modules/rtp_rtcp/source/byte_io.h"
 
-namespace webrtc {
+namespace webrtz {
 int PackHeader(uint8_t* buffer, MultiplexImageHeader header) {
   int offset = 0;
   ByteWriter<uint8_t>::WriteBigEndian(buffer + offset, header.component_count);
@@ -231,4 +231,4 @@ MultiplexImage MultiplexEncodedImagePacker::Unpack(
   return multiplex_image;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

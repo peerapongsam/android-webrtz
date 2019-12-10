@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/cpu_features_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const int kMotionMagnitudeThreshold = 8 * 3;
 const int kSumDiffThreshold = 96;
@@ -56,4 +56,4 @@ std::unique_ptr<DenoiserFilter> DenoiserFilter::Create(
   return filter;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

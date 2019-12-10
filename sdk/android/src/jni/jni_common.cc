@@ -12,7 +12,7 @@
 #include "sdk/android/generated_base_jni/jni/JniCommon_jni.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static void JNI_JniCommon_AddRef(JNIEnv* jni,
@@ -46,4 +46,4 @@ static void JNI_JniCommon_FreeByteBuffer(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

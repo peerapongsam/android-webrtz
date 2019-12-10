@@ -29,7 +29,7 @@
 #include "system_wrappers/include/cpu_features_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -540,4 +540,4 @@ void OouraFft::bitrv2_128(float* a) const {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

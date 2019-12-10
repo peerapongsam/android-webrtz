@@ -10,7 +10,7 @@
 
 #include "test/mock_audio_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockAudioEncoder::MockAudioEncoder() = default;
 MockAudioEncoder::~MockAudioEncoder() = default;
@@ -54,4 +54,4 @@ AudioEncoder::EncodedInfo MockAudioEncoder::CopyEncoding::operator()(
   return info_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

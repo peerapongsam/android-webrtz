@@ -21,7 +21,7 @@ namespace rtc {
 class TaskQueue;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 
 class AecDumpFactory {
  public:
@@ -42,6 +42,6 @@ class AecDumpFactory {
                                          rtc::TaskQueue* worker_queue);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_FACTORY_H_

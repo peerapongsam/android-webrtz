@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 QualityThreshold::QualityThreshold(int low_threshold,
                                    int high_threshold,
@@ -100,4 +100,4 @@ rtc::Optional<double> QualityThreshold::FractionHigh(
   return static_cast<double>(num_high_states_) / num_certain_states_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

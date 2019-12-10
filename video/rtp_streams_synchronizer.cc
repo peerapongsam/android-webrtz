@@ -17,7 +17,7 @@
 #include "rtc_base/timeutils.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 bool UpdateMeasurements(StreamSynchronization::Measurements* stream,
                         const Syncable::Info& info) {
@@ -151,4 +151,4 @@ bool RtpStreamsSynchronizer::GetStreamSyncOffsetInMs(
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

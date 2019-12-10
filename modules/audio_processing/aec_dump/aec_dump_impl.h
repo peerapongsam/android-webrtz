@@ -39,7 +39,7 @@ namespace rtc {
 class TaskQueue;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 
 // Task-queue based implementation of AecDump. It is thread safe by
 // relying on locks in TaskQueue.
@@ -76,6 +76,6 @@ class AecDumpImpl : public AecDump {
   rtc::TaskQueue* worker_queue_;
   CaptureStreamInfo capture_stream_info_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_AEC_DUMP_IMPL_H_

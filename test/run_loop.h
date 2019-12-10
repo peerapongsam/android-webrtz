@@ -10,13 +10,13 @@
 #ifndef TEST_RUN_LOOP_H_
 #define TEST_RUN_LOOP_H_
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Blocks until the user presses enter.
 void PressEnterToContinue();
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_RUN_LOOP_H_

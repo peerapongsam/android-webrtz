@@ -15,7 +15,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 struct RtpPacket {
@@ -45,5 +45,5 @@ class RtpFileReader {
   virtual bool NextPacket(RtpPacket* packet) = 0;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // TEST_RTP_FILE_READER_H_

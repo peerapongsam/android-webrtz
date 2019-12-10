@@ -24,7 +24,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 AlrDetector::AlrDetector() : AlrDetector(nullptr) {}
 
 AlrDetector::AlrDetector(RtcEventLog* event_log)
@@ -83,4 +83,4 @@ rtc::Optional<int64_t> AlrDetector::GetApplicationLimitedRegionStartTime()
     const {
   return alr_started_time_ms_;
 }
-}  // namespace webrtc
+}  // namespace webrtz

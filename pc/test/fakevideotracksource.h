@@ -15,7 +15,7 @@
 #include "api/videosourceinterface.h"
 #include "pc/videotracksource.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A minimal implementation of VideoTrackSource, which doesn't produce
 // any frames.
@@ -50,6 +50,6 @@ class FakeVideoTrackSource : public VideoTrackSource {
   const bool is_screencast_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_FAKEVIDEOTRACKSOURCE_H_

@@ -15,7 +15,7 @@
 #include "rtc_base/system/file_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 int ConvertByteArrayToFloat(const uint8_t bytes[4], float* out) {
   if (!bytes || !out) {
@@ -255,4 +255,4 @@ size_t WriteDoubleBufferToFile(FileWrapper* file,
   return doubles_written;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

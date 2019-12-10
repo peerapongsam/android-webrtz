@@ -25,7 +25,7 @@
 using testing::_;
 using testing::Invoke;
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(DecoderDatabase, CreateAndDestroy) {
   DecoderDatabase db(new rtc::RefCountedObject<MockAudioDecoderFactory>,
@@ -295,4 +295,4 @@ TEST(DecoderDatabase, IF_ISAC(ActiveDecoders)) {
   EXPECT_EQ(DecoderDatabase::kDecoderNotFound,
             db.SetActiveCngDecoder(17));
 }
-}  // namespace webrtc
+}  // namespace webrtz

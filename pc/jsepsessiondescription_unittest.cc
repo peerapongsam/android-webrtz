@@ -25,12 +25,12 @@
 
 using cricket::MediaProtocolType;
 using ::testing::Values;
-using webrtc::IceCandidateCollection;
-using webrtc::IceCandidateInterface;
-using webrtc::JsepIceCandidate;
-using webrtc::JsepSessionDescription;
-using webrtc::SdpType;
-using webrtc::SessionDescriptionInterface;
+using webrtz::IceCandidateCollection;
+using webrtz::IceCandidateInterface;
+using webrtz::JsepIceCandidate;
+using webrtz::JsepSessionDescription;
+using webrtz::SdpType;
+using webrtz::SessionDescriptionInterface;
 
 static const char kCandidateUfrag[] = "ufrag";
 static const char kCandidatePwd[] = "pwd";
@@ -100,7 +100,7 @@ class JsepSessionDescriptionTest : public testing::Test {
   std::unique_ptr<SessionDescriptionInterface> DeSerialize(
       const std::string& sdp) {
     auto jsep_desc = rtc::MakeUnique<JsepSessionDescription>(SdpType::kOffer);
-    EXPECT_TRUE(webrtc::SdpDeserialize(sdp, jsep_desc.get(), nullptr));
+    EXPECT_TRUE(webrtz::SdpDeserialize(sdp, jsep_desc.get(), nullptr));
     return std::move(jsep_desc);
   }
 
@@ -414,8 +414,8 @@ class EnumerateAllSdpTypesTest : public ::testing::Test,
 TEST_P(EnumerateAllSdpTypesTest, TestIdentity) {
   SdpType type = GetParam();
 
-  const char* str = webrtc::SdpTypeToString(type);
-  EXPECT_EQ(type, webrtc::SdpTypeFromString(str));
+  const char* str = webrtz::SdpTypeToString(type);
+  EXPECT_EQ(type, webrtz::SdpTypeFromString(str));
 }
 
 INSTANTIATE_TEST_CASE_P(JsepSessionDescriptionTest,

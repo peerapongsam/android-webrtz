@@ -18,7 +18,7 @@
 #include "media/base/codec.h"
 #include "modules/video_coding/include/video_codec_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct SdpVideoFormat;
 
@@ -49,6 +49,6 @@ class H264Decoder : public VideoDecoder {
   ~H264Decoder() override {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_H264_INCLUDE_H264_H_

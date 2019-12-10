@@ -13,7 +13,7 @@
 
 #include "modules/desktop_capture/window_finder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class XAtomCache;
 
@@ -30,6 +30,6 @@ class WindowFinderX11 final : public WindowFinder {
   XAtomCache* const cache_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WINDOW_FINDER_X11_H_

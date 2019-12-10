@@ -32,7 +32,7 @@
       [[RTCSessionDescription alloc] initWithType:RTCSdpTypeAnswer
                                               sdp:[self sdp]];
 
-  webrtc::SessionDescriptionInterface *nativeDescription =
+  webrtz::SessionDescriptionInterface *nativeDescription =
       description.nativeDescription;
 
   EXPECT_EQ(RTCSdpTypeAnswer,
@@ -44,17 +44,17 @@
 }
 
 - (void)testInitFromNativeSessionDescription {
-  webrtc::SessionDescriptionInterface *nativeDescription;
+  webrtz::SessionDescriptionInterface *nativeDescription;
 
-  nativeDescription = webrtc::CreateSessionDescription(
-      webrtc::SessionDescriptionInterface::kAnswer,
+  nativeDescription = webrtz::CreateSessionDescription(
+      webrtz::SessionDescriptionInterface::kAnswer,
       [self sdp].stdString,
       nullptr);
 
   RTCSessionDescription *description =
       [[RTCSessionDescription alloc] initWithNativeDescription:
       nativeDescription];
-  EXPECT_EQ(webrtc::SessionDescriptionInterface::kAnswer,
+  EXPECT_EQ(webrtz::SessionDescriptionInterface::kAnswer,
       [RTCSessionDescription stdStringForType:description.type]);
   EXPECT_TRUE([[self sdp] isEqualToString:description.sdp]);
 }

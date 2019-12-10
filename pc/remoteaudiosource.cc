@@ -21,7 +21,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This proxy is passed to the underlying media engine to receive audio data as
 // they come in. The data will then be passed back up to the RemoteAudioSource
@@ -161,4 +161,4 @@ void RemoteAudioSource::OnMessage(rtc::Message* msg) {
   delete msg->pdata;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

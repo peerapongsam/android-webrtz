@@ -14,10 +14,10 @@
 #import "RTCWrappedNativeVideoEncoder.h"
 
 @implementation RTCWrappedNativeVideoEncoder {
-  std::unique_ptr<webrtc::VideoEncoder> _wrappedEncoder;
+  std::unique_ptr<webrtz::VideoEncoder> _wrappedEncoder;
 }
 
-- (instancetype)initWithNativeEncoder:(std::unique_ptr<webrtc::VideoEncoder>)encoder {
+- (instancetype)initWithNativeEncoder:(std::unique_ptr<webrtz::VideoEncoder>)encoder {
   if (self = [super init]) {
     _wrappedEncoder = std::move(encoder);
   }
@@ -25,7 +25,7 @@
   return self;
 }
 
-- (std::unique_ptr<webrtc::VideoEncoder>)releaseWrappedEncoder {
+- (std::unique_ptr<webrtz::VideoEncoder>)releaseWrappedEncoder {
   return std::move(_wrappedEncoder);
 }
 

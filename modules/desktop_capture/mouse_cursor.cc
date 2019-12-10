@@ -14,7 +14,7 @@
 
 #include "modules/desktop_capture/desktop_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MouseCursor::MouseCursor() {}
 
@@ -35,4 +35,4 @@ MouseCursor* MouseCursor::CopyOf(const MouseCursor& cursor) {
              : new MouseCursor();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

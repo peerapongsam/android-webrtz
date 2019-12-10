@@ -15,7 +15,7 @@
 
 #include <queue>
 
-namespace webrtc {
+namespace webrtz {
 
 // Calculates the first and second moments for each value of a buffer taking
 // into account a given number of previous values.
@@ -46,7 +46,7 @@ class MovingMoments {
   float sum_of_squares_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_MOVING_MOMENTS_H_

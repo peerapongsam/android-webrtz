@@ -16,7 +16,7 @@
 #include "modules/remote_bitrate_estimator/include/bwe_defines.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class OveruseEstimator {
  public:
@@ -68,6 +68,6 @@ class OveruseEstimator {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(OveruseEstimator);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_OVERUSE_ESTIMATOR_H_

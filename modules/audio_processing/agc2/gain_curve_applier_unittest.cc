@@ -17,7 +17,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(GainCurveApplier, GainCurveApplierShouldConstructAndRun) {
   const int sample_rate_hz = 48000;
@@ -57,4 +57,4 @@ TEST(GainCurveApplier, OutputVolumeAboveThreshold) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

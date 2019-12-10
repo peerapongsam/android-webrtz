@@ -17,12 +17,12 @@
 
 using ::testing::Invoke;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 class MockInitialize : public AudioProcessingImpl {
  public:
-  explicit MockInitialize(const webrtc::Config& config)
+  explicit MockInitialize(const webrtz::Config& config)
       : AudioProcessingImpl(config) {}
 
   MOCK_METHOD0(InitializeLocked, int());
@@ -37,7 +37,7 @@ class MockInitialize : public AudioProcessingImpl {
 }  // namespace
 
 TEST(AudioProcessingImplTest, AudioParameterChangeTriggersInit) {
-  webrtc::Config config;
+  webrtz::Config config;
   MockInitialize mock(config);
   ON_CALL(mock, InitializeLocked())
       .WillByDefault(Invoke(&mock, &MockInitialize::RealInitializeLocked));
@@ -75,4 +75,4 @@ TEST(AudioProcessingImplTest, AudioParameterChangeTriggersInit) {
   EXPECT_NOERR(mock.ProcessReverseStream(&frame));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

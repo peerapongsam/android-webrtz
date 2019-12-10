@@ -19,12 +19,12 @@
 #include "modules/video_coding/include/video_codec_interface.h"
 #include "modules/video_coding/include/video_coding_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMEncodedFrame : protected EncodedImage {
  public:
   VCMEncodedFrame();
-  explicit VCMEncodedFrame(const webrtc::EncodedImage& rhs);
+  explicit VCMEncodedFrame(const webrtz::EncodedImage& rhs);
   VCMEncodedFrame(const VCMEncodedFrame& rhs);
 
   ~VCMEncodedFrame();
@@ -54,8 +54,8 @@ class VCMEncodedFrame : protected EncodedImage {
   /**
   *   Get the encoded image
   */
-  const webrtc::EncodedImage& EncodedImage() const {
-    return static_cast<const webrtc::EncodedImage&>(*this);
+  const webrtz::EncodedImage& EncodedImage() const {
+    return static_cast<const webrtz::EncodedImage&>(*this);
   }
   /**
   *   Get pointer to frame buffer
@@ -76,7 +76,7 @@ class VCMEncodedFrame : protected EncodedImage {
   /**
   *   Get frame type
   */
-  webrtc::FrameType FrameType() const { return _frameType; }
+  webrtz::FrameType FrameType() const { return _frameType; }
   /**
   *   Get frame rotation
   */
@@ -128,7 +128,7 @@ class VCMEncodedFrame : protected EncodedImage {
   uint8_t _payloadType;
   bool _missingFrame;
   CodecSpecificInfo _codecSpecificInfo;
-  webrtc::VideoCodecType _codec;
+  webrtz::VideoCodecType _codec;
 
   // Video rotation is only set along with the last packet for each frame
   // (same as marker bit). This |_rotation_set| is only for debugging purpose
@@ -136,6 +136,6 @@ class VCMEncodedFrame : protected EncodedImage {
   bool _rotation_set;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_ENCODED_FRAME_H_

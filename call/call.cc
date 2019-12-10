@@ -68,7 +68,7 @@
 #include "video/video_receive_stream.h"
 #include "video/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const int64_t kRetransmitWindowSizeMs = 500;
@@ -166,7 +166,7 @@ std::unique_ptr<rtclog::StreamConfig> CreateRtcLogStreamConfig(
 
 namespace internal {
 
-class Call : public webrtc::Call,
+class Call : public webrtz::Call,
              public PacketReceiver,
              public RecoveredPacketReceiver,
              public TargetTransferRateObserver,
@@ -176,31 +176,31 @@ class Call : public webrtc::Call,
        std::unique_ptr<RtpTransportControllerSendInterface> transport_send);
   virtual ~Call();
 
-  // Implements webrtc::Call.
+  // Implements webrtz::Call.
   PacketReceiver* Receiver() override;
 
-  webrtc::AudioSendStream* CreateAudioSendStream(
-      const webrtc::AudioSendStream::Config& config) override;
-  void DestroyAudioSendStream(webrtc::AudioSendStream* send_stream) override;
+  webrtz::AudioSendStream* CreateAudioSendStream(
+      const webrtz::AudioSendStream::Config& config) override;
+  void DestroyAudioSendStream(webrtz::AudioSendStream* send_stream) override;
 
-  webrtc::AudioReceiveStream* CreateAudioReceiveStream(
-      const webrtc::AudioReceiveStream::Config& config) override;
+  webrtz::AudioReceiveStream* CreateAudioReceiveStream(
+      const webrtz::AudioReceiveStream::Config& config) override;
   void DestroyAudioReceiveStream(
-      webrtc::AudioReceiveStream* receive_stream) override;
+      webrtz::AudioReceiveStream* receive_stream) override;
 
-  webrtc::VideoSendStream* CreateVideoSendStream(
-      webrtc::VideoSendStream::Config config,
+  webrtz::VideoSendStream* CreateVideoSendStream(
+      webrtz::VideoSendStream::Config config,
       VideoEncoderConfig encoder_config) override;
-  webrtc::VideoSendStream* CreateVideoSendStream(
-      webrtc::VideoSendStream::Config config,
+  webrtz::VideoSendStream* CreateVideoSendStream(
+      webrtz::VideoSendStream::Config config,
       VideoEncoderConfig encoder_config,
       std::unique_ptr<FecController> fec_controller) override;
-  void DestroyVideoSendStream(webrtc::VideoSendStream* send_stream) override;
+  void DestroyVideoSendStream(webrtz::VideoSendStream* send_stream) override;
 
-  webrtc::VideoReceiveStream* CreateVideoReceiveStream(
-      webrtc::VideoReceiveStream::Config configuration) override;
+  webrtz::VideoReceiveStream* CreateVideoReceiveStream(
+      webrtz::VideoReceiveStream::Config configuration) override;
   void DestroyVideoReceiveStream(
-      webrtc::VideoReceiveStream* receive_stream) override;
+      webrtz::VideoReceiveStream* receive_stream) override;
 
   FlexfecReceiveStream* CreateFlexfecReceiveStream(
       const FlexfecReceiveStream::Config& config) override;
@@ -295,10 +295,10 @@ class Call : public webrtc::Call,
   // single mapping from ssrc to a more abstract receive stream, with
   // accessor methods for all configuration we need at this level.
   struct ReceiveRtpConfig {
-    explicit ReceiveRtpConfig(const webrtc::AudioReceiveStream::Config& config)
+    explicit ReceiveRtpConfig(const webrtz::AudioReceiveStream::Config& config)
         : extensions(config.rtp.extensions),
           use_send_side_bwe(UseSendSideBwe(config)) {}
-    explicit ReceiveRtpConfig(const webrtc::VideoReceiveStream::Config& config)
+    explicit ReceiveRtpConfig(const webrtz::VideoReceiveStream::Config& config)
         : extensions(config.rtp.extensions),
           use_send_side_bwe(UseSendSideBwe(config)) {}
     explicit ReceiveRtpConfig(const FlexfecReceiveStream::Config& config)
@@ -335,7 +335,7 @@ class Call : public webrtc::Call,
   RtpPayloadStateMap suspended_video_payload_states_
       RTC_GUARDED_BY(configuration_sequence_checker_);
 
-  webrtc::RtcEventLog* event_log_;
+  webrtz::RtcEventLog* event_log_;
 
   // The following members are only accessed (exclusively) from one thread and
   // from the destructor, and therefore doesn't need any explicit
@@ -576,8 +576,8 @@ PacketReceiver* Call::Receiver() {
   return this;
 }
 
-webrtc::AudioSendStream* Call::CreateAudioSendStream(
-    const webrtc::AudioSendStream::Config& config) {
+webrtz::AudioSendStream* Call::CreateAudioSendStream(
+    const webrtz::AudioSendStream::Config& config) {
   TRACE_EVENT0("webrtc", "Call::CreateAudioSendStream");
   RTC_DCHECK_CALLED_SEQUENTIALLY(&configuration_sequence_checker_);
   event_log_->Log(rtc::MakeUnique<RtcEventAudioSendStreamConfig>(
@@ -614,7 +614,7 @@ webrtc::AudioSendStream* Call::CreateAudioSendStream(
   return send_stream;
 }
 
-void Call::DestroyAudioSendStream(webrtc::AudioSendStream* send_stream) {
+void Call::DestroyAudioSendStream(webrtz::AudioSendStream* send_stream) {
   TRACE_EVENT0("webrtc", "Call::DestroyAudioSendStream");
   RTC_DCHECK_CALLED_SEQUENTIALLY(&configuration_sequence_checker_);
   RTC_DCHECK(send_stream != nullptr);
@@ -622,8 +622,8 @@ void Call::DestroyAudioSendStream(webrtc::AudioSendStream* send_stream) {
   send_stream->Stop();
 
   const uint32_t ssrc = send_stream->GetConfig().rtp.ssrc;
-  webrtc::internal::AudioSendStream* audio_send_stream =
-      static_cast<webrtc::internal::AudioSendStream*>(send_stream);
+  webrtz::internal::AudioSendStream* audio_send_stream =
+      static_cast<webrtz::internal::AudioSendStream*>(send_stream);
   suspended_audio_send_ssrcs_[ssrc] = audio_send_stream->GetRtpState();
   {
     WriteLockScoped write_lock(*send_crit_);
@@ -642,8 +642,8 @@ void Call::DestroyAudioSendStream(webrtc::AudioSendStream* send_stream) {
   delete send_stream;
 }
 
-webrtc::AudioReceiveStream* Call::CreateAudioReceiveStream(
-    const webrtc::AudioReceiveStream::Config& config) {
+webrtz::AudioReceiveStream* Call::CreateAudioReceiveStream(
+    const webrtz::AudioReceiveStream::Config& config) {
   TRACE_EVENT0("webrtc", "Call::CreateAudioReceiveStream");
   RTC_DCHECK_CALLED_SEQUENTIALLY(&configuration_sequence_checker_);
   event_log_->Log(rtc::MakeUnique<RtcEventAudioReceiveStreamConfig>(
@@ -672,12 +672,12 @@ webrtc::AudioReceiveStream* Call::CreateAudioReceiveStream(
 }
 
 void Call::DestroyAudioReceiveStream(
-    webrtc::AudioReceiveStream* receive_stream) {
+    webrtz::AudioReceiveStream* receive_stream) {
   TRACE_EVENT0("webrtc", "Call::DestroyAudioReceiveStream");
   RTC_DCHECK_CALLED_SEQUENTIALLY(&configuration_sequence_checker_);
   RTC_DCHECK(receive_stream != nullptr);
-  webrtc::internal::AudioReceiveStream* audio_receive_stream =
-      static_cast<webrtc::internal::AudioReceiveStream*>(receive_stream);
+  webrtz::internal::AudioReceiveStream* audio_receive_stream =
+      static_cast<webrtz::internal::AudioReceiveStream*>(receive_stream);
   {
     WriteLockScoped write_lock(*receive_crit_);
     const AudioReceiveStream::Config& config = audio_receive_stream->config();
@@ -699,8 +699,8 @@ void Call::DestroyAudioReceiveStream(
 }
 
 // This method can be used for Call tests with external fec controller factory.
-webrtc::VideoSendStream* Call::CreateVideoSendStream(
-    webrtc::VideoSendStream::Config config,
+webrtz::VideoSendStream* Call::CreateVideoSendStream(
+    webrtz::VideoSendStream::Config config,
     VideoEncoderConfig encoder_config,
     std::unique_ptr<FecController> fec_controller) {
   TRACE_EVENT0("webrtc", "Call::CreateVideoSendStream");
@@ -740,8 +740,8 @@ webrtc::VideoSendStream* Call::CreateVideoSendStream(
   return send_stream;
 }
 
-webrtc::VideoSendStream* Call::CreateVideoSendStream(
-    webrtc::VideoSendStream::Config config,
+webrtz::VideoSendStream* Call::CreateVideoSendStream(
+    webrtz::VideoSendStream::Config config,
     VideoEncoderConfig encoder_config) {
   if (config_.fec_controller_factory) {
     RTC_LOG(LS_INFO) << "External FEC Controller will be used.";
@@ -754,7 +754,7 @@ webrtc::VideoSendStream* Call::CreateVideoSendStream(
                                std::move(fec_controller));
 }
 
-void Call::DestroyVideoSendStream(webrtc::VideoSendStream* send_stream) {
+void Call::DestroyVideoSendStream(webrtz::VideoSendStream* send_stream) {
   TRACE_EVENT0("webrtc", "Call::DestroyVideoSendStream");
   RTC_DCHECK(send_stream != nullptr);
   RTC_DCHECK_CALLED_SEQUENTIALLY(&configuration_sequence_checker_);
@@ -792,8 +792,8 @@ void Call::DestroyVideoSendStream(webrtc::VideoSendStream* send_stream) {
   delete send_stream_impl;
 }
 
-webrtc::VideoReceiveStream* Call::CreateVideoReceiveStream(
-    webrtc::VideoReceiveStream::Config configuration) {
+webrtz::VideoReceiveStream* Call::CreateVideoReceiveStream(
+    webrtz::VideoReceiveStream::Config configuration) {
   TRACE_EVENT0("webrtc", "Call::CreateVideoReceiveStream");
   RTC_DCHECK_CALLED_SEQUENTIALLY(&configuration_sequence_checker_);
 
@@ -802,7 +802,7 @@ webrtc::VideoReceiveStream* Call::CreateVideoReceiveStream(
       transport_send_->packet_router(), std::move(configuration),
       module_process_thread_.get(), call_stats_.get());
 
-  const webrtc::VideoReceiveStream::Config& config = receive_stream->config();
+  const webrtz::VideoReceiveStream::Config& config = receive_stream->config();
   {
     WriteLockScoped write_lock(*receive_crit_);
     if (config.rtp.rtx_ssrc) {
@@ -826,7 +826,7 @@ webrtc::VideoReceiveStream* Call::CreateVideoReceiveStream(
 }
 
 void Call::DestroyVideoReceiveStream(
-    webrtc::VideoReceiveStream* receive_stream) {
+    webrtz::VideoReceiveStream* receive_stream) {
   TRACE_EVENT0("webrtc", "Call::DestroyVideoReceiveStream");
   RTC_DCHECK_CALLED_SEQUENTIALLY(&configuration_sequence_checker_);
   RTC_DCHECK(receive_stream != nullptr);
@@ -1369,4 +1369,4 @@ void Call::NotifyBweOfReceivedPacket(const RtpPacketReceived& packet,
 
 }  // namespace internal
 
-}  // namespace webrtc
+}  // namespace webrtz

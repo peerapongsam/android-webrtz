@@ -18,7 +18,7 @@
 #include "rtc_base/synchronization/rw_lock_posix.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 RWLockWrapper* RWLockWrapper::CreateRWLock() {
 #ifdef _WIN32
@@ -28,4 +28,4 @@ RWLockWrapper* RWLockWrapper::CreateRWLock() {
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

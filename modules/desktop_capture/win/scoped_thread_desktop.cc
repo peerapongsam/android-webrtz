@@ -12,7 +12,7 @@
 
 #include "modules/desktop_capture/win/desktop.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ScopedThreadDesktop::ScopedThreadDesktop()
     : initial_(Desktop::GetThreadDesktop()) {
@@ -52,4 +52,4 @@ bool ScopedThreadDesktop::SetThreadDesktop(Desktop* desktop) {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

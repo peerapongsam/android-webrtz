@@ -23,7 +23,7 @@
 
 using rtc::RefCountedObject;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // The id of StatsReport of type kStatsReportTypeBwe.
@@ -836,4 +836,4 @@ StatsReport* StatsCollection::Find(const StatsReport::Id& id) {
   return it == list_.end() ? nullptr : *it;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

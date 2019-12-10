@@ -24,7 +24,7 @@
 
 + (id<RTCVideoEncoder>)vp9Encoder {
   return [[RTCWrappedNativeVideoEncoder alloc]
-      initWithNativeEncoder:std::unique_ptr<webrtc::VideoEncoder>(webrtc::VP9Encoder::Create())];
+      initWithNativeEncoder:std::unique_ptr<webrtz::VideoEncoder>(webrtz::VP9Encoder::Create())];
 }
 
 @end
@@ -35,7 +35,7 @@
 
 + (id<RTCVideoDecoder>)vp9Decoder {
   return [[RTCWrappedNativeVideoDecoder alloc]
-      initWithNativeDecoder:std::unique_ptr<webrtc::VideoDecoder>(webrtc::VP9Decoder::Create())];
+      initWithNativeDecoder:std::unique_ptr<webrtz::VideoDecoder>(webrtz::VP9Decoder::Create())];
 }
 
 @end

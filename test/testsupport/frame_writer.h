@@ -18,7 +18,7 @@
 #include "api/video/video_frame.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Handles writing of video files.
@@ -100,6 +100,6 @@ class JpegFrameWriter {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_TESTSUPPORT_FRAME_WRITER_H_

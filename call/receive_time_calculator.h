@@ -15,7 +15,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The receive time calculator serves the purpose of combining packet time
 // stamps with a safely incremental clock. This assumes that the packet time
@@ -43,5 +43,5 @@ class ReceiveTimeCalculator {
   int64_t last_packet_time_us_ = 0;
   int64_t last_safe_time_us_ = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // CALL_RECEIVE_TIME_CALCULATOR_H_

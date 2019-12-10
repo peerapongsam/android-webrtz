@@ -49,11 +49,11 @@
 #include "video/transport_adapter.h"
 #include "video/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 class VideoSendStreamPeer {
  public:
-  explicit VideoSendStreamPeer(webrtc::VideoSendStream* base_class_stream)
+  explicit VideoSendStreamPeer(webrtz::VideoSendStream* base_class_stream)
       : internal_stream_(
             static_cast<internal::VideoSendStream*>(base_class_stream)) {}
   rtc::Optional<float> GetPacingFactorOverride() const {
@@ -1678,7 +1678,7 @@ TEST_F(VideoSendStreamTest, ChangingTransportOverhead) {
     void PerformTest() override {
       task_queue_->SendTask([this]() {
         transport_overhead_ = 100;
-        call_->OnTransportOverheadChanged(webrtc::MediaType::VIDEO,
+        call_->OnTransportOverheadChanged(webrtz::MediaType::VIDEO,
                                           transport_overhead_);
       });
 
@@ -1691,7 +1691,7 @@ TEST_F(VideoSendStreamTest, ChangingTransportOverhead) {
 
       task_queue_->SendTask([this]() {
         transport_overhead_ = 500;
-        call_->OnTransportOverheadChanged(webrtc::MediaType::VIDEO,
+        call_->OnTransportOverheadChanged(webrtz::MediaType::VIDEO,
                                           transport_overhead_);
       });
 
@@ -2943,9 +2943,9 @@ TEST_F(VideoSendStreamTest, ReconfigureBitratesSetsEncoderBitratesCorrectly) {
     uint32_t target_bitrate_ RTC_GUARDED_BY(&crit_);
 
     int num_initializations_;
-    webrtc::Call* call_;
-    webrtc::VideoSendStream* send_stream_;
-    webrtc::VideoEncoderConfig encoder_config_;
+    webrtz::Call* call_;
+    webrtz::VideoSendStream* send_stream_;
+    webrtz::VideoEncoderConfig encoder_config_;
   } test(&task_queue_);
 
   RunBaseTest(&test);
@@ -3348,7 +3348,7 @@ class Vp9HeaderObserver : public test::SendTest {
 
   std::unique_ptr<VP9Encoder> vp9_encoder_;
   VideoCodecVP9 vp9_settings_;
-  webrtc::VideoEncoderConfig encoder_config_;
+  webrtz::VideoEncoderConfig encoder_config_;
   RTPHeader last_header_;
   RTPVideoHeaderVP9 last_vp9_;
   size_t packets_sent_;
@@ -3640,7 +3640,7 @@ TEST_F(VideoSendStreamTest, RemoveOverheadFromBandwidth) {
       task_queue_->SendTask([this, &bitrate_config]() {
         call_->GetTransportControllerSend()->SetSdpBitrateParameters(
             bitrate_config);
-        call_->OnTransportOverheadChanged(webrtc::MediaType::VIDEO, 40);
+        call_->OnTransportOverheadChanged(webrtz::MediaType::VIDEO, 40);
       });
 
       // At a bitrate of 60kbps with a packet size of 1200B video and an
@@ -3848,7 +3848,7 @@ class ContentSwitchTest : public test::SendTest {
         internal_send_peer.GetPacingFactorOverride().value_or(0.0f);
     float expected_pacing_factor = PacedSender::kDefaultPaceMultiplier;
     if (send_stream_->GetStats().content_type ==
-        webrtc::VideoContentType::SCREENSHARE) {
+        webrtz::VideoContentType::SCREENSHARE) {
       expected_pacing_factor = 1.0f;  // Currently used pacing factor in ALR.
     }
 
@@ -3940,4 +3940,4 @@ TEST_F(VideoSendStreamTest, SwitchesToScreenshareAndBack) {
   RunBaseTest(&test);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

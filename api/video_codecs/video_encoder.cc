@@ -10,7 +10,7 @@
 
 #include "api/video_codecs/video_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(mflodman): Add default complexity for VP9 and VP9.
 VideoCodecVP8 VideoEncoder::GetDefaultVp8Settings() {
@@ -102,4 +102,4 @@ bool VideoEncoder::SupportsNativeHandle() const {
 const char* VideoEncoder::ImplementationName() const {
   return "unknown";
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -20,7 +20,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/system/fallthrough.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -283,4 +283,4 @@ float LossAccount::LossRatio() {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

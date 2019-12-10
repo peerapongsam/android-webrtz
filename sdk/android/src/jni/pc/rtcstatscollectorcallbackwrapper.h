@@ -16,7 +16,7 @@
 #include "api/peerconnectioninterface.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Adapter for a Java RTCStatsCollectorCallback presenting a C++
@@ -35,6 +35,6 @@ class RTCStatsCollectorCallbackWrapper : public RTCStatsCollectorCallback {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_RTCSTATSCOLLECTORCALLBACKWRAPPER_H_

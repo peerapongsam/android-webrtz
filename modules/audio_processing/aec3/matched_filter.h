@@ -20,7 +20,7 @@
 #include "modules/audio_processing/aec3/downsampled_render_buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 
 #if defined(WEBRTC_HAS_NEON)
@@ -124,6 +124,6 @@ class MatchedFilter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(MatchedFilter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_MATCHED_FILTER_H_

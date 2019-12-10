@@ -30,7 +30,7 @@
 #include "rtc_base/trace_event.h"
 #include "rtc_base/virtualsocketserver.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -893,4 +893,4 @@ TEST_F(RTCStatsIntegrationTest, GetStatsReferencedIds) {
 
 }  // namespace
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -57,9 +57,9 @@ typedef void* AtomicWord;
 
 namespace android {
 
-using webrtc::JavaRef;
-using webrtc::ScopedJavaLocalRef;
-using webrtc::JavaParamRef;
+using webrtz::JavaRef;
+using webrtz::ScopedJavaLocalRef;
+using webrtz::JavaParamRef;
 
 // This function will initialize |atomic_class_id| to contain a global ref to
 // the given class, and will return that ref on subsequent calls. The caller is

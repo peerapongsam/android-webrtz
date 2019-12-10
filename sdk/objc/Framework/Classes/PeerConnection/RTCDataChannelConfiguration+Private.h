@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RTCDataChannelConfiguration ()
 
-@property(nonatomic, readonly) webrtc::DataChannelInit nativeDataChannelInit;
+@property(nonatomic, readonly) webrtz::DataChannelInit nativeDataChannelInit;
 
 @end
 

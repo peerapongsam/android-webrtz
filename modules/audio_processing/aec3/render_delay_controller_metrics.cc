@@ -15,7 +15,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -133,4 +133,4 @@ void RenderDelayControllerMetrics::ResetMetrics() {
   reliable_delay_estimate_counter_ = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

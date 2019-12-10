@@ -15,7 +15,7 @@
 #include "modules/audio_coding/codecs/opus/opus_interface.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoderOpusImpl final : public AudioDecoder {
  public:
@@ -50,6 +50,6 @@ class AudioDecoderOpusImpl final : public AudioDecoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioDecoderOpusImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_OPUS_AUDIO_DECODER_OPUS_H_

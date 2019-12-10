@@ -35,7 +35,7 @@ complex<float> I0(complex<float> x) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 void WindowGenerator::Hanning(int length, float* window) {
   RTC_CHECK_GT(length, 1);
@@ -68,5 +68,5 @@ void WindowGenerator::KaiserBesselDerived(float alpha, size_t length,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

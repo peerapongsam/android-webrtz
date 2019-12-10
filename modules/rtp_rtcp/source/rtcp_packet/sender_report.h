@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/report_block.h"
 #include "system_wrappers/include/ntp_time.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 
@@ -80,5 +80,5 @@ class SenderReport : public RtcpPacket {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_SENDER_REPORT_H_

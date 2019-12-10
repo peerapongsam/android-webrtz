@@ -15,7 +15,7 @@
 #include "modules/video_coding/utility/frame_dropper.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace media_optimization {
 namespace {
 const int64_t kFrameHistoryWinMs = 2000;
@@ -150,4 +150,4 @@ void MediaOptimization::ProcessIncomingFrameRate(int64_t now) {
   }
 }
 }  // namespace media_optimization
-}  // namespace webrtc
+}  // namespace webrtz

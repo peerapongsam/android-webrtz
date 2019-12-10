@@ -15,7 +15,7 @@
 #include "modules/audio_processing/include/audio_frame_view.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 class ApmDataDumper;
 
 class NoiseLevelEstimator {
@@ -38,6 +38,6 @@ class NoiseLevelEstimator {
   RTC_DISALLOW_COPY_AND_ASSIGN(NoiseLevelEstimator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_NOISE_LEVEL_ESTIMATOR_H_

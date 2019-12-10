@@ -51,7 +51,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 NetEqImpl::Dependencies::Dependencies(
     const NetEq::Config& config,
@@ -2138,4 +2138,4 @@ void NetEqImpl::CreateDecisionLogic() {
       *packet_buffer_.get(), delay_manager_.get(), buffer_level_filter_.get(),
       tick_timer_.get()));
 }
-}  // namespace webrtc
+}  // namespace webrtz

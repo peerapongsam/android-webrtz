@@ -12,7 +12,7 @@
 
 #include "modules/remote_bitrate_estimator/include/bwe_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventBweUpdateDelayBased::RtcEventBweUpdateDelayBased(
     int32_t bitrate_bps,
@@ -29,4 +29,4 @@ bool RtcEventBweUpdateDelayBased::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

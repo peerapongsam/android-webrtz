@@ -11,7 +11,7 @@
 #ifndef MODULES_INCLUDE_MODULE_FEC_TYPES_H_
 #define MODULES_INCLUDE_MODULE_FEC_TYPES_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // Types for the FEC packet masks. The type |kFecMaskRandom| is based on a
 // random loss model. The type |kFecMaskBursty| is based on a bursty/consecutive
@@ -29,6 +29,6 @@ struct FecProtectionParams {
   FecMaskType fec_mask_type;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_INCLUDE_MODULE_FEC_TYPES_H_

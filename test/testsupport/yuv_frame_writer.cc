@@ -11,7 +11,7 @@
 #include "rtc_base/checks.h"
 #include "test/testsupport/frame_writer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 YuvFrameWriterImpl::YuvFrameWriterImpl(std::string output_filename,
@@ -74,4 +74,4 @@ size_t YuvFrameWriterImpl::FrameLength() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

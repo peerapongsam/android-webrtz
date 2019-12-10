@@ -18,7 +18,7 @@
 #include "api/cryptoparams.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A structured representation of a media description within an SDP session
 // description.
@@ -48,6 +48,6 @@ class MediaDescription {
   std::vector<cricket::CryptoParams> sdes_params_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_MEDIADESCRIPTION_H_

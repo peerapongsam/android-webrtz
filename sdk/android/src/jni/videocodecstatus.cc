@@ -12,7 +12,7 @@
 
 #include "sdk/android/generated_video_jni/jni/VideoCodecStatus_jni.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 int32_t JavaToNativeVideoCodecStatus(
@@ -22,4 +22,4 @@ int32_t JavaToNativeVideoCodecStatus(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

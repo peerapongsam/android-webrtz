@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 std::vector<rtcp::TmmbItem> TMMBRHelp::FindBoundingSet(
     std::vector<rtcp::TmmbItem> candidates) {
   // Filter out candidates with 0 bitrate.
@@ -179,4 +179,4 @@ uint64_t TMMBRHelp::CalcMinBitrateBps(
       min_bitrate_bps = item.bitrate_bps();
   return min_bitrate_bps;
 }
-}  // namespace webrtc
+}  // namespace webrtz

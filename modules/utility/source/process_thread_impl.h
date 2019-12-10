@@ -23,7 +23,7 @@
 #include "system_wrappers/include/event_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class ProcessThreadImpl : public ProcessThread {
  public:
@@ -83,6 +83,6 @@ class ProcessThreadImpl : public ProcessThread {
   const char* thread_name_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif // MODULES_UTILITY_SOURCE_PROCESS_THREAD_IMPL_H_

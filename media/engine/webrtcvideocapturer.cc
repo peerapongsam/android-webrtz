@@ -31,24 +31,24 @@ namespace cricket {
 namespace {
 struct kVideoFourCCEntry {
   uint32_t fourcc;
-  webrtc::VideoType webrtc_type;
+  webrtz::VideoType webrtc_type;
 };
 
 // This indicates our format preferences and defines a mapping between
-// webrtc::RawVideoType (from video_capture_defines.h) to our FOURCCs.
+// webrtz::RawVideoType (from video_capture_defines.h) to our FOURCCs.
 kVideoFourCCEntry kSupportedFourCCs[] = {
-    {FOURCC_I420, webrtc::VideoType::kI420},   // 12 bpp, no conversion.
-    {FOURCC_YV12, webrtc::VideoType::kYV12},   // 12 bpp, no conversion.
-    {FOURCC_YUY2, webrtc::VideoType::kYUY2},   // 16 bpp, fast conversion.
-    {FOURCC_UYVY, webrtc::VideoType::kUYVY},   // 16 bpp, fast conversion.
-    {FOURCC_NV12, webrtc::VideoType::kNV12},   // 12 bpp, fast conversion.
-    {FOURCC_NV21, webrtc::VideoType::kNV21},   // 12 bpp, fast conversion.
-    {FOURCC_MJPG, webrtc::VideoType::kMJPEG},  // compressed, slow conversion.
-    {FOURCC_ARGB, webrtc::VideoType::kARGB},   // 32 bpp, slow conversion.
-    {FOURCC_24BG, webrtc::VideoType::kRGB24},  // 24 bpp, slow conversion.
+    {FOURCC_I420, webrtz::VideoType::kI420},   // 12 bpp, no conversion.
+    {FOURCC_YV12, webrtz::VideoType::kYV12},   // 12 bpp, no conversion.
+    {FOURCC_YUY2, webrtz::VideoType::kYUY2},   // 16 bpp, fast conversion.
+    {FOURCC_UYVY, webrtz::VideoType::kUYVY},   // 16 bpp, fast conversion.
+    {FOURCC_NV12, webrtz::VideoType::kNV12},   // 12 bpp, fast conversion.
+    {FOURCC_NV21, webrtz::VideoType::kNV21},   // 12 bpp, fast conversion.
+    {FOURCC_MJPG, webrtz::VideoType::kMJPEG},  // compressed, slow conversion.
+    {FOURCC_ARGB, webrtz::VideoType::kARGB},   // 32 bpp, slow conversion.
+    {FOURCC_24BG, webrtz::VideoType::kRGB24},  // 24 bpp, slow conversion.
 };
 
-bool CapabilityToFormat(const webrtc::VideoCaptureCapability& cap,
+bool CapabilityToFormat(const webrtz::VideoCaptureCapability& cap,
                         VideoFormat* format) {
   uint32_t fourcc = 0;
   for (size_t i = 0; i < arraysize(kSupportedFourCCs); ++i) {
@@ -69,15 +69,15 @@ bool CapabilityToFormat(const webrtc::VideoCaptureCapability& cap,
 }
 
 bool FormatToCapability(const VideoFormat& format,
-                        webrtc::VideoCaptureCapability* cap) {
-  webrtc::VideoType webrtc_type = webrtc::VideoType::kUnknown;
+                        webrtz::VideoCaptureCapability* cap) {
+  webrtz::VideoType webrtc_type = webrtz::VideoType::kUnknown;
   for (size_t i = 0; i < arraysize(kSupportedFourCCs); ++i) {
     if (kSupportedFourCCs[i].fourcc == format.fourcc) {
       webrtc_type = kSupportedFourCCs[i].webrtc_type;
       break;
     }
   }
-  if (webrtc_type == webrtc::VideoType::kUnknown) {
+  if (webrtc_type == webrtz::VideoType::kUnknown) {
     return false;
   }
 
@@ -93,14 +93,14 @@ bool FormatToCapability(const VideoFormat& format,
 
 class WebRtcVcmFactory : public WebRtcVcmFactoryInterface {
  public:
-  virtual rtc::scoped_refptr<webrtc::VideoCaptureModule> Create(
+  virtual rtc::scoped_refptr<webrtz::VideoCaptureModule> Create(
       const char* device) {
-    return webrtc::VideoCaptureFactory::Create(device);
+    return webrtz::VideoCaptureFactory::Create(device);
   }
-  virtual webrtc::VideoCaptureModule::DeviceInfo* CreateDeviceInfo() {
-    return webrtc::VideoCaptureFactory::CreateDeviceInfo();
+  virtual webrtz::VideoCaptureModule::DeviceInfo* CreateDeviceInfo() {
+    return webrtz::VideoCaptureFactory::CreateDeviceInfo();
   }
-  virtual void DestroyDeviceInfo(webrtc::VideoCaptureModule::DeviceInfo* info) {
+  virtual void DestroyDeviceInfo(webrtz::VideoCaptureModule::DeviceInfo* info) {
     delete info;
   }
 };
@@ -130,7 +130,7 @@ bool WebRtcVideoCapturer::Init(const Device& device) {
     return false;
   }
 
-  webrtc::VideoCaptureModule::DeviceInfo* info = factory_->CreateDeviceInfo();
+  webrtz::VideoCaptureModule::DeviceInfo* info = factory_->CreateDeviceInfo();
   if (!info) {
     return false;
   }
@@ -162,7 +162,7 @@ bool WebRtcVideoCapturer::Init(const Device& device) {
   std::vector<VideoFormat> supported;
   int32_t num_caps = info->NumberOfCapabilities(vcm_id);
   for (int32_t i = 0; i < num_caps; ++i) {
-    webrtc::VideoCaptureCapability cap;
+    webrtz::VideoCaptureCapability cap;
     if (info->GetCapability(vcm_id, i, cap) != -1) {
       VideoFormat format;
       if (CapabilityToFormat(cap, &format)) {
@@ -194,7 +194,7 @@ bool WebRtcVideoCapturer::Init(const Device& device) {
 }
 
 bool WebRtcVideoCapturer::Init(
-    const rtc::scoped_refptr<webrtc::VideoCaptureModule>& module) {
+    const rtc::scoped_refptr<webrtz::VideoCaptureModule>& module) {
   RTC_DCHECK(!start_thread_);
   if (module_) {
     RTC_LOG(LS_ERROR) << "The capturer is already initialized";
@@ -234,7 +234,7 @@ void WebRtcVideoCapturer::OnSinkWantsChanged(const rtc::VideoSinkWants& wants) {
   // calls, can't take lock.
   RTC_DCHECK(module_);
 
-  if (webrtc::field_trial::FindFullName("WebRTC-CVO").find("Disabled") == 0)
+  if (webrtz::field_trial::FindFullName("WebRTC-CVO").find("Disabled") == 0)
     return;
 
   VideoCapturer::OnSinkWantsChanged(wants);
@@ -261,7 +261,7 @@ CaptureState WebRtcVideoCapturer::Start(const VideoFormat& capture_format) {
 
   SetCaptureFormat(&capture_format);
 
-  webrtc::VideoCaptureCapability cap;
+  webrtz::VideoCaptureCapability cap;
   if (!FormatToCapability(capture_format, &cap)) {
     RTC_LOG(LS_ERROR) << "Invalid capture format specified";
     return CS_FAILED;
@@ -327,7 +327,7 @@ bool WebRtcVideoCapturer::GetPreferredFourccs(std::vector<uint32_t>* fourccs) {
 }
 
 void WebRtcVideoCapturer::OnFrame(
-    const webrtc::VideoFrame& sample) {
+    const webrtz::VideoFrame& sample) {
   // This can only happen between Start() and Stop().
   RTC_DCHECK(start_thread_);
 

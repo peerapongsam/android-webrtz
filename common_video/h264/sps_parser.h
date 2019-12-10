@@ -17,7 +17,7 @@ namespace rtc {
 class BitBuffer;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // A class for parsing out sequence parameter set (SPS) data from an H264 NALU.
 class SpsParser {
@@ -49,5 +49,5 @@ class SpsParser {
   static rtc::Optional<SpsState> ParseSpsUpToVui(rtc::BitBuffer* buffer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // COMMON_VIDEO_H264_SPS_PARSER_H_

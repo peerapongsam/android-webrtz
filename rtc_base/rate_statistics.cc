@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RateStatistics::RateStatistics(int64_t window_size_ms, float scale)
     : buckets_(new Bucket[window_size_ms]()),
@@ -117,4 +117,4 @@ bool RateStatistics::IsInitialized() const {
   return oldest_time_ != -max_window_size_ms_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

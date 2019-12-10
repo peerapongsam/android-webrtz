@@ -15,7 +15,7 @@
 
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 class DtmfQueue {
  public:
   struct Event {
@@ -36,6 +36,6 @@ class DtmfQueue {
   rtc::CriticalSection dtmf_critsect_;
   std::list<Event> queue_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_DTMF_QUEUE_H_

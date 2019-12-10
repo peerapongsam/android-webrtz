@@ -12,7 +12,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kCodecBitrateBps = 100000;
 
@@ -104,4 +104,4 @@ TEST_F(ProtectionBitrateCalculatorTest, NoProtection) {
   EXPECT_EQ(kMaxBitrateBps, target_bitrate);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

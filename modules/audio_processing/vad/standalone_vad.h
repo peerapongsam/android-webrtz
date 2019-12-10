@@ -15,7 +15,7 @@
 #include "common_audio/vad/include/webrtc_vad.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 
@@ -64,6 +64,6 @@ class StandaloneVad {
   int mode_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC_STANDALONE_VAD_H_

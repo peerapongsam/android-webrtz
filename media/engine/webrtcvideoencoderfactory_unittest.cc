@@ -20,7 +20,7 @@ class WebRtcVideoEncoderFactoryForTest
     codecs_.push_back(cricket::VideoCodec("VP8"));
   }
 
-  webrtc::VideoEncoder* CreateVideoEncoder(
+  webrtz::VideoEncoder* CreateVideoEncoder(
       const cricket::VideoCodec& codec) override {
     return nullptr;
   }
@@ -29,7 +29,7 @@ class WebRtcVideoEncoderFactoryForTest
     return codecs_;
   }
 
-  void DestroyVideoEncoder(webrtc::VideoEncoder* encoder) override {}
+  void DestroyVideoEncoder(webrtz::VideoEncoder* encoder) override {}
 
   std::vector<cricket::VideoCodec> codecs_;
 };

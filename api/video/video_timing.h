@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum TimingFrameFlags : uint8_t {
   kNotTriggered = 0,           // Timing info valid, but not to be transmitted.
@@ -119,6 +119,6 @@ struct TimingFrameInfo {
   uint8_t flags;  // Flags indicating validity and/or why tracing was triggered.
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_VIDEO_TIMING_H_

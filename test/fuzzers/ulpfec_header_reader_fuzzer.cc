@@ -15,7 +15,7 @@
 #include "modules/rtp_rtcp/source/ulpfec_header_reader_writer.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using Packet = ForwardErrorCorrection::Packet;
 using ReceivedFecPacket = ForwardErrorCorrection::ReceivedFecPacket;
@@ -32,4 +32,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   ulpfec_reader.ReadFecHeader(&packet);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

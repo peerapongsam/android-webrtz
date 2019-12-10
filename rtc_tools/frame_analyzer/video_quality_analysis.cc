@@ -25,7 +25,7 @@
 #define Y4M_FRAME_DELIMITER "FRAME"
 #define Y4M_FRAME_HEADER_SIZE 6
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 ResultsContainer::ResultsContainer() {}
@@ -502,4 +502,4 @@ void PrintAnalysisResults(FILE* output, const std::string& label,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

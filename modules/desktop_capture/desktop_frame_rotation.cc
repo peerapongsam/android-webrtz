@@ -15,7 +15,7 @@
 #include "third_party/libyuv/include/libyuv/rotate_argb.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -116,4 +116,4 @@ void RotateDesktopFrame(const DesktopFrame& source,
   RTC_DCHECK_EQ(result, 0);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

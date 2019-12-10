@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(QualityThresholdTest, BackAndForth) {
   const int kLowThreshold = 0;
@@ -130,4 +130,4 @@ TEST(QualityThresholdTest, FractionHigh) {
       0.001);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

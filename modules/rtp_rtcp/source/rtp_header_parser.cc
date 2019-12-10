@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/source/rtp_utility.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpHeaderParserImpl : public RtpHeaderParser {
  public:
@@ -74,4 +74,4 @@ bool RtpHeaderParserImpl::DeregisterRtpHeaderExtension(RTPExtensionType type) {
   rtc::CritScope cs(&critical_section_);
   return rtp_header_extension_map_.Deregister(type) == 0;
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioCodecPairId final {
  public:
@@ -69,6 +69,6 @@ class AudioCodecPairId final {
   uint64_t id_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_AUDIO_CODEC_PAIR_ID_H_

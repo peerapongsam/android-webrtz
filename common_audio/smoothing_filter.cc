@@ -14,7 +14,7 @@
 
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 SmoothingFilterImpl::SmoothingFilterImpl(int init_time_ms)
     : init_time_ms_(init_time_ms),
@@ -113,7 +113,7 @@ void SmoothingFilterImpl::ExtrapolateLastSample(int64_t time_ms) {
   last_state_time_ms_ = time_ms;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 // Appendix: derivation of extrapolation during initialization phase.
 // (LaTeX syntax)

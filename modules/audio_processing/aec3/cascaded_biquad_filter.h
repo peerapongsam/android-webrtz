@@ -16,7 +16,7 @@
 #include "api/array_view.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Applies a number of identical biquads in a cascaded manner. The filter
 // implementation is direct form 1.
@@ -53,6 +53,6 @@ class CascadedBiQuadFilter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(CascadedBiQuadFilter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_CASCADED_BIQUAD_FILTER_H_

@@ -55,7 +55,7 @@
 #include "sdk/android/src/jni/pc/statsobserver.h"
 #include "sdk/android/src/jni/pc/turncustomizer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -714,4 +714,4 @@ static void JNI_PeerConnection_Close(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

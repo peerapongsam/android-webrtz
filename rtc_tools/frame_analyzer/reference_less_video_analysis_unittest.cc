@@ -21,7 +21,7 @@ class ReferenceLessVideoAnalysisTest : public ::testing::Test {
  public:
   void SetUp() override {
     video_file =
-           webrtc::test::ResourcePath("reference_less_video_test_file", "y4m");
+           webrtz::test::ResourcePath("reference_less_video_test_file", "y4m");
   }
   std::string video_file;
   std::vector<double> psnr_per_frame;
@@ -59,7 +59,7 @@ TEST_F(ReferenceLessVideoAnalysisTest, MatchIdenticalFrameClusters) {
 TEST_F(ReferenceLessVideoAnalysisTest, CheckFileExtension) {
   EXPECT_TRUE(check_file_extension(video_file));
   std::string txt_file =
-      webrtc::test::ResourcePath("video_quality_analysis_frame", "txt");
+      webrtz::test::ResourcePath("video_quality_analysis_frame", "txt");
   EXPECT_FALSE(check_file_extension(txt_file));
 }
 

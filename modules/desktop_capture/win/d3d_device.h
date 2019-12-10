@@ -18,7 +18,7 @@
 
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 // A wrapper of ID3D11Device and its corresponding context and IDXGIAdapter.
 // This class represents one video card in the system.
@@ -54,6 +54,6 @@ class D3dDevice {
   Microsoft::WRL::ComPtr<IDXGIAdapter> dxgi_adapter_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_D3D_DEVICE_H_

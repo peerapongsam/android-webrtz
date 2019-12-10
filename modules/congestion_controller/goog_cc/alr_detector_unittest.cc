@@ -20,8 +20,8 @@ constexpr int kEstimatedBitrateBps = 300000;
 
 }  // namespace
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 
 namespace {
 class SimulateOutgoingTrafficIn {
@@ -150,7 +150,7 @@ TEST_F(AlrDetectorTest, BandwidthEstimateChanges) {
 }
 
 TEST_F(AlrDetectorTest, ParseControlFieldTrial) {
-  webrtc::test::ScopedFieldTrials field_trial(
+  webrtz::test::ScopedFieldTrials field_trial(
       "WebRTC-ProbingScreenshareBwe/Control/");
   rtc::Optional<AlrExperimentSettings> parsed_params =
       AlrExperimentSettings::CreateFromFieldTrial(
@@ -159,7 +159,7 @@ TEST_F(AlrDetectorTest, ParseControlFieldTrial) {
 }
 
 TEST_F(AlrDetectorTest, ParseActiveFieldTrial) {
-  webrtc::test::ScopedFieldTrials field_trial(
+  webrtz::test::ScopedFieldTrials field_trial(
       "WebRTC-ProbingScreenshareBwe/1.1,2875,85,20,-20,1/");
   rtc::Optional<AlrExperimentSettings> parsed_params =
       AlrExperimentSettings::CreateFromFieldTrial(
@@ -173,5 +173,5 @@ TEST_F(AlrDetectorTest, ParseActiveFieldTrial) {
   EXPECT_EQ(1, parsed_params->group_id);
 }
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

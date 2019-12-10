@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -197,4 +197,4 @@ void Subtractor::Process(const RenderBuffer& render_buffer,
   DumpFilters();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

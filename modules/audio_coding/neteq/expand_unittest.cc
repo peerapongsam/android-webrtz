@@ -22,7 +22,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(Expand, CreateAndDestroy) {
   int fs = 8000;
@@ -203,4 +203,4 @@ TEST_F(ExpandTest, Muted) {
 
 // TODO(hlundin): Write more tests.
 
-}  // namespace webrtc
+}  // namespace webrtz

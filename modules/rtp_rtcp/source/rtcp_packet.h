@@ -15,7 +15,7 @@
 #include "rtc_base/buffer.h"
 #include "rtc_base/function_view.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 // Class for building RTCP packets.
 //
@@ -91,5 +91,5 @@ class RtcpPacket {
   size_t HeaderLength() const;
 };
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_H_

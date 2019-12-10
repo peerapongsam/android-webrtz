@@ -20,7 +20,7 @@
 #include "rtc_base/basictypes.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 using test::fec::AugmentedPacket;
@@ -204,4 +204,4 @@ TEST_F(UlpfecGeneratorTest, MixedMediaRtpHeaderLengths) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

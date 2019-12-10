@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class ProcessThread;
 
@@ -58,6 +58,6 @@ class Module {
  protected:
   virtual ~Module() {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_INCLUDE_MODULE_H_

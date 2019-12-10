@@ -24,7 +24,7 @@
 
 #include "rtc_base/event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class EventWrapperImpl : public EventWrapper {
  public:
@@ -52,4 +52,4 @@ EventWrapper* EventWrapper::Create() {
   return new EventWrapperImpl();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

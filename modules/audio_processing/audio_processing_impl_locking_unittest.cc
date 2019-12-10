@@ -24,7 +24,7 @@
 #include "system_wrappers/include/sleep.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -1132,4 +1132,4 @@ INSTANTIATE_TEST_CASE_P(
     AudioProcessingImplLockTest,
     ::testing::ValuesIn(TestConfig::GenerateBriefTestConfigs()));
 
-}  // namespace webrtc
+}  // namespace webrtz

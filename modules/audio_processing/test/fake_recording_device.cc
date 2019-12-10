@@ -15,7 +15,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -149,4 +149,4 @@ void FakeRecordingDevice::SimulateAnalogGain(ChannelBuffer<float>* buffer) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

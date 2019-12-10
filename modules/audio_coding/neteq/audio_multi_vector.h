@@ -19,7 +19,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioMultiVector {
  public:
@@ -135,5 +135,5 @@ class AudioMultiVector {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioMultiVector);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_AUDIO_MULTI_VECTOR_H_

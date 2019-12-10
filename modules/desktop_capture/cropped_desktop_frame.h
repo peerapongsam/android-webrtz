@@ -13,7 +13,7 @@
 
 #include "modules/desktop_capture/desktop_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Creates a DesktopFrame to contain only the area of |rect| in the original
 // |frame|.
@@ -24,7 +24,7 @@ std::unique_ptr<DesktopFrame> CreateCroppedDesktopFrame(
     std::unique_ptr<DesktopFrame> frame,
     const DesktopRect& rect);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_CROPPED_DESKTOP_FRAME_H_
 

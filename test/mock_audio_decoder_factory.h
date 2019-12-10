@@ -20,7 +20,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockAudioDecoderFactory : public AudioDecoderFactory {
  public:
@@ -41,16 +41,16 @@ class MockAudioDecoderFactory : public AudioDecoderFactory {
   // Creates a MockAudioDecoderFactory with no formats and that may not be
   // invoked to create a codec - useful for initializing a voice engine, for
   // example.
-  static rtc::scoped_refptr<webrtc::MockAudioDecoderFactory>
+  static rtc::scoped_refptr<webrtz::MockAudioDecoderFactory>
   CreateUnusedFactory() {
     using testing::_;
     using testing::AnyNumber;
     using testing::Return;
 
-    rtc::scoped_refptr<webrtc::MockAudioDecoderFactory> factory =
-        new rtc::RefCountedObject<webrtc::MockAudioDecoderFactory>;
+    rtc::scoped_refptr<webrtz::MockAudioDecoderFactory> factory =
+        new rtc::RefCountedObject<webrtz::MockAudioDecoderFactory>;
     ON_CALL(*factory.get(), GetSupportedDecoders())
-        .WillByDefault(Return(std::vector<webrtc::AudioCodecSpec>()));
+        .WillByDefault(Return(std::vector<webrtz::AudioCodecSpec>()));
     EXPECT_CALL(*factory.get(), GetSupportedDecoders()).Times(AnyNumber());
     ON_CALL(*factory, IsSupportedDecoder(_)).WillByDefault(Return(false));
     EXPECT_CALL(*factory, IsSupportedDecoder(_)).Times(AnyNumber());
@@ -61,17 +61,17 @@ class MockAudioDecoderFactory : public AudioDecoderFactory {
   // Creates a MockAudioDecoderFactory with no formats that may be invoked to
   // create a codec any number of times. It will, though, return nullptr on each
   // call, since it supports no codecs.
-  static rtc::scoped_refptr<webrtc::MockAudioDecoderFactory>
+  static rtc::scoped_refptr<webrtz::MockAudioDecoderFactory>
   CreateEmptyFactory() {
     using testing::_;
     using testing::AnyNumber;
     using testing::Return;
     using testing::SetArgPointee;
 
-    rtc::scoped_refptr<webrtc::MockAudioDecoderFactory> factory =
-        new rtc::RefCountedObject<webrtc::MockAudioDecoderFactory>;
+    rtc::scoped_refptr<webrtz::MockAudioDecoderFactory> factory =
+        new rtc::RefCountedObject<webrtz::MockAudioDecoderFactory>;
     ON_CALL(*factory.get(), GetSupportedDecoders())
-        .WillByDefault(Return(std::vector<webrtc::AudioCodecSpec>()));
+        .WillByDefault(Return(std::vector<webrtz::AudioCodecSpec>()));
     EXPECT_CALL(*factory.get(), GetSupportedDecoders()).Times(AnyNumber());
     ON_CALL(*factory, IsSupportedDecoder(_)).WillByDefault(Return(false));
     EXPECT_CALL(*factory, IsSupportedDecoder(_)).Times(AnyNumber());
@@ -83,6 +83,6 @@ class MockAudioDecoderFactory : public AudioDecoderFactory {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_MOCK_AUDIO_DECODER_FACTORY_H_

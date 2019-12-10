@@ -11,7 +11,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 CascadedBiQuadFilter::CascadedBiQuadFilter(
     const CascadedBiQuadFilter::BiQuadCoefficients& coefficients,
@@ -55,4 +55,4 @@ void CascadedBiQuadFilter::ApplyBiQuad(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventVideoReceiveStreamConfig::RtcEventVideoReceiveStreamConfig(
     std::unique_ptr<rtclog::StreamConfig> config)
@@ -28,4 +28,4 @@ bool RtcEventVideoReceiveStreamConfig::IsConfigEvent() const {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

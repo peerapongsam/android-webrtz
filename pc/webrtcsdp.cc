@@ -83,7 +83,7 @@ class SessionDescription;
 
 // TODO(deadbeef): Switch to using anonymous namespace rather than declaring
 // everything "static".
-namespace webrtc {
+namespace webrtz {
 
 // Line type
 // RFC 4566
@@ -2341,7 +2341,7 @@ static C* ParseContentDescription(const std::string& message,
                                   int* msid_signaling,
                                   TransportDescription* transport,
                                   std::vector<JsepIceCandidate*>* candidates,
-                                  webrtc::SdpParseError* error) {
+                                  webrtz::SdpParseError* error) {
   C* media_desc = new C();
   switch (media_type) {
     case cricket::MEDIA_TYPE_AUDIO:
@@ -3389,4 +3389,4 @@ bool ParseRtcpFbAttribute(const std::string& line, const MediaType media_type,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

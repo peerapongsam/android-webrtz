@@ -17,7 +17,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(EchoCancellerTestTools, FloatDelayBuffer) {
   constexpr size_t kDelay = 10;
@@ -68,4 +68,4 @@ TEST(EchoCancellerTestTools, RandomizeSampleVector) {
   EXPECT_NE(v, v_ref);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

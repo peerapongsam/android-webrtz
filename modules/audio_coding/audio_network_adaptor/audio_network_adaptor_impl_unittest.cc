@@ -22,7 +22,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::_;
 using ::testing::NiceMock;
@@ -323,4 +323,4 @@ TEST(AudioNetworkAdaptorImplTest, TestANAStats) {
   EXPECT_EQ(ana_stats.uplink_packet_loss_fraction, 0.1f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

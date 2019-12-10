@@ -18,7 +18,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/perf_test.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 static const int64_t kPollIntervalMs = 20;
@@ -312,7 +312,7 @@ void RampUpTester::PollStats() {
 void RampUpTester::ReportResult(const std::string& measurement,
                                 size_t value,
                                 const std::string& units) const {
-  webrtc::test::PrintResult(
+  webrtz::test::PrintResult(
       measurement, "",
       ::testing::UnitTest::GetInstance()->current_test_info()->name(), value,
       units, false);
@@ -424,7 +424,7 @@ void RampUpDownUpTester::PollStats() {
     int transmit_bitrate_bps = 0;
     bool suspended = false;
     if (num_video_streams_ > 0) {
-      webrtc::VideoSendStream::Stats stats = send_stream_->GetStats();
+      webrtz::VideoSendStream::Stats stats = send_stream_->GetStats();
       for (auto it : stats.substreams) {
         transmit_bitrate_bps += it.second.total_bitrate_bps;
       }
@@ -478,7 +478,7 @@ int RampUpDownUpTester::GetExpectedHighBitrate() const {
 size_t RampUpDownUpTester::GetFecBytes() const {
   size_t flex_fec_bytes = 0;
   if (num_flexfec_streams_ > 0) {
-    webrtc::VideoSendStream::Stats stats = send_stream_->GetStats();
+    webrtz::VideoSendStream::Stats stats = send_stream_->GetStats();
     for (const auto& kv : stats.substreams)
       flex_fec_bytes += kv.second.rtp_stats.fec.TotalBytes();
   }
@@ -496,7 +496,7 @@ void RampUpDownUpTester::EvolveTestState(int bitrate_bps, bool suspended) {
       EXPECT_FALSE(suspended);
       if (bitrate_bps >= GetExpectedHighBitrate()) {
         if (report_perf_stats_) {
-          webrtc::test::PrintResult("ramp_up_down_up", GetModifierString(),
+          webrtz::test::PrintResult("ramp_up_down_up", GetModifierString(),
                                     "first_rampup", now - state_start_ms_, "ms",
                                     false);
         }
@@ -512,7 +512,7 @@ void RampUpDownUpTester::EvolveTestState(int bitrate_bps, bool suspended) {
       if (bitrate_bps < kLowBandwidthLimitBps + kLowBitrateMarginBps &&
           suspended == check_suspend_state) {
         if (report_perf_stats_) {
-          webrtc::test::PrintResult("ramp_up_down_up", GetModifierString(),
+          webrtz::test::PrintResult("ramp_up_down_up", GetModifierString(),
                                     "rampdown", now - state_start_ms_, "ms",
                                     false);
         }
@@ -526,7 +526,7 @@ void RampUpDownUpTester::EvolveTestState(int bitrate_bps, bool suspended) {
     case kSecondRampup:
       if (bitrate_bps >= GetExpectedHighBitrate() && !suspended) {
         if (report_perf_stats_) {
-          webrtc::test::PrintResult("ramp_up_down_up", GetModifierString(),
+          webrtz::test::PrintResult("ramp_up_down_up", GetModifierString(),
                                     "second_rampup", now - state_start_ms_,
                                     "ms", false);
           ReportResult("ramp-up-down-up-average-network-latency",
@@ -677,4 +677,4 @@ TEST_F(RampUpTest, MAYBE_AudioTransportSequenceNumber) {
                     false);
   RunBaseTest(&test);
 }
-}  // namespace webrtc
+}  // namespace webrtz

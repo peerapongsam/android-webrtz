@@ -26,7 +26,7 @@
 #include "rtc_tools/event_log_visualizer/plot_base.h"
 #include "rtc_tools/event_log_visualizer/triage_notifications.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace plotting {
 
 struct LoggedRtpPacket {
@@ -122,7 +122,7 @@ class EventLogAnalyzer {
  private:
   class StreamId {
    public:
-    StreamId(uint32_t ssrc, webrtc::PacketDirection direction)
+    StreamId(uint32_t ssrc, webrtz::PacketDirection direction)
         : ssrc_(ssrc), direction_(direction) {}
     bool operator<(const StreamId& other) const {
       return std::tie(ssrc_, direction_) <
@@ -133,11 +133,11 @@ class EventLogAnalyzer {
              std::tie(other.ssrc_, other.direction_);
     }
     uint32_t GetSsrc() const { return ssrc_; }
-    webrtc::PacketDirection GetDirection() const { return direction_; }
+    webrtz::PacketDirection GetDirection() const { return direction_; }
 
    private:
     uint32_t ssrc_;
-    webrtc::PacketDirection direction_;
+    webrtz::PacketDirection direction_;
   };
 
   template <typename T>
@@ -233,6 +233,6 @@ class EventLogAnalyzer {
 };
 
 }  // namespace plotting
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_EVENT_LOG_VISUALIZER_ANALYZER_H_

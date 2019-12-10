@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** VideoTrackInterface created or passed in at construction. */
 @property(nonatomic, readonly)
-    rtc::scoped_refptr<webrtc::VideoTrackInterface> nativeVideoTrack;
+    rtc::scoped_refptr<webrtz::VideoTrackInterface> nativeVideoTrack;
 
 /** Initialize an RTCVideoTrack with its source and an id. */
 - (instancetype)initWithFactory:(RTCPeerConnectionFactory *)factory

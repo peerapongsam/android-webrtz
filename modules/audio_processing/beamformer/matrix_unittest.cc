@@ -14,7 +14,7 @@
 #include "modules/audio_processing/beamformer/matrix_test_helpers.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -323,4 +323,4 @@ TEST(MatrixTest, TestComplexOperations) {
       expected_result_pointwise_divide, actual_result_pointwise_divide);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

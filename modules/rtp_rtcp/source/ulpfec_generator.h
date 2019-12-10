@@ -17,7 +17,7 @@
 
 #include "modules/rtp_rtcp/source/forward_error_correction.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FlexfecSender;
 
@@ -106,6 +106,6 @@ class UlpfecGenerator {
   FecProtectionParams new_params_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_ULPFEC_GENERATOR_H_

@@ -17,7 +17,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -40,7 +40,7 @@ ScopedJavaLocalRef<jobjectArray> NativeToJavaStatsReportValueArray(
   for (const auto& it : value_map)
     values.push_back(it.second);
   return NativeToJavaObjectArray(env, values,
-                                 org_webrtc_StatsReport_00024Value_clazz(env),
+                                 org_webrtz_StatsReport_00024Value_clazz(env),
                                  &NativeToJavaStatsReportValue);
 }
 
@@ -61,7 +61,7 @@ StatsObserverJni::StatsObserverJni(JNIEnv* jni,
 void StatsObserverJni::OnComplete(const StatsReports& reports) {
   JNIEnv* env = AttachCurrentThreadIfNeeded();
   ScopedJavaLocalRef<jobjectArray> j_reports =
-      NativeToJavaObjectArray(env, reports, org_webrtc_StatsReport_clazz(env),
+      NativeToJavaObjectArray(env, reports, org_webrtz_StatsReport_clazz(env),
                               [](JNIEnv* env, const StatsReport* report) {
                                 return NativeToJavaStatsReport(env, *report);
                               });
@@ -69,4 +69,4 @@ void StatsObserverJni::OnComplete(const StatsReports& reports) {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

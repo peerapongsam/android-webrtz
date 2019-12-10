@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class FIRFilter;
 
@@ -42,6 +42,6 @@ class WPDNode {
   std::unique_ptr<FIRFilter> filter_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_WPD_NODE_H_

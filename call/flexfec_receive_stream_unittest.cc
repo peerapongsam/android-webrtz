@@ -27,7 +27,7 @@
 #include "test/gtest.h"
 #include "test/mock_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -154,4 +154,4 @@ TEST_F(FlexfecReceiveStreamTest, RecoversPacket) {
   EXPECT_CALL(process_thread_, DeRegisterModule(_)).Times(1);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

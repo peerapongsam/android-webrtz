@@ -13,7 +13,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ThresholdCurve {
  public:
@@ -113,6 +113,6 @@ class ThresholdCurve {
   const float offset;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_UTIL_THRESHOLD_CURVE_H_

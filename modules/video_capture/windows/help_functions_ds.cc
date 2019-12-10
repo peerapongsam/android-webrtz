@@ -16,7 +16,7 @@
 
 #include <cguid.h>
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -116,4 +116,4 @@ BOOL PinMatchesCategory(IPin *pPin, REFGUID Category)
     return bFound;
 }
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

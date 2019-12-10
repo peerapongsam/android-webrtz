@@ -19,7 +19,7 @@
 #include "rtc_base/constructormagic.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 class AudioEncoder;
 
 namespace test {
@@ -84,5 +84,5 @@ class AcmSendTestOldApi : public AudioPacketizationCallback,
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_ACM2_ACM_SEND_TEST_H_

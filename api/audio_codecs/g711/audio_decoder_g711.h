@@ -19,7 +19,7 @@
 #include "api/audio_codecs/audio_format.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // G711 decoder API for use as a template parameter to
 // CreateAudioDecoderFactory<...>().
@@ -41,6 +41,6 @@ struct AudioDecoderG711 {
       rtc::Optional<AudioCodecPairId> codec_pair_id = rtc::nullopt);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_G711_AUDIO_DECODER_G711_H_

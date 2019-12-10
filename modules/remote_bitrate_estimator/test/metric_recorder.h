@@ -18,7 +18,7 @@
 
 #include "rtc_base/gtest_prod_util.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -184,5 +184,5 @@ class MetricRecorder {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_METRIC_RECORDER_H_

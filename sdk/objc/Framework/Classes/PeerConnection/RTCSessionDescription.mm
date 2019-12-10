@@ -47,11 +47,11 @@
 
 #pragma mark - Private
 
-- (webrtc::SessionDescriptionInterface *)nativeDescription {
-  webrtc::SdpParseError error;
+- (webrtz::SessionDescriptionInterface *)nativeDescription {
+  webrtz::SdpParseError error;
 
-  webrtc::SessionDescriptionInterface *description =
-      webrtc::CreateSessionDescription([[self class] stdStringForType:_type],
+  webrtz::SessionDescriptionInterface *description =
+      webrtz::CreateSessionDescription([[self class] stdStringForType:_type],
                                        _sdp.stdString,
                                        &error);
 
@@ -65,7 +65,7 @@
 }
 
 - (instancetype)initWithNativeDescription:
-    (const webrtc::SessionDescriptionInterface *)nativeDescription {
+    (const webrtz::SessionDescriptionInterface *)nativeDescription {
   NSParameterAssert(nativeDescription);
   std::string sdp;
   nativeDescription->ToString(&sdp);
@@ -78,20 +78,20 @@
 + (std::string)stdStringForType:(RTCSdpType)type {
   switch (type) {
     case RTCSdpTypeOffer:
-      return webrtc::SessionDescriptionInterface::kOffer;
+      return webrtz::SessionDescriptionInterface::kOffer;
     case RTCSdpTypePrAnswer:
-      return webrtc::SessionDescriptionInterface::kPrAnswer;
+      return webrtz::SessionDescriptionInterface::kPrAnswer;
     case RTCSdpTypeAnswer:
-      return webrtc::SessionDescriptionInterface::kAnswer;
+      return webrtz::SessionDescriptionInterface::kAnswer;
   }
 }
 
 + (RTCSdpType)typeForStdString:(const std::string &)string {
-  if (string == webrtc::SessionDescriptionInterface::kOffer) {
+  if (string == webrtz::SessionDescriptionInterface::kOffer) {
     return RTCSdpTypeOffer;
-  } else if (string == webrtc::SessionDescriptionInterface::kPrAnswer) {
+  } else if (string == webrtz::SessionDescriptionInterface::kPrAnswer) {
     return RTCSdpTypePrAnswer;
-  } else if (string == webrtc::SessionDescriptionInterface::kAnswer) {
+  } else if (string == webrtz::SessionDescriptionInterface::kAnswer) {
     return RTCSdpTypeAnswer;
   } else {
     RTC_NOTREACHED();

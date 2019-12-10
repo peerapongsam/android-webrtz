@@ -18,7 +18,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class to efficiently get the percentile value from a group of observations.
 // The percentile is the value below which a given percentage of the
@@ -119,6 +119,6 @@ void PercentileFilter<T>::Reset() {
   percentile_it_ = set_.begin();
   percentile_index_ = 0;
 }
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_NUMERICS_PERCENTILE_FILTER_H_

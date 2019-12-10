@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** Returns the equivalent native PeerConnectionFactoryInterface::Options
  * structure. */
 @property(nonatomic, readonly)
-    webrtc::PeerConnectionFactoryInterface::Options nativeOptions;
+    webrtz::PeerConnectionFactoryInterface::Options nativeOptions;
 
 @end
 

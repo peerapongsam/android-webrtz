@@ -14,7 +14,7 @@
 
 #include "modules/audio_device/include/audio_device.h"
 
-using webrtc::AudioDeviceModule;
+using webrtz::AudioDeviceModule;
 
 #if defined(_WIN32)
 #define DEFAULT_INPUT_DEVICE (AudioDeviceModule::kDefaultCommunicationDevice)

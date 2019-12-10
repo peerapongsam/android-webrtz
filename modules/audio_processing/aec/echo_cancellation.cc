@@ -26,7 +26,7 @@ extern "C" {
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 Aec::Aec() = default;
 Aec::~Aec() = default;
@@ -865,4 +865,4 @@ static void EstBufDelayExtended(Aec* aecInst) {
     aecInst->knownDelay = WEBRTC_SPL_MAX((int)aecInst->filtDelay - 256, 0);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

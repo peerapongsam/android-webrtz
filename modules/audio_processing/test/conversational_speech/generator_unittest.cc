@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-// This file consists of unit tests for webrtc::test::conversational_speech
+// This file consists of unit tests for webrtz::test::conversational_speech
 // members. Part of them focus on accepting or rejecting different
 // conversational speech setups. A setup is defined by a set of audio tracks and
 // timing information).
@@ -56,7 +56,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -654,4 +654,4 @@ TEST(ConversationalSpeechTest, DISABLED_MultiEndCallSimulator) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

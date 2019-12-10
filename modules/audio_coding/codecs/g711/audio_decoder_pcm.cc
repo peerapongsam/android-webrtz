@@ -13,7 +13,7 @@
 #include "modules/audio_coding/codecs/legacy_encoded_audio_frame.h"
 #include "modules/audio_coding/codecs/g711/g711_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void AudioDecoderPcmU::Reset() {}
 
@@ -85,4 +85,4 @@ int AudioDecoderPcmA::PacketDuration(const uint8_t* encoded,
   return static_cast<int>(encoded_len / Channels());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

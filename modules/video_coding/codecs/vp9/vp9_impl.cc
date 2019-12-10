@@ -32,7 +32,7 @@
 #include "rtc_base/timeutils.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Only positive speeds, range for real-time coding currently is: 5 - 8.
 // Lower means slower/better quality, higher means fastest/lower quality.
@@ -992,7 +992,7 @@ int VP9DecoderImpl::ReturnFrame(const vpx_image_t* img,
   // The buffer can be used directly by the VideoFrame (without copy) by
   // using a WrappedI420Buffer.
   rtc::scoped_refptr<WrappedI420Buffer> img_wrapped_buffer(
-      new rtc::RefCountedObject<webrtc::WrappedI420Buffer>(
+      new rtc::RefCountedObject<webrtz::WrappedI420Buffer>(
           img->d_w, img->d_h, img->planes[VPX_PLANE_Y],
           img->stride[VPX_PLANE_Y], img->planes[VPX_PLANE_U],
           img->stride[VPX_PLANE_U], img->planes[VPX_PLANE_V],
@@ -1003,7 +1003,7 @@ int VP9DecoderImpl::ReturnFrame(const vpx_image_t* img,
           rtc::KeepRefUntilDone(img_buffer)));
 
   VideoFrame decoded_image(img_wrapped_buffer, timestamp,
-                           0 /* render_time_ms */, webrtc::kVideoRotation_0);
+                           0 /* render_time_ms */, webrtz::kVideoRotation_0);
   decoded_image.set_ntp_time_ms(ntp_time_ms);
 
   decode_complete_callback_->Decoded(decoded_image, rtc::nullopt, qp);
@@ -1042,4 +1042,4 @@ const char* VP9DecoderImpl::ImplementationName() const {
   return "libvpx";
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

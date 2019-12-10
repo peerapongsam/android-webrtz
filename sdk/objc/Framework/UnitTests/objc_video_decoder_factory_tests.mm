@@ -47,8 +47,8 @@ id<RTCVideoDecoderFactory> CreateErrorDecoderFactory() {
   return CreateDecoderFactoryReturning(WEBRTC_VIDEO_CODEC_ERROR);
 }
 
-webrtc::VideoDecoder *GetObjCDecoder(id<RTCVideoDecoderFactory> factory) {
-  webrtc::ObjCVideoDecoderFactory decoder_factory(factory);
+webrtz::VideoDecoder *GetObjCDecoder(id<RTCVideoDecoderFactory> factory) {
+  webrtz::ObjCVideoDecoderFactory decoder_factory(factory);
   return decoder_factory.CreateVideoDecoderWithParams(cricket::VideoCodec(cricket::kH264CodecName),
                                                       {});
 }
@@ -56,49 +56,49 @@ webrtc::VideoDecoder *GetObjCDecoder(id<RTCVideoDecoderFactory> factory) {
 #pragma mark -
 
 TEST(ObjCVideoDecoderFactoryTest, InitDecodeReturnsOKOnSuccess) {
-  webrtc::VideoDecoder *decoder = GetObjCDecoder(CreateOKDecoderFactory());
+  webrtz::VideoDecoder *decoder = GetObjCDecoder(CreateOKDecoderFactory());
 
-  auto settings = new webrtc::VideoCodec();
+  auto settings = new webrtz::VideoCodec();
   EXPECT_EQ(decoder->InitDecode(settings, 1), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoDecoderFactoryTest, InitDecodeReturnsErrorOnFail) {
-  webrtc::VideoDecoder *decoder = GetObjCDecoder(CreateErrorDecoderFactory());
+  webrtz::VideoDecoder *decoder = GetObjCDecoder(CreateErrorDecoderFactory());
 
-  auto settings = new webrtc::VideoCodec();
+  auto settings = new webrtz::VideoCodec();
   EXPECT_EQ(decoder->InitDecode(settings, 1), WEBRTC_VIDEO_CODEC_ERROR);
 }
 
 TEST(ObjCVideoDecoderFactoryTest, DecodeReturnsOKOnSuccess) {
-  webrtc::VideoDecoder *decoder = GetObjCDecoder(CreateOKDecoderFactory());
+  webrtz::VideoDecoder *decoder = GetObjCDecoder(CreateOKDecoderFactory());
 
-  webrtc::EncodedImage encoded_image;
-  webrtc::RTPFragmentationHeader header;
-  webrtc::CodecSpecificInfo info;
-  info.codecType = webrtc::kVideoCodecH264;
+  webrtz::EncodedImage encoded_image;
+  webrtz::RTPFragmentationHeader header;
+  webrtz::CodecSpecificInfo info;
+  info.codecType = webrtz::kVideoCodecH264;
 
   EXPECT_EQ(decoder->Decode(encoded_image, false, &header, &info, 0), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoDecoderFactoryTest, DecodeReturnsErrorOnFail) {
-  webrtc::VideoDecoder *decoder = GetObjCDecoder(CreateErrorDecoderFactory());
+  webrtz::VideoDecoder *decoder = GetObjCDecoder(CreateErrorDecoderFactory());
 
-  webrtc::EncodedImage encoded_image;
-  webrtc::RTPFragmentationHeader header;
-  webrtc::CodecSpecificInfo info;
-  info.codecType = webrtc::kVideoCodecH264;
+  webrtz::EncodedImage encoded_image;
+  webrtz::RTPFragmentationHeader header;
+  webrtz::CodecSpecificInfo info;
+  info.codecType = webrtz::kVideoCodecH264;
 
   EXPECT_EQ(decoder->Decode(encoded_image, false, &header, &info, 0), WEBRTC_VIDEO_CODEC_ERROR);
 }
 
 TEST(ObjCVideoDecoderFactoryTest, ReleaseDecodeReturnsOKOnSuccess) {
-  webrtc::VideoDecoder *decoder = GetObjCDecoder(CreateOKDecoderFactory());
+  webrtz::VideoDecoder *decoder = GetObjCDecoder(CreateOKDecoderFactory());
 
   EXPECT_EQ(decoder->Release(), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoDecoderFactoryTest, ReleaseDecodeReturnsErrorOnFail) {
-  webrtc::VideoDecoder *decoder = GetObjCDecoder(CreateErrorDecoderFactory());
+  webrtz::VideoDecoder *decoder = GetObjCDecoder(CreateErrorDecoderFactory());
 
   EXPECT_EQ(decoder->Release(), WEBRTC_VIDEO_CODEC_ERROR);
 }

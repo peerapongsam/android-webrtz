@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace test {
 
@@ -30,4 +30,4 @@ std::vector<double> LinSpace(const double l,
   return points;
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,10 +10,10 @@
 
 #include "modules/video_coding/encoded_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMEncodedFrame::VCMEncodedFrame()
-    : webrtc::EncodedImage(),
+    : webrtz::EncodedImage(),
       _renderTimeMs(-1),
       _payloadType(0),
       _missingFrame(false),
@@ -22,8 +22,8 @@ VCMEncodedFrame::VCMEncodedFrame()
   _codecSpecificInfo.codecType = kVideoCodecUnknown;
 }
 
-VCMEncodedFrame::VCMEncodedFrame(const webrtc::EncodedImage& rhs)
-    : webrtc::EncodedImage(rhs),
+VCMEncodedFrame::VCMEncodedFrame(const webrtz::EncodedImage& rhs)
+    : webrtz::EncodedImage(rhs),
       _renderTimeMs(-1),
       _payloadType(0),
       _missingFrame(false),
@@ -41,7 +41,7 @@ VCMEncodedFrame::VCMEncodedFrame(const webrtc::EncodedImage& rhs)
 }
 
 VCMEncodedFrame::VCMEncodedFrame(const VCMEncodedFrame& rhs)
-    : webrtc::EncodedImage(rhs),
+    : webrtz::EncodedImage(rhs),
       _renderTimeMs(rhs._renderTimeMs),
       _payloadType(rhs._payloadType),
       _missingFrame(rhs._missingFrame),
@@ -213,4 +213,4 @@ void VCMEncodedFrame::VerifyAndAllocate(size_t minimumSize) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

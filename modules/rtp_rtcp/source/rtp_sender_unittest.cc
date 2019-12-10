@@ -36,7 +36,7 @@
 #include "test/mock_transport.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const int kTransmissionTimeOffsetExtensionId = 1;
@@ -69,7 +69,7 @@ uint64_t ConvertMsToAbsSendTime(int64_t time_ms) {
   return (((time_ms << 18) + 500) / 1000) & 0x00ffffff;
 }
 
-class LoopbackTransportTest : public webrtc::Transport {
+class LoopbackTransportTest : public webrtz::Transport {
  public:
   LoopbackTransportTest() : total_bytes_sent_(0), last_packet_id_(-1) {
     receivers_extensions_.Register(kRtpExtensionTransmissionTimeOffset,
@@ -633,7 +633,7 @@ TEST_P(RtpSenderTest, TrafficSmoothingWithExtensions) {
   EXPECT_EQ(1, transport_.packets_sent());
   EXPECT_EQ(packet_size, transport_.last_sent_packet().size());
 
-  webrtc::RTPHeader rtp_header;
+  webrtz::RTPHeader rtp_header;
   transport_.last_sent_packet().GetHeader(&rtp_header);
 
   // Verify transmission time offset.
@@ -684,7 +684,7 @@ TEST_P(RtpSenderTest, TrafficSmoothingRetransmits) {
   EXPECT_EQ(1, transport_.packets_sent());
   EXPECT_EQ(packet_size, transport_.last_sent_packet().size());
 
-  webrtc::RTPHeader rtp_header;
+  webrtz::RTPHeader rtp_header;
   transport_.last_sent_packet().GetHeader(&rtp_header);
 
   // Verify transmission time offset.
@@ -718,7 +718,7 @@ TEST_P(RtpSenderTest, SendPadding) {
   rtp_header_len += 4;  // 4 bytes extension.
   rtp_header_len += 4;  // 4 extra bytes common to all extension headers.
 
-  webrtc::RTPHeader rtp_header;
+  webrtz::RTPHeader rtp_header;
 
   int64_t capture_time_ms = fake_clock_.TimeInMilliseconds();
   auto packet =
@@ -2031,7 +2031,7 @@ TEST_P(RtpSenderTest, SendsKeepAlive) {
       .WillOnce(
           Invoke([&kKeepalivePayloadType](const uint8_t* packet, size_t len,
                                           const PacketOptions& options) {
-            webrtc::RTPHeader rtp_header;
+            webrtz::RTPHeader rtp_header;
             RtpUtility::RtpHeaderParser parser(packet, len);
             EXPECT_TRUE(parser.Parse(&rtp_header, nullptr));
             EXPECT_FALSE(rtp_header.markerBit);
@@ -2059,4 +2059,4 @@ INSTANTIATE_TEST_CASE_P(WithAndWithoutOverhead,
 INSTANTIATE_TEST_CASE_P(WithAndWithoutOverhead,
                         RtpSenderAudioTest,
                         ::testing::Bool());
-}  // namespace webrtc
+}  // namespace webrtz

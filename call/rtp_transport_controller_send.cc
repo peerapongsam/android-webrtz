@@ -17,28 +17,28 @@
 #include "rtc_base/ptr_util.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const char kTaskQueueExperiment[] = "WebRTC-TaskQueueCongestionControl";
-using TaskQueueController = webrtc::webrtc_cc::SendSideCongestionController;
+using TaskQueueController = webrtz::webrtc_cc::SendSideCongestionController;
 
 bool TaskQueueExperimentEnabled() {
-  std::string trial = webrtc::field_trial::FindFullName(kTaskQueueExperiment);
+  std::string trial = webrtz::field_trial::FindFullName(kTaskQueueExperiment);
   return trial.find("Enable") == 0;
 }
 
 std::unique_ptr<SendSideCongestionControllerInterface> CreateController(
     Clock* clock,
-    webrtc::RtcEventLog* event_log,
+    webrtz::RtcEventLog* event_log,
     PacedSender* pacer,
     const BitrateConstraints& bitrate_config,
     bool task_queue_controller) {
   if (task_queue_controller) {
-    return rtc::MakeUnique<webrtc::webrtc_cc::SendSideCongestionController>(
+    return rtc::MakeUnique<webrtz::webrtc_cc::SendSideCongestionController>(
         clock, event_log, pacer, bitrate_config.start_bitrate_bps,
         bitrate_config.min_bitrate_bps, bitrate_config.max_bitrate_bps);
   }
-  auto cc = rtc::MakeUnique<webrtc::SendSideCongestionController>(
+  auto cc = rtc::MakeUnique<webrtz::SendSideCongestionController>(
       clock, nullptr /* observer */, event_log, pacer);
   cc->SignalNetworkState(kNetworkDown);
   cc->SetBweBitrates(bitrate_config.min_bitrate_bps,
@@ -50,7 +50,7 @@ std::unique_ptr<SendSideCongestionControllerInterface> CreateController(
 
 RtpTransportControllerSend::RtpTransportControllerSend(
     Clock* clock,
-    webrtc::RtcEventLog* event_log,
+    webrtz::RtcEventLog* event_log,
     const BitrateConstraints& bitrate_config)
     : clock_(clock),
       pacer_(clock, &packet_router_, event_log),
@@ -244,4 +244,4 @@ void RtpTransportControllerSend::SetClientBitratePreferences(
         << "nothing to update";
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

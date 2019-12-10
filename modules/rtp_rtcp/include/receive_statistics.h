@@ -20,7 +20,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -86,5 +86,5 @@ class ReceiveStatistics : public ReceiveStatisticsProvider {
       StreamDataCountersCallback* callback) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_INCLUDE_RECEIVE_STATISTICS_H_

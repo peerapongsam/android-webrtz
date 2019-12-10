@@ -17,7 +17,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Estimates the echo return loss enhancement based on the signal spectra.
 class ErleEstimator {
@@ -52,6 +52,6 @@ class ErleEstimator {
   RTC_DISALLOW_COPY_AND_ASSIGN(ErleEstimator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ERLE_ESTIMATOR_H_

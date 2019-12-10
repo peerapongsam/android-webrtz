@@ -21,7 +21,7 @@
 #include "rtc_base/onetimeevent.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPSenderAudio {
  public:
@@ -92,6 +92,6 @@ class RTPSenderAudio {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RTPSenderAudio);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_SENDER_AUDIO_H_

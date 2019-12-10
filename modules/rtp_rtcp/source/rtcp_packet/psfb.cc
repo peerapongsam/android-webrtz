@@ -12,7 +12,7 @@
 
 #include "modules/rtp_rtcp/source/byte_io.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Psfb::kPacketType;
 constexpr size_t Psfb::kCommonFeedbackLength;
@@ -43,4 +43,4 @@ void Psfb::CreateCommonFeedback(uint8_t* payload) const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

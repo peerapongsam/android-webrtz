@@ -12,7 +12,7 @@
 
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 
 MediaStreamObserver::MediaStreamObserver(MediaStreamInterface* stream)
     : stream_(stream),
@@ -81,4 +81,4 @@ void MediaStreamObserver::OnChanged() {
   cached_video_tracks_ = new_video_tracks;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

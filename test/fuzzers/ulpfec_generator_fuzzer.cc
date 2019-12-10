@@ -15,7 +15,7 @@
 #include "modules/rtp_rtcp/source/ulpfec_generator.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr uint8_t kFecPayloadType = 96;
@@ -56,4 +56,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
     }
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

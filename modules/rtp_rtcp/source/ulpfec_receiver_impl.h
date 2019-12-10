@@ -20,7 +20,7 @@
 #include "rtc_base/criticalsection.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class UlpfecReceiverImpl : public UlpfecReceiver {
  public:
@@ -52,6 +52,6 @@ class UlpfecReceiverImpl : public UlpfecReceiver {
   FecPacketCounter packet_counter_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_ULPFEC_RECEIVER_IMPL_H_

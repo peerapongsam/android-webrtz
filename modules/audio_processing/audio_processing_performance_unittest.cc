@@ -35,7 +35,7 @@
 #error "Set WEBRTC_INTELLIGIBILITY_ENHANCER to either 0 or 1"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -245,7 +245,7 @@ class TimedThreadApiProcessor {
         simulation_config_(simulation_config),
         apm_(apm),
         frame_data_(kMaxFrameSize),
-        clock_(webrtc::Clock::GetRealTimeClock()),
+        clock_(webrtz::Clock::GetRealTimeClock()),
         num_durations_to_store_(num_durations_to_store),
         input_level_(input_level),
         processor_type_(processor_type),
@@ -263,13 +263,13 @@ class TimedThreadApiProcessor {
     const std::string sample_rate_name =
         "_" + std::to_string(simulation_config_->sample_rate_hz) + "Hz";
 
-    webrtc::test::PrintResultMeanAndError(
+    webrtz::test::PrintResultMeanAndError(
         "apm_timing", sample_rate_name, processor_name,
         GetDurationAverage(), GetDurationStandardDeviation(),
         "us", false);
 
     if (kPrintAllDurations) {
-      webrtc::test::PrintResultList("apm_call_durations", sample_rate_name,
+      webrtz::test::PrintResultList("apm_call_durations", sample_rate_name,
                                     processor_name, api_call_durations_, "us",
                                     false);
     }
@@ -427,7 +427,7 @@ class TimedThreadApiProcessor {
   const SimulationConfig* const simulation_config_ = nullptr;
   AudioProcessing* apm_ = nullptr;
   AudioFrameData frame_data_;
-  webrtc::Clock* clock_;
+  webrtz::Clock* clock_;
   const size_t num_durations_to_store_;
   std::vector<double> api_call_durations_;
   const float input_level_;
@@ -710,4 +710,4 @@ INSTANTIATE_TEST_CASE_P(
     CallSimulator,
     ::testing::ValuesIn(SimulationConfig::GenerateSimulationConfigs()));
 
-}  // namespace webrtc
+}  // namespace webrtz

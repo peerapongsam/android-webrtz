@@ -35,7 +35,7 @@
 
 namespace cricket {
 using rtc::Bind;
-using webrtc::SdpType;
+using webrtz::SdpType;
 
 namespace {
 
@@ -158,7 +158,7 @@ void BaseChannel::DisconnectFromRtpTransport() {
   rtp_transport_->SetMetricsObserver(nullptr);
 }
 
-void BaseChannel::Init_w(webrtc::RtpTransportInternal* rtp_transport) {
+void BaseChannel::Init_w(webrtz::RtpTransportInternal* rtp_transport) {
   RTC_DCHECK_RUN_ON(worker_thread_);
   network_thread_->Invoke<void>(RTC_FROM_HERE, [&] {
     SetRtpTransport(rtp_transport);
@@ -187,7 +187,7 @@ void BaseChannel::Deinit() {
   });
 }
 
-void BaseChannel::SetRtpTransport(webrtc::RtpTransportInternal* rtp_transport) {
+void BaseChannel::SetRtpTransport(webrtz::RtpTransportInternal* rtp_transport) {
   if (!network_thread_->IsCurrent()) {
     network_thread_->Invoke<void>(RTC_FROM_HERE, [&] {
       SetRtpTransport(rtp_transport);
@@ -223,7 +223,7 @@ void BaseChannel::SetRtpTransport(webrtc::RtpTransportInternal* rtp_transport) {
 }
 
 void BaseChannel::SetMetricsObserver(
-    rtc::scoped_refptr<webrtc::MetricsObserverInterface> metrics_observer) {
+    rtc::scoped_refptr<webrtz::MetricsObserverInterface> metrics_observer) {
   metrics_observer_ = metrics_observer;
   if (rtp_transport_) {
     rtp_transport_->SetMetricsObserver(metrics_observer);
@@ -280,7 +280,7 @@ bool BaseChannel::SetRemoteContent(const MediaContentDescription* content,
 bool BaseChannel::IsReadyToReceiveMedia_w() const {
   // Receive data if we are enabled and have local content,
   return enabled() &&
-         webrtc::RtpTransceiverDirectionHasRecv(local_content_direction_);
+         webrtz::RtpTransceiverDirectionHasRecv(local_content_direction_);
 }
 
 bool BaseChannel::IsReadyToSendMedia_w() const {
@@ -293,8 +293,8 @@ bool BaseChannel::IsReadyToSendMedia_n() const {
   // Send outgoing data if we are enabled, have local and remote content,
   // and we have had some form of connectivity.
   return enabled() &&
-         webrtc::RtpTransceiverDirectionHasRecv(remote_content_direction_) &&
-         webrtc::RtpTransceiverDirectionHasSend(local_content_direction_) &&
+         webrtz::RtpTransceiverDirectionHasRecv(remote_content_direction_) &&
+         webrtz::RtpTransceiverDirectionHasSend(local_content_direction_) &&
          was_ever_writable() && (srtp_active() || encryption_disabled_);
 }
 
@@ -631,7 +631,7 @@ RtpHeaderExtensions BaseChannel::GetFilteredRtpHeaderExtensions(
   RTC_DCHECK(rtp_transport_);
   if (crypto_options_.enable_encrypted_rtp_header_extensions) {
     RtpHeaderExtensions filtered;
-    auto pred = [](const webrtc::RtpExtension& extension) {
+    auto pred = [](const webrtz::RtpExtension& extension) {
         return !extension.encrypt;
     };
     std::copy_if(extensions.begin(), extensions.end(),
@@ -639,7 +639,7 @@ RtpHeaderExtensions BaseChannel::GetFilteredRtpHeaderExtensions(
     return filtered;
   }
 
-  return webrtc::RtpExtension::FilterDuplicateNonEncrypted(extensions);
+  return webrtz::RtpExtension::FilterDuplicateNonEncrypted(extensions);
 }
 
 void BaseChannel::OnMessage(rtc::Message *pmsg) {
@@ -977,7 +977,7 @@ RtpDataChannel::~RtpDataChannel() {
   Deinit();
 }
 
-void RtpDataChannel::Init_w(webrtc::RtpTransportInternal* rtp_transport) {
+void RtpDataChannel::Init_w(webrtz::RtpTransportInternal* rtp_transport) {
   BaseChannel::Init_w(rtp_transport);
   media_channel()->SignalDataReceived.connect(this,
                                               &RtpDataChannel::OnDataReceived);

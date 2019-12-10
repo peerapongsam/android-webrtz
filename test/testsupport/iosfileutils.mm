@@ -17,11 +17,11 @@
 #include "sdk/objc/Framework/Classes/Common/helpers.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
-using webrtc::ios::NSStringFromStdString;
-using webrtc::ios::StdStringFromNSString;
+using webrtz::ios::NSStringFromStdString;
+using webrtz::ios::StdStringFromNSString;
 
 // For iOS, resource files are added to the application bundle in the root
 // and not in separate folders as is the case for other platforms. This method
@@ -58,6 +58,6 @@ std::string IOSOutputPath()  {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // defined(WEBRTC_IOS)

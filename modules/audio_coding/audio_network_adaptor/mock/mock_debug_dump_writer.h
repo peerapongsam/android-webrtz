@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/debug_dump_writer.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockDebugDumpWriter : public DebugDumpWriter {
  public:
@@ -35,6 +35,6 @@ class MockDebugDumpWriter : public DebugDumpWriter {
 #endif
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_MOCK_MOCK_DEBUG_DUMP_WRITER_H_

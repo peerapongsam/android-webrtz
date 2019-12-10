@@ -20,7 +20,7 @@
 #include "call/fake_network_pipe.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 bool ParseConfigParam(std::string exp_name, int* field) {
   std::string group = field_trial::FindFullName(exp_name);
@@ -30,7 +30,7 @@ bool ParseConfigParam(std::string exp_name, int* field) {
   return (sscanf(group.c_str(), "%d", field) == 1);
 }
 
-rtc::Optional<webrtc::FakeNetworkPipe::Config> ParseDegradationConfig(
+rtc::Optional<webrtz::FakeNetworkPipe::Config> ParseDegradationConfig(
     bool send) {
   std::string exp_prefix = "WebRTCFakeNetwork";
   if (send) {
@@ -39,7 +39,7 @@ rtc::Optional<webrtc::FakeNetworkPipe::Config> ParseDegradationConfig(
     exp_prefix += "Receive";
   }
 
-  webrtc::FakeNetworkPipe::Config config;
+  webrtz::FakeNetworkPipe::Config config;
   bool configured = false;
   configured |=
       ParseConfigParam(exp_prefix + "DelayMs", &config.queue_delay_ms);
@@ -62,15 +62,15 @@ rtc::Optional<webrtc::FakeNetworkPipe::Config> ParseDegradationConfig(
   }
   configured |= ParseConfigParam(exp_prefix + "AvgBurstLossLength",
                                  &config.avg_burst_loss_length);
-  return configured ? rtc::Optional<webrtc::FakeNetworkPipe::Config>(config)
+  return configured ? rtc::Optional<webrtz::FakeNetworkPipe::Config>(config)
                     : rtc::nullopt;
 }
 }  // namespace
 
 Call* CallFactory::CreateCall(const Call::Config& config) {
-  rtc::Optional<webrtc::FakeNetworkPipe::Config> send_degradation_config =
+  rtc::Optional<webrtz::FakeNetworkPipe::Config> send_degradation_config =
       ParseDegradationConfig(true);
-  rtc::Optional<webrtc::FakeNetworkPipe::Config> receive_degradation_config =
+  rtc::Optional<webrtz::FakeNetworkPipe::Config> receive_degradation_config =
       ParseDegradationConfig(false);
 
   if (send_degradation_config || receive_degradation_config) {
@@ -86,4 +86,4 @@ std::unique_ptr<CallFactoryInterface> CreateCallFactory() {
   return std::unique_ptr<CallFactoryInterface>(new CallFactory());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

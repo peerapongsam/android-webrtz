@@ -16,7 +16,7 @@
 #include <gdk/gdk.h>
 #endif  // !defined(TOOLKIT_GTK)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -66,4 +66,4 @@ XErrorTrap::~XErrorTrap() {
     GetLastErrorAndDisable();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

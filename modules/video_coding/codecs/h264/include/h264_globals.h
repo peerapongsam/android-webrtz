@@ -16,7 +16,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 // The packetization types that we support: single, aggregated, and fragmented.
 enum H264PacketizationTypes {
@@ -82,6 +82,6 @@ struct RTPVideoHeaderH264 {
   H264PacketizationMode packetization_mode;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_H264_INCLUDE_H264_GLOBALS_H_

@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Enumeration to represent distinct classes of errors that an application
 // may wish to act upon differently. These roughly map to DOMExceptions or
@@ -154,7 +154,7 @@ std::string ToString(RTCErrorType error);
   {                                                                \
     RTC_DCHECK(type != RTCErrorType::NONE);                        \
     RTC_LOG(severity) << message << " (" << ToString(type) << ")"; \
-    return webrtc::RTCError(type, message);                        \
+    return webrtz::RTCError(type, message);                        \
   }
 
 #define LOG_AND_RETURN_ERROR(type, message) \
@@ -297,6 +297,6 @@ class RTCErrorOr {
   T value_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_RTCERROR_H_

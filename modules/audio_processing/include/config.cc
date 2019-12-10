@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/include/config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Config::Config() {}
 
@@ -20,4 +20,4 @@ Config::~Config() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

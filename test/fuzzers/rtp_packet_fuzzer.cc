@@ -12,7 +12,7 @@
 #include "modules/rtp_rtcp/source/rtp_header_extensions.h"
 #include "modules/rtp_rtcp/source/rtp_packet_received.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // We decide which header extensions to register by reading two bytes
 // from the beginning of |data| and interpreting it as a bitmask over
@@ -112,4 +112,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
     }
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

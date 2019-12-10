@@ -13,13 +13,13 @@
 
 #include "api/jsepsessiondescription.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   std::string message(reinterpret_cast<const char*>(data), size);
-  webrtc::SdpParseError error;
+  webrtz::SdpParseError error;
 
-  std::unique_ptr<webrtc::SessionDescriptionInterface> sdp(
+  std::unique_ptr<webrtz::SessionDescriptionInterface> sdp(
       CreateSessionDescription("offer", message, &error));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

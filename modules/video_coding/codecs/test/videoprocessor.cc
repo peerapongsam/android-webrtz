@@ -29,7 +29,7 @@
 #include "third_party/libyuv/include/libyuv/compare.h"
 #include "third_party/libyuv/include/libyuv/scale.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -42,14 +42,14 @@ size_t GetMaxNaluSizeBytes(const EncodedImage& encoded_frame,
   if (config.codec_settings.codecType != kVideoCodecH264)
     return 0;
 
-  std::vector<webrtc::H264::NaluIndex> nalu_indices =
-      webrtc::H264::FindNaluIndices(encoded_frame._buffer,
+  std::vector<webrtz::H264::NaluIndex> nalu_indices =
+      webrtz::H264::FindNaluIndices(encoded_frame._buffer,
                                     encoded_frame._length);
 
   RTC_CHECK(!nalu_indices.empty());
 
   size_t max_size = 0;
-  for (const webrtc::H264::NaluIndex& index : nalu_indices)
+  for (const webrtz::H264::NaluIndex& index : nalu_indices)
     max_size = std::max(max_size, index.payload_size);
 
   return max_size;
@@ -153,7 +153,7 @@ void CalculateFrameQuality(const I420BufferInterface& ref_buffer,
 
 }  // namespace
 
-VideoProcessor::VideoProcessor(webrtc::VideoEncoder* encoder,
+VideoProcessor::VideoProcessor(webrtz::VideoEncoder* encoder,
                                VideoDecoderList* decoders,
                                FrameReader* input_frame_reader,
                                const TestConfig& config,
@@ -260,7 +260,7 @@ void VideoProcessor::ProcessFrame() {
       last_inputed_timestamp_ + kVideoPayloadTypeFrequency / framerate_fps_;
   VideoFrame input_frame(buffer, static_cast<uint32_t>(timestamp),
                          static_cast<int64_t>(timestamp / kMsToRtpTimestamp),
-                         webrtc::kVideoRotation_0);
+                         webrtz::kVideoRotation_0);
   // Store input frame as a reference for quality calculations.
   if (config_.decode && !config_.measure_cpu) {
     input_frames_.emplace(frame_number, input_frame);
@@ -313,8 +313,8 @@ void VideoProcessor::SetRates(size_t bitrate_kbps, size_t framerate_fps) {
 }
 
 void VideoProcessor::FrameEncoded(
-    const webrtc::EncodedImage& encoded_image,
-    const webrtc::CodecSpecificInfo& codec_specific) {
+    const webrtz::EncodedImage& encoded_image,
+    const webrtz::CodecSpecificInfo& codec_specific) {
   RTC_DCHECK_CALLED_SEQUENTIALLY(&sequence_checker_);
 
   // For the highest measurement accuracy of the encode time, the start/stop
@@ -380,7 +380,7 @@ void VideoProcessor::FrameEncoded(
     end_of_superframe = vp9_info.end_of_superframe;
   }
 
-  const webrtc::EncodedImage* encoded_image_for_decode = &encoded_image;
+  const webrtz::EncodedImage* encoded_image_for_decode = &encoded_image;
   if (config_.decode || encoded_frame_writers_) {
     if (num_spatial_layers > 1) {
       encoded_image_for_decode = BuildAndStoreSuperframe(
@@ -500,7 +500,7 @@ void VideoProcessor::DecodeFrame(const EncodedImage& encoded_image,
       decoders_->at(simulcast_svc_idx)->Decode(encoded_image, false, nullptr);
 }
 
-const webrtc::EncodedImage* VideoProcessor::BuildAndStoreSuperframe(
+const webrtz::EncodedImage* VideoProcessor::BuildAndStoreSuperframe(
     const EncodedImage& encoded_image,
     const VideoCodecType codec,
     size_t frame_number,
@@ -555,4 +555,4 @@ const webrtc::EncodedImage* VideoProcessor::BuildAndStoreSuperframe(
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

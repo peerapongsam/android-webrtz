@@ -13,7 +13,7 @@
 
 #include "modules/audio_coding/codecs/isac/main/include/isac.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct IsacFloat {
   using instance_type = ISACStruct;
@@ -113,5 +113,5 @@ struct IsacFloat {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_CODECS_ISAC_MAIN_SOURCE_ISAC_FLOAT_TYPE_H_

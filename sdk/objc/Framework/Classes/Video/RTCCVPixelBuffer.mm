@@ -173,7 +173,7 @@
       srcUV += srcUVStride * (_cropY / 2) + _cropX;
 
       // TODO(magjed): Use a frame buffer pool.
-      webrtc::NV12ToI420Scaler nv12ToI420Scaler;
+      webrtz::NV12ToI420Scaler nv12ToI420Scaler;
       nv12ToI420Scaler.NV12ToI420Scale(srcY,
                                        srcYStride,
                                        srcUV,
@@ -288,7 +288,7 @@
   srcY += srcYStride * _cropY + _cropX;
   srcUV += srcUVStride * (_cropY / 2) + _cropX;
 
-  webrtc::NV12Scale(tmpBuffer,
+  webrtz::NV12Scale(tmpBuffer,
                     srcY,
                     srcYStride,
                     srcUV,

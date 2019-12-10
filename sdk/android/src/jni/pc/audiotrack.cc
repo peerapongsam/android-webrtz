@@ -11,7 +11,7 @@
 #include "api/mediastreaminterface.h"
 #include "sdk/android/generated_peerconnection_jni/jni/AudioTrack_jni.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static void JNI_AudioTrack_SetVolume(JNIEnv*,
@@ -24,4 +24,4 @@ static void JNI_AudioTrack_SetVolume(JNIEnv*,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

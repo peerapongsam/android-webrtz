@@ -11,7 +11,7 @@
 #include "modules/audio_coding/audio_network_adaptor/dtx_controller.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DtxController::Config::Config(bool initial_dtx_enabled,
                               int dtx_enabling_bandwidth_bps,
@@ -47,4 +47,4 @@ void DtxController::MakeDecision(AudioEncoderRuntimeConfig* config) {
   config->enable_dtx = dtx_enabled_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@ using ::testing::Return;
 using ::testing::ReturnNull;
 using ::testing::_;
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(TimestampScaler, TestNoScaling) {
   MockDecoderDatabase db;
@@ -320,4 +320,4 @@ TEST(TimestampScaler, Failures) {
   EXPECT_CALL(db, Die());  // Called when database object is deleted.
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/pc/sessiondescription.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 class CreateSdpObserverJni : public CreateSessionDescriptionObserver {
@@ -54,6 +54,6 @@ class SetSdpObserverJni : public SetSessionDescriptionObserver {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_SDPOBSERVER_H_

@@ -27,7 +27,7 @@
 #include "modules/desktop_capture/screen_drawer_lock_posix.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -158,4 +158,4 @@ TEST(ScreenDrawerTest, TwoScreenDrawerLocks) {
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

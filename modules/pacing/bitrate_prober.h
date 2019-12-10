@@ -17,7 +17,7 @@
 #include "rtc_base/basictypes.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 class RtcEventLog;
 
 // Note that this class isn't thread-safe by itself and therefore relies
@@ -102,6 +102,6 @@ class BitrateProber {
   RtcEventLog* const event_log_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_PACING_BITRATE_PROBER_H_

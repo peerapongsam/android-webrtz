@@ -20,7 +20,7 @@ using ::testing::ElementsAre;
 using ::testing::Invoke;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr size_t kDefaultPacketSize = 100;
@@ -335,4 +335,4 @@ TEST_F(RemoteEstimatorProxyTest, TwccReportsUse5PercentOfAvailableBandwidth) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

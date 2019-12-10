@@ -11,7 +11,7 @@
 #ifndef MODULES_AUDIO_PROCESSING_VAD_VAD_AUDIO_PROC_INTERNAL_H_
 #define MODULES_AUDIO_PROCESSING_VAD_VAD_AUDIO_PROC_INTERNAL_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // These values should match MATLAB counterparts for unit-tests to pass.
 static const double kCorrWeight[] = {1.000000,
@@ -89,6 +89,6 @@ static_assert(kFilterOrder + 1 ==
                   sizeof(kCoeffDenominator) / sizeof(kCoeffDenominator[0]),
               "denominator coefficients incorrect size");
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_VAD_VAD_AUDIO_PROCESSING_H_

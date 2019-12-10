@@ -16,7 +16,7 @@
 #include "sdk/objc/Framework/Classes/VideoToolbox/nalu_rewriter.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using H264::kSps;
 
@@ -233,4 +233,4 @@ TEST(AvccBufferWriterTest, TestOverflow) {
             memcmp(expected_buffer, buffer.get(), arraysize(expected_buffer)));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

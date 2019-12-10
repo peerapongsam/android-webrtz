@@ -18,7 +18,7 @@
 #include "api/peerconnectioninterface.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FakeMetricsObserver : public MetricsObserverInterface {
  public:
@@ -52,6 +52,6 @@ class FakeMetricsObserver : public MetricsObserverInterface {
   int histogram_samples_[kPeerConnectionMetricsName_Max];
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_FAKEMETRICSOBSERVER_H_

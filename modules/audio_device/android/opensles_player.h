@@ -23,7 +23,7 @@
 #include "modules/utility/include/helpers_android.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FineAudioBuffer;
 
@@ -168,11 +168,11 @@ class OpenSLESPlayer {
   SLEngineItf engine_;
 
   // Output mix object to be used by the player object.
-  webrtc::ScopedSLObjectItf output_mix_;
+  webrtz::ScopedSLObjectItf output_mix_;
 
   // The audio player media object plays out audio to the speakers. It also
   // supports volume control.
-  webrtc::ScopedSLObjectItf player_object_;
+  webrtz::ScopedSLObjectItf player_object_;
 
   // This interface is supported on the audio player and it controls the state
   // of the audio player.
@@ -191,6 +191,6 @@ class OpenSLESPlayer {
   uint32_t last_play_time_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_OPENSLES_PLAYER_H_

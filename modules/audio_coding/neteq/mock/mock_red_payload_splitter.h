@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRedPayloadSplitter : public RedPayloadSplitter {
  public:
@@ -25,5 +25,5 @@ class MockRedPayloadSplitter : public RedPayloadSplitter {
                    const DecoderDatabase& decoder_database));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_RED_PAYLOAD_SPLITTER_H_

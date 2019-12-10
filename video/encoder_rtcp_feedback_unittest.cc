@@ -19,7 +19,7 @@
 
 using ::testing::NiceMock;
 
-namespace webrtc {
+namespace webrtz {
 
 class MockVideoStreamEncoder : public VideoStreamEncoder {
  public:
@@ -76,4 +76,4 @@ TEST_F(VieKeyRequestTest, TooManyOnReceivedIntraFrameRequest) {
   encoder_rtcp_feedback_.OnReceivedIntraFrameRequest(kSsrc);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

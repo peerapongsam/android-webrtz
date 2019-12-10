@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class BackgroundNoise;
@@ -157,5 +157,5 @@ struct ExpandFactory {
                          size_t num_channels) const;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_EXPAND_H_

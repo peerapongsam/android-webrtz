@@ -19,7 +19,7 @@
 #include "rtc_base/helpers.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -479,4 +479,4 @@ void VideoRtpSender::ClearVideoSend() {
   });
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

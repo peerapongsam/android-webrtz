@@ -55,7 +55,7 @@ std::string RemoveSpaces(std::string s) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class PerfTest : public ::testing::Test {
@@ -108,4 +108,4 @@ TEST_F(PerfTest, TestClearPerfResults) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockDelayManager : public DelayManager {
  public:
@@ -58,5 +58,5 @@ class MockDelayManager : public DelayManager {
       void(int value));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_DELAY_MANAGER_H_

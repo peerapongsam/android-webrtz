@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -62,4 +62,4 @@ std::unique_ptr<Vad> CreateVad(Vad::Aggressiveness aggressiveness) {
   return std::unique_ptr<Vad>(new VadImpl(aggressiveness));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

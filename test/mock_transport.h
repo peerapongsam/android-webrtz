@@ -14,7 +14,7 @@
 #include "api/call/transport.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockTransport : public Transport {
  public:
@@ -27,5 +27,5 @@ class MockTransport : public Transport {
                     const PacketOptions& options));
   MOCK_METHOD2(SendRtcp, bool(const uint8_t* data, size_t len));
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // TEST_MOCK_TRANSPORT_H_

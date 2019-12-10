@@ -12,7 +12,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 void FloatToS16(const float* src, size_t size, int16_t* dest) {
   for (size_t i = 0; i < size; ++i)
@@ -48,4 +48,4 @@ void DownmixInterleavedToMono<int16_t>(const int16_t* interleaved,
                                                  num_channels, deinterleaved);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

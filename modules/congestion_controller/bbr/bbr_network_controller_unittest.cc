@@ -27,7 +27,7 @@ using testing::Property;
 using testing::StrictMock;
 using testing::_;
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 namespace test {
 namespace {
@@ -78,7 +78,7 @@ class BbrNetworkControllerTest : public ::testing::Test {
 };
 
 TEST_F(BbrNetworkControllerTest, SendsConfigurationOnInitialization) {
-  StrictMock<webrtc::test::MockNetworkControllerObserver> observer;
+  StrictMock<webrtz::test::MockNetworkControllerObserver> observer;
   EXPECT_CALL(observer,
               OnTargetTransferRate(TargetRateCloseTo(kInitialBitrate)));
   EXPECT_CALL(observer, OnPacerConfig(Property(&PacerConfig::data_rate,
@@ -93,7 +93,7 @@ TEST_F(BbrNetworkControllerTest, SendsConfigurationOnInitialization) {
 }
 
 TEST_F(BbrNetworkControllerTest, SendsConfigurationOnNetworkRouteChanged) {
-  StrictMock<webrtc::test::MockNetworkControllerObserver> observer;
+  StrictMock<webrtz::test::MockNetworkControllerObserver> observer;
   EXPECT_CALL(observer, OnTargetTransferRate(_));
   EXPECT_CALL(observer, OnPacerConfig(_));
   EXPECT_CALL(observer, OnCongestionWindow(_));
@@ -114,9 +114,9 @@ TEST_F(BbrNetworkControllerTest, SendsConfigurationOnNetworkRouteChanged) {
 // Feedbacks which show an increasing delay cause the estimation to be reduced.
 TEST_F(BbrNetworkControllerTest, UpdatesTargetSendRate) {
   BbrNetworkControllerFactory factory;
-  webrtc::test::NetworkControllerTester tester(&factory,
+  webrtz::test::NetworkControllerTester tester(&factory,
                                                InitialConfig(60, 0, 600));
-  auto packet_producer = &webrtc::test::SimpleTargetRateProducer::ProduceNext;
+  auto packet_producer = &webrtz::test::SimpleTargetRateProducer::ProduceNext;
 
   tester.RunSimulation(TimeDelta::seconds(5), TimeDelta::ms(10),
                        DataRate::kbps(300), TimeDelta::ms(100),
@@ -145,4 +145,4 @@ TEST_F(BbrNetworkControllerTest, UpdatesTargetSendRate) {
 
 }  // namespace test
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "modules/audio_processing/agc2/agc2_common.h"
 #include "modules/audio_processing/vad/vad_with_level.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 
@@ -59,6 +59,6 @@ class SaturationProtector {
   PeakEnveloper peak_enveloper_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_SATURATION_PROTECTOR_H_

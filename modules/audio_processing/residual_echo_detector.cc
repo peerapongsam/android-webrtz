@@ -38,7 +38,7 @@ constexpr size_t kAggregationBufferSize = 10 * 100;
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 int ResidualEchoDetector::instance_count_ = 0;
 
@@ -209,4 +209,4 @@ EchoDetector::Metrics ResidualEchoDetector::GetMetrics() const {
   metrics.echo_likelihood_recent_max = recent_likelihood_max_.max();
   return metrics;
 }
-}  // namespace webrtc
+}  // namespace webrtz

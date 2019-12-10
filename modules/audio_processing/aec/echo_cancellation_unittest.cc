@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(EchoCancellationTest, CreateAndFreeHasExpectedBehavior) {
   void* handle = WebRtcAec_Create();
@@ -42,4 +42,4 @@ TEST(EchoCancellationTest, ApplyAecCoreHandle) {
   WebRtcAec_Free(handle);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

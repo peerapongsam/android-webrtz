@@ -23,7 +23,7 @@
 #include "sdk/android/src/jni/surfacetexturehelper.h"
 #include "sdk/android/src/jni/videoframe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 class AndroidVideoTrackSource : public rtc::AdaptedVideoTrackSource {
@@ -85,6 +85,6 @@ class AndroidVideoTrackSource : public rtc::AdaptedVideoTrackSource {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ANDROID_JNI_ANDROIDVIDEOTRACKSOURCE_H_

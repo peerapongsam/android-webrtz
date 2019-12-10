@@ -28,7 +28,7 @@ class AsyncResolver;
 class SignalThread;
 }
 
-namespace webrtc {
+namespace webrtz {
 class TurnCustomizer;
 }
 
@@ -59,7 +59,7 @@ class TurnPort : public Port {
                           const RelayCredentials& credentials,
                           int server_priority,
                           const std::string& origin,
-                          webrtc::TurnCustomizer* customizer) {
+                          webrtz::TurnCustomizer* customizer) {
     return new TurnPort(thread, factory, network, socket, username, password,
                         server_address, credentials, server_priority, origin,
                         customizer);
@@ -80,7 +80,7 @@ class TurnPort : public Port {
                           const std::string& origin,
                           const std::vector<std::string>& tls_alpn_protocols,
                           const std::vector<std::string>& tls_elliptic_curves,
-                          webrtc::TurnCustomizer* customizer) {
+                          webrtz::TurnCustomizer* customizer) {
     return new TurnPort(thread, factory, network, min_port, max_port, username,
                         password, server_address, credentials, server_priority,
                         origin, tls_alpn_protocols, tls_elliptic_curves,
@@ -199,7 +199,7 @@ class TurnPort : public Port {
            const RelayCredentials& credentials,
            int server_priority,
            const std::string& origin,
-           webrtc::TurnCustomizer* customizer);
+           webrtz::TurnCustomizer* customizer);
 
   TurnPort(rtc::Thread* thread,
            rtc::PacketSocketFactory* factory,
@@ -214,7 +214,7 @@ class TurnPort : public Port {
            const std::string& origin,
            const std::vector<std::string>& tls_alpn_protocols,
            const std::vector<std::string>& tls_elliptic_curves,
-           webrtc::TurnCustomizer* customizer);
+           webrtz::TurnCustomizer* customizer);
 
   // NOTE: This method needs to be accessible for StacPort
   // return true if entry was created (i.e channel_number consumed).
@@ -330,7 +330,7 @@ class TurnPort : public Port {
   rtc::AsyncInvoker invoker_;
 
   // Optional TurnCustomizer that can modify outgoing messages.
-  webrtc::TurnCustomizer *turn_customizer_ = nullptr;
+  webrtz::TurnCustomizer *turn_customizer_ = nullptr;
 
   friend class TurnEntry;
   friend class TurnAllocateRequest;

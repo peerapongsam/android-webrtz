@@ -16,7 +16,7 @@
 #include "test/rtcp_packet_parser.h"
 #include "video/end_to_end_tests/multi_stream_tester.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TransportFeedbackEndToEndTest
     : public test::CallTest,
@@ -247,7 +247,7 @@ class TransportFeedbackTester : public test::EndToEndTest {
                           size_t num_video_streams,
                           size_t num_audio_streams)
       : EndToEndTest(
-            ::webrtc::TransportFeedbackEndToEndTest::kDefaultTimeoutMs),
+            ::webrtz::TransportFeedbackEndToEndTest::kDefaultTimeoutMs),
         feedback_enabled_(feedback_enabled),
         num_video_streams_(num_video_streams),
         num_audio_streams_(num_audio_streams),
@@ -350,7 +350,7 @@ TEST_P(TransportFeedbackEndToEndTest,
    public:
     TransportFeedbackTester(size_t num_video_streams, size_t num_audio_streams)
         : EndToEndTest(
-              ::webrtc::TransportFeedbackEndToEndTest::kDefaultTimeoutMs),
+              ::webrtz::TransportFeedbackEndToEndTest::kDefaultTimeoutMs),
           num_video_streams_(num_video_streams),
           num_audio_streams_(num_audio_streams),
           media_sent_(0),
@@ -508,4 +508,4 @@ TEST_P(TransportFeedbackEndToEndTest, TransportSeqNumOnAudioAndVideo) {
   // message when the test fail.
   test.ExpectSuccessful();
 }
-}  // namespace webrtc
+}  // namespace webrtz

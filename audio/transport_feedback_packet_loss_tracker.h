@@ -17,7 +17,7 @@
 #include "api/optional.h"
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace rtcp {
 class TransportFeedback;
@@ -137,6 +137,6 @@ class TransportFeedbackPacketLossTracker final {
   } rplr_state_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_TRANSPORT_FEEDBACK_PACKET_LOSS_TRACKER_H_

@@ -18,10 +18,10 @@
 
 using testing::ElementsAreArray;
 using testing::make_tuple;
-using webrtc::rtcp::ReportBlock;
-using webrtc::rtcp::SenderReport;
+using webrtz::rtcp::ReportBlock;
+using webrtz::rtcp::SenderReport;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345678;
 const uint32_t kRemoteSsrc = 0x23456789;
@@ -142,4 +142,4 @@ TEST(RtcpPacketSenderReportTest, SetReportBlocksMaxLimit) {
   EXPECT_FALSE(sr.SetReportBlocks(std::move(one_too_many_blocks)));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

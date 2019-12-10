@@ -15,7 +15,7 @@
 
 static const int kMinKeyFrameRequestIntervalMs = 300;
 
-namespace webrtc {
+namespace webrtz {
 
 EncoderRtcpFeedback::EncoderRtcpFeedback(Clock* clock,
                                          const std::vector<uint32_t>& ssrcs,
@@ -64,4 +64,4 @@ void EncoderRtcpFeedback::OnReceivedIntraFrameRequest(uint32_t ssrc) {
   video_stream_encoder_->SendKeyFrame();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -26,7 +26,7 @@
 #include "video/call_stats.h"
 #include "video/video_receive_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using testing::_;
@@ -90,14 +90,14 @@ class VideoReceiveStreamTest : public testing::Test {
     null_decoder.decoder = &mock_null_video_decoder_;
     config_.decoders.push_back(null_decoder);
 
-    video_receive_stream_.reset(new webrtc::internal::VideoReceiveStream(
+    video_receive_stream_.reset(new webrtz::internal::VideoReceiveStream(
         &rtp_stream_receiver_controller_, kDefaultNumCpuCores,
         &packet_router_, config_.Copy(), process_thread_.get(), &call_stats_));
   }
 
  protected:
   std::unique_ptr<ProcessThread> process_thread_;
-  webrtc::test::ScopedFieldTrials override_field_trials_;
+  webrtz::test::ScopedFieldTrials override_field_trials_;
   VideoReceiveStream::Config config_;
   CallStats call_stats_;
   MockVideoDecoder mock_h264_video_decoder_;
@@ -106,7 +106,7 @@ class VideoReceiveStreamTest : public testing::Test {
   MockTransport mock_transport_;
   PacketRouter packet_router_;
   RtpStreamReceiverController rtp_stream_receiver_controller_;
-  std::unique_ptr<webrtc::internal::VideoReceiveStream> video_receive_stream_;
+  std::unique_ptr<webrtz::internal::VideoReceiveStream> video_receive_stream_;
 };
 
 TEST_F(VideoReceiveStreamTest, CreateFrameFromH264FmtpSpropAndIdr) {
@@ -137,4 +137,4 @@ TEST_F(VideoReceiveStreamTest, CreateFrameFromH264FmtpSpropAndIdr) {
   init_decode_event_.Wait(kDefaultTimeOutMs);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

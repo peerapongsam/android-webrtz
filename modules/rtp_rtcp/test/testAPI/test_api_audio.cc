@@ -21,7 +21,7 @@
 #include "rtc_base/rate_limiter.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const uint32_t kTestRate = 64000u;
@@ -53,7 +53,7 @@ class VerifyingAudioReceiver : public RtpData {
   int32_t OnReceivedPayloadData(
       const uint8_t* payloadData,
       size_t payloadSize,
-      const webrtc::WebRtcRTPHeader* rtpHeader) override {
+      const webrtz::WebRtcRTPHeader* rtpHeader) override {
     const uint8_t payload_type = rtpHeader->header.payloadType;
     if (payload_type == kPcmuPayloadType || payload_type == kDtmfPayloadType) {
       EXPECT_EQ(sizeof(kTestPayload), payloadSize);
@@ -141,7 +141,7 @@ class RtpRtcpAudioTest : public ::testing::Test {
   uint32_t test_ssrc;
   uint32_t test_timestamp;
   uint16_t test_sequence_number;
-  uint32_t test_CSRC[webrtc::kRtpCsrcSize];
+  uint32_t test_CSRC[webrtz::kRtpCsrcSize];
   SimulatedClock fake_clock;
   RateLimiter retransmission_rate_limiter_;
 };
@@ -159,7 +159,7 @@ TEST_F(RtpRtcpAudioTest, Basic) {
 
   // Send an empty RTP packet.
   // Should fail since we have not registered the payload type.
-  EXPECT_FALSE(module1->SendOutgoingData(webrtc::kAudioFrameSpeech,
+  EXPECT_FALSE(module1->SendOutgoingData(webrtz::kAudioFrameSpeech,
                                          kPcmuPayloadType, 0, -1, nullptr, 0,
                                          nullptr, nullptr, nullptr));
 
@@ -170,7 +170,7 @@ TEST_F(RtpRtcpAudioTest, Basic) {
   memcpy(voice_codec.plname, "PCMU", 5);
   RegisterPayload(voice_codec);
 
-  EXPECT_TRUE(module1->SendOutgoingData(webrtc::kAudioFrameSpeech,
+  EXPECT_TRUE(module1->SendOutgoingData(webrtz::kAudioFrameSpeech,
                                         kPcmuPayloadType, 0, -1, kTestPayload,
                                         4, nullptr, nullptr, nullptr));
 
@@ -217,7 +217,7 @@ TEST_F(RtpRtcpAudioTest, DTMF) {
   // pause between = 2560ms + 1600ms = 4160ms
   for (; timeStamp <= 250 * 160; timeStamp += 160) {
     EXPECT_TRUE(module1->SendOutgoingData(
-        webrtc::kAudioFrameSpeech, kPcmuPayloadType, timeStamp, -1,
+        webrtz::kAudioFrameSpeech, kPcmuPayloadType, timeStamp, -1,
         kTestPayload, 4, nullptr, nullptr, nullptr));
     fake_clock.AdvanceTimeMilliseconds(20);
     module1->Process();
@@ -226,7 +226,7 @@ TEST_F(RtpRtcpAudioTest, DTMF) {
 
   for (; timeStamp <= 740 * 160; timeStamp += 160) {
     EXPECT_TRUE(module1->SendOutgoingData(
-        webrtc::kAudioFrameSpeech, kPcmuPayloadType, timeStamp, -1,
+        webrtz::kAudioFrameSpeech, kPcmuPayloadType, timeStamp, -1,
         kTestPayload, 4, nullptr, nullptr, nullptr));
     fake_clock.AdvanceTimeMilliseconds(20);
     module1->Process();
@@ -261,7 +261,7 @@ TEST_F(RtpRtcpAudioTest, ComfortNoise) {
     uint32_t timestamp;
     int64_t receive_time_ms;
     EXPECT_TRUE(module1->SendOutgoingData(
-        webrtc::kAudioFrameSpeech, kPcmuPayloadType, in_timestamp, -1,
+        webrtz::kAudioFrameSpeech, kPcmuPayloadType, in_timestamp, -1,
         kTestPayload, 4, nullptr, nullptr, nullptr));
 
     EXPECT_EQ(test_ssrc, rtp_receiver2_->SSRC());
@@ -272,7 +272,7 @@ TEST_F(RtpRtcpAudioTest, ComfortNoise) {
     in_timestamp += 10;
     fake_clock.AdvanceTimeMilliseconds(20);
 
-    EXPECT_TRUE(module1->SendOutgoingData(webrtc::kAudioFrameCN, c.payload_type,
+    EXPECT_TRUE(module1->SendOutgoingData(webrtz::kAudioFrameCN, c.payload_type,
                                           in_timestamp, -1, kTestPayload, 1,
                                           nullptr, nullptr, nullptr));
 
@@ -286,4 +286,4 @@ TEST_F(RtpRtcpAudioTest, ComfortNoise) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "modules/audio_processing/vad/common.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 class PoleZeroFilter;
@@ -88,6 +88,6 @@ class VadAudioProc {
   std::unique_ptr<PoleZeroFilter> high_pass_filter_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_VAD_VAD_AUDIO_PROC_H_

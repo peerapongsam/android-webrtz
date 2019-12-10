@@ -23,7 +23,7 @@ extern "C" {
 #include "common_video/h264/h264_bitstream_parser.h"
 #include "common_video/include/i420_buffer_pool.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct AVCodecContextDeleter {
   void operator()(AVCodecContext* ptr) const { avcodec_free_context(&ptr); }
@@ -79,9 +79,9 @@ class H264DecoderImpl : public H264Decoder {
   bool has_reported_init_;
   bool has_reported_error_;
 
-  webrtc::H264BitstreamParser h264_bitstream_parser_;
+  webrtz::H264BitstreamParser h264_bitstream_parser_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_H264_H264_DECODER_IMPL_H_

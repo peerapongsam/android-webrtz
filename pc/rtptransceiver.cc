@@ -14,7 +14,7 @@
 
 #include "pc/rtpmediautils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::ostream& operator<<(std::ostream& os, RtpTransceiverDirection direction) {
   return os << RtpTransceiverDirectionToString(direction);
@@ -229,4 +229,4 @@ void RtpTransceiver::SetCodecPreferences(
   RTC_NOTREACHED() << "Not implemented";
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

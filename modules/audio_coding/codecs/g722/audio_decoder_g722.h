@@ -16,7 +16,7 @@
 
 typedef struct WebRtcG722DecInst G722DecInst;
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoderG722Impl final : public AudioDecoder {
  public:
@@ -74,6 +74,6 @@ class AudioDecoderG722StereoImpl final : public AudioDecoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioDecoderG722StereoImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_G722_AUDIO_DECODER_G722_H_

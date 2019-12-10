@@ -23,7 +23,7 @@
 #include "rtc_base/timeutils.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RTPSenderAudio::RTPSenderAudio(Clock* clock, RTPSender* rtp_sender)
     : clock_(clock),
@@ -331,4 +331,4 @@ bool RTPSenderAudio::SendTelephoneEventPacket(bool ended,
 
   return result;
 }
-}  // namespace webrtc
+}  // namespace webrtz

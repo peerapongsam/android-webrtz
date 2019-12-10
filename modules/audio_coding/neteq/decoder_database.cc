@@ -17,7 +17,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/strings/audio_format_to_string.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DecoderDatabase::DecoderDatabase(
     const rtc::scoped_refptr<AudioDecoderFactory>& decoder_factory,
@@ -376,4 +376,4 @@ int DecoderDatabase::CheckPayloadTypes(const PacketList& packet_list) const {
   return kOK;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

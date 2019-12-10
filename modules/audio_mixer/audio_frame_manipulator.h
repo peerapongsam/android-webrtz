@@ -13,7 +13,7 @@
 
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Updates the audioFrame's energy (based on its samples).
 uint32_t AudioMixerCalculateEnergy(const AudioFrame& audio_frame);
@@ -25,6 +25,6 @@ void Ramp(float start_gain, float target_gain, AudioFrame* audio_frame);
 // Downmixes or upmixes a frame between stereo and mono.
 void RemixFrame(size_t target_number_of_channels, AudioFrame* frame);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_MIXER_AUDIO_FRAME_MANIPULATOR_H_

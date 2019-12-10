@@ -19,7 +19,7 @@
 #include "api/audio_codecs/audio_format.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // L16 encoder API for use as a template parameter to
 // CreateAudioEncoderFactory<...>().
@@ -46,6 +46,6 @@ struct AudioEncoderL16 {
       rtc::Optional<AudioCodecPairId> codec_pair_id = rtc::nullopt);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_L16_AUDIO_ENCODER_L16_H_

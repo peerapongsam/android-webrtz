@@ -22,7 +22,7 @@
 #include "pc/datachannel.h"
 #include "pc/rtptransceiver.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Internal interface for extra PeerConnection methods.
 class PeerConnectionInternal : public PeerConnectionInterface {
@@ -88,6 +88,6 @@ class PeerConnectionInternal : public PeerConnectionInterface {
                           rtc::SSLRole* role) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_PEERCONNECTIONINTERNAL_H_

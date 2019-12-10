@@ -59,23 +59,23 @@
 #ifdef HAVE_NO_MEDIA
   return [self initWithNoMedia];
 #elif !defined(USE_BUILTIN_SW_CODECS)
-  return [self initWithNativeAudioEncoderFactory:webrtc::CreateBuiltinAudioEncoderFactory()
-                       nativeAudioDecoderFactory:webrtc::CreateBuiltinAudioDecoderFactory()
-                       nativeVideoEncoderFactory:webrtc::ObjCToNativeVideoEncoderFactory(
+  return [self initWithNativeAudioEncoderFactory:webrtz::CreateBuiltinAudioEncoderFactory()
+                       nativeAudioDecoderFactory:webrtz::CreateBuiltinAudioDecoderFactory()
+                       nativeVideoEncoderFactory:webrtz::ObjCToNativeVideoEncoderFactory(
                                                      [[RTCVideoEncoderFactoryH264 alloc] init])
-                       nativeVideoDecoderFactory:webrtc::ObjCToNativeVideoDecoderFactory(
+                       nativeVideoDecoderFactory:webrtz::ObjCToNativeVideoDecoderFactory(
                                                      [[RTCVideoDecoderFactoryH264 alloc] init])
                                audioDeviceModule:nullptr
                            audioProcessingModule:nullptr];
 #else
-  // Here we construct webrtc::ObjCVideoEncoderFactory directly because we rely
-  // on the fact that they inherit from both webrtc::VideoEncoderFactory and
+  // Here we construct webrtz::ObjCVideoEncoderFactory directly because we rely
+  // on the fact that they inherit from both webrtz::VideoEncoderFactory and
   // cricket::WebRtcVideoEncoderFactory.
-  return [self initWithNativeAudioEncoderFactory:webrtc::CreateBuiltinAudioEncoderFactory()
-                       nativeAudioDecoderFactory:webrtc::CreateBuiltinAudioDecoderFactory()
-                 legacyNativeVideoEncoderFactory:new webrtc::ObjCVideoEncoderFactory(
+  return [self initWithNativeAudioEncoderFactory:webrtz::CreateBuiltinAudioEncoderFactory()
+                       nativeAudioDecoderFactory:webrtz::CreateBuiltinAudioDecoderFactory()
+                 legacyNativeVideoEncoderFactory:new webrtz::ObjCVideoEncoderFactory(
                                                      [[RTCVideoEncoderFactoryH264 alloc] init])
-                 legacyNativeVideoDecoderFactory:new webrtc::ObjCVideoDecoderFactory(
+                 legacyNativeVideoDecoderFactory:new webrtz::ObjCVideoDecoderFactory(
                                                      [[RTCVideoDecoderFactoryH264 alloc] init])
                                audioDeviceModule:nullptr];
 
@@ -87,16 +87,16 @@
 #ifdef HAVE_NO_MEDIA
   return [self initWithNoMedia];
 #else
-  std::unique_ptr<webrtc::VideoEncoderFactory> native_encoder_factory;
-  std::unique_ptr<webrtc::VideoDecoderFactory> native_decoder_factory;
+  std::unique_ptr<webrtz::VideoEncoderFactory> native_encoder_factory;
+  std::unique_ptr<webrtz::VideoDecoderFactory> native_decoder_factory;
   if (encoderFactory) {
-    native_encoder_factory = webrtc::ObjCToNativeVideoEncoderFactory(encoderFactory);
+    native_encoder_factory = webrtz::ObjCToNativeVideoEncoderFactory(encoderFactory);
   }
   if (decoderFactory) {
-    native_decoder_factory = webrtc::ObjCToNativeVideoDecoderFactory(decoderFactory);
+    native_decoder_factory = webrtz::ObjCToNativeVideoDecoderFactory(decoderFactory);
   }
-  return [self initWithNativeAudioEncoderFactory:webrtc::CreateBuiltinAudioEncoderFactory()
-                       nativeAudioDecoderFactory:webrtc::CreateBuiltinAudioDecoderFactory()
+  return [self initWithNativeAudioEncoderFactory:webrtz::CreateBuiltinAudioEncoderFactory()
+                       nativeAudioDecoderFactory:webrtz::CreateBuiltinAudioDecoderFactory()
                        nativeVideoEncoderFactory:std::move(native_encoder_factory)
                        nativeVideoDecoderFactory:std::move(native_decoder_factory)
                                audioDeviceModule:nullptr
@@ -123,47 +123,47 @@
 
 - (instancetype)initWithNoMedia {
   if (self = [self initNative]) {
-    _nativeFactory = webrtc::CreateModularPeerConnectionFactory(
+    _nativeFactory = webrtz::CreateModularPeerConnectionFactory(
         _networkThread.get(),
         _workerThread.get(),
         _signalingThread.get(),
         std::unique_ptr<cricket::MediaEngineInterface>(),
-        std::unique_ptr<webrtc::CallFactoryInterface>(),
-        std::unique_ptr<webrtc::RtcEventLogFactoryInterface>());
+        std::unique_ptr<webrtz::CallFactoryInterface>(),
+        std::unique_ptr<webrtz::RtcEventLogFactoryInterface>());
     NSAssert(_nativeFactory, @"Failed to initialize PeerConnectionFactory!");
   }
   return self;
 }
 
 - (instancetype)initWithNativeAudioEncoderFactory:
-                    (rtc::scoped_refptr<webrtc::AudioEncoderFactory>)audioEncoderFactory
+                    (rtc::scoped_refptr<webrtz::AudioEncoderFactory>)audioEncoderFactory
                         nativeAudioDecoderFactory:
-                            (rtc::scoped_refptr<webrtc::AudioDecoderFactory>)audioDecoderFactory
+                            (rtc::scoped_refptr<webrtz::AudioDecoderFactory>)audioDecoderFactory
                         nativeVideoEncoderFactory:
-                            (std::unique_ptr<webrtc::VideoEncoderFactory>)videoEncoderFactory
+                            (std::unique_ptr<webrtz::VideoEncoderFactory>)videoEncoderFactory
                         nativeVideoDecoderFactory:
-                            (std::unique_ptr<webrtc::VideoDecoderFactory>)videoDecoderFactory
+                            (std::unique_ptr<webrtz::VideoDecoderFactory>)videoDecoderFactory
                                 audioDeviceModule:
-                                    (nullable webrtc::AudioDeviceModule *)audioDeviceModule
+                                    (nullable webrtz::AudioDeviceModule *)audioDeviceModule
                             audioProcessingModule:
-                                (rtc::scoped_refptr<webrtc::AudioProcessing>)audioProcessingModule {
+                                (rtc::scoped_refptr<webrtz::AudioProcessing>)audioProcessingModule {
 #ifdef HAVE_NO_MEDIA
   return [self initWithNoMedia];
 #else
   if (self = [self initNative]) {
 #if defined(USE_BUILTIN_SW_CODECS)
     if (!videoEncoderFactory) {
-      auto legacy_video_encoder_factory = rtc::MakeUnique<webrtc::ObjCVideoEncoderFactory>(
+      auto legacy_video_encoder_factory = rtc::MakeUnique<webrtz::ObjCVideoEncoderFactory>(
           [[RTCVideoEncoderFactoryH264 alloc] init]);
       videoEncoderFactory = ConvertVideoEncoderFactory(std::move(legacy_video_encoder_factory));
     }
     if (!videoDecoderFactory) {
-      auto legacy_video_decoder_factory = rtc::MakeUnique<webrtc::ObjCVideoDecoderFactory>(
+      auto legacy_video_decoder_factory = rtc::MakeUnique<webrtz::ObjCVideoDecoderFactory>(
           [[RTCVideoDecoderFactoryH264 alloc] init]);
       videoDecoderFactory = ConvertVideoDecoderFactory(std::move(legacy_video_decoder_factory));
     }
 #endif
-    _nativeFactory = webrtc::CreatePeerConnectionFactory(_networkThread.get(),
+    _nativeFactory = webrtz::CreatePeerConnectionFactory(_networkThread.get(),
                                                          _workerThread.get(),
                                                          _signalingThread.get(),
                                                          audioDeviceModule,
@@ -182,17 +182,17 @@
 #if defined(USE_BUILTIN_SW_CODECS)
 - (instancetype)
     initWithNativeAudioEncoderFactory:
-        (rtc::scoped_refptr<webrtc::AudioEncoderFactory>)audioEncoderFactory
+        (rtc::scoped_refptr<webrtz::AudioEncoderFactory>)audioEncoderFactory
             nativeAudioDecoderFactory:
-                (rtc::scoped_refptr<webrtc::AudioDecoderFactory>)audioDecoderFactory
+                (rtc::scoped_refptr<webrtz::AudioDecoderFactory>)audioDecoderFactory
       legacyNativeVideoEncoderFactory:(cricket::WebRtcVideoEncoderFactory *)videoEncoderFactory
       legacyNativeVideoDecoderFactory:(cricket::WebRtcVideoDecoderFactory *)videoDecoderFactory
-                    audioDeviceModule:(nullable webrtc::AudioDeviceModule *)audioDeviceModule {
+                    audioDeviceModule:(nullable webrtz::AudioDeviceModule *)audioDeviceModule {
 #ifdef HAVE_NO_MEDIA
   return [self initWithNoMedia];
 #else
   if (self = [self initNative]) {
-    _nativeFactory = webrtc::CreatePeerConnectionFactory(_networkThread.get(),
+    _nativeFactory = webrtz::CreatePeerConnectionFactory(_networkThread.get(),
                                                          _workerThread.get(),
                                                          _signalingThread.get(),
                                                          audioDeviceModule,
@@ -208,11 +208,11 @@
 #endif
 
 - (RTCAudioSource *)audioSourceWithConstraints:(nullable RTCMediaConstraints *)constraints {
-  std::unique_ptr<webrtc::MediaConstraints> nativeConstraints;
+  std::unique_ptr<webrtz::MediaConstraints> nativeConstraints;
   if (constraints) {
     nativeConstraints = constraints.nativeConstraints;
   }
-  rtc::scoped_refptr<webrtc::AudioSourceInterface> source =
+  rtc::scoped_refptr<webrtz::AudioSourceInterface> source =
       _nativeFactory->CreateAudioSource(nativeConstraints.get());
   return [[RTCAudioSource alloc] initWithNativeAudioSource:source];
 }

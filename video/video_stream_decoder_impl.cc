@@ -14,7 +14,7 @@
 #include "rtc_base/numerics/mod_ops.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VideoStreamDecoderImpl::VideoStreamDecoderImpl(
     VideoStreamDecoder::Callbacks* callbacks,
@@ -211,4 +211,4 @@ VideoStreamDecoderImpl::DecodeResult VideoStreamDecoderImpl::DecodeNextFrame(
   return kNoFrame;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

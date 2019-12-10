@@ -9,9 +9,9 @@
  */
 #include "modules/video_coding/utility/vp8_header_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   int qp;
   vp8::GetQp(data, size, &qp);
 }
-}  // namespace webrtc
+}  // namespace webrtz

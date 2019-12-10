@@ -18,7 +18,7 @@
 #include "modules/desktop_capture/desktop_region.h"
 #include "modules/desktop_capture/shared_memory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // An interface to generate a DesktopFrame.
 class DesktopFrameGenerator {
@@ -116,6 +116,6 @@ class BlackWhiteDesktopFramePainter final : public DesktopFramePainter {
   DesktopRegion updated_region_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_FRAME_GENERATOR_H_

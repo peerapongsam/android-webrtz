@@ -41,7 +41,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const uint32_t kRtcpAnyExtendedReports =
@@ -978,4 +978,4 @@ int64_t RTCPSender::RtcpVideoReportInverval() const {
   return interval_config_.video_interval_ms;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

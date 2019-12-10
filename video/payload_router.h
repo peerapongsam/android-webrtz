@@ -20,7 +20,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPFragmentationHeader;
 class RtpRtcp;
@@ -79,6 +79,6 @@ class PayloadRouter : public EncodedImageCallback {
   RTC_DISALLOW_COPY_AND_ASSIGN(PayloadRouter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_PAYLOAD_ROUTER_H_

@@ -24,7 +24,7 @@ RTC_POP_IGNORING_WUNDEF()
 #include "modules/utility/include/jvm_android.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace audiodevicemodule {
 
 static pthread_once_t g_initialize_once = PTHREAD_ONCE_INIT;
@@ -36,7 +36,7 @@ void EnsureInitializedOnce() {
   RTC_CHECK_EQ(0, jni->GetJavaVM(&jvm));
 
   // Initialize the Java environment (currently only used by the audio manager).
-  webrtc::JVM::Initialize(jvm);
+  webrtz::JVM::Initialize(jvm);
 }
 
 void EnsureInitialized() {
@@ -44,4 +44,4 @@ void EnsureInitialized() {
 }
 
 }  // namespace audiodevicemodule
-}  // namespace webrtc
+}  // namespace webrtz

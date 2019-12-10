@@ -14,7 +14,7 @@
 #include "logging/rtc_event_log/events/rtc_event.h"
 #include "modules/rtp_rtcp/source/rtp_packet.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketToSend;
 
@@ -33,6 +33,6 @@ class RtcEventRtpPacketOutgoing final : public RtcEvent {
   const int probe_cluster_id_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_RTP_PACKET_OUTGOING_H_

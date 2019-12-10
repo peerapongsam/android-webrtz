@@ -11,7 +11,7 @@
 #include "modules/congestion_controller/network_control/include/network_units.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 TEST(TimeDeltaTest, GetBackSameValues) {
@@ -297,4 +297,4 @@ TEST(UnitConversionTest, DataRateAndDataSizeAndTimeDelta) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

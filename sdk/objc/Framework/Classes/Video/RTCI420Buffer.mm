@@ -19,12 +19,12 @@
 
 @implementation RTCI420Buffer {
  @protected
-  rtc::scoped_refptr<webrtc::I420BufferInterface> _i420Buffer;
+  rtc::scoped_refptr<webrtz::I420BufferInterface> _i420Buffer;
 }
 
 - (instancetype)initWithWidth:(int)width height:(int)height {
   if (self = [super init]) {
-    _i420Buffer = webrtc::I420Buffer::Create(width, height);
+    _i420Buffer = webrtz::I420Buffer::Create(width, height);
   }
 
   return self;
@@ -36,13 +36,13 @@
                       strideU:(int)strideU
                       strideV:(int)strideV {
   if (self = [super init]) {
-    _i420Buffer = webrtc::I420Buffer::Create(width, height, strideY, strideU, strideV);
+    _i420Buffer = webrtz::I420Buffer::Create(width, height, strideY, strideU, strideV);
   }
 
   return self;
 }
 
-- (instancetype)initWithFrameBuffer:(rtc::scoped_refptr<webrtc::I420BufferInterface>)i420Buffer {
+- (instancetype)initWithFrameBuffer:(rtc::scoped_refptr<webrtz::I420BufferInterface>)i420Buffer {
   if (self = [super init]) {
     _i420Buffer = i420Buffer;
   }
@@ -96,7 +96,7 @@
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::I420BufferInterface>)nativeI420Buffer {
+- (rtc::scoped_refptr<webrtz::I420BufferInterface>)nativeI420Buffer {
   return _i420Buffer;
 }
 
@@ -133,15 +133,15 @@
 @implementation RTCMutableI420Buffer
 
 - (uint8_t *)mutableDataY {
-  return static_cast<webrtc::I420Buffer *>(_i420Buffer.get())->MutableDataY();
+  return static_cast<webrtz::I420Buffer *>(_i420Buffer.get())->MutableDataY();
 }
 
 - (uint8_t *)mutableDataU {
-  return static_cast<webrtc::I420Buffer *>(_i420Buffer.get())->MutableDataU();
+  return static_cast<webrtz::I420Buffer *>(_i420Buffer.get())->MutableDataU();
 }
 
 - (uint8_t *)mutableDataV {
-  return static_cast<webrtc::I420Buffer *>(_i420Buffer.get())->MutableDataV();
+  return static_cast<webrtz::I420Buffer *>(_i420Buffer.get())->MutableDataV();
 }
 
 @end

@@ -17,11 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RTCRtpSender ()
 
 @property(nonatomic, readonly)
-    rtc::scoped_refptr<webrtc::RtpSenderInterface> nativeRtpSender;
+    rtc::scoped_refptr<webrtz::RtpSenderInterface> nativeRtpSender;
 
 /** Initialize an RTCRtpSender with a native RtpSenderInterface. */
 - (instancetype)initWithNativeRtpSender:
-    (rtc::scoped_refptr<webrtc::RtpSenderInterface>)nativeRtpSender
+    (rtc::scoped_refptr<webrtz::RtpSenderInterface>)nativeRtpSender
     NS_DESIGNATED_INITIALIZER;
 
 @end

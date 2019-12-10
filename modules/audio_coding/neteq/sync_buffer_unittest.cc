@@ -13,7 +13,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(SyncBuffer, CreateAndDestroy) {
   // Create a SyncBuffer with two channels and 10 samples each.
@@ -171,4 +171,4 @@ TEST(SyncBuffer, GetNextAudioInterleaved) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

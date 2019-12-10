@@ -13,7 +13,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Ratio allocation between temporal streams:
 // Values as required for the VP8 codec (accumulating).
@@ -25,5 +25,5 @@ static const float
         {0.25f, 0.4f, 0.6f, 1.0f}  // 4 layers {25%, 15%, 20%, 40%}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_INCLUDE_VP8_COMMON_TYPES_H_

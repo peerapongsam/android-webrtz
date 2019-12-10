@@ -14,7 +14,7 @@
 #include <memory>
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 LegacyEncodedAudioFrame::LegacyEncodedAudioFrame(AudioDecoder* decoder,
                                                  rtc::Buffer&& payload)
@@ -84,4 +84,4 @@ std::vector<AudioDecoder::ParseResult> LegacyEncodedAudioFrame::SplitBySamples(
   return results;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

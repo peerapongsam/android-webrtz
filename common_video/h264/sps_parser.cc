@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 
 namespace {
-typedef rtc::Optional<webrtc::SpsParser::SpsState> OptionalSps;
+typedef rtc::Optional<webrtz::SpsParser::SpsState> OptionalSps;
 
 #define RETURN_EMPTY_ON_FAIL(x) \
   if (!(x)) {                   \
@@ -29,7 +29,7 @@ constexpr int kScalingDeltaMin = -128;
 constexpr int kScaldingDeltaMax = 127;
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 SpsParser::SpsState::SpsState() = default;
 
@@ -236,4 +236,4 @@ rtc::Optional<SpsParser::SpsState> SpsParser::ParseSpsUpToVui(
   return OptionalSps(sps);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -137,7 +137,7 @@ void ShiftFitSubMask(int num_mask_bytes,
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 namespace internal {
 
 PacketMaskTable::PacketMaskTable(FecMaskType fec_mask_type,
@@ -457,4 +457,4 @@ void CopyColumn(uint8_t* new_mask,
 }
 
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz

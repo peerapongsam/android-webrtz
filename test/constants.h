@@ -8,7 +8,7 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 extern const int kAudioLevelExtensionId;
@@ -19,4 +19,4 @@ extern const int kVideoRotationExtensionId;
 extern const int kVideoContentTypeExtensionId;
 extern const int kVideoTimingExtensionId;
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

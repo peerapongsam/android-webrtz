@@ -16,9 +16,9 @@
 
 using testing::ElementsAreArray;
 using testing::make_tuple;
-using webrtc::rtcp::RapidResyncRequest;
+using webrtz::rtcp::RapidResyncRequest;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345678;
 const uint32_t kRemoteSsrc = 0x23456789;
@@ -63,4 +63,4 @@ TEST(RtcpPacketRapidResyncRequestTest, ParseFailsOnTooLargePacket) {
   RapidResyncRequest parsed;
   EXPECT_FALSE(test::ParseSinglePacket(kTooLargePacket, &parsed));
 }
-}  // namespace webrtc
+}  // namespace webrtz

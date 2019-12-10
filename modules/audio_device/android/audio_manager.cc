@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/platform_thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // AudioManager::JavaAudioManager implementation
 AudioManager::JavaAudioManager::JavaAudioManager(
@@ -72,9 +72,9 @@ AudioManager::AudioManager()
   RTC_CHECK(j_environment_);
   JNINativeMethod native_methods[] = {
       {"nativeCacheAudioParameters", "(IIIZZZZZZZIIJ)V",
-       reinterpret_cast<void*>(&webrtc::AudioManager::CacheAudioParameters)}};
+       reinterpret_cast<void*>(&webrtz::AudioManager::CacheAudioParameters)}};
   j_native_registration_ = j_environment_->RegisterNatives(
-      "org/webrtc/voiceengine/WebRtcAudioManager", native_methods,
+      "org/webrtz/voiceengine/WebRtcAudioManager", native_methods,
       arraysize(native_methods));
   j_audio_manager_.reset(
       new JavaAudioManager(j_native_registration_.get(),
@@ -252,8 +252,8 @@ void JNICALL AudioManager::CacheAudioParameters(JNIEnv* env,
                                                 jint output_buffer_size,
                                                 jint input_buffer_size,
                                                 jlong native_audio_manager) {
-  webrtc::AudioManager* this_object =
-      reinterpret_cast<webrtc::AudioManager*>(native_audio_manager);
+  webrtz::AudioManager* this_object =
+      reinterpret_cast<webrtz::AudioManager*>(native_audio_manager);
   this_object->OnCacheAudioParameters(
       env, sample_rate, output_channels, input_channels, hardware_aec,
       hardware_agc, hardware_ns, low_latency_output, low_latency_input,
@@ -313,4 +313,4 @@ const AudioParameters& AudioManager::GetRecordAudioParameters() {
   return record_parameters_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/videoframe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Wrapper dispatching rtc::VideoSinkInterface to a Java VideoRenderer
@@ -164,4 +164,4 @@ static void JNI_VideoRenderer_CopyPlane(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

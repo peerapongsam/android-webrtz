@@ -12,23 +12,23 @@
 
 namespace cricket {
 
-webrtc::RtpParameters CreateRtpParametersWithOneEncoding() {
-  webrtc::RtpParameters parameters;
-  webrtc::RtpEncodingParameters encoding;
+webrtz::RtpParameters CreateRtpParametersWithOneEncoding() {
+  webrtz::RtpParameters parameters;
+  webrtz::RtpEncodingParameters encoding;
   parameters.encodings.push_back(encoding);
   return parameters;
 }
 
-webrtc::RtpParameters CreateRtpParametersWithEncodings(StreamParams sp) {
+webrtz::RtpParameters CreateRtpParametersWithEncodings(StreamParams sp) {
   std::vector<uint32_t> primary_ssrcs;
   sp.GetPrimarySsrcs(&primary_ssrcs);
   size_t encoding_count = primary_ssrcs.size();
 
-  std::vector<webrtc::RtpEncodingParameters> encodings(encoding_count);
+  std::vector<webrtz::RtpEncodingParameters> encodings(encoding_count);
   for (size_t i = 0; i < encodings.size(); ++i) {
     encodings[i].ssrc = primary_ssrcs[i];
   }
-  webrtc::RtpParameters parameters;
+  webrtz::RtpParameters parameters;
   parameters.encodings = encodings;
   return parameters;
 }

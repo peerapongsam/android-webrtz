@@ -18,7 +18,7 @@
 #include "modules/audio_processing/include/audio_processing.h"  // nogncheck
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 rtc::scoped_refptr<AudioDecoderFactory> CreateAudioDecoderFactory();
@@ -28,6 +28,6 @@ rtc::scoped_refptr<AudioEncoderFactory> CreateAudioEncoderFactory();
 rtc::scoped_refptr<AudioProcessing> CreateAudioProcessing();
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_AUDIO_H_

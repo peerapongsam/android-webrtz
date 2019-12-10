@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/test/conversational_speech/config.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace conversational_speech {
 
@@ -28,4 +28,4 @@ const std::string& Config::output_path() const {
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/event_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The amount of time allowed for displays to reconfigure.
 static const int64_t kDisplayConfigurationEventTimeoutMs = 10 * 1000;
@@ -87,4 +87,4 @@ void DesktopConfigurationMonitor::DisplaysReconfigured(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

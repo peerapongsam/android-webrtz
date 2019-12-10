@@ -16,7 +16,7 @@
 #include "rtc_base/race_checker.h"
 #include "rtc_base/task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class IncomingVideoStream : public rtc::VideoSinkInterface<VideoFrame> {
  public:
@@ -39,6 +39,6 @@ class IncomingVideoStream : public rtc::VideoSinkInterface<VideoFrame> {
   rtc::TaskQueue incoming_render_queue_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_INCLUDE_INCOMING_VIDEO_STREAM_H_

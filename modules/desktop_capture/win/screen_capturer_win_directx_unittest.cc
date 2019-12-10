@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This test cannot ensure GetScreenListFromDeviceNames() won't reorder the
 // devices in its output, since the device name is missing.
@@ -38,4 +38,4 @@ TEST(ScreenCaptureUtilsTest, GetScreenListFromDeviceNamesAndGetIndex) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

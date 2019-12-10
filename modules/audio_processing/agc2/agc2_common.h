@@ -15,7 +15,7 @@
 
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 constexpr float kMinFloatS16Value = -32768.f;
 constexpr float kMaxFloatS16Value = 32767.f;
@@ -78,6 +78,6 @@ constexpr size_t kInterpolatedGainCurveBeyondKneePoints = 10;
 constexpr size_t kInterpolatedGainCurveTotalPoints =
     kInterpolatedGainCurveKneePoints + kInterpolatedGainCurveBeyondKneePoints;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_AGC2_COMMON_H_

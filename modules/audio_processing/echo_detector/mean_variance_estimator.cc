@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Parameter controlling the adaptation speed.
@@ -44,4 +44,4 @@ void MeanVarianceEstimator::Clear() {
   variance_ = 0.f;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

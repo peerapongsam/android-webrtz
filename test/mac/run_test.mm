@@ -47,7 +47,7 @@ TestBlock functionToBlock(void(*function)()) {
 }
 @end
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 void RunTest(void(*test)()) {
@@ -70,4 +70,4 @@ void RunTest(void(*test)()) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

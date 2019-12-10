@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(RandomVector, CreateAndDestroy) {
   RandomVector random_vector;
@@ -22,4 +22,4 @@ TEST(RandomVector, CreateAndDestroy) {
 
 // TODO(hlundin): Write more tests.
 
-}  // namespace webrtc
+}  // namespace webrtz

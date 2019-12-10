@@ -23,7 +23,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace vcm {
 
 VideoSender::VideoSender(Clock* clock,
@@ -353,4 +353,4 @@ int32_t VideoSender::EnableFrameDropper(bool enable) {
   return VCM_OK;
 }
 }  // namespace vcm
-}  // namespace webrtc
+}  // namespace webrtz

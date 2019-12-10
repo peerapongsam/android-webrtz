@@ -30,8 +30,8 @@
 using cricket::DtlsTransportInternal;
 using cricket::FakeVoiceMediaChannel;
 using cricket::StreamParams;
-using webrtc::RtpTransceiverDirection;
-using webrtc::SdpType;
+using webrtz::RtpTransceiverDirection;
+using webrtz::SdpType;
 
 namespace {
 const cricket::AudioCodec kPcmuCodec(0, "PCMU", 64000, 8000, 1);
@@ -252,7 +252,7 @@ class ChannelTest : public testing::Test, public sigslot::has_slots<> {
       rtc::Thread* network_thread,
       cricket::MediaEngineInterface* engine,
       std::unique_ptr<typename T::MediaChannel> ch,
-      webrtc::RtpTransportInternal* rtp_transport,
+      webrtz::RtpTransportInternal* rtp_transport,
       int flags) {
     rtc::Thread* signaling_thread = rtc::Thread::Current();
     auto channel = rtc::MakeUnique<typename T::Channel>(
@@ -262,7 +262,7 @@ class ChannelTest : public testing::Test, public sigslot::has_slots<> {
     return channel;
   }
 
-  std::unique_ptr<webrtc::RtpTransportInternal> CreateRtpTransportBasedOnFlags(
+  std::unique_ptr<webrtz::RtpTransportInternal> CreateRtpTransportBasedOnFlags(
       rtc::PacketTransportInternal* rtp_packet_transport,
       rtc::PacketTransportInternal* rtcp_packet_transport,
       DtlsTransportInternal* rtp_dtls_transport,
@@ -286,12 +286,12 @@ class ChannelTest : public testing::Test, public sigslot::has_slots<> {
     }
   }
 
-  std::unique_ptr<webrtc::RtpTransport> CreateUnencryptedTransport(
+  std::unique_ptr<webrtz::RtpTransport> CreateUnencryptedTransport(
       rtc::PacketTransportInternal* rtp_packet_transport,
       rtc::PacketTransportInternal* rtcp_packet_transport) {
     bool rtcp_mux_enabled = (rtcp_packet_transport == nullptr);
     auto rtp_transport =
-        rtc::MakeUnique<webrtc::RtpTransport>(rtcp_mux_enabled);
+        rtc::MakeUnique<webrtz::RtpTransport>(rtcp_mux_enabled);
 
     rtp_transport->SetRtpPacketTransport(rtp_packet_transport);
     if (rtcp_packet_transport) {
@@ -300,14 +300,14 @@ class ChannelTest : public testing::Test, public sigslot::has_slots<> {
     return rtp_transport;
   }
 
-  std::unique_ptr<webrtc::DtlsSrtpTransport> CreateDtlsSrtpTransport(
+  std::unique_ptr<webrtz::DtlsSrtpTransport> CreateDtlsSrtpTransport(
       cricket::DtlsTransportInternal* rtp_dtls_transport,
       cricket::DtlsTransportInternal* rtcp_dtls_transport) {
     bool rtcp_mux_enabled = (rtcp_dtls_transport == nullptr);
     auto srtp_transport =
-        rtc::MakeUnique<webrtc::SrtpTransport>(rtcp_mux_enabled);
+        rtc::MakeUnique<webrtz::SrtpTransport>(rtcp_mux_enabled);
     auto dtls_srtp_transport =
-        rtc::MakeUnique<webrtc::DtlsSrtpTransport>(std::move(srtp_transport));
+        rtc::MakeUnique<webrtz::DtlsSrtpTransport>(std::move(srtp_transport));
 
     dtls_srtp_transport->SetDtlsTransports(rtp_dtls_transport,
                                            rtcp_dtls_transport);
@@ -1371,15 +1371,15 @@ class ChannelTest : public testing::Test, public sigslot::has_slots<> {
     return channel1_->SetRemoteContent(&content, SdpType::kOffer, NULL);
   }
 
-  webrtc::RtpParameters BitrateLimitedParameters(rtc::Optional<int> limit) {
-    webrtc::RtpParameters parameters;
-    webrtc::RtpEncodingParameters encoding;
+  webrtz::RtpParameters BitrateLimitedParameters(rtc::Optional<int> limit) {
+    webrtz::RtpParameters parameters;
+    webrtz::RtpEncodingParameters encoding;
     encoding.max_bitrate_bps = std::move(limit);
     parameters.encodings.push_back(encoding);
     return parameters;
   }
 
-  void VerifyMaxBitrate(const webrtc::RtpParameters& parameters,
+  void VerifyMaxBitrate(const webrtz::RtpParameters& parameters,
                         rtc::Optional<int> expected_bitrate) {
     EXPECT_EQ(1UL, parameters.encodings.size());
     EXPECT_EQ(expected_bitrate, parameters.encodings[0].max_bitrate_bps);
@@ -1465,9 +1465,9 @@ class ChannelTest : public testing::Test, public sigslot::has_slots<> {
   std::unique_ptr<rtc::FakePacketTransport> fake_rtcp_packet_transport1_;
   std::unique_ptr<rtc::FakePacketTransport> fake_rtp_packet_transport2_;
   std::unique_ptr<rtc::FakePacketTransport> fake_rtcp_packet_transport2_;
-  std::unique_ptr<webrtc::RtpTransportInternal> rtp_transport1_;
-  std::unique_ptr<webrtc::RtpTransportInternal> rtp_transport2_;
-  std::unique_ptr<webrtc::RtpTransportInternal> new_rtp_transport_;
+  std::unique_ptr<webrtz::RtpTransportInternal> rtp_transport1_;
+  std::unique_ptr<webrtz::RtpTransportInternal> rtp_transport2_;
+  std::unique_ptr<webrtz::RtpTransportInternal> new_rtp_transport_;
   cricket::FakeMediaEngine media_engine_;
   // The media channels are owned by the voice channel objects below.
   typename T::MediaChannel* media_channel1_ = nullptr;
@@ -1557,7 +1557,7 @@ std::unique_ptr<cricket::VideoChannel> ChannelTest<VideoTraits>::CreateChannel(
     rtc::Thread* network_thread,
     cricket::MediaEngineInterface* engine,
     std::unique_ptr<cricket::FakeVideoMediaChannel> ch,
-    webrtc::RtpTransportInternal* rtp_transport,
+    webrtz::RtpTransportInternal* rtp_transport,
     int flags) {
   rtc::Thread* signaling_thread = rtc::Thread::Current();
   auto channel = rtc::MakeUnique<cricket::VideoChannel>(
@@ -2177,7 +2177,7 @@ std::unique_ptr<cricket::RtpDataChannel> ChannelTest<DataTraits>::CreateChannel(
     rtc::Thread* network_thread,
     cricket::MediaEngineInterface* engine,
     std::unique_ptr<cricket::FakeDataMediaChannel> ch,
-    webrtc::RtpTransportInternal* rtp_transport,
+    webrtz::RtpTransportInternal* rtp_transport,
     int flags) {
   rtc::Thread* signaling_thread = rtc::Thread::Current();
   auto channel = rtc::MakeUnique<cricket::RtpDataChannel>(

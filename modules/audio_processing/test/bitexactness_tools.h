@@ -18,7 +18,7 @@
 #include "modules/audio_coding/neteq/tools/input_audio_file.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Returns test vector to use for the render signal in an
@@ -51,6 +51,6 @@ void ReadFloatSamplesFromStereoFile(size_t samples_per_channel,
                                        float element_error_bound);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_BITEXACTNESS_TOOLS_H_

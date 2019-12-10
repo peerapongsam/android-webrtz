@@ -21,7 +21,7 @@
 #include <mach/mach.h>         // mach_task_self()
 #include <sys/sysctl.h>        // sysctlbyname()
 
-namespace webrtc {
+namespace webrtz {
 
 #define WEBRTC_CA_RETURN_ON_ERR(expr)                                \
   do {                                                               \
@@ -2524,4 +2524,4 @@ bool AudioDeviceMac::KeyPressed() {
   }
   return key_down;
 }
-}  // namespace webrtc
+}  // namespace webrtz

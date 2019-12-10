@@ -15,7 +15,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class logs the first and last time its Extend() function is called.
 //
@@ -60,6 +60,6 @@ class TimeInterval {
   rtc::Optional<Interval> interval_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_TIME_INTERVAL_H_

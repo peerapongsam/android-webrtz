@@ -16,7 +16,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class SyncBuffer : public AudioMultiVector {
  public:
@@ -97,5 +97,5 @@ class SyncBuffer : public AudioMultiVector {
   RTC_DISALLOW_COPY_AND_ASSIGN(SyncBuffer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_SYNC_BUFFER_H_

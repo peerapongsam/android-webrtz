@@ -15,7 +15,7 @@
 
 #include "modules/audio_mixer/output_rate_calculator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DefaultOutputRateCalculator : public OutputRateCalculator {
  public:
@@ -30,6 +30,6 @@ class DefaultOutputRateCalculator : public OutputRateCalculator {
   ~DefaultOutputRateCalculator() override {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_MIXER_DEFAULT_OUTPUT_RATE_CALCULATOR_H_

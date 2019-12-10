@@ -37,7 +37,7 @@ namespace {
 const size_t kVariableSize = std::numeric_limits<size_t>::max();
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for simulating packet handling.
 TestPack::TestPack()
@@ -125,7 +125,7 @@ TestAllCodecs::~TestAllCodecs() {
 }
 
 void TestAllCodecs::Perform() {
-  const std::string file_name = webrtc::test::ResourcePath(
+  const std::string file_name = webrtz::test::ResourcePath(
       "audio_coding/testfile32kHz", "pcm");
   infile_a_.Open(file_name, 32000, "rb");
 
@@ -469,7 +469,7 @@ void TestAllCodecs::Run(TestPack* channel) {
 }
 
 void TestAllCodecs::OpenOutFile(int test_number) {
-  std::string filename = webrtc::test::OutputPath();
+  std::string filename = webrtz::test::OutputPath();
   std::ostringstream test_number_str;
   test_number_str << test_number;
   filename += "testallcodecs_out_";
@@ -485,4 +485,4 @@ void TestAllCodecs::DisplaySendReceiveCodec() {
   printf("%s\n", my_codec_param.plname);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

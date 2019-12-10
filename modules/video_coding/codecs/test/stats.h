@@ -17,7 +17,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Statistics for one processed frame.
@@ -37,7 +37,7 @@ struct FrameStatistics {
   size_t encode_time_us = 0;
   size_t target_bitrate_kbps = 0;
   size_t length_bytes = 0;
-  webrtc::FrameType frame_type = kVideoFrameDelta;
+  webrtz::FrameType frame_type = kVideoFrameDelta;
 
   // Layering.
   size_t temporal_layer_idx = 0;
@@ -166,6 +166,6 @@ class Stats {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_TEST_STATS_H_

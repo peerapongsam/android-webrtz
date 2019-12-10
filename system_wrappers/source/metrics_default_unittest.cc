@@ -12,7 +12,7 @@
 #include "system_wrappers/include/metrics.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const int kSample = 22;
@@ -158,4 +158,4 @@ TEST_F(MetricsDefaultTest, TestMinMaxBucket) {
   EXPECT_EQ(1u, histograms.begin()->second->samples.size());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

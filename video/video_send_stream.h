@@ -29,7 +29,7 @@
 #include "video/send_statistics_proxy.h"
 #include "video/video_stream_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 class VideoSendStreamPeer;
 }  // namespace test
@@ -46,11 +46,11 @@ namespace internal {
 
 class VideoSendStreamImpl;
 
-// VideoSendStream implements webrtc::VideoSendStream.
+// VideoSendStream implements webrtz::VideoSendStream.
 // Internally, it delegates all public methods to VideoSendStreamImpl and / or
 // VideoStreamEncoder. VideoSendStreamInternal is created and deleted on
 // |worker_queue|.
-class VideoSendStream : public webrtc::VideoSendStream {
+class VideoSendStream : public webrtz::VideoSendStream {
  public:
   VideoSendStream(
       int num_cpu_cores,
@@ -73,13 +73,13 @@ class VideoSendStream : public webrtc::VideoSendStream {
   void SignalNetworkState(NetworkState state);
   bool DeliverRtcp(const uint8_t* packet, size_t length);
 
-  // webrtc::VideoSendStream implementation.
+  // webrtz::VideoSendStream implementation.
   void UpdateActiveSimulcastLayers(
       const std::vector<bool> active_layers) override;
   void Start() override;
   void Stop() override;
 
-  void SetSource(rtc::VideoSourceInterface<webrtc::VideoFrame>* source,
+  void SetSource(rtc::VideoSourceInterface<webrtz::VideoFrame>* source,
                  const DegradationPreference& degradation_preference) override;
 
   void ReconfigureVideoEncoder(VideoEncoderConfig) override;
@@ -122,6 +122,6 @@ class VideoSendStream : public webrtc::VideoSendStream {
 };
 
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_VIDEO_SEND_STREAM_H_

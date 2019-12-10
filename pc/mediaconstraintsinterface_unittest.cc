@@ -13,7 +13,7 @@
 #include "api/test/fakeconstraints.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -66,4 +66,4 @@ TEST(MediaConstraintsInterface, CopyConstraintsIntoRtcConfiguration) {
 
 }  // namespace
 
-}  // namespace webrtc
+}  // namespace webrtz

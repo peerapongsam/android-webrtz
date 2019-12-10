@@ -14,7 +14,7 @@
 
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DesktopFrameWin::DesktopFrameWin(DesktopSize size,
                                  int stride,
@@ -66,4 +66,4 @@ std::unique_ptr<DesktopFrameWin> DesktopFrameWin::Create(
                           std::move(shared_memory), bitmap));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

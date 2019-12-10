@@ -12,7 +12,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/protobuf_utils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 PacketLogger::PacketLogger(const std::string& log_file_path)
     : packet_logger_stream_(log_file_path,
@@ -40,4 +40,4 @@ void PacketLogger::LogPacket(const NetworkTesterPacket& packet) {
   packet_logger_stream_.write(packet_data.data(), packet_data.length());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

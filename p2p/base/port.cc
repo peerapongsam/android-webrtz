@@ -63,56 +63,56 @@ inline bool TooLongWithoutResponse(
 
 // Helper methods for converting string values of log description fields to
 // enum.
-webrtc::IceCandidateType GetCandidateTypeByString(const std::string& type) {
+webrtz::IceCandidateType GetCandidateTypeByString(const std::string& type) {
   if (type == cricket::LOCAL_PORT_TYPE) {
-    return webrtc::IceCandidateType::kLocal;
+    return webrtz::IceCandidateType::kLocal;
   } else if (type == cricket::STUN_PORT_TYPE) {
-    return webrtc::IceCandidateType::kStun;
+    return webrtz::IceCandidateType::kStun;
   } else if (type == cricket::PRFLX_PORT_TYPE) {
-    return webrtc::IceCandidateType::kPrflx;
+    return webrtz::IceCandidateType::kPrflx;
   } else if (type == cricket::RELAY_PORT_TYPE) {
-    return webrtc::IceCandidateType::kRelay;
+    return webrtz::IceCandidateType::kRelay;
   }
-  return webrtc::IceCandidateType::kUnknown;
+  return webrtz::IceCandidateType::kUnknown;
 }
 
-webrtc::IceCandidatePairProtocol GetProtocolByString(
+webrtz::IceCandidatePairProtocol GetProtocolByString(
     const std::string& protocol) {
   if (protocol == cricket::UDP_PROTOCOL_NAME) {
-    return webrtc::IceCandidatePairProtocol::kUdp;
+    return webrtz::IceCandidatePairProtocol::kUdp;
   } else if (protocol == cricket::TCP_PROTOCOL_NAME) {
-    return webrtc::IceCandidatePairProtocol::kTcp;
+    return webrtz::IceCandidatePairProtocol::kTcp;
   } else if (protocol == cricket::SSLTCP_PROTOCOL_NAME) {
-    return webrtc::IceCandidatePairProtocol::kSsltcp;
+    return webrtz::IceCandidatePairProtocol::kSsltcp;
   } else if (protocol == cricket::TLS_PROTOCOL_NAME) {
-    return webrtc::IceCandidatePairProtocol::kTls;
+    return webrtz::IceCandidatePairProtocol::kTls;
   }
-  return webrtc::IceCandidatePairProtocol::kUnknown;
+  return webrtz::IceCandidatePairProtocol::kUnknown;
 }
 
-webrtc::IceCandidatePairAddressFamily GetAddressFamilyByInt(
+webrtz::IceCandidatePairAddressFamily GetAddressFamilyByInt(
     int address_family) {
   if (address_family == AF_INET) {
-    return webrtc::IceCandidatePairAddressFamily::kIpv4;
+    return webrtz::IceCandidatePairAddressFamily::kIpv4;
   } else if (address_family == AF_INET6) {
-    return webrtc::IceCandidatePairAddressFamily::kIpv6;
+    return webrtz::IceCandidatePairAddressFamily::kIpv6;
   }
-  return webrtc::IceCandidatePairAddressFamily::kUnknown;
+  return webrtz::IceCandidatePairAddressFamily::kUnknown;
 }
 
-webrtc::IceCandidateNetworkType ConvertNetworkType(rtc::AdapterType type) {
+webrtz::IceCandidateNetworkType ConvertNetworkType(rtc::AdapterType type) {
   if (type == rtc::ADAPTER_TYPE_ETHERNET) {
-    return webrtc::IceCandidateNetworkType::kEthernet;
+    return webrtz::IceCandidateNetworkType::kEthernet;
   } else if (type == rtc::ADAPTER_TYPE_LOOPBACK) {
-    return webrtc::IceCandidateNetworkType::kLoopback;
+    return webrtz::IceCandidateNetworkType::kLoopback;
   } else if (type == rtc::ADAPTER_TYPE_WIFI) {
-    return webrtc::IceCandidateNetworkType::kWifi;
+    return webrtz::IceCandidateNetworkType::kWifi;
   } else if (type == rtc::ADAPTER_TYPE_VPN) {
-    return webrtc::IceCandidateNetworkType::kVpn;
+    return webrtz::IceCandidateNetworkType::kVpn;
   } else if (type == rtc::ADAPTER_TYPE_CELLULAR) {
-    return webrtc::IceCandidateNetworkType::kCellular;
+    return webrtz::IceCandidateNetworkType::kCellular;
   }
-  return webrtc::IceCandidateNetworkType::kUnknown;
+  return webrtz::IceCandidateNetworkType::kUnknown;
 }
 
 // We will restrict RTT estimates (when used for determining state) to be
@@ -146,8 +146,8 @@ const int64_t kForgetPacketAfter = 30000;  // 30 seconds
 
 namespace cricket {
 
-using webrtc::RTCErrorType;
-using webrtc::RTCError;
+using webrtz::RTCErrorType;
+using webrtz::RTCError;
 
 // TODO(ronghuawu): Use "local", "srflx", "prflx" and "relay". But this requires
 // the signaling part be updated correspondingly as well.
@@ -793,7 +793,7 @@ void Port::SendBindingResponse(StunMessage* request,
 
     conn->stats_.sent_ping_responses++;
     conn->LogCandidatePairEvent(
-        webrtc::IceCandidatePairEventType::kCheckResponseSent);
+        webrtz::IceCandidatePairEventType::kCheckResponseSent);
   }
 }
 
@@ -1259,7 +1259,7 @@ void Connection::HandleBindingRequest(IceMessage* msg) {
   }
 
   stats_.recv_ping_requests++;
-  LogCandidatePairEvent(webrtc::IceCandidatePairEventType::kCheckReceived);
+  LogCandidatePairEvent(webrtz::IceCandidatePairEventType::kCheckReceived);
 
   // This is a validated stun request from remote peer.
   port_->SendBindingResponse(msg, remote_addr);
@@ -1330,7 +1330,7 @@ void Connection::Destroy() {
   RTC_LOG(LS_VERBOSE) << ToString()
                       << ": Connection destroyed";
   port_->thread()->Post(RTC_FROM_HERE, this, MSG_DELETE);
-  LogCandidatePairEvent(webrtc::IceCandidatePairEventType::kDestroyed);
+  LogCandidatePairEvent(webrtz::IceCandidatePairEventType::kDestroyed);
 }
 
 void Connection::FailAndDestroy() {
@@ -1565,14 +1565,14 @@ std::string Connection::ToSensitiveString() const {
   return ToString();
 }
 
-const webrtc::IceCandidatePairDescription& Connection::ToLogDescription() {
+const webrtz::IceCandidatePairDescription& Connection::ToLogDescription() {
   if (log_description_.has_value()) {
     return log_description_.value();
   }
   const Candidate& local = local_candidate();
   const Candidate& remote = remote_candidate();
   const rtc::Network* network = port()->Network();
-  log_description_ = webrtc::IceCandidatePairDescription();
+  log_description_ = webrtz::IceCandidatePairDescription();
   log_description_->local_candidate_type =
       GetCandidateTypeByString(local.type());
   log_description_->local_relay_protocol =
@@ -1589,7 +1589,7 @@ const webrtc::IceCandidatePairDescription& Connection::ToLogDescription() {
   return log_description_.value();
 }
 
-void Connection::LogCandidatePairEvent(webrtc::IceCandidatePairEventType type) {
+void Connection::LogCandidatePairEvent(webrtz::IceCandidatePairEventType type) {
   if (ice_event_log_ == nullptr) {
     return;
   }
@@ -1621,7 +1621,7 @@ void Connection::OnConnectionRequestResponse(ConnectionRequest* request,
 
   stats_.recv_ping_responses++;
   LogCandidatePairEvent(
-      webrtc::IceCandidatePairEventType::kCheckResponseReceived);
+      webrtz::IceCandidatePairEventType::kCheckResponseReceived);
 
   MaybeUpdateLocalCandidate(request, response);
 }
@@ -1668,7 +1668,7 @@ void Connection::OnConnectionRequestSent(ConnectionRequest* request) {
                  << ", use_candidate=" << use_candidate_attr()
                  << ", nomination=" << nomination();
   stats_.sent_ping_requests_total++;
-  LogCandidatePairEvent(webrtc::IceCandidatePairEventType::kCheckSent);
+  LogCandidatePairEvent(webrtz::IceCandidatePairEventType::kCheckSent);
   if (stats_.recv_ping_responses == 0) {
     stats_.sent_ping_requests_before_first_response++;
   }

@@ -12,7 +12,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const char MediaStreamTrackInterface::kVideoKind[] = "video";
 const char MediaStreamTrackInterface::kAudioKind[] = "audio";
@@ -58,4 +58,4 @@ AudioTrackInterface::GetAudioProcessor() {
   return nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

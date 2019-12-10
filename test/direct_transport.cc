@@ -14,7 +14,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/single_threaded_task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 DirectTransport::DirectTransport(
@@ -127,4 +127,4 @@ void DirectTransport::SendPackets() {
   }, delay_ms);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

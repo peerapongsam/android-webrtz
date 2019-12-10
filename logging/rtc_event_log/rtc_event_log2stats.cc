@@ -67,7 +67,7 @@ std::pair<uint64_t, bool> ParseVarInt(std::istream& stream) {
 }
 
 bool ParseEvents(const std::string& filename,
-                 std::vector<webrtc::rtclog::Event>* events) {
+                 std::vector<webrtz::rtclog::Event>* events) {
   std::ifstream stream(filename, std::ios_base::in | std::ios_base::binary);
   if (!stream.good() || !stream.is_open()) {
     RTC_LOG(LS_WARNING) << "Could not open file for reading.";
@@ -122,7 +122,7 @@ bool ParseEvents(const std::string& filename,
     }
 
     // Parse the protobuf event from the buffer.
-    webrtc::rtclog::Event event;
+    webrtz::rtclog::Event event;
     if (!event.ParseFromArray(tmp_buffer.data(), message_length)) {
       RTC_LOG(LS_WARNING) << "Failed to parse protobuf message.";
       return false;
@@ -132,43 +132,43 @@ bool ParseEvents(const std::string& filename,
 }
 
 // TODO(terelius): Should this be placed in some utility file instead?
-std::string EventTypeToString(webrtc::rtclog::Event::EventType event_type) {
+std::string EventTypeToString(webrtz::rtclog::Event::EventType event_type) {
   switch (event_type) {
-    case webrtc::rtclog::Event::UNKNOWN_EVENT:
+    case webrtz::rtclog::Event::UNKNOWN_EVENT:
       return "UNKNOWN_EVENT";
-    case webrtc::rtclog::Event::LOG_START:
+    case webrtz::rtclog::Event::LOG_START:
       return "LOG_START";
-    case webrtc::rtclog::Event::LOG_END:
+    case webrtz::rtclog::Event::LOG_END:
       return "LOG_END";
-    case webrtc::rtclog::Event::RTP_EVENT:
+    case webrtz::rtclog::Event::RTP_EVENT:
       return "RTP_EVENT";
-    case webrtc::rtclog::Event::RTCP_EVENT:
+    case webrtz::rtclog::Event::RTCP_EVENT:
       return "RTCP_EVENT";
-    case webrtc::rtclog::Event::AUDIO_PLAYOUT_EVENT:
+    case webrtz::rtclog::Event::AUDIO_PLAYOUT_EVENT:
       return "AUDIO_PLAYOUT_EVENT";
-    case webrtc::rtclog::Event::LOSS_BASED_BWE_UPDATE:
+    case webrtz::rtclog::Event::LOSS_BASED_BWE_UPDATE:
       return "LOSS_BASED_BWE_UPDATE";
-    case webrtc::rtclog::Event::DELAY_BASED_BWE_UPDATE:
+    case webrtz::rtclog::Event::DELAY_BASED_BWE_UPDATE:
       return "DELAY_BASED_BWE_UPDATE";
-    case webrtc::rtclog::Event::VIDEO_RECEIVER_CONFIG_EVENT:
+    case webrtz::rtclog::Event::VIDEO_RECEIVER_CONFIG_EVENT:
       return "VIDEO_RECV_CONFIG";
-    case webrtc::rtclog::Event::VIDEO_SENDER_CONFIG_EVENT:
+    case webrtz::rtclog::Event::VIDEO_SENDER_CONFIG_EVENT:
       return "VIDEO_SEND_CONFIG";
-    case webrtc::rtclog::Event::AUDIO_RECEIVER_CONFIG_EVENT:
+    case webrtz::rtclog::Event::AUDIO_RECEIVER_CONFIG_EVENT:
       return "AUDIO_RECV_CONFIG";
-    case webrtc::rtclog::Event::AUDIO_SENDER_CONFIG_EVENT:
+    case webrtz::rtclog::Event::AUDIO_SENDER_CONFIG_EVENT:
       return "AUDIO_SEND_CONFIG";
-    case webrtc::rtclog::Event::AUDIO_NETWORK_ADAPTATION_EVENT:
+    case webrtz::rtclog::Event::AUDIO_NETWORK_ADAPTATION_EVENT:
       return "AUDIO_NETWORK_ADAPTATION";
-    case webrtc::rtclog::Event::BWE_PROBE_CLUSTER_CREATED_EVENT:
+    case webrtz::rtclog::Event::BWE_PROBE_CLUSTER_CREATED_EVENT:
       return "BWE_PROBE_CREATED";
-    case webrtc::rtclog::Event::BWE_PROBE_RESULT_EVENT:
+    case webrtz::rtclog::Event::BWE_PROBE_RESULT_EVENT:
       return "BWE_PROBE_RESULT";
-    case webrtc::rtclog::Event::ALR_STATE_EVENT:
+    case webrtz::rtclog::Event::ALR_STATE_EVENT:
       return "ALR_STATE_EVENT";
-    case webrtc::rtclog::Event::ICE_CANDIDATE_PAIR_CONFIG:
+    case webrtz::rtclog::Event::ICE_CANDIDATE_PAIR_CONFIG:
       return "ICE_CANDIDATE_PAIR_CONFIG";
-    case webrtc::rtclog::Event::ICE_CANDIDATE_PAIR_EVENT:
+    case webrtz::rtclog::Event::ICE_CANDIDATE_PAIR_EVENT:
       return "ICE_CANDIDATE_PAIR_EVENT";
   }
   RTC_NOTREACHED();
@@ -200,7 +200,7 @@ int main(int argc, char* argv[]) {
   }
   std::string file_name = argv[1];
 
-  std::vector<webrtc::rtclog::Event> events;
+  std::vector<webrtz::rtclog::Event> events;
   if (!ParseEvents(file_name, &events)) {
     RTC_LOG(LS_ERROR) << "Failed to parse event log.";
     return -1;
@@ -215,11 +215,11 @@ int main(int argc, char* argv[]) {
   // We are deliberately using low level protobuf functions to get the stats
   // since the convenience functions in the parser would CHECK that the events
   // are well formed.
-  std::map<webrtc::rtclog::Event::EventType, Stats> stats;
+  std::map<webrtz::rtclog::Event::EventType, Stats> stats;
   int malformed_events = 0;
   size_t malformed_event_size = 0;
   size_t accumulated_event_size = 0;
-  for (const webrtc::rtclog::Event& event : events) {
+  for (const webrtz::rtclog::Event& event : events) {
     size_t serialized_size = event.ByteSizeLong();
     // When the event is written on the disk, it is part of an EventStream
     // object. The event stream will prepend a 1 byte field number/wire type,

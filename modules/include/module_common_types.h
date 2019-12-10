@@ -35,7 +35,7 @@
 #include "rtc_base/timeutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct RTPAudioHeader {
   uint8_t numEnergy;                  // number of valid entries in arrOfEnergy
@@ -299,6 +299,6 @@ struct PacedPacketInfo {
   int probe_cluster_min_bytes = -1;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_INCLUDE_MODULE_COMMON_TYPES_H_

@@ -16,7 +16,7 @@
 #include "media/base/videobroadcaster.h"
 #include "rtc_base/task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FakePeriodicVideoSource final
     : public rtc::VideoSourceInterface<VideoFrame> {
@@ -30,12 +30,12 @@ class FakePeriodicVideoSource final
     task_queue_.PostTask(rtc::MakeUnique<FrameTask>(&broadcaster_));
   }
 
-  void RemoveSink(rtc::VideoSinkInterface<webrtc::VideoFrame>* sink) override {
+  void RemoveSink(rtc::VideoSinkInterface<webrtz::VideoFrame>* sink) override {
     RTC_DCHECK(thread_checker_.CalledOnValidThread());
     broadcaster_.RemoveSink(sink);
   }
 
-  void AddOrUpdateSink(rtc::VideoSinkInterface<webrtc::VideoFrame>* sink,
+  void AddOrUpdateSink(rtc::VideoSinkInterface<webrtz::VideoFrame>* sink,
                        const rtc::VideoSinkWants& wants) override {
     RTC_DCHECK(thread_checker_.CalledOnValidThread());
     broadcaster_.AddOrUpdateSink(sink, wants);
@@ -60,7 +60,7 @@ class FakePeriodicVideoSource final
     rtc::VideoSinkInterface<VideoFrame>* sink_;
   };
 
-  void OnFrame(const webrtc::VideoFrame& frame) { broadcaster_.OnFrame(frame); }
+  void OnFrame(const webrtz::VideoFrame& frame) { broadcaster_.OnFrame(frame); }
   rtc::ThreadChecker thread_checker_;
 
   rtc::VideoBroadcaster broadcaster_;
@@ -69,6 +69,6 @@ class FakePeriodicVideoSource final
   rtc::TaskQueue task_queue_{"FakePeriodicVideoTrackSource"};
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_FAKEPERIODICVIDEOSOURCE_H_

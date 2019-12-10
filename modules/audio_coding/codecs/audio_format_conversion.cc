@@ -18,7 +18,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/sanitizer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -85,4 +85,4 @@ CodecInst SdpToCodecInst(int payload_type, const SdpAudioFormat& audio_format) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

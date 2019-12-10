@@ -16,7 +16,7 @@
 #include "modules/desktop_capture/desktop_capturer.h"
 #include "modules/desktop_capture/shared_desktop_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // DesktopCapturer wrapper that calculates updated_region() by comparing frames
 // content. This class always expects the underlying DesktopCapturer
@@ -57,6 +57,6 @@ class DesktopCapturerDifferWrapper : public DesktopCapturer,
   std::unique_ptr<SharedDesktopFrame> last_frame_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURER_DIFFER_WRAPPER_H_

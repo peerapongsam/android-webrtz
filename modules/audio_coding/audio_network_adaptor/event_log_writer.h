@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/include/audio_network_adaptor.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 class RtcEventLog;
 
 class EventLogWriter final {
@@ -37,6 +37,6 @@ class EventLogWriter final {
   RTC_DISALLOW_COPY_AND_ASSIGN(EventLogWriter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_EVENT_LOG_WRITER_H_

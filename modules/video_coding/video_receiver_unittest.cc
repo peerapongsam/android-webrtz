@@ -25,7 +25,7 @@ using ::testing::_;
 using ::testing::AnyNumber;
 using ::testing::NiceMock;
 
-namespace webrtc {
+namespace webrtz {
 namespace vcm {
 namespace {
 
@@ -44,7 +44,7 @@ class TestVideoReceiver : public ::testing::Test {
     const int kMaxPacketAgeToNack = 450;
     receiver_->SetNackSettings(kMaxNackListSize, kMaxPacketAgeToNack, 0);
 
-    webrtc::test::CodecSettings(kVideoCodecVP8, &settings_);
+    webrtz::test::CodecSettings(kVideoCodecVP8, &settings_);
     settings_.plType = kUnusedPayloadType;  // Use the mocked encoder.
     EXPECT_EQ(0, receiver_->RegisterReceiveCodec(&settings_, 1, true));
 
@@ -220,4 +220,4 @@ TEST_F(TestVideoReceiver, ReceiverDelay) {
 
 }  // namespace
 }  // namespace vcm
-}  // namespace webrtc
+}  // namespace webrtz

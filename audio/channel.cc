@@ -47,7 +47,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace voe {
 
 namespace {
@@ -64,7 +64,7 @@ constexpr int kVoiceEngineMaxMinPlayoutDelayMs = 10000;
 
 const int kTelephoneEventAttenuationdB = 10;
 
-class RtcEventLogProxy final : public webrtc::RtcEventLog {
+class RtcEventLogProxy final : public webrtz::RtcEventLog {
  public:
   RtcEventLogProxy() : event_log_(nullptr) {}
 
@@ -564,7 +564,7 @@ Channel::Channel(ProcessThread* module_process_thread,
       retransmission_rate_limiter_(new RateLimiter(Clock::GetRealTimeClock(),
                                                    kMaxRetransmissionWindowMs)),
       use_twcc_plr_for_ana_(
-          webrtc::field_trial::FindFullName("UseTwccPlrForAna") == "Enabled") {
+          webrtz::field_trial::FindFullName("UseTwccPlrForAna") == "Enabled") {
   RTC_DCHECK(module_process_thread);
   RTC_DCHECK(audio_device_module);
   AudioCodingModule::Config acm_config;
@@ -1466,4 +1466,4 @@ int64_t Channel::GetRTT(bool allow_associate_channel) const {
 }
 
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz

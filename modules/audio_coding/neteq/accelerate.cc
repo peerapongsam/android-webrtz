@@ -12,7 +12,7 @@
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Accelerate::ReturnCodes Accelerate::Process(const int16_t* input,
                                             size_t input_length,
@@ -98,4 +98,4 @@ Accelerate* AccelerateFactory::Create(
   return new Accelerate(sample_rate_hz, num_channels, background_noise);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

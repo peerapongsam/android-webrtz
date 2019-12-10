@@ -22,7 +22,7 @@ bool IsAligned(const void* ptr, size_t alignment) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(AlignedArrayTest, CheckAlignment) {
   AlignedArray<bool> arr(10, 7, 128);
@@ -57,4 +57,4 @@ TEST(AlignedArrayTest, CheckRowsCols) {
   ASSERT_EQ(arr.cols(), 7u);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

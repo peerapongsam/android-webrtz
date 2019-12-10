@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/neteq/packet.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Packet::Packet() = default;
 Packet::Packet(Packet&& b) = default;
@@ -32,4 +32,4 @@ Packet Packet::Clone() const {
   return clone;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

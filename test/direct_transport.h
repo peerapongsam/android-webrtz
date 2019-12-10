@@ -21,7 +21,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "test/single_threaded_task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class PacketReceiver;
@@ -83,6 +83,6 @@ class DirectTransport : public Transport {
   rtc::SequencedTaskChecker sequence_checker_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_DIRECT_TRANSPORT_H_

@@ -11,7 +11,7 @@
 #include "test/drifting_clock.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 const float DriftingClock::kDoubleSpeed = 2.0f;
 const float DriftingClock::kNoDrift = 1.0f;
@@ -53,4 +53,4 @@ int64_t DriftingClock::CurrentNtpInMilliseconds() const {
   return clock_->CurrentNtpInMilliseconds() + Drift() / 1000.;
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

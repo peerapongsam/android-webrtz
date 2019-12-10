@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 size_t AudioEncoderPcm16B::EncodeCall(const int16_t* audio,
                                       size_t input_len,
@@ -57,4 +57,4 @@ bool AudioEncoderPcm16B::Config::IsOk() const {
 AudioEncoderPcm16B::AudioEncoderPcm16B(const CodecInst& codec_inst)
     : AudioEncoderPcm16B(CreateConfig(codec_inst)) {}
 
-}  // namespace webrtc
+}  // namespace webrtz

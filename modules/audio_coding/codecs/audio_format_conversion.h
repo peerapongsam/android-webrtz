@@ -14,11 +14,11 @@
 #include "api/audio_codecs/audio_format.h"
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 SdpAudioFormat CodecInstToSdp(const CodecInst& codec_inst);
 CodecInst SdpToCodecInst(int payload_type, const SdpAudioFormat& audio_format);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_AUDIO_FORMAT_CONVERSION_H_

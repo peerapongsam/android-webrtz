@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -353,4 +353,4 @@ bool XServerPixelBuffer::CaptureRect(const DesktopRect& rect,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

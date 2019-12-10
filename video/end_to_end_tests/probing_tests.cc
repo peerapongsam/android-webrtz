@@ -11,7 +11,7 @@
 #include "test/call_test.h"
 #include "test/field_trial.h"
 #include "test/gtest.h"
-namespace webrtc {
+namespace webrtz {
 
 class ProbingEndToEndTest : public test::CallTest,
                             public testing::WithParamInterface<std::string> {
@@ -305,4 +305,4 @@ TEST_P(ProbingEndToEndTest, ProbeOnVideoEncoderReconfiguration) {
                        << " attempts).";
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

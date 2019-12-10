@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t ExtendedReports::kPacketType;
 // From RFC 3611: RTP Control Protocol Extended Reports (RTCP XR).
@@ -213,4 +213,4 @@ void ExtendedReports::ParseTargetBitrateBlock(const uint8_t* block,
   target_bitrate_->Parse(block, block_length);
 }
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

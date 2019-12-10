@@ -13,7 +13,7 @@
 
 #include "modules/desktop_capture/desktop_geometry.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A passive monitor to detect the change of display configuration on a Windows
 // system.
@@ -33,6 +33,6 @@ class DisplayConfigurationMonitor {
   bool initialized_ = false;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DISPLAY_CONFIGURATION_MONITOR_H_

@@ -20,7 +20,7 @@
 #include "api/audio_codecs/g722/audio_encoder_g722_config.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // G722 encoder API for use as a template parameter to
 // CreateAudioEncoderFactory<...>().
@@ -38,6 +38,6 @@ struct AudioEncoderG722 {
       rtc::Optional<AudioCodecPairId> codec_pair_id = rtc::nullopt);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_G722_AUDIO_ENCODER_G722_H_

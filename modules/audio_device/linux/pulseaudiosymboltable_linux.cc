@@ -27,7 +27,7 @@
 
 #include "modules/audio_device/linux/pulseaudiosymboltable_linux.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace adm_linux_pulse {
 
 LATE_BINDING_SYMBOL_TABLE_DEFINE_BEGIN(PulseAudioSymbolTable, "libpulse.so.0")
@@ -38,4 +38,4 @@ PULSE_AUDIO_SYMBOLS_LIST
 LATE_BINDING_SYMBOL_TABLE_DEFINE_END(PulseAudioSymbolTable)
 
 }  // namespace adm_linux_pulse
-}  // namespace webrtc
+}  // namespace webrtz

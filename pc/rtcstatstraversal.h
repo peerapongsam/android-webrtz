@@ -17,7 +17,7 @@
 #include "api/stats/rtcstatsreport.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Traverses the stats graph, taking all stats objects that are directly or
 // indirectly accessible from and including the stats objects identified by
@@ -38,6 +38,6 @@ rtc::scoped_refptr<RTCStatsReport> TakeReferencedStats(
 // https://w3c.github.io/webrtc-stats/#dom-rtccodecstats-transportid
 std::vector<const std::string*> GetStatsReferencedIds(const RTCStats& stats);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTCSTATSTRAVERSAL_H_

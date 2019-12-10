@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace plotting {
 
 void Plot::SetXAxis(float min_value,
@@ -86,4 +86,4 @@ void Plot::AppendTimeSeriesIfNotEmpty(TimeSeries&& time_series) {
 }
 
 }  // namespace plotting
-}  // namespace webrtc
+}  // namespace webrtz

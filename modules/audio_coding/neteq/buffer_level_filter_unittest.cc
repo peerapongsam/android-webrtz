@@ -16,7 +16,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(BufferLevelFilter, CreateAndDestroy) {
   BufferLevelFilter* filter = new BufferLevelFilter();
@@ -159,4 +159,4 @@ TEST(BufferLevelFilter, TimeStretchedSamplesNegativeUnevenFrames) {
   EXPECT_EQ(kExpectedValue, filter.filtered_current_level() >> 8);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

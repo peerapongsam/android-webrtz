@@ -18,8 +18,8 @@
 #include "modules/audio_processing/transient/transient_detector.h"
 #include "rtc_base/system/file_wrapper.h"
 
-using webrtc::FileWrapper;
-using webrtc::TransientDetector;
+using webrtz::FileWrapper;
+using webrtz::TransientDetector;
 
 // Application to generate a RTP timing file.
 // Opens the PCM file and divides the signal in frames.

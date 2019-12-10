@@ -20,7 +20,7 @@
 #include "api/optional.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A factory that creates AudioDecoders.
 // NOTE: This class is still under development and may change without notice.
@@ -48,6 +48,6 @@ class AudioDecoderFactory : public rtc::RefCountInterface {
       const SdpAudioFormat& format);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_AUDIO_DECODER_FACTORY_H_

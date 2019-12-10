@@ -14,7 +14,7 @@
 #include <cstddef>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 class Histogram {
  public:
@@ -41,6 +41,6 @@ class Histogram {
 };
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_HISTOGRAM_H_

@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "common_video/h264/h264_common.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 namespace {
@@ -376,4 +376,4 @@ TEST_F(TestH264SpsPpsTracker, SaveRestoreWidthHeight) {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

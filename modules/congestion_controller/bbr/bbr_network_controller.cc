@@ -21,7 +21,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/system/fallthrough.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 namespace {
 
@@ -867,4 +867,4 @@ void BbrNetworkController::OnApplicationLimited(DataSize bytes_in_flight) {
                    << ", CWND: " << ToString(GetCongestionWindow());
 }
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz

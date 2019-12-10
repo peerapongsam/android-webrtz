@@ -14,7 +14,7 @@
 #include "call/bitrate_constraints.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // RtpBitrateConfigurator calculates the bitrate configuration based on received
 // remote configuration combined with local overrides.
@@ -63,6 +63,6 @@ class RtpBitrateConfigurator {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(RtpBitrateConfigurator);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_BITRATE_CONFIGURATOR_H_

@@ -19,7 +19,7 @@
 
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
@@ -112,5 +112,5 @@ class SendSideBandwidthEstimation {
   float high_loss_threshold_;
   uint32_t bitrate_threshold_bps_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_BITRATE_CONTROLLER_SEND_SIDE_BANDWIDTH_ESTIMATION_H_

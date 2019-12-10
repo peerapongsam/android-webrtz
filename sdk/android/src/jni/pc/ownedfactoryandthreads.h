@@ -22,7 +22,7 @@ using cricket::WebRtcVideoDecoderFactory;
 using cricket::WebRtcVideoEncoderFactory;
 using rtc::Thread;
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 PeerConnectionFactoryInterface* factoryFromJava(jlong j_p);
@@ -79,6 +79,6 @@ class OwnedFactoryAndThreads {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_OWNEDFACTORYANDTHREADS_H_

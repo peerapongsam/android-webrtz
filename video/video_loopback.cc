@@ -17,7 +17,7 @@
 #include "test/run_test.h"
 #include "video/video_quality_test.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace flags {
 
 // Flags common with screenshare loopback, with different default values.
@@ -319,23 +319,23 @@ void Loopback() {
     test.RunWithRenderers(params);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
   ::testing::InitGoogleTest(&argc, argv);
   rtc::FlagList::SetFlagsFromCommandLine(&argc, argv, true);
-  if (webrtc::flags::FLAG_help) {
+  if (webrtz::flags::FLAG_help) {
     rtc::FlagList::Print(nullptr, false);
     return 0;
   }
 
-  webrtc::test::ValidateFieldTrialsStringOrDie(
-      webrtc::flags::FLAG_force_fieldtrials);
+  webrtz::test::ValidateFieldTrialsStringOrDie(
+      webrtz::flags::FLAG_force_fieldtrials);
   // InitFieldTrialsFromString stores the char*, so the char array must outlive
   // the application.
-  webrtc::field_trial::InitFieldTrialsFromString(
-      webrtc::flags::FLAG_force_fieldtrials);
+  webrtz::field_trial::InitFieldTrialsFromString(
+      webrtz::flags::FLAG_force_fieldtrials);
 
-  webrtc::test::RunTest(webrtc::Loopback);
+  webrtz::test::RunTest(webrtz::Loopback);
   return 0;
 }

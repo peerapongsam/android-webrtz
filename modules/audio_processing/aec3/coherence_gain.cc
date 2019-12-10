@@ -16,7 +16,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -254,4 +254,4 @@ void CoherenceGain::ComputeCoherence(rtc::ArrayView<float> coherence_ye,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

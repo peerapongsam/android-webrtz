@@ -22,7 +22,7 @@
 #include "common_audio/include/audio_util.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 struct ChunkHeader {
@@ -240,4 +240,4 @@ bool ReadWavHeader(ReadableWav* readable,
 }
 
 
-}  // namespace webrtc
+}  // namespace webrtz

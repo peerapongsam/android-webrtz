@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 CircularBuffer::CircularBuffer(size_t size) : buffer_(size) {}
 CircularBuffer::~CircularBuffer() = default;
@@ -46,4 +46,4 @@ void CircularBuffer::Clear() {
   nr_elements_in_buffer_ = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

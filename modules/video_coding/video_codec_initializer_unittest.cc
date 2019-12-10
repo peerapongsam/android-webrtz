@@ -17,7 +17,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const int kDefaultWidth = 1280;
@@ -60,13 +60,13 @@ class VideoCodecInitializerTest : public ::testing::Test {
       VideoCodecVP8 vp8_settings = VideoEncoder::GetDefaultVp8Settings();
       vp8_settings.numberOfTemporalLayers = num_temporal_streams;
       config_.encoder_specific_settings = new rtc::RefCountedObject<
-          webrtc::VideoEncoderConfig::Vp8EncoderSpecificSettings>(vp8_settings);
+          webrtz::VideoEncoderConfig::Vp8EncoderSpecificSettings>(vp8_settings);
     } else if (type == VideoCodecType::kVideoCodecVP9) {
       VideoCodecVP9 vp9_settings = VideoEncoder::GetDefaultVp9Settings();
       vp9_settings.numberOfSpatialLayers = num_spatial_streams;
       vp9_settings.numberOfTemporalLayers = num_temporal_streams;
       config_.encoder_specific_settings = new rtc::RefCountedObject<
-          webrtc::VideoEncoderConfig::Vp9EncoderSpecificSettings>(vp9_settings);
+          webrtz::VideoEncoderConfig::Vp9EncoderSpecificSettings>(vp9_settings);
     } else if (type != VideoCodecType::kVideoCodecMultiplex) {
       ADD_FAILURE() << "Unexpected codec type: " << type;
     }
@@ -284,4 +284,4 @@ TEST_F(VideoCodecInitializerTest,
             kDefaultMaxBitrateBps / 1000);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

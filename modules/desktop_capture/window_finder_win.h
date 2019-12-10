@@ -13,7 +13,7 @@
 
 #include "modules/desktop_capture/window_finder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The implementation of WindowFinder for Windows.
 class WindowFinderWin final : public WindowFinder {
@@ -25,6 +25,6 @@ class WindowFinderWin final : public WindowFinder {
   WindowId GetWindowUnderPoint(DesktopVector point) override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WINDOW_FINDER_WIN_H_

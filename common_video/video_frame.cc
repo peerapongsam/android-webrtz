@@ -17,7 +17,7 @@
 #include "rtc_base/bind.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // FFmpeg's decoder, used by H264DecoderImpl, requires up to 8 bytes padding due
 // to optimized bitstream readers. See avcodec_decode_video2.
@@ -55,4 +55,4 @@ void EncodedImage::SetEncodeTime(int64_t encode_start_ms,
   timing_.encode_start_ms = encode_start_ms;
   timing_.encode_finish_ms = encode_finish_ms;
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "modules/audio_processing/test/protobuf_utils.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -269,4 +269,4 @@ void DebugDumpReplayer::LoadNextMessage() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "logging/rtc_event_log/rtc_event_log.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtcEventLog : public RtcEventLog {
  public:
@@ -37,6 +37,6 @@ class MockRtcEventLog : public RtcEventLog {
   MOCK_METHOD1(LogProxy, void(RtcEvent*));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_MOCK_MOCK_RTC_EVENT_LOG_H_

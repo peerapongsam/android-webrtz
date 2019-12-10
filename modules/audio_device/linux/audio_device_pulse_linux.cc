@@ -16,16 +16,16 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/event_wrapper.h"
 
-webrtc::adm_linux_pulse::PulseAudioSymbolTable PaSymbolTable;
+webrtz::adm_linux_pulse::PulseAudioSymbolTable PaSymbolTable;
 
 // Accesses Pulse functions through our late-binding symbol table instead of
 // directly. This way we don't have to link to libpulse, which means our binary
 // will work on systems that don't have it.
 #define LATE(sym)                                                             \
-  LATESYM_GET(webrtc::adm_linux_pulse::PulseAudioSymbolTable, &PaSymbolTable, \
+  LATESYM_GET(webrtz::adm_linux_pulse::PulseAudioSymbolTable, &PaSymbolTable, \
               sym)
 
-namespace webrtc {
+namespace webrtz {
 
 AudioDeviceLinuxPulse::AudioDeviceLinuxPulse()
     : _ptrAudioBuffer(NULL),
@@ -2299,4 +2299,4 @@ bool AudioDeviceLinuxPulse::KeyPressed() const {
   memcpy((char*)_oldKeyState, (char*)szKey, sizeof(_oldKeyState));
   return (state != 0);
 }
-}  // namespace webrtc
+}  // namespace webrtz

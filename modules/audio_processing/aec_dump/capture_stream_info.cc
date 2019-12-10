@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/aec_dump/capture_stream_info.h"
 
-namespace webrtc {
+namespace webrtz {
 CaptureStreamInfo::CaptureStreamInfo(std::unique_ptr<WriteToFileTask> task)
     : task_(std::move(task)) {
   RTC_DCHECK(task_);
@@ -66,4 +66,4 @@ void CaptureStreamInfo::AddAudioProcessingState(
   stream->set_level(state.level);
   stream->set_keypress(state.keypress);
 }
-}  // namespace webrtc
+}  // namespace webrtz

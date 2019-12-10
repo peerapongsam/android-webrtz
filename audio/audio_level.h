@@ -14,7 +14,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 namespace voe {
@@ -52,6 +52,6 @@ class AudioLevel {
 };
 
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_AUDIO_LEVEL_H_

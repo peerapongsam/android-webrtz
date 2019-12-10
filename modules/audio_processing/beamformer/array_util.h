@@ -16,7 +16,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Coordinates in meters. The convention used is:
 // x: the horizontal dimension, with positive to the right from the camera's
@@ -112,6 +112,6 @@ T RadiansToDegrees(T angle_radians) {
   return 180 * angle_radians / M_PI;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_BEAMFORMER_ARRAY_UTIL_H_

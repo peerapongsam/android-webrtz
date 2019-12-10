@@ -22,7 +22,7 @@
 #include "modules/audio_processing/test/wav_based_simulator.h"
 #include "rtc_base/flags.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -516,4 +516,4 @@ int AudioprocFloatImpl(std::unique_ptr<AudioProcessingBuilder> ap_builder,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

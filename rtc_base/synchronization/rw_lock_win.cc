@@ -12,7 +12,7 @@
 
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static bool native_rw_locks_supported = false;
 static bool module_load_attempted = false;
@@ -92,4 +92,4 @@ bool RWLockWin::LoadModule() {
   return native_rw_locks_supported;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

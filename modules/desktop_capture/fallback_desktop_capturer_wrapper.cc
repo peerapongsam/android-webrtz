@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -177,4 +177,4 @@ void FallbackDesktopCapturerWrapper::OnCaptureResult(
   secondary_capturer_->CaptureFrame();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

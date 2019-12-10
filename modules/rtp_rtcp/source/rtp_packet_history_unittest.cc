@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Set a high sequence number so we'll suffer a wrap-around.
 constexpr uint16_t kStartSeqNum = 65534u;
@@ -489,4 +489,4 @@ TEST_F(RtpPacketHistoryTest, GetBestFittingPacket) {
   EXPECT_EQ(target_packet_size,
             hist_.GetBestFittingPacket(target_packet_size)->size());
 }
-}  // namespace webrtc
+}  // namespace webrtz

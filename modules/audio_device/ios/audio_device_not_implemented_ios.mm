@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int32_t AudioDeviceIOS::ActiveAudioLayer(AudioDeviceModule::AudioLayer& audioLayer) const {
   audioLayer = AudioDeviceModule::kPlatformDefaultAudio;
@@ -202,4 +202,4 @@ int32_t AudioDeviceIOS::RecordingIsAvailable(bool& available) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -29,7 +29,7 @@
 #include "system_wrappers/include/event_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class EventTimerWrapper;
 
@@ -557,4 +557,4 @@ TestAudioDeviceModule::CreateBoundedWavFileWriter(rtc::PlatformFile file,
       new BoundedWavFileWriter(file, sampling_frequency_in_hz, num_channels));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

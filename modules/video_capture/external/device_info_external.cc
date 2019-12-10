@@ -11,7 +11,7 @@
 #include "modules/video_capture/device_info_impl.h"
 #include "modules/video_capture/video_capture_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace videocapturemodule {
 
@@ -47,4 +47,4 @@ VideoCaptureModule::DeviceInfo* VideoCaptureImpl::CreateDeviceInfo() {
 
 }  // namespace videocapturemodule
 
-}  // namespace webrtc
+}  // namespace webrtz

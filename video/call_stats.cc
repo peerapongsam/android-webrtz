@@ -20,7 +20,7 @@
 #include "rtc_base/task_queue.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 void RemoveOldReports(int64_t now, std::list<CallStats::RttTime>* reports) {
@@ -218,4 +218,4 @@ void CallStats::UpdateHistograms() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

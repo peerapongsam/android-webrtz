@@ -16,7 +16,7 @@
 #include "modules/audio_coding/neteq/sync_buffer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(ComfortNoise, CreateAndDestroy) {
   int fs = 8000;
@@ -28,4 +28,4 @@ TEST(ComfortNoise, CreateAndDestroy) {
 
 // TODO(hlundin): Write more tests.
 
-}  // namespace webrtc
+}  // namespace webrtz

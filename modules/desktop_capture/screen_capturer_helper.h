@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/synchronization/rw_lock_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // ScreenCapturerHelper is intended to be used by an implementation of the
 // ScreenCapturer interface. It maintains a thread-safe invalid region, and
@@ -85,6 +85,6 @@ class ScreenCapturerHelper {
   RTC_DISALLOW_COPY_AND_ASSIGN(ScreenCapturerHelper);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_SCREEN_CAPTURER_HELPER_H_

@@ -13,6 +13,6 @@
 #include "rtc_base/ptr_util.h"
 
 int main(int argc, char* argv[]) {
-  return webrtc::test::AudioprocFloat(
-      rtc::MakeUnique<webrtc::AudioProcessingBuilder>(), argc, argv);
+  return webrtz::test::AudioprocFloat(
+      rtc::MakeUnique<webrtz::AudioProcessingBuilder>(), argc, argv);
 }

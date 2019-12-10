@@ -13,7 +13,7 @@
 
 #include "modules/desktop_capture/desktop_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Clears a DesktopFrame |frame| by setting its data() into 0.
 void ClearDesktopFrame(DesktopFrame* frame);
@@ -22,6 +22,6 @@ void ClearDesktopFrame(DesktopFrame* frame);
 bool DesktopFrameDataEquals(const DesktopFrame& left,
                             const DesktopFrame& right);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_TEST_UTILS_H_

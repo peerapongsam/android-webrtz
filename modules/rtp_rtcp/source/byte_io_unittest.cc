@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/source/byte_io.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 class ByteIoTest : public ::testing::Test {
@@ -269,4 +269,4 @@ TEST(ByteIo, SanityCheckFixedByteArrayUnsignedReadLittleEndian) {
   EXPECT_EQ(static_cast<uint64_t>(0x8899AABBCCDDEEFF), value);
 }
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

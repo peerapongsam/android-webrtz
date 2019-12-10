@@ -17,14 +17,14 @@
 
 namespace cricket {
 
-// Helper function that creates a webrtc::VideoDecoder held by an
+// Helper function that creates a webrtz::VideoDecoder held by an
 // std::unique_ptr instead of having to be deleted through
 // WebRtcVideoDecoderFactory::DestroyVideoDecoder. The factory passed in must
 // outlive the returned encoder.
 // TODO(andersc): This helper function will be deleted once
 // cricket::WebRtcVideoDecoderFactory is deprecated, see
 // https://bugs.chromium.org/p/webrtc/issues/detail?id=7925 for more info.
-std::unique_ptr<webrtc::VideoDecoder> CreateScopedVideoDecoder(
+std::unique_ptr<webrtz::VideoDecoder> CreateScopedVideoDecoder(
     cricket::WebRtcVideoDecoderFactory* factory,
     const VideoCodec& codec,
     VideoDecoderParams params);

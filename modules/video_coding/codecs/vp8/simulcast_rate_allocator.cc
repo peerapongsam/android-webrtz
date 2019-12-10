@@ -18,7 +18,7 @@
 #include "modules/video_coding/codecs/vp8/include/vp8_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 SimulcastRateAllocator::SimulcastRateAllocator(const VideoCodec& codec)
     : codec_(codec) {}
@@ -232,7 +232,7 @@ uint32_t SimulcastRateAllocator::GetPreferredBitrateBps(uint32_t framerate) {
   return GetAllocation(codec_.maxBitrate * 1000, framerate).get_sum_bps();
 }
 
-const VideoCodec& webrtc::SimulcastRateAllocator::GetCodec() const {
+const VideoCodec& webrtz::SimulcastRateAllocator::GetCodec() const {
   return codec_;
 }
 
@@ -243,4 +243,4 @@ int SimulcastRateAllocator::NumTemporalStreams(size_t simulcast_id) const {
              : codec_.simulcastStream[simulcast_id].numberOfTemporalLayers);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

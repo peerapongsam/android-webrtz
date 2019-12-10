@@ -20,7 +20,7 @@
 #include "modules/audio_processing/utility/ooura_fft.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 class AudioBuffer;
@@ -62,6 +62,6 @@ class SignalClassifier {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SignalClassifier);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_SIGNAL_CLASSIFIER_H_

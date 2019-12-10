@@ -16,7 +16,7 @@
 #include "pc/rtptransporttestutil.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 constexpr bool kMuxDisabled = false;
 constexpr bool kMuxEnabled = true;
@@ -326,4 +326,4 @@ TEST(RtpTransportTest, SignalHandledRtpPayloadType) {
   EXPECT_EQ(0, observer.rtcp_count());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

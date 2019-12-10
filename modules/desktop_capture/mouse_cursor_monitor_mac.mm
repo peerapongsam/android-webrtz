@@ -29,7 +29,7 @@
 #include "rtc_base/macutils.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 CGImageRef CreateScaledCGImage(CGImageRef image, int width, int height) {
@@ -323,4 +323,4 @@ std::unique_ptr<MouseCursorMonitor> MouseCursorMonitor::Create(
       CreateForScreen(options, kFullDesktopScreenId));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

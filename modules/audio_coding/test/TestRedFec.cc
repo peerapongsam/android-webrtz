@@ -32,7 +32,7 @@
 #undef SUPPORT_RED_FB
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -62,7 +62,7 @@ TestRedFec::~TestRedFec() {
 }
 
 void TestRedFec::Perform() {
-  const std::string file_name = webrtc::test::ResourcePath(
+  const std::string file_name = webrtz::test::ResourcePath(
       "audio_coding/testfile32kHz", "pcm");
   _inFileA.Open(file_name, 32000, "rb");
 
@@ -465,11 +465,11 @@ void TestRedFec::Run() {
 void TestRedFec::OpenOutFile(int16_t test_number) {
   std::string file_name;
   std::stringstream file_stream;
-  file_stream << webrtc::test::OutputPath();
+  file_stream << webrtz::test::OutputPath();
   file_stream << "TestRedFec_outFile_";
   file_stream << test_number << ".pcm";
   file_name = file_stream.str();
   _outFileB.Open(file_name, 16000, "wb");
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

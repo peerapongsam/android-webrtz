@@ -15,7 +15,7 @@
 
 #include "modules/audio_processing/include/audio_processing.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // This is an interface for the audio processing simulation utility. This
@@ -37,6 +37,6 @@ int AudioprocFloat(std::unique_ptr<AudioProcessingBuilder> ap_builder,
                    char* argv[]);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_TEST_AUDIOPROC_FLOAT_H_

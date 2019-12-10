@@ -17,7 +17,7 @@
 #include "modules/audio_processing/aec3/render_delay_controller.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockRenderDelayController : public RenderDelayController {
@@ -35,6 +35,6 @@ class MockRenderDelayController : public RenderDelayController {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_MOCK_MOCK_RENDER_DELAY_CONTROLLER_H_

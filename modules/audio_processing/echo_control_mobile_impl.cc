@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 int16_t MapSetting(EchoControlMobile::RoutingMode mode) {
@@ -388,4 +388,4 @@ int EchoControlMobileImpl::Configure() {
   return error;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

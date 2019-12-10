@@ -16,7 +16,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Desktop {
  public:
@@ -58,6 +58,6 @@ class Desktop {
   RTC_DISALLOW_COPY_AND_ASSIGN(Desktop);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DESKTOP_H_

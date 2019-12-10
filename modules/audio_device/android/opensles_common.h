@@ -16,7 +16,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Returns a string representation given an integer SL_RESULT_XXX code.
 // The mapping can be found in <SLES/OpenSLES.h>.
@@ -57,6 +57,6 @@ class ScopedSLObject {
 
 typedef ScopedSLObject<SLObjectItf, const SLObjectItf_*> ScopedSLObjectItf;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_OPENSLES_COMMON_H_

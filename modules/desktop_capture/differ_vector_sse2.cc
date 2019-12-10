@@ -17,7 +17,7 @@
 #include <emmintrin.h>
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 extern bool VectorDifference_SSE2_W16(const uint8_t* image1,
                                       const uint8_t* image2) {
@@ -99,4 +99,4 @@ extern bool VectorDifference_SSE2_W32(const uint8_t* image1,
   return _mm_cvtsi128_si32(sad) != 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

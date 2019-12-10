@@ -20,7 +20,7 @@
 #include "modules/audio_processing/aec3/render_buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Provides functionality for analyzing the properties of the render signal.
 class RenderSignalAnalyzer {
@@ -55,6 +55,6 @@ class RenderSignalAnalyzer {
   RTC_DISALLOW_COPY_AND_ASSIGN(RenderSignalAnalyzer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_RENDER_SIGNAL_ANALYZER_H_

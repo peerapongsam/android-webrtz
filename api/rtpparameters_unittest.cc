@@ -13,9 +13,9 @@
 #include "api/rtpparameters.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
-using webrtc::RtpExtension;
+using webrtz::RtpExtension;
 
 static const char kExtensionUri1[] = "extension-uri1";
 static const char kExtensionUri2[] = "extension-uri2";
@@ -48,4 +48,4 @@ TEST(RtpExtensionTest, FilterDuplicateNonEncrypted) {
   EXPECT_EQ(2u, filtered.size());
   EXPECT_EQ(extensions, filtered);
 }
-}  // namespace webrtc
+}  // namespace webrtz

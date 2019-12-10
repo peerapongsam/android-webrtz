@@ -23,12 +23,12 @@
 RTC_PUSH_IGNORING_WUNDEF()
 #include "rtc_tools/network_tester/network_tester_config.pb.h"
 RTC_POP_IGNORING_WUNDEF()
-using webrtc::network_tester::config::NetworkTesterAllConfigs;
+using webrtz::network_tester::config::NetworkTesterAllConfigs;
 #else
 class NetworkTesterConfigs;
 #endif  // WEBRTC_NETWORK_TESTER_PROTO
 
-namespace webrtc {
+namespace webrtz {
 
 class ConfigReader {
  public:
@@ -48,6 +48,6 @@ class ConfigReader {
   RTC_DISALLOW_COPY_AND_ASSIGN(ConfigReader);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_NETWORK_TESTER_CONFIG_READER_H_

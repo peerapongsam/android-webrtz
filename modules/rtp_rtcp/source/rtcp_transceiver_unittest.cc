@@ -28,14 +28,14 @@ using ::testing::InvokeWithoutArgs;
 using ::testing::IsNull;
 using ::testing::NiceMock;
 using ::testing::_;
-using ::webrtc::MockTransport;
-using ::webrtc::RtcpTransceiver;
-using ::webrtc::RtcpTransceiverConfig;
-using ::webrtc::rtcp::TransportFeedback;
+using ::webrtz::MockTransport;
+using ::webrtz::RtcpTransceiver;
+using ::webrtz::RtcpTransceiverConfig;
+using ::webrtz::rtcp::TransportFeedback;
 
-class MockMediaReceiverRtcpObserver : public webrtc::MediaReceiverRtcpObserver {
+class MockMediaReceiverRtcpObserver : public webrtz::MediaReceiverRtcpObserver {
  public:
-  MOCK_METHOD3(OnSenderReport, void(uint32_t, webrtc::NtpTime, uint32_t));
+  MOCK_METHOD3(OnSenderReport, void(uint32_t, webrtz::NtpTime, uint32_t));
 };
 
 constexpr int kTimeoutMs = 1000;
@@ -97,7 +97,7 @@ TEST(RtcpTransceiverTest, CanBeDestoryedOnTaskQueue) {
 
 // Use rtp timestamp to distinguish different incoming sender reports.
 rtc::CopyOnWriteBuffer CreateSenderReport(uint32_t ssrc, uint32_t rtp_time) {
-  webrtc::rtcp::SenderReport sr;
+  webrtz::rtcp::SenderReport sr;
   sr.SetSenderSsrc(ssrc);
   sr.SetRtpTimestamp(rtp_time);
   rtc::Buffer buffer = sr.Build();

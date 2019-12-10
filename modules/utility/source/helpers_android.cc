@@ -22,7 +22,7 @@
 #define TAG "HelpersAndroid"
 #define ALOGD(...) __android_log_print(ANDROID_LOG_DEBUG, TAG, __VA_ARGS__)
 
-namespace webrtc {
+namespace webrtz {
 
 JNIEnv* GetEnv(JavaVM* jvm) {
   void* env = NULL;
@@ -109,4 +109,4 @@ AttachThreadScoped::~AttachThreadScoped() {
 
 JNIEnv* AttachThreadScoped::env() { return env_; }
 
-}  // namespace webrtc
+}  // namespace webrtz

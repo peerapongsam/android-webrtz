@@ -12,7 +12,7 @@
 #include "rtc_base/gunit.h"
 #include "rtc_base/testutils.h"
 
-using namespace webrtc::testing;
+using namespace webrtz::testing;
 
 namespace rtc {
 

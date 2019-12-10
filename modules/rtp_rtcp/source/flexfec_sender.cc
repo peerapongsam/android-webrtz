@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/source/rtp_header_extensions.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -167,4 +167,4 @@ RtpState FlexfecSender::GetRtpState() {
   return rtp_state;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

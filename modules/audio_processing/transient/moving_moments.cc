@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MovingMoments::MovingMoments(size_t length)
     : length_(length),
@@ -49,4 +49,4 @@ void MovingMoments::CalculateMoments(const float* in, size_t in_length,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

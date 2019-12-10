@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kStartTimeSec = 16;
@@ -165,4 +165,4 @@ TEST(VoiceActivityDetectorTest, Noise32kHzHasLowVoiceProbabilities) {
   EXPECT_LT(max_probability, kMaxNoiseProbability);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

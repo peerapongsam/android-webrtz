@@ -17,7 +17,7 @@
 #include "modules/audio_coding/audio_network_adaptor/util/threshold_curve.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FecControllerRplrBased final : public Controller {
  public:
@@ -61,6 +61,6 @@ class FecControllerRplrBased final : public Controller {
   RTC_DISALLOW_COPY_AND_ASSIGN(FecControllerRplrBased);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_FEC_CONTROLLER_RPLR_BASED_H_

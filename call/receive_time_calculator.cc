@@ -13,10 +13,10 @@
 #include "rtc_base/ptr_util.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
-using ::webrtc::field_trial::FindFullName;
-using ::webrtc::field_trial::IsEnabled;
+using ::webrtz::field_trial::FindFullName;
+using ::webrtz::field_trial::IsEnabled;
 
 const char kBweReceiveTimeCorrection[] = "WebRTC-BweReceiveTimeCorrection";
 }  // namespace
@@ -64,4 +64,4 @@ int64_t ReceiveTimeCalculator::ReconcileReceiveTimes(int64_t packet_time_us_,
   last_safe_time_us_ = safe_time_us_;
   return packet_time_us_ + *receive_time_offset_us_;
 }
-}  // namespace webrtc
+}  // namespace webrtz

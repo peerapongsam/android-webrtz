@@ -30,7 +30,7 @@ const unsigned char kPayloadType = 100;
 
 };
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpRtcpVideoTest : public ::testing::Test {
  protected:
@@ -179,4 +179,4 @@ TEST_F(RtpRtcpVideoTest, PaddingOnlyFrames) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

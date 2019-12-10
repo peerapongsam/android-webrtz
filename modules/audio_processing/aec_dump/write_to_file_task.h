@@ -31,11 +31,11 @@ RTC_PUSH_IGNORING_WUNDEF()
 #endif
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 
 class WriteToFileTask : public rtc::QueuedTask {
  public:
-  WriteToFileTask(webrtc::FileWrapper* debug_file,
+  WriteToFileTask(webrtz::FileWrapper* debug_file,
                   int64_t* num_bytes_left_for_log);
   ~WriteToFileTask() override;
 
@@ -48,11 +48,11 @@ class WriteToFileTask : public rtc::QueuedTask {
 
   bool Run() override;
 
-  webrtc::FileWrapper* debug_file_;
+  webrtz::FileWrapper* debug_file_;
   audioproc::Event event_;
   int64_t* num_bytes_left_for_log_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_WRITE_TO_FILE_TASK_H_

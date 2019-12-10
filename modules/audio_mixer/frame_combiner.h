@@ -18,7 +18,7 @@
 #include "modules/audio_processing/include/audio_processing.h"
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 class ApmDataDumper;
 class FixedGainController;
 
@@ -54,6 +54,6 @@ class FrameCombiner {
   FixedGainController apm_agc2_limiter_;
   mutable int uma_logging_counter_ = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_MIXER_FRAME_COMBINER_H_

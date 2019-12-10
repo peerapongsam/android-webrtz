@@ -19,7 +19,7 @@
 #include "rtc_base/arraysize.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -337,4 +337,4 @@ TEST_F(DesktopAndCursorComposerTest, CursorIncluded) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

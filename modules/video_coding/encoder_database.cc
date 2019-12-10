@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const size_t kDefaultPayloadSize = 1440;
@@ -191,4 +191,4 @@ bool VCMEncoderDataBase::MatchesCurrentResolution(int width, int height) const {
   return send_codec_.width == width && send_codec_.height == height;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

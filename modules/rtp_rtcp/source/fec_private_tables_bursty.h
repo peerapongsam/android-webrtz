@@ -29,11 +29,11 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace fec_private_tables {
 
 extern const uint8_t kPacketMaskBurstyTbl[];
 
 }  // namespace fec_private_tables
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_FEC_PRIVATE_TABLES_BURSTY_H_

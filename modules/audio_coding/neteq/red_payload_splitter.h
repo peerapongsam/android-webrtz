@@ -14,7 +14,7 @@
 #include "modules/audio_coding/neteq/packet.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class DecoderDatabase;
@@ -47,5 +47,5 @@ class RedPayloadSplitter {
   RTC_DISALLOW_COPY_AND_ASSIGN(RedPayloadSplitter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_RED_PAYLOAD_SPLITTER_H_

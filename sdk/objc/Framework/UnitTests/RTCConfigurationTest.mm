@@ -51,29 +51,29 @@
   config.shouldPruneTurnPorts = YES;
   config.iceRegatherIntervalRange = range;
 
-  std::unique_ptr<webrtc::PeerConnectionInterface::RTCConfiguration>
+  std::unique_ptr<webrtz::PeerConnectionInterface::RTCConfiguration>
       nativeConfig([config createNativeConfiguration]);
   EXPECT_TRUE(nativeConfig.get());
   EXPECT_EQ(1u, nativeConfig->servers.size());
-  webrtc::PeerConnectionInterface::IceServer nativeServer =
+  webrtz::PeerConnectionInterface::IceServer nativeServer =
       nativeConfig->servers.front();
   EXPECT_EQ(1u, nativeServer.urls.size());
   EXPECT_EQ("stun:stun1.example.net", nativeServer.urls.front());
 
-  EXPECT_EQ(webrtc::PeerConnectionInterface::kRelay, nativeConfig->type);
-  EXPECT_EQ(webrtc::PeerConnectionInterface::kBundlePolicyMaxBundle,
+  EXPECT_EQ(webrtz::PeerConnectionInterface::kRelay, nativeConfig->type);
+  EXPECT_EQ(webrtz::PeerConnectionInterface::kBundlePolicyMaxBundle,
             nativeConfig->bundle_policy);
-  EXPECT_EQ(webrtc::PeerConnectionInterface::kRtcpMuxPolicyNegotiate,
+  EXPECT_EQ(webrtz::PeerConnectionInterface::kRtcpMuxPolicyNegotiate,
             nativeConfig->rtcp_mux_policy);
-  EXPECT_EQ(webrtc::PeerConnectionInterface::kTcpCandidatePolicyDisabled,
+  EXPECT_EQ(webrtz::PeerConnectionInterface::kTcpCandidatePolicyDisabled,
             nativeConfig->tcp_candidate_policy);
-  EXPECT_EQ(webrtc::PeerConnectionInterface::kCandidateNetworkPolicyLowCost,
+  EXPECT_EQ(webrtz::PeerConnectionInterface::kCandidateNetworkPolicyLowCost,
             nativeConfig->candidate_network_policy);
   EXPECT_EQ(maxPackets, nativeConfig->audio_jitter_buffer_max_packets);
   EXPECT_EQ(true, nativeConfig->audio_jitter_buffer_fast_accelerate);
   EXPECT_EQ(timeout, nativeConfig->ice_connection_receiving_timeout);
   EXPECT_EQ(interval, nativeConfig->ice_backup_candidate_pair_ping_interval);
-  EXPECT_EQ(webrtc::PeerConnectionInterface::GATHER_CONTINUALLY,
+  EXPECT_EQ(webrtz::PeerConnectionInterface::GATHER_CONTINUALLY,
             nativeConfig->continual_gathering_policy);
   EXPECT_EQ(true, nativeConfig->prune_turn_ports);
   EXPECT_EQ(range.min, nativeConfig->ice_regather_interval_range->min());
@@ -104,7 +104,7 @@
   config.shouldPruneTurnPorts = YES;
   config.iceRegatherIntervalRange = range;
 
-  webrtc::PeerConnectionInterface::RTCConfiguration *nativeConfig =
+  webrtz::PeerConnectionInterface::RTCConfiguration *nativeConfig =
       [config createNativeConfiguration];
   RTCConfiguration *newConfig = [[RTCConfiguration alloc]
       initWithNativeConfiguration:*nativeConfig];

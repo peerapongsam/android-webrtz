@@ -11,7 +11,7 @@
 #include "rtc_base/checks.h"
 #include "test/testsupport/frame_writer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 Y4mFrameWriterImpl::Y4mFrameWriterImpl(std::string output_filename,
@@ -53,4 +53,4 @@ bool Y4mFrameWriterImpl::WriteFrame(uint8_t* frame_buffer) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

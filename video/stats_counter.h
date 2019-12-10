@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AggregatedCounter;
 class Clock;
@@ -288,6 +288,6 @@ class RateAccCounter : public StatsCounter {
   RTC_DISALLOW_COPY_AND_ASSIGN(RateAccCounter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_STATS_COUNTER_H_

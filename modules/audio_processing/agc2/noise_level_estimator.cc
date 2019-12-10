@@ -18,7 +18,7 @@
 #include "common_audio/include/audio_util.h"
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int kFramesPerSecond = 100;
@@ -108,4 +108,4 @@ float NoiseLevelEstimator::Analyze(const AudioFrameView<const float>& frame) {
       frame.samples_per_channel());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

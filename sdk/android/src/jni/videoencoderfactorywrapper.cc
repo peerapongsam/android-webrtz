@@ -19,7 +19,7 @@
 #include "sdk/android/src/jni/videocodecinfo.h"
 #include "sdk/android/src/jni/wrappednativecodec.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 VideoEncoderFactoryWrapper::VideoEncoderFactoryWrapper(
@@ -66,4 +66,4 @@ VideoEncoderFactory::CodecInfo VideoEncoderFactoryWrapper::QueryVideoEncoder(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

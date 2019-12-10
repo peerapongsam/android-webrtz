@@ -11,7 +11,7 @@
 #include "modules/audio_coding/acm2/call_statistics.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace acm2 {
 
@@ -51,7 +51,7 @@ TEST(CallStatisticsTest, AllCalls) {
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 
 

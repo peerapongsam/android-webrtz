@@ -19,7 +19,7 @@
 #include "rtc_base/ptr_util.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -83,8 +83,8 @@ int main(int argc, char* argv[]) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
-  return webrtc::test::main(argc, argv);
+  return webrtz::test::main(argc, argv);
 }

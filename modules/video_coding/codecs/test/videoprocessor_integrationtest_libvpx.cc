@@ -18,7 +18,7 @@
 #include "rtc_base/ptr_util.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -71,7 +71,7 @@ class VideoProcessorIntegrationTestLibvpx
   // Verify that the QP parser returns the same QP as the encoder does.
   const class QpFrameChecker : public TestConfig::EncodedFrameChecker {
    public:
-    void CheckEncodedFrame(webrtc::VideoCodecType codec,
+    void CheckEncodedFrame(webrtz::VideoCodecType codec,
                            const EncodedImage& encoded_frame) const override {
       int qp;
       if (codec == kVideoCodecVP8) {
@@ -433,4 +433,4 @@ TEST_F(VideoProcessorIntegrationTestLibvpx, DISABLED_SvcVP9RdPerf) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -25,7 +25,7 @@
 #include "rtc_base/buffer.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class will eventually be a wrapper around RtpTransportInternal
 // that protects and unprotects sent and received RTP packets.
@@ -185,6 +185,6 @@ class SrtpTransport : public RtpTransportInternalAdapter {
   rtc::scoped_refptr<MetricsObserverInterface> metrics_observer_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_SRTPTRANSPORT_H_

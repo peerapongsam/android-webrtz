@@ -882,11 +882,11 @@ TEST(IsacFixTest, Kenny) {
   printf("\n\n_______________________________________________\n");
 
   // Record the results with Perf test tools.
-  webrtc::test::PrintResult("isac", "", "time_per_10ms_frame",
+  webrtz::test::PrintResult("isac", "", "time_per_10ms_frame",
                             (runtime * 10000) / length_file, "us", false);
 
   if (chartjson_result_file) {
-    webrtc::test::WritePerfResults(chartjson_result_file);
+    webrtz::test::WritePerfResults(chartjson_result_file);
   }
 
   fclose(inp);

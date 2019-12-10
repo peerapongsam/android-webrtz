@@ -11,7 +11,7 @@
 #include <emmintrin.h>
 #include "modules/video_processing/util/denoiser_filter_sse2.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static void Get8x8varSse2(const uint8_t* src,
                           int src_stride,
@@ -206,4 +206,4 @@ DenoiserDecision DenoiserFilterSSE2::MbDenoise(const uint8_t* mc_running_avg_y,
   return decision;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

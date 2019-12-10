@@ -15,7 +15,7 @@
 #include "api/video/video_frame.h"
 #include "test/frame_utils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 bool EqualPlane(const uint8_t* data1,
@@ -33,7 +33,7 @@ bool EqualPlane(const uint8_t* data1,
   return true;
 }
 
-bool FramesEqual(const webrtc::VideoFrame& f1, const webrtc::VideoFrame& f2) {
+bool FramesEqual(const webrtz::VideoFrame& f1, const webrtz::VideoFrame& f2) {
   if (f1.timestamp() != f2.timestamp() ||
       f1.ntp_time_ms() != f2.ntp_time_ms() ||
       f1.render_time_ms() != f2.render_time_ms()) {
@@ -42,8 +42,8 @@ bool FramesEqual(const webrtc::VideoFrame& f1, const webrtc::VideoFrame& f2) {
   return FrameBufsEqual(f1.video_frame_buffer(), f2.video_frame_buffer());
 }
 
-bool FrameBufsEqual(const rtc::scoped_refptr<webrtc::VideoFrameBuffer>& f1,
-                    const rtc::scoped_refptr<webrtc::VideoFrameBuffer>& f2) {
+bool FrameBufsEqual(const rtc::scoped_refptr<webrtz::VideoFrameBuffer>& f1,
+                    const rtc::scoped_refptr<webrtz::VideoFrameBuffer>& f2) {
   if (f1 == f2) {
     return true;
   }
@@ -57,8 +57,8 @@ bool FrameBufsEqual(const rtc::scoped_refptr<webrtc::VideoFrameBuffer>& f1,
     return false;
   }
 
-  rtc::scoped_refptr<webrtc::I420BufferInterface> f1_i420 = f1->ToI420();
-  rtc::scoped_refptr<webrtc::I420BufferInterface> f2_i420 = f2->ToI420();
+  rtc::scoped_refptr<webrtz::I420BufferInterface> f1_i420 = f1->ToI420();
+  rtc::scoped_refptr<webrtz::I420BufferInterface> f2_i420 = f2->ToI420();
   return EqualPlane(f1_i420->DataY(), f2_i420->DataY(),
                     f1_i420->StrideY(), f2_i420->StrideY(),
                     f1_i420->width(), f1_i420->height()) &&
@@ -88,4 +88,4 @@ rtc::scoped_refptr<I420Buffer> ReadI420Buffer(int width, int height, FILE *f) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

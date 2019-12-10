@@ -13,7 +13,7 @@
 #include "rtc_base/logging.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -158,4 +158,4 @@ TEST_F(FrameDropperTest, TrafficVolumeAboveAvailableBandwidth) {
   ValidateThroughputMatchesTargetBitrate(500, kDoNotIncludeKeyFrame);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

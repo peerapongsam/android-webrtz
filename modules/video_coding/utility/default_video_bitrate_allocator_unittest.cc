@@ -14,7 +14,7 @@
 #include "modules/video_coding/utility/default_video_bitrate_allocator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 uint32_t kMaxBitrateBps = 1000000;
 uint32_t kMinBitrateBps = 50000;
@@ -84,4 +84,4 @@ TEST_F(DefaultVideoBitrateAllocatorTest, GoodInBetween) {
   allocation = allocator_->GetAllocation(kMaxBitrateBps - 1, kMaxFramerate);
   EXPECT_EQ(kMaxBitrateBps - 1, allocation.get_sum_bps());
 }
-}  // namespace webrtc
+}  // namespace webrtz

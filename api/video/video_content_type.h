@@ -15,7 +15,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 enum class VideoContentType : uint8_t {
   UNSPECIFIED = 0,
@@ -36,6 +36,6 @@ bool IsValidContentType(uint8_t value);
 const char* ToString(const VideoContentType& content_type);
 }  // namespace videocontenttypehelpers
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_VIDEO_CONTENT_TYPE_H_

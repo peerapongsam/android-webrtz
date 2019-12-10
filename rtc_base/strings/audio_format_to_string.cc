@@ -13,7 +13,7 @@
 #include "rtc_base/strings/string_builder.h"
 
 namespace rtc {
-  std::string ToString(const webrtc::SdpAudioFormat& saf) {
+  std::string ToString(const webrtz::SdpAudioFormat& saf) {
     char sb_buf[1024];
     rtc::SimpleStringBuilder sb(sb_buf);
     sb << "{name: " << saf.name;
@@ -28,7 +28,7 @@ namespace rtc {
     sb << "}}";
     return sb.str();
   }
-  std::string ToString(const webrtc::AudioCodecInfo& aci) {
+  std::string ToString(const webrtz::AudioCodecInfo& aci) {
     char sb_buf[1024];
     rtc::SimpleStringBuilder sb(sb_buf);
     sb << "{sample_rate_hz: " << aci.sample_rate_hz;
@@ -41,7 +41,7 @@ namespace rtc {
     sb << "}";
     return sb.str();
   }
-  std::string ToString(const webrtc::AudioCodecSpec& acs) {
+  std::string ToString(const webrtz::AudioCodecSpec& acs) {
     char sb_buf[1024];
     rtc::SimpleStringBuilder sb(sb_buf);
     sb << "{format: " << ToString(acs.format);

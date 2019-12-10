@@ -11,7 +11,7 @@
 #include "call/video_receive_stream.h"
 #include "rtc_base/strings/string_builder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VideoReceiveStream::Decoder::Decoder() = default;
 VideoReceiveStream::Decoder::Decoder(const Decoder&) = default;
@@ -134,4 +134,4 @@ std::string VideoReceiveStream::Config::Rtp::ToString() const {
   return ss.str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -47,7 +47,7 @@ const NSString * const kRTCH264CodecName = @(cricket::kH264CodecName);
 }
 
 - (instancetype)initWithNativeParameters:
-    (const webrtc::RtpCodecParameters &)nativeParameters {
+    (const webrtz::RtpCodecParameters &)nativeParameters {
   if (self = [self init]) {
     _payloadType = nativeParameters.payload_type;
     _name = [NSString stringForStdString:nativeParameters.name];
@@ -72,8 +72,8 @@ const NSString * const kRTCH264CodecName = @(cricket::kH264CodecName);
   return self;
 }
 
-- (webrtc::RtpCodecParameters)nativeParameters {
-  webrtc::RtpCodecParameters parameters;
+- (webrtz::RtpCodecParameters)nativeParameters {
+  webrtz::RtpCodecParameters parameters;
   parameters.payload_type = _payloadType;
   parameters.name = [NSString stdStringForString:_name];
   // NSString pointer comparison is safe here since "kind" is readonly and only

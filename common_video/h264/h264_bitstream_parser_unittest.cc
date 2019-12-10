@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // SPS/PPS part of below chunk.
 uint8_t kH264SpsPps[] = {0x00, 0x00, 0x00, 0x01, 0x67, 0x42, 0x80, 0x20, 0xda,
@@ -85,4 +85,4 @@ TEST(H264BitstreamParserTest, ReportsLastSliceQpForCABACImageSlices) {
   EXPECT_EQ(24, qp);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

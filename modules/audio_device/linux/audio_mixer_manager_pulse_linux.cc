@@ -14,16 +14,16 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-extern webrtc::adm_linux_pulse::PulseAudioSymbolTable PaSymbolTable;
+extern webrtz::adm_linux_pulse::PulseAudioSymbolTable PaSymbolTable;
 
 // Accesses Pulse functions through our late-binding symbol table instead of
 // directly. This way we don't have to link to libpulse, which means our
 // binary will work on systems that don't have it.
 #define LATE(sym)                                                             \
-  LATESYM_GET(webrtc::adm_linux_pulse::PulseAudioSymbolTable, &PaSymbolTable, \
+  LATESYM_GET(webrtz::adm_linux_pulse::PulseAudioSymbolTable, &PaSymbolTable, \
               sym)
 
-namespace webrtc {
+namespace webrtz {
 
 class AutoPulseLock {
  public:
@@ -838,4 +838,4 @@ bool AudioMixerManagerLinuxPulse::GetSourceInfoByIndex(int device_index) const {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

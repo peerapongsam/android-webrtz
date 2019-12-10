@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace acm2 {
 
@@ -56,4 +56,4 @@ const AudioDecodingCallStats& CallStatistics::GetDecodingStatistics() const {
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz

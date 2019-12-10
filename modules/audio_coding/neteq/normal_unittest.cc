@@ -29,7 +29,7 @@
 using ::testing::_;
 using ::testing::Invoke;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -173,4 +173,4 @@ TEST(Normal, LastModeExpand120msPacket) {
 
 // TODO(hlundin): Write more tests.
 
-}  // namespace webrtc
+}  // namespace webrtz

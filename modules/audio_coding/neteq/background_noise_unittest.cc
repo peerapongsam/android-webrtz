@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(BackgroundNoise, CreateAndDestroy) {
   size_t channels = 1;
@@ -23,4 +23,4 @@ TEST(BackgroundNoise, CreateAndDestroy) {
 
 // TODO(hlundin): Write more tests.
 
-}  // namespace webrtc
+}  // namespace webrtz

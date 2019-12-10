@@ -18,12 +18,12 @@
 #include "media/base/fakevideorenderer.h"
 #include "rtc_base/gunit.h"
 
-using webrtc::LocalAudioSource;
-using webrtc::MediaConstraintsInterface;
-using webrtc::MediaSourceInterface;
+using webrtz::LocalAudioSource;
+using webrtz::MediaConstraintsInterface;
+using webrtz::MediaSourceInterface;
 
 TEST(LocalAudioSourceTest, SetValidOptions) {
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   constraints.AddMandatory(
       MediaConstraintsInterface::kGoogEchoCancellation, false);
   constraints.AddOptional(
@@ -48,14 +48,14 @@ TEST(LocalAudioSourceTest, SetValidOptions) {
 }
 
 TEST(LocalAudioSourceTest, OptionNotSet) {
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   rtc::scoped_refptr<LocalAudioSource> source =
       LocalAudioSource::Create(&constraints);
   EXPECT_EQ(rtc::nullopt, source->options().highpass_filter);
 }
 
 TEST(LocalAudioSourceTest, MandatoryOverridesOptional) {
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   constraints.AddMandatory(
       MediaConstraintsInterface::kGoogEchoCancellation, false);
   constraints.AddOptional(
@@ -68,7 +68,7 @@ TEST(LocalAudioSourceTest, MandatoryOverridesOptional) {
 }
 
 TEST(LocalAudioSourceTest, InvalidOptional) {
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   constraints.AddOptional(MediaConstraintsInterface::kHighpassFilter, false);
   constraints.AddOptional("invalidKey", false);
 
@@ -80,7 +80,7 @@ TEST(LocalAudioSourceTest, InvalidOptional) {
 }
 
 TEST(LocalAudioSourceTest, InvalidMandatory) {
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   constraints.AddMandatory(MediaConstraintsInterface::kHighpassFilter, false);
   constraints.AddMandatory("invalidKey", false);
 

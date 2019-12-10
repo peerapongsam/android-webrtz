@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-namespace webrtc {
+namespace webrtz {
 
 RTPReceiverStrategy::RTPReceiverStrategy(RtpData* data_callback)
     : data_callback_(data_callback) {}
@@ -30,4 +30,4 @@ int RTPReceiverStrategy::Energy(uint8_t array_of_energy[kRtpCsrcSize]) const {
   return -1;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

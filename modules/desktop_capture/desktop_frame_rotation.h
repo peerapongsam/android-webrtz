@@ -14,7 +14,7 @@
 #include "modules/desktop_capture/desktop_frame.h"
 #include "modules/desktop_capture/desktop_geometry.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Represents the rotation of a DesktopFrame.
 enum class Rotation {
@@ -47,6 +47,6 @@ DesktopSize RotateSize(DesktopSize size, Rotation rotation);
 // the DesktopFrame which |rect| belongs in.
 DesktopRect RotateRect(DesktopRect rect, DesktopSize size, Rotation rotation);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_FRAME_ROTATION_H_

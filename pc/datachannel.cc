@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static size_t kMaxQueuedReceivedDataBytes = 16 * 1024 * 1024;
 static size_t kMaxQueuedSendDataBytes = 16 * 1024 * 1024;
@@ -171,13 +171,13 @@ bool DataChannel::Init(const InternalDataChannelInit& config) {
     config_ = config;
 
     switch (config_.open_handshake_role) {
-    case webrtc::InternalDataChannelInit::kNone:  // pre-negotiated
+    case webrtz::InternalDataChannelInit::kNone:  // pre-negotiated
       handshake_state_ = kHandshakeReady;
       break;
-    case webrtc::InternalDataChannelInit::kOpener:
+    case webrtz::InternalDataChannelInit::kOpener:
       handshake_state_ = kHandshakeShouldSendOpen;
       break;
-    case webrtc::InternalDataChannelInit::kAcker:
+    case webrtz::InternalDataChannelInit::kAcker:
       handshake_state_ = kHandshakeShouldSendAck;
       break;
     }
@@ -658,4 +658,4 @@ bool DataChannel::SendControlMessage(const rtc::CopyOnWriteBuffer& buffer) {
   return retval;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

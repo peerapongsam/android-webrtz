@@ -30,23 +30,23 @@ namespace cricket {
 class WebRtcVcmFactoryInterface {
  public:
   virtual ~WebRtcVcmFactoryInterface() {}
-  virtual rtc::scoped_refptr<webrtc::VideoCaptureModule> Create(
+  virtual rtc::scoped_refptr<webrtz::VideoCaptureModule> Create(
       const char* device) = 0;
-  virtual webrtc::VideoCaptureModule::DeviceInfo* CreateDeviceInfo() = 0;
+  virtual webrtz::VideoCaptureModule::DeviceInfo* CreateDeviceInfo() = 0;
   virtual void DestroyDeviceInfo(
-      webrtc::VideoCaptureModule::DeviceInfo* info) = 0;
+      webrtz::VideoCaptureModule::DeviceInfo* info) = 0;
 };
 
 // WebRTC-based implementation of VideoCapturer.
 class WebRtcVideoCapturer : public VideoCapturer,
-                            public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+                            public rtc::VideoSinkInterface<webrtz::VideoFrame> {
  public:
   WebRtcVideoCapturer();
   explicit WebRtcVideoCapturer(WebRtcVcmFactoryInterface* factory);
   virtual ~WebRtcVideoCapturer();
 
   bool Init(const Device& device);
-  bool Init(const rtc::scoped_refptr<webrtc::VideoCaptureModule>& module);
+  bool Init(const rtc::scoped_refptr<webrtz::VideoCaptureModule>& module);
 
   // Override virtual methods of the parent class VideoCapturer.
   bool GetBestCaptureFormat(const VideoFormat& desired,
@@ -63,7 +63,7 @@ class WebRtcVideoCapturer : public VideoCapturer,
 
  private:
   // Callback when a frame is captured by camera.
-  void OnFrame(const webrtc::VideoFrame& frame) override;
+  void OnFrame(const webrtz::VideoFrame& frame) override;
 
   // Used to signal captured frames on the same thread as invoked Start().
   // With WebRTC's current VideoCapturer implementations, this will mean a
@@ -71,10 +71,10 @@ class WebRtcVideoCapturer : public VideoCapturer,
   // directly from OnIncomingCapturedFrame.
   // TODO(tommi): Remove this workaround when we've updated the WebRTC capturers
   // to follow the same contract.
-  void SignalFrameCapturedOnStartThread(const webrtc::VideoFrame& frame);
+  void SignalFrameCapturedOnStartThread(const webrtz::VideoFrame& frame);
 
   std::unique_ptr<WebRtcVcmFactoryInterface> factory_;
-  rtc::scoped_refptr<webrtc::VideoCaptureModule> module_;
+  rtc::scoped_refptr<webrtz::VideoCaptureModule> module_;
   int captured_frames_;
   std::vector<uint8_t> capture_buffer_;
   rtc::Thread* start_thread_;  // Set in Start(), unset in Stop();

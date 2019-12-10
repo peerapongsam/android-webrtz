@@ -14,7 +14,7 @@
 #include "rtc_base/criticalsection.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 // Provides a simple way to perform an operation (such as logging) one
 // time in a certain scope.
 // Example:
@@ -56,6 +56,6 @@ class ThreadUnsafeOneTimeEvent {
   bool happened_ = false;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_ONETIMEEVENT_H_

@@ -11,7 +11,7 @@
 #include "modules/audio_device/audio_device_generic.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool AudioDeviceGeneric::BuiltInAECIsAvailable() const {
   RTC_LOG_F(LS_ERROR) << "Not supported on this platform";
@@ -57,4 +57,4 @@ int AudioDeviceGeneric::GetRecordAudioParameters(
 }
 #endif  // WEBRTC_IOS
 
-}  // namespace webrtc
+}  // namespace webrtz

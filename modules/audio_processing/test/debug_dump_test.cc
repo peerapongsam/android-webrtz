@@ -23,7 +23,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -593,4 +593,4 @@ TEST_F(DebugDumpTest, TransientSuppressionOn) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

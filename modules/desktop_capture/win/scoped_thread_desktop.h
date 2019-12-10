@@ -17,7 +17,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Desktop;
 
@@ -49,6 +49,6 @@ class ScopedThreadDesktop {
   RTC_DISALLOW_COPY_AND_ASSIGN(ScopedThreadDesktop);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_SCOPED_THREAD_DESKTOP_H_

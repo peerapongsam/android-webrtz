@@ -17,7 +17,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/copyonwritebuffer.h"
 
-namespace webrtc {
+namespace webrtz {
 class RtpHeaderExtensionMap;
 class Random;
 
@@ -194,6 +194,6 @@ bool RtpPacket::ReserveExtension() {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_PACKET_H_

@@ -10,7 +10,7 @@
 
 #include "sdk/android/src/jni/pc/audio.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 rtc::scoped_refptr<AudioDecoderFactory> CreateAudioDecoderFactory() {
@@ -26,4 +26,4 @@ rtc::scoped_refptr<AudioProcessing> CreateAudioProcessing() {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

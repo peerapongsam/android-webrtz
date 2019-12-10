@@ -12,7 +12,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BitrateAdjusterTest : public ::testing::Test {
  public:
@@ -165,4 +165,4 @@ TEST_F(BitrateAdjusterTest, SmallTargetDeltaOverflow) {
   EXPECT_EQ(target_bitrate_bps, adjuster_.GetAdjustedBitrateBps());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

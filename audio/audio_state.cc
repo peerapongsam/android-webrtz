@@ -22,7 +22,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace internal {
 
 AudioState::AudioState(const AudioState::Config& config)
@@ -45,7 +45,7 @@ bool AudioState::typing_noise_detected() const {
   return audio_transport_.typing_noise_detected();
 }
 
-void AudioState::AddReceivingStream(webrtc::AudioReceiveStream* stream) {
+void AudioState::AddReceivingStream(webrtz::AudioReceiveStream* stream) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   RTC_DCHECK_EQ(0, receiving_streams_.count(stream));
   receiving_streams_.insert(stream);
@@ -67,7 +67,7 @@ void AudioState::AddReceivingStream(webrtc::AudioReceiveStream* stream) {
   }
 }
 
-void AudioState::RemoveReceivingStream(webrtc::AudioReceiveStream* stream) {
+void AudioState::RemoveReceivingStream(webrtz::AudioReceiveStream* stream) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   auto count = receiving_streams_.erase(stream);
   RTC_DCHECK_EQ(1, count);
@@ -78,7 +78,7 @@ void AudioState::RemoveReceivingStream(webrtc::AudioReceiveStream* stream) {
   }
 }
 
-void AudioState::AddSendingStream(webrtc::AudioSendStream* stream,
+void AudioState::AddSendingStream(webrtz::AudioSendStream* stream,
                                   int sample_rate_hz, size_t num_channels) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   auto& properties = sending_streams_[stream];
@@ -99,7 +99,7 @@ void AudioState::AddSendingStream(webrtc::AudioSendStream* stream,
   }
 }
 
-void AudioState::RemoveSendingStream(webrtc::AudioSendStream* stream) {
+void AudioState::RemoveSendingStream(webrtz::AudioSendStream* stream) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   auto count = sending_streams_.erase(stream);
   RTC_DCHECK_EQ(1, count);
@@ -175,7 +175,7 @@ rtc::RefCountReleaseStatus AudioState::Release() const {
 
 void AudioState::UpdateAudioTransportWithSendingStreams() {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
-  std::vector<webrtc::AudioSendStream*> sending_streams;
+  std::vector<webrtz::AudioSendStream*> sending_streams;
   int max_sample_rate_hz = 8000;
   size_t max_num_channels = 1;
   for (const auto& kv : sending_streams_) {
@@ -192,4 +192,4 @@ rtc::scoped_refptr<AudioState> AudioState::Create(
     const AudioState::Config& config) {
   return rtc::scoped_refptr<AudioState>(new internal::AudioState(config));
 }
-}  // namespace webrtc
+}  // namespace webrtz

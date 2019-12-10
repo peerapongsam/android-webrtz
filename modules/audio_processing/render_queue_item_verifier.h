@@ -13,7 +13,7 @@
 
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 // Functor to use when supplying a verifier function for the queue item
 // verifcation.
@@ -31,6 +31,6 @@ class RenderQueueItemVerifier {
   size_t minimum_capacity_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_RENDER_QUEUE_ITEM_VERIFIER_H__

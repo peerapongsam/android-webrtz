@@ -21,7 +21,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kDefaultLevelDbfs = -18;
@@ -104,4 +104,4 @@ float Agc::voice_probability() const {
   return vad_.last_voice_probability();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/psfb.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 // Picture loss indication (PLI) (RFC 4585).
@@ -35,5 +35,5 @@ class Pli : public Psfb {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_PLI_H_

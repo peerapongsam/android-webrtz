@@ -16,7 +16,7 @@
 #include "modules/audio_device/include/audio_device_defines.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioManager;
 
@@ -122,6 +122,6 @@ class AAudioWrapper {
   int32_t frames_per_burst_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_AAUDIO_WRAPPER_H_

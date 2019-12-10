@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/source/byte_io.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 template <typename T, unsigned int B = sizeof(T)>
 bool ParseInt(const uint8_t** data, size_t* remaining_size, T* value) {
@@ -96,4 +96,4 @@ void FuzzAudioDecoderIncomingPacket(const uint8_t* data,
     remaining_size -= packet_len;
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

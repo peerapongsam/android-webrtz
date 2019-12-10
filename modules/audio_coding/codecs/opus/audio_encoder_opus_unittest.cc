@@ -26,7 +26,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 using ::testing::NiceMock;
 using ::testing::Return;
 
@@ -678,7 +678,7 @@ TEST(AudioEncoderOpusTest, TestConfigFromParams) {
 }
 
 TEST(AudioEncoderOpusTest, TestConfigFromInvalidParams) {
-  const webrtc::SdpAudioFormat format("opus", 48000, 2);
+  const webrtz::SdpAudioFormat format("opus", 48000, 2);
   const auto default_config = *AudioEncoderOpus::SdpToConfig(format);
 #if WEBRTC_OPUS_SUPPORT_120MS_PTIME
   const std::vector<int> default_supported_frame_lengths_ms({20, 60, 120});
@@ -821,7 +821,7 @@ TEST(AudioEncoderOpusTest, OpusFlagDtxAsNonSpeech) {
 
   // Open file containing speech and silence.
   const std::string kInputFileName =
-      webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+      webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
   test::AudioLoop audio_loop;
   // Use the file as if it were sampled at 48 kHz.
   constexpr int kSampleRateHz = 48000;
@@ -874,4 +874,4 @@ TEST(AudioEncoderOpusTest, OpusFlagDtxAsNonSpeech) {
   EXPECT_GT(max_nonspeech_frames, 20);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

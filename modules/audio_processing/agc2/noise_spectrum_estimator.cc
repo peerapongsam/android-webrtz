@@ -17,7 +17,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/arraysize.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 constexpr float kMinNoisePower = 100.f;
 }  // namespace
@@ -65,4 +65,4 @@ void NoiseSpectrumEstimator::Update(rtc::ArrayView<const float> spectrum,
   data_dumper_->DumpRaw("lc_signal_spectrum", spectrum);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

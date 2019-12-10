@@ -23,7 +23,7 @@
 #include "modules/desktop_capture/desktop_capture_types.h"
 #include "modules/desktop_capture/shared_memory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DesktopCaptureOptions;
 class DesktopFrame;
@@ -149,7 +149,7 @@ class DesktopCapturer {
       const DesktopCaptureOptions& options);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURER_H_
 

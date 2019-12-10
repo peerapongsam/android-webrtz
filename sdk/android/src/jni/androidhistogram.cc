@@ -17,7 +17,7 @@
 #include "system_wrappers/include/metrics.h"
 
 // Enables collection of native histograms and creating them.
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static jlong JNI_Histogram_CreateCounts(JNIEnv* jni,
@@ -50,4 +50,4 @@ static void JNI_Histogram_AddSample(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

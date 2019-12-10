@@ -18,7 +18,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class TimestampExtrapolator;
@@ -134,6 +134,6 @@ class VCMTiming {
   int64_t first_decoded_frame_ms_ RTC_GUARDED_BY(crit_sect_);
   uint64_t sum_missed_render_deadline_ms_ RTC_GUARDED_BY(crit_sect_);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_TIMING_H_

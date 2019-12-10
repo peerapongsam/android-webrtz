@@ -153,9 +153,9 @@ void ChannelManager::Terminate() {
 }
 
 VoiceChannel* ChannelManager::CreateVoiceChannel(
-    webrtc::Call* call,
+    webrtz::Call* call,
     const cricket::MediaConfig& media_config,
-    webrtc::RtpTransportInternal* rtp_transport,
+    webrtz::RtpTransportInternal* rtp_transport,
     rtc::Thread* signaling_thread,
     const std::string& content_name,
     bool srtp_required,
@@ -221,9 +221,9 @@ void ChannelManager::DestroyVoiceChannel(VoiceChannel* voice_channel) {
 }
 
 VideoChannel* ChannelManager::CreateVideoChannel(
-    webrtc::Call* call,
+    webrtz::Call* call,
     const cricket::MediaConfig& media_config,
-    webrtc::RtpTransportInternal* rtp_transport,
+    webrtz::RtpTransportInternal* rtp_transport,
     rtc::Thread* signaling_thread,
     const std::string& content_name,
     bool srtp_required,
@@ -290,7 +290,7 @@ void ChannelManager::DestroyVideoChannel(VideoChannel* video_channel) {
 
 RtpDataChannel* ChannelManager::CreateRtpDataChannel(
     const cricket::MediaConfig& media_config,
-    webrtc::RtpTransportInternal* rtp_transport,
+    webrtz::RtpTransportInternal* rtp_transport,
     rtc::Thread* signaling_thread,
     const std::string& content_name,
     bool srtp_required,

@@ -18,7 +18,7 @@
 #include "test/frame_utils.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(VideoDenoiserTest, CopyMem) {
   std::unique_ptr<DenoiserFilter> df_c(DenoiserFilter::Create(false, nullptr));
@@ -130,7 +130,7 @@ TEST(VideoDenoiserTest, Denoiser) {
   const int kHeight = 288;
 
   const std::string video_file =
-      webrtc::test::ResourcePath("foreman_cif", "yuv");
+      webrtz::test::ResourcePath("foreman_cif", "yuv");
   FILE* source_file = fopen(video_file.c_str(), "rb");
   ASSERT_TRUE(source_file != nullptr)
       << "Cannot open source file: " << video_file;
@@ -158,4 +158,4 @@ TEST(VideoDenoiserTest, Denoiser) {
   ASSERT_NE(0, feof(source_file)) << "Error reading source file";
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

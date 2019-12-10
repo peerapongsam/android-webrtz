@@ -20,7 +20,7 @@
 
 #include "rtc_base/platform_thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum State { kUp = 1, kDown = 2 };
 
@@ -59,6 +59,6 @@ class EventTimerPosix : public EventTimerWrapper {
   bool is_stopping_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_SOURCE_EVENT_POSIX_H_

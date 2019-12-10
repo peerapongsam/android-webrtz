@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FecControllerRplrBased::Config::Config(
     bool initial_fec_enabled,
@@ -75,4 +75,4 @@ bool FecControllerRplrBased::FecDisablingDecision() const {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

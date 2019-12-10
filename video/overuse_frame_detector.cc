@@ -31,7 +31,7 @@
 #include <mach/mach.h>
 #endif  // defined(WEBRTC_MAC) && !defined(WEBRTC_IOS)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const int64_t kCheckForOveruseIntervalMs = 5000;
@@ -699,4 +699,4 @@ bool OveruseFrameDetector::IsUnderusing(const CpuOveruseMetrics& metrics,
   return metrics.encode_usage_percent <
          options_.low_encode_usage_threshold_percent;
 }
-}  // namespace webrtc
+}  // namespace webrtz

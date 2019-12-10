@@ -22,7 +22,7 @@
 
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 VideoCaptureModule::DeviceInfo* VideoCaptureImpl::CreateDeviceInfo() {
   return new videocapturemodule::DeviceInfoLinux();
@@ -264,4 +264,4 @@ int32_t DeviceInfoLinux::FillCapabilities(int fd) {
 }
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

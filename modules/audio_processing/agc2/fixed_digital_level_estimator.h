@@ -18,7 +18,7 @@
 #include "modules/audio_processing/include/audio_frame_view.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 // Produces a smooth signal level estimate from an input audio
@@ -55,6 +55,6 @@ class FixedDigitalLevelEstimator {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(FixedDigitalLevelEstimator);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_FIXED_DIGITAL_LEVEL_ESTIMATOR_H_

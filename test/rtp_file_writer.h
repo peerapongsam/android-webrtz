@@ -15,7 +15,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "test/rtp_file_reader.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 class RtpFileWriter {
  public:
@@ -29,5 +29,5 @@ class RtpFileWriter {
   virtual bool WritePacket(const RtpPacket* packet) = 0;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // TEST_RTP_FILE_WRITER_H_

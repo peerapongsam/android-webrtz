@@ -28,7 +28,7 @@ namespace {
 const int kShortTimeoutMs = 500;
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class PacketTransport;
@@ -160,6 +160,6 @@ class PacketTransport : public test::DirectTransport {
   TransportType transport_type_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_RTP_RTCP_OBSERVER_H_

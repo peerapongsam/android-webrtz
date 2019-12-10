@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -826,4 +826,4 @@ uint32_t PeriodicKeyFrameSource::NextPacketSize(uint32_t frame_size,
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DesktopCapturerWrapper::DesktopCapturerWrapper(
     std::unique_ptr<DesktopCapturer> base_capturer)
@@ -57,4 +57,4 @@ bool DesktopCapturerWrapper::IsOccluded(const DesktopVector& pos) {
   return base_capturer_->IsOccluded(pos);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

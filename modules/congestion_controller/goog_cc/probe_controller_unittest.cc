@@ -24,8 +24,8 @@ using testing::Matcher;
 using testing::NiceMock;
 using testing::Return;
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 namespace test {
 
 namespace {
@@ -286,5 +286,5 @@ TEST_F(ProbeControllerTest, TestExponentialProbingOverflow) {
 }
 
 }  // namespace test
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

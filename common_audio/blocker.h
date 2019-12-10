@@ -16,7 +16,7 @@
 #include "common_audio/audio_ring_buffer.h"
 #include "common_audio/channel_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The callback function to process audio in the time domain. Input has already
 // been windowed, and output will be windowed. The number of input channels
@@ -122,6 +122,6 @@ class Blocker {
   BlockerCallback* callback_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_BLOCKER_H_

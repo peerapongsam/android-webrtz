@@ -18,7 +18,7 @@
 #include "rtc_base/buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class implements redundant audio coding. The class object will have an
 // underlying AudioEncoder object that performs the actual encodings. The
@@ -72,6 +72,6 @@ class AudioEncoderCopyRed final : public AudioEncoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioEncoderCopyRed);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_RED_AUDIO_ENCODER_COPY_RED_H_

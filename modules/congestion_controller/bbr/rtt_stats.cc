@@ -16,7 +16,7 @@
 #include "modules/congestion_controller/network_control/include/network_units_to_string.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 namespace {
 
@@ -94,4 +94,4 @@ void RttStats::OnConnectionMigration() {
 }
 
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz

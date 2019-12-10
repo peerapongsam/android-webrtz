@@ -16,7 +16,7 @@
 #include "rtc_base/numerics/exp_filter.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // The Frame Dropper implements a variant of the leaky bucket algorithm
 // for keeping track of when to drop frames to avoid bit rate
@@ -89,6 +89,6 @@ class FrameDropper {
   const float max_drop_duration_secs_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_UTILITY_FRAME_DROPPER_H_

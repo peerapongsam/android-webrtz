@@ -16,7 +16,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // 2.7ms @ 48kHz, 4ms @ 32kHz, 8ms @ 16kHz.
@@ -327,4 +327,4 @@ int AudioFrameOperations::ScaleWithSat(float scale, AudioFrame* frame) {
   }
   return 0;
 }
-}  // namespace webrtc
+}  // namespace webrtz

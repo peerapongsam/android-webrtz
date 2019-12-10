@@ -16,11 +16,11 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 PerformanceTimer::PerformanceTimer(int num_frames_to_process)
-    : clock_(webrtc::Clock::GetRealTimeClock()) {
+    : clock_(webrtz::Clock::GetRealTimeClock()) {
   timestamps_us_.reserve(num_frames_to_process);
 }
 
@@ -72,4 +72,4 @@ double PerformanceTimer::GetDurationStandardDeviation(
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

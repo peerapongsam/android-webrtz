@@ -20,7 +20,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(eladalon): Restructure and/or replace the existing monolithic tests
 // (only some of the test are monolithic) according to the new
@@ -826,4 +826,4 @@ TEST(PacketRouterRembTest, ReceiveModuleTakesOverWhenLastSendModuleRemoved) {
   packet_router.RemoveReceiveRtpModule(&receive_module);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

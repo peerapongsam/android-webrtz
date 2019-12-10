@@ -17,7 +17,7 @@
 #include "test/gl/gl_renderer.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class GlxRenderer : public GlRenderer {
@@ -26,7 +26,7 @@ class GlxRenderer : public GlRenderer {
                              size_t height);
   virtual ~GlxRenderer();
 
-  void OnFrame(const webrtc::VideoFrame& frame) override;
+  void OnFrame(const webrtz::VideoFrame& frame) override;
 
  private:
   GlxRenderer(size_t width, size_t height);

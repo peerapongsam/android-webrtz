@@ -21,7 +21,7 @@
 
 #define PCMA_AND_PCMU
 
-namespace webrtc {
+namespace webrtz {
 
 enum StereoMonoMode {
   kNotSet,
@@ -111,6 +111,6 @@ class TestStereo : public ACMTest {
 #endif
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_TESTSTEREO_H_

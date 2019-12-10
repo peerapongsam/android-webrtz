@@ -18,7 +18,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RateLimitTest : public ::testing::Test {
  public:
@@ -200,4 +200,4 @@ TEST_F(RateLimitTest, MultiThreadedUsage) {
   thread3.Stop();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 
 #include "modules/audio_processing/aec3/aec3_common.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VectorBuffer::VectorBuffer(size_t size, size_t height)
     : size(static_cast<int>(size)),
@@ -24,4 +24,4 @@ VectorBuffer::VectorBuffer(size_t size, size_t height)
 
 VectorBuffer::~VectorBuffer() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "pc/datachannel.h"
 #include "rtc_base/checks.h"
 
-class FakeDataChannelProvider : public webrtc::DataChannelProviderInterface {
+class FakeDataChannelProvider : public webrtz::DataChannelProviderInterface {
  public:
   FakeDataChannelProvider()
       : send_blocked_(false),
@@ -44,7 +44,7 @@ class FakeDataChannelProvider : public webrtc::DataChannelProviderInterface {
     return true;
   }
 
-  bool ConnectDataChannel(webrtc::DataChannel* data_channel) override {
+  bool ConnectDataChannel(webrtz::DataChannel* data_channel) override {
     RTC_CHECK(connected_channels_.find(data_channel) ==
               connected_channels_.end());
     if (!transport_available_) {
@@ -55,7 +55,7 @@ class FakeDataChannelProvider : public webrtc::DataChannelProviderInterface {
     return true;
   }
 
-  void DisconnectDataChannel(webrtc::DataChannel* data_channel) override {
+  void DisconnectDataChannel(webrtz::DataChannel* data_channel) override {
     RTC_CHECK(connected_channels_.find(data_channel) !=
               connected_channels_.end());
     RTC_LOG(LS_INFO) << "DataChannel disconnected " << data_channel;
@@ -87,7 +87,7 @@ class FakeDataChannelProvider : public webrtc::DataChannelProviderInterface {
       // each value is still in connected_channels_ before calling
       // OnChannelReady().  This avoids problems where the set gets modified
       // in response to OnChannelReady().
-      for (webrtc::DataChannel *ch : std::set<webrtc::DataChannel*>(
+      for (webrtz::DataChannel *ch : std::set<webrtz::DataChannel*>(
                connected_channels_.begin(), connected_channels_.end())) {
         if (connected_channels_.count(ch)) {
           ch->OnChannelReady(true);
@@ -108,7 +108,7 @@ class FakeDataChannelProvider : public webrtc::DataChannelProviderInterface {
     RTC_CHECK(transport_available_);
     ready_to_send_ = ready;
     if (ready) {
-      std::set<webrtc::DataChannel*>::iterator it;
+      std::set<webrtz::DataChannel*>::iterator it;
       for (it = connected_channels_.begin();
            it != connected_channels_.end();
            ++it) {
@@ -125,7 +125,7 @@ class FakeDataChannelProvider : public webrtc::DataChannelProviderInterface {
     return last_send_data_params_;
   }
 
-  bool IsConnected(webrtc::DataChannel* data_channel) const {
+  bool IsConnected(webrtz::DataChannel* data_channel) const {
     return connected_channels_.find(data_channel) != connected_channels_.end();
   }
 
@@ -143,7 +143,7 @@ class FakeDataChannelProvider : public webrtc::DataChannelProviderInterface {
   bool transport_available_;
   bool ready_to_send_;
   bool transport_error_;
-  std::set<webrtc::DataChannel*> connected_channels_;
+  std::set<webrtz::DataChannel*> connected_channels_;
   std::set<uint32_t> send_ssrcs_;
   std::set<uint32_t> recv_ssrcs_;
 };

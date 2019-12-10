@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(DelayPeakDetector, CreateAndDestroy) {
   TickTimer tick_timer;
@@ -140,4 +140,4 @@ TEST(DelayPeakDetector, ZeroDistancePeaks) {
   EXPECT_FALSE(detector.Update(kInterArrivalTime, kTargetBufferLevel));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "rtc_base/sanitizer.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -166,4 +166,4 @@ AudioDecoder::SpeechType AudioDecoder::ConvertSpeechType(int16_t type) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

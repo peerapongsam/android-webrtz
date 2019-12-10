@@ -35,8 +35,8 @@ bool AdaptedVideoTrackSource::GetStats(Stats* stats) {
   return true;
 }
 
-void AdaptedVideoTrackSource::OnFrame(const webrtc::VideoFrame& frame) {
-  rtc::scoped_refptr<webrtc::VideoFrameBuffer> buffer(
+void AdaptedVideoTrackSource::OnFrame(const webrtz::VideoFrame& frame) {
+  rtc::scoped_refptr<webrtz::VideoFrameBuffer> buffer(
       frame.video_frame_buffer());
   /* Note that this is a "best effort" approach to
      wants.rotation_applied; apply_rotation_ can change from false to
@@ -46,19 +46,19 @@ void AdaptedVideoTrackSource::OnFrame(const webrtc::VideoFrame& frame) {
      true was just added. The VideoBroadcaster enforces
      synchronization for us in this case, by not passing the frame on
      to sinks which don't want it. */
-  if (apply_rotation() && frame.rotation() != webrtc::kVideoRotation_0 &&
-      buffer->type() == webrtc::VideoFrameBuffer::Type::kI420) {
+  if (apply_rotation() && frame.rotation() != webrtz::kVideoRotation_0 &&
+      buffer->type() == webrtz::VideoFrameBuffer::Type::kI420) {
     /* Apply pending rotation. */
-    broadcaster_.OnFrame(webrtc::VideoFrame(
-        webrtc::I420Buffer::Rotate(*buffer->GetI420(), frame.rotation()),
-        webrtc::kVideoRotation_0, frame.timestamp_us()));
+    broadcaster_.OnFrame(webrtz::VideoFrame(
+        webrtz::I420Buffer::Rotate(*buffer->GetI420(), frame.rotation()),
+        webrtz::kVideoRotation_0, frame.timestamp_us()));
   } else {
     broadcaster_.OnFrame(frame);
   }
 }
 
 void AdaptedVideoTrackSource::AddOrUpdateSink(
-    rtc::VideoSinkInterface<webrtc::VideoFrame>* sink,
+    rtc::VideoSinkInterface<webrtz::VideoFrame>* sink,
     const rtc::VideoSinkWants& wants) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
 
@@ -67,7 +67,7 @@ void AdaptedVideoTrackSource::AddOrUpdateSink(
 }
 
 void AdaptedVideoTrackSource::RemoveSink(
-    rtc::VideoSinkInterface<webrtc::VideoFrame>* sink) {
+    rtc::VideoSinkInterface<webrtz::VideoFrame>* sink) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
 
   broadcaster_.RemoveSink(sink);

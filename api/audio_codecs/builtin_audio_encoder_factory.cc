@@ -25,7 +25,7 @@
 #include "api/audio_codecs/opus/audio_encoder_opus.h"  // nogncheck
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -68,4 +68,4 @@ rtc::scoped_refptr<AudioEncoderFactory> CreateBuiltinAudioEncoderFactory() {
       AudioEncoderG711, NotAdvertised<AudioEncoderL16>>();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

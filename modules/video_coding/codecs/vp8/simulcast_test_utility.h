@@ -33,7 +33,7 @@ using ::testing::AllOf;
 using ::testing::Field;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 const int kDefaultWidth = 1280;
@@ -266,7 +266,7 @@ class TestVp8Simulcast : public ::testing::Test {
     input_buffer_ = I420Buffer::Create(kDefaultWidth, kDefaultHeight);
     input_buffer_->InitializeData();
     input_frame_.reset(
-        new VideoFrame(input_buffer_, 0, 0, webrtc::kVideoRotation_0));
+        new VideoFrame(input_buffer_, 0, 0, webrtz::kVideoRotation_0));
   }
 
   void SetUpRateAllocator() {
@@ -578,7 +578,7 @@ class TestVp8Simulcast : public ::testing::Test {
     input_buffer_->InitializeData();
 
     input_frame_.reset(
-        new VideoFrame(input_buffer_, 0, 0, webrtc::kVideoRotation_0));
+        new VideoFrame(input_buffer_, 0, 0, webrtz::kVideoRotation_0));
 
     // The for loop above did not set the bitrate of the highest layer.
     settings_.simulcastStream[settings_.numberOfSimulcastStreams - 1]
@@ -618,7 +618,7 @@ class TestVp8Simulcast : public ::testing::Test {
     input_buffer_ = I420Buffer::Create(settings_.width, settings_.height);
     input_buffer_->InitializeData();
     input_frame_.reset(
-        new VideoFrame(input_buffer_, 0, 0, webrtc::kVideoRotation_0));
+        new VideoFrame(input_buffer_, 0, 0, webrtz::kVideoRotation_0));
     EXPECT_EQ(0, encoder_->Encode(*input_frame_, NULL, &frame_types));
   }
 
@@ -770,7 +770,7 @@ class TestVp8Simulcast : public ::testing::Test {
     input_buffer_ = I420Buffer::Create(kDefaultWidth, kDefaultHeight, stride_y,
                                        stride_uv, stride_uv);
     input_frame_.reset(
-        new VideoFrame(input_buffer_, 0, 0, webrtc::kVideoRotation_0));
+        new VideoFrame(input_buffer_, 0, 0, webrtz::kVideoRotation_0));
 
     // Set color.
     int plane_offset[kNumOfPlanes];
@@ -809,6 +809,6 @@ class TestVp8Simulcast : public ::testing::Test {
 };
 
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_SIMULCAST_TEST_UTILITY_H_

@@ -31,7 +31,7 @@
 @synthesize qp = _qp;
 @synthesize contentType = _contentType;
 
-- (instancetype)initWithNativeEncodedImage:(webrtc::EncodedImage)encodedImage {
+- (instancetype)initWithNativeEncodedImage:(webrtz::EncodedImage)encodedImage {
   if (self = [super init]) {
     // Wrap the buffer in NSData without copying, do not take ownership.
     _buffer = [NSData dataWithBytesNoCopy:encodedImage._buffer
@@ -49,7 +49,7 @@
     _rotation = static_cast<RTCVideoRotation>(encodedImage.rotation_);
     _completeFrame = encodedImage._completeFrame;
     _qp = @(encodedImage.qp_);
-    _contentType = (encodedImage.content_type_ == webrtc::VideoContentType::SCREENSHARE) ?
+    _contentType = (encodedImage.content_type_ == webrtz::VideoContentType::SCREENSHARE) ?
         RTCVideoContentTypeScreenshare :
         RTCVideoContentTypeUnspecified;
   }
@@ -57,9 +57,9 @@
   return self;
 }
 
-- (webrtc::EncodedImage)nativeEncodedImage {
+- (webrtz::EncodedImage)nativeEncodedImage {
   // Return the pointer without copying.
-  webrtc::EncodedImage encodedImage(
+  webrtz::EncodedImage encodedImage(
       (uint8_t *)_buffer.bytes, (size_t)_buffer.length, (size_t)_buffer.length);
   encodedImage._encodedWidth = rtc::dchecked_cast<uint32_t>(_encodedWidth);
   encodedImage._encodedHeight = rtc::dchecked_cast<uint32_t>(_encodedHeight);
@@ -69,13 +69,13 @@
   encodedImage.timing_.flags = _flags;
   encodedImage.timing_.encode_start_ms = _encodeStartMs;
   encodedImage.timing_.encode_finish_ms = _encodeFinishMs;
-  encodedImage._frameType = webrtc::FrameType(_frameType);
-  encodedImage.rotation_ = webrtc::VideoRotation(_rotation);
+  encodedImage._frameType = webrtz::FrameType(_frameType);
+  encodedImage.rotation_ = webrtz::VideoRotation(_rotation);
   encodedImage._completeFrame = _completeFrame;
   encodedImage.qp_ = _qp ? _qp.intValue : -1;
   encodedImage.content_type_ = (_contentType == RTCVideoContentTypeScreenshare) ?
-      webrtc::VideoContentType::SCREENSHARE :
-      webrtc::VideoContentType::UNSPECIFIED;
+      webrtz::VideoContentType::SCREENSHARE :
+      webrtz::VideoContentType::UNSPECIFIED;
 
   return encodedImage;
 }

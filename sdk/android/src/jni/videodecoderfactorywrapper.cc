@@ -18,7 +18,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/wrappednativecodec.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 VideoDecoderFactoryWrapper::VideoDecoderFactoryWrapper(
@@ -44,4 +44,4 @@ std::vector<SdpVideoFormat> VideoDecoderFactoryWrapper::GetSupportedFormats()
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

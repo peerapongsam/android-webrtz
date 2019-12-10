@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t ExtendedJitterReport::kPacketType;
 // Transmission Time Offsets in RTP Streams (RFC 5450).
@@ -97,4 +97,4 @@ bool ExtendedJitterReport::Create(uint8_t* packet,
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

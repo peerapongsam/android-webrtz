@@ -14,7 +14,7 @@
 #include "system_wrappers/include/metrics_default.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSsrc1 = 17;
 const uint32_t kSsrc2 = 42;
@@ -124,4 +124,4 @@ TEST_F(SendDelayStatsTest, HistogramsAreUpdated) {
   EXPECT_EQ(1, metrics::NumEvents("WebRTC.Video.SendDelayInMs", kDelayMs2));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

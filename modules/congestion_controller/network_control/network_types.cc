@@ -10,7 +10,7 @@
 
 #include "modules/congestion_controller/network_control/include/network_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 StreamsConfig::StreamsConfig() = default;
 StreamsConfig::StreamsConfig(const StreamsConfig&) = default;
@@ -51,4 +51,4 @@ std::vector<PacketResult> TransportPacketsFeedback::PacketsWithFeedback()
   return packet_feedbacks;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

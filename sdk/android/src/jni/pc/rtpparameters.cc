@@ -15,7 +15,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/pc/mediastreamtrack.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -97,4 +97,4 @@ ScopedJavaLocalRef<jobject> NativeToJavaRtpParameters(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

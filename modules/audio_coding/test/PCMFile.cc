@@ -17,7 +17,7 @@
 #include "modules/include/module_common_types.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #define MAX_FILE_NAME_LENGTH_BYTE 500
 
@@ -228,4 +228,4 @@ void PCMFile::SetNum10MsBlocksToRead(int value) {
   num_10ms_blocks_to_read_ = value;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

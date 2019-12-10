@@ -16,7 +16,7 @@
 
 #include "modules/video_coding/include/video_codec_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::vector<SpatialLayer> GetSvcConfig(size_t input_width,
                                        size_t input_height,
@@ -64,4 +64,4 @@ std::vector<SpatialLayer> GetSvcConfig(size_t input_width,
   return spatial_layers;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

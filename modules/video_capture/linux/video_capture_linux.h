@@ -18,7 +18,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/platform_thread.h"
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -62,6 +62,6 @@ private:
     Buffer *_pool;
 };
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_LINUX_VIDEO_CAPTURE_LINUX_H_

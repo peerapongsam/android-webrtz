@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const float kTolerance = 0.0001f;
 
@@ -204,4 +204,4 @@ TEST_F(MovingMomentsTest,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

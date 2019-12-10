@@ -25,7 +25,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecInst;
 class LockedIsacBandwidthInfo;
@@ -196,6 +196,6 @@ class RentACodec {
 };
 
 }  // namespace acm2
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_ACM2_RENT_A_CODEC_H_

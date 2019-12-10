@@ -19,14 +19,14 @@
 #include "rtc_base/keep_ref_until_done.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Callback wrapper that helps distinguish returned results from |encoders_|
 // instances.
 class MultiplexEncoderAdapter::AdapterEncodedImageCallback
-    : public webrtc::EncodedImageCallback {
+    : public webrtz::EncodedImageCallback {
  public:
-  AdapterEncodedImageCallback(webrtc::MultiplexEncoderAdapter* adapter,
+  AdapterEncodedImageCallback(webrtz::MultiplexEncoderAdapter* adapter,
                               AlphaCodecStream stream_idx)
       : adapter_(adapter), stream_idx_(stream_idx) {}
 
@@ -266,4 +266,4 @@ EncodedImageCallback::Result MultiplexEncoderAdapter::OnEncodedImage(
   return EncodedImageCallback::Result(EncodedImageCallback::Result::OK);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

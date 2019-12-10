@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/include/audio_network_adaptor.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockAudioNetworkAdaptor : public AudioNetworkAdaptor {
  public:
@@ -44,6 +44,6 @@ class MockAudioNetworkAdaptor : public AudioNetworkAdaptor {
   MOCK_CONST_METHOD0(GetStats, ANAStats());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_MOCK_MOCK_AUDIO_NETWORK_ADAPTOR_H_

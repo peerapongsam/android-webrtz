@@ -27,14 +27,14 @@ static const char* const kRTCErrorTypeNames[] = {
     "RESOURCE_EXHAUSTED",
     "INTERNAL_ERROR",
 };
-static_assert(static_cast<int>(webrtc::RTCErrorType::INTERNAL_ERROR) ==
+static_assert(static_cast<int>(webrtz::RTCErrorType::INTERNAL_ERROR) ==
                   (arraysize(kRTCErrorTypeNames) - 1),
               "kRTCErrorTypeNames must have as many strings as RTCErrorType "
               "has values.");
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 RTCError::RTCError(RTCError&& other)
     : type_(other.type_), have_string_message_(other.have_string_message_) {
@@ -103,4 +103,4 @@ std::string ToString(RTCErrorType error) {
   return std::string(kRTCErrorTypeNames[index]);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

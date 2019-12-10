@@ -20,7 +20,7 @@
 #include "rtc_base/timeutils.h"
 #include "test/video_codec_settings.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr uint32_t kInitialTimestampRtp = 123;
@@ -44,7 +44,7 @@ class TestVp8Impl : public VideoCodecUnitTest {
   }
 
   void ModifyCodecSettings(VideoCodec* codec_settings) override {
-    webrtc::test::CodecSettings(kVideoCodecVP8, codec_settings);
+    webrtz::test::CodecSettings(kVideoCodecVP8, codec_settings);
     codec_settings->width = kWidth;
     codec_settings->height = kHeight;
     codec_settings->VP8()->denoisingOn = true;
@@ -330,4 +330,4 @@ TEST_F(TestVp8Impl, ScalingEnabledIfAutomaticResizeOn) {
   EXPECT_EQ(kDefaultMinPixelsPerFrame, settings.min_pixels_per_frame);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

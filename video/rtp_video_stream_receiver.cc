@@ -39,7 +39,7 @@
 #include "system_wrappers/include/metrics.h"
 #include "video/receive_statistics_proxy.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // TODO(philipel): Change kPacketBufferStartSize back to 32 in M63 see:
@@ -604,4 +604,4 @@ void RtpVideoStreamReceiver::InsertSpsPpsIntoTracker(uint8_t payload_type) {
                              sprop_decoder.pps_nalu());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

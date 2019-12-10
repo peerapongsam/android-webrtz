@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RoundRobinPacketQueue::Stream::Stream() : bytes(0) {}
 RoundRobinPacketQueue::Stream::~Stream() {}
@@ -205,4 +205,4 @@ bool RoundRobinPacketQueue::IsSsrcScheduled(uint32_t ssrc) const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -24,7 +24,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 DWORD GetTlsIndex() {
@@ -121,7 +121,7 @@ void ScreenCapturerWinMagnifier::CaptureFrame() {
 }
 
 bool ScreenCapturerWinMagnifier::GetSourceList(SourceList* sources) {
-  return webrtc::GetScreenList(sources);
+  return webrtz::GetScreenList(sources);
 }
 
 bool ScreenCapturerWinMagnifier::SelectSource(SourceId id) {
@@ -368,4 +368,4 @@ void ScreenCapturerWinMagnifier::CreateCurrentFrameIfNecessary(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 size_t AddIntToSizeTWithLowerCap(int a, size_t b) {
@@ -365,4 +365,4 @@ uint16_t StatisticsCalculator::CalculateQ14Ratio(size_t numerator,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

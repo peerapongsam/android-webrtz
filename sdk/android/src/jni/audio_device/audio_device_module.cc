@@ -33,7 +33,7 @@
     }                            \
   }
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -687,4 +687,4 @@ rtc::scoped_refptr<AudioDeviceModule> CreateAudioDeviceModuleFromInputAndOutput(
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

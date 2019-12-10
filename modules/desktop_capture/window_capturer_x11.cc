@@ -29,7 +29,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -285,4 +285,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawWindowCapturer(
   return std::unique_ptr<DesktopCapturer>(new WindowCapturerLinux(options));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

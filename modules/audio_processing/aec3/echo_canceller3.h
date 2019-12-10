@@ -22,7 +22,7 @@
 #include "rtc_base/race_checker.h"
 #include "rtc_base/swap_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Functor for verifying the invariance of the frames being put into the render
 // queue.
@@ -132,6 +132,6 @@ class EchoCanceller3 : public EchoControl {
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(EchoCanceller3);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ECHO_CANCELLER3_H_

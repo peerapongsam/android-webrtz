@@ -9,7 +9,7 @@
  */
 #include "api/audio/echo_canceller3_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 EchoCanceller3Config::EchoCanceller3Config() = default;
 EchoCanceller3Config::EchoCanceller3Config(const EchoCanceller3Config& e) =
@@ -17,4 +17,4 @@ EchoCanceller3Config::EchoCanceller3Config(const EchoCanceller3Config& e) =
 EchoCanceller3Config::Mask::Mask() = default;
 EchoCanceller3Config::Mask::Mask(const EchoCanceller3Config::Mask& m) = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 #include "modules/audio_processing/audio_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int16_t kFilterCoefficients8kHz[5] = {3798, -7596, 3798, 7807, -3733};
 const int16_t kFilterCoefficients[5] = {4012, -8024, 4012, 8002, -3913};
@@ -98,4 +98,4 @@ void LowCutFilter::Process(AudioBuffer* audio) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

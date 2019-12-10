@@ -14,7 +14,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 template <typename T>
 typename AudioEncoderIsacT<T>::Config CreateIsacConfig(
@@ -184,6 +184,6 @@ void AudioEncoderIsacT<T>::RecreateEncoderInstance(const Config& config) {
   config_ = config;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_ISAC_AUDIO_ENCODER_ISAC_T_IMPL_H_

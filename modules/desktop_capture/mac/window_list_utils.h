@@ -19,7 +19,7 @@
 #include "modules/desktop_capture/mac/desktop_configuration.h"
 #include "rtc_base/function_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Iterates all on-screen windows in decreasing z-order and sends them
 // one-by-one to |on_window| function. If |on_window| returns false, this
@@ -84,6 +84,6 @@ DesktopRect GetWindowBounds(CGWindowID id);
 DesktopRect GetWindowBounds(const MacDesktopConfiguration& desktop_config,
                             CGWindowID id);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MAC_WINDOW_LIST_UTILS_H_

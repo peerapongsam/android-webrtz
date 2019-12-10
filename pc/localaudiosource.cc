@@ -15,10 +15,10 @@
 #include "api/mediaconstraintsinterface.h"
 #include "media/base/mediaengine.h"
 
-using webrtc::MediaConstraintsInterface;
-using webrtc::MediaSourceInterface;
+using webrtz::MediaConstraintsInterface;
+using webrtz::MediaSourceInterface;
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::scoped_refptr<LocalAudioSource> LocalAudioSource::Create(
     const MediaConstraintsInterface* constraints) {
@@ -49,4 +49,4 @@ void LocalAudioSource::Initialize(
   options_ = *audio_options;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

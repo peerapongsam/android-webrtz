@@ -31,7 +31,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 enum VCMNackMode { kNack, kNoNack };
 
@@ -376,6 +376,6 @@ class VCMJitterBuffer {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(VCMJitterBuffer);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_JITTER_BUFFER_H_

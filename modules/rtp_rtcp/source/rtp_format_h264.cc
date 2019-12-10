@@ -27,7 +27,7 @@
 #include "rtc_base/system/fallthrough.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 static const size_t kNalHeaderSize = 1;
@@ -686,4 +686,4 @@ bool RtpDepacketizerH264::ParseFuaNalu(
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

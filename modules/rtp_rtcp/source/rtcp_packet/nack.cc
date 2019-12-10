@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Nack::kFeedbackMessageType;
 constexpr size_t Nack::kNackItemLength;
@@ -171,4 +171,4 @@ void Nack::Unpack() {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

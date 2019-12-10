@@ -20,7 +20,7 @@ using std::tuple;
 using std::get;
 using ::testing::TestWithParam;
 
-namespace webrtc {
+namespace webrtz {
 
 // Define coding parameter as <channels, bit_rate, filename, extension>.
 typedef tuple<size_t, int, string, string> coding_param;
@@ -245,4 +245,4 @@ const coding_param param_set[] = {
 INSTANTIATE_TEST_CASE_P(AllTest, OpusFecTest,
                         ::testing::ValuesIn(param_set));
 
-}  // namespace webrtc
+}  // namespace webrtz

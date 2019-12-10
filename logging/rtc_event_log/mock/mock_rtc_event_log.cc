@@ -10,10 +10,10 @@
 
 #include "logging/rtc_event_log/mock/mock_rtc_event_log.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockRtcEventLog::MockRtcEventLog() = default;
 MockRtcEventLog::~MockRtcEventLog() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz
 

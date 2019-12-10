@@ -28,7 +28,7 @@
 #include "api/optional.h"
 #include "rtc_base/random.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 
 typedef int64_t BbrPacketCount;
@@ -262,7 +262,7 @@ class BbrNetworkController : public NetworkControllerInterface {
   NetworkControllerObserver* observer_;
 
   RttStats rtt_stats_;
-  webrtc::Random random_;
+  webrtz::Random random_;
 
   DataTransferTracker send_ack_tracker_;
 
@@ -402,6 +402,6 @@ std::ostream& operator<<(  // no-presubmit-check TODO(webrtc:8982)
     const BbrNetworkController::Mode& mode);
 
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_BBR_BBR_NETWORK_CONTROLLER_H_

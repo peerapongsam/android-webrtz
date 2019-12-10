@@ -21,7 +21,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 class TestPacketBuffer : public ::testing::Test,
@@ -894,4 +894,4 @@ TEST_F(TestPacketBufferH264SpsPpsIdrIsKeyframe, SpsPpsIdrIsKeyframe) {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

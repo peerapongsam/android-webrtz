@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Sdes::kPacketType;
 constexpr size_t Sdes::kMaxNumberOfChunks;
@@ -193,4 +193,4 @@ bool Sdes::Create(uint8_t* packet,
   return true;
 }
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

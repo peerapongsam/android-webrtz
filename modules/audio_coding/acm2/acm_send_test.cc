@@ -22,14 +22,14 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 AcmSendTestOldApi::AcmSendTestOldApi(InputAudioFile* audio_source,
                                      int source_rate_hz,
                                      int test_duration_ms)
     : clock_(0),
-      acm_(webrtc::AudioCodingModule::Create([this] {
+      acm_(webrtz::AudioCodingModule::Create([this] {
         AudioCodingModule::Config config;
         config.clock = &clock_;
         config.decoder_factory = CreateBuiltinAudioDecoderFactory();
@@ -163,4 +163,4 @@ std::unique_ptr<Packet> AcmSendTestOldApi::CreatePacket() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

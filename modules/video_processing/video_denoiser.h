@@ -18,7 +18,7 @@
 #include "modules/video_processing/util/noise_estimation.h"
 #include "modules/video_processing/util/skin_detection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoDenoiser {
  public:
@@ -79,6 +79,6 @@ class VideoDenoiser {
   rtc::scoped_refptr<I420BufferInterface> prev_buffer_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_PROCESSING_VIDEO_DENOISER_H_

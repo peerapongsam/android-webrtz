@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/aec3/downsampled_render_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DownsampledRenderBuffer::DownsampledRenderBuffer(size_t downsampled_buffer_size)
     : size(static_cast<int>(downsampled_buffer_size)),
@@ -20,4 +20,4 @@ DownsampledRenderBuffer::DownsampledRenderBuffer(size_t downsampled_buffer_size)
 
 DownsampledRenderBuffer::~DownsampledRenderBuffer() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 int16_t MapSetting(EchoCancellation::SuppressionLevel level) {
@@ -470,7 +470,7 @@ void EchoCancellationImpl::PackRenderAudioBuffer(
   }
 }
 
-void EchoCancellationImpl::SetExtraOptions(const webrtc::Config& config) {
+void EchoCancellationImpl::SetExtraOptions(const webrtz::Config& config) {
   {
     rtc::CritScope cs(crit_capture_);
     extended_filter_enabled_ = config.Get<ExtendedFilter>().enabled;
@@ -513,4 +513,4 @@ size_t EchoCancellationImpl::NumCancellersRequired(
   return num_output_channels * num_reverse_channels;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

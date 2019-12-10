@@ -17,7 +17,7 @@
 #include "api/videosinkinterface.h"
 #include "examples/unityplugin/unity_plugin_apis.h"
 
-class VideoObserver : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+class VideoObserver : public rtc::VideoSinkInterface<webrtz::VideoFrame> {
  public:
   VideoObserver() {}
   ~VideoObserver() {}
@@ -25,7 +25,7 @@ class VideoObserver : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
 
  protected:
   // VideoSinkInterface implementation
-  void OnFrame(const webrtc::VideoFrame& frame) override;
+  void OnFrame(const webrtz::VideoFrame& frame) override;
 
  private:
   I420FRAMEREADY_CALLBACK OnI420FrameReady = nullptr;

@@ -29,7 +29,7 @@
 #include "system_wrappers/include/event_wrapper.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void SetISACConfigDefault(ACMTestISACConfig& isacConfig) {
   isacConfig.currentRateBitPerSec = 0;
@@ -115,7 +115,7 @@ void ISACTest::Setup() {
   EXPECT_EQ(0, _acmB->RegisterTransportCallback(_channel_B2A.get()));
   _channel_B2A->RegisterReceiverACM(_acmA.get());
 
-  file_name_swb_ = webrtc::test::ResourcePath("audio_coding/testfile32kHz",
+  file_name_swb_ = webrtz::test::ResourcePath("audio_coding/testfile32kHz",
                                               "pcm");
 
   EXPECT_EQ(0, _acmB->RegisterSendCodec(_paramISAC16kHz));
@@ -126,8 +126,8 @@ void ISACTest::Setup() {
   _inFileA.SetNum10MsBlocksToRead(50);
   // Fast-forward 1 second (100 blocks) since the files start with silence.
   _inFileA.FastForward(100);
-  std::string fileNameA = webrtc::test::OutputPath() + "testisac_a.pcm";
-  std::string fileNameB = webrtc::test::OutputPath() + "testisac_b.pcm";
+  std::string fileNameA = webrtz::test::OutputPath() + "testisac_a.pcm";
+  std::string fileNameB = webrtz::test::OutputPath() + "testisac_b.pcm";
   _outFileA.Open(fileNameA, 32000, "wb");
   _outFileB.Open(fileNameB, 32000, "wb");
 
@@ -222,8 +222,8 @@ void ISACTest::EncodeDecode(int testNr, ACMTestISACConfig& wbISACConfig,
   std::string file_name_out;
   std::stringstream file_stream_a;
   std::stringstream file_stream_b;
-  file_stream_a << webrtc::test::OutputPath();
-  file_stream_b << webrtc::test::OutputPath();
+  file_stream_a << webrtz::test::OutputPath();
+  file_stream_b << webrtz::test::OutputPath();
   file_stream_a << "out_iSACTest_A_" << testNr << ".pcm";
   file_stream_b << "out_iSACTest_B_" << testNr << ".pcm";
   file_name_out = file_stream_a.str();
@@ -289,8 +289,8 @@ void ISACTest::SwitchingSamplingRate(int testNr, int maxSampRateChange) {
   std::string file_name_out;
   std::stringstream file_stream_a;
   std::stringstream file_stream_b;
-  file_stream_a << webrtc::test::OutputPath();
-  file_stream_b << webrtc::test::OutputPath();
+  file_stream_a << webrtz::test::OutputPath();
+  file_stream_b << webrtz::test::OutputPath();
   file_stream_a << "out_iSACTest_A_" << testNr << ".pcm";
   file_stream_b << "out_iSACTest_B_" << testNr << ".pcm";
   file_name_out = file_stream_a.str();
@@ -348,4 +348,4 @@ void ISACTest::SwitchingSamplingRate(int testNr, int maxSampRateChange) {
   _inFileB.Close();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

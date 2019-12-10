@@ -53,7 +53,7 @@
 #define STR_NCASE_CMP(s1, s2, n) ::strncasecmp(s1, s2, n)
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 class RewindableStream {
  public:
@@ -702,6 +702,6 @@ struct PlayoutDelay {
   int max_ms;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_TYPES_H_

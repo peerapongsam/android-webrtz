@@ -87,8 +87,8 @@ static bool g_save_chartjson_result;
       NSString* outputPath =
           [outputDirectories[0] stringByAppendingPathComponent:fileName];
 
-      webrtc::test::WritePerfResults(
-          webrtc::ios::StdStringFromNSString(outputPath));
+      webrtz::test::WritePerfResults(
+          webrtz::ios::StdStringFromNSString(outputPath));
     }
   }
 

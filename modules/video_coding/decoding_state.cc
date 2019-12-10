@@ -17,7 +17,7 @@
 #include "modules/video_coding/packet.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMDecodingState::VCMDecodingState()
     : sequence_num_(0),
@@ -363,4 +363,4 @@ bool VCMDecodingState::HaveSpsAndPps(const std::vector<NaluInfo>& nalus) const {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,10 +15,10 @@
 
 #include "api/video/video_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RTCVideoFrame* ToObjCVideoFrame(const VideoFrame& frame);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_SRC_OBJC_VIDEO_FRAME_H_

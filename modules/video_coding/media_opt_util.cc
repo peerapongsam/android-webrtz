@@ -23,7 +23,7 @@
 #include "modules/video_coding/fec_rate_table.h"
 #include "modules/video_coding/nack_fec_tables.h"
 
-namespace webrtc {
+namespace webrtz {
 // Max value of loss rates in off-line model
 static const int kPacketLossMax = 129;
 
@@ -657,4 +657,4 @@ void VCMLossProtectionLogic::Release() {
 }
 
 }  // namespace media_optimization
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,20 +17,20 @@
 #include "api/video_codecs/video_decoder_factory.h"
 #include "api/video_codecs/video_encoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 
-// Creates an instance of webrtc::VideoDecoderFactory from Java
+// Creates an instance of webrtz::VideoDecoderFactory from Java
 // VideoDecoderFactory.
 std::unique_ptr<VideoDecoderFactory> JavaToNativeVideoDecoderFactory(
     JNIEnv* jni,
     jobject decoder_factory);
 
-// Creates an instance of webrtc::VideoEncoderFactory from Java
+// Creates an instance of webrtz::VideoEncoderFactory from Java
 // VideoEncoderFactory.
 std::unique_ptr<VideoEncoderFactory> JavaToNativeVideoEncoderFactory(
     JNIEnv* jni,
     jobject encoder_factory);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_CODECS_WRAPPER_H_

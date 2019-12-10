@@ -14,7 +14,7 @@
 #include "api/optional.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Handles the reporting of metrics for the render delay controller.
 class RenderDelayControllerMetrics {
@@ -46,6 +46,6 @@ class RenderDelayControllerMetrics {
   RTC_DISALLOW_COPY_AND_ASSIGN(RenderDelayControllerMetrics);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_RENDER_DELAY_CONTROLLER_METRICS_H_

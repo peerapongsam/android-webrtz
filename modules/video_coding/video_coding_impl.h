@@ -34,7 +34,7 @@
 #include "rtc_base/thread_checker.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoBitrateAllocator;
 class VideoBitrateAllocationObserver;
@@ -151,7 +151,7 @@ class VideoReceiver : public Module {
 
   int32_t Decode(uint16_t maxWaitTimeMs);
 
-  int32_t Decode(const webrtc::VCMEncodedFrame* frame);
+  int32_t Decode(const webrtz::VCMEncodedFrame* frame);
 
   int32_t IncomingPacket(const uint8_t* incomingPayload,
                          size_t payloadLength,
@@ -188,7 +188,7 @@ class VideoReceiver : public Module {
   void DecoderThreadStopped();
 
  protected:
-  int32_t Decode(const webrtc::VCMEncodedFrame& frame);
+  int32_t Decode(const webrtz::VCMEncodedFrame& frame);
   int32_t RequestKeyFrame();
 
  private:
@@ -246,5 +246,5 @@ class VideoReceiver : public Module {
 };
 
 }  // namespace vcm
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CODING_VIDEO_CODING_IMPL_H_

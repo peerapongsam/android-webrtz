@@ -10,7 +10,7 @@
 
 #include "modules/video_coding/inter_frame_delay.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMInterFrameDelay::VCMInterFrameDelay(int64_t currentWallClock) {
   Reset(currentWallClock);
@@ -104,4 +104,4 @@ void VCMInterFrameDelay::CheckForWrapArounds(uint32_t timestamp) {
     _wrapArounds--;
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -707,4 +707,4 @@ TEST(DesktopRegionTest, DISABLED_Performance) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

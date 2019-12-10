@@ -13,7 +13,7 @@
 #include "modules/audio_processing/residual_echo_detector.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(ResidualEchoDetectorTests, Echo) {
   ResidualEchoDetector echo_detector;
@@ -129,4 +129,4 @@ TEST(ResidualEchoDetectorTests, EchoWithCaptureClockDrift) {
   EXPECT_NEAR(1.f, ed_metrics.echo_likelihood, 0.01f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

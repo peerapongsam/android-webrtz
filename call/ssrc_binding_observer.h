@@ -14,7 +14,7 @@
 
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // With newer versions of SDP, SSRC is often not explicitly signaled and must
 // be learned on the fly. This happens by correlating packet SSRCs with included
@@ -37,6 +37,6 @@ class SsrcBindingObserver {
   virtual void OnSsrcBoundToPayloadType(uint8_t payload_type, uint32_t ssrc) {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_SSRC_BINDING_OBSERVER_H_

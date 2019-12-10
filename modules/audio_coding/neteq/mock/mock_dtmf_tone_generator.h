@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockDtmfToneGenerator : public DtmfToneGenerator {
  public:
@@ -31,5 +31,5 @@ class MockDtmfToneGenerator : public DtmfToneGenerator {
       bool());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_DTMF_TONE_GENERATOR_H_

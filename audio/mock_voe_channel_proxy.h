@@ -20,7 +20,7 @@
 #include "modules/rtp_rtcp/source/rtp_packet_received.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockVoEChannelProxy : public voe::ChannelProxy {
@@ -100,6 +100,6 @@ class MockVoEChannelProxy : public voe::ChannelProxy {
   MOCK_METHOD0(StopPlayout, void());
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_MOCK_VOE_CHANNEL_PROXY_H_

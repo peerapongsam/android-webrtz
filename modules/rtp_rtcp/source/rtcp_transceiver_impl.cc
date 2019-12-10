@@ -33,7 +33,7 @@
 #include "rtc_base/task_queue.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 struct SenderReportTimes {
@@ -450,4 +450,4 @@ std::vector<rtcp::ReportBlock> RtcpTransceiverImpl::CreateReportBlocks(
   return report_blocks;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

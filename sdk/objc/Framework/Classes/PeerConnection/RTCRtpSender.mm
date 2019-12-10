@@ -19,7 +19,7 @@
 #include "api/mediastreaminterface.h"
 
 @implementation RTCRtpSender {
-  rtc::scoped_refptr<webrtc::RtpSenderInterface> _nativeRtpSender;
+  rtc::scoped_refptr<webrtz::RtpSenderInterface> _nativeRtpSender;
 }
 
 @synthesize dtmfSender = _dtmfSender;
@@ -41,7 +41,7 @@
 }
 
 - (RTCMediaStreamTrack *)track {
-  rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> nativeTrack(
+  rtc::scoped_refptr<webrtz::MediaStreamTrackInterface> nativeTrack(
     _nativeRtpSender->track());
   if (nativeTrack) {
     return [RTCMediaStreamTrack mediaTrackForNativeTrack:nativeTrack];
@@ -80,16 +80,16 @@
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::RtpSenderInterface>)nativeRtpSender {
+- (rtc::scoped_refptr<webrtz::RtpSenderInterface>)nativeRtpSender {
   return _nativeRtpSender;
 }
 
 - (instancetype)initWithNativeRtpSender:
-    (rtc::scoped_refptr<webrtc::RtpSenderInterface>)nativeRtpSender {
+    (rtc::scoped_refptr<webrtz::RtpSenderInterface>)nativeRtpSender {
   NSParameterAssert(nativeRtpSender);
   if (self = [super init]) {
     _nativeRtpSender = nativeRtpSender;
-    rtc::scoped_refptr<webrtc::DtmfSenderInterface> nativeDtmfSender(
+    rtc::scoped_refptr<webrtz::DtmfSenderInterface> nativeDtmfSender(
         _nativeRtpSender->GetDtmfSender());
     if (nativeDtmfSender) {
       _dtmfSender = [[RTCDtmfSender alloc] initWithNativeDtmfSender:nativeDtmfSender];

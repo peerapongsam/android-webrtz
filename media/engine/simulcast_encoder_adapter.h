@@ -23,13 +23,13 @@
 #include "rtc_base/atomicops.h"
 #include "rtc_base/sequenced_task_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SimulcastRateAllocator;
 class VideoEncoderFactory;
 
 // SimulcastEncoderAdapter implements simulcast support by creating multiple
-// webrtc::VideoEncoder instances with the given VideoEncoderFactory.
+// webrtz::VideoEncoder instances with the given VideoEncoderFactory.
 // The object is created and destroyed on the worker thread, but all public
 // interfaces should be called from the encoder task queue.
 class SimulcastEncoderAdapter : public VP8Encoder {
@@ -86,11 +86,11 @@ class SimulcastEncoderAdapter : public VP8Encoder {
   };
 
   // Populate the codec settings for each simulcast stream.
-  static void PopulateStreamCodec(const webrtc::VideoCodec& inst,
+  static void PopulateStreamCodec(const webrtz::VideoCodec& inst,
                                   int stream_index,
                                   uint32_t start_bitrate_kbps,
                                   bool highest_resolution_stream,
-                                  webrtc::VideoCodec* stream_codec);
+                                  webrtz::VideoCodec* stream_codec);
 
   bool Initialized() const;
 
@@ -111,6 +111,6 @@ class SimulcastEncoderAdapter : public VP8Encoder {
   std::stack<std::unique_ptr<VideoEncoder>> stored_encoders_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_ENGINE_SIMULCAST_ENCODER_ADAPTER_H_

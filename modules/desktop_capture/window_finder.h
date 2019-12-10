@@ -21,7 +21,7 @@
 #include "modules/desktop_capture/mac/desktop_configuration_monitor.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(USE_X11)
 class XAtomCache;
@@ -60,6 +60,6 @@ class WindowFinder {
   static std::unique_ptr<WindowFinder> Create(const Options& options);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WINDOW_FINDER_H_

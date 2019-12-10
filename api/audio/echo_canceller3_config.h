@@ -13,7 +13,7 @@
 
 #include <stddef.h>  // size_t
 
-namespace webrtc {
+namespace webrtz {
 
 // Configuration struct for EchoCanceller3
 struct EchoCanceller3Config {
@@ -151,6 +151,6 @@ struct EchoCanceller3Config {
     size_t bands_with_reliable_coherence = 5;
   } suppressor;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_ECHO_CANCELLER3_CONFIG_H_

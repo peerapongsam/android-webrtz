@@ -17,7 +17,7 @@
 #include "api/rtpreceiverinterface.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtpReceiver : public rtc::RefCountedObject<RtpReceiverInterface> {
  public:
@@ -33,6 +33,6 @@ class MockRtpReceiver : public rtc::RefCountedObject<RtpReceiverInterface> {
   MOCK_CONST_METHOD0(GetSources, std::vector<RtpSource>());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_TEST_MOCK_RTPRECEIVER_H_

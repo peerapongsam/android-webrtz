@@ -17,7 +17,7 @@
 #include "system_wrappers/include/ntp_time.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // January 1970, in NTP seconds.
 const uint32_t kNtpJan1970 = 2208988800UL;
@@ -83,6 +83,6 @@ class SimulatedClock : public Clock {
   std::unique_ptr<RWLockWrapper> lock_;
 };
 
-};  // namespace webrtc
+};  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_INCLUDE_CLOCK_H_

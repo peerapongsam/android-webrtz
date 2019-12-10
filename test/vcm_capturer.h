@@ -19,7 +19,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "test/video_capturer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class VcmCapturer

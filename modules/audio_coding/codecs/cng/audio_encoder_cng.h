@@ -19,7 +19,7 @@
 #include "modules/audio_coding/codecs/cng/webrtc_cng.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Vad;
 
@@ -91,6 +91,6 @@ class AudioEncoderCng final : public AudioEncoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioEncoderCng);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_CNG_AUDIO_ENCODER_CNG_H_

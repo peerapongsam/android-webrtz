@@ -23,14 +23,14 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioSendStream;
 class AudioReceiveStream;
 
 namespace internal {
 
-class AudioState final : public webrtc::AudioState {
+class AudioState final : public webrtz::AudioState {
  public:
   explicit AudioState(const AudioState::Config& config);
   ~AudioState() override;
@@ -56,12 +56,12 @@ class AudioState final : public webrtc::AudioState {
 
   bool typing_noise_detected() const;
 
-  void AddReceivingStream(webrtc::AudioReceiveStream* stream);
-  void RemoveReceivingStream(webrtc::AudioReceiveStream* stream);
+  void AddReceivingStream(webrtz::AudioReceiveStream* stream);
+  void RemoveReceivingStream(webrtz::AudioReceiveStream* stream);
 
-  void AddSendingStream(webrtc::AudioSendStream* stream,
+  void AddSendingStream(webrtz::AudioSendStream* stream,
                         int sample_rate_hz, size_t num_channels);
-  void RemoveSendingStream(webrtc::AudioSendStream* stream);
+  void RemoveSendingStream(webrtz::AudioSendStream* stream);
 
  private:
   // rtc::RefCountInterface implementation.
@@ -72,7 +72,7 @@ class AudioState final : public webrtc::AudioState {
 
   rtc::ThreadChecker thread_checker_;
   rtc::ThreadChecker process_thread_checker_;
-  const webrtc::AudioState::Config config_;
+  const webrtz::AudioState::Config config_;
   bool recording_enabled_ = true;
   bool playout_enabled_ = true;
 
@@ -89,16 +89,16 @@ class AudioState final : public webrtc::AudioState {
   // stats are still updated.
   std::unique_ptr<NullAudioPoller> null_audio_poller_;
 
-  std::unordered_set<webrtc::AudioReceiveStream*> receiving_streams_;
+  std::unordered_set<webrtz::AudioReceiveStream*> receiving_streams_;
   struct StreamProperties {
     int sample_rate_hz = 0;
     size_t num_channels = 0;
   };
-  std::map<webrtc::AudioSendStream*, StreamProperties> sending_streams_;
+  std::map<webrtz::AudioSendStream*, StreamProperties> sending_streams_;
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(AudioState);
 };
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_AUDIO_STATE_H_

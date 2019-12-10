@@ -30,7 +30,7 @@
 #include "video/video_stream_encoder.h"
 #include "call/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SendStatisticsProxy : public CpuOveruseMetricsObserver,
                             public RtcpStatisticsCallback,
@@ -317,5 +317,5 @@ class SendStatisticsProxy : public CpuOveruseMetricsObserver,
   std::unique_ptr<UmaSamplesContainer> uma_container_ RTC_GUARDED_BY(crit_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // VIDEO_SEND_STATISTICS_PROXY_H_

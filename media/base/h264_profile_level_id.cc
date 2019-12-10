@@ -16,7 +16,7 @@
 
 #include "rtc_base/arraysize.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace H264 {
 
 namespace {
@@ -92,28 +92,28 @@ bool IsLevelAsymmetryAllowed(const CodecParameterMap& params) {
 struct LevelConstraint {
   const int max_macroblocks_per_second;
   const int max_macroblock_frame_size;
-  const webrtc::H264::Level level;
+  const webrtz::H264::Level level;
 };
 
 // This is from ITU-T H.264 (02/2016) Table A-1 – Level limits.
 static constexpr LevelConstraint kLevelConstraints[] = {
-    {1485, 99, webrtc::H264::kLevel1},
-    {1485, 99, webrtc::H264::kLevel1_b},
-    {3000, 396, webrtc::H264::kLevel1_1},
-    {6000, 396, webrtc::H264::kLevel1_2},
-    {11880, 396, webrtc::H264::kLevel1_3},
-    {11880, 396, webrtc::H264::kLevel2},
-    {19800, 792, webrtc::H264::kLevel2_1},
-    {20250, 1620, webrtc::H264::kLevel2_2},
-    {40500, 1620, webrtc::H264::kLevel3},
-    {108000, 3600, webrtc::H264::kLevel3_1},
-    {216000, 5120, webrtc::H264::kLevel3_2},
-    {245760, 8192, webrtc::H264::kLevel4},
-    {245760, 8192, webrtc::H264::kLevel4_1},
-    {522240, 8704, webrtc::H264::kLevel4_2},
-    {589824, 22080, webrtc::H264::kLevel5},
-    {983040, 3684, webrtc::H264::kLevel5_1},
-    {2073600, 3684, webrtc::H264::kLevel5_2},
+    {1485, 99, webrtz::H264::kLevel1},
+    {1485, 99, webrtz::H264::kLevel1_b},
+    {3000, 396, webrtz::H264::kLevel1_1},
+    {6000, 396, webrtz::H264::kLevel1_2},
+    {11880, 396, webrtz::H264::kLevel1_3},
+    {11880, 396, webrtz::H264::kLevel2},
+    {19800, 792, webrtz::H264::kLevel2_1},
+    {20250, 1620, webrtz::H264::kLevel2_2},
+    {40500, 1620, webrtz::H264::kLevel3},
+    {108000, 3600, webrtz::H264::kLevel3_1},
+    {216000, 5120, webrtz::H264::kLevel3_2},
+    {245760, 8192, webrtz::H264::kLevel4},
+    {245760, 8192, webrtz::H264::kLevel4_1},
+    {522240, 8704, webrtz::H264::kLevel4_2},
+    {589824, 22080, webrtz::H264::kLevel5},
+    {983040, 3684, webrtz::H264::kLevel5_1},
+    {2073600, 3684, webrtz::H264::kLevel5_2},
 };
 
 }  // anonymous namespace
@@ -297,14 +297,14 @@ void GenerateProfileLevelIdForAnswer(
 
 bool IsSameH264Profile(const CodecParameterMap& params1,
                        const CodecParameterMap& params2) {
-  const rtc::Optional<webrtc::H264::ProfileLevelId> profile_level_id =
-      webrtc::H264::ParseSdpProfileLevelId(params1);
-  const rtc::Optional<webrtc::H264::ProfileLevelId> other_profile_level_id =
-      webrtc::H264::ParseSdpProfileLevelId(params2);
+  const rtc::Optional<webrtz::H264::ProfileLevelId> profile_level_id =
+      webrtz::H264::ParseSdpProfileLevelId(params1);
+  const rtc::Optional<webrtz::H264::ProfileLevelId> other_profile_level_id =
+      webrtz::H264::ParseSdpProfileLevelId(params2);
   // Compare H264 profiles, but not levels.
   return profile_level_id && other_profile_level_id &&
          profile_level_id->profile == other_profile_level_id->profile;
 }
 
 }  // namespace H264
-}  // namespace webrtc
+}  // namespace webrtz

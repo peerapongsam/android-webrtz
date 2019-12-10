@@ -21,7 +21,7 @@
 @implementation RTCMediaStream {
   NSMutableArray *_audioTracks;
   NSMutableArray *_videoTracks;
-  rtc::scoped_refptr<webrtc::MediaStreamInterface> _nativeMediaStream;
+  rtc::scoped_refptr<webrtz::MediaStreamInterface> _nativeMediaStream;
 }
 
 - (instancetype)initWithFactory:(RTCPeerConnectionFactory *)factory
@@ -29,7 +29,7 @@
   NSParameterAssert(factory);
   NSParameterAssert(streamId.length);
   std::string nativeId = [NSString stdStringForString:streamId];
-  rtc::scoped_refptr<webrtc::MediaStreamInterface> stream =
+  rtc::scoped_refptr<webrtz::MediaStreamInterface> stream =
       factory.nativeFactory->CreateLocalMediaStream(nativeId);
   return [self initWithNativeMediaStream:stream];
 }
@@ -87,16 +87,16 @@
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::MediaStreamInterface>)nativeMediaStream {
+- (rtc::scoped_refptr<webrtz::MediaStreamInterface>)nativeMediaStream {
   return _nativeMediaStream;
 }
 
 - (instancetype)initWithNativeMediaStream:
-    (rtc::scoped_refptr<webrtc::MediaStreamInterface>)nativeMediaStream {
+    (rtc::scoped_refptr<webrtz::MediaStreamInterface>)nativeMediaStream {
   NSParameterAssert(nativeMediaStream);
   if (self = [super init]) {
-    webrtc::AudioTrackVector audioTracks = nativeMediaStream->GetAudioTracks();
-    webrtc::VideoTrackVector videoTracks = nativeMediaStream->GetVideoTracks();
+    webrtz::AudioTrackVector audioTracks = nativeMediaStream->GetAudioTracks();
+    webrtz::VideoTrackVector videoTracks = nativeMediaStream->GetVideoTracks();
 
     _audioTracks = [NSMutableArray arrayWithCapacity:audioTracks.size()];
     _videoTracks = [NSMutableArray arrayWithCapacity:videoTracks.size()];

@@ -20,7 +20,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 void RemoveDcLevel(rtc::ArrayView<float> x) {
@@ -58,7 +58,7 @@ void PowerSpectrum(const OouraFft* ooura_fft,
   }
 }
 
-webrtc::SignalClassifier::SignalType ClassifySignal(
+webrtz::SignalClassifier::SignalType ClassifySignal(
     rtc::ArrayView<const float> signal_spectrum,
     rtc::ArrayView<const float> noise_spectrum,
     ApmDataDumper* data_dumper) {
@@ -164,4 +164,4 @@ SignalClassifier::SignalType SignalClassifier::Analyze(
   return signal_type;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

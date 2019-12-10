@@ -23,7 +23,7 @@
 #include "modules/audio_processing/vad/voice_activity_detector.h"
 #include "rtc_base/swap_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Speech intelligibility enhancement module. Reads render and capture
 // audio streams and modifies the render stream with a set of gains per
@@ -132,6 +132,6 @@ class IntelligibilityEnhancer : public LappedTransform::Callback {
       high_bands_buffers_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INTELLIGIBILITY_INTELLIGIBILITY_ENHANCER_H_

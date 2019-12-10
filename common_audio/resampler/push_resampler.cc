@@ -17,7 +17,7 @@
 #include "common_audio/resampler/push_sinc_resampler.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // These checks were factored out into a non-templatized function
 // due to problems with clang on Windows in debug builds.
@@ -144,4 +144,4 @@ int PushResampler<T>::Resample(const T* src, size_t src_length, T* dst,
 template class PushResampler<int16_t>;
 template class PushResampler<float>;
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "modules/include/module_common_types.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class TypingDetection {
  public:
@@ -88,6 +88,6 @@ class TypingDetection {
   int report_detection_update_period_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // #ifndef MODULES_AUDIO_PROCESSING_TYPING_DETECTION_H_

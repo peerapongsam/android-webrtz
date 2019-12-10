@@ -18,7 +18,7 @@
 #include "api/array_view.h"
 #include "modules/audio_processing/include/audio_frame_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 
@@ -109,6 +109,6 @@ class AecDump {
   // Logs Event::Type CONFIG message.
   virtual void WriteConfig(const InternalAPMConfig& config) = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INCLUDE_AEC_DUMP_H_

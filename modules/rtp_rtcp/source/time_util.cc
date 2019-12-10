@@ -14,7 +14,7 @@
 
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // TODO(danilchap): Make generic, optimize and move to base.
 inline int64_t DivideRoundToNearest(int64_t x, uint32_t y) {
@@ -87,4 +87,4 @@ int64_t CompactNtpRttToMs(uint32_t compact_ntp_interval) {
   // Rtt value 0 considered too good to be true and increases to 1.
   return std::max<int64_t>(ms, 1);
 }
-}  // namespace webrtc
+}  // namespace webrtz

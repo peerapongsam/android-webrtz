@@ -25,7 +25,7 @@ namespace {
 void CleanupLogDirectory(const FileRotatingStream& stream) {
   for (size_t i = 0; i < stream.GetNumFiles(); ++i) {
     // Ignore return value, not all files are expected to exist.
-    webrtc::test::RemoveFile(stream.GetFilePath(i));
+    webrtz::test::RemoveFile(stream.GetFilePath(i));
   }
 }
 
@@ -47,12 +47,12 @@ class MAYBE_FileRotatingStreamTest : public ::testing::Test {
             const std::string& file_prefix,
             size_t max_file_size,
             size_t num_log_files) {
-    dir_path_ = webrtc::test::OutputPath();
+    dir_path_ = webrtz::test::OutputPath();
 
     // Append per-test output path in order to run within gtest parallel.
     dir_path_.append(dir_name);
     dir_path_.push_back(Pathname::DefaultFolderDelimiter());
-    ASSERT_TRUE(webrtc::test::CreateDir(dir_path_));
+    ASSERT_TRUE(webrtz::test::CreateDir(dir_path_));
     stream_.reset(new FileRotatingStream(dir_path_, file_prefix, max_file_size,
                                          num_log_files));
   }
@@ -61,7 +61,7 @@ class MAYBE_FileRotatingStreamTest : public ::testing::Test {
     // On windows, open files can't be removed.
     stream_->Close();
     CleanupLogDirectory(*stream_);
-    EXPECT_TRUE(webrtc::test::RemoveDir(dir_path_));
+    EXPECT_TRUE(webrtz::test::RemoveDir(dir_path_));
 
     stream_.reset();
   }
@@ -214,12 +214,12 @@ TEST_F(MAYBE_FileRotatingStreamTest, GetFilePath) {
 class MAYBE_CallSessionFileRotatingStreamTest : public ::testing::Test {
  protected:
   void Init(const std::string& dir_name, size_t max_total_log_size) {
-    dir_path_ = webrtc::test::OutputPath();
+    dir_path_ = webrtz::test::OutputPath();
 
     // Append per-test output path in order to run within gtest parallel.
     dir_path_.append(dir_name);
     dir_path_.push_back(Pathname::DefaultFolderDelimiter());
-    ASSERT_TRUE(webrtc::test::CreateDir(dir_path_));
+    ASSERT_TRUE(webrtz::test::CreateDir(dir_path_));
     stream_.reset(
         new CallSessionFileRotatingStream(dir_path_, max_total_log_size));
   }
@@ -228,7 +228,7 @@ class MAYBE_CallSessionFileRotatingStreamTest : public ::testing::Test {
     // On windows, open files can't be removed.
     stream_->Close();
     CleanupLogDirectory(*stream_);
-    EXPECT_TRUE(webrtc::test::RemoveDir(dir_path_));
+    EXPECT_TRUE(webrtz::test::RemoveDir(dir_path_));
 
     stream_.reset();
   }

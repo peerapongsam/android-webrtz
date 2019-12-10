@@ -51,7 +51,7 @@ using ::testing::AtLeast;
 using ::testing::Invoke;
 using ::testing::_;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const int kSampleRateHz = 16000;
@@ -646,7 +646,7 @@ class AcmIsacMtTestOldApi : public AudioCodingModuleMtTestOldApi {
     // Set up input audio source to read from specified file, loop after 5
     // seconds, and deliver blocks of 10 ms.
     const std::string input_file_name =
-        webrtc::test::ResourcePath("audio_coding/speech_mono_16kHz", "pcm");
+        webrtz::test::ResourcePath("audio_coding/speech_mono_16kHz", "pcm");
     audio_loop_.Init(input_file_name, 5 * kSampleRateHz, kNumSamples10ms);
 
     // Generate one packet to have something to insert.
@@ -765,7 +765,7 @@ class AcmReRegisterIsacMtTestOldApi : public AudioCodingModuleTestOldApi {
     // Set up input audio source to read from specified file, loop after 5
     // seconds, and deliver blocks of 10 ms.
     const std::string input_file_name =
-        webrtc::test::ResourcePath("audio_coding/speech_mono_16kHz", "pcm");
+        webrtz::test::ResourcePath("audio_coding/speech_mono_16kHz", "pcm");
     audio_loop_.Init(input_file_name, 5 * kSampleRateHz, kNumSamples10ms);
     RegisterCodec();  // Must be called before the threads start below.
     StartThreads();
@@ -946,7 +946,7 @@ class AcmReceiverBitExactnessOldApi : public ::testing::Test {
            rtc::scoped_refptr<AudioDecoderFactory> decoder_factory,
            rtc::FunctionView<void(AudioCodingModule*)> decoder_reg) {
     const std::string input_file_name =
-        webrtc::test::ResourcePath("audio_coding/neteq_universal_new", "rtp");
+        webrtz::test::ResourcePath("audio_coding/neteq_universal_new", "rtp");
     std::unique_ptr<test::RtpFileSource> packet_source(
         test::RtpFileSource::Create(input_file_name));
 #ifdef WEBRTC_ANDROID
@@ -957,7 +957,7 @@ class AcmReceiverBitExactnessOldApi : public ::testing::Test {
 
     test::AudioChecksum checksum;
     const std::string output_file_name =
-        webrtc::test::OutputPath() +
+        webrtz::test::OutputPath() +
         ::testing::UnitTest::GetInstance()
             ->current_test_info()
             ->test_case_name() +
@@ -1135,7 +1135,7 @@ class AcmSenderBitExactnessOldApi : public ::testing::Test,
   // false.
   bool SetUpSender() {
     const std::string input_file_name =
-        webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+        webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
     // Note that |audio_source_| will loop forever. The test duration is set
     // explicitly by |kTestDurationMs|.
     audio_source_.reset(new test::InputAudioFile(input_file_name));
@@ -1181,7 +1181,7 @@ class AcmSenderBitExactnessOldApi : public ::testing::Test,
     // output.
     test::AudioChecksum audio_checksum;
     const std::string output_file_name =
-        webrtc::test::OutputPath() +
+        webrtz::test::OutputPath() +
         ::testing::UnitTest::GetInstance()
             ->current_test_info()
             ->test_case_name() +
@@ -1565,7 +1565,7 @@ class AcmSetBitRateTest : public ::testing::Test {
   // false.
   bool SetUpSender() {
     const std::string input_file_name =
-        webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+        webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
     // Note that |audio_source_| will loop forever. The test duration is set
     // explicitly by |kTestDurationMs|.
     audio_source_.reset(new test::InputAudioFile(input_file_name));
@@ -1880,7 +1880,7 @@ class AcmSwitchingOutputFrequencyOldApi : public ::testing::Test,
     // Set up the receiver used to decode the packets and verify the decoded
     // output.
     const std::string output_file_name =
-        webrtc::test::OutputPath() +
+        webrtz::test::OutputPath() +
         ::testing::UnitTest::GetInstance()
             ->current_test_info()
             ->test_case_name() +
@@ -1970,4 +1970,4 @@ TEST_F(AcmSwitchingOutputFrequencyOldApi, Toggle8KhzTo16Khz) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

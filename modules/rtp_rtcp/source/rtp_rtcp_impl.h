@@ -27,7 +27,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/gtest_prod_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ModuleRtpRtcpImpl : public RtpRtcp, public RTCPReceiver::ModuleRtpRtcp {
  public:
@@ -353,6 +353,6 @@ class ModuleRtpRtcpImpl : public RtpRtcp, public RTCPReceiver::ModuleRtpRtcp {
   int64_t rtt_ms_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_RTCP_IMPL_H_

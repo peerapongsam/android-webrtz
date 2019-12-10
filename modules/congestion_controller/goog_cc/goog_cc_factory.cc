@@ -12,7 +12,7 @@
 
 #include "modules/congestion_controller/goog_cc/goog_cc_network_control.h"
 #include "rtc_base/ptr_util.h"
-namespace webrtc {
+namespace webrtz {
 GoogCcNetworkControllerFactory::GoogCcNetworkControllerFactory(
     RtcEventLog* event_log)
     : event_log_(event_log) {}
@@ -28,4 +28,4 @@ TimeDelta GoogCcNetworkControllerFactory::GetProcessInterval() const {
   const int64_t kUpdateIntervalMs = 25;
   return TimeDelta::ms(kUpdateIntervalMs);
 }
-}  // namespace webrtc
+}  // namespace webrtz

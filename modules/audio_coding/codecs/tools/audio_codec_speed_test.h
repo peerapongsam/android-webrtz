@@ -17,7 +17,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Define coding parameter as
 // <channels, bit_rate, file_name, extension, if_save_output>.
@@ -86,6 +86,6 @@ class AudioCodecSpeedTest : public testing::TestWithParam<coding_param> {
   bool save_out_data_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_TOOLS_AUDIO_CODEC_SPEED_TEST_H_

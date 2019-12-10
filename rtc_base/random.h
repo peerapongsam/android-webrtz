@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class Random {
  public:
@@ -88,6 +88,6 @@ double Random::Rand<double>();
 template <>
 bool Random::Rand<bool>();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_RANDOM_H_

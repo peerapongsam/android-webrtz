@@ -11,7 +11,7 @@
 #include "call/rtp_config.h"
 #include "rtc_base/strings/string_builder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::string NackConfig::ToString() const {
   char buf[1024];
@@ -36,4 +36,4 @@ bool UlpfecConfig::operator==(const UlpfecConfig& other) const {
          red_payload_type == other.red_payload_type &&
          red_rtx_payload_type == other.red_rtx_payload_type;
 }
-}  // namespace webrtc
+}  // namespace webrtz

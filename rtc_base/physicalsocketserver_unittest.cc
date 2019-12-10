@@ -193,7 +193,7 @@ TEST_F(PhysicalSocketTest, TestConnectFailIPv4) {
 }
 
 void PhysicalSocketTest::ConnectInternalAcceptError(const IPAddress& loopback) {
-  webrtc::testing::StreamSink sink;
+  webrtz::testing::StreamSink sink;
   SocketAddress accept_addr;
 
   // Create two clients.
@@ -218,7 +218,7 @@ void PhysicalSocketTest::ConnectInternalAcceptError(const IPAddress& loopback) {
   EXPECT_EQ(AsyncSocket::CS_CONNECTING, server->GetState());
 
   // Ensure no pending server connections, since we haven't done anything yet.
-  EXPECT_FALSE(sink.Check(server.get(), webrtc::testing::SSE_READ));
+  EXPECT_FALSE(sink.Check(server.get(), webrtz::testing::SSE_READ));
   EXPECT_TRUE(nullptr == server->Accept(&accept_addr));
   EXPECT_TRUE(accept_addr.IsNil());
 
@@ -229,11 +229,11 @@ void PhysicalSocketTest::ConnectInternalAcceptError(const IPAddress& loopback) {
 
   // Client is connecting, outcome not yet determined.
   EXPECT_EQ(AsyncSocket::CS_CONNECTING, client1->GetState());
-  EXPECT_FALSE(sink.Check(client1.get(), webrtc::testing::SSE_OPEN));
-  EXPECT_FALSE(sink.Check(client1.get(), webrtc::testing::SSE_CLOSE));
+  EXPECT_FALSE(sink.Check(client1.get(), webrtz::testing::SSE_OPEN));
+  EXPECT_FALSE(sink.Check(client1.get(), webrtz::testing::SSE_CLOSE));
 
   // Server has pending connection, try to accept it (will fail).
-  EXPECT_TRUE_WAIT((sink.Check(server.get(), webrtc::testing::SSE_READ)),
+  EXPECT_TRUE_WAIT((sink.Check(server.get(), webrtz::testing::SSE_READ)),
                    kTimeout);
   // Simulate "::accept" returning an error.
   SetFailAccept(true);
@@ -242,7 +242,7 @@ void PhysicalSocketTest::ConnectInternalAcceptError(const IPAddress& loopback) {
   ASSERT_TRUE(accept_addr.IsNil());
 
   // Ensure no more pending server connections.
-  EXPECT_FALSE(sink.Check(server.get(), webrtc::testing::SSE_READ));
+  EXPECT_FALSE(sink.Check(server.get(), webrtz::testing::SSE_READ));
   EXPECT_TRUE(nullptr == server->Accept(&accept_addr));
   EXPECT_TRUE(accept_addr.IsNil());
 
@@ -253,11 +253,11 @@ void PhysicalSocketTest::ConnectInternalAcceptError(const IPAddress& loopback) {
 
   // Client is connecting, outcome not yet determined.
   EXPECT_EQ(AsyncSocket::CS_CONNECTING, client2->GetState());
-  EXPECT_FALSE(sink.Check(client2.get(), webrtc::testing::SSE_OPEN));
-  EXPECT_FALSE(sink.Check(client2.get(), webrtc::testing::SSE_CLOSE));
+  EXPECT_FALSE(sink.Check(client2.get(), webrtz::testing::SSE_OPEN));
+  EXPECT_FALSE(sink.Check(client2.get(), webrtz::testing::SSE_CLOSE));
 
   // Server has pending connection, try to accept it (will succeed).
-  EXPECT_TRUE_WAIT((sink.Check(server.get(), webrtc::testing::SSE_READ)),
+  EXPECT_TRUE_WAIT((sink.Check(server.get(), webrtz::testing::SSE_READ)),
                    kTimeout);
   SetFailAccept(false);
   std::unique_ptr<AsyncSocket> accepted2(server->Accept(&accept_addr));

@@ -14,7 +14,7 @@
 #include "modules/audio_processing/include/audio_processing.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(EchoCancellationInternalTest, ExtendedFilter) {
   std::unique_ptr<AudioProcessing> ap(AudioProcessingBuilder().Create());
@@ -76,4 +76,4 @@ TEST(EchoCancellationInternalTest, DelayAgnostic) {
   EXPECT_EQ(0, WebRtcAec_delay_agnostic_enabled(aec_core));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -21,7 +21,7 @@ extern "C" {
 #include "modules/audio_processing/aec/aec_core.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Errors
 #define AEC_UNSPECIFIED_ERROR 12000
@@ -294,6 +294,6 @@ int WebRtcAec_GetDelayMetrics(void* handle,
 //
 struct AecCore* WebRtcAec_aec_core(void* handle);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_ECHO_CANCELLATION_H_

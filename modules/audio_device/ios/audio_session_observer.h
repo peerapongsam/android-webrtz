@@ -14,7 +14,7 @@
 #include "rtc_base/asyncinvoker.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Observer interface for listening to AVAudioSession events.
 class AudioSessionObserver {
@@ -37,6 +37,6 @@ class AudioSessionObserver {
   virtual ~AudioSessionObserver() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  //  MODULES_AUDIO_DEVICE_IOS_AUDIO_SESSION_OBSERVER_H_

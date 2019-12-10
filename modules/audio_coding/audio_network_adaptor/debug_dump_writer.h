@@ -28,7 +28,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 RTC_POP_IGNORING_WUNDEF()
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 class DebugDumpWriter {
  public:
@@ -50,6 +50,6 @@ class DebugDumpWriter {
 #endif
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_DEBUG_DUMP_WRITER_H_

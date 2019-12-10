@@ -18,12 +18,12 @@
 #include "pc/videotrack.h"
 #include "rtc_base/gunit.h"
 
-using webrtc::FakeVideoTrackRenderer;
-using webrtc::MediaSourceInterface;
-using webrtc::MediaStreamTrackInterface;
-using webrtc::VideoTrackSource;
-using webrtc::VideoTrack;
-using webrtc::VideoTrackInterface;
+using webrtz::FakeVideoTrackRenderer;
+using webrtz::MediaSourceInterface;
+using webrtz::MediaStreamTrackInterface;
+using webrtz::VideoTrackSource;
+using webrtz::VideoTrack;
+using webrtz::VideoTrackInterface;
 
 class VideoTrackTest : public testing::Test {
  public:

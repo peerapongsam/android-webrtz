@@ -20,7 +20,7 @@
 #include "modules/include/module_common_types.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class PCMFile {
  public:
@@ -71,6 +71,6 @@ class PCMFile {
   int blocks_read_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_PCMFILE_H_

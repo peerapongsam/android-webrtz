@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/agc2/vector_float_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -36,4 +36,4 @@ VectorFloatFrame::VectorFloatFrame(int num_channels,
 
 VectorFloatFrame::~VectorFloatFrame() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

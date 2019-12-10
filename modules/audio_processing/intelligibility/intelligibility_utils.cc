@@ -18,7 +18,7 @@
 
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace intelligibility {
 
@@ -91,4 +91,4 @@ void DelayBuffer::Delay(float* const* data, size_t length) {
 
 }  // namespace intelligibility
 
-}  // namespace webrtc
+}  // namespace webrtz

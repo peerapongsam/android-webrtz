@@ -11,7 +11,7 @@
 #include "modules/audio_coding/codecs/opus/audio_decoder_opus.h"
 #include "test/fuzzers/audio_decoder_fuzzer.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   const size_t channels = (size % 2) + 1;  // 1 or 2 channels.
   AudioDecoderOpusImpl dec(channels);
@@ -21,4 +21,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   FuzzAudioDecoder(DecoderFunctionType::kRedundantDecode, data, size, &dec,
                    kSampleRateHz, sizeof(output), output);
 }
-}  // namespace webrtc
+}  // namespace webrtz

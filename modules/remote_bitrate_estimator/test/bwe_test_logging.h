@@ -134,17 +134,17 @@
 
 #define BWE_TEST_LOGGING_GLOBAL_CONTEXT(name) \
     do { \
-      webrtc::testing::bwe::Logging::GetInstance()->SetGlobalContext(name); \
+      webrtz::testing::bwe::Logging::GetInstance()->SetGlobalContext(name); \
     } while (0)
 
 #define BWE_TEST_LOGGING_GLOBAL_ENABLE(enabled) \
     do { \
-      webrtc::testing::bwe::Logging::GetInstance()->SetGlobalEnable(enabled); \
+      webrtz::testing::bwe::Logging::GetInstance()->SetGlobalEnable(enabled); \
     } while (0)
 
 #define __BWE_TEST_LOGGING_CONTEXT_NAME(ctx, line) ctx ## line
 #define __BWE_TEST_LOGGING_CONTEXT_DECLARE(ctx, line, name, time, enabled) \
-    webrtc::testing::bwe::Logging::Context \
+    webrtz::testing::bwe::Logging::Context \
         __BWE_TEST_LOGGING_CONTEXT_NAME(ctx, line)(name, time, enabled)
 
 #define BWE_TEST_LOGGING_CONTEXT(name) \
@@ -159,28 +159,28 @@
 #define BWE_TEST_LOGGING_LOG1(name, format, _1) \
     do { \
       BWE_TEST_LOGGING_CONTEXT(name); \
-      webrtc::testing::bwe::Logging::GetInstance()->Log(format, _1); \
+      webrtz::testing::bwe::Logging::GetInstance()->Log(format, _1); \
     } while (0)
 #define BWE_TEST_LOGGING_LOG2(name, format, _1, _2) \
     do { \
       BWE_TEST_LOGGING_CONTEXT(name); \
-      webrtc::testing::bwe::Logging::GetInstance()->Log(format, _1, _2); \
+      webrtz::testing::bwe::Logging::GetInstance()->Log(format, _1, _2); \
     } while (0)
 #define BWE_TEST_LOGGING_LOG3(name, format, _1, _2, _3) \
     do { \
       BWE_TEST_LOGGING_CONTEXT(name); \
-      webrtc::testing::bwe::Logging::GetInstance()->Log(format, _1, _2, _3); \
+      webrtz::testing::bwe::Logging::GetInstance()->Log(format, _1, _2, _3); \
     } while (0)
 #define BWE_TEST_LOGGING_LOG4(name, format, _1, _2, _3, _4) \
     do { \
       BWE_TEST_LOGGING_CONTEXT(name); \
-      webrtc::testing::bwe::Logging::GetInstance()->Log(format, _1, _2, _3, \
+      webrtz::testing::bwe::Logging::GetInstance()->Log(format, _1, _2, _3, \
                                                         _4); \
     } while (0)
 #define BWE_TEST_LOGGING_LOG5(name, format, _1, _2, _3, _4, _5) \
     do {\
       BWE_TEST_LOGGING_CONTEXT(name); \
-      webrtc::testing::bwe::Logging::GetInstance()->Log(format, _1, _2, _3, \
+      webrtz::testing::bwe::Logging::GetInstance()->Log(format, _1, _2, _3, \
                                                         _4, _5); \
     } while (0)
 
@@ -188,14 +188,14 @@
   do {                                                                       \
     __BWE_TEST_LOGGING_CONTEXT_DECLARE(__bwe_log_, __PLOT__, name,           \
                                        static_cast<int64_t>(time), true);    \
-    webrtc::testing::bwe::Logging::GetInstance()->Plot(figure, name, value); \
+    webrtz::testing::bwe::Logging::GetInstance()->Plot(figure, name, value); \
   } while (0)
 
 #define BWE_TEST_LOGGING_PLOT_WITH_NAME(figure, name, time, value, alg_name) \
   do {                                                                       \
     __BWE_TEST_LOGGING_CONTEXT_DECLARE(__bwe_log_, __PLOT__, name,           \
                                        static_cast<int64_t>(time), true);    \
-    webrtc::testing::bwe::Logging::GetInstance()->Plot(figure, name, value,  \
+    webrtz::testing::bwe::Logging::GetInstance()->Plot(figure, name, value,  \
                                                        alg_name);            \
   } while (0)
 
@@ -203,7 +203,7 @@
   do {                                                                      \
     __BWE_TEST_LOGGING_CONTEXT_DECLARE(__bwe_log_, __PLOT__, name,          \
                                        static_cast<int64_t>(time), true);   \
-    webrtc::testing::bwe::Logging::GetInstance()->Plot(figure, name, value, \
+    webrtz::testing::bwe::Logging::GetInstance()->Plot(figure, name, value, \
                                                        ssrc);               \
   } while (0)
 
@@ -212,21 +212,21 @@
   do {                                                                      \
     __BWE_TEST_LOGGING_CONTEXT_DECLARE(__bwe_log_, __PLOT__, name,          \
                                        static_cast<int64_t>(time), true);   \
-    webrtc::testing::bwe::Logging::GetInstance()->Plot(figure, name, value, \
+    webrtz::testing::bwe::Logging::GetInstance()->Plot(figure, name, value, \
                                                        ssrc, alg_name);     \
   } while (0)
 
 #define BWE_TEST_LOGGING_BAR(figure, name, value, flow_id)                     \
   do {                                                                         \
     BWE_TEST_LOGGING_CONTEXT(name);                                            \
-    webrtc::testing::bwe::Logging::GetInstance()->PlotBar(figure, name, value, \
+    webrtz::testing::bwe::Logging::GetInstance()->PlotBar(figure, name, value, \
                                                           flow_id);            \
   } while (0)
 
 #define BWE_TEST_LOGGING_BASELINEBAR(figure, name, value, flow_id) \
   do {                                                             \
     BWE_TEST_LOGGING_CONTEXT(name);                                \
-    webrtc::testing::bwe::Logging::GetInstance()->PlotBaselineBar( \
+    webrtz::testing::bwe::Logging::GetInstance()->PlotBaselineBar( \
         figure, name, value, flow_id);                             \
   } while (0)
 
@@ -234,7 +234,7 @@
                                   flow_id)                                 \
   do {                                                                     \
     BWE_TEST_LOGGING_CONTEXT(name);                                        \
-    webrtc::testing::bwe::Logging::GetInstance()->PlotErrorBar(            \
+    webrtz::testing::bwe::Logging::GetInstance()->PlotErrorBar(            \
         figure, name, value, ylow, yhigh, title, flow_id);                 \
   } while (0)
 
@@ -242,7 +242,7 @@
     figure, name, value, ylow, yhigh, error_title, ymax, limit_title, flow_id) \
   do {                                                                         \
     BWE_TEST_LOGGING_CONTEXT(name);                                            \
-    webrtc::testing::bwe::Logging::GetInstance()->PlotLimitErrorBar(           \
+    webrtz::testing::bwe::Logging::GetInstance()->PlotLimitErrorBar(           \
         figure, name, value, ylow, yhigh, error_title, ymax, limit_title,      \
         flow_id);                                                              \
   } while (0)
@@ -250,11 +250,11 @@
 #define BWE_TEST_LOGGING_LABEL(figure, title, y_label, num_flows) \
   do {                                                            \
     BWE_TEST_LOGGING_CONTEXT(title);                              \
-    webrtc::testing::bwe::Logging::GetInstance()->PlotLabel(      \
+    webrtz::testing::bwe::Logging::GetInstance()->PlotLabel(      \
         figure, title, y_label, num_flows);                       \
   } while (0)
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -352,7 +352,7 @@ class Logging {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // BWE_TEST_LOGGING_COMPILE_TIME_ENABLE
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_BWE_TEST_LOGGING_H_

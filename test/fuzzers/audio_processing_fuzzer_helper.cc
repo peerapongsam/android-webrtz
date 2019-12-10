@@ -19,7 +19,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 void GenerateFloatFrame(test::FuzzDataHelper* fuzz_data,
                         size_t input_rate,
@@ -117,4 +117,4 @@ void FuzzAudioProcessing(test::FuzzDataHelper* fuzz_data,
     RTC_DCHECK_NE(apm_return_code, AudioProcessing::kBadDataLengthError);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

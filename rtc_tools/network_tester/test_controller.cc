@@ -10,7 +10,7 @@
 
 #include "rtc_tools/network_tester/test_controller.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TestController::TestController(int min_port,
                                int max_port,
@@ -122,4 +122,4 @@ void TestController::OnReadPacket(rtc::AsyncPacketSocket* socket,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

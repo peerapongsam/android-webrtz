@@ -13,7 +13,7 @@
 #ifndef PC_TEST_TESTSDPSTRINGS_H_
 #define PC_TEST_TESTSDPSTRINGS_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // SDP offer string from a Nightly FireFox build.
 static const char kFireFoxSdpOffer[] =
@@ -179,6 +179,6 @@ static const char kAudioSdpWithUnsupportedCodecsUnifiedPlan[] =
     "a=ssrc:4227871655 label:7nU0TApbB-n4dfPlCplWT9QTEsbBDS1IlpW3a0\r\n"
     "a=mid:0\r\n";
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_TESTSDPSTRINGS_H_

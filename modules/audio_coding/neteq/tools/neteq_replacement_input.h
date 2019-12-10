@@ -16,7 +16,7 @@
 
 #include "modules/audio_coding/neteq/tools/neteq_input.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // This class converts the packets from a NetEqInput to fake encodings to be
@@ -47,5 +47,5 @@ class NetEqReplacementInput : public NetEqInput {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_NETEQ_REPLACEMENT_INPUT_H_

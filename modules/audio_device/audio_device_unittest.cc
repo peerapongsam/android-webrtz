@@ -37,7 +37,7 @@ using ::testing::Invoke;
 using ::testing::NiceMock;
 using ::testing::NotNull;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // #define ENABLE_DEBUG_PRINTF
@@ -739,4 +739,4 @@ TEST_F(AudioDeviceTest, DISABLED_MeasureLoopbackLatency) {
   audio_stream.PrintResults();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

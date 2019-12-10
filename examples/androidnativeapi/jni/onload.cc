@@ -14,11 +14,11 @@
 #include "rtc_base/ssladapter.h"
 #include "sdk/android/native_api/base/init.h"
 
-namespace webrtc_examples {
+namespace webrtz_examples {
 
 extern "C" jint JNIEXPORT JNICALL JNI_OnLoad(JavaVM* jvm, void* reserved) {
-  webrtc::InitAndroid(jvm);
-  webrtc::JVM::Initialize(jvm);
+  webrtz::InitAndroid(jvm);
+  webrtz::JVM::Initialize(jvm);
   RTC_CHECK(rtc::InitializeSSL()) << "Failed to InitializeSSL()";
   return JNI_VERSION_1_6;
 }
@@ -27,4 +27,4 @@ extern "C" void JNIEXPORT JNICALL JNI_OnUnLoad(JavaVM* jvm, void* reserved) {
   RTC_CHECK(rtc::CleanupSSL()) << "Failed to CleanupSSL()";
 }
 
-}  // namespace webrtc_examples
+}  // namespace webrtz_examples

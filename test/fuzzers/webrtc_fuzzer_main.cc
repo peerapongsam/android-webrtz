@@ -30,12 +30,12 @@ void InitializeWebRtcFuzzDefaults() {
 }
 }
 
-namespace webrtc {
+namespace webrtz {
 extern void FuzzOneInput(const uint8_t* data, size_t size);
-}  // namespace webrtc
+}  // namespace webrtz
 
 extern "C" int LLVMFuzzerTestOneInput(const unsigned char *data, size_t size) {
   InitializeWebRtcFuzzDefaults();
-  webrtc::FuzzOneInput(data, size);
+  webrtz::FuzzOneInput(data, size);
   return 0;
 }

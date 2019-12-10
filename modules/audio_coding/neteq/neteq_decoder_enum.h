@@ -14,7 +14,7 @@
 #include "api/audio_codecs/audio_format.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum class NetEqDecoder {
   kDecoderPCMu,
@@ -51,6 +51,6 @@ enum class NetEqDecoder {
 
 rtc::Optional<SdpAudioFormat> NetEqDecoderToSdpAudioFormat(NetEqDecoder nd);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_NETEQ_NETEQ_DECODER_ENUM_H_

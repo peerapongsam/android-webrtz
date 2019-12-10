@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 BlankDetectorDesktopCapturerWrapper::BlankDetectorDesktopCapturerWrapper(
     std::unique_ptr<DesktopCapturer> capturer,
@@ -115,4 +115,4 @@ bool BlankDetectorDesktopCapturerWrapper::IsBlankPixel(
   return RgbaColor(pixel_data) == blank_pixel_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

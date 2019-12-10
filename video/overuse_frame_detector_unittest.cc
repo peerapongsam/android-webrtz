@@ -20,7 +20,7 @@
 #include "test/gtest.h"
 #include "video/overuse_frame_detector.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::InvokeWithoutArgs;
 using ::testing::_;
@@ -94,7 +94,7 @@ class OveruseFrameDetectorTest : public ::testing::Test,
                                                int height,
                                                int delay_us) {
     VideoFrame frame(I420Buffer::Create(width, height),
-                     webrtc::kVideoRotation_0, 0);
+                     webrtz::kVideoRotation_0, 0);
     uint32_t timestamp = 0;
     while (num_frames-- > 0) {
       frame.set_timestamp(timestamp);
@@ -114,10 +114,10 @@ class OveruseFrameDetectorTest : public ::testing::Test,
                                                      int width,
                                                      int height,
                                                      int delay_us) {
-    webrtc::Random random(17);
+    webrtz::Random random(17);
 
     VideoFrame frame(I420Buffer::Create(width, height),
-                     webrtc::kVideoRotation_0, 0);
+                     webrtz::kVideoRotation_0, 0);
     uint32_t timestamp = 0;
     while (num_frames-- > 0) {
       frame.set_timestamp(timestamp);
@@ -331,7 +331,7 @@ TEST_F(OveruseFrameDetectorTest, MeasuresMultipleConcurrentSamples) {
   static const int kIntervalUs = 33 * rtc::kNumMicrosecsPerMillisec;
   static const size_t kNumFramesEncodingDelay = 3;
   VideoFrame frame(I420Buffer::Create(kWidth, kHeight),
-                   webrtc::kVideoRotation_0, 0);
+                   webrtz::kVideoRotation_0, 0);
   for (size_t i = 0; i < 1000; ++i) {
     // Unique timestamps.
     frame.set_timestamp(static_cast<uint32_t>(i));
@@ -355,7 +355,7 @@ TEST_F(OveruseFrameDetectorTest, UpdatesExistingSamples) {
   static const int kIntervalUs = 33 * rtc::kNumMicrosecsPerMillisec;
   static const int kDelayUs = 30 * rtc::kNumMicrosecsPerMillisec;
   VideoFrame frame(I420Buffer::Create(kWidth, kHeight),
-                   webrtc::kVideoRotation_0, 0);
+                   webrtz::kVideoRotation_0, 0);
   uint32_t timestamp = 0;
   for (size_t i = 0; i < 1000; ++i) {
     frame.set_timestamp(timestamp);
@@ -594,7 +594,7 @@ class OveruseFrameDetectorTest2 : public OveruseFrameDetectorTest {
                                        int height,
                                        int delay_us) override {
     VideoFrame frame(I420Buffer::Create(width, height),
-                     webrtc::kVideoRotation_0, 0);
+                     webrtz::kVideoRotation_0, 0);
     while (num_frames-- > 0) {
       int64_t capture_time_us = rtc::TimeMicros();
       overuse_detector_->FrameCaptured(frame, capture_time_us /* ignored */);
@@ -611,10 +611,10 @@ class OveruseFrameDetectorTest2 : public OveruseFrameDetectorTest {
                                              int width,
                                              int height,
                                              int delay_us) override {
-    webrtc::Random random(17);
+    webrtz::Random random(17);
 
     VideoFrame frame(I420Buffer::Create(width, height),
-                     webrtc::kVideoRotation_0, 0);
+                     webrtz::kVideoRotation_0, 0);
     for (int i = 0; i < num_frames; i++) {
       int interval_us = random.Rand(min_interval_us, max_interval_us);
       int64_t capture_time_us = rtc::TimeMicros();
@@ -775,7 +775,7 @@ TEST_F(OveruseFrameDetectorTest2, MeasuresMultipleConcurrentSamples) {
   static const int kIntervalUs = 33 * rtc::kNumMicrosecsPerMillisec;
   static const size_t kNumFramesEncodingDelay = 3;
   VideoFrame frame(I420Buffer::Create(kWidth, kHeight),
-                   webrtc::kVideoRotation_0, 0);
+                   webrtz::kVideoRotation_0, 0);
   for (size_t i = 0; i < 1000; ++i) {
     // Unique timestamps.
     frame.set_timestamp(static_cast<uint32_t>(i));
@@ -799,7 +799,7 @@ TEST_F(OveruseFrameDetectorTest2, UpdatesExistingSamples) {
   static const int kIntervalUs = 33 * rtc::kNumMicrosecsPerMillisec;
   static const int kDelayUs = 30 * rtc::kNumMicrosecsPerMillisec;
   VideoFrame frame(I420Buffer::Create(kWidth, kHeight),
-                   webrtc::kVideoRotation_0, 0);
+                   webrtz::kVideoRotation_0, 0);
   uint32_t timestamp = 0;
   for (size_t i = 0; i < 1000; ++i) {
     frame.set_timestamp(timestamp);
@@ -895,4 +895,4 @@ TEST_F(OveruseFrameDetectorTest2, NoOveruseForRandomFrameIntervalWithReset) {
   EXPECT_LE(UsagePercent(), InitialUsage() + 5);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

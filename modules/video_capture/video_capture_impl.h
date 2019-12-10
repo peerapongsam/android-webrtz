@@ -22,7 +22,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc
+namespace webrtz
 {
 
 namespace videocapturemodule {
@@ -116,5 +116,5 @@ private:
     bool apply_rotation_;
 };
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_VIDEO_CAPTURE_IMPL_H_

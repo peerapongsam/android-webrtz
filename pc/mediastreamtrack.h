@@ -16,7 +16,7 @@
 #include "api/mediastreaminterface.h"
 #include "api/notifier.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // MediaTrack implements the interface common to AudioTrackInterface and
 // VideoTrackInterface.
@@ -57,6 +57,6 @@ class MediaStreamTrack : public Notifier<T> {
   MediaStreamTrackInterface::TrackState state_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_MEDIASTREAMTRACK_H_

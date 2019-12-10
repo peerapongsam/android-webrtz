@@ -15,7 +15,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -64,4 +64,4 @@ std::unique_ptr<MediaConstraintsInterface> JavaToNativeMediaConstraints(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

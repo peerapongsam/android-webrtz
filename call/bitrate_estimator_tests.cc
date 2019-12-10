@@ -25,7 +25,7 @@
 #include "test/frame_generator_capturer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Note: If you consider to re-use this class, think twice and instead consider
 // writing tests that don't depend on the logging system.
@@ -318,4 +318,4 @@ TEST_F(BitrateEstimatorTest, DISABLED_SwitchesToASTThenBackToTOFForVideo) {
   });
   EXPECT_TRUE(receiver_log_.Wait());
 }
-}  // namespace webrtc
+}  // namespace webrtz

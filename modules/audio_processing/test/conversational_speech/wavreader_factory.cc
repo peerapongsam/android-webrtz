@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -68,4 +68,4 @@ std::unique_ptr<WavReaderInterface> WavReaderFactory::Create(
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

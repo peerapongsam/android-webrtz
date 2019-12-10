@@ -19,7 +19,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace test {
 
@@ -74,6 +74,6 @@ class PulseGenerator {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_AGC2_TESTING_COMMON_H_

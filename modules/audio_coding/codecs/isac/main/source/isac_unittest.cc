@@ -15,7 +15,7 @@
 
 struct WebRtcISACStruct;
 
-namespace webrtc {
+namespace webrtz {
 
 // Number of samples in a 60 ms, sampled at 32 kHz.
 const int kIsacNumberOfSamples = 320 * 6;
@@ -43,7 +43,7 @@ void IsacTest::SetUp() {
   // Read some samples from a speech file, to be used in the encode test.
   FILE* input_file;
   const std::string file_name =
-        webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+        webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
   input_file = fopen(file_name.c_str(), "rb");
   ASSERT_TRUE(input_file != NULL);
   ASSERT_EQ(kIsacNumberOfSamples,
@@ -108,4 +108,4 @@ TEST_F(IsacTest, IsacUpdateBWE) {
   EXPECT_EQ(0, WebRtcIsac_Free(isac_codec_));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

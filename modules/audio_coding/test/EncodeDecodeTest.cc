@@ -23,7 +23,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TestPacketization::TestPacketization(RTPStream *rtpStream, uint16_t frequency)
     : _rtpStream(rtpStream),
@@ -58,7 +58,7 @@ void Sender::Setup(AudioCodingModule *acm, RTPStream *rtpStream,
   int codecNo;
 
   // Open input file
-  const std::string file_name = webrtc::test::ResourcePath(in_file_name, "pcm");
+  const std::string file_name = webrtz::test::ResourcePath(in_file_name, "pcm");
   _pcmFile.Open(file_name, sample_rate, "rb");
   if (channels == 2) {
     _pcmFile.ReadStereo(true);
@@ -145,7 +145,7 @@ void Receiver::Setup(AudioCodingModule *acm, RTPStream *rtpStream,
   int playSampFreq;
   std::string file_name;
   std::stringstream file_stream;
-  file_stream << webrtc::test::OutputPath() << out_file_name
+  file_stream << webrtz::test::OutputPath() << out_file_name
       << static_cast<int>(codeId) << ".pcm";
   file_name = file_stream.str();
   _rtpStream = rtpStream;
@@ -162,7 +162,7 @@ void Receiver::Setup(AudioCodingModule *acm, RTPStream *rtpStream,
     printf("which means output frequency equal to received signal frequency");
     printf("\n\nChoose output sampling frequency: ");
     ASSERT_GT(scanf("%d", &playSampFreq), 0);
-    file_name = webrtc::test::OutputPath() + out_file_name + ".pcm";
+    file_name = webrtz::test::OutputPath() + out_file_name + ".pcm";
     _pcmFile.Open(file_name, playSampFreq, "wb+");
   }
 
@@ -325,7 +325,7 @@ std::string EncodeDecodeTest::EncodeToFile(int fileType,
   std::unique_ptr<AudioCodingModule> acm(AudioCodingModule::Create(
       AudioCodingModule::Config(CreateBuiltinAudioDecoderFactory())));
   RTPFile rtpFile;
-  std::string fileName = webrtc::test::TempFilename(webrtc::test::OutputPath(),
+  std::string fileName = webrtz::test::TempFilename(webrtz::test::OutputPath(),
                                                     "encode_decode_rtp");
   rtpFile.Open(fileName.c_str(), "wb+");
   rtpFile.WriteHeader();
@@ -344,4 +344,4 @@ std::string EncodeDecodeTest::EncodeToFile(int fileType,
   return fileName;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

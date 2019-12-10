@@ -13,7 +13,7 @@
 
 #include "api/rtptransceiverinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Returns the RtpTransceiverDirection that satisfies specified send and receive
 // conditions.
@@ -44,6 +44,6 @@ RtpTransceiverDirection RtpTransceiverDirectionWithRecvSet(
 // Returns an unspecified string representation of the given direction.
 const char* RtpTransceiverDirectionToString(RtpTransceiverDirection direction);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPMEDIAUTILS_H_

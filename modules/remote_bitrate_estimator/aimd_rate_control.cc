@@ -26,7 +26,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int64_t kDefaultRttMs = 200;
 static const int64_t kMaxFeedbackIntervalMs = 1000;
@@ -36,7 +36,7 @@ const char kBweBackOffFactorExperiment[] = "WebRTC-BweBackOffFactor";
 
 float ReadTrendlineFilterWindowSize() {
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kBweBackOffFactorExperiment);
+      webrtz::field_trial::FindFullName(kBweBackOffFactorExperiment);
   float backoff_factor;
   int parsed_values =
       sscanf(experiment_string.c_str(), "Enabled-%f", &backoff_factor);
@@ -65,13 +65,13 @@ AimdRateControl::AimdRateControl()
       time_last_bitrate_change_(-1),
       time_first_incoming_estimate_(-1),
       bitrate_is_initialized_(false),
-      beta_(webrtc::field_trial::IsEnabled(kBweBackOffFactorExperiment)
+      beta_(webrtz::field_trial::IsEnabled(kBweBackOffFactorExperiment)
                 ? ReadTrendlineFilterWindowSize()
                 : kDefaultBackoffFactor),
       rtt_(kDefaultRttMs),
       in_experiment_(!AdaptiveThresholdExperimentIsDisabled()),
       smoothing_experiment_(
-          webrtc::field_trial::IsEnabled("WebRTC-Audio-BandwidthSmoothing")) {
+          webrtz::field_trial::IsEnabled("WebRTC-Audio-BandwidthSmoothing")) {
   RTC_LOG(LS_INFO) << "Using aimd rate control with back off factor " << beta_;
 }
 
@@ -358,4 +358,4 @@ void AimdRateControl::ChangeRegion(RateControlRegion region) {
   rate_control_region_ = region;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -24,9 +24,9 @@ class PacketSocketFactory;
 class Thread;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 class TurnCustomizer;
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace cricket {
 class Port;
@@ -44,7 +44,7 @@ struct CreateRelayPortArgs {
   std::string username;
   std::string password;
   std::string origin;
-  webrtc::TurnCustomizer* turn_customizer;
+  webrtz::TurnCustomizer* turn_customizer;
 };
 
 inline CreateRelayPortArgs::CreateRelayPortArgs() {}

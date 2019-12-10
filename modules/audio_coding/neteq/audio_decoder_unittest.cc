@@ -33,7 +33,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // The absolute difference between the input and output (the first channel) is
@@ -91,7 +91,7 @@ class AudioDecoderTest : public ::testing::Test {
  protected:
   AudioDecoderTest()
       : input_audio_(
-            webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
+            webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
             32000),
         codec_input_rate_hz_(32000),  // Legacy default value.
         frame_size_(0),
@@ -627,4 +627,4 @@ TEST_F(AudioDecoderOpusStereoTest, SetTargetBitrate) {
   TestOpusSetTargetBitrates(audio_encoder_.get());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

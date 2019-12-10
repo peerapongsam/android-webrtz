@@ -11,7 +11,7 @@
 #ifndef SDK_ANDROID_SRC_JNI_PC_DATACHANNEL_H_
 #define SDK_ANDROID_SRC_JNI_PC_DATACHANNEL_H_
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 DataChannelInit JavaToNativeDataChannelInit(JNIEnv* env,
@@ -22,6 +22,6 @@ ScopedJavaLocalRef<jobject> WrapNativeDataChannel(
     rtc::scoped_refptr<DataChannelInterface> channel);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_DATACHANNEL_H_

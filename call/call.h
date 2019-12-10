@@ -32,7 +32,7 @@
 #include "rtc_base/platform_file.h"
 #include "rtc_base/socket.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioProcessing;
 class RtcEventLog;
@@ -80,7 +80,7 @@ struct CallConfig {
   AudioProcessing* audio_processing = nullptr;
 
   // RtcEventLog to use for this call. Required.
-  // Use webrtc::RtcEventLog::CreateNull() for a null implementation.
+  // Use webrtz::RtcEventLog::CreateNull() for a null implementation.
   RtcEventLog* event_log = nullptr;
 
   // FecController to use for this call.
@@ -177,6 +177,6 @@ class Call {
   virtual ~Call() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_CALL_H_

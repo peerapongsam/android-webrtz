@@ -31,7 +31,7 @@ void UpdateCounter(size_t* counter, bool increment) {
 }
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 TransportFeedbackPacketLossTracker::TransportFeedbackPacketLossTracker(
     int64_t max_window_size_ms,
@@ -363,4 +363,4 @@ TransportFeedbackPacketLossTracker::RplrState::GetMetric() const {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

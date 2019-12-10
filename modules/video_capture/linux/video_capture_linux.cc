@@ -29,7 +29,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 rtc::scoped_refptr<VideoCaptureModule> VideoCaptureImpl::Create(
     const char* deviceUniqueId) {
@@ -419,4 +419,4 @@ int32_t VideoCaptureModuleV4L2::CaptureSettings(
   return 0;
 }
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

@@ -23,7 +23,7 @@
 #include "third_party/libyuv/include/libyuv/convert.h"
 #include "third_party/libyuv/include/libyuv/scale.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 constexpr int kVp8ErrorPropagationTh = 30;
 // vpx_decoder.h documentation indicates decode deadline is time in us, with
@@ -36,7 +36,7 @@ const char kVp8PostProcArmFieldTrial[] = "WebRTC-VP8-Postproc-Config-Arm";
 void GetPostProcParamsFromFieldTrialGroup(
     LibvpxVp8Decoder::DeblockParams* deblock_params) {
   std::string group =
-      webrtc::field_trial::FindFullName(kVp8PostProcArmFieldTrial);
+      webrtz::field_trial::FindFullName(kVp8PostProcArmFieldTrial);
   if (group.empty())
     return;
 
@@ -86,7 +86,7 @@ class LibvpxVp8Decoder::QpSmoother {
 
 LibvpxVp8Decoder::LibvpxVp8Decoder()
     : use_postproc_arm_(
-          webrtc::field_trial::IsEnabled(kVp8PostProcArmFieldTrial)),
+          webrtz::field_trial::IsEnabled(kVp8PostProcArmFieldTrial)),
       buffer_pool_(false, 300 /* max_number_of_buffers*/),
       decode_complete_callback_(NULL),
       inited_(false),
@@ -340,4 +340,4 @@ int LibvpxVp8Decoder::Release() {
 const char* LibvpxVp8Decoder::ImplementationName() const {
   return "libvpx";
 }
-}  // namespace webrtc
+}  // namespace webrtz

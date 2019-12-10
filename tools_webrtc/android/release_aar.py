@@ -43,7 +43,7 @@ API = 'https://api.bintray.com'
 PACKAGE_PATH = 'google/webrtc/google-webrtc'
 CONTENT_API = API + '/content/' + PACKAGE_PATH
 PACKAGES_API = API + '/packages/' + PACKAGE_PATH
-GROUP_ID = 'org/webrtc'
+GROUP_ID = 'org/webrtz'
 ARTIFACT_ID = 'google-webrtc'
 COMMIT_POSITION_REGEX = r'^Cr-Commit-Position: refs/heads/master@{#(\d+)}$'
 API_TIMEOUT_SECONDS = 10.0
@@ -57,8 +57,8 @@ ADB_BIN = os.path.join(CHECKOUT_ROOT,
 AAR_PROJECT_DIR = os.path.join(CHECKOUT_ROOT, 'examples/aarproject')
 AAR_PROJECT_GRADLE = os.path.join(AAR_PROJECT_DIR, 'build.gradle')
 AAR_PROJECT_APP_GRADLE = os.path.join(AAR_PROJECT_DIR, 'app', 'build.gradle')
-AAR_PROJECT_DEPENDENCY = "implementation 'org.webrtc:google-webrtc:1.0.+'"
-AAR_PROJECT_VERSION_DEPENDENCY = "implementation 'org.webrtc:google-webrtc:%s'"
+AAR_PROJECT_DEPENDENCY = "implementation 'org.webrtz:google-webrtc:1.0.+'"
+AAR_PROJECT_VERSION_DEPENDENCY = "implementation 'org.webrtz:google-webrtc:%s'"
 
 
 def _ParseArgs():
@@ -99,7 +99,7 @@ def _UploadFile(user, password, filename, version, target_file):
 # URL is of format:
   # <repository_api>/<version>/<group_id>/<artifact_id>/<version>/<target_file>
   # Example:
-  # https://api.bintray.com/content/google/webrtc/google-webrtc/1.0.19742/org/webrtc/google-webrtc/1.0.19742/google-webrtc-1.0.19742.aar
+  # https://api.bintray.com/content/google/webrtc/google-webrtc/1.0.19742/org/webrtz/google-webrtc/1.0.19742/google-webrtc-1.0.19742.aar
 
   target_dir = version + '/' + GROUP_ID + '/' + ARTIFACT_ID + '/' + version
   target_path = target_dir + '/' + target_file

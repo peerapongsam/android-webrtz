@@ -22,7 +22,7 @@
 #include "logging/rtc_event_log/mock/mock_rtc_event_log.h"
 #include "modules/remote_bitrate_estimator/test/bwe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 class MaxBandwidthFilter {
@@ -49,6 +49,6 @@ class MaxBandwidthFilter {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_ESTIMATORS_MAX_BANDWIDTH_FILTER_H_

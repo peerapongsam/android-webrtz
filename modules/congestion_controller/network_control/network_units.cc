@@ -11,7 +11,7 @@
 #include "modules/congestion_controller/network_control/include/network_units.h"
 #include <cmath>
 
-namespace webrtc {
+namespace webrtz {
 TimeDelta TimeDelta::operator*(double scalar) const {
   return TimeDelta::us(std::round(us() * scalar));
 }
@@ -71,4 +71,4 @@ DataSize operator*(const TimeDelta& duration, const DataRate& rate) {
   return rate * duration;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

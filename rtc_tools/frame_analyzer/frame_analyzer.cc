@@ -68,7 +68,7 @@ int main(int argc, char* argv[]) {
       " format. If not present, no perf result will be stored."
       " Default: None\n";
 
-  webrtc::test::CommandLineParser parser;
+  webrtz::test::CommandLineParser parser;
 
   // Init the parser and set the usage message
   parser.Init(argc, argv);
@@ -99,22 +99,22 @@ int main(int argc, char* argv[]) {
     return -1;
   }
 
-  webrtc::test::ResultsContainer results;
+  webrtz::test::ResultsContainer results;
 
-  webrtc::test::RunAnalysis(parser.GetFlag("reference_file").c_str(),
+  webrtz::test::RunAnalysis(parser.GetFlag("reference_file").c_str(),
                             parser.GetFlag("test_file").c_str(),
                             parser.GetFlag("stats_file_ref").c_str(),
                             parser.GetFlag("stats_file_test").c_str(), width,
                             height, &results);
-  webrtc::test::GetMaxRepeatedAndSkippedFrames(
+  webrtz::test::GetMaxRepeatedAndSkippedFrames(
       parser.GetFlag("stats_file_ref"), parser.GetFlag("stats_file_test"),
       &results);
 
-  webrtc::test::PrintAnalysisResults(parser.GetFlag("label"), &results);
+  webrtz::test::PrintAnalysisResults(parser.GetFlag("label"), &results);
 
   std::string chartjson_result_file = parser.GetFlag("chartjson_result_file");
   if (!chartjson_result_file.empty()) {
-    webrtc::test::WritePerfResults(chartjson_result_file);
+    webrtz::test::WritePerfResults(chartjson_result_file);
   }
 
   return 0;

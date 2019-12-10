@@ -32,11 +32,11 @@ using testing::Return;
 using testing::SaveArg;
 using testing::StrictMock;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
-const webrtc::PacedPacketInfo kPacingInfo0(0, 5, 2000);
-const webrtc::PacedPacketInfo kPacingInfo1(1, 8, 4000);
+const webrtz::PacedPacketInfo kPacingInfo0(0, 5, 2000);
+const webrtz::PacedPacketInfo kPacingInfo1(1, 8, 4000);
 
 const uint32_t kInitialBitrateBps = 60000;
 
@@ -495,4 +495,4 @@ TEST_F(LegacySendSideCongestionControllerTest, PacerQueueEncodeRatePushback) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

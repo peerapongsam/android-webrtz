@@ -25,7 +25,7 @@
   RTC_CHECK(!jni->ExceptionCheck()) \
       << (jni->ExceptionDescribe(), jni->ExceptionClear(), "")
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -77,4 +77,4 @@ ScopedJavaLocalRef<jclass> GetClass(JNIEnv* env, const char* name) {
              : g_class_loader->FindClass(env, name);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

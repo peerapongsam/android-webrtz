@@ -28,7 +28,7 @@ using rtc::kTestKey2;
 using rtc::kTestKeyLen;
 using rtc::SRTP_AEAD_AES_128_GCM;
 
-namespace webrtc {
+namespace webrtz {
 static const uint8_t kTestKeyGcm128_1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ12";
 static const uint8_t kTestKeyGcm128_2[] = "21ZYXWVUTSRQPONMLKJIHGFEDCBA";
 static const int kTestKeyGcm128Len = 28;  // 128 bits key + 96 bits salt.
@@ -407,4 +407,4 @@ TEST_F(SrtpTransportTest, TestSetParamsKeyTooShort) {
       rtc::SRTP_AES128_CM_SHA1_80, kTestKey1, kTestKeyLen - 1, extension_ids));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

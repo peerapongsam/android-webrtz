@@ -28,7 +28,7 @@ namespace rtc {
 class Thread;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // This interface is called by DtmfSender to talk to the actual audio channel
 // to send DTMF.
@@ -119,6 +119,6 @@ END_PROXY_MAP()
 // Get DTMF code from the DTMF event character.
 bool GetDtmfCode(char tone, int* code);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_DTMFSENDER_H_

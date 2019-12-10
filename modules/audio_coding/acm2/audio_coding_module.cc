@@ -21,7 +21,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -309,7 +309,7 @@ void UpdateCodecTypeHistogram(size_t codec_type) {
   RTC_HISTOGRAM_ENUMERATION(
       "WebRTC.Audio.Encoder.CodecType", static_cast<int>(codec_type),
       static_cast<int>(
-          webrtc::AudioEncoder::CodecType::kMaxLoggedAudioCodecTypes));
+          webrtz::AudioEncoder::CodecType::kMaxLoggedAudioCodecTypes));
 }
 
 // Stereo-to-mono can be used as in-place.
@@ -1315,4 +1315,4 @@ bool AudioCodingModule::IsCodecValid(const CodecInst& codec) {
   return valid;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

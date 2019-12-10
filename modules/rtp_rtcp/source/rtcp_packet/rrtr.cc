@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/source/byte_io.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 // Receiver Reference Time Report Block (RFC 3611).
 //
@@ -46,4 +46,4 @@ void Rrtr::Create(uint8_t* buffer) const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

@@ -25,7 +25,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/win32.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using Microsoft::WRL::ComPtr;
 
@@ -392,4 +392,4 @@ void DxgiOutputDuplicator::TranslateRect(const DesktopVector& position) {
   RTC_DCHECK_GE(desktop_rect_.top(), 0);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

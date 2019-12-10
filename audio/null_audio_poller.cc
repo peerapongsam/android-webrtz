@@ -12,7 +12,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace internal {
 
 namespace {
@@ -63,4 +63,4 @@ void NullAudioPoller::OnMessage(rtc::Message* msg) {
 }
 
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz

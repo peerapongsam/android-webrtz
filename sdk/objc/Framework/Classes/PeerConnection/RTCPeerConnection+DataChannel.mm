@@ -19,9 +19,9 @@
 - (nullable RTCDataChannel *)dataChannelForLabel:(NSString *)label
                                    configuration:(RTCDataChannelConfiguration *)configuration {
   std::string labelString = [NSString stdStringForString:label];
-  const webrtc::DataChannelInit nativeInit =
+  const webrtz::DataChannelInit nativeInit =
       configuration.nativeDataChannelInit;
-  rtc::scoped_refptr<webrtc::DataChannelInterface> dataChannel =
+  rtc::scoped_refptr<webrtz::DataChannelInterface> dataChannel =
       self.nativePeerConnection->CreateDataChannel(labelString,
                                                    &nativeInit);
   if (!dataChannel) {

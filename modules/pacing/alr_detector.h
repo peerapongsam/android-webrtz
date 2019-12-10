@@ -18,7 +18,7 @@
 #include "rtc_base/rate_statistics.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
@@ -67,6 +67,6 @@ class AlrDetector {
   RtcEventLog* event_log_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_PACING_ALR_DETECTOR_H_

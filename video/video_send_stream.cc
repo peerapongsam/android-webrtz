@@ -40,7 +40,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "video/call_stats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kMinSendSidePacketHistorySize = 600;
 
@@ -166,11 +166,11 @@ const char kForcedFallbackFieldTrial[] =
     "WebRTC-VP8-Forced-Fallback-Encoder-v2";
 
 rtc::Optional<int> GetFallbackMinBpsFromFieldTrial() {
-  if (!webrtc::field_trial::IsEnabled(kForcedFallbackFieldTrial))
+  if (!webrtz::field_trial::IsEnabled(kForcedFallbackFieldTrial))
     return rtc::nullopt;
 
   std::string group =
-      webrtc::field_trial::FindFullName(kForcedFallbackFieldTrial);
+      webrtz::field_trial::FindFullName(kForcedFallbackFieldTrial);
   if (group.empty())
     return rtc::nullopt;
 
@@ -280,12 +280,12 @@ namespace internal {
 // DeliverRtcp is called on the libjingle worker thread or a network thread.
 // An encoder may deliver frames through the EncodedImageCallback on an
 // arbitrary thread.
-class VideoSendStreamImpl : public webrtc::BitrateAllocatorObserver,
-                            public webrtc::OverheadObserver,
-                            public webrtc::VCMProtectionCallback,
+class VideoSendStreamImpl : public webrtz::BitrateAllocatorObserver,
+                            public webrtz::OverheadObserver,
+                            public webrtz::VCMProtectionCallback,
                             public VideoStreamEncoder::EncoderSink,
                             public VideoBitrateAllocationObserver,
-                            public webrtc::PacketFeedbackObserver {
+                            public webrtz::PacketFeedbackObserver {
  public:
   VideoSendStreamImpl(
       SendStatisticsProxy* stats_proxy,
@@ -344,7 +344,7 @@ class VideoSendStreamImpl : public webrtc::BitrateAllocatorObserver,
                             int64_t rtt,
                             int64_t probing_interval_ms) override;
 
-  // Implements webrtc::VCMProtectionCallback.
+  // Implements webrtz::VCMProtectionCallback.
   int ProtectionRequest(const FecProtectionParams* delta_params,
                         const FecProtectionParams* key_params,
                         uint32_t* sent_video_rate_bps,
@@ -588,7 +588,7 @@ void VideoSendStream::Stop() {
 }
 
 void VideoSendStream::SetSource(
-    rtc::VideoSourceInterface<webrtc::VideoFrame>* source,
+    rtc::VideoSourceInterface<webrtz::VideoFrame>* source,
     const DegradationPreference& degradation_preference) {
   RTC_DCHECK_RUN_ON(&thread_checker_);
   video_stream_encoder_->SetSource(source, degradation_preference);
@@ -677,7 +677,7 @@ VideoSendStreamImpl::VideoSendStreamImpl(
     std::unique_ptr<FecController> fec_controller,
     RateLimiter* retransmission_limiter)
     : send_side_bwe_with_overhead_(
-          webrtc::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
+          webrtz::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
       stats_proxy_(stats_proxy),
       config_(config),
       suspended_ssrcs_(std::move(suspended_ssrcs)),
@@ -1094,7 +1094,7 @@ void VideoSendStreamImpl::ConfigureProtection() {
   auto IsUlpfecEnabled = [&]() { return ulpfec_payload_type >= 0; };
   auto DisableUlpfec = [&]() { ulpfec_payload_type = -1; };
 
-  if (webrtc::field_trial::IsEnabled("WebRTC-DisableUlpFecExperiment")) {
+  if (webrtz::field_trial::IsEnabled("WebRTC-DisableUlpFecExperiment")) {
     RTC_LOG(LS_INFO) << "Experiment to disable sending ULPFEC is enabled.";
     DisableUlpfec();
   }
@@ -1411,4 +1411,4 @@ void VideoSendStreamImpl::OnPacketFeedbackVector(
   }
 }
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz

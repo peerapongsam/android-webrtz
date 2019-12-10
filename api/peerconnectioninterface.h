@@ -121,7 +121,7 @@ class WebRtcVideoDecoderFactory;
 class WebRtcVideoEncoderFactory;
 }
 
-namespace webrtc {
+namespace webrtz {
 class AudioDeviceModule;
 class AudioMixer;
 class AudioProcessing;
@@ -535,7 +535,7 @@ class PeerConnectionInterface : public rtc::RefCountInterface {
     // With this class one can modify outgoing TURN messages.
     // The object passed in must remain valid until PeerConnection::Close() is
     // called.
-    webrtc::TurnCustomizer* turn_customizer = nullptr;
+    webrtz::TurnCustomizer* turn_customizer = nullptr;
 
     // Preferred network interface.
     // A candidate pair on a preferred network has a higher precedence in ICE
@@ -1492,6 +1492,6 @@ CreateModularPeerConnectionFactory(
     std::unique_ptr<RtcEventLogFactoryInterface> event_log_factory,
     std::unique_ptr<FecControllerFactoryInterface> fec_controller_factory);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_PEERCONNECTIONINTERFACE_H_

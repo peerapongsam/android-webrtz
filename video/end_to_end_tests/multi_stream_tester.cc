@@ -19,7 +19,7 @@
 #include "test/call_test.h"
 #include "test/encoder_settings.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MultiStreamTester::MultiStreamTester(
     test::SingleThreadedTaskQueueForTesting* task_queue)
@@ -37,7 +37,7 @@ MultiStreamTester::MultiStreamTester(
 MultiStreamTester::~MultiStreamTester() {}
 
 void MultiStreamTester::RunTest() {
-  webrtc::RtcEventLogNullImpl event_log;
+  webrtz::RtcEventLogNullImpl event_log;
   Call::Config config(&event_log);
   std::unique_ptr<Call> sender_call;
   std::unique_ptr<Call> receiver_call;
@@ -149,4 +149,4 @@ test::DirectTransport* MultiStreamTester::CreateReceiveTransport(
   return new test::DirectTransport(task_queue, receiver_call,
                                    payload_type_map_);
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace internal {
 
@@ -206,6 +206,6 @@ class SwapQueue {
   RTC_DISALLOW_COPY_AND_ASSIGN(SwapQueue);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_SWAP_QUEUE_H_

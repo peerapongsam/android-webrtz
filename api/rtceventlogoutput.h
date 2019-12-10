@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 // NOTE: This class is still under development and may change without notice.
 class RtcEventLogOutput {
@@ -34,6 +34,6 @@ class RtcEventLogOutput {
   virtual bool Write(const std::string& output) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_RTCEVENTLOGOUTPUT_H_

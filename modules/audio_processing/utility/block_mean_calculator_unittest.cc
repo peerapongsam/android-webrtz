@@ -11,7 +11,7 @@
 #include "modules/audio_processing/utility/block_mean_calculator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(MeanCalculatorTest, Correctness) {
   const size_t kBlockLength = 10;
@@ -55,4 +55,4 @@ TEST(MeanCalculatorTest, Reset) {
   EXPECT_EQ(mean_calculator.GetLatestMean(), 0.5 * (kBlockLength - 1));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 VideoCapturer::VideoCapturer() : video_adapter_(new cricket::VideoAdapter()) {}
 VideoCapturer::~VideoCapturer() {}
@@ -55,4 +55,4 @@ void VideoCapturer::AddOrUpdateSink(rtc::VideoSinkInterface<VideoFrame>* sink,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

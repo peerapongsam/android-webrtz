@@ -29,7 +29,7 @@
   NSParameterAssert(source);
   NSParameterAssert(trackId.length);
   std::string nativeId = [NSString stdStringForString:trackId];
-  rtc::scoped_refptr<webrtc::VideoTrackInterface> track =
+  rtc::scoped_refptr<webrtz::VideoTrackInterface> track =
       factory.nativeFactory->CreateVideoTrack(nativeId,
                                               source.nativeVideoSource);
   if (self = [self initWithNativeTrack:track type:RTCMediaStreamTrackTypeVideo]) {
@@ -39,7 +39,7 @@
 }
 
 - (instancetype)initWithNativeTrack:
-    (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeMediaTrack
+    (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeMediaTrack
                                type:(RTCMediaStreamTrackType)type {
   NSParameterAssert(nativeMediaTrack);
   NSParameterAssert(type == RTCMediaStreamTrackTypeVideo);
@@ -57,7 +57,7 @@
 
 - (RTCVideoSource *)source {
   if (!_source) {
-    rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> source =
+    rtc::scoped_refptr<webrtz::VideoTrackSourceInterface> source =
         self.nativeVideoTrack->GetSource();
     if (source) {
       _source = [[RTCVideoSource alloc] initWithNativeVideoSource:source.get()];
@@ -103,8 +103,8 @@
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::VideoTrackInterface>)nativeVideoTrack {
-  return static_cast<webrtc::VideoTrackInterface *>(self.nativeTrack.get());
+- (rtc::scoped_refptr<webrtz::VideoTrackInterface>)nativeVideoTrack {
+  return static_cast<webrtz::VideoTrackInterface *>(self.nativeTrack.get());
 }
 
 @end

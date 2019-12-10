@@ -17,7 +17,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // InputType/OutputType can be any class that implements the capturing/rendering
 // part of the AudioDeviceGeneric API.
@@ -449,6 +449,6 @@ class AudioDeviceTemplate : public AudioDeviceGeneric {
   bool initialized_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_AUDIO_DEVICE_TEMPLATE_H_

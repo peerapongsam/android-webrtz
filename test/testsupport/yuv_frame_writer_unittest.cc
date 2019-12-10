@@ -14,7 +14,7 @@
 #include "test/testsupport/fileutils.h"
 #include "test/testsupport/frame_writer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -29,7 +29,7 @@ class YuvFrameWriterTest : public testing::Test {
   ~YuvFrameWriterTest() override = default;
 
   void SetUp() override {
-    temp_filename_ = webrtc::test::TempFilename(webrtc::test::OutputPath(),
+    temp_filename_ = webrtz::test::TempFilename(webrtz::test::OutputPath(),
                                                 "yuv_frame_writer_unittest");
     frame_writer_.reset(
         new YuvFrameWriterImpl(temp_filename_, kFrameWidth, kFrameHeight));
@@ -65,4 +65,4 @@ TEST_F(YuvFrameWriterTest, WriteFrameUninitialized) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

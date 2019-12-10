@@ -17,7 +17,7 @@
 #include "rtc_base/numerics/safe_minmax.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -321,4 +321,4 @@ int TransformDbMetricForReporting(bool negate,
 
 }  // namespace aec3
 
-}  // namespace webrtc
+}  // namespace webrtz

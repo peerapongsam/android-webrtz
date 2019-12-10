@@ -13,7 +13,7 @@
 
 #include <string.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class FIRFilter;
 
@@ -27,6 +27,6 @@ FIRFilter* CreateFirFilter(const float* coefficients,
                            size_t coefficients_length,
                            size_t max_input_length);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_FIR_FILTER_FACTORY_H_

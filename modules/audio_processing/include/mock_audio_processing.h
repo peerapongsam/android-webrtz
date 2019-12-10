@@ -18,7 +18,7 @@
 #include "modules/audio_processing/include/audio_processing_statistics.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace test {
 
@@ -160,7 +160,7 @@ class MockAudioProcessing : public testing::NiceMock<AudioProcessing> {
                                ChannelLayout render_input_layout));
   MOCK_METHOD1(Initialize, int(const ProcessingConfig& processing_config));
   MOCK_METHOD1(ApplyConfig, void(const Config& config));
-  MOCK_METHOD1(SetExtraOptions, void(const webrtc::Config& config));
+  MOCK_METHOD1(SetExtraOptions, void(const webrtz::Config& config));
   MOCK_CONST_METHOD0(proc_sample_rate_hz, int());
   MOCK_CONST_METHOD0(proc_split_sample_rate_hz, int());
   MOCK_CONST_METHOD0(num_input_channels, size_t());
@@ -241,6 +241,6 @@ class MockAudioProcessing : public testing::NiceMock<AudioProcessing> {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INCLUDE_MOCK_AUDIO_PROCESSING_H_

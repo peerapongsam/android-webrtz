@@ -22,17 +22,17 @@
 #include "examples/peerconnection/client/main_wnd.h"
 #include "examples/peerconnection/client/peer_connection_client.h"
 
-namespace webrtc {
+namespace webrtz {
 class VideoCaptureModule;
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace cricket {
 class VideoRenderer;
 }  // namespace cricket
 
 class Conductor
-  : public webrtc::PeerConnectionObserver,
-    public webrtc::CreateSessionDescriptionObserver,
+  : public webrtz::PeerConnectionObserver,
+    public webrtz::CreateSessionDescriptionObserver,
     public PeerConnectionClientObserver,
     public MainWndCallback {
  public:
@@ -65,19 +65,19 @@ class Conductor
   //
 
   void OnSignalingChange(
-      webrtc::PeerConnectionInterface::SignalingState new_state) override{};
+      webrtz::PeerConnectionInterface::SignalingState new_state) override{};
   void OnAddStream(
-      rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) override;
+      rtc::scoped_refptr<webrtz::MediaStreamInterface> stream) override;
   void OnRemoveStream(
-      rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) override;
+      rtc::scoped_refptr<webrtz::MediaStreamInterface> stream) override;
   void OnDataChannel(
-      rtc::scoped_refptr<webrtc::DataChannelInterface> channel) override {}
+      rtc::scoped_refptr<webrtz::DataChannelInterface> channel) override {}
   void OnRenegotiationNeeded() override {}
   void OnIceConnectionChange(
-      webrtc::PeerConnectionInterface::IceConnectionState new_state) override{};
+      webrtz::PeerConnectionInterface::IceConnectionState new_state) override{};
   void OnIceGatheringChange(
-      webrtc::PeerConnectionInterface::IceGatheringState new_state) override{};
-  void OnIceCandidate(const webrtc::IceCandidateInterface* candidate) override;
+      webrtz::PeerConnectionInterface::IceGatheringState new_state) override{};
+  void OnIceCandidate(const webrtz::IceCandidateInterface* candidate) override;
   void OnIceConnectionReceivingChange(bool receiving) override {}
 
   //
@@ -113,7 +113,7 @@ class Conductor
   void UIThreadCallback(int msg_id, void* data) override;
 
   // CreateSessionDescriptionObserver implementation.
-  void OnSuccess(webrtc::SessionDescriptionInterface* desc) override;
+  void OnSuccess(webrtz::SessionDescriptionInterface* desc) override;
   void OnFailure(const std::string& error) override;
 
  protected:
@@ -122,13 +122,13 @@ class Conductor
 
   int peer_id_;
   bool loopback_;
-  rtc::scoped_refptr<webrtc::PeerConnectionInterface> peer_connection_;
-  rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface>
+  rtc::scoped_refptr<webrtz::PeerConnectionInterface> peer_connection_;
+  rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface>
       peer_connection_factory_;
   PeerConnectionClient* client_;
   MainWindow* main_wnd_;
   std::deque<std::string*> pending_messages_;
-  std::map<std::string, rtc::scoped_refptr<webrtc::MediaStreamInterface> >
+  std::map<std::string, rtc::scoped_refptr<webrtz::MediaStreamInterface> >
       active_streams_;
   std::string server_;
 };

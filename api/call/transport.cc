@@ -10,10 +10,10 @@
 
 #include "api/call/transport.h"
 
-namespace webrtc {
+namespace webrtz {
 
 PacketOptions::PacketOptions() = default;
 
 PacketOptions::~PacketOptions() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

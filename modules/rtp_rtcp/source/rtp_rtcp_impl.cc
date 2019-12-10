@@ -25,7 +25,7 @@
 #pragma warning(disable : 4355)
 #endif
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int64_t kRtpRtcpMaxIdleTimeProcessMs = 5;
 const int64_t kRtpRtcpRttProcessTimeMs = 1000;
@@ -136,7 +136,7 @@ ModuleRtpRtcpImpl::ModuleRtpRtcpImpl(const Configuration& configuration)
 
   // Set default packet size limit.
   // TODO(nisse): Kind-of duplicates
-  // webrtc::VideoSendStream::Config::Rtp::kDefaultMaxPacketSize.
+  // webrtz::VideoSendStream::Config::Rtp::kDefaultMaxPacketSize.
   const size_t kTcpOverIpv4HeaderSize = 40;
   SetMaxRtpPacketSize(IP_PACKET_SIZE - kTcpOverIpv4HeaderSize);
 }
@@ -931,4 +931,4 @@ void ModuleRtpRtcpImpl::SetVideoBitrateAllocation(
     const BitrateAllocation& bitrate) {
   rtcp_sender_.SetVideoBitrateAllocation(bitrate);
 }
-}  // namespace webrtc
+}  // namespace webrtz

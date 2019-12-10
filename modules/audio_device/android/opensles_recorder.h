@@ -25,7 +25,7 @@
 #include "modules/utility/include/helpers_android.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FineAudioBuffer;
 
@@ -158,7 +158,7 @@ class OpenSLESRecorder {
 
   // The audio recorder media object records audio to the destination specified
   // by the data sink capturing it from the input specified by the data source.
-  webrtc::ScopedSLObjectItf recorder_object_;
+  webrtz::ScopedSLObjectItf recorder_object_;
 
   // This interface is supported on the audio recorder object and it controls
   // the state of the audio recorder.
@@ -188,6 +188,6 @@ class OpenSLESRecorder {
   uint32_t last_rec_time_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_OPENSLES_RECORDER_H_

@@ -18,7 +18,7 @@
 #include "api/video_codecs/video_encoder.h"
 #include "media/base/codec.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class used to wrap external VideoEncoders to provide a fallback option on
 // software encoding when a hardware encoder fails to encode a stream due to
@@ -26,8 +26,8 @@ namespace webrtc {
 class VideoEncoderSoftwareFallbackWrapper : public VideoEncoder {
  public:
   VideoEncoderSoftwareFallbackWrapper(
-      std::unique_ptr<webrtc::VideoEncoder> sw_encoder,
-      std::unique_ptr<webrtc::VideoEncoder> hw_encoder);
+      std::unique_ptr<webrtz::VideoEncoder> sw_encoder,
+      std::unique_ptr<webrtz::VideoEncoder> hw_encoder);
   ~VideoEncoderSoftwareFallbackWrapper() override;
 
   int32_t InitEncode(const VideoCodec* codec_settings,
@@ -89,15 +89,15 @@ class VideoEncoderSoftwareFallbackWrapper : public VideoEncoder {
   int64_t rtt_;
 
   bool use_fallback_encoder_;
-  const std::unique_ptr<webrtc::VideoEncoder> encoder_;
+  const std::unique_ptr<webrtz::VideoEncoder> encoder_;
 
-  const std::unique_ptr<webrtc::VideoEncoder> fallback_encoder_;
+  const std::unique_ptr<webrtz::VideoEncoder> fallback_encoder_;
   EncodedImageCallback* callback_;
 
   bool forced_fallback_possible_;
   ForcedFallbackParams forced_fallback_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_ENGINE_VIDEOENCODERSOFTWAREFALLBACKWRAPPER_H_

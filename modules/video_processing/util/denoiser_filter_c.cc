@@ -12,7 +12,7 @@
 
 #include "modules/video_processing/util/denoiser_filter_c.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void DenoiserFilterC::CopyMem16x16(const uint8_t* src,
                                    int src_stride,
@@ -133,4 +133,4 @@ DenoiserDecision DenoiserFilterC::MbDenoise(const uint8_t* mc_running_avg_y,
   return FILTER_BLOCK;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

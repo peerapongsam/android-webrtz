@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtcpRttStats : public RtcpRttStats {
  public:
@@ -24,5 +24,5 @@ class MockRtcpRttStats : public RtcpRttStats {
   MOCK_METHOD1(OnRttUpdate, void(int64_t rtt));
   MOCK_CONST_METHOD0(LastProcessedRtt, int64_t());
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_MOCKS_MOCK_RTCP_RTT_STATS_H_

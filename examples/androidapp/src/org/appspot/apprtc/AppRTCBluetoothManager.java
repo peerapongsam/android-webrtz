@@ -29,7 +29,7 @@ import android.util.Log;
 import java.util.List;
 import java.util.Set;
 import org.appspot.apprtc.util.AppRTCUtils;
-import org.webrtc.ThreadUtils;
+import org.webrtz.ThreadUtils;
 
 /**
  * AppRTCProximitySensor manages functions related to Bluetoth devices in the

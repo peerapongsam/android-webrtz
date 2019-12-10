@@ -23,7 +23,7 @@
 #include "vpx/vp8dx.h"
 #include "vpx/vpx_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class LibvpxVp8Decoder : public VP8Decoder {
  public:
@@ -70,6 +70,6 @@ class LibvpxVp8Decoder : public VP8Decoder {
   const std::unique_ptr<QpSmoother> qp_smoother_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_LIBVPX_VP8_DECODER_H_

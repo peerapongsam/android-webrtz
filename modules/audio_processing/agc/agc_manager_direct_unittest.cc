@@ -21,7 +21,7 @@ using ::testing::DoAll;
 using ::testing::Return;
 using ::testing::SetArgPointee;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kSampleRateHz = 32000;
@@ -679,4 +679,4 @@ TEST_F(AgcManagerDirectTest, TakesNoActionOnZeroMicVolume) {
   EXPECT_EQ(0, volume_.GetMicVolume());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

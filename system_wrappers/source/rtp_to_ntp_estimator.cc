@@ -14,7 +14,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Number of RTCP SR reports to use to map between RTP and NTP.
 const size_t kNumRtcpReportsToUse = 2;
@@ -202,4 +202,4 @@ const rtc::Optional<RtpToNtpEstimator::Parameters> RtpToNtpEstimator::params()
   }
   return res;
 }
-}  // namespace webrtc
+}  // namespace webrtz

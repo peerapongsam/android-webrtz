@@ -29,7 +29,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/stringutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -658,7 +658,7 @@ void AudioProcessingSimulator::CreateAudioProcessor() {
     RTC_CHECK_EQ(
         AudioProcessing::kNoError,
         ap_->gain_control()->set_mode(
-            static_cast<webrtc::GainControl::Mode>(*settings_.agc_mode)));
+            static_cast<webrtz::GainControl::Mode>(*settings_.agc_mode)));
   }
 
   if (settings_.use_drift_compensation) {
@@ -670,14 +670,14 @@ void AudioProcessingSimulator::CreateAudioProcessor() {
   if (settings_.aec_suppression_level) {
     RTC_CHECK_EQ(AudioProcessing::kNoError,
                  ap_->echo_cancellation()->set_suppression_level(
-                     static_cast<webrtc::EchoCancellation::SuppressionLevel>(
+                     static_cast<webrtz::EchoCancellation::SuppressionLevel>(
                          *settings_.aec_suppression_level)));
   }
 
   if (settings_.aecm_routing_mode) {
     RTC_CHECK_EQ(AudioProcessing::kNoError,
                  ap_->echo_control_mobile()->set_routing_mode(
-                     static_cast<webrtc::EchoControlMobile::RoutingMode>(
+                     static_cast<webrtz::EchoControlMobile::RoutingMode>(
                          *settings_.aecm_routing_mode)));
   }
 
@@ -690,7 +690,7 @@ void AudioProcessingSimulator::CreateAudioProcessor() {
   if (settings_.vad_likelihood) {
     RTC_CHECK_EQ(AudioProcessing::kNoError,
                  ap_->voice_detection()->set_likelihood(
-                     static_cast<webrtc::VoiceDetection::Likelihood>(
+                     static_cast<webrtz::VoiceDetection::Likelihood>(
                          *settings_.vad_likelihood)));
   }
   if (settings_.ns_level) {
@@ -711,4 +711,4 @@ void AudioProcessingSimulator::CreateAudioProcessor() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

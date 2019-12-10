@@ -17,7 +17,7 @@
 
 #include "modules/audio_processing/three_band_filter_bank.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class IFChannelBuffer;
 
@@ -64,6 +64,6 @@ class SplittingFilter {
   std::vector<std::unique_ptr<ThreeBandFilterBank>> three_band_filter_banks_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_SPLITTING_FILTER_H_

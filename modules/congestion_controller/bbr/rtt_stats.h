@@ -20,7 +20,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 
 class RttStats {
@@ -83,6 +83,6 @@ class RttStats {
 };
 
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_BBR_RTT_STATS_H_

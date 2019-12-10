@@ -13,7 +13,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(tschumim): Reflector IntervalBudget so that we can set a under- and
 // over-use budget in ms.
@@ -38,6 +38,6 @@ class IntervalBudget {
   bool can_build_up_underuse_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_PACING_INTERVAL_BUDGET_H_

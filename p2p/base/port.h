@@ -666,10 +666,10 @@ class Connection : public CandidatePairInterface,
   std::string ToString() const;
   std::string ToSensitiveString() const;
   // Structured description of this candidate pair.
-  const webrtc::IceCandidatePairDescription& ToLogDescription();
+  const webrtz::IceCandidatePairDescription& ToLogDescription();
   // Integer typed hash value of this candidate pair.
   uint32_t hash() { return hash_; }
-  void set_ice_event_log(webrtc::IceEventLog* ice_event_log) {
+  void set_ice_event_log(webrtz::IceEventLog* ice_event_log) {
     ice_event_log_ = ice_event_log;
   }
   // Prints pings_since_last_response_ into a string.
@@ -761,7 +761,7 @@ class Connection : public CandidatePairInterface,
   void MaybeUpdateLocalCandidate(ConnectionRequest* request,
                                  StunMessage* response);
 
-  void LogCandidatePairEvent(webrtc::IceCandidatePairEventType type);
+  void LogCandidatePairEvent(webrtz::IceCandidatePairEventType type);
 
   WriteState write_state_;
   bool receiving_;
@@ -813,9 +813,9 @@ class Connection : public CandidatePairInterface,
   int64_t time_created_ms_;
   int num_pings_sent_ = 0;
 
-  rtc::Optional<webrtc::IceCandidatePairDescription> log_description_;
+  rtc::Optional<webrtz::IceCandidatePairDescription> log_description_;
   uint32_t hash_;
-  webrtc::IceEventLog* ice_event_log_ = nullptr;
+  webrtz::IceEventLog* ice_event_log_ = nullptr;
 
   friend class Port;
   friend class ConnectionRequest;

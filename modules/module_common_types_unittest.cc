@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -319,4 +319,4 @@ TEST(TimestampUnwrapper, BackwardWraps) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

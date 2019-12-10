@@ -14,8 +14,8 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 
 PacerController::PacerController(PacedSender* pacer) : pacer_(pacer) {
   sequenced_checker_.Detach();
@@ -69,5 +69,5 @@ void PacerController::SetPacerState(bool paused) {
   pacer_paused_ = paused;
 }
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

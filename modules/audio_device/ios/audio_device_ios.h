@@ -25,7 +25,7 @@
 
 RTC_FWD_DECL_OBJC_CLASS(RTCAudioSessionDelegateAdapter);
 
-namespace webrtc {
+namespace webrtz {
 
 class FineAudioBuffer;
 
@@ -288,6 +288,6 @@ class AudioDeviceIOS : public AudioDeviceGeneric,
   FRIEND_TEST_ALL_PREFIXES(AudioDeviceTest, testInterruptedAudioSession);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_IOS_AUDIO_DEVICE_IOS_H_

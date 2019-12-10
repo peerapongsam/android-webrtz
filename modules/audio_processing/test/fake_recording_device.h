@@ -20,7 +20,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class FakeRecordingDeviceWorker;
@@ -70,6 +70,6 @@ class FakeRecordingDevice final {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_FAKE_RECORDING_DEVICE_H_

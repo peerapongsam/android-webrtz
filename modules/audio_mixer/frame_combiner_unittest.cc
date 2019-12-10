@@ -20,7 +20,7 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 using LimiterType = FrameCombiner::LimiterType;
@@ -221,4 +221,4 @@ TEST(FrameCombiner, GainCurveIsSmoothForAlternatingNumberOfStreams) {
     EXPECT_LT(change_calculator.LatestGain(), 1.01f);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/neteq/tick_timer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TickTimer::Stopwatch::Stopwatch(const TickTimer& ticktimer)
     : ticktimer_(ticktimer), starttick_(ticktimer.ticks()) {}
@@ -22,4 +22,4 @@ TickTimer::Countdown::Countdown(const TickTimer& ticktimer,
 
 TickTimer::Countdown::~Countdown() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

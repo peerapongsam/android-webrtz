@@ -13,7 +13,7 @@
 #include <assert.h>
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 
 ScreenCapturerHelper::ScreenCapturerHelper()
     : invalid_region_lock_(RWLockWrapper::CreateRWLock()),
@@ -99,4 +99,4 @@ void ScreenCapturerHelper::ExpandToGrid(const DesktopRegion& region,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

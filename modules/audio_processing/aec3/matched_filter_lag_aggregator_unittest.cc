@@ -19,7 +19,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr size_t kNumLagsBeforeDetection = 26;
@@ -139,4 +139,4 @@ TEST(MatchedFilterLagAggregator, NullDataDumper) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

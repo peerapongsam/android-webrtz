@@ -52,7 +52,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Maximum number of media packets allows for XOR (RFC 5109) code.
 enum { kMaxNumberMediaPackets = 48 };
@@ -1076,4 +1076,4 @@ TEST_F(FecPacketMaskMetricsTest, FecRecoveryRateUnderLossConditions) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

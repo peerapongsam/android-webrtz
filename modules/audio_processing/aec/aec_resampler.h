@@ -13,7 +13,7 @@
 
 #include "modules/audio_processing/aec/aec_core.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum { kResamplingDelay = 1 };
 enum { kResamplerBufferSize = FRAME_LEN * 4 };
@@ -34,6 +34,6 @@ void WebRtcAec_ResampleLinear(void* resampInst,
                               float* outspeech,
                               size_t* size_out);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_AEC_RESAMPLER_H_

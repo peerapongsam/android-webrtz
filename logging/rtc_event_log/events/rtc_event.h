@@ -15,7 +15,7 @@
 
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class allows us to store unencoded RTC events. Subclasses of this class
 // store the actual information. This allows us to keep all unencoded events,
@@ -60,6 +60,6 @@ class RtcEvent {
   const int64_t timestamp_us_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_H_

@@ -11,7 +11,7 @@
 #ifndef MODULES_AUDIO_DEVICE_ANDROID_AUDIO_COMMON_H_
 #define MODULES_AUDIO_DEVICE_ANDROID_AUDIO_COMMON_H_
 
-namespace webrtc {
+namespace webrtz {
 
 const int kDefaultSampleRate = 44100;
 // Delay estimates for the two different supported modes. These values are based
@@ -23,6 +23,6 @@ const int kDefaultSampleRate = 44100;
 const int kLowLatencyModeDelayEstimateInMilliseconds = 50;
 const int kHighLatencyModeDelayEstimateInMilliseconds = 150;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_AUDIO_COMMON_H_

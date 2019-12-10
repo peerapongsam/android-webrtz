@@ -16,7 +16,7 @@
 #include "api/mediastreaminterface.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implements a template version of a notifier.
 // TODO(deadbeef): This is an implementation detail; move out of api/.
@@ -56,6 +56,6 @@ class Notifier : public T {
   std::list<ObserverInterface*> observers_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_NOTIFIER_H_

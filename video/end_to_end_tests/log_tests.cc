@@ -13,7 +13,7 @@
 #include "test/call_test.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class LogEndToEndTest : public test::CallTest {
   void SetUp() { paths_.clear(); }
@@ -115,4 +115,4 @@ TEST_F(LogEndToEndTest, LogsEncodedFramesWhenRequested) {
 
   RunBaseTest(&test);
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 
 // Decomposition coefficients Daubechies 8.
 
-namespace webrtc {
+namespace webrtz {
 
 const int kDaubechies8CoefficientsLength = 16;
 
@@ -58,6 +58,6 @@ const float kDaubechies8LowPassCoefficients[kDaubechies8CoefficientsLength] = {
   5.44158422430816093862e-02f
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_DAUBECHIES_8_WAVELET_COEFFS_H_

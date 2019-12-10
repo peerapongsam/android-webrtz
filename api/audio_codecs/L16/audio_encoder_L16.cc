@@ -16,7 +16,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioEncoderL16::Config> AudioEncoderL16::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -57,4 +57,4 @@ std::unique_ptr<AudioEncoder> AudioEncoderL16::MakeAudioEncoder(
   return rtc::MakeUnique<AudioEncoderPcm16B>(c);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

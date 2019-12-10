@@ -17,7 +17,7 @@
 #include "rtc_base/random.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Map information from info into rtp.
@@ -294,4 +294,4 @@ void PayloadRouter::OnBitrateAllocationUpdated(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

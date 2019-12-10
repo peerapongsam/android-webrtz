@@ -16,7 +16,7 @@
 
 #include "modules/video_coding/generic_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct VCMDecoderMapItem {
  public:
@@ -91,6 +91,6 @@ class VCMDecoderDataBase {
   ExternalDecoderMap dec_external_map_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_DECODER_DATABASE_H_

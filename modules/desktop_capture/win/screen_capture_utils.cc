@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/win32.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool GetScreenList(DesktopCapturer::SourceList* screens,
                    std::vector<std::string>* device_names /* = nullptr */) {
@@ -105,4 +105,4 @@ DesktopRect GetScreenRect(DesktopCapturer::SourceId screen,
                                device_mode.dmPelsHeight);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

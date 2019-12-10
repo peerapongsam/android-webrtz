@@ -20,7 +20,7 @@
 #include "modules/desktop_capture/win/screen_capturer_win_gdi.h"
 #include "modules/desktop_capture/win/screen_capturer_win_magnifier.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -60,4 +60,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawScreenCapturer(
   return capturer;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

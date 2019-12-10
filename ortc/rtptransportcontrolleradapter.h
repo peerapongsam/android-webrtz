@@ -29,7 +29,7 @@
 #include "rtc_base/sigslot.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpTransportAdapter;
 class OrtcRtpSenderAdapter;
@@ -64,7 +64,7 @@ class RtpTransportControllerAdapter : public RtpTransportControllerInterface,
   static std::unique_ptr<RtpTransportControllerInterface> CreateProxied(
       const cricket::MediaConfig& config,
       cricket::ChannelManager* channel_manager,
-      webrtc::RtcEventLog* event_log,
+      webrtz::RtcEventLog* event_log,
       rtc::Thread* signaling_thread,
       rtc::Thread* worker_thread,
       rtc::Thread* network_thread);
@@ -131,7 +131,7 @@ class RtpTransportControllerAdapter : public RtpTransportControllerInterface,
   // Only expected to be called by RtpTransportControllerAdapter::CreateProxied.
   RtpTransportControllerAdapter(const cricket::MediaConfig& config,
                                 cricket::ChannelManager* channel_manager,
-                                webrtc::RtcEventLog* event_log,
+                                webrtz::RtcEventLog* event_log,
                                 rtc::Thread* signaling_thread,
                                 rtc::Thread* worker_thread,
                                 rtc::Thread* network_thread);
@@ -195,9 +195,9 @@ class RtpTransportControllerAdapter : public RtpTransportControllerInterface,
   const cricket::MediaConfig media_config_;
   RtpKeepAliveConfig keepalive_;
   cricket::ChannelManager* channel_manager_;
-  webrtc::RtcEventLog* event_log_;
+  webrtz::RtcEventLog* event_log_;
   std::unique_ptr<Call> call_;
-  webrtc::RtpTransportControllerSend* call_send_rtp_transport_controller_;
+  webrtz::RtpTransportControllerSend* call_send_rtp_transport_controller_;
 
   // BaseChannel takes content descriptions as input, so we store them here
   // such that they can be updated when a new RtpSenderAdapter/
@@ -216,6 +216,6 @@ class RtpTransportControllerAdapter : public RtpTransportControllerInterface,
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RtpTransportControllerAdapter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ORTC_RTPTRANSPORTCONTROLLERADAPTER_H_

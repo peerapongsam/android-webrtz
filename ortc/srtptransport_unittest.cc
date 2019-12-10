@@ -18,7 +18,7 @@
 #include "p2p/base/fakepackettransport.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const char kTestSha1KeyParams1[] =
     "inline:WVNfX19zZW1jdGwgKCkgewkyMjA7fQp9CnVubGVz";
@@ -122,4 +122,4 @@ TEST_F(SrtpTransportTest, SetSrtpSendAndReceiveKeyDifferentCipherSuite) {
   EXPECT_TRUE(receiver_result.ok());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

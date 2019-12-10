@@ -15,7 +15,7 @@
 #include "test/gmock.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class MockVCMFrameTypeCallback : public VCMFrameTypeCallback {
  public:
@@ -40,6 +40,6 @@ class MockVCMReceiveCallback : public VCMReceiveCallback {
   MOCK_METHOD1(OnDecoderImplementationName, void(const char*));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INCLUDE_MOCK_MOCK_VCM_CALLBACKS_H_

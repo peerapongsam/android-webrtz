@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 class AudioFrameOperationsTest : public ::testing::Test {
@@ -626,4 +626,4 @@ TEST_F(AudioFrameOperationsTest, AddingTwoFramesProducesTheirSum) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

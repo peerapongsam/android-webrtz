@@ -20,7 +20,7 @@
 #include "rtc_base/onetimeevent.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Handles audio RTP packets. This class is thread-safe.
 class RTPReceiverAudio : public RTPReceiverStrategy,
@@ -83,6 +83,6 @@ class RTPReceiverAudio : public RTPReceiverStrategy,
 
   ThreadUnsafeOneTimeEvent first_packet_received_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_RECEIVER_AUDIO_H_

@@ -17,7 +17,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -130,7 +130,7 @@ class NoBandwidthDropAfterDtx : public AudioBweTest {
   void PerformTest() override {
     stats_poller_.PostDelayedTask(
         std::unique_ptr<rtc::QueuedTask>(new StatsPollTask(sender_call_)), 100);
-    sender_call_->OnTransportOverheadChanged(webrtc::MediaType::AUDIO, 0);
+    sender_call_->OnTransportOverheadChanged(webrtz::MediaType::AUDIO, 0);
     AudioBweTest::PerformTest();
   }
 
@@ -144,7 +144,7 @@ using AudioBweIntegrationTest = CallTest;
 // TODO(tschumim): This test is flaky when run on android and mac. Re-enable the
 // test for when the issue is fixed.
 TEST_F(AudioBweIntegrationTest, DISABLED_NoBandwidthDropAfterDtx) {
-  webrtc::test::ScopedFieldTrials override_field_trials(
+  webrtz::test::ScopedFieldTrials override_field_trials(
       "WebRTC-Audio-SendSideBwe/Enabled/"
       "WebRTC-SendSideBwe-WithOverhead/Enabled/");
   NoBandwidthDropAfterDtx test;
@@ -152,4 +152,4 @@ TEST_F(AudioBweIntegrationTest, DISABLED_NoBandwidthDropAfterDtx) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

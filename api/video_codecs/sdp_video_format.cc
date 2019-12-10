@@ -10,7 +10,7 @@
 
 #include "api/video_codecs/sdp_video_format.h"
 
-namespace webrtc {
+namespace webrtz {
 
 SdpVideoFormat::SdpVideoFormat(const std::string& name) : name(name) {}
 
@@ -29,4 +29,4 @@ bool operator==(const SdpVideoFormat& a, const SdpVideoFormat& b) {
   return a.name == b.name && a.parameters == b.parameters;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

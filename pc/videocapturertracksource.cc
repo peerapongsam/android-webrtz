@@ -20,8 +20,8 @@
 #include "rtc_base/checks.h"
 
 using cricket::CaptureState;
-using webrtc::MediaConstraintsInterface;
-using webrtc::MediaSourceInterface;
+using webrtz::MediaConstraintsInterface;
+using webrtz::MediaSourceInterface;
 
 namespace {
 
@@ -255,12 +255,12 @@ bool ExtractOption(const MediaConstraintsInterface* all_constraints,
 
 }  // anonymous namespace
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::scoped_refptr<VideoTrackSourceInterface> VideoCapturerTrackSource::Create(
     rtc::Thread* worker_thread,
     std::unique_ptr<cricket::VideoCapturer> capturer,
-    const webrtc::MediaConstraintsInterface* constraints,
+    const webrtz::MediaConstraintsInterface* constraints,
     bool remote) {
   RTC_DCHECK(worker_thread != NULL);
   RTC_DCHECK(capturer != nullptr);
@@ -303,7 +303,7 @@ VideoCapturerTrackSource::~VideoCapturerTrackSource() {
 }
 
 void VideoCapturerTrackSource::Initialize(
-    const webrtc::MediaConstraintsInterface* constraints) {
+    const webrtz::MediaConstraintsInterface* constraints) {
   std::vector<cricket::VideoFormat> formats =
       *video_capturer_->GetSupportedFormats();
   if (formats.empty()) {
@@ -399,4 +399,4 @@ void VideoCapturerTrackSource::OnStateChange(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

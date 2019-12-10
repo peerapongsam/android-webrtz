@@ -12,9 +12,9 @@
 
 #include "test/gtest.h"
 
-using webrtc::rtcp::CommonHeader;
+using webrtz::rtcp::CommonHeader;
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(RtcpCommonHeaderTest, TooSmallBuffer) {
   uint8_t buffer[] = {0x80, 0x00, 0x00, 0x00};
@@ -102,4 +102,4 @@ TEST(RtcpCommonHeaderTest, FormatAndPayloadType) {
   EXPECT_EQ(header.payload_size_bytes(), 0u);
   EXPECT_EQ(header.payload(), buffer + CommonHeader::kHeaderSizeBytes);
 }
-}  // namespace webrtc
+}  // namespace webrtz

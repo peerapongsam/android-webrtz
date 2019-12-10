@@ -15,7 +15,7 @@
 #include <string>
 #include "modules/audio_coding/test/EncodeDecodeTest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ReceiverWithPacketLoss : public Receiver {
  public:
@@ -62,6 +62,6 @@ class PacketLossTest : public ACMTest {
   int burst_length_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_PACKETLOSSTEST_H_

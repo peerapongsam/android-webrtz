@@ -31,8 +31,8 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 namespace {
 
 const char kCwndExperiment[] = "WebRTC-CwndExperiment";
@@ -47,7 +47,7 @@ const float kDefaultPaceMultiplier = 2.5f;
 
 bool CwndExperimentEnabled() {
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kCwndExperiment);
+      webrtz::field_trial::FindFullName(kCwndExperiment);
   // The experiment is enabled iff the field trial string begins with "Enabled".
   return experiment_string.find("Enabled") == 0;
 }
@@ -55,7 +55,7 @@ bool CwndExperimentEnabled() {
 bool ReadCwndExperimentParameter(int64_t* accepted_queue_ms) {
   RTC_DCHECK(accepted_queue_ms);
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kCwndExperiment);
+      webrtz::field_trial::FindFullName(kCwndExperiment);
   int parsed_values =
       sscanf(experiment_string.c_str(), "Enabled-%" PRId64, accepted_queue_ms);
   if (parsed_values == 1) {
@@ -418,5 +418,5 @@ void GoogCcNetworkController::UpdatePacingRates(Timestamp at_time) {
   observer_->OnPacerConfig(msg);
 }
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

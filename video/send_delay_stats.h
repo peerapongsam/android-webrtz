@@ -23,7 +23,7 @@
 #include "video/stats_counter.h"
 #include "call/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SendDelayStats : public SendPacketObserver {
  public:
@@ -82,5 +82,5 @@ class SendDelayStats : public SendPacketObserver {
       RTC_GUARDED_BY(crit_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // VIDEO_SEND_DELAY_STATS_H_

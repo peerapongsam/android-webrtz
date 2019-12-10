@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/gtest_prod_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper to encapsulate a contiguous data buffer, full or split into frequency
 // bands, with access to a pointer arrays of the deinterleaved channels and
@@ -181,6 +181,6 @@ class IFChannelBuffer {
   mutable ChannelBuffer<float> fbuf_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_CHANNEL_BUFFER_H_

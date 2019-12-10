@@ -26,7 +26,7 @@ namespace cricket {
 class Candidate;
 }  // namespace cricket
 
-namespace webrtc {
+namespace webrtz {
 class IceCandidateInterface;
 class JsepIceCandidate;
 class JsepSessionDescription;
@@ -81,6 +81,6 @@ bool SdpDeserializeCandidate(const std::string& transport_name,
                              cricket::Candidate* candidate,
                              SdpParseError* error);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_WEBRTCSDP_H_

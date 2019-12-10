@@ -16,7 +16,7 @@
 #include "api/rtpsenderinterface.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 ScopedJavaLocalRef<jobject> NativeToJavaRtpSender(
@@ -24,6 +24,6 @@ ScopedJavaLocalRef<jobject> NativeToJavaRtpSender(
     rtc::scoped_refptr<RtpSenderInterface> sender);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_RTPSENDER_H_

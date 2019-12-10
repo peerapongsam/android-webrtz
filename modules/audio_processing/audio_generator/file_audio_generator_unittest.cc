@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // TODO(bugs.webrtc.org/8882) Stub.
@@ -28,4 +28,4 @@ TEST(FileAudioGeneratorTest, CreationDeletion) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

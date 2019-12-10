@@ -14,7 +14,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-namespace webrtc {
+namespace webrtz {
 
 namespace vp9 {
 
@@ -24,6 +24,6 @@ bool GetQp(const uint8_t* buf, size_t length, int* qp);
 
 }  // namespace vp9
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_UTILITY_VP9_UNCOMPRESSED_HEADER_PARSER_H_

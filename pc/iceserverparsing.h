@@ -16,7 +16,7 @@
 #include "api/peerconnectioninterface.h"
 #include "api/rtcerror.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Parses the URLs for each server in |servers| to build |stun_servers| and
 // |turn_servers|. Can return SYNTAX_ERROR if the URL is malformed, or
@@ -29,6 +29,6 @@ RTCErrorType ParseIceServers(
     cricket::ServerAddresses* stun_servers,
     std::vector<cricket::RelayServerConfig>* turn_servers);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_ICESERVERPARSING_H_

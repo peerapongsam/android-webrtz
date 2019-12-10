@@ -16,7 +16,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const double kHistBinCenters[] = {
     7.59621091765857e-02, 9.02036021061016e-02, 1.07115112009343e-01,
@@ -226,4 +226,4 @@ double LoudnessHistogram::CurrentRms() const {
   return mean_val;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

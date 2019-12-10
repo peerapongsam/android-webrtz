@@ -23,7 +23,7 @@
 #include "modules/rtp_rtcp/include/receive_statistics.h"
 #include "rtc_base/arraysize.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -290,4 +290,4 @@ void NadaBweSender::GradualRateUpdate(const NadaFeedback& fb,
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

@@ -172,7 +172,7 @@
   CVPixelBufferRef pixelBufferRef = NULL;
   CVPixelBufferCreate(NULL, 720, 1280, inputFormat, NULL, &pixelBufferRef);
 
-  rtc::scoped_refptr<webrtc::I420Buffer> i420Buffer = CreateI420Gradient(720, 1280);
+  rtc::scoped_refptr<webrtz::I420Buffer> i420Buffer = CreateI420Gradient(720, 1280);
   CopyI420BufferToCVPixelBuffer(i420Buffer, pixelBufferRef);
 
   RTCCVPixelBuffer *buffer = [[RTCCVPixelBuffer alloc] initWithPixelBuffer:pixelBufferRef];
@@ -205,7 +205,7 @@
     RTCI420Buffer *scaledBufferI420 = [scaledBuffer toI420];
     double psnr =
         I420PSNR(*[originalBufferI420 nativeI420Buffer], *[scaledBufferI420 nativeI420Buffer]);
-    XCTAssertEqual(psnr, webrtc::kPerfectPSNR);
+    XCTAssertEqual(psnr, webrtz::kPerfectPSNR);
   }
 
   CVBufferRelease(pixelBufferRef);
@@ -234,13 +234,13 @@
   RTCI420Buffer *scaledBufferI420 = [scaledBuffer toI420];
   double psnr =
       I420PSNR(*[originalBufferI420 nativeI420Buffer], *[scaledBufferI420 nativeI420Buffer]);
-  XCTAssertEqual(psnr, webrtc::kPerfectPSNR);
+  XCTAssertEqual(psnr, webrtz::kPerfectPSNR);
 
   CVBufferRelease(pixelBufferRef);
 }
 
 - (void)toI420WithPixelFormat:(OSType)pixelFormat {
-  rtc::scoped_refptr<webrtc::I420Buffer> i420Buffer = CreateI420Gradient(360, 640);
+  rtc::scoped_refptr<webrtz::I420Buffer> i420Buffer = CreateI420Gradient(360, 640);
 
   CVPixelBufferRef pixelBufferRef = NULL;
   CVPixelBufferCreate(NULL, 360, 640, pixelFormat, NULL, &pixelBufferRef);
@@ -251,7 +251,7 @@
   RTCI420Buffer *fromCVPixelBuffer = [buffer toI420];
 
   double psnr = I420PSNR(*i420Buffer, *[fromCVPixelBuffer nativeI420Buffer]);
-  double target = webrtc::kPerfectPSNR;
+  double target = webrtz::kPerfectPSNR;
   if (pixelFormat != kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange) {
     // libyuv's I420ToRGB functions seem to lose some quality.
     target = 19.0;

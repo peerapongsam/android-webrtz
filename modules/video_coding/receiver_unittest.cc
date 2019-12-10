@@ -24,7 +24,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TestVCMReceiver : public ::testing::Test {
  protected:
@@ -504,4 +504,4 @@ TEST_F(VCMReceiverTimingTest, FrameForDecodingPreferLateDecoding) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

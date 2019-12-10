@@ -20,7 +20,7 @@
 #include "modules/desktop_capture/win/d3d_device.h"
 #include "modules/desktop_capture/win/dxgi_texture.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A pair of an ID3D11Texture2D and an IDXGISurface. We need an ID3D11Texture2D
 // instance to copy GPU texture to RAM, but an IDXGISurface instance to map the
@@ -63,6 +63,6 @@ class DxgiTextureStaging : public DxgiTexture {
   Microsoft::WRL::ComPtr<IDXGISurface> surface_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_TEXTURE_STAGING_H_

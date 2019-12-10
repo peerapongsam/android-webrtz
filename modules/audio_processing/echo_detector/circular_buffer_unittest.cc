@@ -11,7 +11,7 @@
 #include "modules/audio_processing/echo_detector/circular_buffer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(CircularBufferTests, LessThanMaxTest) {
   CircularBuffer test_buffer(3);
@@ -49,4 +49,4 @@ TEST(CircularBufferTests, ReadFromEmpty) {
   EXPECT_EQ(rtc::nullopt, test_buffer.Pop());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

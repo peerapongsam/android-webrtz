@@ -20,7 +20,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const char kVp8ForceFallbackEncoderFieldTrial[] =
     "WebRTC-VP8-Forced-Fallback-Encoder-v2";
@@ -41,7 +41,7 @@ void GetForcedFallbackParamsFromFieldTrialGroup(int* param_min_pixels,
   RTC_DCHECK(param_min_pixels);
   RTC_DCHECK(param_max_pixels);
   std::string group =
-      webrtc::field_trial::FindFullName(kVp8ForceFallbackEncoderFieldTrial);
+      webrtz::field_trial::FindFullName(kVp8ForceFallbackEncoderFieldTrial);
   if (group.empty())
     return;
 
@@ -65,8 +65,8 @@ void GetForcedFallbackParamsFromFieldTrialGroup(int* param_min_pixels,
 }  // namespace
 
 VideoEncoderSoftwareFallbackWrapper::VideoEncoderSoftwareFallbackWrapper(
-    std::unique_ptr<webrtc::VideoEncoder> sw_encoder,
-    std::unique_ptr<webrtc::VideoEncoder> hw_encoder)
+    std::unique_ptr<webrtz::VideoEncoder> sw_encoder,
+    std::unique_ptr<webrtz::VideoEncoder> hw_encoder)
     : number_of_cores_(0),
       max_payload_size_(0),
       rates_set_(false),
@@ -295,4 +295,4 @@ void VideoEncoderSoftwareFallbackWrapper::ValidateSettingsForForcedFallback() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

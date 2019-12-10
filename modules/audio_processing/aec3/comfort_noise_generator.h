@@ -19,7 +19,7 @@
 #include "modules/audio_processing/aec3/fft_data.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 #if defined(WEBRTC_ARCH_X86_FAMILY)
 
@@ -63,6 +63,6 @@ class ComfortNoiseGenerator {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(ComfortNoiseGenerator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_COMFORT_NOISE_GENERATOR_H_

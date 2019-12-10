@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct FecPacketCounter {
   FecPacketCounter()
@@ -53,5 +53,5 @@ class UlpfecReceiver {
   // Returns a counter describing the added and recovered packets.
   virtual FecPacketCounter GetPacketCounter() const = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_INCLUDE_ULPFEC_RECEIVER_H_

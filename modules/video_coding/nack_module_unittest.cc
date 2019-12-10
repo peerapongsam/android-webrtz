@@ -16,7 +16,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 class TestNackModule : public ::testing::Test,
                        public NackSender,
                        public KeyFrameRequestSender {
@@ -314,4 +314,4 @@ TEST_F(TestNackModule, PacketNackCount) {
   EXPECT_EQ(0, nack_module_.OnReceivedPacket(packet));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

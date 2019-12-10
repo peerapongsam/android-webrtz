@@ -10,7 +10,7 @@
 
 #include "stats/test/rtcteststats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 WEBRTC_RTCSTATS_IMPL(RTCTestStats, RTCStats, "test-stats",
     &m_bool,
@@ -67,4 +67,4 @@ RTCTestStats::RTCTestStats(const RTCTestStats& other)
 RTCTestStats::~RTCTestStats() {
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

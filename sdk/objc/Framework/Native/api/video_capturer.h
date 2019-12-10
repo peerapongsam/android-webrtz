@@ -16,13 +16,13 @@
 #include "api/mediastreaminterface.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
-rtc::scoped_refptr<webrtc::VideoTrackSourceInterface> ObjCToNativeVideoCapturer(
+rtc::scoped_refptr<webrtz::VideoTrackSourceInterface> ObjCToNativeVideoCapturer(
     RTCVideoCapturer* objc_video_capturer,
     rtc::Thread* signaling_thread,
     rtc::Thread* worker_thread);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_API_VIDEO_CAPTURER_H_

@@ -21,7 +21,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct VideoStream {
   VideoStream();
@@ -155,6 +155,6 @@ class VideoEncoderConfig {
   VideoEncoderConfig(const VideoEncoderConfig&);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_VIDEO_CONFIG_H_

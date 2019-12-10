@@ -34,27 +34,27 @@ namespace {
 
 struct CallHelper {
   CallHelper() {
-    webrtc::AudioState::Config audio_state_config;
+    webrtz::AudioState::Config audio_state_config;
     audio_state_config.audio_mixer =
-        new rtc::RefCountedObject<webrtc::test::MockAudioMixer>();
+        new rtc::RefCountedObject<webrtz::test::MockAudioMixer>();
     audio_state_config.audio_processing =
-        new rtc::RefCountedObject<webrtc::test::MockAudioProcessing>();
+        new rtc::RefCountedObject<webrtz::test::MockAudioProcessing>();
     audio_state_config.audio_device_module =
-        new rtc::RefCountedObject<webrtc::test::MockAudioDeviceModule>();
-    webrtc::Call::Config config(&event_log_);
-    config.audio_state = webrtc::AudioState::Create(audio_state_config);
-    call_.reset(webrtc::Call::Create(config));
+        new rtc::RefCountedObject<webrtz::test::MockAudioDeviceModule>();
+    webrtz::Call::Config config(&event_log_);
+    config.audio_state = webrtz::AudioState::Create(audio_state_config);
+    call_.reset(webrtz::Call::Create(config));
   }
 
-  webrtc::Call* operator->() { return call_.get(); }
+  webrtz::Call* operator->() { return call_.get(); }
 
  private:
-  webrtc::RtcEventLogNullImpl event_log_;
-  std::unique_ptr<webrtc::Call> call_;
+  webrtz::RtcEventLogNullImpl event_log_;
+  std::unique_ptr<webrtz::Call> call_;
 };
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(CallTest, ConstructDestruct) {
   CallHelper call;
@@ -74,7 +74,7 @@ TEST(CallTest, CreateDestroy_AudioReceiveStream) {
   AudioReceiveStream::Config config;
   config.rtp.remote_ssrc = 42;
   config.decoder_factory =
-      new rtc::RefCountedObject<webrtc::MockAudioDecoderFactory>();
+      new rtc::RefCountedObject<webrtz::MockAudioDecoderFactory>();
   AudioReceiveStream* stream = call->CreateAudioReceiveStream(config);
   EXPECT_NE(stream, nullptr);
   call->DestroyAudioReceiveStream(stream);
@@ -106,7 +106,7 @@ TEST(CallTest, CreateDestroy_AudioReceiveStreams) {
   CallHelper call;
   AudioReceiveStream::Config config;
   config.decoder_factory =
-      new rtc::RefCountedObject<webrtc::MockAudioDecoderFactory>();
+      new rtc::RefCountedObject<webrtz::MockAudioDecoderFactory>();
   std::list<AudioReceiveStream*> streams;
   for (int i = 0; i < 2; ++i) {
     for (uint32_t ssrc = 0; ssrc < 1234567; ssrc += 34567) {
@@ -132,7 +132,7 @@ TEST(CallTest, CreateDestroy_AssociateAudioSendReceiveStreams_RecvFirst) {
   recv_config.rtp.remote_ssrc = 42;
   recv_config.rtp.local_ssrc = 777;
   recv_config.decoder_factory =
-      new rtc::RefCountedObject<webrtc::MockAudioDecoderFactory>();
+      new rtc::RefCountedObject<webrtz::MockAudioDecoderFactory>();
   AudioReceiveStream* recv_stream = call->CreateAudioReceiveStream(recv_config);
   EXPECT_NE(recv_stream, nullptr);
 
@@ -163,7 +163,7 @@ TEST(CallTest, CreateDestroy_AssociateAudioSendReceiveStreams_SendFirst) {
   recv_config.rtp.remote_ssrc = 42;
   recv_config.rtp.local_ssrc = 777;
   recv_config.decoder_factory =
-      new rtc::RefCountedObject<webrtc::MockAudioDecoderFactory>();
+      new rtc::RefCountedObject<webrtz::MockAudioDecoderFactory>();
   AudioReceiveStream* recv_stream = call->CreateAudioReceiveStream(recv_config);
   EXPECT_NE(recv_stream, nullptr);
 
@@ -278,4 +278,4 @@ TEST(CallTest, RecreatingAudioStreamWithSameSsrcReusesRtpState) {
 }
 
 
-}  // namespace webrtc
+}  // namespace webrtz

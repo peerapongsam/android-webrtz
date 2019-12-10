@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPPayloadRegistry;
 class VideoCodec;
@@ -108,6 +108,6 @@ class RtpReceiver {
 
   virtual std::vector<RtpSource> GetSources() const = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_INCLUDE_RTP_RECEIVER_H_

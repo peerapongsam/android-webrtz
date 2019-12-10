@@ -19,10 +19,10 @@ static dispatch_queue_t kCaptureSessionQueue = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
     kAudioSessionQueue = dispatch_queue_create(
-        "org.webrtc.RTCDispatcherAudioSession",
+        "org.webrtz.RTCDispatcherAudioSession",
         DISPATCH_QUEUE_SERIAL);
     kCaptureSessionQueue = dispatch_queue_create(
-        "org.webrtc.RTCDispatcherCaptureSession",
+        "org.webrtz.RTCDispatcherCaptureSession",
         DISPATCH_QUEUE_SERIAL);
   });
 }

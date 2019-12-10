@@ -39,7 +39,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::_;
@@ -1297,4 +1297,4 @@ TEST_F(RtcpReceiverTest, HandlesIncorrectTargetBitrate) {
   InjectRtcpPacket(xr);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

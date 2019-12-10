@@ -17,7 +17,7 @@
 
 struct RingBuffer;
 
-namespace webrtc {
+namespace webrtz {
 
 // A ring buffer tailored for float deinterleaved audio. Any operation that
 // cannot be performed as requested will cause a crash (e.g. insufficient data
@@ -52,6 +52,6 @@ class AudioRingBuffer final {
   std::vector<RingBuffer*> buffers_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_AUDIO_RING_BUFFER_H_

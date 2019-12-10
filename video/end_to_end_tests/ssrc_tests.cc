@@ -12,7 +12,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 class SsrcEndToEndTest : public test::CallTest {
  protected:
   void TestSendsSetSsrcs(size_t num_ssrcs, bool send_single_ssrc_first);
@@ -333,4 +333,4 @@ TEST_F(SsrcEndToEndTest, DISABLED_RedundantPayloadsTransmittedOnAllSsrcs) {
 
   RunBaseTest(&test);
 }
-}  // namespace webrtc
+}  // namespace webrtz

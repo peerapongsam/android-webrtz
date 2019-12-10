@@ -14,7 +14,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum {
   kSidShortIntervalUpdate = 1,
@@ -46,7 +46,7 @@ class CngTest : public ::testing::Test {
 void CngTest::SetUp() {
   FILE* input_file;
   const std::string file_name =
-        webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+        webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
   input_file = fopen(file_name.c_str(), "rb");
   ASSERT_TRUE(input_file != NULL);
   ASSERT_EQ(640, static_cast<int32_t>(fread(speech_data_, sizeof(int16_t),
@@ -238,4 +238,4 @@ TEST_F(CngTest, CngAutoSidShort) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

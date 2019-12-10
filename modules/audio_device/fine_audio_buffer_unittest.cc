@@ -23,7 +23,7 @@ using ::testing::AtLeast;
 using ::testing::InSequence;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 const int kSampleRate = 44100;
 const int kSamplesPer10Ms = kSampleRate * 10 / 1000;
@@ -142,4 +142,4 @@ TEST(FineBufferTest, GreaterThan10ms) {
   RunFineBufferTest(kFrameSizeSamples);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

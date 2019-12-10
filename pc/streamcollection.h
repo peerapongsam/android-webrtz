@@ -16,7 +16,7 @@
 
 #include "api/peerconnectioninterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of StreamCollection.
 class StreamCollection : public StreamCollectionInterface {
@@ -103,6 +103,6 @@ class StreamCollection : public StreamCollectionInterface {
   StreamVector media_streams_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_STREAMCOLLECTION_H_

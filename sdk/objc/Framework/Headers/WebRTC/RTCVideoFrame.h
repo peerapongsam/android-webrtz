@@ -24,7 +24,7 @@ typedef NS_ENUM(NSInteger, RTCVideoRotation) {
 
 @protocol RTCVideoFrameBuffer;
 
-// RTCVideoFrame is an ObjectiveC version of webrtc::VideoFrame.
+// RTCVideoFrame is an ObjectiveC version of webrtz::VideoFrame.
 RTC_EXPORT
 @interface RTCVideoFrame : NSObject
 

@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // DesktopRegion represents a region of the screen or window.
 //
@@ -163,7 +163,7 @@ class DesktopRegion {
   Rows rows_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_REGION_H_
 

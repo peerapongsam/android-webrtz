@@ -18,11 +18,11 @@
 #include "api/video/video_frame.h"
 #include "api/videosinkinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<rtc::VideoSinkInterface<VideoFrame>> ObjCToNativeVideoRenderer(
     id<RTCVideoRenderer> objc_video_renderer);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_API_VIDEO_RENDERER_H_

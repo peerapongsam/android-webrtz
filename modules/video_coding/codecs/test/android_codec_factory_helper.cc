@@ -29,7 +29,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #include "base/android/jni_android.h"
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -57,9 +57,9 @@ void InitializeAndroidObjects() {
 std::unique_ptr<VideoEncoderFactory> CreateAndroidEncoderFactory() {
   JNIEnv* env = AttachCurrentThreadIfNeeded();
   ScopedJavaLocalRef<jclass> factory_class =
-      GetClass(env, "org/webrtc/HardwareVideoEncoderFactory");
+      GetClass(env, "org/webrtz/HardwareVideoEncoderFactory");
   jmethodID factory_constructor = env->GetMethodID(
-      factory_class.obj(), "<init>", "(Lorg/webrtc/EglBase$Context;ZZ)V");
+      factory_class.obj(), "<init>", "(Lorg/webrtz/EglBase$Context;ZZ)V");
   ScopedJavaLocalRef<jobject> factory_object(
       env, env->NewObject(factory_class.obj(), factory_constructor,
                           nullptr /* shared_context */,
@@ -71,7 +71,7 @@ std::unique_ptr<VideoEncoderFactory> CreateAndroidEncoderFactory() {
 std::unique_ptr<VideoDecoderFactory> CreateAndroidDecoderFactory() {
   JNIEnv* env = AttachCurrentThreadIfNeeded();
   ScopedJavaLocalRef<jclass> factory_class =
-      GetClass(env, "org/webrtc/HardwareVideoDecoderFactory");
+      GetClass(env, "org/webrtz/HardwareVideoDecoderFactory");
   jmethodID factory_constructor = env->GetMethodID(
       factory_class.obj(), "<init>", "(Lorg/webrtc/EglBase$Context;)V");
   ScopedJavaLocalRef<jobject> factory_object(
@@ -81,4 +81,4 @@ std::unique_ptr<VideoDecoderFactory> CreateAndroidDecoderFactory() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

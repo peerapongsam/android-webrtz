@@ -16,7 +16,7 @@
 #include "modules/audio_processing/vad/voice_gmm_tables.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(GmmTest, EvaluateGmm) {
   GmmParameters noise_gmm;
@@ -62,4 +62,4 @@ TEST(GmmTest, EvaluateGmm) {
   EXPECT_LE(relative_error, kAcceptedRelativeErr);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

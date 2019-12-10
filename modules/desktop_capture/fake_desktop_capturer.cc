@@ -12,7 +12,7 @@
 
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 FakeDesktopCapturer::FakeDesktopCapturer() = default;
 FakeDesktopCapturer::~FakeDesktopCapturer() = default;
@@ -78,4 +78,4 @@ bool FakeDesktopCapturer::SelectSource(DesktopCapturer::SourceId id) {
   return id == kWindowId || id == kScreenId || id == kFullDesktopScreenId;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

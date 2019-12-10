@@ -28,7 +28,7 @@ bool IsMultiplexCodec(const cricket::VideoCodec& codec) {
 
 }  // anonymous namespace
 
-namespace webrtc {
+namespace webrtz {
 
 constexpr const char* kMultiplexAssociatedCodecName = cricket::kVp9CodecName;
 
@@ -111,4 +111,4 @@ std::unique_ptr<VideoDecoder> MultiplexDecoderFactory::CreateVideoDecoder(
       new MultiplexDecoderAdapter(factory_.get(), associated_format));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

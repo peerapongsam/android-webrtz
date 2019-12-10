@@ -21,16 +21,16 @@
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 #include "sdk/android/src/jni/jvm.h"
 
-// Convenience macro defining JNI-accessible methods in the org.webrtc package.
+// Convenience macro defining JNI-accessible methods in the org.webrtz package.
 // Eliminates unnecessary boilerplate and line-wraps, reducing visual clutter.
 #define JNI_FUNCTION_DECLARATION(rettype, name, ...) \
-  extern "C" JNIEXPORT rettype JNICALL Java_org_webrtc_##name(__VA_ARGS__)
+  extern "C" JNIEXPORT rettype JNICALL Java_org_webrtz_##name(__VA_ARGS__)
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // TODO(sakal): Remove once clients have migrated.
-using ::webrtc::JavaToStdMapStrings;
+using ::webrtz::JavaToStdMapStrings;
 
 // Deprecated, use NativeToJavaPointer.
 inline long jlongFromPointer(void* ptr) {
@@ -58,14 +58,14 @@ class ScopedLocalRefFrame {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 // TODO(magjed): Remove once external clients are updated.
-namespace webrtc_jni {
+namespace webrtz_jni {
 
-using webrtc::AttachCurrentThreadIfNeeded;
-using webrtc::jni::InitGlobalJniVariables;
+using webrtz::AttachCurrentThreadIfNeeded;
+using webrtz::jni::InitGlobalJniVariables;
 
-}  // namespace webrtc_jni
+}  // namespace webrtz_jni
 
 #endif  // SDK_ANDROID_SRC_JNI_JNI_HELPERS_H_

@@ -22,36 +22,36 @@ NS_ASSUME_NONNULL_BEGIN
 /* Interfaces for converting to/from internal C++ formats. */
 @interface RTCEncodedImage ()
 
-- (instancetype)initWithNativeEncodedImage:(webrtc::EncodedImage)encodedImage;
-- (webrtc::EncodedImage)nativeEncodedImage;
+- (instancetype)initWithNativeEncodedImage:(webrtz::EncodedImage)encodedImage;
+- (webrtz::EncodedImage)nativeEncodedImage;
 
 @end
 
 @interface RTCVideoEncoderSettings ()
 
-- (instancetype)initWithNativeVideoCodec:(const webrtc::VideoCodec *__nullable)videoCodec;
-- (webrtc::VideoCodec)nativeVideoCodec;
+- (instancetype)initWithNativeVideoCodec:(const webrtz::VideoCodec *__nullable)videoCodec;
+- (webrtz::VideoCodec)nativeVideoCodec;
 
 @end
 
 @interface RTCCodecSpecificInfoH264 ()
 
-- (webrtc::CodecSpecificInfo)nativeCodecSpecificInfo;
+- (webrtz::CodecSpecificInfo)nativeCodecSpecificInfo;
 
 @end
 
 @interface RTCRtpFragmentationHeader ()
 
 - (instancetype)initWithNativeFragmentationHeader:
-        (const webrtc::RTPFragmentationHeader *__nullable)fragmentationHeader;
-- (std::unique_ptr<webrtc::RTPFragmentationHeader>)createNativeFragmentationHeader;
+        (const webrtz::RTPFragmentationHeader *__nullable)fragmentationHeader;
+- (std::unique_ptr<webrtz::RTPFragmentationHeader>)createNativeFragmentationHeader;
 
 @end
 
 @interface RTCVideoCodecInfo ()
 
-- (instancetype)initWithNativeSdpVideoFormat:(webrtc::SdpVideoFormat)format;
-- (webrtc::SdpVideoFormat)nativeSdpVideoFormat;
+- (instancetype)initWithNativeSdpVideoFormat:(webrtz::SdpVideoFormat)format;
+- (webrtz::SdpVideoFormat)nativeSdpVideoFormat;
 
 /* TODO(andersc): These are deprecated, remove when no longer in use. */
 - (instancetype)initWithNativeVideoCodec:(cricket::VideoCodec)videoCodec;

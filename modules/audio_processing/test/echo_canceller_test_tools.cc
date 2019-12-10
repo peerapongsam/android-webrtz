@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void RandomizeSampleVector(Random* random_generator, rtc::ArrayView<float> v) {
   for (auto& v_k : v) {
@@ -37,4 +37,4 @@ void DelayBuffer<T>::Delay(rtc::ArrayView<const T> x,
 
 template class DelayBuffer<float>;
 template class DelayBuffer<int>;
-}  // namespace webrtc
+}  // namespace webrtz

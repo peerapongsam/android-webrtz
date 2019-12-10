@@ -19,7 +19,7 @@
 #include "rtc_base/strings/string_builder.h"
 #include "rtc_base/stringutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool VideoCodecVP8::operator==(const VideoCodecVP8& other) const {
   // Doesn't compare the tl_factory pointers, which are constructed
@@ -309,4 +309,4 @@ std::string BitrateAllocation::ToString() const {
   return ssb.str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

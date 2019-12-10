@@ -15,7 +15,7 @@
 
 #include <Windows.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class RWLockWin : public RWLockWrapper {
  public:
@@ -34,6 +34,6 @@ class RWLockWin : public RWLockWrapper {
   SRWLOCK lock_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_SYNCHRONIZATION_RW_LOCK_WIN_H_

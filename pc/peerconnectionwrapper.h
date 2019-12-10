@@ -21,7 +21,7 @@
 #include "pc/test/mockpeerconnectionobservers.h"
 #include "rtc_base/function_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class that wraps a PeerConnection so that it is easier to use in unit tests.
 // Namely, gives a synchronous API for the event-callback-based API of
@@ -188,6 +188,6 @@ class PeerConnectionWrapper {
   rtc::scoped_refptr<FakeMetricsObserver> fake_metrics_observer_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_PEERCONNECTIONWRAPPER_H_

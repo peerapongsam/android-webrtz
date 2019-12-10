@@ -170,7 +170,7 @@ class FakeIceTransport : public IceTransportInternal {
 
   rtc::Optional<int> GetRttEstimate() override { return rtc::nullopt; }
 
-  void SetMetricsObserver(webrtc::MetricsObserverInterface* observer) override {
+  void SetMetricsObserver(webrtz::MetricsObserverInterface* observer) override {
   }
 
   // Fake PacketTransportInternal implementation.

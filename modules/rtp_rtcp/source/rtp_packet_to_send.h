@@ -16,7 +16,7 @@
 #include "modules/rtp_rtcp/source/rtp_header_extensions.h"
 #include "modules/rtp_rtcp/source/rtp_packet.h"
 
-namespace webrtc {
+namespace webrtz {
 // Class to hold rtp packet with metadata for sender side.
 class RtpPacketToSend : public RtpPacket {
  public:
@@ -74,5 +74,5 @@ class RtpPacketToSend : public RtpPacket {
   std::vector<uint8_t> application_data_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_PACKET_TO_SEND_H_

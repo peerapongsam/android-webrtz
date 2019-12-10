@@ -18,13 +18,13 @@
 using testing::ElementsAre;
 using testing::ElementsAreArray;
 using testing::make_tuple;
-using webrtc::rtcp::Dlrr;
-using webrtc::rtcp::ExtendedReports;
-using webrtc::rtcp::ReceiveTimeInfo;
-using webrtc::rtcp::Rrtr;
-using webrtc::rtcp::VoipMetric;
+using webrtz::rtcp::Dlrr;
+using webrtz::rtcp::ExtendedReports;
+using webrtz::rtcp::ReceiveTimeInfo;
+using webrtz::rtcp::Rrtr;
+using webrtz::rtcp::VoipMetric;
 
-namespace webrtc {
+namespace webrtz {
 // Define comparision operators that shouldn't be needed in production,
 // but make testing matches more clear.
 bool operator==(const RTCPVoIPMetric& metric1, const RTCPVoIPMetric& metric2) {
@@ -251,4 +251,4 @@ TEST_F(RtcpPacketExtendedReportsTest, CreateAndParseWithMultipleReportBlocks) {
   EXPECT_EQ(kVoipMetric, parsed.voip_metric());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,9 +19,9 @@
 #include "rtc_base/format_macros.h"
 #include "test/rtp_file_reader.h"
 
-class Observer : public webrtc::RemoteBitrateObserver {
+class Observer : public webrtz::RemoteBitrateObserver {
  public:
-  explicit Observer(webrtc::Clock* clock) : clock_(clock) {}
+  explicit Observer(webrtz::Clock* clock) : clock_(clock) {}
 
   // Called when a receive channel group has a new bitrate estimate for the
   // incoming streams.
@@ -35,23 +35,23 @@ class Observer : public webrtc::RemoteBitrateObserver {
   virtual ~Observer() {}
 
  private:
-  webrtc::Clock* clock_;
+  webrtz::Clock* clock_;
 };
 
 int main(int argc, char* argv[]) {
-  webrtc::test::RtpFileReader* reader;
-  webrtc::RemoteBitrateEstimator* estimator;
-  webrtc::RtpHeaderParser* parser;
+  webrtz::test::RtpFileReader* reader;
+  webrtz::RemoteBitrateEstimator* estimator;
+  webrtz::RtpHeaderParser* parser;
   std::string estimator_used;
-  webrtc::SimulatedClock clock(0);
+  webrtz::SimulatedClock clock(0);
   Observer observer(&clock);
   if (!ParseArgsAndSetupEstimator(argc, argv, &clock, &observer, &reader,
                                   &parser, &estimator, &estimator_used)) {
     return -1;
   }
-  std::unique_ptr<webrtc::test::RtpFileReader> rtp_reader(reader);
-  std::unique_ptr<webrtc::RtpHeaderParser> rtp_parser(parser);
-  std::unique_ptr<webrtc::RemoteBitrateEstimator> rbe(estimator);
+  std::unique_ptr<webrtz::test::RtpFileReader> rtp_reader(reader);
+  std::unique_ptr<webrtz::RtpHeaderParser> rtp_parser(parser);
+  std::unique_ptr<webrtz::RemoteBitrateEstimator> rbe(estimator);
 
   // Process the file.
   int packet_counter = 0;
@@ -59,7 +59,7 @@ int main(int argc, char* argv[]) {
   int64_t first_rtp_time_ms = -1;
   int abs_send_time_count = 0;
   int ts_offset_count = 0;
-  webrtc::test::RtpPacket packet;
+  webrtz::test::RtpPacket packet;
   if (!rtp_reader->NextPacket(&packet)) {
     printf("No RTP packet found\n");
     return 0;
@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) {
   while (true) {
     if (next_rtp_time_ms <= clock.TimeInMilliseconds()) {
       if (!parser->IsRtcp(packet.data, packet.length)) {
-        webrtc::RTPHeader header;
+        webrtz::RTPHeader header;
         parser->Parse(packet.data, packet.length, &header);
         if (header.extension.hasAbsoluteSendTime)
           ++abs_send_time_count;

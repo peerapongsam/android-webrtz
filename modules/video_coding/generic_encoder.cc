@@ -24,7 +24,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const int kMessagesThrottlingThreshold = 2;
@@ -434,4 +434,4 @@ EncodedImageCallback::Result VCMEncodedFrameCallback::OnEncodedImage(
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

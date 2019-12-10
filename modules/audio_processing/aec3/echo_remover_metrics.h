@@ -14,7 +14,7 @@
 #include "modules/audio_processing/aec3/aec_state.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Handles the reporting of metrics for the echo remover.
 class EchoRemoverMetrics {
@@ -75,6 +75,6 @@ int TransformDbMetricForReporting(bool negate,
 
 }  // namespace aec3
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ECHO_REMOVER_METRICS_H_

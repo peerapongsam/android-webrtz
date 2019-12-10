@@ -24,7 +24,7 @@
 #include "rtc_base/strings/string_builder.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::string FlexfecReceiveStream::Stats::ToString(int64_t time_ms) const {
   char buf[1024];
@@ -197,4 +197,4 @@ const FlexfecReceiveStream::Config& FlexfecReceiveStreamImpl::GetConfig()
   return config_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

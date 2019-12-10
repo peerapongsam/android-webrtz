@@ -19,7 +19,7 @@
 #include "pc/videotrack.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -344,4 +344,4 @@ void VideoRtpReceiver::NotifyFirstPacketReceived() {
   received_first_packet_ = true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

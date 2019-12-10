@@ -14,7 +14,7 @@
 #include <memory>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoDecoder;
 struct SdpVideoFormat;
@@ -34,6 +34,6 @@ class VideoDecoderFactory {
   virtual ~VideoDecoderFactory() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_CODECS_VIDEO_DECODER_FACTORY_H_

@@ -11,7 +11,7 @@
 #include "modules/remote_bitrate_estimator/include/bwe_defines.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const char kBweTypeHistogram[] = "WebRTC.BWE.Types";
 
@@ -19,8 +19,8 @@ namespace congestion_controller {
 int GetMinBitrateBps() {
   constexpr int kAudioMinBitrateBps = 5000;
   constexpr int kMinBitrateBps = 10000;
-  if (webrtc::field_trial::IsEnabled("WebRTC-Audio-SendSideBwe") &&
-      !webrtc::field_trial::IsEnabled("WebRTC-Audio-SendSideBwe-For-Video")) {
+  if (webrtz::field_trial::IsEnabled("WebRTC-Audio-SendSideBwe") &&
+      !webrtz::field_trial::IsEnabled("WebRTC-Audio-SendSideBwe-For-Video")) {
     return kAudioMinBitrateBps;
   }
   return kMinBitrateBps;
@@ -38,4 +38,4 @@ RateControlInput::RateControlInput(
 
 RateControlInput::~RateControlInput() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

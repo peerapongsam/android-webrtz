@@ -21,7 +21,7 @@ using testing::Return;
 using testing::SaveArg;
 using testing::StrictMock;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -72,4 +72,4 @@ TEST(ReceiveSideCongestionControllerTest, OnReceivedPacketWithAbsSendTime) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,7 +10,7 @@
 
 #include "modules/rtp_rtcp/mocks/mock_rtp_rtcp.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockRtpData::MockRtpData() = default;
 MockRtpData::~MockRtpData() = default;
@@ -18,4 +18,4 @@ MockRtpData::~MockRtpData() = default;
 MockRtpRtcp::MockRtpRtcp() = default;
 MockRtpRtcp::~MockRtpRtcp() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 TEST(MaxBandwidthFilterTest, InitializationCheck) {
@@ -81,4 +81,4 @@ TEST(MaxBandwidthFilterTest, FullBandwidthNotReached) {
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

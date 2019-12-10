@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-namespace webrtc {
+namespace webrtz {
 
 /**
  * These objects are created by RTCPeerConnectionFactory to wrap an
@@ -58,14 +58,14 @@ class PeerConnectionDelegateAdapter : public PeerConnectionObserver {
   __weak RTCPeerConnection *peer_connection_;
 };
 
-} // namespace webrtc
+} // namespace webrtz
 
 
 @interface RTCPeerConnection ()
 
 /** The native PeerConnectionInterface created during construction. */
 @property(nonatomic, readonly)
-    rtc::scoped_refptr<webrtc::PeerConnectionInterface> nativePeerConnection;
+    rtc::scoped_refptr<webrtz::PeerConnectionInterface> nativePeerConnection;
 
 /** Initialize an RTCPeerConnection with a configuration, constraints, and
  *  delegate.
@@ -80,31 +80,31 @@ class PeerConnectionDelegateAdapter : public PeerConnectionObserver {
     (nullable id<RTCPeerConnectionDelegate>)delegate
     NS_DESIGNATED_INITIALIZER;
 
-+ (webrtc::PeerConnectionInterface::SignalingState)nativeSignalingStateForState:
++ (webrtz::PeerConnectionInterface::SignalingState)nativeSignalingStateForState:
     (RTCSignalingState)state;
 
 + (RTCSignalingState)signalingStateForNativeState:
-    (webrtc::PeerConnectionInterface::SignalingState)nativeState;
+    (webrtz::PeerConnectionInterface::SignalingState)nativeState;
 
 + (NSString *)stringForSignalingState:(RTCSignalingState)state;
 
-+ (webrtc::PeerConnectionInterface::IceConnectionState)
++ (webrtz::PeerConnectionInterface::IceConnectionState)
     nativeIceConnectionStateForState:(RTCIceConnectionState)state;
 
 + (RTCIceConnectionState)iceConnectionStateForNativeState:
-    (webrtc::PeerConnectionInterface::IceConnectionState)nativeState;
+    (webrtz::PeerConnectionInterface::IceConnectionState)nativeState;
 
 + (NSString *)stringForIceConnectionState:(RTCIceConnectionState)state;
 
-+ (webrtc::PeerConnectionInterface::IceGatheringState)
++ (webrtz::PeerConnectionInterface::IceGatheringState)
     nativeIceGatheringStateForState:(RTCIceGatheringState)state;
 
 + (RTCIceGatheringState)iceGatheringStateForNativeState:
-    (webrtc::PeerConnectionInterface::IceGatheringState)nativeState;
+    (webrtz::PeerConnectionInterface::IceGatheringState)nativeState;
 
 + (NSString *)stringForIceGatheringState:(RTCIceGatheringState)state;
 
-+ (webrtc::PeerConnectionInterface::StatsOutputLevel)
++ (webrtz::PeerConnectionInterface::StatsOutputLevel)
     nativeStatsOutputLevelForLevel:(RTCStatsOutputLevel)level;
 
 @end

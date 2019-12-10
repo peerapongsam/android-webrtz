@@ -16,7 +16,7 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class I420BufferInterface;
 class I420ABufferInterface;
@@ -36,7 +36,7 @@ class I444BufferInterface;
 // correct subclass in custom video sinks. The purpose of this is to improve
 // performance by providing an optimized path without intermediate conversions.
 // Frame metadata such as rotation and timestamp are stored in
-// webrtc::VideoFrame, and not here.
+// webrtz::VideoFrame, and not here.
 class VideoFrameBuffer : public rtc::RefCountInterface {
  public:
   // New frame buffer types will be added conservatively when there is an
@@ -133,6 +133,6 @@ class I444BufferInterface : public PlanarYuvBuffer {
   ~I444BufferInterface() override {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_VIDEO_FRAME_BUFFER_H_

@@ -11,7 +11,7 @@
 #include "modules/audio_processing/aec3/erle_estimator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -130,4 +130,4 @@ TEST(ErleEstimator, VerifyNoErleUpdateDuringLowActivity) {
   VerifyErle(estimator.Erle(), estimator.ErleTimeDomain(), kMinErle, kMinErle);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

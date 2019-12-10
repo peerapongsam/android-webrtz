@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace voe {
 ChannelProxy::ChannelProxy() {}
 
@@ -116,7 +116,7 @@ CallStatistics ChannelProxy::GetRTCPStatistics() const {
 
 std::vector<ReportBlock> ChannelProxy::GetRemoteRTCPReportBlocks() const {
   RTC_DCHECK(worker_thread_checker_.CalledOnValidThread());
-  std::vector<webrtc::ReportBlock> blocks;
+  std::vector<webrtz::ReportBlock> blocks;
   int error = channel_->GetRemoteRTCPReportBlocks(&blocks);
   RTC_DCHECK_EQ(0, error);
   return blocks;
@@ -332,4 +332,4 @@ void ChannelProxy::StopPlayout() {
   RTC_DCHECK_EQ(0, error);
 }
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz

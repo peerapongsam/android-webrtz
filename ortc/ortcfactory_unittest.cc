@@ -20,7 +20,7 @@
 #include "rtc_base/gunit.h"
 #include "rtc_base/virtualsocketserver.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This test uses a virtual network and fake media engine, in order to test the
 // OrtcFactory at only an API level. Any end-to-end test should go in
@@ -247,4 +247,4 @@ TEST_F(OrtcFactoryTest, CreateSendersOrReceieversWithNullTransport) {
   EXPECT_EQ(RTCErrorType::INVALID_PARAMETER, receiver_result.error().type());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 
 #include "modules/audio_processing/aec3/aec3_common.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MatrixBuffer::MatrixBuffer(size_t size, size_t height, size_t width)
     : size(static_cast<int>(size)),
@@ -28,4 +28,4 @@ MatrixBuffer::MatrixBuffer(size_t size, size_t height, size_t width)
 
 MatrixBuffer::~MatrixBuffer() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

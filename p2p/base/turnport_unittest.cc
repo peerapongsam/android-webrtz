@@ -757,7 +757,7 @@ class TurnPortTest : public testing::Test,
   std::vector<rtc::Buffer> turn_packets_;
   std::vector<rtc::Buffer> udp_packets_;
   rtc::PacketOptions options;
-  std::unique_ptr<webrtc::TurnCustomizer> turn_customizer_;
+  std::unique_ptr<webrtz::TurnCustomizer> turn_customizer_;
 };
 
 TEST_F(TurnPortTest, TestTurnPortType) {

@@ -16,7 +16,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "modules/audio_processing/aec3/fft_data.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Stores the values being returned from the echo subtractor.
 struct SubtractorOutput {
@@ -38,6 +38,6 @@ struct SubtractorOutput {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_SUBTRACTOR_OUTPUT_H_

@@ -17,9 +17,9 @@
 
 @interface RTCWrappedNativeVideoEncoder : NSObject <RTCVideoEncoder>
 
-- (instancetype)initWithNativeEncoder:(std::unique_ptr<webrtc::VideoEncoder>)encoder;
+- (instancetype)initWithNativeEncoder:(std::unique_ptr<webrtz::VideoEncoder>)encoder;
 
 /* This moves the ownership of the wrapped encoder to the caller. */
-- (std::unique_ptr<webrtc::VideoEncoder>)releaseWrappedEncoder;
+- (std::unique_ptr<webrtz::VideoEncoder>)releaseWrappedEncoder;
 
 @end

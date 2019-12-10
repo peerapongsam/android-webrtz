@@ -138,8 +138,8 @@ void Codec::IntersectFeedbackParams(const Codec& other) {
   feedback_params.Intersect(other.feedback_params);
 }
 
-webrtc::RtpCodecParameters Codec::ToCodecParameters() const {
-  webrtc::RtpCodecParameters codec_params;
+webrtz::RtpCodecParameters Codec::ToCodecParameters() const {
+  webrtz::RtpCodecParameters codec_params;
   codec_params.payload_type = id;
   codec_params.name = name;
   codec_params.clock_rate = clockrate;
@@ -189,8 +189,8 @@ std::string AudioCodec::ToString() const {
   return os.str();
 }
 
-webrtc::RtpCodecParameters AudioCodec::ToCodecParameters() const {
-  webrtc::RtpCodecParameters codec_params = Codec::ToCodecParameters();
+webrtz::RtpCodecParameters AudioCodec::ToCodecParameters() const {
+  webrtz::RtpCodecParameters codec_params = Codec::ToCodecParameters();
   codec_params.num_channels = static_cast<int>(channels);
   codec_params.kind = MEDIA_TYPE_AUDIO;
   return codec_params;
@@ -202,8 +202,8 @@ std::string VideoCodec::ToString() const {
   return os.str();
 }
 
-webrtc::RtpCodecParameters VideoCodec::ToCodecParameters() const {
-  webrtc::RtpCodecParameters codec_params = Codec::ToCodecParameters();
+webrtz::RtpCodecParameters VideoCodec::ToCodecParameters() const {
+  webrtz::RtpCodecParameters codec_params = Codec::ToCodecParameters();
   codec_params.kind = MEDIA_TYPE_VIDEO;
   return codec_params;
 }
@@ -221,7 +221,7 @@ VideoCodec::VideoCodec() : Codec() {
   clockrate = kVideoCodecClockrate;
 }
 
-VideoCodec::VideoCodec(const webrtc::SdpVideoFormat& c)
+VideoCodec::VideoCodec(const webrtz::SdpVideoFormat& c)
     : Codec(0 /* id */, c.name, kVideoCodecClockrate) {
   params = c.parameters;
 }
@@ -266,7 +266,7 @@ bool VideoCodec::Matches(const VideoCodec& other) const {
   if (!Codec::Matches(other))
     return false;
   if (CodecNamesEq(name.c_str(), kH264CodecName))
-    return webrtc::H264::IsSameH264Profile(params, other.params) &&
+    return webrtz::H264::IsSameH264Profile(params, other.params) &&
            IsSameH264PacketizationMode(params, other.params);
   return true;
 }
@@ -385,7 +385,7 @@ bool IsSameCodec(const std::string& name1,
     return false;
   // For every format besides H264, comparing names is enough.
   return !CodecNamesEq(name1.c_str(), kH264CodecName) ||
-         webrtc::H264::IsSameH264Profile(params1, params2);
+         webrtz::H264::IsSameH264Profile(params1, params2);
 }
 
 }  // namespace cricket

@@ -14,7 +14,7 @@
 #include "rtc_base/synchronization/rw_lock_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class TimestampExtrapolator {
  public:
@@ -49,6 +49,6 @@ class TimestampExtrapolator {
   const double _pP11;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_TIME_TIMESTAMP_EXTRAPOLATOR_H_

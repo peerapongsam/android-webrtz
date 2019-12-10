@@ -15,7 +15,7 @@
 
 #include "api/audio_codecs/audio_decoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 void Pcm16BAppendSupportedCodecSpecs(std::vector<AudioCodecSpec>* specs);
 }
 

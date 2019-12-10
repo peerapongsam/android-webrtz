@@ -58,7 +58,7 @@ const int kMaxScreenshareSimulcastLayers = 2;
 // goes from lowest resolution at position 0 to highest resolution.
 // For example, first three elements correspond to say: QVGA, VGA, WHD.
 static const int
-    kDefaultConferenceNumberOfTemporalLayers[webrtc::kMaxSimulcastStreams] =
+    kDefaultConferenceNumberOfTemporalLayers[webrtz::kMaxSimulcastStreams] =
     {3, 3, 3, 3};
 
 int FindSimulcastFormatIndex(int width, int height) {
@@ -125,7 +125,7 @@ void SlotSimulcastMaxResolution(size_t max_layers, int* width, int* height) {
 }
 
 void BoostMaxSimulcastLayer(int max_bitrate_bps,
-                            std::vector<webrtc::VideoStream>* layers) {
+                            std::vector<webrtz::VideoStream>* layers) {
   // Spend additional bits to boost the max layer.
   int bitrate_left_bps = max_bitrate_bps - GetTotalMaxBitrateBps(*layers);
   if (bitrate_left_bps > 0) {
@@ -133,7 +133,7 @@ void BoostMaxSimulcastLayer(int max_bitrate_bps,
   }
 }
 
-int GetTotalMaxBitrateBps(const std::vector<webrtc::VideoStream>& layers) {
+int GetTotalMaxBitrateBps(const std::vector<webrtz::VideoStream>& layers) {
   int total_max_bitrate_bps = 0;
   for (size_t s = 0; s < layers.size() - 1; ++s) {
     total_max_bitrate_bps += layers[s].target_bitrate_bps;
@@ -142,7 +142,7 @@ int GetTotalMaxBitrateBps(const std::vector<webrtc::VideoStream>& layers) {
   return total_max_bitrate_bps;
 }
 
-std::vector<webrtc::VideoStream> GetSimulcastConfig(size_t max_layers,
+std::vector<webrtz::VideoStream> GetSimulcastConfig(size_t max_layers,
                                                     int width,
                                                     int height,
                                                     int max_bitrate_bps,
@@ -160,7 +160,7 @@ std::vector<webrtc::VideoStream> GetSimulcastConfig(size_t max_layers,
   }
 }
 
-std::vector<webrtc::VideoStream> GetNormalSimulcastLayers(
+std::vector<webrtz::VideoStream> GetNormalSimulcastLayers(
     size_t max_layers,
     int width,
     int height,
@@ -183,7 +183,7 @@ std::vector<webrtc::VideoStream> GetNormalSimulcastLayers(
     SlotSimulcastMaxResolution(max_layers, &width, &height);
     num_simulcast_layers = max_layers;
   }
-  std::vector<webrtc::VideoStream> layers(num_simulcast_layers);
+  std::vector<webrtz::VideoStream> layers(num_simulcast_layers);
 
   // Format width and height has to be divisible by |2 ^ num_simulcast_layers -
   // 1|.
@@ -220,7 +220,7 @@ std::vector<webrtc::VideoStream> GetNormalSimulcastLayers(
   return layers;
 }
 
-std::vector<webrtc::VideoStream> GetScreenshareLayers(
+std::vector<webrtz::VideoStream> GetScreenshareLayers(
     size_t max_layers,
     int width,
     int height,
@@ -234,11 +234,11 @@ std::vector<webrtc::VideoStream> GetScreenshareLayers(
   size_t num_simulcast_layers =
       std::min<int>(max_layers, max_screenshare_layers);
 
-  std::vector<webrtc::VideoStream> layers(num_simulcast_layers);
+  std::vector<webrtz::VideoStream> layers(num_simulcast_layers);
   ScreenshareLayerConfig config = ScreenshareLayerConfig::GetDefault();
   // For legacy screenshare in conference mode, tl0 and tl1 bitrates are
   // piggybacked on the VideoCodec struct as target and max bitrates,
-  // respectively. See eg. webrtc::LibvpxVp8Encoder::SetRates().
+  // respectively. See eg. webrtz::LibvpxVp8Encoder::SetRates().
   layers[0].width = width;
   layers[0].height = height;
   layers[0].max_qp = max_qp;
@@ -295,7 +295,7 @@ ScreenshareLayerConfig::ScreenshareLayerConfig(int tl0_bitrate, int tl1_bitrate)
 
 ScreenshareLayerConfig ScreenshareLayerConfig::GetDefault() {
   std::string group =
-      webrtc::field_trial::FindFullName(kScreenshareLayerFieldTrialName);
+      webrtz::field_trial::FindFullName(kScreenshareLayerFieldTrialName);
 
   ScreenshareLayerConfig config(kScreenshareDefaultTl0BitrateKbps,
                                 kScreenshareDefaultTl1BitrateKbps);
@@ -332,7 +332,7 @@ bool ScreenshareLayerConfig::FromFieldTrialGroup(
 }
 
 bool ScreenshareSimulcastFieldTrialEnabled() {
-  return webrtc::field_trial::IsEnabled(kSimulcastScreenshareFieldTrialName);
+  return webrtz::field_trial::IsEnabled(kSimulcastScreenshareFieldTrialName);
 }
 
 }  // namespace cricket

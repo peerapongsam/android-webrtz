@@ -20,7 +20,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const int kHeaderSize = 32;
@@ -32,7 +32,7 @@ class IvfFileWriterTest : public ::testing::Test {
  protected:
   void SetUp() override {
     file_name_ =
-        webrtc::test::TempFilename(webrtc::test::OutputPath(), "test_file");
+        webrtz::test::TempFilename(webrtz::test::OutputPath(), "test_file");
   }
   void TearDown() override { rtc::RemoveFile(file_name_); }
 
@@ -180,4 +180,4 @@ TEST_F(IvfFileWriterTest, ClosesWhenReachesLimit) {
   out_file.Close();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

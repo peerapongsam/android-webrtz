@@ -17,7 +17,7 @@
 
 #include "modules/video_coding/include/video_codec_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VP8Encoder : public VideoEncoder {
  public:
@@ -32,6 +32,6 @@ class VP8Decoder : public VideoDecoder {
 
   ~VP8Decoder() override {}
 };  // end of VP8Decoder class
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_INCLUDE_VP8_H_

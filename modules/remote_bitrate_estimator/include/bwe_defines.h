@@ -17,7 +17,7 @@
 #define BWE_MAX(a, b) ((a) > (b) ? (a) : (b))
 #define BWE_MIN(a, b) ((a) < (b) ? (a) : (b))
 
-namespace webrtc {
+namespace webrtz {
 
 namespace congestion_controller {
 int GetMinBitrateBps();
@@ -56,6 +56,6 @@ struct RateControlInput {
   rtc::Optional<uint32_t> incoming_bitrate;
   double noise_var;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_INCLUDE_BWE_DEFINES_H_

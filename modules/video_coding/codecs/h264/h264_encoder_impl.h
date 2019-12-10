@@ -23,7 +23,7 @@
 
 class ISVCEncoder;
 
-namespace webrtc {
+namespace webrtz {
 
 class H264EncoderImpl : public H264Encoder {
  public:
@@ -69,7 +69,7 @@ class H264EncoderImpl : public H264Encoder {
   bool IsInitialized() const;
   SEncParamExt CreateEncoderParams() const;
 
-  webrtc::H264BitstreamParser h264_bitstream_parser_;
+  webrtz::H264BitstreamParser h264_bitstream_parser_;
   // Reports statistics with histograms.
   void ReportInit();
   void ReportError();
@@ -98,6 +98,6 @@ class H264EncoderImpl : public H264Encoder {
   bool has_reported_error_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_H264_H264_ENCODER_IMPL_H_

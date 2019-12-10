@@ -18,7 +18,7 @@
 #include "modules/audio_coding/neteq/tools/packet_source.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // This class implements a packet source that delivers PCM16b encoded packets
@@ -51,5 +51,5 @@ class ConstantPcmPacketSource : public PacketSource {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_CONSTANT_PCM_PACKET_SOURCE_H_

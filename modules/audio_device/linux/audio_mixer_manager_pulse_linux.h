@@ -23,7 +23,7 @@
 #define UINT32_MAX  ((uint32_t)-1)
 #endif
 
-namespace webrtc
+namespace webrtz
 {
 
 class AudioMixerManagerLinuxPulse

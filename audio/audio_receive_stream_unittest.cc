@@ -26,7 +26,7 @@
 #include "test/gtest.h"
 #include "test/mock_audio_decoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -188,7 +188,7 @@ const std::vector<uint8_t> CreateRtpHeaderWithOneByteExtension(
     uint32_t extension_value,
     size_t value_length) {
   std::vector<uint8_t> header;
-  header.resize(webrtc::kRtpHeaderSize + kOneByteExtensionHeaderLength +
+  header.resize(webrtz::kRtpHeaderSize + kOneByteExtensionHeaderLength +
                 kOneByteExtensionLength);
   header[0] = 0x80;   // Version 2.
   header[0] |= 0x10;  // Set extension bit.
@@ -198,7 +198,7 @@ const std::vector<uint8_t> CreateRtpHeaderWithOneByteExtension(
   ByteWriter<uint32_t>::WriteBigEndian(&header[4], 0x5678);  // Timestamp.
   ByteWriter<uint32_t>::WriteBigEndian(&header[8], 0x4321);  // SSRC.
 
-  BuildOneByteExtension(header.begin() + webrtc::kRtpHeaderSize, extension_id,
+  BuildOneByteExtension(header.begin() + webrtz::kRtpHeaderSize, extension_id,
                         extension_value, value_length);
   return header;
 }
@@ -384,4 +384,4 @@ TEST(AudioReceiveStreamTest, ReconfigureWithUpdatedConfig) {
   recv_stream->Reconfigure(new_config);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

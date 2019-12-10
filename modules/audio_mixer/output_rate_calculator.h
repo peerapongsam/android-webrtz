@@ -13,7 +13,7 @@
 
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 // Decides the sample rate of a mixing iteration given the preferred
 // sample rates of the sources.
@@ -24,6 +24,6 @@ class OutputRateCalculator {
   virtual ~OutputRateCalculator() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_MIXER_OUTPUT_RATE_CALCULATOR_H_

@@ -16,7 +16,7 @@
 #include "api/optional.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RateStatistics {
  public:
@@ -79,6 +79,6 @@ class RateStatistics {
   const int64_t max_window_size_ms_;
   int64_t current_window_size_ms_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_RATE_STATISTICS_H_

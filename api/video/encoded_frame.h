@@ -13,7 +13,7 @@
 
 #include "modules/video_coding/encoded_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 // NOTE: This class is still under development and may change without notice.
@@ -46,10 +46,10 @@ struct VideoLayerFrameId {
   uint8_t spatial_layer;
 };
 
-// TODO(philipel): Remove webrtc::VCMEncodedFrame inheritance.
+// TODO(philipel): Remove webrtz::VCMEncodedFrame inheritance.
 // TODO(philipel): Move transport specific info out of EncodedFrame.
 // NOTE: This class is still under development and may change without notice.
-class EncodedFrame : public webrtc::VCMEncodedFrame {
+class EncodedFrame : public webrtz::VCMEncodedFrame {
  public:
   static const uint8_t kMaxFrameReferences = 5;
 
@@ -87,6 +87,6 @@ class EncodedFrame : public webrtc::VCMEncodedFrame {
 };
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_ENCODED_FRAME_H_

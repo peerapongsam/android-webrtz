@@ -34,18 +34,18 @@
 
 using rtc::MakeUnique;
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 namespace {
 
 const char kPacerPushbackExperiment[] = "WebRTC-PacerPushbackExperiment";
 const int64_t PacerQueueUpdateIntervalMs = 25;
 
 bool IsPacerPushbackExperimentEnabled() {
-  return webrtc::field_trial::IsEnabled(kPacerPushbackExperiment) ||
-         (!webrtc::field_trial::IsDisabled(kPacerPushbackExperiment) &&
-          webrtc::runtime_enabled_features::IsFeatureEnabled(
-              webrtc::runtime_enabled_features::kDualStreamModeFeatureName));
+  return webrtz::field_trial::IsEnabled(kPacerPushbackExperiment) ||
+         (!webrtz::field_trial::IsDisabled(kPacerPushbackExperiment) &&
+          webrtz::runtime_enabled_features::IsFeatureEnabled(
+              webrtz::runtime_enabled_features::kDualStreamModeFeatureName));
 }
 
 NetworkControllerFactoryInterface::uptr ControllerFactory(
@@ -53,18 +53,18 @@ NetworkControllerFactoryInterface::uptr ControllerFactory(
   return rtc::MakeUnique<GoogCcNetworkControllerFactory>(event_log);
 }
 
-void SortPacketFeedbackVector(std::vector<webrtc::PacketFeedback>* input) {
+void SortPacketFeedbackVector(std::vector<webrtz::PacketFeedback>* input) {
   std::sort(input->begin(), input->end(), PacketFeedbackComparator());
 }
 
 PacketResult NetworkPacketFeedbackFromRtpPacketFeedback(
-    const webrtc::PacketFeedback& pf) {
+    const webrtz::PacketFeedback& pf) {
   PacketResult feedback;
-  if (pf.arrival_time_ms == webrtc::PacketFeedback::kNotReceived)
+  if (pf.arrival_time_ms == webrtz::PacketFeedback::kNotReceived)
     feedback.receive_time = Timestamp::Infinity();
   else
     feedback.receive_time = Timestamp::ms(pf.arrival_time_ms);
-  if (pf.send_time_ms != webrtc::PacketFeedback::kNoSendTime) {
+  if (pf.send_time_ms != webrtz::PacketFeedback::kNoSendTime) {
     feedback.sent_packet = SentPacket();
     feedback.sent_packet->send_time = Timestamp::ms(pf.send_time_ms);
     feedback.sent_packet->size = DataSize::bytes(pf.payload_size);
@@ -311,7 +311,7 @@ SendSideCongestionController::SendSideCongestionController(
       process_interval_(controller_factory_->GetProcessInterval()),
       observer_(nullptr),
       send_side_bwe_with_overhead_(
-          webrtc::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
+          webrtz::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
       transport_overhead_bytes_per_packet_(0),
       network_available_(false),
       periodic_tasks_enabled_(true),
@@ -680,7 +680,7 @@ void SendSideCongestionController::OnReceivedEstimatedBitrate(
 }
 
 void SendSideCongestionController::OnReceivedRtcpReceiverReport(
-    const webrtc::ReportBlockList& report_blocks,
+    const webrtz::ReportBlockList& report_blocks,
     int64_t rtt_ms,
     int64_t now_ms) {
   task_queue_->PostTask([this, report_blocks, now_ms]() {
@@ -742,5 +742,5 @@ void SendSideCongestionController::OnReceivedRtcpReceiverReportBlocks(
     controller_->OnTransportLossReport(msg);
   last_report_block_time_ = now;
 }
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

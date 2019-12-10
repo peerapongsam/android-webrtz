@@ -20,7 +20,7 @@ namespace rtc {
 // Fake clock for use with unit tests, which does not tick on its own.
 // Starts at time 0.
 //
-// TODO(deadbeef): Unify with webrtc::SimulatedClock.
+// TODO(deadbeef): Unify with webrtz::SimulatedClock.
 class FakeClock : public ClockInterface {
  public:
   ~FakeClock() override {}

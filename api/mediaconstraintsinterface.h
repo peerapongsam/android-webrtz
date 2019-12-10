@@ -26,7 +26,7 @@
 #include "api/optional.h"
 #include "api/peerconnectioninterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Interface used for passing arguments about media constraints
 // to the MediaStream and PeerConnection implementation.
@@ -144,6 +144,6 @@ void CopyConstraintsIntoAudioOptions(
     const MediaConstraintsInterface* constraints,
     cricket::AudioOptions* options);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_MEDIACONSTRAINTSINTERFACE_H_

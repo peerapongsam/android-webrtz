@@ -23,7 +23,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/sigslot.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DataChannel;
 
@@ -293,6 +293,6 @@ BEGIN_SIGNALING_PROXY_MAP(DataChannel)
   PROXY_METHOD1(bool, Send, const DataBuffer&)
 END_PROXY_MAP()
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_DATACHANNEL_H_

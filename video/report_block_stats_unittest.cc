@@ -11,7 +11,7 @@
 #include "test/gtest.h"
 #include "video/report_block_stats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ReportBlockStatsTest : public ::testing::Test {
  protected:
@@ -142,5 +142,5 @@ TEST_F(ReportBlockStatsTest, StoreAndGetFractionLost) {
   EXPECT_EQ(20, stats.FractionLostInPercent());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

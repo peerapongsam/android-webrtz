@@ -30,7 +30,7 @@
 @end
 
 @implementation NADViewController {
-  std::unique_ptr<webrtc_examples::ObjCCallClient> _call_client;
+  std::unique_ptr<webrtz_examples::ObjCCallClient> _call_client;
 
   UIView *_view;
 }
@@ -106,7 +106,7 @@
   self.capturer = [[RTCCameraVideoCapturer alloc] init];
   self.localVideoView.captureSession = self.capturer.captureSession;
 
-  _call_client.reset(new webrtc_examples::ObjCCallClient());
+  _call_client.reset(new webrtz_examples::ObjCCallClient());
 
   // Start capturer.
   AVCaptureDevice *selectedDevice = nil;

@@ -21,7 +21,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 bool EnableTransparentMode() {
@@ -479,4 +479,4 @@ bool AecState::DetectEchoSaturation(rtc::ArrayView<const float> x,
   return blocks_since_last_saturation_ < 5;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

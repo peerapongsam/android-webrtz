@@ -37,7 +37,7 @@
     }                                                     \
   } while (0)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -443,4 +443,4 @@ SLuint32 OpenSLESPlayer::GetPlayState() const {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,20 +18,20 @@ namespace cricket {
 
 namespace {
 
-class ScopedVideoDecoder : public webrtc::VideoDecoder {
+class ScopedVideoDecoder : public webrtz::VideoDecoder {
  public:
   ScopedVideoDecoder(WebRtcVideoDecoderFactory* factory,
-                     webrtc::VideoDecoder* decoder);
+                     webrtz::VideoDecoder* decoder);
 
-  int32_t InitDecode(const webrtc::VideoCodec* codec_settings,
+  int32_t InitDecode(const webrtz::VideoCodec* codec_settings,
                      int32_t number_of_cores) override;
   int32_t RegisterDecodeCompleteCallback(
-      webrtc::DecodedImageCallback* callback) override;
+      webrtz::DecodedImageCallback* callback) override;
   int32_t Release() override;
-  int32_t Decode(const webrtc::EncodedImage& input_image,
+  int32_t Decode(const webrtz::EncodedImage& input_image,
                  bool missing_frames,
-                 const webrtc::RTPFragmentationHeader* fragmentation,
-                 const webrtc::CodecSpecificInfo* codec_specific_info,
+                 const webrtz::RTPFragmentationHeader* fragmentation,
+                 const webrtz::CodecSpecificInfo* codec_specific_info,
                  int64_t render_time_ms) override;
   bool PrefersLateDecoding() const override;
   const char* ImplementationName() const override;
@@ -40,20 +40,20 @@ class ScopedVideoDecoder : public webrtc::VideoDecoder {
 
  private:
   WebRtcVideoDecoderFactory* factory_;
-  webrtc::VideoDecoder* decoder_;
+  webrtz::VideoDecoder* decoder_;
 };
 
 ScopedVideoDecoder::ScopedVideoDecoder(WebRtcVideoDecoderFactory* factory,
-                                       webrtc::VideoDecoder* decoder)
+                                       webrtz::VideoDecoder* decoder)
     : factory_(factory), decoder_(decoder) {}
 
-int32_t ScopedVideoDecoder::InitDecode(const webrtc::VideoCodec* codec_settings,
+int32_t ScopedVideoDecoder::InitDecode(const webrtz::VideoCodec* codec_settings,
                                        int32_t number_of_cores) {
   return decoder_->InitDecode(codec_settings, number_of_cores);
 }
 
 int32_t ScopedVideoDecoder::RegisterDecodeCompleteCallback(
-    webrtc::DecodedImageCallback* callback) {
+    webrtz::DecodedImageCallback* callback) {
   return decoder_->RegisterDecodeCompleteCallback(callback);
 }
 
@@ -62,10 +62,10 @@ int32_t ScopedVideoDecoder::Release() {
 }
 
 int32_t ScopedVideoDecoder::Decode(
-    const webrtc::EncodedImage& input_image,
+    const webrtz::EncodedImage& input_image,
     bool missing_frames,
-    const webrtc::RTPFragmentationHeader* fragmentation,
-    const webrtc::CodecSpecificInfo* codec_specific_info,
+    const webrtz::RTPFragmentationHeader* fragmentation,
+    const webrtz::CodecSpecificInfo* codec_specific_info,
     int64_t render_time_ms) {
   return decoder_->Decode(input_image, missing_frames, fragmentation,
                           codec_specific_info, render_time_ms);
@@ -85,15 +85,15 @@ ScopedVideoDecoder::~ScopedVideoDecoder() {
 
 }  // namespace
 
-std::unique_ptr<webrtc::VideoDecoder> CreateScopedVideoDecoder(
+std::unique_ptr<webrtz::VideoDecoder> CreateScopedVideoDecoder(
     WebRtcVideoDecoderFactory* factory,
     const VideoCodec& codec,
     VideoDecoderParams params) {
-  webrtc::VideoDecoder* decoder =
+  webrtz::VideoDecoder* decoder =
       factory->CreateVideoDecoderWithParams(codec, params);
   if (!decoder)
     return nullptr;
-  return std::unique_ptr<webrtc::VideoDecoder>(
+  return std::unique_ptr<webrtz::VideoDecoder>(
       new ScopedVideoDecoder(factory, decoder));
 }
 

@@ -20,7 +20,7 @@ DEFINE_GUID(MEDIASUBTYPE_HDYC, 0x43594448, 0x0000, 0x0010, 0x80, 0x00, 0x00,
 
 #define RELEASE_AND_CLEAR(p) if (p) { (p) -> Release () ; (p) = NULL ; }
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -31,5 +31,5 @@ IPin* GetOutputPin(IBaseFilter* filter, REFGUID Category);
 BOOL PinMatchesCategory(IPin *pPin, REFGUID Category);
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 #endif // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_WINDOWS_HELP_FUNCTIONS_DS_H_

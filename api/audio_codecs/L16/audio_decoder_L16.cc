@@ -16,7 +16,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioDecoderL16::Config> AudioDecoderL16::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -41,4 +41,4 @@ std::unique_ptr<AudioDecoder> AudioDecoderL16::MakeAudioDecoder(
                        : nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

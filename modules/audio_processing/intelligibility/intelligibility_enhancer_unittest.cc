@@ -25,7 +25,7 @@
 #include "rtc_base/arraysize.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -533,4 +533,4 @@ TEST(IntelligibilityEnhancerBitExactnessTest, DISABLED_Stereo48kHz) {
   RunBitexactnessTest(AudioProcessing::kSampleRate48kHz, 2, kOutputReference);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

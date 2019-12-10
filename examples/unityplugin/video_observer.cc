@@ -15,16 +15,16 @@ void VideoObserver::SetVideoCallback(I420FRAMEREADY_CALLBACK callback) {
   OnI420FrameReady = callback;
 }
 
-void VideoObserver::OnFrame(const webrtc::VideoFrame& frame) {
+void VideoObserver::OnFrame(const webrtz::VideoFrame& frame) {
   std::unique_lock<std::mutex> lock(mutex);
   if (!OnI420FrameReady)
     return;
 
-  rtc::scoped_refptr<webrtc::VideoFrameBuffer> buffer(
+  rtc::scoped_refptr<webrtz::VideoFrameBuffer> buffer(
       frame.video_frame_buffer());
 
-  if (buffer->type() != webrtc::VideoFrameBuffer::Type::kI420A) {
-    rtc::scoped_refptr<webrtc::I420BufferInterface> i420_buffer =
+  if (buffer->type() != webrtz::VideoFrameBuffer::Type::kI420A) {
+    rtc::scoped_refptr<webrtz::I420BufferInterface> i420_buffer =
         buffer->ToI420();
     OnI420FrameReady(i420_buffer->DataY(), i420_buffer->DataU(),
                      i420_buffer->DataV(), nullptr, i420_buffer->StrideY(),
@@ -33,7 +33,7 @@ void VideoObserver::OnFrame(const webrtc::VideoFrame& frame) {
 
   } else {
     // The buffer has alpha channel.
-    webrtc::I420ABufferInterface* i420a_buffer = buffer->GetI420A();
+    webrtz::I420ABufferInterface* i420a_buffer = buffer->GetI420A();
 
     OnI420FrameReady(i420a_buffer->DataY(), i420a_buffer->DataU(),
                      i420a_buffer->DataV(), i420a_buffer->DataA(),

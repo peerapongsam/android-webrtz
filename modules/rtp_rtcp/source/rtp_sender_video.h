@@ -30,7 +30,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 class RtpPacketizer;
 class RtpPacketToSend;
 
@@ -162,6 +162,6 @@ class RTPSenderVideo {
   OneTimeEvent first_frame_sent_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_SENDER_VIDEO_H_

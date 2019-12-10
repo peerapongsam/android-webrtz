@@ -29,7 +29,7 @@ using ::testing::NiceMock;
 using ::testing::Return;
 using ::testing::SaveArg;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345;
 const uint32_t kReceiverSsrc = 0x23456;
@@ -704,4 +704,4 @@ TEST_F(RtpRtcpImplTest, ConfigurableRtcpReportInterval) {
   EXPECT_EQ(sender_.transport_.NumRtcpSent(), 2u);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

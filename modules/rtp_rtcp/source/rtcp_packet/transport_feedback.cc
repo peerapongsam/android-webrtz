@@ -20,7 +20,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 namespace {
 // Header size:
@@ -610,4 +610,4 @@ bool TransportFeedback::AddDeltaSize(DeltaSize delta_size) {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

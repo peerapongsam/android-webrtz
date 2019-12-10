@@ -17,7 +17,7 @@
 #include "rtc_base/location.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockProcessThread : public ProcessThread {
  public:
@@ -40,5 +40,5 @@ class MockProcessThread : public ProcessThread {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_UTILITY_INCLUDE_MOCK_MOCK_PROCESS_THREAD_H_

@@ -30,7 +30,7 @@ namespace rtc {
 class PlatformThread;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 class EventWrapper;
 
 const uint32_t N_REC_SAMPLES_PER_SEC = 48000;
@@ -332,6 +332,6 @@ class AudioDeviceMac : public AudioDeviceGeneric {
   bool prev_key_state_[0x5d];
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_MAIN_SOURCE_MAC_AUDIO_DEVICE_MAC_H_

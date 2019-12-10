@@ -13,7 +13,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct AudioEncoderRuntimeConfig {
   AudioEncoderRuntimeConfig();
@@ -44,6 +44,6 @@ struct AudioEncoderRuntimeConfig {
   bool last_fl_change_increase = false;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_INCLUDE_AUDIO_NETWORK_ADAPTOR_CONFIG_H_

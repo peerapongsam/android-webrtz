@@ -20,17 +20,17 @@
 #endif
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::vector<SdpVideoFormat> InternalEncoderFactory::GetSupportedFormats()
     const {
   std::vector<SdpVideoFormat> supported_codecs;
 #if defined(USE_BUILTIN_SW_CODECS)
   supported_codecs.push_back(SdpVideoFormat(cricket::kVp8CodecName));
-  if (webrtc::VP9Encoder::IsSupported())
+  if (webrtz::VP9Encoder::IsSupported())
     supported_codecs.push_back(SdpVideoFormat(cricket::kVp9CodecName));
 
-  for (const webrtc::SdpVideoFormat& format : webrtc::SupportedH264Codecs())
+  for (const webrtz::SdpVideoFormat& format : webrtz::SupportedH264Codecs())
     supported_codecs.push_back(format);
 #endif
 
@@ -63,4 +63,4 @@ std::unique_ptr<VideoEncoder> InternalEncoderFactory::CreateVideoEncoder(
   return nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

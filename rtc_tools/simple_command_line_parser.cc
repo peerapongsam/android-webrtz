@@ -15,7 +15,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 CommandLineParser::CommandLineParser() {}
@@ -128,4 +128,4 @@ std::string CommandLineParser::GetFlag(std::string flag_name) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -348,7 +348,7 @@ TEST(CodecTest, TestValidateCodecFormat) {
 
 TEST(CodecTest, TestToCodecParameters) {
   const VideoCodec v(96, "V");
-  webrtc::RtpCodecParameters codec_params_1 = v.ToCodecParameters();
+  webrtz::RtpCodecParameters codec_params_1 = v.ToCodecParameters();
   EXPECT_EQ(96, codec_params_1.payload_type);
   EXPECT_EQ(cricket::MEDIA_TYPE_VIDEO, codec_params_1.kind);
   EXPECT_EQ("V", codec_params_1.name);
@@ -356,7 +356,7 @@ TEST(CodecTest, TestToCodecParameters) {
   EXPECT_EQ(rtc::nullopt, codec_params_1.num_channels);
 
   const AudioCodec a(97, "A", 44100, 20000, 2);
-  webrtc::RtpCodecParameters codec_params_2 = a.ToCodecParameters();
+  webrtz::RtpCodecParameters codec_params_2 = a.ToCodecParameters();
   EXPECT_EQ(97, codec_params_2.payload_type);
   EXPECT_EQ(cricket::MEDIA_TYPE_AUDIO, codec_params_2.kind);
   EXPECT_EQ("A", codec_params_2.name);

@@ -16,7 +16,7 @@
 
 #include "modules/video_capture/video_capture.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoCaptureFactory {
  public:
@@ -39,6 +39,6 @@ class VideoCaptureFactory {
   ~VideoCaptureFactory();
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CAPTURE_VIDEO_CAPTURE_FACTORY_H_

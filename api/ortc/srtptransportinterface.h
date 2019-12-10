@@ -15,7 +15,7 @@
 #include "api/rtcerror.h"
 #include "api/cryptoparams.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The subclass of the RtpTransport which uses SRTP. The keying information
 // is explicitly passed in from the application.
@@ -43,6 +43,6 @@ class SrtpTransportInterface : public RtpTransportInterface {
   virtual RTCError SetSrtpReceiveKey(const cricket::CryptoParams& params) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_SRTPTRANSPORTINTERFACE_H_

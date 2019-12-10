@@ -43,7 +43,7 @@ namespace {
 static int g_peer_count = 0;
 static std::unique_ptr<rtc::Thread> g_worker_thread;
 static std::unique_ptr<rtc::Thread> g_signaling_thread;
-static rtc::scoped_refptr<webrtc::PeerConnectionFactoryInterface>
+static rtc::scoped_refptr<webrtz::PeerConnectionFactoryInterface>
     g_peer_connection_factory;
 #if defined(WEBRTC_ANDROID)
 // Android case: the video track does not own the capturer, and it
@@ -70,7 +70,7 @@ std::string GetPeerConnectionString() {
 }
 
 class DummySetSessionDescriptionObserver
-    : public webrtc::SetSessionDescriptionObserver {
+    : public webrtz::SetSessionDescriptionObserver {
  public:
   static DummySetSessionDescriptionObserver* Create() {
     return new rtc::RefCountedObject<DummySetSessionDescriptionObserver>();
@@ -100,16 +100,16 @@ bool SimplePeerConnection::InitializePeerConnection(const char** turn_urls,
     g_signaling_thread.reset(new rtc::Thread());
     g_signaling_thread->Start();
 
-    g_peer_connection_factory = webrtc::CreatePeerConnectionFactory(
+    g_peer_connection_factory = webrtz::CreatePeerConnectionFactory(
         g_worker_thread.get(), g_worker_thread.get(), g_signaling_thread.get(),
-        nullptr, webrtc::CreateBuiltinAudioEncoderFactory(),
-        webrtc::CreateBuiltinAudioDecoderFactory(),
-        std::unique_ptr<webrtc::VideoEncoderFactory>(
-            new webrtc::MultiplexEncoderFactory(
-                rtc::MakeUnique<webrtc::InternalEncoderFactory>())),
-        std::unique_ptr<webrtc::VideoDecoderFactory>(
-            new webrtc::MultiplexDecoderFactory(
-                rtc::MakeUnique<webrtc::InternalDecoderFactory>())),
+        nullptr, webrtz::CreateBuiltinAudioEncoderFactory(),
+        webrtz::CreateBuiltinAudioDecoderFactory(),
+        std::unique_ptr<webrtz::VideoEncoderFactory>(
+            new webrtz::MultiplexEncoderFactory(
+                rtc::MakeUnique<webrtz::InternalEncoderFactory>())),
+        std::unique_ptr<webrtz::VideoDecoderFactory>(
+            new webrtz::MultiplexDecoderFactory(
+                rtc::MakeUnique<webrtz::InternalDecoderFactory>())),
         nullptr, nullptr);
   }
   if (!g_peer_connection_factory.get()) {
@@ -140,7 +140,7 @@ bool SimplePeerConnection::CreatePeerConnection(const char** turn_urls,
   // Add the turn server.
   if (turn_urls != nullptr) {
     if (no_of_urls > 0) {
-      webrtc::PeerConnectionInterface::IceServer turn_server;
+      webrtz::PeerConnectionInterface::IceServer turn_server;
       for (int i = 0; i < no_of_urls; i++) {
         std::string url(turn_urls[i]);
         if (url.length() > 0)
@@ -160,11 +160,11 @@ bool SimplePeerConnection::CreatePeerConnection(const char** turn_urls,
   }
 
   // Add the stun server.
-  webrtc::PeerConnectionInterface::IceServer stun_server;
+  webrtz::PeerConnectionInterface::IceServer stun_server;
   stun_server.uri = GetPeerConnectionString();
   config_.servers.push_back(stun_server);
 
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   constraints.SetAllowDtlsSctpDataChannels();
 
   peer_connection_ = g_peer_connection_factory->CreatePeerConnection(
@@ -178,11 +178,11 @@ void SimplePeerConnection::DeletePeerConnection() {
 
 #if defined(WEBRTC_ANDROID)
   if (g_camera) {
-    JNIEnv* env = webrtc::jni::GetEnv();
+    JNIEnv* env = webrtz::jni::GetEnv();
     jclass pc_factory_class =
-        unity_plugin::FindClass(env, "org/webrtc/UnityUtility");
-    jmethodID stop_camera_method = webrtc::GetStaticMethodID(
-        env, pc_factory_class, "StopCamera", "(Lorg/webrtc/VideoCapturer;)V");
+        unity_plugin::FindClass(env, "org/webrtz/UnityUtility");
+    jmethodID stop_camera_method = webrtz::GetStaticMethodID(
+        env, pc_factory_class, "StopCamera", "(Lorg/webrtz/VideoCapturer;)V");
 
     env->CallStaticVoidMethod(pc_factory_class, stop_camera_method, g_camera);
     CHECK_EXCEPTION(env);
@@ -206,7 +206,7 @@ bool SimplePeerConnection::CreateOffer() {
   if (!peer_connection_.get())
     return false;
 
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   if (mandatory_receive_) {
     constraints.SetMandatoryReceiveAudio(true);
     constraints.SetMandatoryReceiveVideo(true);
@@ -219,7 +219,7 @@ bool SimplePeerConnection::CreateAnswer() {
   if (!peer_connection_.get())
     return false;
 
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   if (mandatory_receive_) {
     constraints.SetMandatoryReceiveAudio(true);
     constraints.SetMandatoryReceiveVideo(true);
@@ -229,7 +229,7 @@ bool SimplePeerConnection::CreateAnswer() {
 }
 
 void SimplePeerConnection::OnSuccess(
-    webrtc::SessionDescriptionInterface* desc) {
+    webrtz::SessionDescriptionInterface* desc) {
   peer_connection_->SetLocalDescription(
       DummySetSessionDescriptionObserver::Create(), desc);
 
@@ -248,7 +248,7 @@ void SimplePeerConnection::OnFailure(const std::string& error) {
 }
 
 void SimplePeerConnection::OnIceCandidate(
-    const webrtc::IceCandidateInterface* candidate) {
+    const webrtz::IceCandidateInterface* candidate) {
   RTC_LOG(INFO) << __FUNCTION__ << " " << candidate->sdp_mline_index();
 
   std::string sdp;
@@ -310,9 +310,9 @@ bool SimplePeerConnection::SetRemoteDescription(const char* type,
 
   std::string remote_desc(sdp);
   std::string sdp_type(type);
-  webrtc::SdpParseError error;
-  webrtc::SessionDescriptionInterface* session_description(
-      webrtc::CreateSessionDescription(sdp_type, remote_desc, &error));
+  webrtz::SdpParseError error;
+  webrtz::SessionDescriptionInterface* session_description(
+      webrtz::CreateSessionDescription(sdp_type, remote_desc, &error));
   if (!session_description) {
     RTC_LOG(WARNING) << "Can't parse received session description message. "
                      << "SdpParseError was: " << error.description;
@@ -331,9 +331,9 @@ bool SimplePeerConnection::AddIceCandidate(const char* candidate,
   if (!peer_connection_)
     return false;
 
-  webrtc::SdpParseError error;
-  std::unique_ptr<webrtc::IceCandidateInterface> ice_candidate(
-      webrtc::CreateIceCandidate(sdp_mid, sdp_mlineindex, candidate, &error));
+  webrtz::SdpParseError error;
+  std::unique_ptr<webrtz::IceCandidateInterface> ice_candidate(
+      webrtz::CreateIceCandidate(sdp_mid, sdp_mlineindex, candidate, &error));
   if (!ice_candidate.get()) {
     RTC_LOG(WARNING) << "Can't parse received candidate message. "
                      << "SdpParseError was: " << error.description;
@@ -357,11 +357,11 @@ void SimplePeerConnection::SetAudioControl(bool is_mute, bool is_record) {
 void SimplePeerConnection::SetAudioControl() {
   if (!remote_stream_)
     return;
-  webrtc::AudioTrackVector tracks = remote_stream_->GetAudioTracks();
+  webrtz::AudioTrackVector tracks = remote_stream_->GetAudioTracks();
   if (tracks.empty())
     return;
 
-  webrtc::AudioTrackInterface* audio_track = tracks[0];
+  webrtz::AudioTrackInterface* audio_track = tracks[0];
   std::string id = audio_track->id();
   if (is_record_audio_)
     audio_track->AddSink(this);
@@ -377,7 +377,7 @@ void SimplePeerConnection::SetAudioControl() {
 }
 
 void SimplePeerConnection::OnAddStream(
-    rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) {
+    rtc::scoped_refptr<webrtz::MediaStreamInterface> stream) {
   RTC_LOG(INFO) << __FUNCTION__ << " " << stream->id();
   remote_stream_ = stream;
   if (remote_video_observer_ && !remote_stream_->GetVideoTracks().empty()) {
@@ -391,8 +391,8 @@ std::unique_ptr<cricket::VideoCapturer>
 SimplePeerConnection::OpenVideoCaptureDevice() {
   std::vector<std::string> device_names;
   {
-    std::unique_ptr<webrtc::VideoCaptureModule::DeviceInfo> info(
-        webrtc::VideoCaptureFactory::CreateDeviceInfo());
+    std::unique_ptr<webrtz::VideoCaptureModule::DeviceInfo> info(
+        webrtz::VideoCaptureFactory::CreateDeviceInfo());
     if (!info) {
       return nullptr;
     }
@@ -422,10 +422,10 @@ void SimplePeerConnection::AddStreams(bool audio_only) {
   if (active_streams_.find(kStreamId) != active_streams_.end())
     return;  // Already added.
 
-  rtc::scoped_refptr<webrtc::MediaStreamInterface> stream =
+  rtc::scoped_refptr<webrtz::MediaStreamInterface> stream =
       g_peer_connection_factory->CreateLocalMediaStream(kStreamId);
 
-  rtc::scoped_refptr<webrtc::AudioTrackInterface> audio_track(
+  rtc::scoped_refptr<webrtz::AudioTrackInterface> audio_track(
       g_peer_connection_factory->CreateAudioTrack(
           kAudioLabel, g_peer_connection_factory->CreateAudioSource(nullptr)));
   std::string id = audio_track->id();
@@ -433,44 +433,44 @@ void SimplePeerConnection::AddStreams(bool audio_only) {
 
   if (!audio_only) {
 #if defined(WEBRTC_ANDROID)
-    JNIEnv* env = webrtc::jni::GetEnv();
+    JNIEnv* env = webrtz::jni::GetEnv();
     jclass pc_factory_class =
-        unity_plugin::FindClass(env, "org/webrtc/UnityUtility");
-    jmethodID load_texture_helper_method = webrtc::GetStaticMethodID(
+        unity_plugin::FindClass(env, "org/webrtz/UnityUtility");
+    jmethodID load_texture_helper_method = webrtz::GetStaticMethodID(
         env, pc_factory_class, "LoadSurfaceTextureHelper",
-        "()Lorg/webrtc/SurfaceTextureHelper;");
+        "()Lorg/webrtz/SurfaceTextureHelper;");
     jobject texture_helper = env->CallStaticObjectMethod(
         pc_factory_class, load_texture_helper_method);
     CHECK_EXCEPTION(env);
     RTC_DCHECK(texture_helper != nullptr)
         << "Cannot get the Surface Texture Helper.";
 
-    rtc::scoped_refptr<webrtc::jni::AndroidVideoTrackSource> source(
-        new rtc::RefCountedObject<webrtc::jni::AndroidVideoTrackSource>(
+    rtc::scoped_refptr<webrtz::jni::AndroidVideoTrackSource> source(
+        new rtc::RefCountedObject<webrtz::jni::AndroidVideoTrackSource>(
             g_signaling_thread.get(), env,
-            webrtc::JavaParamRef<jobject>(texture_helper), false));
-    rtc::scoped_refptr<webrtc::VideoTrackSourceProxy> proxy_source =
-        webrtc::VideoTrackSourceProxy::Create(g_signaling_thread.get(),
+            webrtz::JavaParamRef<jobject>(texture_helper), false));
+    rtc::scoped_refptr<webrtz::VideoTrackSourceProxy> proxy_source =
+        webrtz::VideoTrackSourceProxy::Create(g_signaling_thread.get(),
                                               g_worker_thread.get(), source);
 
     // link with VideoCapturer (Camera);
-    jmethodID link_camera_method = webrtc::GetStaticMethodID(
+    jmethodID link_camera_method = webrtz::GetStaticMethodID(
         env, pc_factory_class, "LinkCamera",
-        "(JLorg/webrtc/SurfaceTextureHelper;)Lorg/webrtc/VideoCapturer;");
+        "(JLorg/webrtz/SurfaceTextureHelper;)Lorg/webrtz/VideoCapturer;");
     jobject camera_tmp =
         env->CallStaticObjectMethod(pc_factory_class, link_camera_method,
                                     (jlong)proxy_source.get(), texture_helper);
     CHECK_EXCEPTION(env);
     g_camera = (jobject)env->NewGlobalRef(camera_tmp);
 
-    rtc::scoped_refptr<webrtc::VideoTrackInterface> video_track(
+    rtc::scoped_refptr<webrtz::VideoTrackInterface> video_track(
         g_peer_connection_factory->CreateVideoTrack(kVideoLabel,
                                                     proxy_source.release()));
     stream->AddTrack(video_track);
 #else
     std::unique_ptr<cricket::VideoCapturer> capture = OpenVideoCaptureDevice();
     if (capture) {
-      rtc::scoped_refptr<webrtc::VideoTrackInterface> video_track(
+      rtc::scoped_refptr<webrtz::VideoTrackInterface> video_track(
           g_peer_connection_factory->CreateVideoTrack(
               kVideoLabel, g_peer_connection_factory->CreateVideoSource(
                                std::move(capture), nullptr)));
@@ -489,13 +489,13 @@ void SimplePeerConnection::AddStreams(bool audio_only) {
   }
 
   typedef std::pair<std::string,
-                    rtc::scoped_refptr<webrtc::MediaStreamInterface>>
+                    rtc::scoped_refptr<webrtz::MediaStreamInterface>>
       MediaStreamPair;
   active_streams_.insert(MediaStreamPair(stream->id(), stream));
 }
 
 bool SimplePeerConnection::CreateDataChannel() {
-  struct webrtc::DataChannelInit init;
+  struct webrtz::DataChannelInit init;
   init.ordered = true;
   init.reliable = true;
   data_channel_ = peer_connection_->CreateDataChannel("Hello", &init);
@@ -522,21 +522,21 @@ bool SimplePeerConnection::SendDataViaDataChannel(const std::string& data) {
     RTC_LOG(LS_INFO) << "Data channel is not established";
     return false;
   }
-  webrtc::DataBuffer buffer(data);
+  webrtz::DataBuffer buffer(data);
   data_channel_->Send(buffer);
   return true;
 }
 
 // Peerconnection observer
 void SimplePeerConnection::OnDataChannel(
-    rtc::scoped_refptr<webrtc::DataChannelInterface> channel) {
+    rtc::scoped_refptr<webrtz::DataChannelInterface> channel) {
   channel->RegisterObserver(this);
 }
 
 void SimplePeerConnection::OnStateChange() {
   if (data_channel_) {
-    webrtc::DataChannelInterface::DataState state = data_channel_->state();
-    if (state == webrtc::DataChannelInterface::kOpen) {
+    webrtz::DataChannelInterface::DataState state = data_channel_->state();
+    if (state == webrtz::DataChannelInterface::kOpen) {
       if (OnLocalDataChannelReady)
         OnLocalDataChannelReady();
       RTC_LOG(LS_INFO) << "Data channel is open";
@@ -545,7 +545,7 @@ void SimplePeerConnection::OnStateChange() {
 }
 
 //  A data buffer was successfully received.
-void SimplePeerConnection::OnMessage(const webrtc::DataBuffer& buffer) {
+void SimplePeerConnection::OnMessage(const webrtz::DataBuffer& buffer) {
   size_t size = buffer.data.size();
   char* msg = new char[size + 1];
   memcpy(msg, buffer.data.data(), size);
@@ -568,7 +568,7 @@ void SimplePeerConnection::OnData(const void* audio_data,
 }
 
 std::vector<uint32_t> SimplePeerConnection::GetRemoteAudioTrackSsrcs() {
-  std::vector<rtc::scoped_refptr<webrtc::RtpReceiverInterface>> receivers =
+  std::vector<rtc::scoped_refptr<webrtz::RtpReceiverInterface>> receivers =
       peer_connection_->GetReceivers();
 
   std::vector<uint32_t> ssrcs;
@@ -576,7 +576,7 @@ std::vector<uint32_t> SimplePeerConnection::GetRemoteAudioTrackSsrcs() {
     if (receiver->media_type() != cricket::MEDIA_TYPE_AUDIO)
       continue;
 
-    std::vector<webrtc::RtpEncodingParameters> params =
+    std::vector<webrtz::RtpEncodingParameters> params =
         receiver->GetParameters().encodings;
 
     for (const auto& param : params) {

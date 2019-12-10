@@ -15,7 +15,7 @@
 
 #include <arm_neon.h>
 
-namespace webrtc {
+namespace webrtz {
 
 float SincResampler::Convolve_NEON(const float* input_ptr, const float* k1,
                                    const float* k2,
@@ -44,4 +44,4 @@ float SincResampler::Convolve_NEON(const float* input_ptr, const float* k1,
   return vget_lane_f32(vpadd_f32(m_half, m_half), 0);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

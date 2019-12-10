@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "test/statistics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -405,4 +405,4 @@ void Stats::GetNumberOfEncodedLayers(size_t first_frame_num,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

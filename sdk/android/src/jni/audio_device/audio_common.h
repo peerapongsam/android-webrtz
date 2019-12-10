@@ -11,7 +11,7 @@
 #ifndef SDK_ANDROID_SRC_JNI_AUDIO_DEVICE_AUDIO_COMMON_H_
 #define SDK_ANDROID_SRC_JNI_AUDIO_DEVICE_AUDIO_COMMON_H_
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -27,6 +27,6 @@ const int kHighLatencyModeDelayEstimateInMilliseconds = 150;
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_AUDIO_DEVICE_AUDIO_COMMON_H_

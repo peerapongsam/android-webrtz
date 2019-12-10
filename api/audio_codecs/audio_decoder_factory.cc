@@ -10,7 +10,7 @@
 
 #include "api/audio_codecs/audio_decoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<AudioDecoder> AudioDecoderFactory::MakeAudioDecoder(
     const SdpAudioFormat& format,
@@ -23,4 +23,4 @@ std::unique_ptr<AudioDecoder> AudioDecoderFactory::MakeAudioDecoder(
   return MakeAudioDecoder(format, rtc::nullopt);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -34,7 +34,7 @@
 //  |     P2 ------------------   //
 //  *---------------------------> //
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 enum RelativePosition { kBelow, kOn, kAbove };
@@ -628,4 +628,4 @@ TEST(ThresholdCurveTest, WrongOrderPoints) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

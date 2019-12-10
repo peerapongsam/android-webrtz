@@ -25,7 +25,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 OpusTest::OpusTest()
     : acm_receiver_(AudioCodingModule::Create(
@@ -69,9 +69,9 @@ void OpusTest::Perform() {
 
   // Open both mono and stereo test files in 32 kHz.
   const std::string file_name_stereo =
-      webrtc::test::ResourcePath("audio_coding/teststereo32kHz", "pcm");
+      webrtz::test::ResourcePath("audio_coding/teststereo32kHz", "pcm");
   const std::string file_name_mono =
-      webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+      webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
   frequency_hz = 32000;
   in_file_stereo_.Open(file_name_stereo, frequency_hz, "rb");
   in_file_stereo_.ReadStereo(true);
@@ -377,16 +377,16 @@ void OpusTest::Run(TestPackStereo* channel, size_t channels, int bitrate,
 void OpusTest::OpenOutFile(int test_number) {
   std::string file_name;
   std::stringstream file_stream;
-  file_stream << webrtc::test::OutputPath() << "opustest_out_"
+  file_stream << webrtz::test::OutputPath() << "opustest_out_"
       << test_number << ".pcm";
   file_name = file_stream.str();
   out_file_.Open(file_name, 48000, "wb");
   file_stream.str("");
   file_name = file_stream.str();
-  file_stream << webrtc::test::OutputPath() << "opusstandalone_out_"
+  file_stream << webrtz::test::OutputPath() << "opusstandalone_out_"
       << test_number << ".pcm";
   file_name = file_stream.str();
   out_file_standalone_.Open(file_name, 48000, "wb");
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "system_wrappers/include/ntp_time.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 // Class for converting an RTP timestamp to the NTP domain in milliseconds.
 // The class needs to be trained with (at least 2) RTP/NTP timestamp pairs from
 // RTCP sender reports before the convertion can be done.
@@ -85,6 +85,6 @@ class RtpToNtpEstimator {
   bool params_calculated_;
   mutable TimestampUnwrapper unwrapper_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_INCLUDE_RTP_TO_NTP_ESTIMATOR_H_

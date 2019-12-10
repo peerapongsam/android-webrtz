@@ -21,7 +21,7 @@
 #include "sdk/android/src/jni/audio_device/audio_common.h"
 #include "sdk/android/src/jni/audio_device/audio_device_module.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -125,6 +125,6 @@ class AudioTrackJni : public AudioOutput {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_AUDIO_DEVICE_AUDIO_TRACK_JNI_H_

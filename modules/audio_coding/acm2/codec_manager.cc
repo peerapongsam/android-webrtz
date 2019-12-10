@@ -16,7 +16,7 @@
 #include "rtc_base/logging.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace acm2 {
 
 namespace {
@@ -244,4 +244,4 @@ bool CodecManager::MakeEncoder(RentACodec* rac, AudioCodingModule* acm) {
 }
 
 }  // namespace acm2
-}  // namespace webrtc
+}  // namespace webrtz

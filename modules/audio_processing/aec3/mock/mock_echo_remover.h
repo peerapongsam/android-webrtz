@@ -19,7 +19,7 @@
 #include "modules/audio_processing/aec3/render_buffer.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockEchoRemover : public EchoRemover {
@@ -38,6 +38,6 @@ class MockEchoRemover : public EchoRemover {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_MOCK_MOCK_ECHO_REMOVER_H_

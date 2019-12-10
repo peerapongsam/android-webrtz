@@ -18,8 +18,8 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 
 namespace {
 // The minimum number probing packets used.
@@ -78,7 +78,7 @@ constexpr char kBweRapidRecoveryExperiment[] =
 
 ProbeController::ProbeController() : enable_periodic_alr_probing_(false) {
   Reset(0);
-  in_rapid_recovery_experiment_ = webrtc::field_trial::FindFullName(
+  in_rapid_recovery_experiment_ = webrtz::field_trial::FindFullName(
                                       kBweRapidRecoveryExperiment) == "Enabled";
 }
 
@@ -334,5 +334,5 @@ void ProbeController::InitiateProbing(
   }
 }
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

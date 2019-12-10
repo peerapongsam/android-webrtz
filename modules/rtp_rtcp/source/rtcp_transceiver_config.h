@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "rtc_base/task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 class ReceiveStatisticsProvider;
 class Transport;
 
@@ -102,6 +102,6 @@ struct RtcpTransceiverConfig {
   bool avoid_zero_last_sr_in_last_report_block = true;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_TRANSCEIVER_CONFIG_H_

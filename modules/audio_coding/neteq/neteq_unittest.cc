@@ -51,7 +51,7 @@ RTC_POP_IGNORING_WUNDEF()
 
 DEFINE_bool(gen_ref, false, "Generate reference files.");
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -78,8 +78,8 @@ const std::string& PlatformChecksum(const std::string& checksum_general,
 }
 
 #ifdef WEBRTC_NETEQ_UNITTEST_BITEXACT
-void Convert(const webrtc::NetEqNetworkStatistics& stats_raw,
-             webrtc::neteq_unittest::NetEqNetworkStatistics* stats) {
+void Convert(const webrtz::NetEqNetworkStatistics& stats_raw,
+             webrtz::neteq_unittest::NetEqNetworkStatistics* stats) {
   stats->set_current_buffer_size_ms(stats_raw.current_buffer_size_ms);
   stats->set_preferred_buffer_size_ms(stats_raw.preferred_buffer_size_ms);
   stats->set_jitter_peaks_found(stats_raw.jitter_peaks_found);
@@ -98,8 +98,8 @@ void Convert(const webrtc::NetEqNetworkStatistics& stats_raw,
   stats->set_max_waiting_time_ms(stats_raw.max_waiting_time_ms);
 }
 
-void Convert(const webrtc::RtcpStatistics& stats_raw,
-             webrtc::neteq_unittest::RtcpStatistics* stats) {
+void Convert(const webrtz::RtcpStatistics& stats_raw,
+             webrtz::neteq_unittest::RtcpStatistics* stats) {
   stats->set_fraction_lost(stats_raw.fraction_lost);
   stats->set_cumulative_lost(stats_raw.packets_lost);
   stats->set_extended_max_sequence_number(
@@ -122,12 +122,12 @@ void AddMessage(FILE* file, rtc::MessageDigest* digest,
 
 #endif  // WEBRTC_NETEQ_UNITTEST_BITEXACT
 
-void LoadDecoders(webrtc::NetEq* neteq) {
+void LoadDecoders(webrtz::NetEq* neteq) {
   ASSERT_EQ(true,
             neteq->RegisterPayloadType(0, SdpAudioFormat("pcmu", 8000, 1)));
   // Use non-SdpAudioFormat argument when registering PCMa, so that we get test
   // coverage for that as well.
-  ASSERT_EQ(0, neteq->RegisterPayloadType(webrtc::NetEqDecoder::kDecoderPCMa,
+  ASSERT_EQ(0, neteq->RegisterPayloadType(webrtz::NetEqDecoder::kDecoderPCMa,
                                           "pcma", 8));
 #ifdef WEBRTC_CODEC_ILBC
   ASSERT_EQ(true,
@@ -364,15 +364,15 @@ void NetEqDecodingTest::DecodeAndCompare(
   OpenInputFile(rtp_file);
 
   std::string ref_out_file =
-      gen_ref ? webrtc::test::OutputPath() + "neteq_universal_ref.pcm" : "";
+      gen_ref ? webrtz::test::OutputPath() + "neteq_universal_ref.pcm" : "";
   ResultSink output(ref_out_file);
 
   std::string stat_out_file =
-      gen_ref ? webrtc::test::OutputPath() + "neteq_network_stats.dat" : "";
+      gen_ref ? webrtz::test::OutputPath() + "neteq_network_stats.dat" : "";
   ResultSink network_stats(stat_out_file);
 
   std::string rtcp_out_file =
-      gen_ref ? webrtc::test::OutputPath() + "neteq_rtcp_stats.dat" : "";
+      gen_ref ? webrtz::test::OutputPath() + "neteq_rtcp_stats.dat" : "";
   ResultSink rtcp_stats(rtcp_out_file);
 
   packet_ = rtp_source_->NextPacket();
@@ -460,7 +460,7 @@ void NetEqDecodingTest::PopulateCng(int frame_index,
 #endif
 TEST_F(NetEqDecodingTest, MAYBE_TestBitExactness) {
   const std::string input_rtp_file =
-      webrtc::test::ResourcePath("audio_coding/neteq_universal_new", "rtp");
+      webrtz::test::ResourcePath("audio_coding/neteq_universal_new", "rtp");
 
   const std::string output_checksum = PlatformChecksum(
       "09fa7646e2ad032a0b156177b95f09012430f81f",
@@ -499,7 +499,7 @@ TEST_F(NetEqDecodingTest, MAYBE_TestBitExactness) {
 #endif
 TEST_F(NetEqDecodingTest, MAYBE_TestOpusBitExactness) {
   const std::string input_rtp_file =
-      webrtc::test::ResourcePath("audio_coding/neteq_opus", "rtp");
+      webrtz::test::ResourcePath("audio_coding/neteq_opus", "rtp");
 
   const std::string output_checksum = PlatformChecksum(
       "7ea28d7edf9395f4ac8e8d8dd3a9e5c620b1bf48",
@@ -538,7 +538,7 @@ TEST_F(NetEqDecodingTest, MAYBE_TestOpusBitExactness) {
 #endif
 TEST_F(NetEqDecodingTest, MAYBE_TestOpusDtxBitExactness) {
   const std::string input_rtp_file =
-      webrtc::test::ResourcePath("audio_coding/neteq_opus_dtx", "rtp");
+      webrtz::test::ResourcePath("audio_coding/neteq_opus_dtx", "rtp");
 
   const std::string output_checksum =
       PlatformChecksum("713af6c92881f5aab1285765ee6680da9d1c06ce",
@@ -975,7 +975,7 @@ class NetEqBgnTest : public NetEqDecodingTest {
     // |sampling_rate_hz|. The output may sound weird, but the test is still
     // valid.
     ASSERT_TRUE(input.Init(
-        webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
+        webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
         10 * sampling_rate_hz,  // Max 10 seconds loop length.
         expected_samples_per_channel));
 
@@ -1789,4 +1789,4 @@ TEST_F(NetEqDecodingTestFaxMode, TestJitterBufferDelayWithLoss) {
   TestJitterBufferDelay(true);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

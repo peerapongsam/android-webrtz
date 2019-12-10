@@ -16,7 +16,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/psfb.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 // Full intra request (FIR) (RFC 5104).
@@ -58,5 +58,5 @@ class Fir : public Psfb {
   std::vector<Request> items_;
 };
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_FIR_H_

@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/source/rtp_format_vp8.h"
 #include "modules/rtp_rtcp/source/rtp_format_vp9.h"
 
-namespace webrtc {
+namespace webrtz {
 RtpPacketizer* RtpPacketizer::Create(RtpVideoCodecTypes type,
                                      size_t max_payload_len,
                                      size_t last_packet_reduction_len,
@@ -60,4 +60,4 @@ RtpDepacketizer* RtpDepacketizer::Create(RtpVideoCodecTypes type) {
   }
   return nullptr;
 }
-}  // namespace webrtc
+}  // namespace webrtz

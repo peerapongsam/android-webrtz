@@ -14,7 +14,7 @@
 #include "modules/audio_device/audio_device_buffer.h"
 #include "modules/audio_device/include/audio_device.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceGeneric {
  public:
@@ -134,6 +134,6 @@ class AudioDeviceGeneric {
   virtual ~AudioDeviceGeneric() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_DEVICE_AUDIO_DEVICE_GENERIC_H_

@@ -20,7 +20,7 @@
 #include "sdk/android/generated_peerconnection_jni/jni/RTCStats_jni.h"
 #include "sdk/android/native_api/jni/java_types.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -139,4 +139,4 @@ void RTCStatsCollectorCallbackWrapper::OnStatsDelivered(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

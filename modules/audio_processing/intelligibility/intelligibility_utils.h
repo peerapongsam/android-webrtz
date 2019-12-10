@@ -14,7 +14,7 @@
 #include <complex>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 namespace intelligibility {
 
@@ -81,6 +81,6 @@ class DelayBuffer {
 
 }  // namespace intelligibility
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INTELLIGIBILITY_INTELLIGIBILITY_UTILS_H_

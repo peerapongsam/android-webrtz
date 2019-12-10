@@ -16,7 +16,7 @@
 
 #include "modules/video_coding/codecs/interface/common_constants.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct RTPVideoHeaderVP8 {
   void InitRTPVideoHeaderVP8() {
@@ -44,6 +44,6 @@ struct RTPVideoHeaderVP8 {
                               // in a VP8 partition. Otherwise false
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_INCLUDE_VP8_GLOBALS_H_

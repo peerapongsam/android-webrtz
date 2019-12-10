@@ -11,7 +11,7 @@
 #include "api/ortc/mediadescription.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MediaDescriptionTest : public testing::Test {};
 
@@ -27,4 +27,4 @@ TEST_F(MediaDescriptionTest, AddSdesParam) {
   EXPECT_EQ(1u, params.size());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

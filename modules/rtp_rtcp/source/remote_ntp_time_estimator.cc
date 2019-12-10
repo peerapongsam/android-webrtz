@@ -14,7 +14,7 @@
 #include "rtc_base/time/timestamp_extrapolator.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const int kTimingLogIntervalMs = 10000;
@@ -81,4 +81,4 @@ int64_t RemoteNtpTimeEstimator::Estimate(uint32_t rtp_timestamp) {
   return receiver_capture_ntp_ms;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

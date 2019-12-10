@@ -14,7 +14,7 @@
 
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 // A ReportBlock represents the Sender Report packet from
@@ -67,5 +67,5 @@ class ReportBlock {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_REPORT_BLOCK_H_

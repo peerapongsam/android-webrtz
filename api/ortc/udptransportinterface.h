@@ -15,7 +15,7 @@
 #include "api/proxy.h"
 #include "rtc_base/socketaddress.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Interface for a raw UDP transport (not using ICE), meaning a combination of
 // a local/remote IP address/port.
@@ -44,6 +44,6 @@ class UdpTransportInterface : public virtual PacketTransportInterface {
   virtual rtc::SocketAddress GetRemoteAddress() const = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_UDPTRANSPORTINTERFACE_H_

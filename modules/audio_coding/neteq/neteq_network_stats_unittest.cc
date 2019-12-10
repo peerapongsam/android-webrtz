@@ -16,7 +16,7 @@
 #include "modules/include/module_common_types.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 using ::testing::_;
@@ -333,4 +333,4 @@ TEST(NetEqNetworkStatsTest, NoiseExpansionTest) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "modules/utility/include/helpers_android.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The JNI interface pointer (JNIEnv) is valid only in the current thread.
 // Should another thread need to access the Java VM, it must first call
@@ -118,7 +118,7 @@ class JNIEnvironment {
 //   JNIEnv* jni = ::base::android::AttachCurrentThread();
 //   JavaVM* jvm = NULL;
 //   jni->GetJavaVM(&jvm);
-//   webrtc::JVM::Initialize(jvm);
+//   webrtz::JVM::Initialize(jvm);
 //
 //   // Header (.h) file of example class called User.
 //   std::unique_ptr<JNIEnvironment> env;
@@ -129,7 +129,7 @@ class JNIEnvironment {
 //   User::User() {
 //     // Calling thread must be attached to the JVM.
 //     env = JVM::GetInstance()->environment();
-//     reg = env->RegisterNatives("org/webrtc/WebRtcTest", ,);
+//     reg = env->RegisterNatives("org/webrtz/WebRtcTest", ,);
 //     obj = reg->NewObject("<init>", ,);
 //   }
 //
@@ -183,6 +183,6 @@ class JVM {
   JavaVM* const jvm_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_UTILITY_INCLUDE_JVM_ANDROID_H_

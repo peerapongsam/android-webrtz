@@ -13,10 +13,10 @@
 #include <string>
 #include "modules/congestion_controller/network_control/include/network_units.h"
 
-namespace webrtc {
+namespace webrtz {
 std::string ToString(const DataRate& datarate);
 std::string ToString(const DataSize& datarate);
 std::string ToString(const Timestamp& datarate);
 std::string ToString(const TimeDelta& datarate);
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_CONGESTION_CONTROLLER_NETWORK_CONTROL_INCLUDE_NETWORK_UNITS_TO_STRING_H_

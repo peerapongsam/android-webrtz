@@ -26,7 +26,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -288,4 +288,4 @@ TEST(DesktopCapturerDifferWrapperTest,
   ASSERT_LE(rtc::TimeMillis() - started, 15000);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

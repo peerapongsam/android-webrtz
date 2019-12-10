@@ -21,7 +21,7 @@
 const char kHighProfileExperiment[] = "WebRTC-H264HighProfile";
 
 bool IsHighProfileEnabled() {
-  return webrtc::field_trial::IsEnabled(kHighProfileExperiment);
+  return webrtz::field_trial::IsEnabled(kHighProfileExperiment);
 }
 
 // H264 specific settings.
@@ -29,12 +29,12 @@ bool IsHighProfileEnabled() {
 
 @synthesize packetizationMode = _packetizationMode;
 
-- (webrtc::CodecSpecificInfo)nativeCodecSpecificInfo {
-  webrtc::CodecSpecificInfo codecSpecificInfo;
-  codecSpecificInfo.codecType = webrtc::kVideoCodecH264;
+- (webrtz::CodecSpecificInfo)nativeCodecSpecificInfo {
+  webrtz::CodecSpecificInfo codecSpecificInfo;
+  codecSpecificInfo.codecType = webrtz::kVideoCodecH264;
   codecSpecificInfo.codec_name = [kRTCVideoCodecH264Name cStringUsingEncoding:NSUTF8StringEncoding];
   codecSpecificInfo.codecSpecific.H264.packetization_mode =
-      (webrtc::H264PacketizationMode)_packetizationMode;
+      (webrtz::H264PacketizationMode)_packetizationMode;
 
   return codecSpecificInfo;
 }

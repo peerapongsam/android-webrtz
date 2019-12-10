@@ -15,7 +15,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BufferLevelFilter {
  public:
@@ -45,5 +45,5 @@ class BufferLevelFilter {
   RTC_DISALLOW_COPY_AND_ASSIGN(BufferLevelFilter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_BUFFER_LEVEL_FILTER_H_

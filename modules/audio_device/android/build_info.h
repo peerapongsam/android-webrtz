@@ -17,7 +17,7 @@
 
 #include "modules/utility/include/jvm_android.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This enumeration maps to the values returned by BuildInfo::GetSdkVersion(),
 // indicating the Android release associated with a given SDK version.
@@ -35,7 +35,7 @@ enum SdkCode {
   SDK_CODE_N = 24,
 };
 
-// Utility class used to query the Java class (org/webrtc/voiceengine/BuildInfo)
+// Utility class used to query the Java class (org/webrtz/voiceengine/BuildInfo)
 // for device and Android build information.
 // The calling thread is attached to the JVM at construction if needed and a
 // valid Java environment object is also created.
@@ -80,6 +80,6 @@ class BuildInfo {
   JavaClass j_build_info_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_BUILD_INFO_H_

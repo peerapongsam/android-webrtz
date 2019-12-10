@@ -12,7 +12,7 @@
 
 #include <stdint.h>
 
-namespace webrtc {
+namespace webrtz {
 
 DefaultVideoBitrateAllocator::DefaultVideoBitrateAllocator(
     const VideoCodec& codec)
@@ -43,4 +43,4 @@ uint32_t DefaultVideoBitrateAllocator::GetPreferredBitrateBps(
   return GetAllocation(codec_.maxBitrate * 1000, framerate).get_sum_bps();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

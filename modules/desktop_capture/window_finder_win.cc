@@ -14,7 +14,7 @@
 
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 WindowFinderWin::WindowFinderWin() = default;
 WindowFinderWin::~WindowFinderWin() = default;
@@ -43,4 +43,4 @@ std::unique_ptr<WindowFinder> WindowFinder::Create(
   return rtc::MakeUnique<WindowFinderWin>();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,14 +13,14 @@
 #include "test/gtest.h"
 
 TEST(MovingAverageTest, EmptyAverage) {
-  webrtc::MovingAverage moving_average(1);
+  webrtz::MovingAverage moving_average(1);
   EXPECT_EQ(0u, moving_average.size());
   EXPECT_FALSE(moving_average.GetAverage(0));
 }
 
 // Test single value.
 TEST(MovingAverageTest, OneElement) {
-  webrtc::MovingAverage moving_average(1);
+  webrtz::MovingAverage moving_average(1);
   moving_average.AddSample(3);
   EXPECT_EQ(1u, moving_average.size());
   EXPECT_EQ(3, *moving_average.GetAverage());
@@ -29,7 +29,7 @@ TEST(MovingAverageTest, OneElement) {
 }
 
 TEST(MovingAverageTest, GetAverage) {
-  webrtc::MovingAverage moving_average(1024);
+  webrtz::MovingAverage moving_average(1024);
   moving_average.AddSample(1);
   moving_average.AddSample(1);
   moving_average.AddSample(3);
@@ -40,7 +40,7 @@ TEST(MovingAverageTest, GetAverage) {
 }
 
 TEST(MovingAverageTest, Reset) {
-  webrtc::MovingAverage moving_average(5);
+  webrtz::MovingAverage moving_average(5);
   moving_average.AddSample(1);
   EXPECT_EQ(1, *moving_average.GetAverage(1));
   moving_average.Reset();
@@ -49,7 +49,7 @@ TEST(MovingAverageTest, Reset) {
 }
 
 TEST(MovingAverageTest, ManySamples) {
-  webrtc::MovingAverage moving_average(10);
+  webrtz::MovingAverage moving_average(10);
   for (int i = 1; i < 11; i++) {
     moving_average.AddSample(i);
   }

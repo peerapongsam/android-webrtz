@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockFrameReader : public FrameReader {
@@ -28,6 +28,6 @@ class MockFrameReader : public FrameReader {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_TESTSUPPORT_MOCK_MOCK_FRAME_READER_H_

@@ -13,7 +13,7 @@
 
 #include "sdk/android/native_api/jni/java_types.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 ScopedJavaLocalRef<jobject> NewDirectByteBuffer(JNIEnv* env,
@@ -48,4 +48,4 @@ ScopedLocalRefFrame::~ScopedLocalRefFrame() {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

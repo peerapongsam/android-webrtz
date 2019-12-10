@@ -13,7 +13,7 @@
 namespace cricket {
 
 bool WebRtcVideoEncoderFactory::EncoderTypeHasInternalSource(
-    webrtc::VideoCodecType type) const {
+    webrtz::VideoCodecType type) const {
   return false;
 }
 

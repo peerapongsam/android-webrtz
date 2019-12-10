@@ -20,7 +20,7 @@
 #include "test/video_capturer.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class EventTimerWrapper;
 
@@ -109,6 +109,6 @@ class FrameGeneratorCapturer : public VideoCapturer {
   rtc::TaskQueue task_queue_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FRAME_GENERATOR_CAPTURER_H_

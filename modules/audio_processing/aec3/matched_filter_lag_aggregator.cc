@@ -11,7 +11,7 @@
 
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MatchedFilterLagAggregator::MatchedFilterLagAggregator(
     ApmDataDumper* data_dumper,
@@ -75,4 +75,4 @@ rtc::Optional<DelayEstimate> MatchedFilterLagAggregator::Aggregate(
   return rtc::nullopt;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

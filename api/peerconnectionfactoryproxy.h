@@ -19,7 +19,7 @@
 #include "api/proxy.h"
 #include "rtc_base/bind.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(deadbeef): Move this to .cc file and out of api/. What threads methods
 // are called on is an implementation detail.
@@ -68,6 +68,6 @@ BEGIN_SIGNALING_PROXY_MAP(PeerConnectionFactory)
   PROXY_METHOD0(void, StopAecDump)
 END_PROXY_MAP()
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_PEERCONNECTIONFACTORYPROXY_H_

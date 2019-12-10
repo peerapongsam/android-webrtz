@@ -23,7 +23,7 @@ namespace rtc {
 // one thread, while AdaptFrame and OnFrame may be called on any
 // thread.
 class AdaptedVideoTrackSource
-    : public webrtc::Notifier<webrtc::VideoTrackSourceInterface> {
+    : public webrtz::Notifier<webrtz::VideoTrackSourceInterface> {
  public:
   AdaptedVideoTrackSource();
   ~AdaptedVideoTrackSource() override;
@@ -35,7 +35,7 @@ class AdaptedVideoTrackSource
   // Checks the apply_rotation() flag. If the frame needs rotation, and it is a
   // plain memory frame, it is rotated. Subclasses producing native frames must
   // handle apply_rotation() themselves.
-  void OnFrame(const webrtc::VideoFrame& frame);
+  void OnFrame(const webrtz::VideoFrame& frame);
 
   // Reports the appropriate frame size after adaptation. Returns true
   // if a frame is wanted. Returns false if there are no interested
@@ -61,9 +61,9 @@ class AdaptedVideoTrackSource
 
  private:
   // Implements rtc::VideoSourceInterface.
-  void AddOrUpdateSink(rtc::VideoSinkInterface<webrtc::VideoFrame>* sink,
+  void AddOrUpdateSink(rtc::VideoSinkInterface<webrtz::VideoFrame>* sink,
                        const rtc::VideoSinkWants& wants) override;
-  void RemoveSink(rtc::VideoSinkInterface<webrtc::VideoFrame>* sink) override;
+  void RemoveSink(rtc::VideoSinkInterface<webrtz::VideoFrame>* sink) override;
 
   // Part of VideoTrackSourceInterface.
   bool GetStats(Stats* stats) override;

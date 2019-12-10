@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockDtmfBuffer : public DtmfBuffer {
  public:
@@ -34,5 +34,5 @@ class MockDtmfBuffer : public DtmfBuffer {
       bool());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_DTMF_BUFFER_H_

@@ -28,7 +28,7 @@ struct PacketOptions;
 struct PacketTime;
 struct SentPacket;
 
-class PacketTransportInternal : public virtual webrtc::PacketTransportInterface,
+class PacketTransportInternal : public virtual webrtz::PacketTransportInterface,
                                 public sigslot::has_slots<> {
  public:
   virtual const std::string& transport_name() const = 0;

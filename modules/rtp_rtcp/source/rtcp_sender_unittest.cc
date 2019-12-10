@@ -25,7 +25,7 @@ using ::testing::_;
 using ::testing::ElementsAre;
 using ::testing::Invoke;
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(NACKStringBuilderTest, TestCase1) {
   NACKStringBuilder builder;
@@ -828,4 +828,4 @@ TEST_F(RtcpSenderTest, SendXrWithTargetBitrate) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

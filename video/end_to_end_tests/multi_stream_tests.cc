@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "video/end_to_end_tests/multi_stream_tester.h"
 
-namespace webrtc {
+namespace webrtz {
 class MultiStreamEndToEndTest
     : public test::CallTest,
       public testing::WithParamInterface<std::string> {
@@ -104,4 +104,4 @@ TEST_P(MultiStreamEndToEndTest, SendsAndReceivesMultipleStreams) {
 
   tester.RunTest();
 }
-}  // namespace webrtc
+}  // namespace webrtz

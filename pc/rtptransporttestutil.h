@@ -14,7 +14,7 @@
 #include "pc/rtptransportinternal.h"
 #include "rtc_base/sigslot.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SignalPacketReceivedCounter : public sigslot::has_slots<> {
  public:
@@ -39,6 +39,6 @@ class SignalPacketReceivedCounter : public sigslot::has_slots<> {
   int rtp_count_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPTRANSPORTTESTUTIL_H_

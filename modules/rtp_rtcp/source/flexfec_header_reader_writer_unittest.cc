@@ -24,7 +24,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -556,4 +556,4 @@ TEST(FlexfecHeaderReaderWriterTest,
                               *read_packet);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

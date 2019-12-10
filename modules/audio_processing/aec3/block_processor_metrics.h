@@ -13,7 +13,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Handles the reporting of metrics for the block_processor.
 class BlockProcessorMetrics {
@@ -42,6 +42,6 @@ class BlockProcessorMetrics {
   RTC_DISALLOW_COPY_AND_ASSIGN(BlockProcessorMetrics);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_BLOCK_PROCESSOR_METRICS_H_

@@ -21,7 +21,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 class FakePacketBuffer : public PacketBuffer {
@@ -1348,4 +1348,4 @@ TEST_F(TestRtpFrameReferenceFinder, Vp9GofTidTooHigh) {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

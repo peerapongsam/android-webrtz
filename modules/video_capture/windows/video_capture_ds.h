@@ -17,7 +17,7 @@
 #define CAPTURE_FILTER_NAME L"VideoCaptureFilter"
 #define SINK_FILTER_NAME L"SinkFilter"
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -75,5 +75,5 @@ protected:
 
 };
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 #endif // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_WINDOWS_VIDEO_CAPTURE_DS_H_

@@ -28,7 +28,7 @@
 static const size_t kEventLoggerArgsStrBufferInitialSize = 256;
 static const size_t kTraceArgBufferLength = 32;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -75,7 +75,7 @@ void EventTracer::AddTraceEvent(char phase,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace rtc {
 namespace tracing {
@@ -371,7 +371,7 @@ void SetupInternalTracer() {
   RTC_CHECK(rtc::AtomicOps::CompareAndSwapPtr(
                 &g_event_logger, static_cast<EventLogger*>(nullptr),
                 new EventLogger()) == nullptr);
-  webrtc::SetupEventTracer(InternalGetCategoryEnabled, InternalAddTraceEvent);
+  webrtz::SetupEventTracer(InternalGetCategoryEnabled, InternalAddTraceEvent);
 }
 
 void StartInternalCaptureToFile(FILE* file) {
@@ -408,7 +408,7 @@ void ShutdownInternalTracer() {
                 &g_event_logger, old_logger,
                 static_cast<EventLogger*>(nullptr)) == old_logger);
   delete old_logger;
-  webrtc::SetupEventTracer(nullptr, nullptr);
+  webrtz::SetupEventTracer(nullptr, nullptr);
 }
 
 }  // namespace tracing

@@ -25,7 +25,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 std::string ProduceDebugText(int sample_rate_hz) {
@@ -331,4 +331,4 @@ TEST(RenderDelayController, DISABLED_WrongSampleRate) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

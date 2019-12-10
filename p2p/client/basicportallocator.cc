@@ -99,7 +99,7 @@ const uint32_t DISABLE_ALL_PHASES =
 BasicPortAllocator::BasicPortAllocator(
     rtc::NetworkManager* network_manager,
     rtc::PacketSocketFactory* socket_factory,
-    webrtc::TurnCustomizer* customizer,
+    webrtz::TurnCustomizer* customizer,
     RelayPortFactoryInterface* relay_port_factory)
     : network_manager_(network_manager), socket_factory_(socket_factory) {
   InitRelayPortFactory(relay_port_factory);
@@ -181,7 +181,7 @@ void BasicPortAllocator::OnIceRegathering(PortAllocatorSession* session,
   }
 
   metrics_observer()->IncrementEnumCounter(
-      webrtc::kEnumCounterIceRegathering, static_cast<int>(reason),
+      webrtz::kEnumCounterIceRegathering, static_cast<int>(reason),
       static_cast<int>(IceRegatheringReason::MAX_VALUE));
 }
 

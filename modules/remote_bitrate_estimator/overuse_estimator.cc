@@ -21,7 +21,7 @@
 #include "modules/remote_bitrate_estimator/test/bwe_test_logging.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum { kMinFramePeriodHistoryLength = 60 };
 enum { kDeltaCounterMax = 1000 };
@@ -164,4 +164,4 @@ void OveruseEstimator::UpdateNoiseEstimate(double residual,
     var_noise_ = 1;
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class PoleZeroFilter {
  public:
@@ -47,6 +47,6 @@ class PoleZeroFilter {
   size_t highest_order_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_VAD_POLE_ZERO_FILTER_H_

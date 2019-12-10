@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioBuffer;
 
@@ -53,6 +53,6 @@ class VoiceDetectionImpl : public VoiceDetection {
   std::unique_ptr<Vad> vad_ RTC_GUARDED_BY(crit_);
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(VoiceDetectionImpl);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_VOICE_DETECTION_IMPL_H_

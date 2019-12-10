@@ -13,7 +13,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/refcountedobject.h"
 
-namespace webrtc {
+namespace webrtz {
 
 template <class V>
 static typename V::iterator FindTrack(V* vector,
@@ -94,4 +94,4 @@ bool MediaStream::RemoveTrack(TrackVector* tracks,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -24,7 +24,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool VideoCodecInitializer::SetupCodec(
     const VideoEncoderConfig& config,
@@ -273,4 +273,4 @@ VideoCodec VideoCodecInitializer::VideoEncoderConfigToVideoCodec(
   return video_codec;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

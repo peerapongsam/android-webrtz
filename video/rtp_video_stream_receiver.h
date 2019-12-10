@@ -36,7 +36,7 @@
 #include "rtc_base/sequenced_task_checker.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class NackModule;
 class PacketRouter;
@@ -203,6 +203,6 @@ class RtpVideoStreamReceiver : public RtpData,
       RTC_GUARDED_BY(worker_task_checker_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_RTP_VIDEO_STREAM_RECEIVER_H_

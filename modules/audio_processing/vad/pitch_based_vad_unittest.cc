@@ -18,7 +18,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(PitchBasedVadTest, VoicingProbabilityTest) {
   std::string spectral_peak_file_name =
@@ -72,4 +72,4 @@ TEST(PitchBasedVadTest, VoicingProbabilityTest) {
   fclose(pitch_lag_file);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

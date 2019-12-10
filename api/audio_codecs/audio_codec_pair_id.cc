@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -87,4 +87,4 @@ AudioCodecPairId AudioCodecPairId::Create() {
   return AudioCodecPairId(ObfuscateId(GetNextId()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

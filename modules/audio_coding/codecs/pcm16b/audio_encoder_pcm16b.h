@@ -14,7 +14,7 @@
 #include "modules/audio_coding/codecs/g711/audio_encoder_pcm.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecInst;
 
@@ -45,6 +45,6 @@ class AudioEncoderPcm16B final : public AudioEncoderPcm {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioEncoderPcm16B);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_PCM16B_AUDIO_ENCODER_PCM16B_H_

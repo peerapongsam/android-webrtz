@@ -18,7 +18,7 @@ extern "C" {
 #include "common_audio/vad/vad_core.h"
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 TEST_F(VadTest, InitCore) {
@@ -104,4 +104,4 @@ TEST_F(VadTest, CalcVad) {
   free(self);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

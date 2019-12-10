@@ -24,7 +24,7 @@
 #define STAT stat
 #endif
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 Converter::Converter(int width, int height)
@@ -173,4 +173,4 @@ std::string Converter::FormFrameName(int width, int number) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

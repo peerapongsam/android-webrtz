@@ -15,7 +15,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/win32.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -264,4 +264,4 @@ std::unique_ptr<DesktopCapturer> CroppingWindowCapturer::CreateCapturer(
       new CroppingWindowCapturerWin(options));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

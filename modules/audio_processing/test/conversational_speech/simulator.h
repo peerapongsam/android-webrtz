@@ -19,7 +19,7 @@
 #include "modules/audio_processing/test/conversational_speech/multiend_call.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace conversational_speech {
 
@@ -39,6 +39,6 @@ std::unique_ptr<std::map<std::string, SpeakerOutputFilePaths>>
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_CONVERSATIONAL_SPEECH_SIMULATOR_H_

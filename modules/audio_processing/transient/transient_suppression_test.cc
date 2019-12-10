@@ -48,7 +48,7 @@ DEFINE_int(num_channels, 1, "Number of channels.");
 
 DEFINE_bool(help, false, "Print this message.");
 
-namespace webrtc {
+namespace webrtz {
 
 const char kUsage[] =
     "\nDetects and suppresses transients from file.\n\n"
@@ -229,12 +229,12 @@ void void_main() {
   fclose(out_file);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
   if (rtc::FlagList::SetFlagsFromCommandLine(&argc, argv, true) ||
       FLAG_help || argc != 1) {
-    printf("%s", webrtc::kUsage);
+    printf("%s", webrtz::kUsage);
     if (FLAG_help) {
       rtc::FlagList::Print(nullptr, false);
       return 0;
@@ -245,6 +245,6 @@ int main(int argc, char* argv[]) {
   RTC_CHECK_GT(FLAG_sample_rate_hz, 0);
   RTC_CHECK_GT(FLAG_num_channels, 0);
 
-  webrtc::void_main();
+  webrtz::void_main();
   return 0;
 }

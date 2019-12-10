@@ -15,7 +15,7 @@
 
 #include "modules/video_capture/video_capture_defines.h"
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -91,5 +91,5 @@ private:
     VideoCaptureExternal& _captureObserver;
 };
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 #endif // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_WINDOWS_SINK_FILTER_DS_H_

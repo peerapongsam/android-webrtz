@@ -16,7 +16,7 @@
 #include "modules/video_coding/include/video_codec_interface.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class FakeDecoder : public VideoDecoder {
@@ -72,6 +72,6 @@ class FakeNullDecoder : public FakeDecoder {
   }
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FAKE_DECODER_H_

@@ -15,7 +15,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Verify the general functionality of AecState
 TEST(AecState, NormalUsage) {
@@ -204,4 +204,4 @@ TEST(AecState, ConvergedFilterDelay) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

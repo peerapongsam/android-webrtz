@@ -21,7 +21,7 @@
 #include "modules/remote_bitrate_estimator/test/metric_recorder.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 namespace {
@@ -508,4 +508,4 @@ uint32_t TcpSender::TargetBitrateKbps() {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

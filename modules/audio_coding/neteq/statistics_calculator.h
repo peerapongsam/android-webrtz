@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class DelayManager;
 
@@ -198,5 +198,5 @@ class StatisticsCalculator {
   RTC_DISALLOW_COPY_AND_ASSIGN(StatisticsCalculator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_STATISTICS_CALCULATOR_H_

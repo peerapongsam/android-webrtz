@@ -22,14 +22,14 @@
 #include "common_types.h"  // NOLINT(build/include)  // VideoTypes.
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 
 // This is the max PSNR value our algorithms can return.
 const double kPerfectPSNR = 48.0f;
 
 // TODO(nisse): Some downstream apps call CalcBufferSize with
-// ::webrtc::kI420 as the first argument. Delete after they are updated.
+// ::webrtz::kI420 as the first argument. Delete after they are updated.
 const VideoType kI420 = VideoType::kI420;
 
 // Calculate the required buffer size.
@@ -121,6 +121,6 @@ class NV12ToI420Scaler {
 // Convert VideoType to libyuv FourCC type
 int ConvertVideoType(VideoType video_type);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_LIBYUV_INCLUDE_WEBRTC_LIBYUV_H_

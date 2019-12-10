@@ -14,7 +14,7 @@
 
 #include "api/mediaconstraintsinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MediaConstraints : public MediaConstraintsInterface {
  public:
@@ -31,7 +31,7 @@ class MediaConstraints : public MediaConstraintsInterface {
   MediaConstraintsInterface::Constraints optional_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -42,10 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
  * A MediaConstraints representation of this RTCMediaConstraints object. This is
  * needed to pass to the underlying C++ APIs.
  */
-- (std::unique_ptr<webrtc::MediaConstraints>)nativeConstraints;
+- (std::unique_ptr<webrtz::MediaConstraints>)nativeConstraints;
 
 /** Return a native Constraints object representing these constraints */
-+ (webrtc::MediaConstraintsInterface::Constraints)
++ (webrtz::MediaConstraintsInterface::Constraints)
     nativeConstraintsForConstraints:
         (NSDictionary<NSString *, NSString *> *)constraints;
 

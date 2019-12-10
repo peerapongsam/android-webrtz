@@ -16,7 +16,7 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -94,4 +94,4 @@ TEST(GainController2, Usage) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "modules/rtp_rtcp/source/rtp_packet.h"
 #include "system_wrappers/include/ntp_time.h"
 
-namespace webrtc {
+namespace webrtz {
 // Class to hold rtp packet with metadata for receiver side.
 class RtpPacketReceived : public RtpPacket {
  public:
@@ -69,5 +69,5 @@ class RtpPacketReceived : public RtpPacket {
   std::vector<uint8_t> application_data_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_PACKET_RECEIVED_H_

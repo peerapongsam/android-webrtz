@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 bool AudioLoop::Init(const std::string file_name,
@@ -56,4 +56,4 @@ rtc::ArrayView<const int16_t> AudioLoop::GetNextBlock() {
 
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/videosink.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static void JNI_VideoTrack_AddSink(JNIEnv* jni,
@@ -50,4 +50,4 @@ static void JNI_VideoTrack_FreeSink(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

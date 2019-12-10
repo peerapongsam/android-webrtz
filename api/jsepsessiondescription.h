@@ -27,7 +27,7 @@ namespace cricket {
 class SessionDescription;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of SessionDescriptionInterface.
 class JsepSessionDescription : public SessionDescriptionInterface {
@@ -84,6 +84,6 @@ class JsepSessionDescription : public SessionDescriptionInterface {
   RTC_DISALLOW_COPY_AND_ASSIGN(JsepSessionDescription);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_JSEPSESSIONDESCRIPTION_H_

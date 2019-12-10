@@ -16,7 +16,7 @@
 #include "common_audio/fft4g.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -82,4 +82,4 @@ void RealFourierOoura::Inverse(const complex<float>* src, float* dest) const {
   std::for_each(dest, dest + length_, [scale](float& v) { v *= scale; });
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

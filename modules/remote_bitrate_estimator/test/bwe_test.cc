@@ -29,7 +29,7 @@ namespace {
 const int kQuickTestTimeoutMs = 500;
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -215,23 +215,23 @@ void BweTest::PrintResults(double max_throughput_kbps,
                            std::map<int, Stats<double>> flow_delay_ms,
                            std::map<int, Stats<double>> flow_throughput_kbps) {
   double utilization = throughput_kbps.GetMean() / max_throughput_kbps;
-  webrtc::test::PrintResult("BwePerformance", GetTestName(), "Utilization",
+  webrtz::test::PrintResult("BwePerformance", GetTestName(), "Utilization",
                             utilization * 100.0, "%", false);
-  webrtc::test::PrintResult(
+  webrtz::test::PrintResult(
       "BwePerformance", GetTestName(), "Utilization var coeff",
       throughput_kbps.GetStdDev() / throughput_kbps.GetMean(), "", false);
   std::stringstream ss;
   for (auto& kv : flow_throughput_kbps) {
     ss.str("");
     ss << "Throughput flow " << kv.first;
-    webrtc::test::PrintResultMeanAndError("BwePerformance", GetTestName(),
+    webrtz::test::PrintResultMeanAndError("BwePerformance", GetTestName(),
                                           ss.str(), kv.second.GetMean(),
                                           kv.second.GetStdDev(), "kbps", false);
   }
   for (auto& kv : flow_delay_ms) {
     ss.str("");
     ss << "Delay flow " << kv.first;
-    webrtc::test::PrintResultMeanAndError("BwePerformance", GetTestName(),
+    webrtz::test::PrintResultMeanAndError("BwePerformance", GetTestName(),
                                           ss.str(), kv.second.GetMean(),
                                           kv.second.GetStdDev(), "ms", false);
   }
@@ -246,7 +246,7 @@ void BweTest::PrintResults(double max_throughput_kbps,
     fairness_index *= fairness_index;
     fairness_index /= flow_throughput_kbps.size() * squared_bitrate_sum;
   }
-  webrtc::test::PrintResult("BwePerformance", GetTestName(), "Fairness",
+  webrtz::test::PrintResult("BwePerformance", GetTestName(), "Fairness",
                             fairness_index * 100, "%", false);
 }
 
@@ -993,4 +993,4 @@ std::vector<int64_t> BweTest::GetStartingTimesMs(int num_files) {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

@@ -49,7 +49,7 @@ static const uint32_t kAudioSsrc2 = 101;
 static const int kDefaultTimeout = 10000;  // 10 seconds.
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpSenderReceiverTest : public testing::Test,
                               public sigslot::has_slots<> {
@@ -112,13 +112,13 @@ class RtpSenderReceiverTest : public testing::Test,
         cricket::StreamParams::CreateLegacy(kVideoSsrc2));
   }
 
-  std::unique_ptr<webrtc::RtpTransportInternal> CreateDtlsSrtpTransport() {
+  std::unique_ptr<webrtz::RtpTransportInternal> CreateDtlsSrtpTransport() {
     auto rtp_transport =
-        rtc::MakeUnique<webrtc::RtpTransport>(/*rtcp_mux_required=*/true);
+        rtc::MakeUnique<webrtz::RtpTransport>(/*rtcp_mux_required=*/true);
     auto srtp_transport =
-        rtc::MakeUnique<webrtc::SrtpTransport>(std::move(rtp_transport));
+        rtc::MakeUnique<webrtz::SrtpTransport>(std::move(rtp_transport));
     auto dtls_srtp_transport =
-        rtc::MakeUnique<webrtc::DtlsSrtpTransport>(std::move(srtp_transport));
+        rtc::MakeUnique<webrtz::DtlsSrtpTransport>(std::move(srtp_transport));
     dtls_srtp_transport->SetDtlsTransports(rtp_dtls_transport_.get(),
                                            /*rtcp_dtls_transport=*/nullptr);
     return dtls_srtp_transport;
@@ -280,11 +280,11 @@ class RtpSenderReceiverTest : public testing::Test,
  protected:
   rtc::Thread* const network_thread_;
   rtc::Thread* const worker_thread_;
-  webrtc::RtcEventLogNullImpl event_log_;
+  webrtz::RtcEventLogNullImpl event_log_;
   // The |rtp_dtls_transport_| and |rtp_transport_| should be destroyed after
   // the |channel_manager|.
   std::unique_ptr<cricket::DtlsTransportInternal> rtp_dtls_transport_;
-  std::unique_ptr<webrtc::RtpTransportInternal> rtp_transport_;
+  std::unique_ptr<webrtz::RtpTransportInternal> rtp_transport_;
   // |media_engine_| is actually owned by |channel_manager_|.
   cricket::FakeMediaEngine* media_engine_;
   cricket::ChannelManager channel_manager_;
@@ -404,14 +404,14 @@ TEST_F(RtpSenderReceiverTest, LocalVideoTrackDisable) {
 TEST_F(RtpSenderReceiverTest, RemoteVideoTrackState) {
   CreateVideoRtpReceiver();
 
-  EXPECT_EQ(webrtc::MediaStreamTrackInterface::kLive, video_track_->state());
-  EXPECT_EQ(webrtc::MediaSourceInterface::kLive,
+  EXPECT_EQ(webrtz::MediaStreamTrackInterface::kLive, video_track_->state());
+  EXPECT_EQ(webrtz::MediaSourceInterface::kLive,
             video_track_->GetSource()->state());
 
   DestroyVideoRtpReceiver();
 
-  EXPECT_EQ(webrtc::MediaStreamTrackInterface::kEnded, video_track_->state());
-  EXPECT_EQ(webrtc::MediaSourceInterface::kEnded,
+  EXPECT_EQ(webrtz::MediaStreamTrackInterface::kEnded, video_track_->state());
+  EXPECT_EQ(webrtz::MediaSourceInterface::kEnded,
             video_track_->GetSource()->state());
 }
 
@@ -614,7 +614,7 @@ TEST_F(RtpSenderReceiverTest, SetAudioMaxSendBitrate) {
   CreateAudioRtpSender();
 
   EXPECT_EQ(-1, voice_media_channel_->max_bps());
-  webrtc::RtpParameters params = audio_rtp_sender_->GetParameters();
+  webrtz::RtpParameters params = audio_rtp_sender_->GetParameters();
   EXPECT_EQ(1, params.encodings.size());
   EXPECT_FALSE(params.encodings[0].max_bitrate_bps);
   params.encodings[0].max_bitrate_bps = 1000;
@@ -639,9 +639,9 @@ TEST_F(RtpSenderReceiverTest, SetAudioMaxSendBitrate) {
 TEST_F(RtpSenderReceiverTest, SetAudioBitratePriority) {
   CreateAudioRtpSender();
 
-  webrtc::RtpParameters params = audio_rtp_sender_->GetParameters();
+  webrtz::RtpParameters params = audio_rtp_sender_->GetParameters();
   EXPECT_EQ(1, params.encodings.size());
-  EXPECT_EQ(webrtc::kDefaultBitratePriority,
+  EXPECT_EQ(webrtz::kDefaultBitratePriority,
             params.encodings[0].bitrate_priority);
   double new_bitrate_priority = 2.0;
   params.encodings[0].bitrate_priority = new_bitrate_priority;
@@ -672,7 +672,7 @@ TEST_F(RtpSenderReceiverTest, SetVideoMaxSendBitrate) {
   CreateVideoRtpSender();
 
   EXPECT_EQ(-1, video_media_channel_->max_bps());
-  webrtc::RtpParameters params = video_rtp_sender_->GetParameters();
+  webrtz::RtpParameters params = video_rtp_sender_->GetParameters();
   EXPECT_EQ(1, params.encodings.size());
   EXPECT_FALSE(params.encodings[0].max_bitrate_bps);
   params.encodings[0].max_bitrate_bps = 1000;
@@ -697,9 +697,9 @@ TEST_F(RtpSenderReceiverTest, SetVideoMaxSendBitrate) {
 TEST_F(RtpSenderReceiverTest, SetVideoBitratePriority) {
   CreateVideoRtpSender();
 
-  webrtc::RtpParameters params = video_rtp_sender_->GetParameters();
+  webrtz::RtpParameters params = video_rtp_sender_->GetParameters();
   EXPECT_EQ(1, params.encodings.size());
-  EXPECT_EQ(webrtc::kDefaultBitratePriority,
+  EXPECT_EQ(webrtz::kDefaultBitratePriority,
             params.encodings[0].bitrate_priority);
   double new_bitrate_priority = 2.0;
   params.encodings[0].bitrate_priority = new_bitrate_priority;
@@ -880,4 +880,4 @@ TEST_F(RtpSenderReceiverTest, TestOnDestroyedSignal) {
   EXPECT_TRUE(audio_sender_destroyed_signal_fired_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

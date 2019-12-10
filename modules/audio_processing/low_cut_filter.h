@@ -16,7 +16,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioBuffer;
 
@@ -31,6 +31,6 @@ class LowCutFilter {
   std::vector<std::unique_ptr<BiquadFilter>> filters_;
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(LowCutFilter);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_LOW_CUT_FILTER_H_

@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using test::AudioLoop;
 using ::testing::TestWithParam;
@@ -84,7 +84,7 @@ OpusTest::OpusTest()
 void OpusTest::PrepareSpeechData(size_t channel, int block_length_ms,
                                  int loop_length_ms) {
   const std::string file_name =
-        webrtc::test::ResourcePath((channel == 1) ?
+        webrtz::test::ResourcePath((channel == 1) ?
             "audio_coding/testfile32kHz" :
             "audio_coding/teststereo32kHz", "pcm");
   if (loop_length_ms < block_length_ms) {
@@ -813,4 +813,4 @@ INSTANTIATE_TEST_CASE_P(VariousMode,
                         Combine(Values(1, 2), Values(0, 1)));
 
 
-}  // namespace webrtc
+}  // namespace webrtz

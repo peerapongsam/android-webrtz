@@ -26,7 +26,7 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpSenderInterface : public rtc::RefCountInterface {
  public:
@@ -81,6 +81,6 @@ BEGIN_SIGNALING_PROXY_MAP(RtpSender)
   PROXY_CONSTMETHOD0(rtc::scoped_refptr<DtmfSenderInterface>, GetDtmfSender);
   END_PROXY_MAP()
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_RTPSENDERINTERFACE_H_

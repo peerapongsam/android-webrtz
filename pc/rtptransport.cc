@@ -17,7 +17,7 @@
 #include "rtc_base/copyonwritebuffer.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void RtpTransport::SetRtcpMuxEnabled(bool enable) {
   rtcp_mux_enabled_ = enable;
@@ -261,4 +261,4 @@ bool RtpTransport::WantsPacket(bool rtcp,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

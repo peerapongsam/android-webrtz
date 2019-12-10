@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 // From RFC 3550, RTP: A Transport Protocol for Real-Time Applications.
@@ -97,4 +97,4 @@ uint32_t ReportBlock::cumulative_lost() const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

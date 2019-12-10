@@ -18,7 +18,7 @@
 #include "p2p/base/fakepackettransport.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This test uses fake packet transports and a fake media engine, in order to
 // test the RtpTransportController at only an API level. Any end-to-end test
@@ -196,4 +196,4 @@ TEST_F(RtpTransportControllerTest,
   EXPECT_TRUE(video_receiver_result.ok());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

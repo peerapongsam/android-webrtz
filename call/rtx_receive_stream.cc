@@ -15,7 +15,7 @@
 #include "modules/rtp_rtcp/source/rtp_packet_received.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtxReceiveStream::RtxReceiveStream(
     RtpPacketSinkInterface* media_sink,
@@ -74,4 +74,4 @@ void RtxReceiveStream::OnRtpPacket(const RtpPacketReceived& rtx_packet) {
   media_sink_->OnRtpPacket(media_packet);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

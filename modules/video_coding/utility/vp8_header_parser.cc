@@ -11,7 +11,7 @@
 
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace vp8 {
 namespace {
@@ -202,4 +202,4 @@ bool GetQp(const uint8_t* buf, size_t length, int* qp) {
 
 }  // namespace vp8
 
-}  // namespace webrtc
+}  // namespace webrtz

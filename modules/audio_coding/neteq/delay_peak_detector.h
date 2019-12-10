@@ -19,7 +19,7 @@
 #include "modules/audio_coding/neteq/tick_timer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DelayPeakDetector {
  public:
@@ -71,5 +71,5 @@ class DelayPeakDetector {
   RTC_DISALLOW_COPY_AND_ASSIGN(DelayPeakDetector);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_DELAY_PEAK_DETECTOR_H_

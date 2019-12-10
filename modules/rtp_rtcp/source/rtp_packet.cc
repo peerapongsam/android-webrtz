@@ -21,7 +21,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/random.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 constexpr size_t kFixedHeaderSize = 12;
 constexpr uint8_t kRtpVersion = 2;
@@ -555,4 +555,4 @@ void RtpPacket::WriteAt(size_t offset, uint8_t byte) {
   buffer_.data()[offset] = byte;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

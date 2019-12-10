@@ -22,7 +22,7 @@
 #include "rtc_base/ptr_util.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -590,4 +590,4 @@ bool EndToEndTest::ShouldCreateReceivers() const {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -30,7 +30,7 @@
 
 using testing::_;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -186,7 +186,7 @@ class RtpVideoStreamReceiverTest : public testing::Test {
     return config;
   }
 
-  const webrtc::test::ScopedFieldTrials override_field_trials_;
+  const webrtz::test::ScopedFieldTrials override_field_trials_;
   VideoReceiveStream::Config config_;
   MockNackSender mock_nack_sender_;
   MockKeyFrameRequestSender mock_key_frame_request_sender_;
@@ -487,4 +487,4 @@ TEST_F(RtpVideoStreamReceiverTest, RepeatedSecondarySinkDisallowed) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

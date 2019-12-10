@@ -38,7 +38,7 @@
     }                                                     \
   } while (0)
 
-namespace webrtc {
+namespace webrtz {
 
 OpenSLESPlayer::OpenSLESPlayer(AudioManager* audio_manager)
     : audio_manager_(audio_manager),
@@ -431,4 +431,4 @@ SLuint32 OpenSLESPlayer::GetPlayState() const {
   return state;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -20,7 +20,7 @@
 using ::testing::NiceMock;
 using ::testing::_;
 
-namespace webrtc {
+namespace webrtz {
 // Emulating old interface for test suite compatibility.
 // TODO(srte): Update tests to reflect new interface.
 class LimitObserverWrapper : public BitrateAllocator::LimitObserver {
@@ -835,4 +835,4 @@ TEST_F(BitrateAllocatorTest, PriorityRateThreeObserversTwoAllocatedToMax) {
   allocator_->RemoveObserver(&observer_high);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

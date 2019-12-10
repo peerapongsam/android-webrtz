@@ -14,9 +14,9 @@
 #include "modules/audio_coding/codecs/isac/audio_encoder_isac_t.h"
 #include "modules/audio_coding/codecs/isac/fix/source/isac_fix_type.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using AudioEncoderIsacFixImpl = AudioEncoderIsacT<IsacFix>;
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_CODECS_ISAC_FIX_INCLUDE_AUDIO_ENCODER_ISACFIX_H_

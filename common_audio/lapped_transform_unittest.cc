@@ -20,7 +20,7 @@ using std::complex;
 
 namespace {
 
-class NoopCallback : public webrtc::LappedTransform::Callback {
+class NoopCallback : public webrtz::LappedTransform::Callback {
  public:
   NoopCallback() : block_num_(0) {}
 
@@ -44,7 +44,7 @@ class NoopCallback : public webrtc::LappedTransform::Callback {
   size_t block_num_;
 };
 
-class FftCheckerCallback : public webrtc::LappedTransform::Callback {
+class FftCheckerCallback : public webrtz::LappedTransform::Callback {
  public:
   FftCheckerCallback() : block_num_(0) {}
 
@@ -87,7 +87,7 @@ void SetFloatArray(float value, int rows, int cols, float* const* array) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(LappedTransformTest, Windowless) {
   const size_t kChannels = 3;
@@ -205,4 +205,4 @@ TEST(LappedTransformTest, chunk_length) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

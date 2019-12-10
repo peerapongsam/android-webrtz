@@ -38,7 +38,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -311,7 +311,7 @@ class SsrcSwitchDetector : public NetEqPostInsertPacket {
 
 class StatsGetter : public NetEqGetAudioCallback {
  public:
-  // This struct is a replica of webrtc::NetEqNetworkStatistics, but with all
+  // This struct is a replica of webrtz::NetEqNetworkStatistics, but with all
   // values stored in double precision.
   struct Stats {
     double current_buffer_size_ms = 0.0;
@@ -731,8 +731,8 @@ int RunTest(int argc, char* argv[]) {
 
 }  // namespace
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
-  return webrtc::test::RunTest(argc, argv);
+  return webrtz::test::RunTest(argc, argv);
 }

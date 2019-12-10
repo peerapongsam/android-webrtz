@@ -64,7 +64,7 @@ using cricket::STUN_PORT_TYPE;
 using cricket::RELAY_PORT_TYPE;
 using cricket::PRFLX_PORT_TYPE;
 
-namespace webrtc {
+namespace webrtz {
 
 // Error messages
 const char kBundleWithoutRtcpMux[] =
@@ -109,35 +109,35 @@ enum {
 
 struct SetSessionDescriptionMsg : public rtc::MessageData {
   explicit SetSessionDescriptionMsg(
-      webrtc::SetSessionDescriptionObserver* observer)
+      webrtz::SetSessionDescriptionObserver* observer)
       : observer(observer) {
   }
 
-  rtc::scoped_refptr<webrtc::SetSessionDescriptionObserver> observer;
+  rtc::scoped_refptr<webrtz::SetSessionDescriptionObserver> observer;
   RTCError error;
 };
 
 struct CreateSessionDescriptionMsg : public rtc::MessageData {
   explicit CreateSessionDescriptionMsg(
-      webrtc::CreateSessionDescriptionObserver* observer)
+      webrtz::CreateSessionDescriptionObserver* observer)
       : observer(observer) {}
 
-  rtc::scoped_refptr<webrtc::CreateSessionDescriptionObserver> observer;
+  rtc::scoped_refptr<webrtz::CreateSessionDescriptionObserver> observer;
   RTCError error;
 };
 
 struct GetStatsMsg : public rtc::MessageData {
-  GetStatsMsg(webrtc::StatsObserver* observer,
-              webrtc::MediaStreamTrackInterface* track)
+  GetStatsMsg(webrtz::StatsObserver* observer,
+              webrtz::MediaStreamTrackInterface* track)
       : observer(observer), track(track) {
   }
-  rtc::scoped_refptr<webrtc::StatsObserver> observer;
-  rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> track;
+  rtc::scoped_refptr<webrtz::StatsObserver> observer;
+  rtc::scoped_refptr<webrtz::MediaStreamTrackInterface> track;
 };
 
 // Check if we can send |new_stream| on a PeerConnection.
-bool CanAddLocalMediaStream(webrtc::StreamCollectionInterface* current_streams,
-                            webrtc::MediaStreamInterface* new_stream) {
+bool CanAddLocalMediaStream(webrtz::StreamCollectionInterface* current_streams,
+                            webrtz::MediaStreamInterface* new_stream) {
   if (!new_stream || !current_streams) {
     return false;
   }
@@ -226,14 +226,14 @@ uint32_t ConvertIceTransportTypeToCandidateFilter(
 }
 
 // Helper to set an error and return from a method.
-bool SafeSetError(webrtc::RTCErrorType type, webrtc::RTCError* error) {
+bool SafeSetError(webrtz::RTCErrorType type, webrtz::RTCError* error) {
   if (error) {
     error->set_type(type);
   }
-  return type == webrtc::RTCErrorType::NONE;
+  return type == webrtz::RTCErrorType::NONE;
 }
 
-bool SafeSetError(webrtc::RTCError error, webrtc::RTCError* error_out) {
+bool SafeSetError(webrtz::RTCError error, webrtz::RTCError* error_out) {
   if (error_out) {
     *error_out = std::move(error);
   }
@@ -384,12 +384,12 @@ bool MediaSectionsHaveSameCount(const SessionDescription& desc1,
 void NoteKeyProtocolAndMedia(
     KeyExchangeProtocolType protocol_type,
     cricket::MediaType media_type,
-    rtc::scoped_refptr<webrtc::UMAObserver> uma_observer) {
+    rtc::scoped_refptr<webrtz::UMAObserver> uma_observer) {
   if (!uma_observer)
     return;
-  uma_observer->IncrementEnumCounter(webrtc::kEnumCounterKeyProtocol,
+  uma_observer->IncrementEnumCounter(webrtz::kEnumCounterKeyProtocol,
                                      protocol_type,
-                                     webrtc::kEnumCounterKeyProtocolMax);
+                                     webrtz::kEnumCounterKeyProtocolMax);
   static const std::map<std::pair<KeyExchangeProtocolType, cricket::MediaType>,
                         KeyExchangeProtocolMedia>
       proto_media_counter_map = {
@@ -408,7 +408,7 @@ void NoteKeyProtocolAndMedia(
 
   auto it = proto_media_counter_map.find({protocol_type, media_type});
   if (it != proto_media_counter_map.end()) {
-    uma_observer->IncrementEnumCounter(webrtc::kEnumCounterKeyProtocolMediaType,
+    uma_observer->IncrementEnumCounter(webrtz::kEnumCounterKeyProtocolMediaType,
                                        it->second,
                                        kEnumCounterKeyProtocolMediaTypeMax);
   }
@@ -422,7 +422,7 @@ void NoteKeyProtocolAndMedia(
 // by Channel's |srtp_required| check.
 RTCError VerifyCrypto(const SessionDescription* desc,
                       bool dtls_enabled,
-                      rtc::scoped_refptr<webrtc::UMAObserver> uma_observer) {
+                      rtc::scoped_refptr<webrtz::UMAObserver> uma_observer) {
   const cricket::ContentGroup* bundle =
       desc->GetGroupByName(cricket::GROUP_TYPE_BUNDLE);
   for (const cricket::ContentInfo& content_info : desc->contents()) {
@@ -430,8 +430,8 @@ RTCError VerifyCrypto(const SessionDescription* desc,
       continue;
     }
     // Note what media is used with each crypto protocol, for all sections.
-    NoteKeyProtocolAndMedia(dtls_enabled ? webrtc::kEnumCounterKeyProtocolDtls
-                                         : webrtc::kEnumCounterKeyProtocolSdes,
+    NoteKeyProtocolAndMedia(dtls_enabled ? webrtz::kEnumCounterKeyProtocolDtls
+                                         : webrtz::kEnumCounterKeyProtocolSdes,
                             content_info.media_description()->type(),
                             uma_observer);
     const std::string& mid = content_info.name;
@@ -613,7 +613,7 @@ std::string GetStreamIdsString(rtc::ArrayView<const std::string> stream_ids) {
 rtc::Optional<int> RTCConfigurationToIceConfigOptionalInt(
     int rtc_configuration_parameter) {
   if (rtc_configuration_parameter ==
-      webrtc::PeerConnectionInterface::RTCConfiguration::kUndefined) {
+      webrtz::PeerConnectionInterface::RTCConfiguration::kUndefined) {
     return rtc::nullopt;
   }
   return rtc_configuration_parameter;
@@ -689,7 +689,7 @@ bool PeerConnectionInterface::RTCConfiguration::operator==(
     rtc::Optional<int> ice_unwritable_min_checks;
     rtc::Optional<int> stun_candidate_keepalive_interval;
     rtc::Optional<rtc::IntervalRange> ice_regather_interval_range;
-    webrtc::TurnCustomizer* turn_customizer;
+    webrtz::TurnCustomizer* turn_customizer;
     SdpSemantics sdp_semantics;
     rtc::Optional<rtc::AdapterType> network_preference;
   };
@@ -3153,7 +3153,7 @@ bool PeerConnection::StartRtcEventLog(rtc::PlatformFile file,
                               : rtc::saturated_cast<size_t>(max_size_bytes);
   return StartRtcEventLog(
       rtc::MakeUnique<RtcEventLogOutputFile>(file, max_size),
-      webrtc::RtcEventLog::kImmediateOutput);
+      webrtz::RtcEventLog::kImmediateOutput);
 }
 
 bool PeerConnection::StartRtcEventLog(std::unique_ptr<RtcEventLogOutput> output,
@@ -4633,7 +4633,7 @@ bool PeerConnection::InitializePortAllocator_n(
   // by experiment.
   if (configuration.disable_ipv6) {
     portallocator_flags &= ~(cricket::PORTALLOCATOR_ENABLE_IPV6);
-  } else if (webrtc::field_trial::FindFullName("WebRTC-IPv6Default")
+  } else if (webrtz::field_trial::FindFullName("WebRTC-IPv6Default")
                  .find("Disabled") == 0) {
     portallocator_flags &= ~(cricket::PORTALLOCATOR_ENABLE_IPV6);
   }
@@ -4681,7 +4681,7 @@ bool PeerConnection::ReconfigurePortAllocator_n(
     IceTransportsType type,
     int candidate_pool_size,
     bool prune_turn_ports,
-    webrtc::TurnCustomizer* turn_customizer,
+    webrtz::TurnCustomizer* turn_customizer,
     rtc::Optional<int> stun_candidate_keepalive_interval) {
   port_allocator_->set_candidate_filter(
       ConvertIceTransportTypeToCandidateFilter(type));
@@ -4977,7 +4977,7 @@ bool PeerConnection::GetLocalTrackIdBySsrc(uint32_t ssrc,
   if (!local_description()) {
     return false;
   }
-  return webrtc::GetTrackIdBySsrc(local_description()->description(), ssrc,
+  return webrtz::GetTrackIdBySsrc(local_description()->description(), ssrc,
                                   track_id);
 }
 
@@ -4986,7 +4986,7 @@ bool PeerConnection::GetRemoteTrackIdBySsrc(uint32_t ssrc,
   if (!remote_description()) {
     return false;
   }
-  return webrtc::GetTrackIdBySsrc(remote_description()->description(), ssrc,
+  return webrtz::GetTrackIdBySsrc(remote_description()->description(), ssrc,
                                   track_id);
 }
 
@@ -5266,7 +5266,7 @@ void PeerConnection::OnTransportControllerDtlsHandshakeError(
     rtc::SSLHandshakeError error) {
   if (metrics_observer()) {
     metrics_observer()->IncrementEnumCounter(
-        webrtc::kEnumCounterDtlsHandshakeError, static_cast<int>(error),
+        webrtz::kEnumCounterDtlsHandshakeError, static_cast<int>(error),
         static_cast<int>(rtc::SSLHandshakeError::MAX_VALUE));
   }
 }
@@ -6154,4 +6154,4 @@ void PeerConnection::ClearStatsCache() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

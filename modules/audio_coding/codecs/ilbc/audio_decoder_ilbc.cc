@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioDecoderIlbcImpl::AudioDecoderIlbcImpl() {
   WebRtcIlbcfix_DecoderCreate(&dec_state_);
@@ -107,4 +107,4 @@ size_t AudioDecoderIlbcImpl::Channels() const {
   return 1;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

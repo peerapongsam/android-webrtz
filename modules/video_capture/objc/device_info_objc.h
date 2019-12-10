@@ -22,7 +22,7 @@
 + (NSString*)deviceNameForIndex:(int)index;
 + (NSString*)deviceUniqueIdForIndex:(int)index;
 + (NSString*)deviceNameForUniqueId:(NSString*)uniqueId;
-+ (webrtc::VideoCaptureCapability)capabilityForPreset:(NSString*)preset;
++ (webrtz::VideoCaptureCapability)capabilityForPreset:(NSString*)preset;
 
 @end
 

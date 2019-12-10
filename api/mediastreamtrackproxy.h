@@ -19,7 +19,7 @@
 #include "api/mediastreaminterface.h"
 #include "api/proxy.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(deadbeef): Move this to .cc file and out of api/. What threads methods
 // are called on is an implementation detail.
@@ -60,6 +60,6 @@ BEGIN_PROXY_MAP(VideoTrack)
   PROXY_METHOD1(void, UnregisterObserver, ObserverInterface*)
 END_PROXY_MAP()
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_MEDIASTREAMTRACKPROXY_H_

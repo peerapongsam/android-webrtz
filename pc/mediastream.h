@@ -19,7 +19,7 @@
 #include "api/mediastreaminterface.h"
 #include "api/notifier.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MediaStream : public Notifier<MediaStreamInterface> {
  public:
@@ -53,6 +53,6 @@ class MediaStream : public Notifier<MediaStreamInterface> {
   VideoTrackVector video_tracks_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_MEDIASTREAM_H_

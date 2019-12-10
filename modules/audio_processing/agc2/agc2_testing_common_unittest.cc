@@ -11,7 +11,7 @@
 #include "modules/audio_processing/agc2/agc2_testing_common.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(AutomaticGainController2Common, TestLinSpace) {
   std::vector<double> points1 = test::LinSpace(-1.0, 2.0, 4);
@@ -23,4 +23,4 @@ TEST(AutomaticGainController2Common, TestLinSpace) {
   EXPECT_EQ(points2, expected_points2);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

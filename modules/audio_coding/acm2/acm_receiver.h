@@ -28,7 +28,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecInst;
 class NetEq;
@@ -293,6 +293,6 @@ class AcmReceiver {
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_ACM2_ACM_RECEIVER_H_

@@ -27,7 +27,7 @@
 #include "pc/videotracksource.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Internal class used by PeerConnection.
 class RtpReceiverInternal : public RtpReceiverInterface {
@@ -224,6 +224,6 @@ class VideoRtpReceiver : public rtc::RefCountedObject<RtpReceiverInternal> {
   int attachment_id_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPRECEIVER_H_

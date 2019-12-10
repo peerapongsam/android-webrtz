@@ -12,7 +12,7 @@
 
 #include <string.h>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 void SetupFrame(const StreamConfig& stream_config,
@@ -52,4 +52,4 @@ void ExtractVectorFromAudioBuffer(const StreamConfig& stream_config,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

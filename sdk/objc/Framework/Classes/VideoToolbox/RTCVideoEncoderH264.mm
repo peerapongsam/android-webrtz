@@ -172,103 +172,103 @@ void compressionOutputCallback(void *encoder,
 // specific VideoToolbox profile for the specified level, AutoLevel will be
 // returned. The user must initialize the encoder with a resolution and
 // framerate conforming to the selected H264 level regardless.
-CFStringRef ExtractProfile(webrtc::SdpVideoFormat videoFormat) {
-  const rtc::Optional<webrtc::H264::ProfileLevelId> profile_level_id =
-      webrtc::H264::ParseSdpProfileLevelId(videoFormat.parameters);
+CFStringRef ExtractProfile(webrtz::SdpVideoFormat videoFormat) {
+  const rtc::Optional<webrtz::H264::ProfileLevelId> profile_level_id =
+      webrtz::H264::ParseSdpProfileLevelId(videoFormat.parameters);
   RTC_DCHECK(profile_level_id);
   switch (profile_level_id->profile) {
-    case webrtc::H264::kProfileConstrainedBaseline:
-    case webrtc::H264::kProfileBaseline:
+    case webrtz::H264::kProfileConstrainedBaseline:
+    case webrtz::H264::kProfileBaseline:
       switch (profile_level_id->level) {
-        case webrtc::H264::kLevel3:
+        case webrtz::H264::kLevel3:
           return kVTProfileLevel_H264_Baseline_3_0;
-        case webrtc::H264::kLevel3_1:
+        case webrtz::H264::kLevel3_1:
           return kVTProfileLevel_H264_Baseline_3_1;
-        case webrtc::H264::kLevel3_2:
+        case webrtz::H264::kLevel3_2:
           return kVTProfileLevel_H264_Baseline_3_2;
-        case webrtc::H264::kLevel4:
+        case webrtz::H264::kLevel4:
           return kVTProfileLevel_H264_Baseline_4_0;
-        case webrtc::H264::kLevel4_1:
+        case webrtz::H264::kLevel4_1:
           return kVTProfileLevel_H264_Baseline_4_1;
-        case webrtc::H264::kLevel4_2:
+        case webrtz::H264::kLevel4_2:
           return kVTProfileLevel_H264_Baseline_4_2;
-        case webrtc::H264::kLevel5:
+        case webrtz::H264::kLevel5:
           return kVTProfileLevel_H264_Baseline_5_0;
-        case webrtc::H264::kLevel5_1:
+        case webrtz::H264::kLevel5_1:
           return kVTProfileLevel_H264_Baseline_5_1;
-        case webrtc::H264::kLevel5_2:
+        case webrtz::H264::kLevel5_2:
           return kVTProfileLevel_H264_Baseline_5_2;
-        case webrtc::H264::kLevel1:
-        case webrtc::H264::kLevel1_b:
-        case webrtc::H264::kLevel1_1:
-        case webrtc::H264::kLevel1_2:
-        case webrtc::H264::kLevel1_3:
-        case webrtc::H264::kLevel2:
-        case webrtc::H264::kLevel2_1:
-        case webrtc::H264::kLevel2_2:
+        case webrtz::H264::kLevel1:
+        case webrtz::H264::kLevel1_b:
+        case webrtz::H264::kLevel1_1:
+        case webrtz::H264::kLevel1_2:
+        case webrtz::H264::kLevel1_3:
+        case webrtz::H264::kLevel2:
+        case webrtz::H264::kLevel2_1:
+        case webrtz::H264::kLevel2_2:
           return kVTProfileLevel_H264_Baseline_AutoLevel;
       }
 
-    case webrtc::H264::kProfileMain:
+    case webrtz::H264::kProfileMain:
       switch (profile_level_id->level) {
-        case webrtc::H264::kLevel3:
+        case webrtz::H264::kLevel3:
           return kVTProfileLevel_H264_Main_3_0;
-        case webrtc::H264::kLevel3_1:
+        case webrtz::H264::kLevel3_1:
           return kVTProfileLevel_H264_Main_3_1;
-        case webrtc::H264::kLevel3_2:
+        case webrtz::H264::kLevel3_2:
           return kVTProfileLevel_H264_Main_3_2;
-        case webrtc::H264::kLevel4:
+        case webrtz::H264::kLevel4:
           return kVTProfileLevel_H264_Main_4_0;
-        case webrtc::H264::kLevel4_1:
+        case webrtz::H264::kLevel4_1:
           return kVTProfileLevel_H264_Main_4_1;
-        case webrtc::H264::kLevel4_2:
+        case webrtz::H264::kLevel4_2:
           return kVTProfileLevel_H264_Main_4_2;
-        case webrtc::H264::kLevel5:
+        case webrtz::H264::kLevel5:
           return kVTProfileLevel_H264_Main_5_0;
-        case webrtc::H264::kLevel5_1:
+        case webrtz::H264::kLevel5_1:
           return kVTProfileLevel_H264_Main_5_1;
-        case webrtc::H264::kLevel5_2:
+        case webrtz::H264::kLevel5_2:
           return kVTProfileLevel_H264_Main_5_2;
-        case webrtc::H264::kLevel1:
-        case webrtc::H264::kLevel1_b:
-        case webrtc::H264::kLevel1_1:
-        case webrtc::H264::kLevel1_2:
-        case webrtc::H264::kLevel1_3:
-        case webrtc::H264::kLevel2:
-        case webrtc::H264::kLevel2_1:
-        case webrtc::H264::kLevel2_2:
+        case webrtz::H264::kLevel1:
+        case webrtz::H264::kLevel1_b:
+        case webrtz::H264::kLevel1_1:
+        case webrtz::H264::kLevel1_2:
+        case webrtz::H264::kLevel1_3:
+        case webrtz::H264::kLevel2:
+        case webrtz::H264::kLevel2_1:
+        case webrtz::H264::kLevel2_2:
           return kVTProfileLevel_H264_Main_AutoLevel;
       }
 
-    case webrtc::H264::kProfileConstrainedHigh:
-    case webrtc::H264::kProfileHigh:
+    case webrtz::H264::kProfileConstrainedHigh:
+    case webrtz::H264::kProfileHigh:
       switch (profile_level_id->level) {
-        case webrtc::H264::kLevel3:
+        case webrtz::H264::kLevel3:
           return kVTProfileLevel_H264_High_3_0;
-        case webrtc::H264::kLevel3_1:
+        case webrtz::H264::kLevel3_1:
           return kVTProfileLevel_H264_High_3_1;
-        case webrtc::H264::kLevel3_2:
+        case webrtz::H264::kLevel3_2:
           return kVTProfileLevel_H264_High_3_2;
-        case webrtc::H264::kLevel4:
+        case webrtz::H264::kLevel4:
           return kVTProfileLevel_H264_High_4_0;
-        case webrtc::H264::kLevel4_1:
+        case webrtz::H264::kLevel4_1:
           return kVTProfileLevel_H264_High_4_1;
-        case webrtc::H264::kLevel4_2:
+        case webrtz::H264::kLevel4_2:
           return kVTProfileLevel_H264_High_4_2;
-        case webrtc::H264::kLevel5:
+        case webrtz::H264::kLevel5:
           return kVTProfileLevel_H264_High_5_0;
-        case webrtc::H264::kLevel5_1:
+        case webrtz::H264::kLevel5_1:
           return kVTProfileLevel_H264_High_5_1;
-        case webrtc::H264::kLevel5_2:
+        case webrtz::H264::kLevel5_2:
           return kVTProfileLevel_H264_High_5_2;
-        case webrtc::H264::kLevel1:
-        case webrtc::H264::kLevel1_b:
-        case webrtc::H264::kLevel1_1:
-        case webrtc::H264::kLevel1_2:
-        case webrtc::H264::kLevel1_3:
-        case webrtc::H264::kLevel2:
-        case webrtc::H264::kLevel2_1:
-        case webrtc::H264::kLevel2_2:
+        case webrtz::H264::kLevel1:
+        case webrtz::H264::kLevel1_b:
+        case webrtz::H264::kLevel1_1:
+        case webrtz::H264::kLevel1_2:
+        case webrtz::H264::kLevel1_3:
+        case webrtz::H264::kLevel2:
+        case webrtz::H264::kLevel2_1:
+        case webrtz::H264::kLevel2_2:
           return kVTProfileLevel_H264_High_AutoLevel;
       }
   }
@@ -277,7 +277,7 @@ CFStringRef ExtractProfile(webrtc::SdpVideoFormat videoFormat) {
 
 @implementation RTCVideoEncoderH264 {
   RTCVideoCodecInfo *_codecInfo;
-  std::unique_ptr<webrtc::BitrateAdjuster> _bitrateAdjuster;
+  std::unique_ptr<webrtz::BitrateAdjuster> _bitrateAdjuster;
   uint32_t _targetBitrateBps;
   uint32_t _encoderBitrateBps;
   RTCH264PacketizationMode _packetizationMode;
@@ -288,7 +288,7 @@ CFStringRef ExtractProfile(webrtc::SdpVideoFormat videoFormat) {
   VTCompressionSessionRef _compressionSession;
   RTCVideoCodecMode _mode;
 
-  webrtc::H264BitstreamParser _h264BitstreamParser;
+  webrtz::H264BitstreamParser _h264BitstreamParser;
   std::vector<uint8_t> _frameScaleBuffer;
 }
 
@@ -302,8 +302,8 @@ CFStringRef ExtractProfile(webrtc::SdpVideoFormat videoFormat) {
 - (instancetype)initWithCodecInfo:(RTCVideoCodecInfo *)codecInfo {
   if (self = [super init]) {
     _codecInfo = codecInfo;
-    _bitrateAdjuster.reset(new webrtc::BitrateAdjuster(
-        webrtc::Clock::GetRealTimeClock(), .5, .95));
+    _bitrateAdjuster.reset(new webrtz::BitrateAdjuster(
+        webrtz::Clock::GetRealTimeClock(), .5, .95));
     _packetizationMode = RTCH264PacketizationModeNonInterleaved;
     _profile = ExtractProfile([codecInfo nativeSdpVideoFormat]);
     RTC_LOG(LS_INFO) << "Using profile " << CFStringToString(_profile);
@@ -720,7 +720,7 @@ CFStringRef ExtractProfile(webrtc::SdpVideoFormat videoFormat) {
   std::unique_ptr<rtc::Buffer> buffer(new rtc::Buffer());
   RTCRtpFragmentationHeader *header;
   {
-    std::unique_ptr<webrtc::RTPFragmentationHeader> header_cpp;
+    std::unique_ptr<webrtz::RTPFragmentationHeader> header_cpp;
     bool result =
         H264CMSampleBufferToAnnexBBuffer(sampleBuffer, isKeyframe, buffer.get(), &header_cpp);
     header = [[RTCRtpFragmentationHeader alloc] initWithNativeFragmentationHeader:header_cpp.get()];
@@ -740,7 +740,7 @@ CFStringRef ExtractProfile(webrtc::SdpVideoFormat videoFormat) {
   frame.rotation = rotation;
   frame.contentType = (_mode == RTCVideoCodecModeScreensharing) ? RTCVideoContentTypeScreenshare :
                                                                   RTCVideoContentTypeUnspecified;
-  frame.flags = webrtc::TimingFrameFlags::kInvalid;
+  frame.flags = webrtz::TimingFrameFlags::kInvalid;
 
   int qp;
   _h264BitstreamParser.ParseBitstream(buffer->data(), buffer->size());

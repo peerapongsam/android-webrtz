@@ -11,7 +11,7 @@
 #include "modules/rtp_rtcp/source/rtcp_nack_stats.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(RtcpNackStatsTest, Requests) {
   RtcpNackStats stats;
@@ -60,5 +60,5 @@ TEST(RtcpNackStatsTest, RequestsWithWrap) {
   EXPECT_EQ(8U, stats.requests());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

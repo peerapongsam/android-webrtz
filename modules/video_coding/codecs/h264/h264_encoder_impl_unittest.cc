@@ -13,7 +13,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -80,4 +80,4 @@ TEST(H264EncoderImplTest, CanInitializeWithRemovedParameter) {
 
 }  // anonymous namespace
 
-}  // namespace webrtc
+}  // namespace webrtz

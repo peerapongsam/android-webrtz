@@ -19,11 +19,11 @@
 #include "api/optional.h"
 #include "modules/congestion_controller/network_control/include/network_control.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
-namespace webrtc_cc {
+namespace webrtz_cc {
 
 // This class controls initiation of probing to estimate initial channel
 // capacity. There is also support for probing during a session when max
@@ -103,7 +103,7 @@ class ProbeController {
   RTC_DISALLOW_COPY_AND_ASSIGN(ProbeController);
 };
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_GOOG_CC_PROBE_CONTROLLER_H_

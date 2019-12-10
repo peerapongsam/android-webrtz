@@ -25,7 +25,7 @@
 #include "sdk/android/src/jni/audio_device/audio_device_module.h"
 #include "sdk/android/src/jni/audio_device/opensles_common.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FineAudioBuffer;
 
@@ -188,6 +188,6 @@ class OpenSLESRecorder : public AudioInput {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_AUDIO_DEVICE_OPENSLES_RECORDER_H_

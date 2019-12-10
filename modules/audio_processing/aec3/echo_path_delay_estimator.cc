@@ -17,7 +17,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 EchoPathDelayEstimator::EchoPathDelayEstimator(
     ApmDataDumper* data_dumper,
@@ -102,4 +102,4 @@ rtc::Optional<DelayEstimate> EchoPathDelayEstimator::EstimateDelay(
   return aggregated_matched_filter_lag;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

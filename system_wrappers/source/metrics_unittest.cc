@@ -12,7 +12,7 @@
 #include "system_wrappers/include/metrics_default.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int kSample = 22;
 
@@ -110,4 +110,4 @@ TEST_F(MetricsTest, RtcHistogramSparse_NonConstantNameWorks) {
   EXPECT_EQ(1, metrics::NumSamples("Sparse2"));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

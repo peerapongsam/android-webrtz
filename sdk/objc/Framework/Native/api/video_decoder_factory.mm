@@ -13,11 +13,11 @@
 #include "rtc_base/ptr_util.h"
 #include "sdk/objc/Framework/Native/src/objc_video_decoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<VideoDecoderFactory> ObjCToNativeVideoDecoderFactory(
     id<RTCVideoDecoderFactory> objc_video_decoder_factory) {
   return rtc::MakeUnique<ObjCVideoDecoderFactory>(objc_video_decoder_factory);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

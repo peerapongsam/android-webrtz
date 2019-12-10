@@ -25,7 +25,7 @@
 // #define should be removed (and the code that it enables).
 #define LEGACY_BITEXACT
 
-namespace webrtc {
+namespace webrtz {
 
 static int sample_rate_hz = 8000;
 
@@ -298,4 +298,4 @@ TEST(DtmfBuffer, InvalidEvents) {
   // Finish with a valid event, just to verify that all is ok.
   EXPECT_EQ(DtmfBuffer::kOK, buffer.InsertEvent(event));
 }
-}  // namespace webrtc
+}  // namespace webrtz

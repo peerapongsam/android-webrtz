@@ -35,7 +35,7 @@
 #define HAVE_PTHREAD_COND_TIMEDWAIT_MONOTONIC 0
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 EventTimerWrapper* EventTimerWrapper::Create() {
@@ -272,4 +272,4 @@ bool EventTimerPosix::StopTimer() {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

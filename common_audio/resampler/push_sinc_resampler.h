@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // A thin wrapper over SincResampler to provide a push-based interface as
 // required by WebRTC. SincResampler uses a pull-based interface, and will
@@ -72,6 +72,6 @@ class PushSincResampler : public SincResamplerCallback {
   RTC_DISALLOW_COPY_AND_ASSIGN(PushSincResampler);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_RESAMPLER_PUSH_SINC_RESAMPLER_H_

@@ -24,7 +24,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TemporalLayers::FrameConfig::FrameConfig()
     : FrameConfig(kNone, kNone, kNone, false) {}
@@ -535,4 +535,4 @@ bool DefaultTemporalLayersChecker::CheckTemporalConfig(
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

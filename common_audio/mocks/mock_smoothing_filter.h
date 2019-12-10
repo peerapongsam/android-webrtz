@@ -14,7 +14,7 @@
 #include "common_audio/smoothing_filter.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockSmoothingFilter : public SmoothingFilter {
  public:
@@ -23,6 +23,6 @@ class MockSmoothingFilter : public SmoothingFilter {
   MOCK_METHOD1(SetTimeConstantMs, bool(int));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_MOCKS_MOCK_SMOOTHING_FILTER_H_

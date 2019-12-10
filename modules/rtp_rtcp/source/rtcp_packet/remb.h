@@ -16,7 +16,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/psfb.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 
@@ -56,5 +56,5 @@ class Remb : public Psfb {
   std::vector<uint32_t> ssrcs_;
 };
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_REMB_H_

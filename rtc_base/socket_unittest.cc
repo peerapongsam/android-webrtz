@@ -25,12 +25,12 @@
 
 namespace rtc {
 
-using webrtc::testing::SSE_CLOSE;
-using webrtc::testing::SSE_ERROR;
-using webrtc::testing::SSE_OPEN;
-using webrtc::testing::SSE_READ;
-using webrtc::testing::SSE_WRITE;
-using webrtc::testing::StreamSink;
+using webrtz::testing::SSE_CLOSE;
+using webrtz::testing::SSE_ERROR;
+using webrtz::testing::SSE_OPEN;
+using webrtz::testing::SSE_READ;
+using webrtz::testing::SSE_WRITE;
+using webrtz::testing::StreamSink;
 
 #define MAYBE_SKIP_IPV6                        \
   if (!HasIPv6Enabled()) {                     \

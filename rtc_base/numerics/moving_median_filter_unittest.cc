@@ -11,7 +11,7 @@
 #include "rtc_base/numerics/moving_median_filter.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(MovingMedianFilterTest, ProcessesNoSamples) {
   MovingMedianFilter<int> filter(2);
@@ -48,4 +48,4 @@ TEST(MovingMedianFilterTest, ReturnsMovingMedianWindow1) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

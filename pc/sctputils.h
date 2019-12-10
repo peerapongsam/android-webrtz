@@ -19,7 +19,7 @@ namespace rtc {
 class CopyOnWriteBuffer;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 struct DataChannelInit;
 
 // Read the message type and return true if it's an OPEN message.
@@ -36,6 +36,6 @@ bool WriteDataChannelOpenMessage(const std::string& label,
                                  rtc::CopyOnWriteBuffer* payload);
 
 void WriteDataChannelOpenAckMessage(rtc::CopyOnWriteBuffer* payload);
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_SCTPUTILS_H_

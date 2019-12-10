@@ -11,7 +11,7 @@
 #include "modules/desktop_capture/win/dxgi_context.h"
 #include "modules/desktop_capture/win/dxgi_duplicator_controller.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DxgiAdapterContext::DxgiAdapterContext() = default;
 DxgiAdapterContext::DxgiAdapterContext(
@@ -29,4 +29,4 @@ void DxgiFrameContext::Reset() {
   controller_id = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

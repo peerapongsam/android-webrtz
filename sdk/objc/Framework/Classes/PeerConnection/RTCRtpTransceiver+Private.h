@@ -16,25 +16,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RTCRtpTransceiverInit ()
 
-@property(nonatomic, readonly) webrtc::RtpTransceiverInit nativeInit;
+@property(nonatomic, readonly) webrtz::RtpTransceiverInit nativeInit;
 
 @end
 
 @interface RTCRtpTransceiver ()
 
-@property(nonatomic, readonly) rtc::scoped_refptr<webrtc::RtpTransceiverInterface>
+@property(nonatomic, readonly) rtc::scoped_refptr<webrtz::RtpTransceiverInterface>
     nativeRtpTransceiver;
 
 /** Initialize an RTCRtpTransceiver with a native RtpTransceiverInterface. */
 - (instancetype)initWithNativeRtpTransceiver:
-        (rtc::scoped_refptr<webrtc::RtpTransceiverInterface>)nativeRtpTransceiver
+        (rtc::scoped_refptr<webrtz::RtpTransceiverInterface>)nativeRtpTransceiver
     NS_DESIGNATED_INITIALIZER;
 
-+ (webrtc::RtpTransceiverDirection)nativeRtpTransceiverDirectionFromDirection:
++ (webrtz::RtpTransceiverDirection)nativeRtpTransceiverDirectionFromDirection:
         (RTCRtpTransceiverDirection)direction;
 
 + (RTCRtpTransceiverDirection)rtpTransceiverDirectionFromNativeDirection:
-        (webrtc::RtpTransceiverDirection)nativeDirection;
+        (webrtz::RtpTransceiverDirection)nativeDirection;
 
 @end
 

@@ -20,22 +20,22 @@
 namespace rtc {
 
 // VideoSourceBase is not thread safe.
-class VideoSourceBase : public VideoSourceInterface<webrtc::VideoFrame> {
+class VideoSourceBase : public VideoSourceInterface<webrtz::VideoFrame> {
  public:
   VideoSourceBase();
   ~VideoSourceBase() override;
-  void AddOrUpdateSink(VideoSinkInterface<webrtc::VideoFrame>* sink,
+  void AddOrUpdateSink(VideoSinkInterface<webrtz::VideoFrame>* sink,
                        const VideoSinkWants& wants) override;
-  void RemoveSink(VideoSinkInterface<webrtc::VideoFrame>* sink) override;
+  void RemoveSink(VideoSinkInterface<webrtz::VideoFrame>* sink) override;
 
  protected:
   struct SinkPair {
-    SinkPair(VideoSinkInterface<webrtc::VideoFrame>* sink, VideoSinkWants wants)
+    SinkPair(VideoSinkInterface<webrtz::VideoFrame>* sink, VideoSinkWants wants)
         : sink(sink), wants(wants) {}
-    VideoSinkInterface<webrtc::VideoFrame>* sink;
+    VideoSinkInterface<webrtz::VideoFrame>* sink;
     VideoSinkWants wants;
   };
-  SinkPair* FindSinkPair(const VideoSinkInterface<webrtc::VideoFrame>* sink);
+  SinkPair* FindSinkPair(const VideoSinkInterface<webrtz::VideoFrame>* sink);
 
   const std::vector<SinkPair>& sink_pairs() const { return sinks_; }
   ThreadChecker thread_checker_;

@@ -19,7 +19,7 @@ extern "C" JNIEXPORT jlong JNICALL
 Java_com_google_media_networktester_NetworkTester_CreateTestController(
     JNIEnv* jni,
     jclass) {
-  return reinterpret_cast<intptr_t>(new webrtc::TestController(
+  return reinterpret_cast<intptr_t>(new webrtz::TestController(
       0, 0, "/mnt/sdcard/network_tester_client_config.dat",
       "/mnt/sdcard/network_tester_client_packet_log.dat"));
 }
@@ -29,7 +29,7 @@ Java_com_google_media_networktester_NetworkTester_TestControllerConnect(
     JNIEnv* jni,
     jclass,
     jlong native_pointer) {
-  reinterpret_cast<webrtc::TestController*>(native_pointer)
+  reinterpret_cast<webrtz::TestController*>(native_pointer)
       ->SendConnectTo("85.195.237.107", 9090);
 }
 
@@ -38,7 +38,7 @@ Java_com_google_media_networktester_NetworkTester_TestControllerIsDone(
     JNIEnv* jni,
     jclass,
     jlong native_pointer) {
-  return reinterpret_cast<webrtc::TestController*>(native_pointer)
+  return reinterpret_cast<webrtz::TestController*>(native_pointer)
       ->IsTestDone();
 }
 
@@ -47,7 +47,7 @@ Java_com_google_media_networktester_NetworkTester_TestControllerRun(
     JNIEnv* jni,
     jclass,
     jlong native_pointer) {
-  reinterpret_cast<webrtc::TestController*>(native_pointer)->Run();
+  reinterpret_cast<webrtz::TestController*>(native_pointer)->Run();
 }
 
 extern "C" JNIEXPORT void JNICALL
@@ -55,8 +55,8 @@ Java_com_google_media_networktester_NetworkTester_DestroyTestController(
     JNIEnv* jni,
     jclass,
     jlong native_pointer) {
-  webrtc::TestController* test_controller =
-      reinterpret_cast<webrtc::TestController*>(native_pointer);
+  webrtz::TestController* test_controller =
+      reinterpret_cast<webrtz::TestController*>(native_pointer);
   if (test_controller) {
     delete test_controller;
   }

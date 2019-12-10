@@ -21,7 +21,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr double kLevelEpsilon = 1e-2 * kMaxAbsFloatS16Value;
@@ -199,4 +199,4 @@ TEST(AutomaticGainController2InterpolatedGainCurve, CheckApproximationParams) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

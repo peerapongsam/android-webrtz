@@ -17,13 +17,13 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "media/base/codec.h"
 
-namespace webrtc {
+namespace webrtz {
 class VideoEncoder;
 }
 
 namespace cricket {
 
-// Deprecated. Use webrtc::VideoEncoderFactory instead.
+// Deprecated. Use webrtz::VideoEncoderFactory instead.
 // https://bugs.chromium.org/p/webrtc/issues/detail?id=7925
 class WebRtcVideoEncoderFactory {
  public:
@@ -31,7 +31,7 @@ class WebRtcVideoEncoderFactory {
 
   // Caller takes the ownership of the returned object and it should be released
   // by calling DestroyVideoEncoder().
-  virtual webrtc::VideoEncoder* CreateVideoEncoder(
+  virtual webrtz::VideoEncoder* CreateVideoEncoder(
       const cricket::VideoCodec& codec) = 0;
 
   // Returns a list of supported codecs in order of preference.
@@ -39,10 +39,10 @@ class WebRtcVideoEncoderFactory {
 
   // Returns true if encoders created by this factory of the given codec type
   // will use internal camera sources, meaning that they don't require/expect
-  // frames to be delivered via webrtc::VideoEncoder::Encode.
-  virtual bool EncoderTypeHasInternalSource(webrtc::VideoCodecType type) const;
+  // frames to be delivered via webrtz::VideoEncoder::Encode.
+  virtual bool EncoderTypeHasInternalSource(webrtz::VideoCodecType type) const;
 
-  virtual void DestroyVideoEncoder(webrtc::VideoEncoder* encoder) = 0;
+  virtual void DestroyVideoEncoder(webrtz::VideoEncoder* encoder) = 0;
 };
 
 }  // namespace cricket

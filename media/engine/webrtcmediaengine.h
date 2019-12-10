@@ -19,7 +19,7 @@
 #include "media/base/mediaengine.h"
 #include "modules/audio_device/include/audio_device.h"
 
-namespace webrtc {
+namespace webrtz {
 class AudioDecoderFactory;
 class AudioMixer;
 class AudioProcessing;
@@ -42,50 +42,50 @@ class WebRtcMediaEngineFactory {
   // TODO(deadbeef): Change these to return an std::unique_ptr<>, to indicate
   // that the caller owns the returned object.
   static MediaEngineInterface* Create(
-      webrtc::AudioDeviceModule* adm,
-      const rtc::scoped_refptr<webrtc::AudioEncoderFactory>&
+      webrtz::AudioDeviceModule* adm,
+      const rtc::scoped_refptr<webrtz::AudioEncoderFactory>&
           audio_encoder_factory,
-      const rtc::scoped_refptr<webrtc::AudioDecoderFactory>&
+      const rtc::scoped_refptr<webrtz::AudioDecoderFactory>&
           audio_decoder_factory,
       WebRtcVideoEncoderFactory* video_encoder_factory,
       WebRtcVideoDecoderFactory* video_decoder_factory);
   static MediaEngineInterface* Create(
-      webrtc::AudioDeviceModule* adm,
-      const rtc::scoped_refptr<webrtc::AudioEncoderFactory>&
+      webrtz::AudioDeviceModule* adm,
+      const rtc::scoped_refptr<webrtz::AudioEncoderFactory>&
           audio_encoder_factory,
-      const rtc::scoped_refptr<webrtc::AudioDecoderFactory>&
+      const rtc::scoped_refptr<webrtz::AudioDecoderFactory>&
           audio_decoder_factory,
       WebRtcVideoEncoderFactory* video_encoder_factory,
       WebRtcVideoDecoderFactory* video_decoder_factory,
-      rtc::scoped_refptr<webrtc::AudioMixer> audio_mixer,
-      rtc::scoped_refptr<webrtc::AudioProcessing> apm);
+      rtc::scoped_refptr<webrtz::AudioMixer> audio_mixer,
+      rtc::scoped_refptr<webrtz::AudioProcessing> apm);
 
   // Create a MediaEngineInterface with optional video codec factories. These
   // video factories represents all video codecs, i.e. no extra internal video
   // codecs will be added.
   static std::unique_ptr<MediaEngineInterface> Create(
-      rtc::scoped_refptr<webrtc::AudioDeviceModule> adm,
-      rtc::scoped_refptr<webrtc::AudioEncoderFactory> audio_encoder_factory,
-      rtc::scoped_refptr<webrtc::AudioDecoderFactory> audio_decoder_factory,
-      std::unique_ptr<webrtc::VideoEncoderFactory> video_encoder_factory,
-      std::unique_ptr<webrtc::VideoDecoderFactory> video_decoder_factory,
-      rtc::scoped_refptr<webrtc::AudioMixer> audio_mixer,
-      rtc::scoped_refptr<webrtc::AudioProcessing> audio_processing);
+      rtc::scoped_refptr<webrtz::AudioDeviceModule> adm,
+      rtc::scoped_refptr<webrtz::AudioEncoderFactory> audio_encoder_factory,
+      rtc::scoped_refptr<webrtz::AudioDecoderFactory> audio_decoder_factory,
+      std::unique_ptr<webrtz::VideoEncoderFactory> video_encoder_factory,
+      std::unique_ptr<webrtz::VideoDecoderFactory> video_decoder_factory,
+      rtc::scoped_refptr<webrtz::AudioMixer> audio_mixer,
+      rtc::scoped_refptr<webrtz::AudioProcessing> audio_processing);
 };
 
 // Verify that extension IDs are within 1-byte extension range and are not
 // overlapping.
-bool ValidateRtpExtensions(const std::vector<webrtc::RtpExtension>& extensions);
+bool ValidateRtpExtensions(const std::vector<webrtz::RtpExtension>& extensions);
 
 // Discard any extensions not validated by the 'supported' predicate. Duplicate
 // extensions are removed if 'filter_redundant_extensions' is set, and also any
 // mutually exclusive extensions (see implementation for details) are removed.
-std::vector<webrtc::RtpExtension> FilterRtpExtensions(
-    const std::vector<webrtc::RtpExtension>& extensions,
+std::vector<webrtz::RtpExtension> FilterRtpExtensions(
+    const std::vector<webrtz::RtpExtension>& extensions,
     bool (*supported)(const std::string&),
     bool filter_redundant_extensions);
 
-webrtc::BitrateConstraints GetBitrateConfigForCodec(const Codec& codec);
+webrtz::BitrateConstraints GetBitrateConfigForCodec(const Codec& codec);
 
 }  // namespace cricket
 

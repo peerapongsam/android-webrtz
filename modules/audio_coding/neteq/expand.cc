@@ -25,7 +25,7 @@
 #include "modules/audio_coding/neteq/sync_buffer.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Expand::Expand(BackgroundNoise* background_noise,
                SyncBuffer* sync_buffer,
@@ -975,4 +975,4 @@ void Expand::GenerateRandomVector(int16_t seed_increment,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

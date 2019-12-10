@@ -20,7 +20,7 @@
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Resampler::Resampler()
     : state1_(nullptr),
@@ -918,4 +918,4 @@ int Resampler::Push(const int16_t * samplesIn, size_t lengthIn,
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

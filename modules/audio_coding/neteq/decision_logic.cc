@@ -20,7 +20,7 @@
 #include "modules/audio_coding/neteq/packet_buffer.h"
 #include "modules/audio_coding/neteq/sync_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DecisionLogic* DecisionLogic::Create(int fs_hz,
                                      size_t output_size_samples,
@@ -167,4 +167,4 @@ void DecisionLogic::FilterBufferLevel(size_t buffer_size_samples,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

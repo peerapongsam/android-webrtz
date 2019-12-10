@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/neteq/tools/audio_sink.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 bool AudioSinkFork::WriteArray(const int16_t* audio, size_t num_samples) {
@@ -23,4 +23,4 @@ bool VoidAudioSink::WriteArray(const int16_t* audio, size_t num_samples) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

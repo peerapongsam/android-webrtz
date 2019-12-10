@@ -13,7 +13,7 @@
 #include "common_video/include/i420_buffer_pool.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(TestI420BufferPool, SimpleFrameReuse) {
   I420BufferPool pool;
@@ -70,4 +70,4 @@ TEST(TestI420BufferPool, MaxNumberOfBuffers) {
   EXPECT_EQ(nullptr, pool.CreateBuffer(16, 16).get());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t App::kPacketType;
 constexpr size_t App::kMaxDataSize;
@@ -94,4 +94,4 @@ bool App::Create(uint8_t* packet,
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

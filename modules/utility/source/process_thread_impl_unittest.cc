@@ -19,7 +19,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::_;
 using ::testing::DoAll;
@@ -318,4 +318,4 @@ TEST(ProcessThreadImpl, PostTask) {
   thread.Stop();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

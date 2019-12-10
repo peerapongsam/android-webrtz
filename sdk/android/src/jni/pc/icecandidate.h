@@ -21,7 +21,7 @@
 #include "rtc_base/sslidentity.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 cricket::Candidate JavaToNativeCandidate(JNIEnv* jni,
@@ -80,6 +80,6 @@ rtc::Optional<rtc::AdapterType> JavaToNativeNetworkPreference(
     const JavaRef<jobject>& j_network_preference);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_ICECANDIDATE_H_

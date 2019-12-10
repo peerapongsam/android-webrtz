@@ -17,7 +17,7 @@
 #include "rtc_base/onetimeevent.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPReceiverVideo : public RTPReceiverStrategy {
  public:
@@ -43,6 +43,6 @@ class RTPReceiverVideo : public RTPReceiverStrategy {
  private:
   OneTimeEvent first_packet_received_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_RECEIVER_VIDEO_H_

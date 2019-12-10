@@ -30,7 +30,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const uint32_t kProcessIntervalSec = 60;
@@ -1513,7 +1513,7 @@ TEST_F(TestBasicJitterBuffer, PacketLoss) {
   EXPECT_EQ(kDecodableSession,
             jitter_buffer_->InsertPacket(*packet_, &retransmitted));
   for (int i = 0; i < 11; ++i) {
-    webrtc::FrameType frametype = kVideoFrameDelta;
+    webrtz::FrameType frametype = kVideoFrameDelta;
     seq_num_++;
     timestamp_ += 33 * 90;
     packet_->frameType = frametype;
@@ -2707,4 +2707,4 @@ TEST_F(TestJitterBufferNack, ResetByFutureKeyFrameDoesntError) {
   nack_list = jitter_buffer_->GetNackList(&extended);
   EXPECT_EQ(0u, nack_list.size());
 }
-}  // namespace webrtc
+}  // namespace webrtz

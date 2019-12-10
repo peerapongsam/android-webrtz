@@ -12,7 +12,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int kFps = 25;
 }  // namespace
@@ -128,4 +128,4 @@ TEST(ReceiverTiming, WrapAround) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

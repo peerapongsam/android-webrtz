@@ -17,20 +17,20 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(NetworkTesterTest, ServerClient) {
   TestController client(
-      0, 0, webrtc::test::ResourcePath("network_tester/client_config", "dat"),
-      webrtc::test::OutputPath() + "client_packet_log.dat");
+      0, 0, webrtz::test::ResourcePath("network_tester/client_config", "dat"),
+      webrtz::test::OutputPath() + "client_packet_log.dat");
   TestController server(
       9090, 9090,
-      webrtc::test::ResourcePath("network_tester/server_config", "dat"),
-      webrtc::test::OutputPath() + "server_packet_log.dat");
+      webrtz::test::ResourcePath("network_tester/server_config", "dat"),
+      webrtz::test::OutputPath() + "server_packet_log.dat");
   client.SendConnectTo("127.0.0.1", 9090);
   EXPECT_TRUE_WAIT(server.IsTestDone() && client.IsTestDone(), 2000);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // WEBRTC_NETWORK_TESTER_TEST_ENABLED

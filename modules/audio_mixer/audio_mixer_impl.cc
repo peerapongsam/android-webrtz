@@ -21,7 +21,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 struct SourceFrame {
@@ -251,4 +251,4 @@ bool AudioMixerImpl::GetAudioSourceMixabilityStatusForTest(
   RTC_LOG(LS_ERROR) << "Audio source unknown";
   return false;
 }
-}  // namespace webrtc
+}  // namespace webrtz

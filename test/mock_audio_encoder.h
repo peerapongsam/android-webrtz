@@ -17,7 +17,7 @@
 #include "api/audio_codecs/audio_encoder.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockAudioEncoder : public AudioEncoder {
  public:
@@ -101,6 +101,6 @@ class MockAudioEncoder : public AudioEncoder {
   };
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_MOCK_AUDIO_ENCODER_H_

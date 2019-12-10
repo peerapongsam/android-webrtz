@@ -21,20 +21,20 @@ void FillWithDummyDataAndClose(FILE* const file, const std::string& filename) {
 }
 
 TEST(PlatformFileTest, CreateWriteAndDelete) {
-  const std::string filename = webrtc::test::GenerateTempFilename(
-      webrtc::test::OutputPath(), ".testfile");
+  const std::string filename = webrtz::test::GenerateTempFilename(
+      webrtz::test::OutputPath(), ".testfile");
   const PlatformFile fd = rtc::CreatePlatformFile(filename);
   ASSERT_NE(fd, rtc::kInvalidPlatformFileValue)
       << "Failed to create file descriptor for file: " << filename;
   FILE* const file = rtc::FdopenPlatformFile(fd, "w");
   ASSERT_TRUE(file != nullptr) << "Failed to open file: " << filename;
   FillWithDummyDataAndClose(file, filename);
-  webrtc::test::RemoveFile(filename);
+  webrtz::test::RemoveFile(filename);
 }
 
 TEST(PlatformFileTest, OpenExistingWriteAndDelete) {
-  const std::string filename = webrtc::test::GenerateTempFilename(
-      webrtc::test::OutputPath(), ".testfile");
+  const std::string filename = webrtz::test::GenerateTempFilename(
+      webrtz::test::OutputPath(), ".testfile");
 
   // Create file with dummy data.
   FILE* file = fopen(filename.c_str(), "wb");
@@ -48,12 +48,12 @@ TEST(PlatformFileTest, OpenExistingWriteAndDelete) {
   file = rtc::FdopenPlatformFile(fd, "w");
   ASSERT_TRUE(file != nullptr) << "Failed to open file: " << filename;
   FillWithDummyDataAndClose(file, filename);
-  webrtc::test::RemoveFile(filename);
+  webrtz::test::RemoveFile(filename);
 }
 
 TEST(PlatformFileTest, OpenExistingReadOnlyAndDelete) {
-  const std::string filename = webrtc::test::GenerateTempFilename(
-      webrtc::test::OutputPath(), ".testfile");
+  const std::string filename = webrtz::test::GenerateTempFilename(
+      webrtz::test::OutputPath(), ".testfile");
 
   // Create file with dummy data.
   FILE* file = fopen(filename.c_str(), "wb");
@@ -71,7 +71,7 @@ TEST(PlatformFileTest, OpenExistingReadOnlyAndDelete) {
   ASSERT_GT(fread(&buf, 1, 1, file), 0u)
       << "Failed to read from file: " << filename;
   fclose(file);
-  webrtc::test::RemoveFile(filename);
+  webrtz::test::RemoveFile(filename);
 }
 
 }  // namespace rtc

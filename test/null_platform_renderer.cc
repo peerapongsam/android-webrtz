@@ -10,7 +10,7 @@
 
 #include "test/video_renderer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 VideoRenderer* VideoRenderer::CreatePlatformRenderer(const char* window_title,

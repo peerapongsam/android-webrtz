@@ -198,7 +198,7 @@ TurnPort::TurnPort(rtc::Thread* thread,
                    const RelayCredentials& credentials,
                    int server_priority,
                    const std::string& origin,
-                   webrtc::TurnCustomizer* customizer)
+                   webrtz::TurnCustomizer* customizer)
     : Port(thread,
            RELAY_PORT_TYPE,
            factory,
@@ -233,7 +233,7 @@ TurnPort::TurnPort(rtc::Thread* thread,
                    const std::string& origin,
                    const std::vector<std::string>& tls_alpn_protocols,
                    const std::vector<std::string>& tls_elliptic_curves,
-                   webrtc::TurnCustomizer* customizer)
+                   webrtz::TurnCustomizer* customizer)
     : Port(thread,
            RELAY_PORT_TYPE,
            factory,

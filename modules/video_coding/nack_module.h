@@ -24,7 +24,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class NackModule : public Module {
  public:
@@ -98,6 +98,6 @@ class NackModule : public Module {
   int64_t next_process_time_ms_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_NACK_MODULE_H_

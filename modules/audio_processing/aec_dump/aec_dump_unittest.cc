@@ -23,13 +23,13 @@ TEST(AecDumper, APICallsDoNotCrash) {
   rtc::TaskQueue file_writer_queue("file_writer_queue");
 
   const std::string filename =
-      webrtc::test::TempFilename(webrtc::test::OutputPath(), "aec_dump");
+      webrtz::test::TempFilename(webrtz::test::OutputPath(), "aec_dump");
 
   {
-    std::unique_ptr<webrtc::AecDump> aec_dump =
-        webrtc::AecDumpFactory::Create(filename, -1, &file_writer_queue);
+    std::unique_ptr<webrtz::AecDump> aec_dump =
+        webrtz::AecDumpFactory::Create(filename, -1, &file_writer_queue);
 
-    const webrtc::AudioFrame frame;
+    const webrtz::AudioFrame frame;
     aec_dump->WriteRenderStreamMessage(frame);
 
     aec_dump->AddCaptureStreamInput(frame);
@@ -37,10 +37,10 @@ TEST(AecDumper, APICallsDoNotCrash) {
 
     aec_dump->WriteCaptureStreamMessage();
 
-    webrtc::InternalAPMConfig apm_config;
+    webrtz::InternalAPMConfig apm_config;
     aec_dump->WriteConfig(apm_config);
 
-    webrtc::InternalAPMStreamsConfig streams_config;
+    webrtz::InternalAPMStreamsConfig streams_config;
     aec_dump->WriteInitMessage(streams_config);
   }
   // Remove file after the AecDump d-tor has finished.
@@ -51,12 +51,12 @@ TEST(AecDumper, WriteToFile) {
   rtc::TaskQueue file_writer_queue("file_writer_queue");
 
   const std::string filename =
-      webrtc::test::TempFilename(webrtc::test::OutputPath(), "aec_dump");
+      webrtz::test::TempFilename(webrtz::test::OutputPath(), "aec_dump");
 
   {
-    std::unique_ptr<webrtc::AecDump> aec_dump =
-        webrtc::AecDumpFactory::Create(filename, -1, &file_writer_queue);
-    const webrtc::AudioFrame frame;
+    std::unique_ptr<webrtz::AecDump> aec_dump =
+        webrtz::AecDumpFactory::Create(filename, -1, &file_writer_queue);
+    const webrtz::AudioFrame frame;
     aec_dump->WriteRenderStreamMessage(frame);
   }
 

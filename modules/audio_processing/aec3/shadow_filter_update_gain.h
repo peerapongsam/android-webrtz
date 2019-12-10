@@ -17,7 +17,7 @@
 #include "modules/audio_processing/aec3/render_signal_analyzer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Provides functionality for computing the fixed gain for the shadow filter.
 class ShadowFilterUpdateGain {
@@ -66,6 +66,6 @@ class ShadowFilterUpdateGain {
   void UpdateCurrentConfig();
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_SHADOW_FILTER_UPDATE_GAIN_H_

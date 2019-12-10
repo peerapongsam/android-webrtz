@@ -41,7 +41,7 @@
 #include "video/call_stats.h"
 #include "video/receive_statistics_proxy.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 VideoCodec CreateDecoderVideoCodec(const VideoReceiveStream::Decoder& decoder) {
@@ -476,4 +476,4 @@ bool VideoReceiveStream::Decode() {
   return true;
 }
 }  // namespace internal
-}  // namespace webrtc
+}  // namespace webrtz

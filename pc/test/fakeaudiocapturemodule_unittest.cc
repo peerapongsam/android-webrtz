@@ -19,7 +19,7 @@
 using std::min;
 
 class FakeAdmTest : public testing::Test,
-                    public webrtc::AudioTransport {
+                    public webrtz::AudioTransport {
  protected:
   static const int kMsInSecond = 1000;
 
@@ -35,7 +35,7 @@ class FakeAdmTest : public testing::Test,
     EXPECT_TRUE(fake_audio_capture_module_.get() != NULL);
   }
 
-  // Callbacks inherited from webrtc::AudioTransport.
+  // Callbacks inherited from webrtz::AudioTransport.
   // ADM is pushing data.
   int32_t RecordedDataIsAvailable(const void* audioSamples,
                                   const size_t nSamples,

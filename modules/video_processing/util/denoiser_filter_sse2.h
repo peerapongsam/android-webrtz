@@ -13,7 +13,7 @@
 
 #include "modules/video_processing/util/denoiser_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DenoiserFilterSSE2 : public DenoiserFilter {
  public:
@@ -37,6 +37,6 @@ class DenoiserFilterSSE2 : public DenoiserFilter {
                              int increase_denoising) override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_PROCESSING_UTIL_DENOISER_FILTER_SSE2_H_

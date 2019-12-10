@@ -17,7 +17,7 @@
 #include "api/video/video_rotation.h"
 #include "rtc_base/memory/aligned_malloc.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Plain I420 buffer in standard memory.
 class I420Buffer : public I420BufferInterface {
@@ -106,6 +106,6 @@ class I420Buffer : public I420BufferInterface {
   const std::unique_ptr<uint8_t, AlignedFreeDeleter> data_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_I420_BUFFER_H_

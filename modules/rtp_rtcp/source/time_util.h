@@ -15,7 +15,7 @@
 
 #include "system_wrappers/include/ntp_time.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Converts time obtained using rtc::TimeMicros to ntp format.
 // TimeMicrosToNtp guarantees difference of the returned values matches
@@ -51,5 +51,5 @@ uint32_t SaturatedUsToCompactNtp(int64_t us);
 // Values close to 2^16 seconds consider negative and result in minimum rtt = 1.
 int64_t CompactNtpRttToMs(uint32_t compact_ntp_interval);
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_TIME_UTIL_H_

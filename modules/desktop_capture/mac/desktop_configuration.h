@@ -17,7 +17,7 @@
 #include "typedefs.h"  // NOLINT(build/include)
 #include "modules/desktop_capture/desktop_geometry.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Describes the configuration of a specific display.
 struct MacDisplayConfiguration {
@@ -90,6 +90,6 @@ struct MacDesktopConfiguration {
   MacDisplayConfigurations displays;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MAC_DESKTOP_CONFIGURATION_H_

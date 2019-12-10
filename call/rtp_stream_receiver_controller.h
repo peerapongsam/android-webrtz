@@ -16,7 +16,7 @@
 #include "call/rtp_stream_receiver_controller_interface.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketReceived;
 
@@ -67,6 +67,6 @@ class RtpStreamReceiverController
   RtpDemuxer demuxer_ RTC_GUARDED_BY(&lock_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_STREAM_RECEIVER_CONTROLLER_H_

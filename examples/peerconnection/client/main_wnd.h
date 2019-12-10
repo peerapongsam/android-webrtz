@@ -59,10 +59,10 @@ class MainWindow {
   virtual void SwitchToPeerList(const Peers& peers) = 0;
   virtual void SwitchToStreamingUI() = 0;
 
-  virtual void StartLocalRenderer(webrtc::VideoTrackInterface* local_video) = 0;
+  virtual void StartLocalRenderer(webrtz::VideoTrackInterface* local_video) = 0;
   virtual void StopLocalRenderer() = 0;
   virtual void StartRemoteRenderer(
-      webrtc::VideoTrackInterface* remote_video) = 0;
+      webrtz::VideoTrackInterface* remote_video) = 0;
   virtual void StopRemoteRenderer() = 0;
 
   virtual void QueueUIThreadCallback(int msg_id, void* data) = 0;
@@ -94,19 +94,19 @@ class MainWnd : public MainWindow {
                           bool is_error);
   virtual UI current_ui() { return ui_; }
 
-  virtual void StartLocalRenderer(webrtc::VideoTrackInterface* local_video);
+  virtual void StartLocalRenderer(webrtz::VideoTrackInterface* local_video);
   virtual void StopLocalRenderer();
-  virtual void StartRemoteRenderer(webrtc::VideoTrackInterface* remote_video);
+  virtual void StartRemoteRenderer(webrtz::VideoTrackInterface* remote_video);
   virtual void StopRemoteRenderer();
 
   virtual void QueueUIThreadCallback(int msg_id, void* data);
 
   HWND handle() const { return wnd_; }
 
-  class VideoRenderer : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+  class VideoRenderer : public rtc::VideoSinkInterface<webrtz::VideoFrame> {
    public:
     VideoRenderer(HWND wnd, int width, int height,
-                  webrtc::VideoTrackInterface* track_to_render);
+                  webrtz::VideoTrackInterface* track_to_render);
     virtual ~VideoRenderer();
 
     void Lock() {
@@ -118,7 +118,7 @@ class MainWnd : public MainWindow {
     }
 
     // VideoSinkInterface implementation
-    void OnFrame(const webrtc::VideoFrame& frame) override;
+    void OnFrame(const webrtz::VideoFrame& frame) override;
 
     const BITMAPINFO& bmi() const { return bmi_; }
     const uint8_t* image() const { return image_.get(); }
@@ -135,7 +135,7 @@ class MainWnd : public MainWindow {
     BITMAPINFO bmi_;
     std::unique_ptr<uint8_t[]> image_;
     CRITICAL_SECTION buffer_lock_;
-    rtc::scoped_refptr<webrtc::VideoTrackInterface> rendered_track_;
+    rtc::scoped_refptr<webrtz::VideoTrackInterface> rendered_track_;
   };
 
   // A little helper class to make sure we always to proper locking and

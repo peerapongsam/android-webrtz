@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 static const uint16_t kPacketHeaderSize = 8;
@@ -105,4 +105,4 @@ RtpFileWriter* RtpFileWriter::Create(FileFormat format,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

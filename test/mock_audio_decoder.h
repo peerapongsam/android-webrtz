@@ -14,7 +14,7 @@
 #include "api/audio_codecs/audio_decoder.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockAudioDecoder : public AudioDecoder {
  public:
@@ -34,5 +34,5 @@ class MockAudioDecoder : public AudioDecoder {
   MOCK_CONST_METHOD0(SampleRateHz, int());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // TEST_MOCK_AUDIO_DECODER_H_

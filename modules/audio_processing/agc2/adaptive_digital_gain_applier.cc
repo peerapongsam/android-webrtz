@@ -17,7 +17,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // This function maps input level to desired applied gain. We want to
@@ -163,4 +163,4 @@ void AdaptiveDigitalGainApplier::Process(
   last_gain_db_ = last_gain_db_ + gain_change_this_frame_db;
   apm_data_dumper_->DumpRaw("agc2_applied_gain_db", last_gain_db_);
 }
-}  // namespace webrtc
+}  // namespace webrtz

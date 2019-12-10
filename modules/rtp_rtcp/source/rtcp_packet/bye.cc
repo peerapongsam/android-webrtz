@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Bye::kPacketType;
 // Bye packet (BYE) (RFC 3550).
@@ -134,4 +134,4 @@ size_t Bye::BlockLength() const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

@@ -21,7 +21,7 @@ using testing::AtLeast;
 using testing::NiceMock;
 using testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -286,4 +286,4 @@ TEST_F(LegacyProbeControllerTest, TotalBitrateNoProbing) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

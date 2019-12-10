@@ -11,7 +11,7 @@
 #include "modules/congestion_controller/network_control/test/network_ostream_operators.h"
 #include "modules/congestion_controller/network_control/include/network_units_to_string.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::ostream& operator<<(  // no-presubmit-check TODO(webrtc:8982)
     std::ostream& os,      // no-presubmit-check TODO(webrtc:8982)
@@ -54,4 +54,4 @@ std::ostream& operator<<(  // no-presubmit-check TODO(webrtc:8982)
     const TargetTransferRate& target_rate) {
   return os << "TargetTransferRate(...)";
 }
-}  // namespace webrtc
+}  // namespace webrtz

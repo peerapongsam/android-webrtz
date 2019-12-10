@@ -14,7 +14,7 @@
 
 namespace {
 
-void setNetworkBit(webrtc::PeerConnectionFactoryInterface::Options* options,
+void setNetworkBit(webrtz::PeerConnectionFactoryInterface::Options* options,
                    rtc::AdapterType type,
                    bool ignore) {
   if (ignore) {
@@ -40,8 +40,8 @@ void setNetworkBit(webrtc::PeerConnectionFactoryInterface::Options* options,
   return [super init];
 }
 
-- (webrtc::PeerConnectionFactoryInterface::Options)nativeOptions {
-  webrtc::PeerConnectionFactoryInterface::Options options;
+- (webrtz::PeerConnectionFactoryInterface::Options)nativeOptions {
+  webrtz::PeerConnectionFactoryInterface::Options options;
   options.disable_encryption = self.disableEncryption;
   options.disable_network_monitor = self.disableNetworkMonitor;
 

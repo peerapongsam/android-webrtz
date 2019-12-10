@@ -16,7 +16,7 @@
 #include "api/optional.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class PerformanceTimer {
@@ -36,12 +36,12 @@ class PerformanceTimer {
   double GetDurationStandardDeviation(size_t number_of_warmup_samples) const;
 
  private:
-  webrtc::Clock* clock_;
+  webrtz::Clock* clock_;
   rtc::Optional<int64_t> start_timestamp_us_;
   std::vector<int64_t> timestamps_us_;
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_PERFORMANCE_TIMER_H_

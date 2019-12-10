@@ -13,7 +13,7 @@
 
 #include "modules/audio_coding/neteq/neteq_decoder_enum.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<SdpAudioFormat> NetEqDecoderToSdpAudioFormat(NetEqDecoder nd) {
   switch (nd) {
@@ -82,4 +82,4 @@ rtc::Optional<SdpAudioFormat> NetEqDecoderToSdpAudioFormat(NetEqDecoder nd) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

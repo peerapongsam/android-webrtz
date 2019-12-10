@@ -14,7 +14,7 @@
 
 using std::string;
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kIsacBlockDurationMs = 30;
 static const int kIsacInputSamplingKhz = 16;
@@ -111,4 +111,4 @@ const coding_param param_set[] = {
 INSTANTIATE_TEST_CASE_P(AllTest, IsacSpeedTest,
                         ::testing::ValuesIn(param_set));
 
-}  // namespace webrtc
+}  // namespace webrtz

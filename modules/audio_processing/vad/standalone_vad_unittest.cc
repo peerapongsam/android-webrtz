@@ -18,7 +18,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(StandaloneVadTest, Api) {
   std::unique_ptr<StandaloneVad> vad(StandaloneVad::Create());
@@ -105,4 +105,4 @@ TEST(StandaloneVadTest, ActivityDetection) {
   fclose(reference_file);
   fclose(pcm_file);
 }
-}  // namespace webrtc
+}  // namespace webrtz

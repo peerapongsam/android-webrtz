@@ -12,7 +12,7 @@
 
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(FixedDigitalGainController2Limiter, ConstructDestruct) {
   Limiter l;
@@ -57,4 +57,4 @@ TEST(FixedDigitalGainController2Limiter, OutputGainShouldBeLessThanFullScale) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

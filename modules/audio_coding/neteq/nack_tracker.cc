@@ -17,7 +17,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kDefaultSampleRateKhz = 48;
@@ -229,4 +229,4 @@ std::vector<uint16_t> NackTracker::GetNackList(
   return sequence_numbers;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/typing_detection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TypingDetection::TypingDetection()
     : time_active_(0),
@@ -87,4 +87,4 @@ void TypingDetection::SetParameters(int time_window,
     report_detection_update_period_ = report_detection_update_period;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

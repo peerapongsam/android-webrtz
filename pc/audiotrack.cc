@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/refcountedobject.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 rtc::scoped_refptr<AudioTrack> AudioTrack::Create(
@@ -69,4 +69,4 @@ void AudioTrack::OnChanged() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

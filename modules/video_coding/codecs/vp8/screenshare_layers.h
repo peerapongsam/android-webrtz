@@ -17,7 +17,7 @@
 #include "rtc_base/timeutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecSpecificInfoVP8;
 class Clock;
@@ -117,6 +117,6 @@ class ScreenshareLayers : public TemporalLayers {
     int64_t tl1_target_bitrate_sum_ = 0;
   } stats_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_SCREENSHARE_LAYERS_H_

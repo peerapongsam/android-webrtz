@@ -14,7 +14,7 @@
 #include "api/rtcerror.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // An observer for PeerConnectionInterface::SetRemoteDescription(). The
 // callback is invoked such that the state of the peer connection can be
@@ -26,6 +26,6 @@ class SetRemoteDescriptionObserverInterface : public rtc::RefCountInterface {
   virtual void OnSetRemoteDescriptionComplete(RTCError error) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_SETREMOTEDESCRIPTIONOBSERVERINTERFACE_H_

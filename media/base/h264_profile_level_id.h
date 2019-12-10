@@ -17,7 +17,7 @@
 #include "api/optional.h"
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace H264 {
 
 // Map containting SDP codec parameters.
@@ -102,6 +102,6 @@ bool IsSameH264Profile(const CodecParameterMap& params1,
                        const CodecParameterMap& params2);
 
 }  // namespace H264
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_BASE_H264_PROFILE_LEVEL_ID_H_

@@ -42,7 +42,7 @@ using testing::AtLeast;
 using testing::Invoke;
 using testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 // These are used by gtest code, such as if |EXPECT_EQ| fails.
 void PrintTo(const RTCCertificateStats& stats, ::std::ostream* os) {
@@ -190,9 +190,9 @@ class FakeAudioTrackForStats
   std::string kind() const override {
     return MediaStreamTrackInterface::kAudioKind;
   }
-  webrtc::AudioSourceInterface* GetSource() const override { return nullptr; }
-  void AddSink(webrtc::AudioTrackSinkInterface* sink) override {}
-  void RemoveSink(webrtc::AudioTrackSinkInterface* sink) override {}
+  webrtz::AudioSourceInterface* GetSource() const override { return nullptr; }
+  void AddSink(webrtz::AudioTrackSinkInterface* sink) override {}
+  void RemoveSink(webrtz::AudioTrackSinkInterface* sink) override {}
   bool GetSignalLevel(int* level) override { return false; }
   rtc::scoped_refptr<AudioProcessorInterface> GetAudioProcessor() override {
     return nullptr;
@@ -1191,7 +1191,7 @@ TEST_F(RTCStatsCollectorTest, CollectRTCIceCandidatePairStats) {
   EXPECT_TRUE(report->Get(*expected_pair.transport_id));
 
   // Set bandwidth and "GetStats" again.
-  webrtc::Call::Stats call_stats;
+  webrtz::Call::Stats call_stats;
   const int kSendBandwidth = 888;
   call_stats.send_bandwidth_bps = kSendBandwidth;
   const int kRecvBandwidth = 999;
@@ -2258,4 +2258,4 @@ TEST(RTCStatsCollectorTestWithFakeCollector, ThreadUsageAndResultsMerging) {
 
 }  // namespace
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -46,8 +46,8 @@ id<RTCVideoEncoderFactory> CreateErrorEncoderFactory() {
   return CreateEncoderFactoryReturning(WEBRTC_VIDEO_CODEC_ERROR);
 }
 
-webrtc::VideoEncoder *GetObjCEncoder(id<RTCVideoEncoderFactory> factory) {
-  webrtc::ObjCVideoEncoderFactory encoder_factory(factory);
+webrtz::VideoEncoder *GetObjCEncoder(id<RTCVideoEncoderFactory> factory) {
+  webrtz::ObjCVideoEncoderFactory encoder_factory(factory);
   cricket::VideoCodec codec("H264");
   return encoder_factory.CreateVideoEncoder(codec);
 }
@@ -55,79 +55,79 @@ webrtc::VideoEncoder *GetObjCEncoder(id<RTCVideoEncoderFactory> factory) {
 #pragma mark -
 
 TEST(ObjCVideoEncoderFactoryTest, InitEncodeReturnsOKOnSuccess) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
 
-  auto settings = new webrtc::VideoCodec();
+  auto settings = new webrtz::VideoCodec();
   EXPECT_EQ(encoder->InitEncode(settings, 1, 0), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, InitEncodeReturnsErrorOnFail) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
 
-  auto settings = new webrtc::VideoCodec();
+  auto settings = new webrtz::VideoCodec();
   EXPECT_EQ(encoder->InitEncode(settings, 1, 0), WEBRTC_VIDEO_CODEC_ERROR);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, EncodeReturnsOKOnSuccess) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
 
   CVPixelBufferRef pixel_buffer;
   CVPixelBufferCreate(kCFAllocatorDefault, 640, 480, kCVPixelFormatType_32ARGB, nil, &pixel_buffer);
-  rtc::scoped_refptr<webrtc::VideoFrameBuffer> buffer =
-      new rtc::RefCountedObject<webrtc::ObjCFrameBuffer>(
+  rtc::scoped_refptr<webrtz::VideoFrameBuffer> buffer =
+      new rtc::RefCountedObject<webrtz::ObjCFrameBuffer>(
           [[RTCCVPixelBuffer alloc] initWithPixelBuffer:pixel_buffer]);
-  webrtc::VideoFrame frame(buffer, webrtc::kVideoRotation_0, 0);
-  webrtc::CodecSpecificInfo info;
-  info.codecType = webrtc::kVideoCodecH264;
+  webrtz::VideoFrame frame(buffer, webrtz::kVideoRotation_0, 0);
+  webrtz::CodecSpecificInfo info;
+  info.codecType = webrtz::kVideoCodecH264;
   info.codec_name = "H264";
-  std::vector<webrtc::FrameType> frame_types;
+  std::vector<webrtz::FrameType> frame_types;
 
   EXPECT_EQ(encoder->Encode(frame, &info, &frame_types), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, EncodeReturnsErrorOnFail) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
 
   CVPixelBufferRef pixel_buffer;
   CVPixelBufferCreate(kCFAllocatorDefault, 640, 480, kCVPixelFormatType_32ARGB, nil, &pixel_buffer);
-  rtc::scoped_refptr<webrtc::VideoFrameBuffer> buffer =
-      new rtc::RefCountedObject<webrtc::ObjCFrameBuffer>(
+  rtc::scoped_refptr<webrtz::VideoFrameBuffer> buffer =
+      new rtc::RefCountedObject<webrtz::ObjCFrameBuffer>(
           [[RTCCVPixelBuffer alloc] initWithPixelBuffer:pixel_buffer]);
-  webrtc::VideoFrame frame(buffer, webrtc::kVideoRotation_0, 0);
-  webrtc::CodecSpecificInfo info;
-  info.codecType = webrtc::kVideoCodecH264;
+  webrtz::VideoFrame frame(buffer, webrtz::kVideoRotation_0, 0);
+  webrtz::CodecSpecificInfo info;
+  info.codecType = webrtz::kVideoCodecH264;
   info.codec_name = "H264";
-  std::vector<webrtc::FrameType> frame_types;
+  std::vector<webrtz::FrameType> frame_types;
 
   EXPECT_EQ(encoder->Encode(frame, &info, &frame_types), WEBRTC_VIDEO_CODEC_ERROR);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, ReleaseEncodeReturnsOKOnSuccess) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
 
   EXPECT_EQ(encoder->Release(), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, ReleaseEncodeReturnsErrorOnFail) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
 
   EXPECT_EQ(encoder->Release(), WEBRTC_VIDEO_CODEC_ERROR);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, SetChannelParametersAlwaysReturnsOK) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
 
   EXPECT_EQ(encoder->SetChannelParameters(1, 1), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, SetRatesReturnsOKOnSuccess) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateOKEncoderFactory());
 
   EXPECT_EQ(encoder->SetRates(0, 0), WEBRTC_VIDEO_CODEC_OK);
 }
 
 TEST(ObjCVideoEncoderFactoryTest, SetRatesReturnsErrorOnFail) {
-  webrtc::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
+  webrtz::VideoEncoder *encoder = GetObjCEncoder(CreateErrorEncoderFactory());
 
   EXPECT_EQ(encoder->SetRates(0, 0), WEBRTC_VIDEO_CODEC_ERROR);
 }

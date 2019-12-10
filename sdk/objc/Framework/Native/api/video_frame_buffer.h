@@ -16,7 +16,7 @@
 #include "common_video/include/video_frame_buffer.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::scoped_refptr<VideoFrameBuffer> ObjCToNativeVideoFrameBuffer(
     id<RTCVideoFrameBuffer> objc_video_frame_buffer);
@@ -24,6 +24,6 @@ rtc::scoped_refptr<VideoFrameBuffer> ObjCToNativeVideoFrameBuffer(
 id<RTCVideoFrameBuffer> NativeToObjCVideoFrameBuffer(
     const rtc::scoped_refptr<VideoFrameBuffer>& buffer);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_API_VIDEO_FRAME_BUFFER_H_

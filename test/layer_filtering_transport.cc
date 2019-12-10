@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "test/layer_filtering_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 LayerFilteringTransport::LayerFilteringTransport(
@@ -169,4 +169,4 @@ bool LayerFilteringTransport::SendRtp(const uint8_t* packet,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -35,7 +35,7 @@
 #include "rtc_base/rate_statistics.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class OverheadObserver;
 class RateLimiter;
@@ -343,6 +343,6 @@ class RTPSender {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RTPSender);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_SENDER_H_

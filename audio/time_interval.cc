@@ -12,7 +12,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TimeInterval::TimeInterval() = default;
 TimeInterval::~TimeInterval() = default;
@@ -53,4 +53,4 @@ int64_t TimeInterval::Length() const {
 TimeInterval::Interval::Interval(int64_t first, int64_t last)
     : first(first), last(last) {}
 
-}  // namespace webrtc
+}  // namespace webrtz

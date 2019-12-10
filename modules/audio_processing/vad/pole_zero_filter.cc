@@ -14,7 +14,7 @@
 #include <string.h>
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 
 PoleZeroFilter* PoleZeroFilter::Create(const float* numerator_coefficients,
                                        size_t order_numerator,
@@ -103,4 +103,4 @@ int PoleZeroFilter::Filter(const int16_t* in,
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 
 // TODO(andrew): this is a work-in-progress. Many more tests are needed.
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kNumChannels[] = {1, 2};
@@ -172,4 +172,4 @@ TEST_F(ResamplerTest, MultipleResets) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

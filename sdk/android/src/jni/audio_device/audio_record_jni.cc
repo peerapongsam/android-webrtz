@@ -24,7 +24,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -249,4 +249,4 @@ void AudioRecordJni::DataIsRecorded(JNIEnv* env,
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

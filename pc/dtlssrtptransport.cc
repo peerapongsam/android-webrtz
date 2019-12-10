@@ -22,10 +22,10 @@ namespace {
 static const char kDtlsSrtpExporterLabel[] = "EXTRACTOR-dtls_srtp";
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 DtlsSrtpTransport::DtlsSrtpTransport(
-    std::unique_ptr<webrtc::SrtpTransport> srtp_transport)
+    std::unique_ptr<webrtz::SrtpTransport> srtp_transport)
     : RtpTransportInternalAdapter(srtp_transport.get()) {
   srtp_transport_ = std::move(srtp_transport);
   RTC_DCHECK(srtp_transport_);
@@ -364,4 +364,4 @@ void DtlsSrtpTransport::OnNetworkRouteChanged(
   SignalNetworkRouteChanged(network_route);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMPacket::VCMPacket()
     : payloadType(0),
@@ -142,4 +142,4 @@ void VCMPacket::CopyCodecSpecifics(const RTPVideoHeader& videoHeader) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

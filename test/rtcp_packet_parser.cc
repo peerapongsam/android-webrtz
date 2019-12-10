@@ -12,7 +12,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 RtcpPacketParser::RtcpPacketParser() = default;
@@ -103,4 +103,4 @@ bool RtcpPacketParser::Parse(const void* data, size_t length) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

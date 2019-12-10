@@ -15,7 +15,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet/tmmb_item.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class TMMBRHelp {
  public:
@@ -28,6 +28,6 @@ class TMMBRHelp {
   static uint64_t CalcMinBitrateBps(
       const std::vector<rtcp::TmmbItem>& candidates);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_TMMBR_HELP_H_

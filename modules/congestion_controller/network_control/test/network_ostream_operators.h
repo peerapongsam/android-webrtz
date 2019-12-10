@@ -14,7 +14,7 @@
 #include <ostream>  // no-presubmit-check TODO(webrtc:8982)
 #include "modules/congestion_controller/network_control/include/network_types.h"
 
-namespace webrtc {
+namespace webrtz {
 ::std::ostream& operator<<(  // no-presubmit-check TODO(webrtc:8982)
     ::std::ostream& os,      // no-presubmit-check TODO(webrtc:8982)
     const DataRate& datarate);
@@ -40,5 +40,5 @@ namespace webrtc {
 ::std::ostream& operator<<(  // no-presubmit-check TODO(webrtc:8982)
     ::std::ostream& os,      // no-presubmit-check TODO(webrtc:8982)
     const TargetTransferRate& target_rate);
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_CONGESTION_CONTROLLER_NETWORK_CONTROL_TEST_NETWORK_OSTREAM_OPERATORS_H_

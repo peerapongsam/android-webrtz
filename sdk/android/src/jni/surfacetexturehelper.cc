@@ -16,7 +16,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/videoframe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 void SurfaceTextureHelperTextureToYUV(
@@ -75,4 +75,4 @@ rtc::scoped_refptr<VideoFrameBuffer> SurfaceTextureHelper::CreateTextureFrame(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

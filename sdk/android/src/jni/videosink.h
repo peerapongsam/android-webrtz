@@ -16,7 +16,7 @@
 #include "api/mediastreaminterface.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 class VideoSinkWrapper : public rtc::VideoSinkInterface<VideoFrame> {
@@ -31,6 +31,6 @@ class VideoSinkWrapper : public rtc::VideoSinkInterface<VideoFrame> {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_VIDEOSINK_H_

@@ -17,7 +17,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/numerics/percentile_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class to efficiently get moving median filter from a stream of samples.
 template <typename T>
@@ -75,5 +75,5 @@ void MovingMedianFilter<T>::Reset() {
   samples_stored_ = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // RTC_BASE_NUMERICS_MOVING_MEDIAN_FILTER_H_

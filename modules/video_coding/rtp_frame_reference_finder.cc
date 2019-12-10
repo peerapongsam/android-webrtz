@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/system/fallthrough.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 RtpFrameReferenceFinder::RtpFrameReferenceFinder(
@@ -628,4 +628,4 @@ void RtpFrameReferenceFinder::UnwrapPictureIds(RtpFrameObject* frame) {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

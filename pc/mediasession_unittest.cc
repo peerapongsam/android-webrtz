@@ -70,8 +70,8 @@ using rtc::CS_AES_CM_128_HMAC_SHA1_32;
 using rtc::CS_AES_CM_128_HMAC_SHA1_80;
 using rtc::CS_AEAD_AES_128_GCM;
 using rtc::CS_AEAD_AES_256_GCM;
-using webrtc::RtpExtension;
-using webrtc::RtpTransceiverDirection;
+using webrtz::RtpExtension;
+using webrtz::RtpTransceiverDirection;
 
 static const AudioCodec kAudioCodecs1[] = {
     AudioCodec(103, "ISAC", 16000, -1, 1),
@@ -3664,7 +3664,7 @@ void TestAudioCodecsAnswer(RtpTransceiverDirection offer_direction,
   AddMediaSection(MEDIA_TYPE_AUDIO, "audio", offer_direction, kActive,
                   &offer_opts);
 
-  if (webrtc::RtpTransceiverDirectionHasSend(offer_direction)) {
+  if (webrtz::RtpTransceiverDirectionHasSend(offer_direction)) {
     AttachSenderToMediaSection("audio", MEDIA_TYPE_AUDIO, kAudioTrack1,
                                {kMediaStream1}, 1, &offer_opts);
   }
@@ -3677,7 +3677,7 @@ void TestAudioCodecsAnswer(RtpTransceiverDirection offer_direction,
   AddMediaSection(MEDIA_TYPE_AUDIO, "audio", answer_direction, kActive,
                   &answer_opts);
 
-  if (webrtc::RtpTransceiverDirectionHasSend(answer_direction)) {
+  if (webrtz::RtpTransceiverDirectionHasSend(answer_direction)) {
     AttachSenderToMediaSection("audio", MEDIA_TYPE_AUDIO, kAudioTrack1,
                                {kMediaStream1}, 1, &answer_opts);
   }
@@ -3738,11 +3738,11 @@ void TestAudioCodecsAnswer(RtpTransceiverDirection offer_direction,
     EXPECT_TRUE(acd->codecs() == target_codecs)
         << "Expected: " << format_codecs(target_codecs)
         << ", got: " << format_codecs(acd->codecs()) << "; Offered: "
-        << webrtc::RtpTransceiverDirectionToString(offer_direction)
+        << webrtz::RtpTransceiverDirectionToString(offer_direction)
         << ", answerer wants: "
-        << webrtc::RtpTransceiverDirectionToString(answer_direction)
+        << webrtz::RtpTransceiverDirectionToString(answer_direction)
         << "; got: "
-        << webrtc::RtpTransceiverDirectionToString(acd->direction());
+        << webrtz::RtpTransceiverDirectionToString(acd->direction());
   } else {
     EXPECT_EQ(offer_direction, RtpTransceiverDirection::kInactive)
         << "Only inactive offers are allowed to not generate any audio "

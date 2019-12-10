@@ -16,7 +16,7 @@
 
 #include "pc/rtptransportinternal.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class is used by SrtpTransport and DtlsSrtpTransport in order to reduce
 // the duplicated code. Using this class, different subclasses can override only
@@ -100,6 +100,6 @@ class RtpTransportInternalAdapter : public RtpTransportInternal {
   RtpTransportInternal* transport_ = nullptr;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPTRANSPORTINTERNALADAPTER_H_

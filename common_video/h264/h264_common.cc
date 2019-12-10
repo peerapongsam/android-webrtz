@@ -10,7 +10,7 @@
 
 #include "common_video/h264/h264_common.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace H264 {
 
 const uint8_t kNaluTypeMask = 0x1F;
@@ -107,4 +107,4 @@ void WriteRbsp(const uint8_t* bytes, size_t length, rtc::Buffer* destination) {
 }
 
 }  // namespace H264
-}  // namespace webrtc
+}  // namespace webrtz

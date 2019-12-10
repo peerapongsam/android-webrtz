@@ -15,7 +15,7 @@
 
 #include "api/ortc/rtptransportinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpTransportControllerAdapter;
 
@@ -52,6 +52,6 @@ class RtpTransportControllerInterface {
   friend class RtpTransportAdapter;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_RTPTRANSPORTCONTROLLERINTERFACE_H_

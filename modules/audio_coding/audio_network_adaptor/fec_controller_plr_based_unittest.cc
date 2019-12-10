@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/fec_controller_plr_based.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::NiceMock;
 using ::testing::Return;
@@ -485,4 +485,4 @@ TEST(FecControllerPlrBasedDeathTest, InvalidConfig) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

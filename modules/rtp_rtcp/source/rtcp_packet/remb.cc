@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Remb::kFeedbackMessageType;
 // Receiver Estimated Max Bitrate (REMB) (draft-alvestrand-rmcat-remb).
@@ -138,4 +138,4 @@ bool Remb::Create(uint8_t* packet,
   return true;
 }
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

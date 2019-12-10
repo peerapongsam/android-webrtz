@@ -13,7 +13,7 @@
 #include "sdk/android/generated_video_jni/jni/VideoSink_jni.h"
 #include "sdk/android/src/jni/videoframe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 VideoSinkWrapper::VideoSinkWrapper(JNIEnv* jni, const JavaRef<jobject>& j_sink)
@@ -29,4 +29,4 @@ void VideoSinkWrapper::OnFrame(const VideoFrame& frame) {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

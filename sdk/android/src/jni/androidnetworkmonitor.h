@@ -20,7 +20,7 @@
 #include "rtc_base/thread_checker.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 typedef int64_t NetworkHandle;
@@ -121,14 +121,14 @@ class AndroidNetworkMonitorFactory : public rtc::NetworkMonitorFactory {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 // TODO(magjed): Remove once external clients are updated.
-namespace webrtc_jni {
+namespace webrtz_jni {
 
-using webrtc::jni::AndroidNetworkMonitor;
-using webrtc::jni::AndroidNetworkMonitorFactory;
+using webrtz::jni::AndroidNetworkMonitor;
+using webrtz::jni::AndroidNetworkMonitorFactory;
 
-}  // namespace webrtc_jni
+}  // namespace webrtz_jni
 
 #endif  // SDK_ANDROID_SRC_JNI_ANDROIDNETWORKMONITOR_H_

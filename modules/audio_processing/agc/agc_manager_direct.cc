@@ -24,7 +24,7 @@
 #include "rtc_base/numerics/safe_minmax.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -450,4 +450,4 @@ void AgcManagerDirect::UpdateCompressor() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

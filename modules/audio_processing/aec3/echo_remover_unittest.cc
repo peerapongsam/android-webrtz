@@ -24,7 +24,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 std::string ProduceDebugText(int sample_rate_hz) {
@@ -208,4 +208,4 @@ TEST(EchoRemover, BasicEchoRemoval) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

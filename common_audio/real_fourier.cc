@@ -18,7 +18,7 @@
 #include "common_audio/real_fourier_openmax.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -56,4 +56,4 @@ RealFourier::fft_cplx_scoper RealFourier::AllocCplxBuffer(int count) {
       AlignedMalloc(sizeof(complex<float>) * count, kFftBufferAlignment)));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 // DLRR Report Block (RFC 3611).
 //
@@ -91,4 +91,4 @@ void Dlrr::Create(uint8_t* buffer) const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

@@ -26,7 +26,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/protobuf_utils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
@@ -176,6 +176,6 @@ class AudioEncoderOpusImpl final : public AudioEncoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioEncoderOpusImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_OPUS_AUDIO_ENCODER_OPUS_H_

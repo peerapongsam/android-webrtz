@@ -16,7 +16,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/rate_statistics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -85,6 +85,6 @@ class BitrateAdjuster {
   uint32_t frames_since_last_update_ RTC_GUARDED_BY(crit_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_INCLUDE_BITRATE_ADJUSTER_H_

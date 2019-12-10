@@ -17,7 +17,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 void SetupSubFrameView(std::vector<std::vector<float>>* sub_frame,
@@ -258,4 +258,4 @@ TEST(BlockFramer, FrameBitexactness) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

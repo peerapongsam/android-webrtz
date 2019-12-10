@@ -16,7 +16,7 @@
 #include "rtc_base/timeutils.h"
 
 @implementation RTCDtmfSender {
-  rtc::scoped_refptr<webrtc::DtmfSenderInterface> _nativeDtmfSender;
+  rtc::scoped_refptr<webrtz::DtmfSenderInterface> _nativeDtmfSender;
 }
 
 - (BOOL)canInsertDtmf {
@@ -58,12 +58,12 @@
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::DtmfSenderInterface>)nativeDtmfSender {
+- (rtc::scoped_refptr<webrtz::DtmfSenderInterface>)nativeDtmfSender {
   return _nativeDtmfSender;
 }
 
 - (instancetype)initWithNativeDtmfSender:
-        (rtc::scoped_refptr<webrtc::DtmfSenderInterface>)nativeDtmfSender {
+        (rtc::scoped_refptr<webrtz::DtmfSenderInterface>)nativeDtmfSender {
   NSParameterAssert(nativeDtmfSender);
   if (self = [super init]) {
     _nativeDtmfSender = nativeDtmfSender;

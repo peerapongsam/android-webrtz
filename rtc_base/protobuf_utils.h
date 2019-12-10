@@ -13,23 +13,23 @@
 #ifndef RTC_BASE_PROTOBUF_UTILS_H_
 #define RTC_BASE_PROTOBUF_UTILS_H_
 
-namespace webrtc {
+namespace webrtz {
 
 using ProtoString = std::string;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #if WEBRTC_ENABLE_PROTOBUF
 
 #include "third_party/protobuf/src/google/protobuf/message_lite.h"
 #include "third_party/protobuf/src/google/protobuf/repeated_field.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using google::protobuf::MessageLite;
 using google::protobuf::RepeatedPtrField;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // WEBRTC_ENABLE_PROTOBUF
 

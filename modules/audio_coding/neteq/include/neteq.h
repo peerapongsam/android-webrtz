@@ -26,7 +26,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class AudioFrame;
@@ -312,5 +312,5 @@ class NetEq {
   RTC_DISALLOW_COPY_AND_ASSIGN(NetEq);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_INCLUDE_NETEQ_H_

@@ -10,7 +10,7 @@
 
 #include "modules/video_capture/windows/device_info_mf.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 
 DeviceInfoMF::DeviceInfoMF() {
@@ -48,4 +48,4 @@ int32_t DeviceInfoMF::DisplayCaptureSettingsDialogBox(
 }
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

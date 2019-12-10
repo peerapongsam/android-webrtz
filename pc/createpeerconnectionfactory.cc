@@ -20,7 +20,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(USE_BUILTIN_SW_CODECS)
 rtc::scoped_refptr<PeerConnectionFactoryInterface> CreatePeerConnectionFactory(
@@ -167,4 +167,4 @@ rtc::scoped_refptr<PeerConnectionFactoryInterface> CreatePeerConnectionFactory(
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

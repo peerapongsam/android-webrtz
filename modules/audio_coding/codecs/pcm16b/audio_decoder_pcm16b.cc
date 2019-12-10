@@ -14,7 +14,7 @@
 #include "modules/audio_coding/codecs/pcm16b/pcm16b.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioDecoderPcm16B::AudioDecoderPcm16B(int sample_rate_hz, size_t num_channels)
     : sample_rate_hz_(sample_rate_hz), num_channels_(num_channels) {
@@ -60,4 +60,4 @@ int AudioDecoderPcm16B::PacketDuration(const uint8_t* encoded,
   return static_cast<int>(encoded_len / (2 * Channels()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

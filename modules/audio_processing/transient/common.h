@@ -10,7 +10,7 @@
 
 #ifndef MODULES_AUDIO_PROCESSING_TRANSIENT_COMMON_H_
 #define MODULES_AUDIO_PROCESSING_TRANSIENT_COMMON_H_
-namespace webrtc {
+namespace webrtz {
 namespace ts {
 
 static const float kPi = 3.14159265358979323846f;
@@ -23,5 +23,5 @@ enum {
 };
 
 } // namespace ts
-} // namespace webrtc
+} // namespace webrtz
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_COMMON_H_

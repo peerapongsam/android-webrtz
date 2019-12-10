@@ -15,7 +15,7 @@
 #include "rtc_base/pathutils.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace conversational_speech {
 
@@ -66,4 +66,4 @@ std::unique_ptr<WavReaderInterface> MockWavReaderFactory::CreateMock(
 
 }  // namespace conversational_speech
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,7 +17,7 @@
 
 #include <dvdmedia.h>  // VIDEOINFOHEADER2
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 VideoCaptureDS::VideoCaptureDS()
     : _captureFilter(NULL),
@@ -316,4 +316,4 @@ HRESULT VideoCaptureDS::ConnectDVCamera() {
   return hr;
 }
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

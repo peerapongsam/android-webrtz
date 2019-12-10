@@ -121,7 +121,7 @@ TEST(AVFormatMapperTest, SuportedCricketFormatsWithInvalidFramerateFormats) {
 
   // when
   std::set<cricket::VideoFormat> result =
-      webrtc::GetSupportedVideoFormatsForDevice(mockDevice);
+      webrtz::GetSupportedVideoFormatsForDevice(mockDevice);
 
   // then
   EXPECT_TRUE(result.empty());
@@ -138,7 +138,7 @@ TEST(AVFormatMapperTest, SuportedCricketFormatsWithInvalidFormats) {
 
   // when
   std::set<cricket::VideoFormat> result =
-      webrtc::GetSupportedVideoFormatsForDevice(mockDevice);
+      webrtz::GetSupportedVideoFormatsForDevice(mockDevice);
 
   // then
   EXPECT_TRUE(result.empty());
@@ -154,7 +154,7 @@ TEST(AVFormatMapperTest, SuportedCricketFormats) {
 
   // when
   std::set<cricket::VideoFormat> result =
-      webrtc::GetSupportedVideoFormatsForDevice(mockDevice);
+      webrtz::GetSupportedVideoFormatsForDevice(mockDevice);
 
   // then
   EXPECT_EQ(1u, result.size());
@@ -189,7 +189,7 @@ TEST(AVFormatMapperTest, MediaSubtypePreference) {
 
   // when
   bool resultFormat =
-      webrtc::SetFormatForCaptureDevice(mockDevice, nil, expectedFormat);
+      webrtz::SetFormatForCaptureDevice(mockDevice, nil, expectedFormat);
 
   // then
   EXPECT_TRUE(resultFormat);
@@ -204,7 +204,7 @@ TEST(AVFormatMapperTest, SetFormatWhenDeviceCannotLock) {
   [[[mockDevice stub] andReturn:@[]] formats];
 
   // when
-  bool resultFormat = webrtc::SetFormatForCaptureDevice(mockDevice, nil,
+  bool resultFormat = webrtz::SetFormatForCaptureDevice(mockDevice, nil,
                                                         cricket::VideoFormat());
 
   // then
@@ -224,7 +224,7 @@ TEST(AVFormatMapperTest, SetFormatWhenFormatIsIncompatible) {
   OCMExpect([mockDevice unlockForConfiguration]);
 
   // when
-  bool resultFormat = webrtc::SetFormatForCaptureDevice(mockDevice, nil,
+  bool resultFormat = webrtz::SetFormatForCaptureDevice(mockDevice, nil,
                                                         cricket::VideoFormat());
 
   // then

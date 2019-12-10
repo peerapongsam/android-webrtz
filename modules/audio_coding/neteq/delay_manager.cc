@@ -23,7 +23,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DelayManager::DelayManager(size_t max_packets_in_buffer,
                            DelayPeakDetector* peak_detector,
@@ -480,4 +480,4 @@ int DelayManager::last_pack_cng_or_dtmf() const {
 void DelayManager::set_last_pack_cng_or_dtmf(int value) {
   last_pack_cng_or_dtmf_ = value;
 }
-}  // namespace webrtc
+}  // namespace webrtz

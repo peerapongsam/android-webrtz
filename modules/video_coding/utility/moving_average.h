@@ -15,7 +15,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 class MovingAverage {
  public:
   explicit MovingAverage(size_t s);
@@ -31,6 +31,6 @@ class MovingAverage {
   int sum_ = 0;
   std::vector<int> sum_history_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_UTILITY_MOVING_AVERAGE_H_

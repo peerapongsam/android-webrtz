@@ -25,7 +25,7 @@
 #include "test/gtest.h"
 #include "test/video_codec_settings.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -148,4 +148,4 @@ TEST_P(VideoEncoderDecoderInstantiationTest,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

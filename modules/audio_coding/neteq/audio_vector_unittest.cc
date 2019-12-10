@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioVectorTest : public ::testing::Test {
  protected:
@@ -385,4 +385,4 @@ TEST_F(AudioVectorTest, CrossFade) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

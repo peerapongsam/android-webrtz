@@ -21,11 +21,11 @@
 #include "rtc_base/gunit.h"
 #include "rtc_base/timeutils.h"
 
-using webrtc::AudioTrackInterface;
-using webrtc::AudioTrack;
-using webrtc::DtmfProviderInterface;
-using webrtc::DtmfSender;
-using webrtc::DtmfSenderObserverInterface;
+using webrtz::AudioTrackInterface;
+using webrtz::AudioTrack;
+using webrtz::DtmfProviderInterface;
+using webrtz::DtmfSender;
+using webrtz::DtmfSenderObserverInterface;
 
 static const char kTestAudioLabel[] = "test_audio_track";
 // TODO(deadbeef): Even though this test now uses a fake clock, it has a
@@ -142,7 +142,7 @@ class DtmfSenderTest : public testing::Test {
     for (; it != tones.end(); ++it) {
       char tone = *it;
       int code = 0;
-      webrtc::GetDtmfCode(tone, &code);
+      webrtz::GetDtmfCode(tone, &code);
       if (tone == ',') {
         extra_delay = 2000;  // 2 seconds
       } else {

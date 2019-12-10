@@ -20,7 +20,7 @@
 #include "rtc_base/sequenced_task_checker.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FlexfecReceiver {
  public:
@@ -64,6 +64,6 @@ class FlexfecReceiver {
   rtc::SequencedTaskChecker sequence_checker_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_INCLUDE_FLEXFEC_RECEIVER_H_

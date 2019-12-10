@@ -13,7 +13,7 @@
 
 using ::std::string;
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kOpusBlockDurationMs = 20;
 static const int kOpusSamplingKhz = 48;
@@ -139,4 +139,4 @@ const coding_param param_set[] = {
 INSTANTIATE_TEST_CASE_P(AllTest, OpusSpeedTest,
                         ::testing::ValuesIn(param_set));
 
-}  // namespace webrtc
+}  // namespace webrtz

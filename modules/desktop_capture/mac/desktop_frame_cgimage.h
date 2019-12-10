@@ -18,7 +18,7 @@
 #include "modules/desktop_capture/desktop_frame.h"
 #include "sdk/objc/Framework/Classes/Common/scoped_cftyperef.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DesktopFrameCGImage final : public DesktopFrame {
  public:
@@ -43,6 +43,6 @@ class DesktopFrameCGImage final : public DesktopFrame {
   RTC_DISALLOW_COPY_AND_ASSIGN(DesktopFrameCGImage);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MAC_DESKTOP_FRAME_CGIMAGE_H_

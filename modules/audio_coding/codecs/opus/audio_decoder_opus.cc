@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 class OpusFrame : public AudioDecoder::EncodedAudioFrame {
@@ -165,4 +165,4 @@ size_t AudioDecoderOpusImpl::Channels() const {
   return channels_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

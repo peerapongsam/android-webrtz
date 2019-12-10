@@ -18,7 +18,7 @@
 #include "modules/desktop_capture/mouse_cursor_monitor.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A wrapper for DesktopCapturer that also captures mouse using specified
 // MouseCursorMonitor and renders it on the generated streams.
@@ -71,6 +71,6 @@ class DesktopAndCursorComposer : public DesktopCapturer,
   RTC_DISALLOW_COPY_AND_ASSIGN(DesktopAndCursorComposer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_AND_CURSOR_COMPOSER_H_

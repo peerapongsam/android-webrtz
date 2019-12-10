@@ -16,7 +16,7 @@
 
 #include <dshow.h>
 
-namespace webrtc
+namespace webrtz
 {
 namespace videocapturemodule
 {
@@ -102,5 +102,5 @@ private:
     std::vector<VideoCaptureCapabilityWindows> _captureCapabilitiesWindows;
 };
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 #endif // MODULES_VIDEO_CAPTURE_MAIN_SOURCE_WINDOWS_DEVICE_INFO_DS_H_

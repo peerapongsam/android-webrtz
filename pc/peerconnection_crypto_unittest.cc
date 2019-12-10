@@ -23,7 +23,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/virtualsocketserver.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using RTCConfiguration = PeerConnectionInterface::RTCConfiguration;
 using RTCOfferAnswerOptions = PeerConnectionInterface::RTCOfferAnswerOptions;
@@ -720,4 +720,4 @@ INSTANTIATE_TEST_CASE_P(PeerConnectionCryptoTest,
                         Values(SdpSemantics::kPlanB,
                                SdpSemantics::kUnifiedPlan));
 
-}  // namespace webrtc
+}  // namespace webrtz

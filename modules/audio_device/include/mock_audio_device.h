@@ -16,7 +16,7 @@
 #include "modules/audio_device/include/audio_device.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockAudioDeviceModule : public AudioDeviceModule {
@@ -96,6 +96,6 @@ class MockAudioDeviceModule : public AudioDeviceModule {
 #endif  // WEBRTC_IOS
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_INCLUDE_MOCK_AUDIO_DEVICE_H_

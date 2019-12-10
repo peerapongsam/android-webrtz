@@ -13,7 +13,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 struct AlrExperimentSettings {
  public:
   float pacing_factor;
@@ -35,6 +35,6 @@ struct AlrExperimentSettings {
  private:
   AlrExperimentSettings() = default;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_EXPERIMENTS_ALR_EXPERIMENT_H_

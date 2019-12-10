@@ -22,7 +22,7 @@
 #include "modules/video_coding/include/video_codec_interface.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum AlphaCodecStream {
   kYUVStream = 0,
@@ -79,6 +79,6 @@ class MultiplexEncoderAdapter : public VideoEncoder {
   rtc::CriticalSection crit_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_MULTIPLEX_INCLUDE_MULTIPLEX_ENCODER_ADAPTER_H_

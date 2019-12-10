@@ -15,7 +15,7 @@
 
 #include "modules/audio_coding/neteq/neteq_impl.h"
 
-namespace webrtc {
+namespace webrtz {
 
 NetEq::Config::Config() = default;
 NetEq::Config::Config(const Config&) = default;
@@ -47,4 +47,4 @@ NetEq* NetEq::Create(
                        NetEqImpl::Dependencies(config, decoder_factory));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

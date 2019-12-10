@@ -15,7 +15,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/pc/rtpparameters.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 ScopedJavaLocalRef<jobject> NativeToJavaRtpSender(
@@ -88,4 +88,4 @@ ScopedJavaLocalRef<jstring> JNI_RtpSender_GetId(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

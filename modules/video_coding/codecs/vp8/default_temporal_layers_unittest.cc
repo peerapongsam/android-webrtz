@@ -15,7 +15,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 enum {
@@ -425,4 +425,4 @@ TEST_P(TemporalLayersReferenceTest, ValidFrameConfigs) {
   }
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

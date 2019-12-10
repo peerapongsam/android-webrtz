@@ -34,7 +34,7 @@ class Thread;
 }  // namespace rtc
 
 class FakeAudioCaptureModule
-    : public webrtc::AudioDeviceModule,
+    : public webrtz::AudioDeviceModule,
       public rtc::MessageHandler {
  public:
   typedef uint16_t Sample;
@@ -56,7 +56,7 @@ class FakeAudioCaptureModule
 
   // Note: Calling this method from a callback may result in deadlock.
   int32_t RegisterAudioCallback(
-      webrtc::AudioTransport* audio_callback) override;
+      webrtz::AudioTransport* audio_callback) override;
 
   int32_t Init() override;
   int32_t Terminate() override;
@@ -65,11 +65,11 @@ class FakeAudioCaptureModule
   int16_t PlayoutDevices() override;
   int16_t RecordingDevices() override;
   int32_t PlayoutDeviceName(uint16_t index,
-                            char name[webrtc::kAdmMaxDeviceNameSize],
-                            char guid[webrtc::kAdmMaxGuidSize]) override;
+                            char name[webrtz::kAdmMaxDeviceNameSize],
+                            char guid[webrtz::kAdmMaxGuidSize]) override;
   int32_t RecordingDeviceName(uint16_t index,
-                              char name[webrtc::kAdmMaxDeviceNameSize],
-                              char guid[webrtc::kAdmMaxGuidSize]) override;
+                              char name[webrtz::kAdmMaxDeviceNameSize],
+                              char guid[webrtz::kAdmMaxGuidSize]) override;
 
   int32_t SetPlayoutDevice(uint16_t index) override;
   int32_t SetPlayoutDevice(WindowsDeviceType device) override;
@@ -133,15 +133,15 @@ class FakeAudioCaptureModule
   int32_t EnableBuiltInNS(bool enable) override { return -1; }
 #if defined(WEBRTC_IOS)
   int GetPlayoutAudioParameters(
-      webrtc::AudioParameters* params) const override {
+      webrtz::AudioParameters* params) const override {
     return -1;
   }
-  int GetRecordAudioParameters(webrtc::AudioParameters* params) const override {
+  int GetRecordAudioParameters(webrtz::AudioParameters* params) const override {
     return -1;
   }
 #endif  // WEBRTC_IOS
 
-  // End of functions inherited from webrtc::AudioDeviceModule.
+  // End of functions inherited from webrtz::AudioDeviceModule.
 
   // The following function is inherited from rtc::MessageHandler.
   void OnMessage(rtc::Message* msg) override;
@@ -181,13 +181,13 @@ class FakeAudioCaptureModule
   // Periodcally called function that ensures that frames are pulled and pushed
   // periodically if enabled/started.
   void ProcessFrameP();
-  // Pulls frames from the registered webrtc::AudioTransport.
+  // Pulls frames from the registered webrtz::AudioTransport.
   void ReceiveFrameP();
-  // Pushes frames to the registered webrtc::AudioTransport.
+  // Pushes frames to the registered webrtz::AudioTransport.
   void SendFrameP();
 
   // Callback for playout and recording.
-  webrtc::AudioTransport* audio_callback_;
+  webrtz::AudioTransport* audio_callback_;
 
   bool recording_;  // True when audio is being pushed from the instance.
   bool playing_;    // True when audio is being pulled by the instance.
@@ -208,9 +208,9 @@ class FakeAudioCaptureModule
 
   std::unique_ptr<rtc::Thread> process_thread_;
 
-  // Buffer for storing samples received from the webrtc::AudioTransport.
+  // Buffer for storing samples received from the webrtz::AudioTransport.
   char rec_buffer_[kNumberSamples * kNumberBytesPerSample];
-  // Buffer for samples to send to the webrtc::AudioTransport.
+  // Buffer for samples to send to the webrtz::AudioTransport.
   char send_buffer_[kNumberSamples * kNumberBytesPerSample];
 
   // Counter of frames received that have samples of high enough amplitude to

@@ -22,7 +22,7 @@
 #include "api/jsep.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of IceCandidateInterface.
 class JsepIceCandidate : public IceCandidateInterface {
@@ -88,6 +88,6 @@ class JsepCandidateCollection : public IceCandidateCollection {
   RTC_DISALLOW_COPY_AND_ASSIGN(JsepCandidateCollection);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_JSEPICECANDIDATE_H_

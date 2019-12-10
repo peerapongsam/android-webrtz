@@ -18,7 +18,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::ElementsAreArray;
@@ -494,4 +494,4 @@ TEST(RtcpPacketTest, TransportFeedback_MoveConstructor) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

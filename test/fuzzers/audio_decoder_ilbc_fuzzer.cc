@@ -11,7 +11,7 @@
 #include "modules/audio_coding/codecs/ilbc/audio_decoder_ilbc.h"
 #include "test/fuzzers/audio_decoder_fuzzer.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   AudioDecoderIlbcImpl dec;
   static const int kSampleRateHz = 8000;
@@ -20,4 +20,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   FuzzAudioDecoder(DecoderFunctionType::kNormalDecode, data, size, &dec,
                    kSampleRateHz, sizeof(output), output);
 }
-}  // namespace webrtc
+}  // namespace webrtz

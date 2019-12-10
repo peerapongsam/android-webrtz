@@ -30,7 +30,7 @@
 #include "rtc_base/timeutils.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -1530,4 +1530,4 @@ const char* DataStateToRTCDataChannelStateForTesting(
   return DataStateToRTCDataChannelState(state);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

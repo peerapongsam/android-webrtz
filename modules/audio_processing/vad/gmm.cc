@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kMaxDimension = 10;
 
@@ -61,4 +61,4 @@ double EvaluateGmm(const double* x, const GmmParameters& gmm_parameters) {
   return f;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

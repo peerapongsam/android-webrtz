@@ -15,7 +15,7 @@
 #include "rtc_base/arraysize.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Returns a string representation given an integer SL_RESULT_XXX code.
 // The mapping can be found in <SLES/OpenSLES.h>.
@@ -100,4 +100,4 @@ SLDataFormat_PCM CreatePCMConfiguration(size_t channels,
   return format;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

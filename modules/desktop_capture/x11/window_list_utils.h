@@ -17,7 +17,7 @@
 #include "modules/desktop_capture/x11/x_atom_cache.h"
 #include "rtc_base/function_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Synchronously iterates all on-screen windows in |cache|.display() in
 // decreasing z-order and sends them one-by-one to |on_window| function before
@@ -51,6 +51,6 @@ DesktopRect DesktopRectFromXAttributes(const T& attributes) {
                                attributes.height);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_X11_WINDOW_LIST_UTILS_H_

@@ -25,7 +25,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int64_t kBweIncreaseIntervalMs = 1000;
 const int64_t kBweDecreaseIntervalMs = 300;
@@ -60,7 +60,7 @@ const char kBweLosExperiment[] = "WebRTC-BweLossExperiment";
 
 bool BweLossExperimentIsEnabled() {
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kBweLosExperiment);
+      webrtz::field_trial::FindFullName(kBweLosExperiment);
   // The experiment is enabled iff the field trial string begins with "Enabled".
   return experiment_string.find("Enabled") == 0;
 }
@@ -72,7 +72,7 @@ bool ReadBweLossExperimentParameters(float* low_loss_threshold,
   RTC_DCHECK(high_loss_threshold);
   RTC_DCHECK(bitrate_threshold_kbps);
   std::string experiment_string =
-      webrtc::field_trial::FindFullName(kBweLosExperiment);
+      webrtz::field_trial::FindFullName(kBweLosExperiment);
   int parsed_values =
       sscanf(experiment_string.c_str(), "Enabled-%f,%f,%u", low_loss_threshold,
              high_loss_threshold, bitrate_threshold_kbps);
@@ -130,7 +130,7 @@ SendSideBandwidthEstimation::SendSideBandwidthEstimation(RtcEventLog* event_log)
       event_log_(event_log),
       last_rtc_event_log_ms_(-1),
       in_timeout_experiment_(
-          webrtc::field_trial::IsEnabled("WebRTC-FeedbackTimeout")),
+          webrtz::field_trial::IsEnabled("WebRTC-FeedbackTimeout")),
       low_loss_threshold_(kDefaultLowLossThreshold),
       high_loss_threshold_(kDefaultHighLossThreshold),
       bitrate_threshold_bps_(1000 * kDefaultBitrateThresholdKbps) {
@@ -442,4 +442,4 @@ void SendSideBandwidthEstimation::CapBitrateToThresholds(int64_t now_ms,
   }
   current_bitrate_bps_ = bitrate_bps;
 }
-}  // namespace webrtc
+}  // namespace webrtz

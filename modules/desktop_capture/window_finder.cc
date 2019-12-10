@@ -10,11 +10,11 @@
 
 #include "modules/desktop_capture/window_finder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 WindowFinder::Options::Options() = default;
 WindowFinder::Options::~Options() = default;
 WindowFinder::Options::Options(const WindowFinder::Options& other) = default;
 WindowFinder::Options::Options(WindowFinder::Options&& other) = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

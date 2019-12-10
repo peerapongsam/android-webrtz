@@ -17,7 +17,7 @@
 #include "modules/audio_processing/vad/gmm.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 class VadCircularBuffer;
@@ -54,5 +54,5 @@ class PitchBasedVad {
   std::unique_ptr<VadCircularBuffer> circular_buffer_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_PROCESSING_VAD_PITCH_BASED_VAD_H_

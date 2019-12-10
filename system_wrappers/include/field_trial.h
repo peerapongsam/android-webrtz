@@ -18,7 +18,7 @@
 //
 // WebRTC clients MUST provide an implementation of:
 //
-//   std::string webrtc::field_trial::FindFullName(const std::string& trial).
+//   std::string webrtz::field_trial::FindFullName(const std::string& trial).
 //
 // Or link with a default one provided in:
 //
@@ -53,7 +53,7 @@
 //
 // TODO(andresp): find out how to get bots to run tests with trials enabled.
 
-namespace webrtc {
+namespace webrtz {
 namespace field_trial {
 
 // Returns the group name chosen for the named trial, or the empty string
@@ -76,6 +76,6 @@ inline bool IsDisabled(const char* name) {
 }
 
 }  // namespace field_trial
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_INCLUDE_FIELD_TRIAL_H_

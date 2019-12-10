@@ -10,7 +10,7 @@
 
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 StreamDataCounters::StreamDataCounters() : first_packet_time_ms(-1) {}
 
@@ -44,4 +44,4 @@ PayloadUnion::~PayloadUnion() = default;
 PayloadUnion& PayloadUnion::operator=(const PayloadUnion&) = default;
 PayloadUnion& PayloadUnion::operator=(PayloadUnion&&) = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

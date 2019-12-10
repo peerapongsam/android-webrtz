@@ -16,7 +16,7 @@
 #include "api/array_view.h"
 #include "modules/rtp_rtcp/source/byte_io.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Helper class to take care of the fuzzer input, read from it, and keep track
@@ -87,6 +87,6 @@ class FuzzDataHelper {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FUZZERS_FUZZ_DATA_HELPER_H_

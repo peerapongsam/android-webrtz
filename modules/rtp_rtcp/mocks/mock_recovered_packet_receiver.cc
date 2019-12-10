@@ -10,9 +10,9 @@
 
 #include "modules/rtp_rtcp/mocks/mock_recovered_packet_receiver.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockRecoveredPacketReceiver::MockRecoveredPacketReceiver() = default;
 MockRecoveredPacketReceiver::~MockRecoveredPacketReceiver() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

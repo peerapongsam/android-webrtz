@@ -17,7 +17,7 @@
 
 #include "api/mediastreaminterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpReceiverDelegateAdapter::RtpReceiverDelegateAdapter(
     RTCRtpReceiver *receiver) {
@@ -33,11 +33,11 @@ void RtpReceiverDelegateAdapter::OnFirstPacketReceived(
   [receiver.delegate rtpReceiver:receiver didReceiveFirstPacketForMediaType:packet_media_type];
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 @implementation RTCRtpReceiver {
-  rtc::scoped_refptr<webrtc::RtpReceiverInterface> _nativeRtpReceiver;
-  std::unique_ptr<webrtc::RtpReceiverDelegateAdapter> _observer;
+  rtc::scoped_refptr<webrtz::RtpReceiverInterface> _nativeRtpReceiver;
+  std::unique_ptr<webrtz::RtpReceiverDelegateAdapter> _observer;
 }
 
 @synthesize delegate = _delegate;
@@ -59,7 +59,7 @@ void RtpReceiverDelegateAdapter::OnFirstPacketReceived(
 }
 
 - (nullable RTCMediaStreamTrack *)track {
-  rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> nativeTrack(
+  rtc::scoped_refptr<webrtz::MediaStreamTrackInterface> nativeTrack(
     _nativeRtpReceiver->track());
   if (nativeTrack) {
     return [RTCMediaStreamTrack mediaTrackForNativeTrack:nativeTrack];
@@ -98,17 +98,17 @@ void RtpReceiverDelegateAdapter::OnFirstPacketReceived(
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::RtpReceiverInterface>)nativeRtpReceiver {
+- (rtc::scoped_refptr<webrtz::RtpReceiverInterface>)nativeRtpReceiver {
   return _nativeRtpReceiver;
 }
 
 - (instancetype)initWithNativeRtpReceiver:
-    (rtc::scoped_refptr<webrtc::RtpReceiverInterface>)nativeRtpReceiver {
+    (rtc::scoped_refptr<webrtz::RtpReceiverInterface>)nativeRtpReceiver {
   if (self = [super init]) {
     _nativeRtpReceiver = nativeRtpReceiver;
     RTCLogInfo(
         @"RTCRtpReceiver(%p): created receiver: %@", self, self.description);
-    _observer.reset(new webrtc::RtpReceiverDelegateAdapter(self));
+    _observer.reset(new webrtz::RtpReceiverDelegateAdapter(self));
     _nativeRtpReceiver->SetObserver(_observer.get());
   }
   return self;

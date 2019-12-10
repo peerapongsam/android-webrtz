@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 RtpBitrateConfigurator::RtpBitrateConfigurator(
     const BitrateConstraints& bitrate_config)
     : bitrate_config_(bitrate_config), base_bitrate_config_(bitrate_config) {
@@ -104,4 +104,4 @@ rtc::Optional<BitrateConstraints> RtpBitrateConfigurator::UpdateConstraints(
   return config_to_return;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

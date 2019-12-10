@@ -16,7 +16,7 @@
 #include "api/video_codecs/video_decoder_factory.h"
 #include "api/video_codecs/video_encoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 void InitializeAndroidObjects();
@@ -25,6 +25,6 @@ std::unique_ptr<VideoEncoderFactory> CreateAndroidEncoderFactory();
 std::unique_ptr<VideoDecoderFactory> CreateAndroidDecoderFactory();
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_TEST_ANDROID_CODEC_FACTORY_HELPER_H_

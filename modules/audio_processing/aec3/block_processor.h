@@ -18,7 +18,7 @@
 #include "modules/audio_processing/aec3/render_delay_buffer.h"
 #include "modules/audio_processing/aec3/render_delay_controller.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for performing echo cancellation on 64 sample blocks of audio data.
 class BlockProcessor {
@@ -60,6 +60,6 @@ class BlockProcessor {
   virtual void UpdateEchoLeakageStatus(bool leakage_detected) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_BLOCK_PROCESSOR_H_

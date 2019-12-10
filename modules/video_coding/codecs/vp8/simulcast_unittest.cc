@@ -10,7 +10,7 @@
 
 #include "modules/video_coding/codecs/vp8/simulcast_test_utility.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 class TestVp8Impl : public TestVp8Simulcast {
@@ -79,4 +79,4 @@ TEST_F(TestVp8Impl, TestStrideEncodeDecode) {
   TestVp8Simulcast::TestStrideEncodeDecode();
 }
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

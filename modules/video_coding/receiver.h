@@ -21,7 +21,7 @@
 #include "modules/video_coding/timing.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class VCMEncodedFrame;
@@ -99,6 +99,6 @@ class VCMReceiver {
   int max_video_delay_ms_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_RECEIVER_H_

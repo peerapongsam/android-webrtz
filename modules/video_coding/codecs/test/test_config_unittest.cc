@@ -15,7 +15,7 @@
 
 using ::testing::ElementsAre;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -36,20 +36,20 @@ TEST(TestConfig, NumberOfCoresWithoutUseSingleCore) {
 
 TEST(TestConfig, NumberOfTemporalLayersIsOne) {
   TestConfig config;
-  webrtc::test::CodecSettings(kVideoCodecH264, &config.codec_settings);
+  webrtz::test::CodecSettings(kVideoCodecH264, &config.codec_settings);
   EXPECT_EQ(1u, config.NumberOfTemporalLayers());
 }
 
 TEST(TestConfig, NumberOfTemporalLayers_Vp8) {
   TestConfig config;
-  webrtc::test::CodecSettings(kVideoCodecVP8, &config.codec_settings);
+  webrtz::test::CodecSettings(kVideoCodecVP8, &config.codec_settings);
   config.codec_settings.VP8()->numberOfTemporalLayers = kNumTemporalLayers;
   EXPECT_EQ(kNumTemporalLayers, config.NumberOfTemporalLayers());
 }
 
 TEST(TestConfig, NumberOfTemporalLayers_Vp9) {
   TestConfig config;
-  webrtc::test::CodecSettings(kVideoCodecVP9, &config.codec_settings);
+  webrtz::test::CodecSettings(kVideoCodecVP9, &config.codec_settings);
   config.codec_settings.VP9()->numberOfTemporalLayers = kNumTemporalLayers;
   EXPECT_EQ(kNumTemporalLayers, config.NumberOfTemporalLayers());
 }
@@ -76,11 +76,11 @@ TEST(TestConfig, ForcedKeyFrameIntervalOn) {
 TEST(TestConfig, FilenameWithParams) {
   TestConfig config;
   config.filename = "filename";
-  webrtc::test::CodecSettings(kVideoCodecVP8, &config.codec_settings);
+  webrtz::test::CodecSettings(kVideoCodecVP8, &config.codec_settings);
   config.hw_encoder = true;
   config.codec_settings.startBitrate = 400;
   EXPECT_EQ("filename_VP8_hw_400", config.FilenameWithParams());
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

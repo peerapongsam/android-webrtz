@@ -13,7 +13,7 @@
 
 #include "modules/audio_processing/utility/ooura_fft.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This tables used to be computed at run-time. For example, refer to:
 // https://code.google.com/p/webrtc/source/browse/trunk/webrtc/modules/audio_processing/utility/apm_rdft.c?r=6564
@@ -49,6 +49,6 @@ const float rdft_wk3ri_second[16] = {
     -0.995184720f, -0.098017156f, -0.290284693f, -0.956940353f,
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_UTILITY_OOURA_FFT_TABLES_COMMON_H_

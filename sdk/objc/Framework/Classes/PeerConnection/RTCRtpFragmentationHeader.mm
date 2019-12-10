@@ -20,7 +20,7 @@
 @synthesize fragmentationPlType = _fragmentationPlType;
 
 - (instancetype)initWithNativeFragmentationHeader:
-        (const webrtc::RTPFragmentationHeader *)fragmentationHeader {
+        (const webrtz::RTPFragmentationHeader *)fragmentationHeader {
   if (self = [super init]) {
     if (fragmentationHeader) {
       int count = fragmentationHeader->fragmentationVectorSize;
@@ -44,9 +44,9 @@
   return self;
 }
 
-- (std::unique_ptr<webrtc::RTPFragmentationHeader>)createNativeFragmentationHeader {
+- (std::unique_ptr<webrtz::RTPFragmentationHeader>)createNativeFragmentationHeader {
   auto fragmentationHeader =
-      std::unique_ptr<webrtc::RTPFragmentationHeader>(new webrtc::RTPFragmentationHeader);
+      std::unique_ptr<webrtz::RTPFragmentationHeader>(new webrtz::RTPFragmentationHeader);
   fragmentationHeader->VerifyAndAllocateFragmentationHeader(_fragmentationOffset.count);
   for (NSUInteger i = 0; i < _fragmentationOffset.count; ++i) {
     fragmentationHeader->fragmentationOffset[i] = (size_t)_fragmentationOffset[i].unsignedIntValue;

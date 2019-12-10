@@ -25,7 +25,7 @@
 #include "rtc_base/race_checker.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioSinkInterface;
 class PacketRouter;
@@ -43,7 +43,7 @@ class TransportFeedbackObserver;
 namespace voe {
 
 // This class provides the "view" of a voe::Channel that we need to implement
-// webrtc::AudioSendStream and webrtc::AudioReceiveStream. It serves two
+// webrtz::AudioSendStream and webrtz::AudioReceiveStream. It serves two
 // purposes:
 //  1. Allow mocking just the interfaces used, instead of the entire
 //     voe::Channel class.
@@ -115,7 +115,7 @@ class ChannelProxy : public RtpPacketSinkInterface {
   virtual void OnTwccBasedUplinkPacketLossRate(float packet_loss_rate);
   virtual void OnRecoverableUplinkPacketLossRate(
       float recoverable_packet_loss_rate);
-  virtual std::vector<webrtc::RtpSource> GetSources() const;
+  virtual std::vector<webrtz::RtpSource> GetSources() const;
   virtual void StartSend();
   virtual void StopSend();
   virtual void StartPlayout();
@@ -139,6 +139,6 @@ class ChannelProxy : public RtpPacketSinkInterface {
   RTC_DISALLOW_COPY_AND_ASSIGN(ChannelProxy);
 };
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_CHANNEL_PROXY_H_

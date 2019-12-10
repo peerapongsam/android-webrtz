@@ -16,7 +16,7 @@
 
 @class RTCVideoCaptureIosObjC;
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 class VideoCaptureIos : public VideoCaptureImpl {
  public:
@@ -39,6 +39,6 @@ class VideoCaptureIos : public VideoCaptureImpl {
 };
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CAPTURE_OBJC_VIDEO_CAPTURE_H_

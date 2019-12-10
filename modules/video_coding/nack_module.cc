@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const int kMaxPacketAge = 10000;
@@ -265,4 +265,4 @@ int NackModule::WaitNumberOfPackets(float probability) const {
   return reordering_histogram_.InverseCdf(probability);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

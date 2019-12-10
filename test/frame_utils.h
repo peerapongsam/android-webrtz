@@ -14,7 +14,7 @@
 
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 class I420Buffer;
 class VideoFrame;
 class VideoFrameBuffer;
@@ -35,14 +35,14 @@ static inline bool EqualPlane(const uint8_t* data1,
   return EqualPlane(data1, data2, stride, stride, width, height);
 }
 
-bool FramesEqual(const webrtc::VideoFrame& f1, const webrtc::VideoFrame& f2);
+bool FramesEqual(const webrtz::VideoFrame& f1, const webrtz::VideoFrame& f2);
 
-bool FrameBufsEqual(const rtc::scoped_refptr<webrtc::VideoFrameBuffer>& f1,
-                    const rtc::scoped_refptr<webrtc::VideoFrameBuffer>& f2);
+bool FrameBufsEqual(const rtc::scoped_refptr<webrtz::VideoFrameBuffer>& f1,
+                    const rtc::scoped_refptr<webrtz::VideoFrameBuffer>& f2);
 
 rtc::scoped_refptr<I420Buffer> ReadI420Buffer(int width, int height, FILE *);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FRAME_UTILS_H_

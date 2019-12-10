@@ -17,7 +17,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Used to perform an audio processing simulation from wav files.
@@ -51,6 +51,6 @@ class WavBasedSimulator final : public AudioProcessingSimulator {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_WAV_BASED_SIMULATOR_H_

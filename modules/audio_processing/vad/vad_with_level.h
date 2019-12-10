@@ -14,7 +14,7 @@
 #include "api/array_view.h"
 #include "modules/audio_processing/include/audio_frame_view.h"
 
-namespace webrtc {
+namespace webrtz {
 class VadWithLevel {
  public:
   struct LevelAndProbability {
@@ -35,6 +35,6 @@ class VadWithLevel {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_VAD_VAD_WITH_LEVEL_H_

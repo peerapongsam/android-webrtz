@@ -19,7 +19,7 @@
 #include "modules/pacing/packet_queue_interface.h"
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class PacketQueue : public PacketQueueInterface {
  public:
@@ -79,6 +79,6 @@ class PacketQueue : public PacketQueueInterface {
   int64_t time_last_updated_;
   bool paused_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_PACING_PACKET_QUEUE_H_

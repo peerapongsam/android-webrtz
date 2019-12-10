@@ -39,7 +39,7 @@ class Thread;
 class PacketTransportInternal;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 
 class JsepTransportController : public sigslot::has_slots<>,
                                 public rtc::MessageHandler {
@@ -133,7 +133,7 @@ class JsepTransportController : public sigslot::has_slots<>,
   // OpenSSLStreamAdapter, GetSslCipherSuite and GetDtlsSrtpCryptoSuite are not
   // const. Fix this.
   bool GetStats(const std::string& mid, cricket::TransportStats* stats);
-  void SetMetricsObserver(webrtc::MetricsObserverInterface* metrics_observer);
+  void SetMetricsObserver(webrtz::MetricsObserverInterface* metrics_observer);
 
   bool initial_offerer() const { return initial_offerer_ && *initial_offerer_; }
   // All of these signals are fired on the signaling thread.
@@ -251,15 +251,15 @@ class JsepTransportController : public sigslot::has_slots<>,
       const std::string& transport_name,
       bool rtcp);
 
-  std::unique_ptr<webrtc::RtpTransport> CreateUnencryptedRtpTransport(
+  std::unique_ptr<webrtz::RtpTransport> CreateUnencryptedRtpTransport(
       const std::string& transport_name,
       rtc::PacketTransportInternal* rtp_packet_transport,
       rtc::PacketTransportInternal* rtcp_packet_transport);
-  std::unique_ptr<webrtc::SrtpTransport> CreateSdesTransport(
+  std::unique_ptr<webrtz::SrtpTransport> CreateSdesTransport(
       const std::string& transport_name,
       cricket::DtlsTransportInternal* rtp_dtls_transport,
       cricket::DtlsTransportInternal* rtcp_dtls_transport);
-  std::unique_ptr<webrtc::DtlsSrtpTransport> CreateDtlsSrtpTransport(
+  std::unique_ptr<webrtz::DtlsSrtpTransport> CreateDtlsSrtpTransport(
       const std::string& transport_name,
       cricket::DtlsTransportInternal* rtp_dtls_transport,
       cricket::DtlsTransportInternal* rtcp_dtls_transport);
@@ -313,11 +313,11 @@ class JsepTransportController : public sigslot::has_slots<>,
   rtc::scoped_refptr<rtc::RTCCertificate> certificate_;
   rtc::AsyncInvoker invoker_;
 
-  webrtc::MetricsObserverInterface* metrics_observer_ = nullptr;
+  webrtz::MetricsObserverInterface* metrics_observer_ = nullptr;
 
   RTC_DISALLOW_COPY_AND_ASSIGN(JsepTransportController);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_JSEPTRANSPORTCONTROLLER_H_

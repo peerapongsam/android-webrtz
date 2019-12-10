@@ -41,11 +41,11 @@ struct ScreenshareLayerConfig {
 // TODO(pthatcher): Write unit tests just for these functions,
 // independent of WebrtcVideoEngine.
 
-int GetTotalMaxBitrateBps(const std::vector<webrtc::VideoStream>& streams);
+int GetTotalMaxBitrateBps(const std::vector<webrtz::VideoStream>& streams);
 
 // Get simulcast settings.
 // TODO(sprang): Remove default parameter when it's not longer referenced.
-std::vector<webrtc::VideoStream> GetSimulcastConfig(
+std::vector<webrtz::VideoStream> GetSimulcastConfig(
     size_t max_layers,
     int width,
     int height,
@@ -56,7 +56,7 @@ std::vector<webrtc::VideoStream> GetSimulcastConfig(
     bool is_screenshare = false);
 
 // Gets the simulcast config layers for a non-screensharing case.
-std::vector<webrtc::VideoStream> GetNormalSimulcastLayers(
+std::vector<webrtz::VideoStream> GetNormalSimulcastLayers(
     size_t max_layers,
     int width,
     int height,
@@ -66,7 +66,7 @@ std::vector<webrtc::VideoStream> GetNormalSimulcastLayers(
     int max_framerate);
 
 // Get simulcast config layers for screenshare settings.
-std::vector<webrtc::VideoStream> GetScreenshareLayers(
+std::vector<webrtz::VideoStream> GetScreenshareLayers(
     size_t max_layers,
     int width,
     int height,

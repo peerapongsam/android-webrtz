@@ -20,7 +20,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceGeneric;
 class AudioManager;
@@ -163,7 +163,7 @@ class AudioDeviceModuleImpl : public AudioDeviceModule {
   std::unique_ptr<AudioDeviceGeneric> audio_device_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // defined(WEBRTC_INCLUDE_INTERNAL_AUDIO_DEVICE)
 

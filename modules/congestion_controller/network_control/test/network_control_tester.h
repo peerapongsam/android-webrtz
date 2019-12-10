@@ -18,7 +18,7 @@
 #include "api/optional.h"
 #include "modules/congestion_controller/network_control/include/network_control.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 struct NetworkControlState {
   NetworkControlState();
@@ -93,6 +93,6 @@ class NetworkControllerTester {
   std::deque<PacketResult> outstanding_packets_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_NETWORK_CONTROL_TEST_NETWORK_CONTROL_TESTER_H_

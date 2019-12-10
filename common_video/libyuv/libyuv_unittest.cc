@@ -22,7 +22,7 @@
 #include "test/testsupport/fileutils.h"
 #include "third_party/libyuv/include/libyuv.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 void Calc16ByteAlignedStride(int width, int* stride_y, int* stride_uv) {
@@ -57,7 +57,7 @@ TestLibYuv::TestLibYuv()
       frame_length_(CalcBufferSize(VideoType::kI420, 352, 288)) {}
 
 void TestLibYuv::SetUp() {
-  const std::string input_file_name = webrtc::test::ResourcePath("foreman_cif",
+  const std::string input_file_name = webrtz::test::ResourcePath("foreman_cif",
                                                                  "yuv");
   source_file_  = fopen(input_file_name.c_str(), "rb");
   ASSERT_TRUE(source_file_ != NULL) << "Cannot read file: "<<
@@ -83,7 +83,7 @@ TEST_F(TestLibYuv, ConvertSanityTest) {
 TEST_F(TestLibYuv, ConvertTest) {
   // Reading YUV frame - testing on the first frame of the foreman sequence
   int j = 0;
-  std::string output_file_name = webrtc::test::OutputPath() +
+  std::string output_file_name = webrtz::test::OutputPath() +
                                  "LibYuvTest_conversion.yuv";
   FILE*  output_file = fopen(output_file_name.c_str(), "wb");
   ASSERT_TRUE(output_file != NULL);
@@ -249,7 +249,7 @@ TEST_F(TestLibYuv, ConvertTest) {
 
 TEST_F(TestLibYuv, ConvertAlignedFrame) {
   // Reading YUV frame - testing on the first frame of the foreman sequence
-  std::string output_file_name = webrtc::test::OutputPath() +
+  std::string output_file_name = webrtz::test::OutputPath() +
                                  "LibYuvTest_conversion.yuv";
   FILE*  output_file = fopen(output_file_name.c_str(), "wb");
   ASSERT_TRUE(output_file != NULL);
@@ -344,4 +344,4 @@ TEST_F(TestLibYuv, NV12Scale4x4to2x2) {
               ::testing::ElementsAre(Average(0, 2, 4, 6), Average(1, 3, 5, 7)));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

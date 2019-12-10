@@ -14,7 +14,7 @@
 #include "sdk/android/src/jni/videodecoderfactorywrapper.h"
 #include "sdk/android/src/jni/videoencoderfactorywrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<VideoDecoderFactory> JavaToNativeVideoDecoderFactory(
     JNIEnv* jni,
@@ -30,4 +30,4 @@ std::unique_ptr<VideoEncoderFactory> JavaToNativeVideoEncoderFactory(
       jni, JavaParamRef<jobject>(en));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

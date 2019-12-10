@@ -14,7 +14,7 @@
 #include "modules/remote_bitrate_estimator/include/bwe_defines.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A rate control implementation based on additive increases of
 // bitrate when no over-use is detected and multiplicative decreases when
@@ -88,6 +88,6 @@ class AimdRateControl {
   bool smoothing_experiment_;
   rtc::Optional<int> last_decrease_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_AIMD_RATE_CONTROL_H_

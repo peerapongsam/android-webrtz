@@ -15,7 +15,7 @@
 
 #include "call/rtp_packet_sink_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ReceiveStatistics;
 
@@ -45,6 +45,6 @@ class RtxReceiveStream : public RtpPacketSinkInterface {
   ReceiveStatistics* const rtp_receive_statistics_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTX_RECEIVE_STREAM_H_

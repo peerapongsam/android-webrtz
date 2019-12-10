@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int GainControlForExperimentalAgc::instance_counter_ = 0;
 
@@ -117,4 +117,4 @@ void GainControlForExperimentalAgc::Initialize() {
   data_dumper_->InitiateNewSetOfRecordings();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

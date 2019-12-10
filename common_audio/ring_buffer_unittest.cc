@@ -18,7 +18,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct FreeBufferDeleter {
   inline void operator()(void* ptr) const {
@@ -148,4 +148,4 @@ TEST(RingBufferTest, CreateHandlesErrors) {
   WebRtc_FreeBuffer(buffer);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

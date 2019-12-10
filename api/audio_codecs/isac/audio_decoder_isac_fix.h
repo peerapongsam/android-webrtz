@@ -19,7 +19,7 @@
 #include "api/audio_codecs/audio_format.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // iSAC decoder API (fixed-point implementation) for use as a template
 // parameter to CreateAudioDecoderFactory<...>().
@@ -34,6 +34,6 @@ struct AudioDecoderIsacFix {
       rtc::Optional<AudioCodecPairId> codec_pair_id = rtc::nullopt);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_ISAC_AUDIO_DECODER_ISAC_FIX_H_

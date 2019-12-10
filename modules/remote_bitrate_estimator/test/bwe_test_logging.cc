@@ -22,7 +22,7 @@
 #include "rtc_base/format_macros.h"
 #include "rtc_base/platform_thread.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -259,6 +259,6 @@ void Logging::PopState() {
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // BWE_TEST_LOGGING_COMPILE_TIME_ENABLE

@@ -10,7 +10,7 @@
 
 #include "test/fake_texture_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 VideoFrame FakeNativeBuffer::CreateFrame(int width,
@@ -22,4 +22,4 @@ VideoFrame FakeNativeBuffer::CreateFrame(int width,
                     timestamp, render_time_ms, rotation);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

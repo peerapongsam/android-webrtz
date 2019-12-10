@@ -37,7 +37,7 @@ const int64_t kFrameTimeoutMs = 100;
 const unsigned char kNumSlDummy = 0;
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 using DegredationPreference = VideoSendStream::DegradationPreference;
 using ScaleReason = AdaptationObserverInterface::AdaptReason;
@@ -51,7 +51,7 @@ const int kLowTargetBitrateBps = kTargetBitrateBps / 10;
 const int kMaxInitialFramedrop = 4;
 const int kDefaultFramerate = 30;
 
-class TestBuffer : public webrtc::I420Buffer {
+class TestBuffer : public webrtz::I420Buffer {
  public:
   TestBuffer(rtc::Event* event, int width, int height)
       : I420Buffer(width, height), event_(event) {}
@@ -275,7 +275,7 @@ class VideoStreamEncoderTest : public ::testing::Test {
         stats_proxy_(new MockableSendStatisticsProxy(
             Clock::GetRealTimeClock(),
             video_send_config_,
-            webrtc::VideoEncoderConfig::ContentType::kRealtimeVideo)),
+            webrtz::VideoEncoderConfig::ContentType::kRealtimeVideo)),
         sink_(&fake_encoder_) {}
 
   void SetUp() override {
@@ -3303,4 +3303,4 @@ TEST_F(VideoStreamEncoderTest, DoesNotUpdateBitrateAllocationWhenSuspended) {
   video_stream_encoder_->Stop();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -23,7 +23,7 @@ using ::testing::AnyNumber;
 using ::testing::Return;
 using ::testing::Invoke;
 
-namespace webrtc {
+namespace webrtz {
 
 class TestDemuxer : public Demuxer {
  public:
@@ -445,4 +445,4 @@ TEST(DemuxerImplTest, Demuxing) {
   demuxer.DeliverPacket(packet.get(), PacketTime());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

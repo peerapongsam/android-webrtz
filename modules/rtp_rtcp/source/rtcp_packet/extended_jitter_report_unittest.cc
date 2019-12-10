@@ -16,9 +16,9 @@
 
 using testing::ElementsAre;
 using testing::IsEmpty;
-using webrtc::rtcp::ExtendedJitterReport;
+using webrtz::rtcp::ExtendedJitterReport;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 constexpr uint32_t kJitter1 = 0x11121314;
 constexpr uint32_t kJitter2 = 0x22242628;
@@ -73,4 +73,4 @@ TEST(RtcpPacketExtendedJitterReportTest, ParseFailsWithTooManyItems) {
   EXPECT_FALSE(test::ParseSinglePacket(raw, &parsed));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

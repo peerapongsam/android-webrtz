@@ -39,7 +39,7 @@
   dataChannelConfig.channelId = channelId;
   dataChannelConfig.protocol = protocol;
 
-  webrtc::DataChannelInit nativeInit = dataChannelConfig.nativeDataChannelInit;
+  webrtz::DataChannelInit nativeInit = dataChannelConfig.nativeDataChannelInit;
   EXPECT_EQ(isOrdered, nativeInit.ordered);
   EXPECT_EQ(maxPacketLifeTime, nativeInit.maxRetransmitTime);
   EXPECT_EQ(maxRetransmits, nativeInit.maxRetransmits);

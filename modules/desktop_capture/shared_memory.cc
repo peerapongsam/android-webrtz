@@ -10,7 +10,7 @@
 
 #include "modules/desktop_capture/shared_memory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(WEBRTC_WIN)
 const SharedMemory::Handle SharedMemory::kInvalidHandle = NULL;
@@ -25,4 +25,4 @@ SharedMemory::SharedMemory(void* data, size_t size, Handle handle, int id)
     id_(id) {
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

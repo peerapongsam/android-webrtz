@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(WEBRTC_HAS_NEON)
 
@@ -143,4 +143,4 @@ TEST(VectorMath, Accumulate) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

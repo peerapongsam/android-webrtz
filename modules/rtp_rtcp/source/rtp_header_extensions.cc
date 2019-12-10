@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 // Absolute send time in RTP streams.
 //
 // The absolute send time is signaled to the receiver in-band using the
@@ -382,4 +382,4 @@ constexpr const char RepairedRtpStreamId::kUri[];
 constexpr RTPExtensionType RtpMid::kId;
 constexpr const char RtpMid::kUri[];
 
-}  // namespace webrtc
+}  // namespace webrtz

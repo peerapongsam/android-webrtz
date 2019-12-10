@@ -14,7 +14,7 @@
 #include "api/ortc/rtptransportinterface.h"
 #include "api/rtpparameters.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper methods to create RtpParameters to use for sending/receiving.
 //
@@ -67,6 +67,6 @@ RtpParameters MakeFullIsacParameters();
 RtpParameters MakeFullVp8Parameters();
 RtpParameters MakeFullVp9Parameters();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ORTC_TESTRTPPARAMETERS_H_

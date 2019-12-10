@@ -15,7 +15,7 @@
 #include "rtc_base/constructormagic.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SmoothingFilter {
  public:
@@ -67,6 +67,6 @@ class SmoothingFilterImpl final : public SmoothingFilter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SmoothingFilterImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_SMOOTHING_FILTER_H_

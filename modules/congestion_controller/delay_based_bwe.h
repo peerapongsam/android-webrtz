@@ -24,7 +24,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/race_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
@@ -85,6 +85,6 @@ class DelayBasedBwe {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(DelayBasedBwe);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_DELAY_BASED_BWE_H_

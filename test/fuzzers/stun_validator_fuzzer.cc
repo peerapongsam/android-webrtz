@@ -13,11 +13,11 @@
 
 #include "p2p/base/stun.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   const char* message = reinterpret_cast<const char*>(data);
 
   cricket::StunMessage::ValidateFingerprint(message, size);
   cricket::StunMessage::ValidateMessageIntegrity(message, size, "");
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 
 #include "modules/video_processing/util/skin_detection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Fixed-point skin color model parameters.
 static const int skin_mean[5][2] = {
@@ -94,4 +94,4 @@ bool MbHasSkinColor(const uint8_t* y_src,
   return SkinPixel(y_avg, u_avg, v_avg) == 1;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

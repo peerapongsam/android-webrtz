@@ -17,7 +17,7 @@ namespace rtc {
 namespace {
 // Function that does nothing, and reports success.
 bool NullRunFunctionDeprecated(void* obj) {
-  webrtc::SleepMs(2);  // Hand over timeslice, prevents busy looping.
+  webrtz::SleepMs(2);  // Hand over timeslice, prevents busy looping.
   return true;
 }
 
@@ -32,7 +32,7 @@ void NullRunFunction(void* obj) {}
 bool SetFlagRunFunctionDeprecated(void* obj) {
   bool* obj_as_bool = static_cast<bool*>(obj);
   *obj_as_bool = true;
-  webrtc::SleepMs(0);  // Hand over timeslice, prevents busy looping.
+  webrtz::SleepMs(0);  // Hand over timeslice, prevents busy looping.
   return true;
 }
 
@@ -121,7 +121,7 @@ TEST(PlatformThreadTest, RunFunctionIsCalled) {
 TEST(PlatformThreadTest, DISABLED_TooBusyDeprecated) {
   PlatformThread thread(&TooBusyRunFunction, nullptr, "BusyThread");
   thread.Start();
-  webrtc::SleepMs(1000);
+  webrtz::SleepMs(1000);
   thread.Stop();
 }
 

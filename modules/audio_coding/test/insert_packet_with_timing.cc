@@ -55,7 +55,7 @@ const int32_t kAudioPlayedOut = 0x00000001;
 const int32_t kPacketPushedIn = 0x00000001 << 1;
 const int kPlayoutPeriodMs = 10;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -302,7 +302,7 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  webrtc::InsertPacketWithTiming test;
+  webrtz::InsertPacketWithTiming test;
   test.SetUp();
 
   FILE* delay_log = NULL;

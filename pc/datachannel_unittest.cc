@@ -16,12 +16,12 @@
 #include "pc/test/fakedatachannelprovider.h"
 #include "rtc_base/gunit.h"
 
-using webrtc::DataChannel;
-using webrtc::SctpSidAllocator;
+using webrtz::DataChannel;
+using webrtz::SctpSidAllocator;
 
 static constexpr int kDefaultTimeout = 10000;
 
-class FakeDataChannelObserver : public webrtc::DataChannelObserver {
+class FakeDataChannelObserver : public webrtz::DataChannelObserver {
  public:
   FakeDataChannelObserver()
       : messages_received_(0),
@@ -36,7 +36,7 @@ class FakeDataChannelObserver : public webrtc::DataChannelObserver {
     ++on_buffered_amount_change_count_;
   }
 
-  void OnMessage(const webrtc::DataBuffer& buffer) {
+  void OnMessage(const webrtz::DataBuffer& buffer) {
     ++messages_received_;
   }
 
@@ -89,7 +89,7 @@ class SctpDataChannelTest : public testing::Test {
     webrtc_data_channel_->RegisterObserver(observer_.get());
   }
 
-  webrtc::InternalDataChannelInit init_;
+  webrtz::InternalDataChannelInit init_;
   std::unique_ptr<FakeDataChannelProvider> provider_;
   std::unique_ptr<FakeDataChannelObserver> observer_;
   rtc::scoped_refptr<DataChannel> webrtc_data_channel_;
@@ -146,17 +146,17 @@ TEST_F(SctpDataChannelTest, StateTransition) {
       &state_signals_listener, &StateSignalsListener::OnSignalOpened);
   webrtc_data_channel_->SignalClosed.connect(
       &state_signals_listener, &StateSignalsListener::OnSignalClosed);
-  EXPECT_EQ(webrtc::DataChannelInterface::kConnecting,
+  EXPECT_EQ(webrtz::DataChannelInterface::kConnecting,
             webrtc_data_channel_->state());
   EXPECT_EQ(state_signals_listener.opened_count(), 0);
   EXPECT_EQ(state_signals_listener.closed_count(), 0);
   SetChannelReady();
 
-  EXPECT_EQ(webrtc::DataChannelInterface::kOpen, webrtc_data_channel_->state());
+  EXPECT_EQ(webrtz::DataChannelInterface::kOpen, webrtc_data_channel_->state());
   EXPECT_EQ(state_signals_listener.opened_count(), 1);
   EXPECT_EQ(state_signals_listener.closed_count(), 0);
   webrtc_data_channel_->Close();
-  EXPECT_EQ(webrtc::DataChannelInterface::kClosed,
+  EXPECT_EQ(webrtz::DataChannelInterface::kClosed,
             webrtc_data_channel_->state());
   EXPECT_EQ(state_signals_listener.opened_count(), 1);
   EXPECT_EQ(state_signals_listener.closed_count(), 1);
@@ -169,7 +169,7 @@ TEST_F(SctpDataChannelTest, StateTransition) {
 TEST_F(SctpDataChannelTest, BufferedAmountWhenBlocked) {
   AddObserver();
   SetChannelReady();
-  webrtc::DataBuffer buffer("abcd");
+  webrtz::DataBuffer buffer("abcd");
   EXPECT_TRUE(webrtc_data_channel_->Send(buffer));
 
   EXPECT_EQ(0U, webrtc_data_channel_->buffered_amount());
@@ -191,7 +191,7 @@ TEST_F(SctpDataChannelTest, BufferedAmountWhenBlocked) {
 TEST_F(SctpDataChannelTest, QueuedDataSentWhenUnblocked) {
   AddObserver();
   SetChannelReady();
-  webrtc::DataBuffer buffer("abcd");
+  webrtz::DataBuffer buffer("abcd");
   provider_->set_send_blocked(true);
   EXPECT_TRUE(webrtc_data_channel_->Send(buffer));
 
@@ -208,7 +208,7 @@ TEST_F(SctpDataChannelTest, QueuedDataSentWhenUnblocked) {
 TEST_F(SctpDataChannelTest, BlockedWhenSendQueuedDataNoCrash) {
   AddObserver();
   SetChannelReady();
-  webrtc::DataBuffer buffer("abcd");
+  webrtz::DataBuffer buffer("abcd");
   provider_->set_send_blocked(true);
   EXPECT_TRUE(webrtc_data_channel_->Send(buffer));
   EXPECT_EQ(1U, observer_->on_buffered_amount_change_count());
@@ -230,13 +230,13 @@ TEST_F(SctpDataChannelTest, BlockedWhenSendQueuedDataNoCrash) {
 TEST_F(SctpDataChannelTest, VerifyMessagesAndBytesSent) {
   AddObserver();
   SetChannelReady();
-  std::vector<webrtc::DataBuffer> buffers({
-    webrtc::DataBuffer("message 1"),
-    webrtc::DataBuffer("msg 2"),
-    webrtc::DataBuffer("message three"),
-    webrtc::DataBuffer("quadra message"),
-    webrtc::DataBuffer("fifthmsg"),
-    webrtc::DataBuffer("message of the beast"),
+  std::vector<webrtz::DataBuffer> buffers({
+    webrtz::DataBuffer("message 1"),
+    webrtz::DataBuffer("msg 2"),
+    webrtz::DataBuffer("message three"),
+    webrtz::DataBuffer("quadra message"),
+    webrtz::DataBuffer("fifthmsg"),
+    webrtz::DataBuffer("message of the beast"),
   });
 
   // Default values.
@@ -298,12 +298,12 @@ TEST_F(SctpDataChannelTest, QueuedOpenMessageSent) {
 // state.
 TEST_F(SctpDataChannelTest, LateCreatedChannelTransitionToOpen) {
   SetChannelReady();
-  webrtc::InternalDataChannelInit init;
+  webrtz::InternalDataChannelInit init;
   init.id = 1;
   rtc::scoped_refptr<DataChannel> dc =
       DataChannel::Create(provider_.get(), cricket::DCT_SCTP, "test1", init);
-  EXPECT_EQ(webrtc::DataChannelInterface::kConnecting, dc->state());
-  EXPECT_TRUE_WAIT(webrtc::DataChannelInterface::kOpen == dc->state(),
+  EXPECT_EQ(webrtz::DataChannelInterface::kConnecting, dc->state());
+  EXPECT_TRUE_WAIT(webrtz::DataChannelInterface::kOpen == dc->state(),
                    1000);
 }
 
@@ -311,16 +311,16 @@ TEST_F(SctpDataChannelTest, LateCreatedChannelTransitionToOpen) {
 // message is received.
 TEST_F(SctpDataChannelTest, SendUnorderedAfterReceivesOpenAck) {
   SetChannelReady();
-  webrtc::InternalDataChannelInit init;
+  webrtz::InternalDataChannelInit init;
   init.id = 1;
   init.ordered = false;
   rtc::scoped_refptr<DataChannel> dc =
       DataChannel::Create(provider_.get(), cricket::DCT_SCTP, "test1", init);
 
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kOpen, dc->state(), 1000);
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kOpen, dc->state(), 1000);
 
   // Sends a message and verifies it's ordered.
-  webrtc::DataBuffer buffer("some data");
+  webrtz::DataBuffer buffer("some data");
   ASSERT_TRUE(dc->Send(buffer));
   EXPECT_TRUE(provider_->last_send_data_params().ordered);
 
@@ -329,7 +329,7 @@ TEST_F(SctpDataChannelTest, SendUnorderedAfterReceivesOpenAck) {
   params.ssrc = init.id;
   params.type = cricket::DMT_CONTROL;
   rtc::CopyOnWriteBuffer payload;
-  webrtc::WriteDataChannelOpenAckMessage(&payload);
+  webrtz::WriteDataChannelOpenAckMessage(&payload);
   dc->OnDataReceived(params, payload);
 
   // Sends another message and verifies it's unordered.
@@ -341,19 +341,19 @@ TEST_F(SctpDataChannelTest, SendUnorderedAfterReceivesOpenAck) {
 // message is received.
 TEST_F(SctpDataChannelTest, SendUnorderedAfterReceiveData) {
   SetChannelReady();
-  webrtc::InternalDataChannelInit init;
+  webrtz::InternalDataChannelInit init;
   init.id = 1;
   init.ordered = false;
   rtc::scoped_refptr<DataChannel> dc =
       DataChannel::Create(provider_.get(), cricket::DCT_SCTP, "test1", init);
 
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kOpen, dc->state(), 1000);
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kOpen, dc->state(), 1000);
 
   // Emulates receiving a DATA message.
   cricket::ReceiveDataParams params;
   params.ssrc = init.id;
   params.type = cricket::DMT_TEXT;
-  webrtc::DataBuffer buffer("data");
+  webrtz::DataBuffer buffer("data");
   dc->OnDataReceived(params, buffer.data);
 
   // Sends a message and verifies it's unordered.
@@ -364,34 +364,34 @@ TEST_F(SctpDataChannelTest, SendUnorderedAfterReceiveData) {
 // Tests that the channel can't open until it's successfully sent the OPEN
 // message.
 TEST_F(SctpDataChannelTest, OpenWaitsForOpenMesssage) {
-  webrtc::DataBuffer buffer("foo");
+  webrtz::DataBuffer buffer("foo");
 
   provider_->set_send_blocked(true);
   SetChannelReady();
-  EXPECT_EQ(webrtc::DataChannelInterface::kConnecting,
+  EXPECT_EQ(webrtz::DataChannelInterface::kConnecting,
             webrtc_data_channel_->state());
   provider_->set_send_blocked(false);
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kOpen,
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kOpen,
                  webrtc_data_channel_->state(), 1000);
   EXPECT_EQ(cricket::DMT_CONTROL, provider_->last_send_data_params().type);
 }
 
 // Tests that close first makes sure all queued data gets sent.
 TEST_F(SctpDataChannelTest, QueuedCloseFlushes) {
-  webrtc::DataBuffer buffer("foo");
+  webrtz::DataBuffer buffer("foo");
 
   provider_->set_send_blocked(true);
   SetChannelReady();
-  EXPECT_EQ(webrtc::DataChannelInterface::kConnecting,
+  EXPECT_EQ(webrtz::DataChannelInterface::kConnecting,
             webrtc_data_channel_->state());
   provider_->set_send_blocked(false);
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kOpen,
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kOpen,
                  webrtc_data_channel_->state(), 1000);
   provider_->set_send_blocked(true);
   webrtc_data_channel_->Send(buffer);
   webrtc_data_channel_->Close();
   provider_->set_send_blocked(false);
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kClosed,
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kClosed,
                  webrtc_data_channel_->state(), 1000);
   EXPECT_EQ(cricket::DMT_TEXT, provider_->last_send_data_params().type);
 }
@@ -400,7 +400,7 @@ TEST_F(SctpDataChannelTest, QueuedCloseFlushes) {
 TEST_F(SctpDataChannelTest, SendDataSsrc) {
   webrtc_data_channel_->SetSctpSid(1);
   SetChannelReady();
-  webrtc::DataBuffer buffer("data");
+  webrtz::DataBuffer buffer("data");
   EXPECT_TRUE(webrtc_data_channel_->Send(buffer));
   EXPECT_EQ(1U, provider_->last_send_data_params().ssrc);
 }
@@ -414,7 +414,7 @@ TEST_F(SctpDataChannelTest, ReceiveDataWithInvalidSsrc) {
 
   cricket::ReceiveDataParams params;
   params.ssrc = 0;
-  webrtc::DataBuffer buffer("abcd");
+  webrtz::DataBuffer buffer("abcd");
   webrtc_data_channel_->OnDataReceived(params, buffer.data);
 
   EXPECT_EQ(0U, observer_->messages_received());
@@ -429,7 +429,7 @@ TEST_F(SctpDataChannelTest, ReceiveDataWithValidSsrc) {
 
   cricket::ReceiveDataParams params;
   params.ssrc = 1;
-  webrtc::DataBuffer buffer("abcd");
+  webrtz::DataBuffer buffer("abcd");
 
   webrtc_data_channel_->OnDataReceived(params, buffer.data);
   EXPECT_EQ(1U, observer_->messages_received());
@@ -438,16 +438,16 @@ TEST_F(SctpDataChannelTest, ReceiveDataWithValidSsrc) {
 // Tests that no CONTROL message is sent if the datachannel is negotiated and
 // not created from an OPEN message.
 TEST_F(SctpDataChannelTest, NoMsgSentIfNegotiatedAndNotFromOpenMsg) {
-  webrtc::InternalDataChannelInit config;
+  webrtz::InternalDataChannelInit config;
   config.id = 1;
   config.negotiated = true;
-  config.open_handshake_role = webrtc::InternalDataChannelInit::kNone;
+  config.open_handshake_role = webrtz::InternalDataChannelInit::kNone;
 
   SetChannelReady();
   rtc::scoped_refptr<DataChannel> dc =
       DataChannel::Create(provider_.get(), cricket::DCT_SCTP, "test1", config);
 
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kOpen, dc->state(), 1000);
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kOpen, dc->state(), 1000);
   EXPECT_EQ(0U, provider_->last_send_data_params().ssrc);
 }
 
@@ -455,13 +455,13 @@ TEST_F(SctpDataChannelTest, NoMsgSentIfNegotiatedAndNotFromOpenMsg) {
 // are correct, receiving data both while not open and while open.
 TEST_F(SctpDataChannelTest, VerifyMessagesAndBytesReceived) {
   AddObserver();
-  std::vector<webrtc::DataBuffer> buffers({
-    webrtc::DataBuffer("message 1"),
-    webrtc::DataBuffer("msg 2"),
-    webrtc::DataBuffer("message three"),
-    webrtc::DataBuffer("quadra message"),
-    webrtc::DataBuffer("fifthmsg"),
-    webrtc::DataBuffer("message of the beast"),
+  std::vector<webrtz::DataBuffer> buffers({
+    webrtz::DataBuffer("message 1"),
+    webrtz::DataBuffer("msg 2"),
+    webrtz::DataBuffer("message three"),
+    webrtz::DataBuffer("quadra message"),
+    webrtz::DataBuffer("fifthmsg"),
+    webrtz::DataBuffer("message of the beast"),
   });
 
   webrtc_data_channel_->SetSctpSid(1);
@@ -501,16 +501,16 @@ TEST_F(SctpDataChannelTest, VerifyMessagesAndBytesReceived) {
 // Tests that OPEN_ACK message is sent if the datachannel is created from an
 // OPEN message.
 TEST_F(SctpDataChannelTest, OpenAckSentIfCreatedFromOpenMessage) {
-  webrtc::InternalDataChannelInit config;
+  webrtz::InternalDataChannelInit config;
   config.id = 1;
   config.negotiated = true;
-  config.open_handshake_role = webrtc::InternalDataChannelInit::kAcker;
+  config.open_handshake_role = webrtz::InternalDataChannelInit::kAcker;
 
   SetChannelReady();
   rtc::scoped_refptr<DataChannel> dc =
       DataChannel::Create(provider_.get(), cricket::DCT_SCTP, "test1", config);
 
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kOpen, dc->state(), 1000);
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kOpen, dc->state(), 1000);
 
   EXPECT_EQ(static_cast<unsigned int>(config.id),
             provider_->last_send_data_params().ssrc);
@@ -519,14 +519,14 @@ TEST_F(SctpDataChannelTest, OpenAckSentIfCreatedFromOpenMessage) {
 
 // Tests the OPEN_ACK role assigned by InternalDataChannelInit.
 TEST_F(SctpDataChannelTest, OpenAckRoleInitialization) {
-  webrtc::InternalDataChannelInit init;
-  EXPECT_EQ(webrtc::InternalDataChannelInit::kOpener, init.open_handshake_role);
+  webrtz::InternalDataChannelInit init;
+  EXPECT_EQ(webrtz::InternalDataChannelInit::kOpener, init.open_handshake_role);
   EXPECT_FALSE(init.negotiated);
 
-  webrtc::DataChannelInit base;
+  webrtz::DataChannelInit base;
   base.negotiated = true;
-  webrtc::InternalDataChannelInit init2(base);
-  EXPECT_EQ(webrtc::InternalDataChannelInit::kNone, init2.open_handshake_role);
+  webrtz::InternalDataChannelInit init2(base);
+  EXPECT_EQ(webrtz::InternalDataChannelInit::kNone, init2.open_handshake_role);
 }
 
 // Tests that the DataChannel is closed if the sending buffer is full.
@@ -536,7 +536,7 @@ TEST_F(SctpDataChannelTest, ClosedWhenSendBufferFull) {
   rtc::CopyOnWriteBuffer buffer(1024);
   memset(buffer.data(), 0, buffer.size());
 
-  webrtc::DataBuffer packet(buffer, true);
+  webrtz::DataBuffer packet(buffer, true);
   provider_->set_send_blocked(true);
 
   for (size_t i = 0; i < 16 * 1024 + 1; ++i) {
@@ -544,19 +544,19 @@ TEST_F(SctpDataChannelTest, ClosedWhenSendBufferFull) {
   }
 
   EXPECT_TRUE(
-      webrtc::DataChannelInterface::kClosed == webrtc_data_channel_->state() ||
-      webrtc::DataChannelInterface::kClosing == webrtc_data_channel_->state());
+      webrtz::DataChannelInterface::kClosed == webrtc_data_channel_->state() ||
+      webrtz::DataChannelInterface::kClosing == webrtc_data_channel_->state());
 }
 
 // Tests that the DataChannel is closed on transport errors.
 TEST_F(SctpDataChannelTest, ClosedOnTransportError) {
   SetChannelReady();
-  webrtc::DataBuffer buffer("abcd");
+  webrtz::DataBuffer buffer("abcd");
   provider_->set_transport_error();
 
   EXPECT_TRUE(webrtc_data_channel_->Send(buffer));
 
-  EXPECT_EQ(webrtc::DataChannelInterface::kClosed,
+  EXPECT_EQ(webrtz::DataChannelInterface::kClosed,
             webrtc_data_channel_->state());
 }
 
@@ -579,7 +579,7 @@ TEST_F(SctpDataChannelTest, RemotePeerRequestClose) {
 
   // OnStateChange called for kClosing and kClosed.
   EXPECT_EQ(2U, observer_->on_state_change_count());
-  EXPECT_EQ(webrtc::DataChannelInterface::kClosed,
+  EXPECT_EQ(webrtz::DataChannelInterface::kClosed,
             webrtc_data_channel_->state());
 }
 
@@ -596,7 +596,7 @@ TEST_F(SctpDataChannelTest, ClosedWhenReceivedBufferFull) {
   for (size_t i = 0; i < 16 * 1024 + 1; ++i) {
     webrtc_data_channel_->OnDataReceived(params, buffer);
   }
-  EXPECT_EQ(webrtc::DataChannelInterface::kClosed,
+  EXPECT_EQ(webrtz::DataChannelInterface::kClosed,
             webrtc_data_channel_->state());
 }
 
@@ -604,12 +604,12 @@ TEST_F(SctpDataChannelTest, ClosedWhenReceivedBufferFull) {
 TEST_F(SctpDataChannelTest, SendEmptyData) {
   webrtc_data_channel_->SetSctpSid(1);
   SetChannelReady();
-  EXPECT_EQ(webrtc::DataChannelInterface::kOpen,
+  EXPECT_EQ(webrtz::DataChannelInterface::kOpen,
             webrtc_data_channel_->state());
 
-  webrtc::DataBuffer buffer("");
+  webrtz::DataBuffer buffer("");
   EXPECT_TRUE(webrtc_data_channel_->Send(buffer));
-  EXPECT_EQ(webrtc::DataChannelInterface::kOpen,
+  EXPECT_EQ(webrtz::DataChannelInterface::kOpen,
             webrtc_data_channel_->state());
 }
 
@@ -627,7 +627,7 @@ TEST_F(SctpDataChannelTest, TransportDestroyedWhileDataBuffered) {
 
   rtc::CopyOnWriteBuffer buffer(1024);
   memset(buffer.data(), 0, buffer.size());
-  webrtc::DataBuffer packet(buffer, true);
+  webrtz::DataBuffer packet(buffer, true);
 
   // Send a packet while sending is blocked so it ends up buffered.
   provider_->set_send_blocked(true);
@@ -638,7 +638,7 @@ TEST_F(SctpDataChannelTest, TransportDestroyedWhileDataBuffered) {
   // transition to the "closed" state.
   webrtc_data_channel_->OnTransportChannelDestroyed();
   provider_.reset(nullptr);
-  EXPECT_EQ_WAIT(webrtc::DataChannelInterface::kClosed,
+  EXPECT_EQ_WAIT(webrtz::DataChannelInterface::kClosed,
                  webrtc_data_channel_->state(), kDefaultTimeout);
 }
 

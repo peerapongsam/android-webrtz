@@ -14,7 +14,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(WEBRTC_ARCH_X86_FAMILY)
 // Verifies that the optimized methods are bitexact to their reference
@@ -160,4 +160,4 @@ TEST(FftData, CopyFromPackedArray) {
   EXPECT_EQ(x_ref.im, x.im);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

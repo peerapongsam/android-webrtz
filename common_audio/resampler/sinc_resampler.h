@@ -21,7 +21,7 @@
 #include "rtc_base/memory/aligned_malloc.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Callback class for providing more data into the resampler.  Expects |frames|
 // of data to be rendered into |destination|; zero padded if not enough frames
@@ -166,6 +166,6 @@ class SincResampler {
   RTC_DISALLOW_COPY_AND_ASSIGN(SincResampler);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_RESAMPLER_SINC_RESAMPLER_H_

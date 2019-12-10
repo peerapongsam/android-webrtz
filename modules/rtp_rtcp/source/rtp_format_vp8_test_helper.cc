@@ -13,7 +13,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace test {
 
@@ -240,4 +240,4 @@ void RtpFormatVp8TestHelper::CheckPacket(size_t expect_bytes,
 
 }  // namespace test
 
-}  // namespace webrtc
+}  // namespace webrtz

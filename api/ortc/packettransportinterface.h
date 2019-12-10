@@ -17,7 +17,7 @@ class PacketTransportInternal;
 
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 
 // Base class for different packet-based transports.
 class PacketTransportInterface {
@@ -34,6 +34,6 @@ class PacketTransportInterface {
   friend class RtpTransportAdapter;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_PACKETTRANSPORTINTERFACE_H_

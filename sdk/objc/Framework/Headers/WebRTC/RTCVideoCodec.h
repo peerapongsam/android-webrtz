@@ -35,7 +35,7 @@ typedef NS_ENUM(NSUInteger, RTCVideoContentType) {
   RTCVideoContentTypeScreenshare,
 };
 
-/** Represents an encoded frame. Corresponds to webrtc::EncodedImage. */
+/** Represents an encoded frame. Corresponds to webrtz::EncodedImage. */
 RTC_EXPORT
 @interface RTCEncodedImage : NSObject
 
@@ -56,7 +56,7 @@ RTC_EXPORT
 
 @end
 
-/** Information for header. Corresponds to webrtc::RTPFragmentationHeader. */
+/** Information for header. Corresponds to webrtz::RTPFragmentationHeader. */
 RTC_EXPORT
 @interface RTCRtpFragmentationHeader : NSObject
 
@@ -68,7 +68,7 @@ RTC_EXPORT
 @end
 
 /** Implement this protocol to pass codec specific info from the encoder.
- *  Corresponds to webrtc::CodecSpecificInfo.
+ *  Corresponds to webrtz::CodecSpecificInfo.
  */
 RTC_EXPORT
 @protocol RTCCodecSpecificInfo <NSObject>
@@ -107,7 +107,7 @@ RTC_EXPORT
 
 @end
 
-/** Settings for encoder. Corresponds to webrtc::VideoCodec. */
+/** Settings for encoder. Corresponds to webrtz::VideoCodec. */
 RTC_EXPORT
 @interface RTCVideoEncoderSettings : NSObject
 
@@ -128,7 +128,7 @@ RTC_EXPORT
 
 @end
 
-/** QP thresholds for encoder. Corresponds to webrtc::VideoEncoder::QpThresholds. */
+/** QP thresholds for encoder. Corresponds to webrtz::VideoEncoder::QpThresholds. */
 RTC_EXPORT
 @interface RTCVideoEncoderQpThresholds : NSObject
 

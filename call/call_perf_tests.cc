@@ -41,9 +41,9 @@
 #include "test/testsupport/perf_test.h"
 #include "video/transport_adapter.h"
 
-using webrtc::test::DriftingClock;
+using webrtz::test::DriftingClock;
 
-namespace webrtc {
+namespace webrtz {
 
 class CallPerfTest : public test::CallTest {
  protected:
@@ -109,7 +109,7 @@ class VideoRtcpAndSyncObserver : public test::RtpRtcpObserver,
     if (std::abs(stats.sync_offset_ms) < kInSyncThresholdMs) {
       if (first_time_in_sync_ == -1) {
         first_time_in_sync_ = now_ms;
-        webrtc::test::PrintResult("sync_convergence_time", test_label_,
+        webrtz::test::PrintResult("sync_convergence_time", test_label_,
                                   "synchronization", time_since_creation, "ms",
                                   false);
       }
@@ -876,7 +876,7 @@ void CallPerfTest::TestMinAudioVideoBitrate(
       }
       EXPECT_GT(last_passed_test_bitrate, -1)
           << "Minimum supported bitrate out of the test scope";
-      webrtc::test::PrintResult(
+      webrtz::test::PrintResult(
           "min_test_bitrate_",
           use_bitrate_allocation_strategy_ ? "with_allocation_strategy"
                                            : "no_allocation_strategy",
@@ -947,4 +947,4 @@ TEST_F(CallPerfTest, MinVideoAndAudioBitrateWStrategy) {
   TestMinAudioVideoBitrate(true, 110, 40, -10, 10000, 70000, 200000);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

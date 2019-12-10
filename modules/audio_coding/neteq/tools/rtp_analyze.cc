@@ -54,21 +54,21 @@ int main(int argc, char* argv[]) {
       (FLAG_abs_send_time > 0 && FLAG_abs_send_time <= 255));  // Extension ID
 
   printf("Input file: %s\n", argv[1]);
-  std::unique_ptr<webrtc::test::RtpFileSource> file_source(
-      webrtc::test::RtpFileSource::Create(argv[1]));
+  std::unique_ptr<webrtz::test::RtpFileSource> file_source(
+      webrtz::test::RtpFileSource::Create(argv[1]));
   assert(file_source.get());
   // Set RTP extension IDs.
   bool print_audio_level = false;
   if (FLAG_audio_level != -1) {
     print_audio_level = true;
-    file_source->RegisterRtpHeaderExtension(webrtc::kRtpExtensionAudioLevel,
+    file_source->RegisterRtpHeaderExtension(webrtz::kRtpExtensionAudioLevel,
                                             FLAG_audio_level);
   }
   bool print_abs_send_time = false;
   if (FLAG_abs_send_time != -1) {
     print_abs_send_time = true;
     file_source->RegisterRtpHeaderExtension(
-        webrtc::kRtpExtensionAbsoluteSendTime, FLAG_abs_send_time);
+        webrtz::kRtpExtensionAbsoluteSendTime, FLAG_abs_send_time);
   }
 
   FILE* out_file;
@@ -95,7 +95,7 @@ int main(int argc, char* argv[]) {
 
   uint32_t max_abs_send_time = 0;
   int cycles = -1;
-  std::unique_ptr<webrtc::test::Packet> packet;
+  std::unique_ptr<webrtz::test::Packet> packet;
   while (true) {
     packet = file_source->NextPacket();
     if (!packet.get()) {
@@ -151,10 +151,10 @@ int main(int argc, char* argv[]) {
     fprintf(out_file, "\n");
 
     if (packet->header().payloadType == FLAG_red) {
-      std::list<webrtc::RTPHeader*> red_headers;
+      std::list<webrtz::RTPHeader*> red_headers;
       packet->ExtractRedHeaders(&red_headers);
       while (!red_headers.empty()) {
-        webrtc::RTPHeader* red = red_headers.front();
+        webrtz::RTPHeader* red = red_headers.front();
         assert(red);
         fprintf(out_file,
                 "* %5u %10u %10u %5i\n",

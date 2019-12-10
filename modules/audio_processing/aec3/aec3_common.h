@@ -14,7 +14,7 @@
 #include <stddef.h>
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #ifdef _MSC_VER /* visual c++ */
 #define ALIGN16_BEG __declspec(align(16))
@@ -115,6 +115,6 @@ static_assert(ValidFullBandRate(48000),
 static_assert(!ValidFullBandRate(8001),
               "Test that 8001 Hz is not a valid sample rate");
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_AEC3_COMMON_H_

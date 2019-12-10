@@ -20,7 +20,7 @@
 #include "rtc_base/file.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class IvfFileWriter {
  public:
@@ -55,6 +55,6 @@ class IvfFileWriter {
   RTC_DISALLOW_COPY_AND_ASSIGN(IvfFileWriter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_UTILITY_IVF_FILE_WRITER_H_

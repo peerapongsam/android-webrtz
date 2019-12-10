@@ -20,7 +20,7 @@
 #include "modules/audio_processing/aec3/render_buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for analyzing the properties of an adaptive filter.
 class FilterAnalyzer {
@@ -63,6 +63,6 @@ class FilterAnalyzer {
   RTC_DISALLOW_COPY_AND_ASSIGN(FilterAnalyzer);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_FILTER_ANALYZER_H_

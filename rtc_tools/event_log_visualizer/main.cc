@@ -201,15 +201,15 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  webrtc::test::SetExecutablePath(argv[0]);
-  webrtc::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
+  webrtz::test::SetExecutablePath(argv[0]);
+  webrtz::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
   // InitFieldTrialsFromString stores the char*, so the char array must outlive
   // the application.
-  webrtc::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
+  webrtz::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
 
   std::string filename = argv[1];
 
-  webrtc::ParsedRtcEventLog parsed_log;
+  webrtz::ParsedRtcEventLog parsed_log;
 
   if (!parsed_log.ParseFile(filename)) {
     std::cerr << "Could not parse the entire log file." << std::endl;
@@ -218,25 +218,25 @@ int main(int argc, char* argv[]) {
               << std::endl;
   }
 
-  webrtc::plotting::EventLogAnalyzer analyzer(parsed_log);
-  std::unique_ptr<webrtc::plotting::PlotCollection> collection(
-      new webrtc::plotting::PythonPlotCollection());
+  webrtz::plotting::EventLogAnalyzer analyzer(parsed_log);
+  std::unique_ptr<webrtz::plotting::PlotCollection> collection(
+      new webrtz::plotting::PythonPlotCollection());
 
   if (FLAG_plot_incoming_packet_sizes) {
-    analyzer.CreatePacketGraph(webrtc::PacketDirection::kIncomingPacket,
+    analyzer.CreatePacketGraph(webrtz::PacketDirection::kIncomingPacket,
                                collection->AppendNewPlot());
   }
   if (FLAG_plot_outgoing_packet_sizes) {
-    analyzer.CreatePacketGraph(webrtc::PacketDirection::kOutgoingPacket,
+    analyzer.CreatePacketGraph(webrtz::PacketDirection::kOutgoingPacket,
                                collection->AppendNewPlot());
   }
   if (FLAG_plot_incoming_packet_count) {
     analyzer.CreateAccumulatedPacketsGraph(
-        webrtc::PacketDirection::kIncomingPacket, collection->AppendNewPlot());
+        webrtz::PacketDirection::kIncomingPacket, collection->AppendNewPlot());
   }
   if (FLAG_plot_outgoing_packet_count) {
     analyzer.CreateAccumulatedPacketsGraph(
-        webrtc::PacketDirection::kOutgoingPacket, collection->AppendNewPlot());
+        webrtz::PacketDirection::kOutgoingPacket, collection->AppendNewPlot());
   }
   if (FLAG_plot_audio_playout) {
     analyzer.CreatePlayoutGraph(collection->AppendNewPlot());
@@ -257,23 +257,23 @@ int main(int argc, char* argv[]) {
     analyzer.CreateIncomingPacketLossGraph(collection->AppendNewPlot());
   }
   if (FLAG_plot_incoming_bitrate) {
-    analyzer.CreateTotalBitrateGraph(webrtc::PacketDirection::kIncomingPacket,
+    analyzer.CreateTotalBitrateGraph(webrtz::PacketDirection::kIncomingPacket,
                                      collection->AppendNewPlot(),
                                      FLAG_show_detector_state,
                                      FLAG_show_alr_state);
   }
   if (FLAG_plot_outgoing_bitrate) {
-    analyzer.CreateTotalBitrateGraph(webrtc::PacketDirection::kOutgoingPacket,
+    analyzer.CreateTotalBitrateGraph(webrtz::PacketDirection::kOutgoingPacket,
                                      collection->AppendNewPlot(),
                                      FLAG_show_detector_state,
                                      FLAG_show_alr_state);
   }
   if (FLAG_plot_incoming_stream_bitrate) {
-    analyzer.CreateStreamBitrateGraph(webrtc::PacketDirection::kIncomingPacket,
+    analyzer.CreateStreamBitrateGraph(webrtz::PacketDirection::kIncomingPacket,
                                       collection->AppendNewPlot());
   }
   if (FLAG_plot_outgoing_stream_bitrate) {
-    analyzer.CreateStreamBitrateGraph(webrtc::PacketDirection::kOutgoingPacket,
+    analyzer.CreateStreamBitrateGraph(webrtz::PacketDirection::kOutgoingPacket,
                                       collection->AppendNewPlot());
   }
   if (FLAG_plot_simulated_receiveside_bwe) {
@@ -317,7 +317,7 @@ int main(int argc, char* argv[]) {
     if (FLAG_wav_filename[0] != '\0') {
       wav_path = FLAG_wav_filename;
     } else {
-      wav_path = webrtc::test::ResourcePath(
+      wav_path = webrtz::test::ResourcePath(
           "audio_processing/conversational_speech/EN_script2_F_sp2_B1", "wav");
     }
     analyzer.CreateAudioJitterBufferGraph(wav_path, 48000,

@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/neteq/tools/packet_source.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 PacketSource::PacketSource() : use_ssrc_filter_(false), ssrc_(0) {}
@@ -27,4 +27,4 @@ void PacketSource::SelectSsrc(uint32_t ssrc) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

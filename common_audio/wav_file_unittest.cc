@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const float kSamples[] = {0.0, 10.0, 4e4, -1e9};
 
@@ -242,4 +242,4 @@ TEST(WavWriterTest, CPPFileDescriptor) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

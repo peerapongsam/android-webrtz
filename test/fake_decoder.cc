@@ -15,7 +15,7 @@
 #include "test/call_test.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 FakeDecoder::FakeDecoder()
@@ -39,7 +39,7 @@ int32_t FakeDecoder::Decode(const EncodedImage& input,
   }
 
   VideoFrame frame(I420Buffer::Create(width_, height_),
-                   webrtc::kVideoRotation_0,
+                   webrtz::kVideoRotation_0,
                    render_time_ms * rtc::kNumMicrosecsPerMillisec);
   frame.set_timestamp(input._timeStamp);
   frame.set_ntp_time_ms(input.ntp_time_ms_);
@@ -91,4 +91,4 @@ int32_t FakeH264Decoder::Decode(const EncodedImage& input,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

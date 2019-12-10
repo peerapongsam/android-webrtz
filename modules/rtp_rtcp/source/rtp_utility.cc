@@ -16,7 +16,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/stringutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpFeedback* NullObjectRtpFeedback() {
   static NullRtpFeedback null_rtp_feedback;
@@ -489,4 +489,4 @@ void RtpHeaderParser::ParseOneByteExtensionHeader(
 }
 
 }  // namespace RtpUtility
-}  // namespace webrtc
+}  // namespace webrtz

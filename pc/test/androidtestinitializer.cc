@@ -32,7 +32,7 @@ RTC_POP_IGNORING_WUNDEF()
 // not use it.
 #include "rtc_base/ssladapter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -49,7 +49,7 @@ void EnsureInitializedOnce() {
 
   RTC_CHECK(rtc::InitializeSSL()) << "Failed to InitializeSSL()";
 
-  webrtc::JVM::Initialize(jvm);
+  webrtz::JVM::Initialize(jvm);
 }
 
 }  // anonymous namespace
@@ -58,4 +58,4 @@ void InitializeAndroidObjects() {
   RTC_CHECK_EQ(0, pthread_once(&g_initialize_once, &EnsureInitializedOnce));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -44,7 +44,7 @@ static void LogStreamDescription(AudioStreamBasicDescription description) {
 }
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 // Calls to AudioUnitInitialize() can fail if called back-to-back on different
 // ADM instances. A fall-back solution is to allow multiple sequential calls
@@ -465,4 +465,4 @@ void VoiceProcessingAudioUnit::DisposeAudioUnit() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@ namespace {
 const float kTolerance = 0.001f;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -97,6 +97,6 @@ class MatrixTestHelpers {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_BEAMFORMER_MATRIX_TEST_HELPERS_H_

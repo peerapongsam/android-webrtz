@@ -14,7 +14,7 @@
 #include "modules/audio_coding/include/audio_coding_module.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 //-----------------------------
 #define CHECK_ERROR(f)                                                         \
@@ -133,6 +133,6 @@ class VADCallback : public ACMVADCallback {
   uint32_t _numFrameTypes[5];
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_UTILITY_H_

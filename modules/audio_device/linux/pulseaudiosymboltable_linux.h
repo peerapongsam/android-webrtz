@@ -30,7 +30,7 @@
 
 #include "modules/audio_device/linux/latebindingsymboltable_linux.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace adm_linux_pulse {
 
 // The PulseAudio symbols we need, as an X-Macro list.
@@ -101,6 +101,6 @@ PULSE_AUDIO_SYMBOLS_LIST
 LATE_BINDING_SYMBOL_TABLE_DECLARE_END(PulseAudioSymbolTable)
 
 }  // namespace adm_linux_pulse
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_DEVICE_PULSEAUDIOSYMBOLTABLE_LINUX_H_

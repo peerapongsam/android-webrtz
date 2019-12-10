@@ -18,7 +18,7 @@
 #include "rtc_base/race_checker.h"
 #include "rtc_base/refcountedobject.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Simple buffer pool to avoid unnecessary allocations of I420Buffer objects.
 // The pool manages the memory of the I420Buffer returned from CreateBuffer.
@@ -59,6 +59,6 @@ class I420BufferPool {
   const size_t max_number_of_buffers_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_INCLUDE_I420_BUFFER_POOL_H_

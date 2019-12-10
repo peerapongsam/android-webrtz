@@ -11,7 +11,7 @@
 #ifndef MODULES_AUDIO_PROCESSING_AEC3_ECHO_PATH_VARIABILITY_H_
 #define MODULES_AUDIO_PROCESSING_AEC3_ECHO_PATH_VARIABILITY_H_
 
-namespace webrtc {
+namespace webrtz {
 
 struct EchoPathVariability {
   enum class DelayAdjustment {
@@ -34,6 +34,6 @@ struct EchoPathVariability {
   bool clock_drift;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ECHO_PATH_VARIABILITY_H_

@@ -41,9 +41,9 @@
 #include "rtc_base/network.h"
 #include "rtc_base/sigslot.h"
 
-namespace webrtc {
+namespace webrtz {
 class AudioSinkInterface;
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace cricket {
 
@@ -84,7 +84,7 @@ class BaseChannel
               bool srtp_required,
               rtc::CryptoOptions crypto_options);
   virtual ~BaseChannel();
-  void Init_w(webrtc::RtpTransportInternal* rtp_transport);
+  void Init_w(webrtz::RtpTransportInternal* rtp_transport);
 
   // Deinit may be called multiple times and is simply ignored if it's already
   // done.
@@ -108,14 +108,14 @@ class BaseChannel
   // encryption, an SrtpTransport for SDES or a DtlsSrtpTransport for DTLS-SRTP.
   // This can be called from any thread and it hops to the network thread
   // internally. It would replace the |SetTransports| and its variants.
-  void SetRtpTransport(webrtc::RtpTransportInternal* rtp_transport);
+  void SetRtpTransport(webrtz::RtpTransportInternal* rtp_transport);
 
   // Channel control
   bool SetLocalContent(const MediaContentDescription* content,
-                       webrtc::SdpType type,
+                       webrtz::SdpType type,
                        std::string* error_desc);
   bool SetRemoteContent(const MediaContentDescription* content,
-                        webrtc::SdpType type,
+                        webrtz::SdpType type,
                         std::string* error_desc);
 
   bool Enable(bool enable);
@@ -184,7 +184,7 @@ class BaseChannel
   }
 
   void SetMetricsObserver(
-      rtc::scoped_refptr<webrtc::MetricsObserverInterface> metrics_observer);
+      rtc::scoped_refptr<webrtz::MetricsObserverInterface> metrics_observer);
 
   void DisableEncryption(bool disabled) { encryption_disabled_ = disabled; }
 
@@ -192,10 +192,10 @@ class BaseChannel
   virtual MediaChannel* media_channel() const { return media_channel_.get(); }
 
   bool was_ever_writable() const { return was_ever_writable_; }
-  void set_local_content_direction(webrtc::RtpTransceiverDirection direction) {
+  void set_local_content_direction(webrtz::RtpTransceiverDirection direction) {
     local_content_direction_ = direction;
   }
-  void set_remote_content_direction(webrtc::RtpTransceiverDirection direction) {
+  void set_remote_content_direction(webrtz::RtpTransceiverDirection direction) {
     remote_content_direction_ = direction;
   }
   // These methods verify that:
@@ -265,16 +265,16 @@ class BaseChannel
   virtual void UpdateMediaSendRecvState_w() = 0;
 
   bool UpdateLocalStreams_w(const std::vector<StreamParams>& streams,
-                            webrtc::SdpType type,
+                            webrtz::SdpType type,
                             std::string* error_desc);
   bool UpdateRemoteStreams_w(const std::vector<StreamParams>& streams,
-                             webrtc::SdpType type,
+                             webrtz::SdpType type,
                              std::string* error_desc);
   virtual bool SetLocalContent_w(const MediaContentDescription* content,
-                                 webrtc::SdpType type,
+                                 webrtz::SdpType type,
                                  std::string* error_desc) = 0;
   virtual bool SetRemoteContent_w(const MediaContentDescription* content,
-                                  webrtc::SdpType type,
+                                  webrtz::SdpType type,
                                   std::string* error_desc) = 0;
   // Return a list of RTP header extensions with the non-encrypted extensions
   // removed depending on the current crypto_options_ and only if both the
@@ -285,7 +285,7 @@ class BaseChannel
   // Helper method to get RTP Absoulute SendTime extension header id if
   // present in remote supported extensions list.
   void MaybeCacheRtpAbsSendTimeHeaderExtension_w(
-      const std::vector<webrtc::RtpExtension>& extensions);
+      const std::vector<webrtz::RtpExtension>& extensions);
 
   // From MessageHandler
   void OnMessage(rtc::Message* pmsg) override;
@@ -314,14 +314,14 @@ class BaseChannel
   // Won't be set when using raw packet transports. SDP-specific thing.
   std::string transport_name_;
 
-  rtc::scoped_refptr<webrtc::MetricsObserverInterface> metrics_observer_;
+  rtc::scoped_refptr<webrtz::MetricsObserverInterface> metrics_observer_;
 
-  webrtc::RtpTransportInternal* rtp_transport_ = nullptr;
+  webrtz::RtpTransportInternal* rtp_transport_ = nullptr;
   // Only one of these transports is non-null at a time. One for DTLS-SRTP, one
   // for SDES and one for unencrypted RTP.
-  std::unique_ptr<webrtc::SrtpTransport> sdes_transport_;
-  std::unique_ptr<webrtc::DtlsSrtpTransport> dtls_srtp_transport_;
-  std::unique_ptr<webrtc::RtpTransport> unencrypted_rtp_transport_;
+  std::unique_ptr<webrtz::SrtpTransport> sdes_transport_;
+  std::unique_ptr<webrtz::DtlsSrtpTransport> dtls_srtp_transport_;
+  std::unique_ptr<webrtz::RtpTransport> unencrypted_rtp_transport_;
 
   std::vector<std::pair<rtc::Socket::Option, int> > socket_options_;
   std::vector<std::pair<rtc::Socket::Option, int> > rtcp_socket_options_;
@@ -340,10 +340,10 @@ class BaseChannel
   bool enabled_ = false;
   std::vector<StreamParams> local_streams_;
   std::vector<StreamParams> remote_streams_;
-  webrtc::RtpTransceiverDirection local_content_direction_ =
-      webrtc::RtpTransceiverDirection::kInactive;
-  webrtc::RtpTransceiverDirection remote_content_direction_ =
-      webrtc::RtpTransceiverDirection::kInactive;
+  webrtz::RtpTransceiverDirection local_content_direction_ =
+      webrtz::RtpTransceiverDirection::kInactive;
+  webrtz::RtpTransceiverDirection remote_content_direction_ =
+      webrtz::RtpTransceiverDirection::kInactive;
 
   // The cached encrypted header extension IDs.
   rtc::Optional<std::vector<int>> cached_send_extension_ids_;
@@ -374,19 +374,19 @@ class VoiceChannel : public BaseChannel {
     return static_cast<VoiceMediaChannel*>(BaseChannel::media_channel());
   }
 
-  webrtc::RtpParameters GetRtpSendParameters_w(uint32_t ssrc) const;
-  webrtc::RTCError SetRtpSendParameters_w(uint32_t ssrc,
-                                          webrtc::RtpParameters parameters);
+  webrtz::RtpParameters GetRtpSendParameters_w(uint32_t ssrc) const;
+  webrtz::RTCError SetRtpSendParameters_w(uint32_t ssrc,
+                                          webrtz::RtpParameters parameters);
   cricket::MediaType media_type() override { return cricket::MEDIA_TYPE_AUDIO; }
 
  private:
   // overrides from BaseChannel
   void UpdateMediaSendRecvState_w() override;
   bool SetLocalContent_w(const MediaContentDescription* content,
-                         webrtc::SdpType type,
+                         webrtz::SdpType type,
                          std::string* error_desc) override;
   bool SetRemoteContent_w(const MediaContentDescription* content,
-                          webrtc::SdpType type,
+                          webrtz::SdpType type,
                           std::string* error_desc) override;
 
   // Last AudioSendParameters sent down to the media_channel() via
@@ -422,10 +422,10 @@ class VideoChannel : public BaseChannel {
   // overrides from BaseChannel
   void UpdateMediaSendRecvState_w() override;
   bool SetLocalContent_w(const MediaContentDescription* content,
-                         webrtc::SdpType type,
+                         webrtz::SdpType type,
                          std::string* error_desc) override;
   bool SetRemoteContent_w(const MediaContentDescription* content,
-                          webrtc::SdpType type,
+                          webrtz::SdpType type,
                           std::string* error_desc) override;
 
   // Last VideoSendParameters sent down to the media_channel() via
@@ -453,7 +453,7 @@ class RtpDataChannel : public BaseChannel {
               DtlsTransportInternal* rtcp_dtls_transport,
               rtc::PacketTransportInternal* rtp_packet_transport,
               rtc::PacketTransportInternal* rtcp_packet_transport);
-  void Init_w(webrtc::RtpTransportInternal* rtp_transport);
+  void Init_w(webrtz::RtpTransportInternal* rtp_transport);
 
   virtual bool SendData(const SendDataParams& params,
                         const rtc::CopyOnWriteBuffer& payload,
@@ -515,10 +515,10 @@ class RtpDataChannel : public BaseChannel {
   bool CheckDataChannelTypeFromContent(const DataContentDescription* content,
                                        std::string* error_desc);
   bool SetLocalContent_w(const MediaContentDescription* content,
-                         webrtc::SdpType type,
+                         webrtz::SdpType type,
                          std::string* error_desc) override;
   bool SetRemoteContent_w(const MediaContentDescription* content,
-                          webrtc::SdpType type,
+                          webrtz::SdpType type,
                           std::string* error_desc) override;
   void UpdateMediaSendRecvState_w() override;
 

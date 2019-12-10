@@ -13,7 +13,7 @@
 
 #include <memory>
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioBuffer;
 
@@ -50,6 +50,6 @@ class EchoControlFactory {
   virtual std::unique_ptr<EchoControl> Create(int sample_rate_hz) = 0;
   virtual ~EchoControlFactory() = default;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_ECHO_CONTROL_H_

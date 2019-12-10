@@ -11,7 +11,7 @@
 #include "call/video_send_stream.h"
 #include "rtc_base/strings/string_builder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VideoSendStream::StreamStats::StreamStats() = default;
 VideoSendStream::StreamStats::~StreamStats() = default;
@@ -182,4 +182,4 @@ std::string VideoSendStream::Config::Rtcp::ToString() const {
   return ss.str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

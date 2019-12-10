@@ -16,7 +16,7 @@
 
 #include "api/video_codecs/video_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class used to wrap external VideoDecoders to provide a fallback option on
 // software decoding when a hardware decoder fails to decode a stream due to
@@ -66,6 +66,6 @@ class VideoDecoderSoftwareFallbackWrapper : public VideoDecoder {
   DecodedImageCallback* callback_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_ENGINE_VIDEODECODERSOFTWAREFALLBACKWRAPPER_H_

@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMFrameBuffer::VCMFrameBuffer()
     : _state(kStateEmpty), _nackCount(0), _latestPacketTimeMs(-1) {}
@@ -35,7 +35,7 @@ VCMFrameBuffer::VCMFrameBuffer(const VCMFrameBuffer& rhs)
   _sessionInfo.UpdateDataPointers(rhs._buffer, _buffer);
 }
 
-webrtc::FrameType VCMFrameBuffer::FrameType() const {
+webrtz::FrameType VCMFrameBuffer::FrameType() const {
   return _sessionInfo.FrameType();
 }
 
@@ -300,4 +300,4 @@ void VCMFrameBuffer::PrepareForDecode(bool continuous) {
   _missingFrame = !continuous;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

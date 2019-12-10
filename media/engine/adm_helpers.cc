@@ -13,7 +13,7 @@
 #include "modules/audio_device/include/audio_device.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace adm_helpers {
 
 // On Windows Vista and newer, Microsoft introduced the concept of "Default
@@ -78,4 +78,4 @@ void Init(AudioDeviceModule* adm) {
   }
 }
 }  // namespace adm_helpers
-}  // namespace webrtc
+}  // namespace webrtz

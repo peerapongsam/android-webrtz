@@ -13,10 +13,10 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VideoFrame::VideoFrame(const rtc::scoped_refptr<VideoFrameBuffer>& buffer,
-                       webrtc::VideoRotation rotation,
+                       webrtz::VideoRotation rotation,
                        int64_t timestamp_us)
     : video_frame_buffer_(buffer),
       timestamp_rtp_(0),
@@ -63,4 +63,4 @@ int64_t VideoFrame::render_time_ms() const {
   return timestamp_us() / rtc::kNumMicrosecsPerMillisec;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

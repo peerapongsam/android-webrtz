@@ -16,7 +16,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 using ::testing::ElementsAreArray;
 using ::testing::IsEmpty;
@@ -563,4 +563,4 @@ TEST(RtpPacketTest, ParseLegacyTimingFrameExtension) {
   EXPECT_EQ(receivied_timing.flags, 0);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

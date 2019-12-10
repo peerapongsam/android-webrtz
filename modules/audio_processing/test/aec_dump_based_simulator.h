@@ -24,7 +24,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #endif
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Used to perform an audio processing simulation from an aec dump.
@@ -38,14 +38,14 @@ class AecDumpBasedSimulator final : public AudioProcessingSimulator {
   void Process() override;
 
  private:
-  void HandleMessage(const webrtc::audioproc::Init& msg);
-  void HandleMessage(const webrtc::audioproc::Stream& msg);
-  void HandleMessage(const webrtc::audioproc::ReverseStream& msg);
-  void HandleMessage(const webrtc::audioproc::Config& msg);
-  void PrepareProcessStreamCall(const webrtc::audioproc::Stream& msg);
+  void HandleMessage(const webrtz::audioproc::Init& msg);
+  void HandleMessage(const webrtz::audioproc::Stream& msg);
+  void HandleMessage(const webrtz::audioproc::ReverseStream& msg);
+  void HandleMessage(const webrtz::audioproc::Config& msg);
+  void PrepareProcessStreamCall(const webrtz::audioproc::Stream& msg);
   void PrepareReverseProcessStreamCall(
-      const webrtc::audioproc::ReverseStream& msg);
-  void VerifyProcessStreamBitExactness(const webrtc::audioproc::Stream& msg);
+      const webrtz::audioproc::ReverseStream& msg);
+  void VerifyProcessStreamBitExactness(const webrtz::audioproc::Stream& msg);
 
   enum InterfaceType {
     kFixedInterface,
@@ -63,6 +63,6 @@ class AecDumpBasedSimulator final : public AudioProcessingSimulator {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_AEC_DUMP_BASED_SIMULATOR_H_

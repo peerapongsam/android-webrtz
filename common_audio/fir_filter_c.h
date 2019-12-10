@@ -16,7 +16,7 @@
 
 #include "common_audio/fir_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FIRFilterC : public FIRFilter {
  public:
@@ -33,6 +33,6 @@ class FIRFilterC : public FIRFilter {
   std::unique_ptr<float[]> state_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_FIR_FILTER_C_H_

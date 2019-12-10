@@ -16,7 +16,7 @@
 #include "modules/audio_processing/test/bitexactness_tools.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kNumFramesToProcess = 1000;
@@ -281,4 +281,4 @@ TEST(NoiseSuppresionBitExactnessTest, Mono16kHzVeryHigh) {
                       kOutputReference);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

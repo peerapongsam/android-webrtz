@@ -16,7 +16,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace plotting {
 
 PythonPlot::PythonPlot() {}
@@ -181,4 +181,4 @@ Plot* PythonPlotCollection::AppendNewPlot() {
 }
 
 }  // namespace plotting
-}  // namespace webrtc
+}  // namespace webrtz

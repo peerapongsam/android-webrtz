@@ -62,7 +62,7 @@ static const cricket::CryptoParams kTestCryptoParams4(1,
                                                       "");
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 // Used to test that things work end-to-end when using the default
 // implementations of threads/etc. provided by OrtcFactory, with the exception
@@ -208,19 +208,19 @@ class OrtcFactoryIntegrationTest : public testing::Test {
 
   // Ends up using fake audio capture module, which was passed into OrtcFactory
   // on creation.
-  rtc::scoped_refptr<webrtc::AudioTrackInterface> CreateLocalAudioTrack(
+  rtc::scoped_refptr<webrtz::AudioTrackInterface> CreateLocalAudioTrack(
       const std::string& id,
       OrtcFactoryInterface* ortc_factory) {
     // Disable echo cancellation to make test more efficient.
     cricket::AudioOptions options;
     options.echo_cancellation.emplace(true);
-    rtc::scoped_refptr<webrtc::AudioSourceInterface> source =
+    rtc::scoped_refptr<webrtz::AudioSourceInterface> source =
         ortc_factory->CreateAudioSource(options);
     return ortc_factory->CreateAudioTrack(id, source);
   }
 
   // Stores created video source in |fake_video_sources_|.
-  rtc::scoped_refptr<webrtc::VideoTrackInterface>
+  rtc::scoped_refptr<webrtz::VideoTrackInterface>
   CreateLocalVideoTrackAndFakeSource(const std::string& id,
                                      OrtcFactoryInterface* ortc_factory) {
     fake_video_sources_.emplace_back(
@@ -699,4 +699,4 @@ TEST_F(OrtcFactoryIntegrationTest,
 
 #endif  // if !defined(THREAD_SANITIZER)
 
-}  // namespace webrtc
+}  // namespace webrtz

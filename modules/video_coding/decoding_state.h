@@ -17,7 +17,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations
 struct NaluInfo;
@@ -85,6 +85,6 @@ class VCMDecodingState {
   std::map<int, int> received_pps_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_DECODING_STATE_H_

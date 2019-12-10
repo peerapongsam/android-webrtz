@@ -19,16 +19,16 @@
 #include "rtc_base/logging.h"
 
 namespace {
-void KeepBufferRefs(rtc::scoped_refptr<webrtc::VideoFrameBuffer>,
-                    rtc::scoped_refptr<webrtc::VideoFrameBuffer>) {}
+void KeepBufferRefs(rtc::scoped_refptr<webrtz::VideoFrameBuffer>,
+                    rtc::scoped_refptr<webrtz::VideoFrameBuffer>) {}
 }  // anonymous namespace
 
-namespace webrtc {
+namespace webrtz {
 
 class MultiplexDecoderAdapter::AdapterDecodedImageCallback
-    : public webrtc::DecodedImageCallback {
+    : public webrtz::DecodedImageCallback {
  public:
-  AdapterDecodedImageCallback(webrtc::MultiplexDecoderAdapter* adapter,
+  AdapterDecodedImageCallback(webrtz::MultiplexDecoderAdapter* adapter,
                               AlphaCodecStream stream_idx)
       : adapter_(adapter), stream_idx_(stream_idx) {}
 
@@ -195,9 +195,9 @@ void MultiplexDecoderAdapter::MergeAlphaImages(
     return;
   }
 
-  rtc::scoped_refptr<webrtc::I420BufferInterface> yuv_buffer =
+  rtc::scoped_refptr<webrtz::I420BufferInterface> yuv_buffer =
       decoded_image->video_frame_buffer()->ToI420();
-  rtc::scoped_refptr<webrtc::I420BufferInterface> alpha_buffer =
+  rtc::scoped_refptr<webrtz::I420BufferInterface> alpha_buffer =
       alpha_decoded_image->video_frame_buffer()->ToI420();
   RTC_DCHECK_EQ(yuv_buffer->width(), alpha_buffer->width());
   RTC_DCHECK_EQ(yuv_buffer->height(), alpha_buffer->height());
@@ -213,4 +213,4 @@ void MultiplexDecoderAdapter::MergeAlphaImages(
   decoded_complete_callback_->Decoded(merged_image, decode_time_ms, qp);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

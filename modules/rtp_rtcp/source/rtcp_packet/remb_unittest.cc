@@ -17,9 +17,9 @@
 using testing::ElementsAreArray;
 using testing::IsEmpty;
 using testing::make_tuple;
-using webrtc::rtcp::Remb;
+using webrtz::rtcp::Remb;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSenderSsrc = 0x12345678;
 const uint32_t kRemoteSsrcs[] = {0x23456789, 0x2345678a, 0x2345678b};
@@ -125,4 +125,4 @@ TEST(RtcpPacketRembTest, TooManySsrcs) {
       std::vector<uint32_t>(Remb::kMaxNumberOfSsrcs, kRemoteSsrcs[0])));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

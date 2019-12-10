@@ -27,7 +27,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 
 // Provides optimizations for mathematical operations based on vectors.
@@ -207,6 +207,6 @@ class VectorMath {
 
 }  // namespace aec3
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_VECTOR_MATH_H_

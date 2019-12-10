@@ -18,7 +18,7 @@
 // oldest packets to be pruned from the buffer.
 static const int kBufferSize = 100;
 
-namespace webrtc {
+namespace webrtz {
 
 PacketLossStats::PacketLossStats()
     : single_loss_historic_count_(0),
@@ -136,4 +136,4 @@ void PacketLossStats::PruneBuffer() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

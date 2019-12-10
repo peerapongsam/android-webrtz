@@ -19,7 +19,7 @@
 
 @protocol RTCVideoRenderer;
 
-namespace webrtc {
+namespace webrtz {
 
 class ObjCVideoRenderer : public rtc::VideoSinkInterface<VideoFrame> {
  public:
@@ -31,6 +31,6 @@ class ObjCVideoRenderer : public rtc::VideoSinkInterface<VideoFrame> {
   CGSize size_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_SRC_OBJC_VIDEO_RENDERER_H_

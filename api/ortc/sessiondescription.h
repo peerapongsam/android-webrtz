@@ -14,7 +14,7 @@
 #include <string>
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 // A structured representation of an SDP session description.
 class SessionDescription {
@@ -40,6 +40,6 @@ class SessionDescription {
   std::string session_version_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_ORTC_SESSIONDESCRIPTION_H_

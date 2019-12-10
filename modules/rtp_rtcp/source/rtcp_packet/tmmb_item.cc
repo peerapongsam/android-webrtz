@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 TmmbItem::TmmbItem(uint32_t ssrc, uint64_t bitrate_bps, uint16_t overhead)
     : ssrc_(ssrc), bitrate_bps_(bitrate_bps), packet_overhead_(overhead) {
@@ -68,4 +68,4 @@ void TmmbItem::set_packet_overhead(uint16_t overhead) {
   packet_overhead_ = overhead;
 }
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

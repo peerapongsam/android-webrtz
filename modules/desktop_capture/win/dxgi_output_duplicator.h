@@ -30,7 +30,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Duplicates the content on one IDXGIOutput, i.e. one monitor attached to one
 // video card. None of functions in this class is thread-safe.
@@ -140,6 +140,6 @@ class DxgiOutputDuplicator {
   int64_t num_frames_captured_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_OUTPUT_DUPLICATOR_H_

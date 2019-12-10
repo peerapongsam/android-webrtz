@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -243,4 +243,4 @@ void AAudioPlayer::HandleStreamDisconnected() {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

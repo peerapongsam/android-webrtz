@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ANAStats::ANAStats() = default;
 ANAStats::~ANAStats() = default;
@@ -103,4 +103,4 @@ ANAStats AudioEncoder::GetANAStats() const {
   return ANAStats();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

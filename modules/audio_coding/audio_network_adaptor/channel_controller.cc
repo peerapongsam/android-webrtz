@@ -13,7 +13,7 @@
 #include "modules/audio_coding/audio_network_adaptor/channel_controller.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ChannelController::Config::Config(size_t num_encoder_channels,
                                   size_t intial_channels_to_encode,
@@ -58,4 +58,4 @@ void ChannelController::MakeDecision(AudioEncoderRuntimeConfig* config) {
   config->num_channels = channels_to_encode_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

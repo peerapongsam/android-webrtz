@@ -13,7 +13,7 @@
 #include <android/log.h>
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 void NoiseEstimation::Init(int width, int height, CpuType cpu_type) {
   int mb_cols = width >> 4;
@@ -110,4 +110,4 @@ uint8_t NoiseEstimation::GetNoiseLevel() {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

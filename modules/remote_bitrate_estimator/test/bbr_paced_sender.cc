@@ -19,7 +19,7 @@
 #include "modules/remote_bitrate_estimator/test/estimators/congestion_window.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 BbrPacedSender::BbrPacedSender(const Clock* clock,
                                PacedSender::PacketSender* packet_sender,
@@ -137,4 +137,4 @@ bool BbrPacedSender::TryToSendPacket(Packet* packet) {
                                           packet->retransmission, pacing_info);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

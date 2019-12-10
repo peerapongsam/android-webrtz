@@ -25,7 +25,7 @@
 #include "sdk/android/generated_external_classes_jni/jni/Map_jni.h"
 #include "sdk/android/generated_native_api_jni/jni/JniHelper_jni.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Iterable::Iterable(JNIEnv* jni, const JavaRef<jobject>& iterable)
     : jni_(jni), iterable_(jni, iterable) {}
@@ -290,4 +290,4 @@ std::vector<std::string> JavaToStdVectorStrings(JNIEnv* jni,
   return converted_list;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

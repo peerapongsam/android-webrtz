@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const size_t kNumChannels = 1;
@@ -82,4 +82,4 @@ void VoiceActivityDetector::ProcessChunk(const int16_t* audio,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

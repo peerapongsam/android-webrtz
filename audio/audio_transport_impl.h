@@ -24,7 +24,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioSendStream;
 
@@ -93,6 +93,6 @@ class AudioTransportImpl : public AudioTransport {
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(AudioTransportImpl);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_AUDIO_TRANSPORT_IMPL_H_

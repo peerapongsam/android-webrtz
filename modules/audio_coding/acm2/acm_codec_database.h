@@ -20,7 +20,7 @@
 #include "modules/audio_coding/acm2/rent_a_codec.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace acm2 {
 
@@ -77,6 +77,6 @@ class ACMCodecDB {
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_ACM2_ACM_CODEC_DATABASE_H_

@@ -35,7 +35,7 @@ using cricket::VoiceMediaInfo;
 using cricket::VoiceReceiverInfo;
 using cricket::VoiceSenderInfo;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace internal {
 // This value comes from openssl/tls1.h
@@ -1777,4 +1777,4 @@ TEST_P(StatsCollectorTrackTest, VerifyVideoReceiveSsrcStatsNew) {
 
 INSTANTIATE_TEST_CASE_P(HasStream, StatsCollectorTrackTest, ::testing::Bool());
 
-}  // namespace webrtc
+}  // namespace webrtz

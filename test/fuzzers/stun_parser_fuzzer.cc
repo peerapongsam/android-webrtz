@@ -13,7 +13,7 @@
 
 #include "p2p/base/stun.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   const char* message = reinterpret_cast<const char*>(data);
 
@@ -25,4 +25,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   rtc::ByteBufferReader buf(message, size);
   stun_msg->Read(&buf);
 }
-}  // namespace webrtc
+}  // namespace webrtz

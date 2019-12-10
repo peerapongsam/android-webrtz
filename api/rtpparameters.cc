@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const double kDefaultBitratePriority = 1.0;
 
@@ -124,38 +124,38 @@ const int RtpExtension::kMinId = 1;
 const int RtpExtension::kMaxId = 14;
 
 bool RtpExtension::IsSupportedForAudio(const std::string& uri) {
-  return uri == webrtc::RtpExtension::kAudioLevelUri ||
-         uri == webrtc::RtpExtension::kTransportSequenceNumberUri ||
-         uri == webrtc::RtpExtension::kMidUri;
+  return uri == webrtz::RtpExtension::kAudioLevelUri ||
+         uri == webrtz::RtpExtension::kTransportSequenceNumberUri ||
+         uri == webrtz::RtpExtension::kMidUri;
 }
 
 bool RtpExtension::IsSupportedForVideo(const std::string& uri) {
-  return uri == webrtc::RtpExtension::kTimestampOffsetUri ||
-         uri == webrtc::RtpExtension::kAbsSendTimeUri ||
-         uri == webrtc::RtpExtension::kVideoRotationUri ||
-         uri == webrtc::RtpExtension::kTransportSequenceNumberUri ||
-         uri == webrtc::RtpExtension::kPlayoutDelayUri ||
-         uri == webrtc::RtpExtension::kVideoContentTypeUri ||
-         uri == webrtc::RtpExtension::kVideoTimingUri ||
-         uri == webrtc::RtpExtension::kMidUri;
+  return uri == webrtz::RtpExtension::kTimestampOffsetUri ||
+         uri == webrtz::RtpExtension::kAbsSendTimeUri ||
+         uri == webrtz::RtpExtension::kVideoRotationUri ||
+         uri == webrtz::RtpExtension::kTransportSequenceNumberUri ||
+         uri == webrtz::RtpExtension::kPlayoutDelayUri ||
+         uri == webrtz::RtpExtension::kVideoContentTypeUri ||
+         uri == webrtz::RtpExtension::kVideoTimingUri ||
+         uri == webrtz::RtpExtension::kMidUri;
 }
 
 bool RtpExtension::IsEncryptionSupported(const std::string& uri) {
-  return uri == webrtc::RtpExtension::kAudioLevelUri ||
-         uri == webrtc::RtpExtension::kTimestampOffsetUri ||
+  return uri == webrtz::RtpExtension::kAudioLevelUri ||
+         uri == webrtz::RtpExtension::kTimestampOffsetUri ||
 #if !defined(ENABLE_EXTERNAL_AUTH)
          // TODO(jbauch): Figure out a way to always allow "kAbsSendTimeUri"
          // here and filter out later if external auth is really used in
          // srtpfilter. External auth is used by Chromium and replaces the
          // extension header value of "kAbsSendTimeUri", so it must not be
          // encrypted (which can't be done by Chromium).
-         uri == webrtc::RtpExtension::kAbsSendTimeUri ||
+         uri == webrtz::RtpExtension::kAbsSendTimeUri ||
 #endif
-         uri == webrtc::RtpExtension::kVideoRotationUri ||
-         uri == webrtc::RtpExtension::kTransportSequenceNumberUri ||
-         uri == webrtc::RtpExtension::kPlayoutDelayUri ||
-         uri == webrtc::RtpExtension::kVideoContentTypeUri ||
-         uri == webrtc::RtpExtension::kMidUri;
+         uri == webrtz::RtpExtension::kVideoRotationUri ||
+         uri == webrtz::RtpExtension::kTransportSequenceNumberUri ||
+         uri == webrtz::RtpExtension::kPlayoutDelayUri ||
+         uri == webrtz::RtpExtension::kVideoContentTypeUri ||
+         uri == webrtz::RtpExtension::kMidUri;
 }
 
 const RtpExtension* RtpExtension::FindHeaderExtensionByUri(
@@ -195,4 +195,4 @@ std::vector<RtpExtension> RtpExtension::FilterDuplicateNonEncrypted(
   }
   return filtered;
 }
-}  // namespace webrtc
+}  // namespace webrtz

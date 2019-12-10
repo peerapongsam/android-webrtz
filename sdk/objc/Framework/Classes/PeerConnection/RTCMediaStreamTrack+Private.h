@@ -26,31 +26,31 @@ NS_ASSUME_NONNULL_BEGIN
  * construction.
  */
 @property(nonatomic, readonly)
-    rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> nativeTrack;
+    rtc::scoped_refptr<webrtz::MediaStreamTrackInterface> nativeTrack;
 
 /**
  * Initialize an RTCMediaStreamTrack from a native MediaStreamTrackInterface.
  */
 - (instancetype)initWithNativeTrack:
-    (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeTrack
+    (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeTrack
                                type:(RTCMediaStreamTrackType)type
     NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithNativeTrack:
-    (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeTrack;
+    (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeTrack;
 
 - (BOOL)isEqualToTrack:(RTCMediaStreamTrack *)track;
 
-+ (webrtc::MediaStreamTrackInterface::TrackState)nativeTrackStateForState:
++ (webrtz::MediaStreamTrackInterface::TrackState)nativeTrackStateForState:
     (RTCMediaStreamTrackState)state;
 
 + (RTCMediaStreamTrackState)trackStateForNativeState:
-    (webrtc::MediaStreamTrackInterface::TrackState)nativeState;
+    (webrtz::MediaStreamTrackInterface::TrackState)nativeState;
 
 + (NSString *)stringForState:(RTCMediaStreamTrackState)state;
 
 + (RTCMediaStreamTrack *)mediaTrackForNativeTrack:
-        (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeTrack;
+        (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeTrack;
 
 @end
 

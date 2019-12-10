@@ -22,7 +22,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Returns true when the gain factor is so close to 1 that it would
@@ -83,4 +83,4 @@ void FixedGainController::Process(AudioFrameView<float> signal) {
     }
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

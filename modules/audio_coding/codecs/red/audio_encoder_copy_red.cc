@@ -16,7 +16,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioEncoderCopyRed::Config::Config() = default;
 AudioEncoderCopyRed::Config::Config(Config&&) = default;
@@ -139,4 +139,4 @@ void AudioEncoderCopyRed::OnReceivedUplinkBandwidth(
                                              bwe_period_ms);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

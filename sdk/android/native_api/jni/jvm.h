@@ -13,9 +13,9 @@
 
 #include <jni.h>
 
-namespace webrtc {
+namespace webrtz {
 // Returns a JNI environment usable on this thread.
 JNIEnv* AttachCurrentThreadIfNeeded();
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_JNI_JVM_H_

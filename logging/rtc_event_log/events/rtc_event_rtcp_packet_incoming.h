@@ -15,7 +15,7 @@
 #include "logging/rtc_event_log/events/rtc_event.h"
 #include "rtc_base/buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventRtcpPacketIncoming final : public RtcEvent {
  public:
@@ -29,6 +29,6 @@ class RtcEventRtcpPacketIncoming final : public RtcEvent {
   rtc::Buffer packet_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_RTCP_PACKET_INCOMING_H_

@@ -36,7 +36,7 @@
 #include "rtc_base/thread.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Generic observer interface.
 class ObserverInterface {
@@ -331,6 +331,6 @@ class MediaStreamInterface : public rtc::RefCountInterface,
   ~MediaStreamInterface() override = default;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_MEDIASTREAMINTERFACE_H_

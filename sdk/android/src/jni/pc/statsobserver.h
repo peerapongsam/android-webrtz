@@ -14,7 +14,7 @@
 #include "api/peerconnectioninterface.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Adapter for a Java StatsObserver presenting a C++ StatsObserver and
@@ -30,6 +30,6 @@ class StatsObserverJni : public StatsObserver {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_STATSOBSERVER_H_

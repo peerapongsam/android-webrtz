@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpDemuxerCriteria::RtpDemuxerCriteria() = default;
 RtpDemuxerCriteria::~RtpDemuxerCriteria() = default;
@@ -375,4 +375,4 @@ void RtpDemuxer::DeregisterSsrcBindingObserver(
   ssrc_binding_observers_.erase(it);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::Return;
 using ::testing::_;
@@ -446,4 +446,4 @@ TEST(DelayManagerIATScalingTest, OverflowTest) {
   scaled_iat = DelayManager::ScaleHistogram(iat, 20, 60);
   EXPECT_EQ(scaled_iat, expected_result);
 }
-}  // namespace webrtc
+}  // namespace webrtz

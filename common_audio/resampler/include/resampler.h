@@ -20,7 +20,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // All methods return 0 on success and -1 on failure.
 class Resampler {
@@ -93,6 +93,6 @@ class Resampler {
   Resampler* slave_right_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_RESAMPLER_INCLUDE_RESAMPLER_H_

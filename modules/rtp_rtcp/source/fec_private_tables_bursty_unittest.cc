@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace fec_private_tables {
 
 using internal::LookUpInFecTable;
@@ -72,4 +72,4 @@ TEST(FecTable, TestRandomLookup) {
 }
 
 }  // namespace fec_private_tables
-}  // namespace webrtc
+}  // namespace webrtz

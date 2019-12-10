@@ -12,7 +12,7 @@
 #include "common_video/libyuv/include/webrtc_libyuv.h"
 #include "third_party/libyuv/include/libyuv/planar_functions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #if DISPLAY || DISPLAYNEON
 static void CopyMem8x8(const uint8_t* src,
@@ -342,4 +342,4 @@ rtc::scoped_refptr<I420BufferInterface> VideoDenoiser::DenoiseFrame(
   return dst;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

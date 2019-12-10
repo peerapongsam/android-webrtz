@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "test/mock_audio_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace acm2 {
 
 using ::testing::Return;
@@ -226,4 +226,4 @@ TEST(RentACodecTest, RentEncoderStackWithoutSpeechEncoder) {
 }
 
 }  // namespace acm2
-}  // namespace webrtc
+}  // namespace webrtz

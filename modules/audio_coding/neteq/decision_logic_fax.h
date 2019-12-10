@@ -15,7 +15,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of the DecisionLogic class for playout modes kPlayoutFax and
 // kPlayoutOff.
@@ -53,5 +53,5 @@ class DecisionLogicFax : public DecisionLogic {
   RTC_DISALLOW_COPY_AND_ASSIGN(DecisionLogicFax);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_DECISION_LOGIC_FAX_H_

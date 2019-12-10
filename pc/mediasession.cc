@@ -35,7 +35,7 @@
 
 namespace {
 
-using webrtc::RtpTransceiverDirection;
+using webrtz::RtpTransceiverDirection;
 
 const char kInline[] = "inline:";
 
@@ -104,11 +104,11 @@ static bool IsSctp(const std::string& protocol) {
 static RtpTransceiverDirection NegotiateRtpTransceiverDirection(
     RtpTransceiverDirection offer,
     RtpTransceiverDirection wants) {
-  bool offer_send = webrtc::RtpTransceiverDirectionHasSend(offer);
-  bool offer_recv = webrtc::RtpTransceiverDirectionHasRecv(offer);
-  bool wants_send = webrtc::RtpTransceiverDirectionHasSend(wants);
-  bool wants_recv = webrtc::RtpTransceiverDirectionHasRecv(wants);
-  return webrtc::RtpTransceiverDirectionFromSendRecv(offer_recv && wants_send,
+  bool offer_send = webrtz::RtpTransceiverDirectionHasSend(offer);
+  bool offer_recv = webrtz::RtpTransceiverDirectionHasRecv(offer);
+  bool wants_send = webrtz::RtpTransceiverDirectionHasSend(wants);
+  bool wants_recv = webrtz::RtpTransceiverDirectionHasRecv(wants);
+  return webrtz::RtpTransceiverDirectionFromSendRecv(offer_recv && wants_send,
                                                      offer_send && wants_recv);
 }
 
@@ -402,11 +402,11 @@ class UsedPayloadTypes : public UsedIds<Codec> {
 
 // Helper class used for finding duplicate RTP Header extension ids among
 // audio and video extensions.
-class UsedRtpHeaderExtensionIds : public UsedIds<webrtc::RtpExtension> {
+class UsedRtpHeaderExtensionIds : public UsedIds<webrtz::RtpExtension> {
  public:
   UsedRtpHeaderExtensionIds()
-      : UsedIds<webrtc::RtpExtension>(webrtc::RtpExtension::kMinId,
-                                      webrtc::RtpExtension::kMaxId) {}
+      : UsedIds<webrtz::RtpExtension>(webrtz::RtpExtension::kMinId,
+                                      webrtz::RtpExtension::kMaxId) {}
 
  private:
 };
@@ -764,7 +764,7 @@ static void NegotiateCodecs(const std::vector<C>& local_codecs,
         negotiated.SetParam(kCodecParamAssociatedPayloadType, apt_it->second);
       }
       if (CodecNamesEq(ours.name.c_str(), kH264CodecName)) {
-        webrtc::H264::GenerateProfileLevelIdForAnswer(
+        webrtz::H264::GenerateProfileLevelIdForAnswer(
             ours.params, theirs.params, &negotiated.params);
       }
       negotiated.id = theirs.id;
@@ -906,8 +906,8 @@ static void MergeCodecs(const std::vector<C>& reference_codecs,
 }
 
 static bool FindByUriAndEncryption(const RtpHeaderExtensions& extensions,
-                                   const webrtc::RtpExtension& ext_to_match,
-                                   webrtc::RtpExtension* found_extension) {
+                                   const webrtz::RtpExtension& ext_to_match,
+                                   webrtz::RtpExtension* found_extension) {
   for (RtpHeaderExtensions::const_iterator it = extensions.begin();
        it != extensions.end(); ++it) {
     // We assume that all URIs are given in a canonical format.
@@ -922,11 +922,11 @@ static bool FindByUriAndEncryption(const RtpHeaderExtensions& extensions,
 }
 
 static bool FindByUri(const RtpHeaderExtensions& extensions,
-                      const webrtc::RtpExtension& ext_to_match,
-                      webrtc::RtpExtension* found_extension) {
+                      const webrtz::RtpExtension& ext_to_match,
+                      webrtz::RtpExtension* found_extension) {
   // We assume that all URIs are given in a canonical format.
-  const webrtc::RtpExtension* found =
-      webrtc::RtpExtension::FindHeaderExtensionByUri(extensions,
+  const webrtz::RtpExtension* found =
+      webrtz::RtpExtension::FindHeaderExtensionByUri(extensions,
                                                      ext_to_match.uri);
   if (!found) {
     return false;
@@ -939,9 +939,9 @@ static bool FindByUri(const RtpHeaderExtensions& extensions,
 
 static bool FindByUriWithEncryptionPreference(
     const RtpHeaderExtensions& extensions,
-    const webrtc::RtpExtension& ext_to_match, bool encryption_preference,
-    webrtc::RtpExtension* found_extension) {
-  const webrtc::RtpExtension* unencrypted_extension = nullptr;
+    const webrtz::RtpExtension& ext_to_match, bool encryption_preference,
+    webrtz::RtpExtension* found_extension) {
+  const webrtz::RtpExtension* unencrypted_extension = nullptr;
   for (RtpHeaderExtensions::const_iterator it = extensions.begin();
        it  != extensions.end(); ++it) {
     // We assume that all URIs are given in a canonical format.
@@ -980,7 +980,7 @@ static void MergeRtpHdrExts(const RtpHeaderExtensions& reference_extensions,
   for (auto reference_extension : reference_extensions) {
     if (!FindByUriAndEncryption(*offered_extensions, reference_extension,
                                 nullptr)) {
-      webrtc::RtpExtension existing;
+      webrtz::RtpExtension existing;
       if (reference_extension.encrypt) {
         if (FindByUriAndEncryption(*encrypted_extensions, reference_extension,
                                    &existing)) {
@@ -1008,13 +1008,13 @@ static void AddEncryptedVersionsOfHdrExts(RtpHeaderExtensions* extensions,
                                           RtpHeaderExtensions* all_extensions,
                                           UsedRtpHeaderExtensionIds* used_ids) {
   RtpHeaderExtensions encrypted_extensions;
-  for (const webrtc::RtpExtension& extension : *extensions) {
-    webrtc::RtpExtension existing;
+  for (const webrtz::RtpExtension& extension : *extensions) {
+    webrtz::RtpExtension existing;
     // Don't add encrypted extensions again that were already included in a
     // previous offer or regular extensions that are also included as encrypted
     // extensions.
     if (extension.encrypt ||
-        !webrtc::RtpExtension::IsEncryptionSupported(extension.uri) ||
+        !webrtz::RtpExtension::IsEncryptionSupported(extension.uri) ||
         (FindByUriWithEncryptionPreference(*extensions, extension, true,
             &existing) && existing.encrypt)) {
       continue;
@@ -1023,7 +1023,7 @@ static void AddEncryptedVersionsOfHdrExts(RtpHeaderExtensions* extensions,
     if (FindByUri(*all_extensions, extension, &existing)) {
       encrypted_extensions.push_back(existing);
     } else {
-      webrtc::RtpExtension encrypted(extension);
+      webrtz::RtpExtension encrypted(extension);
       encrypted.encrypt = true;
       used_ids->FindAndSetIdUsed(&encrypted);
       all_extensions->push_back(encrypted);
@@ -1042,7 +1042,7 @@ static void NegotiateRtpHeaderExtensions(
   RtpHeaderExtensions::const_iterator ours;
   for (ours = local_extensions.begin();
        ours != local_extensions.end(); ++ours) {
-    webrtc::RtpExtension theirs;
+    webrtz::RtpExtension theirs;
     if (FindByUriWithEncryptionPreference(offered_extensions, *ours,
         enable_encrypted_rtp_header_extensions, &theirs)) {
       // We respond with their RTP header extension id.
@@ -1581,7 +1581,7 @@ const AudioCodecs& MediaSessionDescriptionFactory::GetAudioCodecsForAnswer(
     case RtpTransceiverDirection::kSendRecv:
     case RtpTransceiverDirection::kInactive:
       return GetAudioCodecsForOffer(
-          webrtc::RtpTransceiverDirectionReversed(offer));
+          webrtz::RtpTransceiverDirectionReversed(offer));
     case RtpTransceiverDirection::kSendOnly:
       return audio_send_codecs_;
     case RtpTransceiverDirection::kRecvOnly:

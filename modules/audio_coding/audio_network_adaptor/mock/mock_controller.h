@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/controller.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockController : public Controller {
  public:
@@ -25,6 +25,6 @@ class MockController : public Controller {
   MOCK_METHOD1(MakeDecision, void(AudioEncoderRuntimeConfig* config));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_MOCK_MOCK_CONTROLLER_H_

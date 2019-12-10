@@ -17,7 +17,7 @@
 #include "modules/pacing/paced_sender.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 
@@ -94,6 +94,6 @@ class ProbeController {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(ProbeController);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_PROBE_CONTROLLER_H_

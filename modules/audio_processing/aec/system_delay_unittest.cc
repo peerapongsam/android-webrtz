@@ -13,7 +13,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 class SystemDelayTest : public ::testing::Test {
@@ -598,4 +598,4 @@ TEST_F(SystemDelayTest, CorrectImpactWhenTogglingDeviceBufferValues) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

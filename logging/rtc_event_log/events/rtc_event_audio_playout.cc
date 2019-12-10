@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_audio_playout.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventAudioPlayout::RtcEventAudioPlayout(uint32_t ssrc) : ssrc_(ssrc) {}
 
@@ -22,4 +22,4 @@ bool RtcEventAudioPlayout::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

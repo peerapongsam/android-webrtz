@@ -35,7 +35,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #endif
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 
 enum class BandwidthUsage;
 enum class MediaType;
@@ -141,7 +141,7 @@ class ParsedRtcEventLog {
   // corresponding Audio/Video Sender/Receiver config events.
   // Warning: if the same SSRC is reused by both video and audio streams during
   // call, extensions maps may be incorrect (the last one would be returned).
-  webrtc::RtpHeaderExtensionMap* GetRtpHeader(size_t index,
+  webrtz::RtpHeaderExtensionMap* GetRtpHeader(size_t index,
                                               PacketDirection* incoming,
                                               uint8_t* header,
                                               size_t* header_length,
@@ -226,16 +226,16 @@ class ParsedRtcEventLog {
   struct Stream {
     Stream(uint32_t ssrc,
            MediaType media_type,
-           webrtc::PacketDirection direction,
-           webrtc::RtpHeaderExtensionMap map)
+           webrtz::PacketDirection direction,
+           webrtz::RtpHeaderExtensionMap map)
         : ssrc(ssrc),
           media_type(media_type),
           direction(direction),
           rtp_extensions_map(map) {}
     uint32_t ssrc;
     MediaType media_type;
-    webrtc::PacketDirection direction;
-    webrtc::RtpHeaderExtensionMap rtp_extensions_map;
+    webrtz::PacketDirection direction;
+    webrtz::RtpHeaderExtensionMap rtp_extensions_map;
   };
 
   // All configured streams found in the event log.
@@ -243,10 +243,10 @@ class ParsedRtcEventLog {
 
   // To find configured extensions map for given stream, what are needed to
   // parse a header.
-  typedef std::pair<uint32_t, webrtc::PacketDirection> StreamId;
-  std::map<StreamId, webrtc::RtpHeaderExtensionMap*> rtp_extensions_maps_;
+  typedef std::pair<uint32_t, webrtz::PacketDirection> StreamId;
+  std::map<StreamId, webrtz::RtpHeaderExtensionMap*> rtp_extensions_maps_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_RTC_EVENT_LOG_PARSER_H_

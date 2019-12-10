@@ -13,7 +13,7 @@
 
 #include <AudioUnit/AudioUnit.h>
 
-namespace webrtc {
+namespace webrtz {
 
 class VoiceProcessingAudioUnitObserver {
  public:
@@ -132,6 +132,6 @@ class VoiceProcessingAudioUnit {
   AudioUnit vpio_unit_;
   VoiceProcessingAudioUnit::State state_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_IOS_VOICE_PROCESSING_AUDIO_UNIT_H_

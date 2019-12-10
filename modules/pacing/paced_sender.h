@@ -20,7 +20,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 class AlrDetector;
 class BitrateProber;
 class Clock;
@@ -208,5 +208,5 @@ class PacedSender : public Pacer {
   int64_t queue_time_limit RTC_GUARDED_BY(critsect_);
   bool account_for_audio_ RTC_GUARDED_BY(critsect_);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_PACING_PACED_SENDER_H_

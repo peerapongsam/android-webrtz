@@ -17,7 +17,7 @@
 #include "sdk/objc/Framework/Native/src/objc_frame_buffer.h"
 
 @interface RTCObjCVideoSourceAdapter ()
-@property(nonatomic) webrtc::ObjCVideoTrackSource *objCVideoTrackSource;
+@property(nonatomic) webrtz::ObjCVideoTrackSource *objCVideoTrackSource;
 @end
 
 @implementation RTCObjCVideoSourceAdapter
@@ -30,7 +30,7 @@
 
 @end
 
-namespace webrtc {
+namespace webrtz {
 
 ObjCVideoTrackSource::ObjCVideoTrackSource() {}
 
@@ -101,4 +101,4 @@ void ObjCVideoTrackSource::OnCapturedFrame(RTCVideoFrame *frame) {
   OnFrame(VideoFrame(buffer, rotation, translated_timestamp_us));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

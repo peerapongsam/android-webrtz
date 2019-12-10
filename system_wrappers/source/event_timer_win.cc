@@ -12,7 +12,7 @@
 
 #include "mmsystem.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 EventTimerWrapper* EventTimerWrapper::Create() {
@@ -74,4 +74,4 @@ bool EventTimerWin::StopTimer() {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

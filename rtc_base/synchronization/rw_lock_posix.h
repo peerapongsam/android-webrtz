@@ -16,7 +16,7 @@
 #include "rtc_base/synchronization/rw_lock_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RWLockPosix : public RWLockWrapper {
  public:
@@ -36,6 +36,6 @@ class RWLockPosix : public RWLockWrapper {
   pthread_rwlock_t lock_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_SYNCHRONIZATION_RW_LOCK_POSIX_H_

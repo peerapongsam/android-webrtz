@@ -17,7 +17,7 @@
 #include "test/direct_transport.h"
 #include "test/frame_generator_capturer.h"
 
-namespace webrtc {
+namespace webrtz {
 // Test sets up a Call multiple senders with different resolutions and SSRCs.
 // Another is set up to receive all three of these with different renderers.
 class MultiStreamTester {
@@ -60,5 +60,5 @@ class MultiStreamTester {
 
   test::SingleThreadedTaskQueueForTesting* const task_queue_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // VIDEO_END_TO_END_TESTS_MULTI_STREAM_TESTER_H_

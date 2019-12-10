@@ -10,7 +10,7 @@
 
 #include "api/video_codecs/video_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int32_t DecodedImageCallback::Decoded(VideoFrame& decodedImage,
                                       int64_t decode_time_ms) {
@@ -41,4 +41,4 @@ const char* VideoDecoder::ImplementationName() const {
   return "unknown";
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

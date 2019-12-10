@@ -17,7 +17,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int kInvalidBitrate = -1;
@@ -218,4 +218,4 @@ TEST_F(LegacyTestProbeBitrateEstimator, FetchLastEstimatedBitrateBps) {
   EXPECT_FALSE(probe_bitrate_estimator_.FetchAndResetLastEstimatedBitrateBps());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

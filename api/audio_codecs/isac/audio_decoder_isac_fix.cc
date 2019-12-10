@@ -14,7 +14,7 @@
 #include "modules/audio_coding/codecs/isac/fix/include/audio_decoder_isacfix.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioDecoderIsacFix::Config> AudioDecoderIsacFix::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -35,4 +35,4 @@ std::unique_ptr<AudioDecoder> AudioDecoderIsacFix::MakeAudioDecoder(
   return rtc::MakeUnique<AudioDecoderIsacFixImpl>(16000);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

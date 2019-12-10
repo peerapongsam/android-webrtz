@@ -21,7 +21,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Almost all conversions have an RMS error of around -14 dbFS.
@@ -335,4 +335,4 @@ INSTANTIATE_TEST_CASE_P(
         ::testing::make_tuple(96000, 32000, -19.61, -18.04),
         ::testing::make_tuple(192000, 32000, -21.02, -10.94)));
 
-}  // namespace webrtc
+}  // namespace webrtz

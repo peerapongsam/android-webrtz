@@ -59,7 +59,7 @@ static void AddTraceEventHandler(char phase,
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(EventTracerTest, EventTracerDisabled) {
   {
@@ -78,4 +78,4 @@ TEST(EventTracerTest, ScopedTraceEvent) {
   TestStatistics::Get()->Reset();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

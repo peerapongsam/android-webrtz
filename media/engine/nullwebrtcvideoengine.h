@@ -16,11 +16,11 @@
 #include "media/base/mediachannel.h"
 #include "media/base/mediaengine.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Call;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 
 namespace cricket {
@@ -37,7 +37,7 @@ class NullWebRtcVideoEngine {
 
   RtpCapabilities GetCapabilities() const { return RtpCapabilities(); }
 
-  VideoMediaChannel* CreateChannel(webrtc::Call* call,
+  VideoMediaChannel* CreateChannel(webrtz::Call* call,
                                    const MediaConfig& config,
                                    const VideoOptions& options) {
     return nullptr;

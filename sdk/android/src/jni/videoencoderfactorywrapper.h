@@ -18,7 +18,7 @@
 #include "api/video_codecs/video_encoder_factory.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Wrapper for Java VideoEncoderFactory class. Delegates method calls through
@@ -43,6 +43,6 @@ class VideoEncoderFactoryWrapper : public VideoEncoderFactory {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_VIDEOENCODERFACTORYWRAPPER_H_

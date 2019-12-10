@@ -16,7 +16,7 @@
 #include "logging/rtc_event_log/events/rtc_event_ice_candidate_pair.h"
 #include "logging/rtc_event_log/events/rtc_event_ice_candidate_pair_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
@@ -46,6 +46,6 @@ class IceEventLog {
       candidate_pair_desc_by_id_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_ICELOGGER_H_

@@ -13,7 +13,7 @@
 
 #include "common_video/include/video_bitrate_allocator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DefaultVideoBitrateAllocator : public VideoBitrateAllocator {
  public:
@@ -28,6 +28,6 @@ class DefaultVideoBitrateAllocator : public VideoBitrateAllocator {
   const VideoCodec codec_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_UTILITY_DEFAULT_VIDEO_BITRATE_ALLOCATOR_H_

@@ -16,7 +16,7 @@
 #include "modules/audio_processing/beamformer/nonlinear_beamformer.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockNonlinearBeamformer : public NonlinearBeamformer {
  public:
@@ -34,6 +34,6 @@ class MockNonlinearBeamformer : public NonlinearBeamformer {
   MOCK_METHOD0(is_target_present, bool());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_BEAMFORMER_MOCK_BEAMFORMER_H_

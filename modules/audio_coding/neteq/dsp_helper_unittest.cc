@@ -14,7 +14,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(DspHelper, RampSignalArray) {
   static const int kLen = 100;
@@ -86,4 +86,4 @@ TEST(DspHelper, RampSignalAudioMultiVector) {
     }
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

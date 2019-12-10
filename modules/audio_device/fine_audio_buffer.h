@@ -17,7 +17,7 @@
 #include "rtc_base/buffer.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceBuffer;
 
@@ -91,6 +91,6 @@ class FineAudioBuffer {
   int playout_delay_ms_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_FINE_AUDIO_BUFFER_H_

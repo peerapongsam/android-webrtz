@@ -16,7 +16,7 @@
 #include "api/rtpparameters.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 RtpEncodingParameters JavaToNativeRtpEncodingParameters(
@@ -30,6 +30,6 @@ ScopedJavaLocalRef<jobject> NativeToJavaRtpParameters(
     const RtpParameters& parameters);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_RTPPARAMETERS_H_

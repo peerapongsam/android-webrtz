@@ -27,7 +27,7 @@ using ::testing::NiceMock;
 using ::testing::Return;
 using ::testing::Unused;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int8_t kPayloadType = 96;
 const uint32_t kSsrc1 = 12345;
@@ -720,4 +720,4 @@ TEST(PayloadRouterTest, Tl0PicIdxUpdatedForVp9) {
   EXPECT_EQ(kInitialTl0PicIdx1 + 1, states[kSsrc1].tl0_pic_idx);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "pc/datachannel.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockDataChannel : public rtc::RefCountedObject<DataChannel> {
  public:
@@ -55,6 +55,6 @@ class MockDataChannel : public rtc::RefCountedObject<DataChannel> {
   MOCK_CONST_METHOD0(bytes_received, uint64_t());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_MOCK_DATACHANNEL_H_

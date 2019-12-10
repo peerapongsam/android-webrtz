@@ -15,7 +15,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 TEST(TestInputAudioFile, DuplicateInterleaveSeparateSrcDst) {
@@ -56,4 +56,4 @@ TEST(TestInputAudioFile, DuplicateInterleaveSameSrcDst) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

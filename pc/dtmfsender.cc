@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/thread.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum {
   MSG_DO_INSERT_DTMF = 0,
@@ -240,4 +240,4 @@ void DtmfSender::StopSending() {
   signaling_thread_->Clear(this);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

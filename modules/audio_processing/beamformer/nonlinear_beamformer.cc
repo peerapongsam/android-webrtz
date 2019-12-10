@@ -21,7 +21,7 @@
 #include "modules/audio_processing/beamformer/covariance_matrix_generator.h"
 #include "rtc_base/arraysize.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Alpha for the Kaiser Bessel Derived window.
@@ -596,4 +596,4 @@ void NonlinearBeamformer::EstimateTargetPresence() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

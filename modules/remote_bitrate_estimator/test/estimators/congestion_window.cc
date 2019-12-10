@@ -15,7 +15,7 @@
 
 #include "modules/remote_bitrate_estimator/test/estimators/bbr.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 namespace {
@@ -64,4 +64,4 @@ int CongestionWindow::GetTargetCongestionWindow(
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

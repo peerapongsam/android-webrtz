@@ -13,7 +13,7 @@
 #include <deque>
 #include "modules/congestion_controller/network_control/include/network_units.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 class DataTransferTracker {
  public:
@@ -43,5 +43,5 @@ class DataTransferTracker {
   DataSize size_sum_ = DataSize::Zero();
 };
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_CONGESTION_CONTROLLER_BBR_DATA_TRANSFER_TRACKER_H_

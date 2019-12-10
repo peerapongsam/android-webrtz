@@ -13,7 +13,7 @@
 #include "rtc_base/timedelta.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(TimeIntervalTest, TimeInMs) {
   rtc::ScopedFakeClock fake_clock;
@@ -45,4 +45,4 @@ TEST(TimeIntervalTest, MonotoneIncreasing) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

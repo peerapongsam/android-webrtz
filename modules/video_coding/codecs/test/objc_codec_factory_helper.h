@@ -16,13 +16,13 @@
 #include "api/video_codecs/video_decoder_factory.h"
 #include "api/video_codecs/video_encoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 std::unique_ptr<VideoEncoderFactory> CreateObjCEncoderFactory();
 std::unique_ptr<VideoDecoderFactory> CreateObjCDecoderFactory();
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_TEST_OBJC_CODEC_FACTORY_HELPER_H_

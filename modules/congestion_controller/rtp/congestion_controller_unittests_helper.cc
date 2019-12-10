@@ -13,8 +13,8 @@
 #include "rtc_base/checks.h"
 #include "test/gtest.h"
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 void ComparePacketFeedbackVectors(const std::vector<PacketFeedback>& truth,
                                   const std::vector<PacketFeedback>& input) {
   ASSERT_EQ(truth.size(), input.size());
@@ -40,5 +40,5 @@ void ComparePacketFeedbackVectors(const std::vector<PacketFeedback>& truth,
     EXPECT_EQ(truth[i].pacing_info, input[i].pacing_info);
   }
 }
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

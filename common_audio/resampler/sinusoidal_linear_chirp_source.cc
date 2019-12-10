@@ -15,7 +15,7 @@
 
 #include <math.h>
 
-namespace webrtc {
+namespace webrtz {
 
 SinusoidalLinearChirpSource::SinusoidalLinearChirpSource(int sample_rate,
                                                          size_t samples,
@@ -55,4 +55,4 @@ double SinusoidalLinearChirpSource::Frequency(size_t position) {
       (max_frequency_ - kMinFrequency) / total_samples_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

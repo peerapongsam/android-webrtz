@@ -20,7 +20,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -645,4 +645,4 @@ TEST_F(FlexfecReceiverTest, CalculatesNumberOfPackets) {
   EXPECT_EQ(1U, packet_counter.num_recovered_packets);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

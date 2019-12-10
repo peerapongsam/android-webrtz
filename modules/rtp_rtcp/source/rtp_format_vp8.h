@@ -34,7 +34,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Packetizer for VP8.
 class RtpPacketizerVp8 : public RtpPacketizer {
@@ -165,5 +165,5 @@ class RtpDepacketizerVp8 : public RtpDepacketizer {
              const uint8_t* payload_data,
              size_t payload_data_length) override;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_FORMAT_VP8_H_

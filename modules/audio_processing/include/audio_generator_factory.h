@@ -17,7 +17,7 @@
 
 #include "modules/audio_processing/include/audio_generator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioGeneratorFactory {
  public:
@@ -26,6 +26,6 @@ class AudioGeneratorFactory {
   static std::unique_ptr<AudioGenerator> Create(const std::string& file_name);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INCLUDE_AUDIO_GENERATOR_FACTORY_H_

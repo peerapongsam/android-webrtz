@@ -20,7 +20,7 @@
 #include "modules/audio_processing/vad/pitch_based_vad.h"
 #include "modules/audio_processing/vad/standalone_vad.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A Voice Activity Detector (VAD) that combines the voice probability from the
 // StandaloneVad and PitchBasedVad to get a more robust estimation.
@@ -64,6 +64,6 @@ class VoiceActivityDetector {
   AudioFeatures features_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_VAD_VOICE_ACTIVITY_DETECTOR_H_

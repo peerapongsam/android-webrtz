@@ -25,7 +25,7 @@
 #include "modules/utility/include/jvm_android.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implements support for functions in the WebRTC audio stack for Android that
 // relies on the AudioManager in android.media. It also populates an
@@ -120,8 +120,8 @@ class AudioManager {
 
   // Returns the estimated total delay of this device. Unit is in milliseconds.
   // The vaule is set once at construction and never changes after that.
-  // Possible values are webrtc::kLowLatencyModeDelayEstimateInMilliseconds and
-  // webrtc::kHighLatencyModeDelayEstimateInMilliseconds.
+  // Possible values are webrtz::kLowLatencyModeDelayEstimateInMilliseconds and
+  // webrtz::kHighLatencyModeDelayEstimateInMilliseconds.
   int GetDelayEstimateInMilliseconds() const;
 
  private:
@@ -184,7 +184,7 @@ class AudioManager {
   // SLEngineItf interface. This interface contains creation methods for all
   // the other object types in the API. None of these interface are realized
   // by this class. It only provides access to the global engine object.
-  webrtc::ScopedSLObjectItf engine_object_;
+  webrtz::ScopedSLObjectItf engine_object_;
 
   // Set to true by Init() and false by Close().
   bool initialized_;
@@ -219,6 +219,6 @@ class AudioManager {
   AudioParameters record_parameters_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_AUDIO_MANAGER_H_

@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_ice_candidate_pair_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 IceCandidatePairDescription::IceCandidatePairDescription() {
   local_candidate_type = IceCandidateType::kUnknown;
@@ -55,4 +55,4 @@ bool RtcEventIceCandidatePairConfig::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

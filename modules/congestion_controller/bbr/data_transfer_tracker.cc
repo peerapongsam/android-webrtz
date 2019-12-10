@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 
 DataTransferTracker::DataTransferTracker() {}
@@ -82,4 +82,4 @@ DataTransferTracker::Result DataTransferTracker::GetRatesByAckTime(
 }
 
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz

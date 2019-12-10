@@ -16,7 +16,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int kPreventOveruseMarginBps = 5000;
@@ -180,4 +180,4 @@ bool FrameLengthController::FrameLengthDecreasingDecision(
               config_.fl_decreasing_packet_loss_fraction);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

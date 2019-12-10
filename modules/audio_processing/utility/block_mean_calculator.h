@@ -15,7 +15,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // BlockMeanCalculator calculates the mean of a block of values. Values are
 // added one after another, and the mean is updated at the end of every block.
@@ -47,6 +47,6 @@ class BlockMeanCalculator {
   RTC_DISALLOW_COPY_AND_ASSIGN(BlockMeanCalculator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_UTILITY_BLOCK_MEAN_CALCULATOR_H_

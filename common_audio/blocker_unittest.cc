@@ -18,7 +18,7 @@
 namespace {
 
 // Callback Function to add 3 to every sample in the signal.
-class PlusThreeBlockerCallback : public webrtc::BlockerCallback {
+class PlusThreeBlockerCallback : public webrtz::BlockerCallback {
  public:
   void ProcessBlock(const float* const* input,
                     size_t num_frames,
@@ -34,7 +34,7 @@ class PlusThreeBlockerCallback : public webrtc::BlockerCallback {
 };
 
 // No-op Callback Function.
-class CopyBlockerCallback : public webrtc::BlockerCallback {
+class CopyBlockerCallback : public webrtz::BlockerCallback {
  public:
   void ProcessBlock(const float* const* input,
                     size_t num_frames,
@@ -51,7 +51,7 @@ class CopyBlockerCallback : public webrtc::BlockerCallback {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 // Tests blocking with a window that multiplies the signal by 2, a callback
 // that adds 3 to each sample in the signal, and different combinations of chunk
@@ -342,4 +342,4 @@ TEST_F(BlockerTest, InitialDelaysAreMinimum) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

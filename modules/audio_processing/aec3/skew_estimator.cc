@@ -12,7 +12,7 @@
 #include <algorithm>
 #include <numeric>
 
-namespace webrtc {
+namespace webrtz {
 
 SkewEstimator::SkewEstimator(size_t skew_history_size_log2)
     : skew_history_size_log2_(static_cast<int>(skew_history_size_log2)),
@@ -43,4 +43,4 @@ rtc::Optional<int> SkewEstimator::GetSkewFromCapture() {
              : rtc::nullopt;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

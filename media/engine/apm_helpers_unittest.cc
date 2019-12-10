@@ -15,7 +15,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr AgcConfig kDefaultAgcConfig = { 3, 9, true };
@@ -242,4 +242,4 @@ TEST(ApmHelpersTest, HighPassFilter_DefaultMode) {
   TestHelper helper;
   EXPECT_FALSE(helper.apm()->high_pass_filter()->is_enabled());
 }
-}  // namespace webrtc
+}  // namespace webrtz

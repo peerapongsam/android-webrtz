@@ -26,7 +26,7 @@
 #include "sdk/android/src/jni/wrapped_native_i420_buffer.h"
 #include "third_party/libyuv/include/libyuv/scale.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -269,7 +269,7 @@ rtc::scoped_refptr<I420BufferInterface> AndroidTextureBuffer::ToI420() {
   uint8_t* u_data = y_data + height() * stride;
   uint8_t* v_data = u_data + stride / 2;
 
-  rtc::scoped_refptr<I420BufferInterface> copy = webrtc::WrapI420Buffer(
+  rtc::scoped_refptr<I420BufferInterface> copy = webrtz::WrapI420Buffer(
       width(), height(), y_data, stride, u_data, stride, v_data, stride,
       rtc::Bind(&AlignedFree, yuv_data.release()));
 
@@ -463,4 +463,4 @@ static void JNI_VideoFrame_CropAndScaleI420(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

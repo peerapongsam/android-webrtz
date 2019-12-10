@@ -16,7 +16,7 @@
 #include "modules/audio_processing/test/bitexactness_tools.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kNumFramesToProcess = 100;
@@ -354,4 +354,4 @@ TEST(EchoCancellationBitExactnessTest,
                       kStreamHasEchoReference, kOutputReference);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

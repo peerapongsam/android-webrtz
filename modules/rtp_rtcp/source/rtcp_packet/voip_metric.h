@@ -15,7 +15,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 class VoipMetric {
@@ -49,5 +49,5 @@ class VoipMetric {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_VOIP_METRIC_H_

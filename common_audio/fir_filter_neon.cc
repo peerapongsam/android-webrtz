@@ -16,7 +16,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/memory/aligned_malloc.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FIRFilterNEON::~FIRFilterNEON() {
 }
@@ -72,4 +72,4 @@ void FIRFilterNEON::Filter(const float* in, size_t length, float* out) {
   memmove(state_.get(), &state_[length], state_length_ * sizeof(state_[0]));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

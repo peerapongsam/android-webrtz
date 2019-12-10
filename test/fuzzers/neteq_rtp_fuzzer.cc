@@ -19,7 +19,7 @@
 #include "modules/audio_coding/neteq/tools/neteq_test.h"
 #include "modules/rtp_rtcp/source/byte_io.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 constexpr int kPayloadType = 95;
@@ -169,4 +169,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   test::FuzzOneInputTest(data, size);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

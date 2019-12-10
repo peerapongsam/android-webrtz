@@ -13,7 +13,7 @@
 #import "WebRTC/RTCVideoFrameBuffer.h"
 #import "sdk/objc/Framework/Classes/Video/RTCI420Buffer+Private.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -84,4 +84,4 @@ id<RTCVideoFrameBuffer> ToObjCVideoFrameBuffer(const rtc::scoped_refptr<VideoFra
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(LifetimeStatistics, TotalSamplesReceived) {
   StatisticsCalculator stats;
@@ -104,4 +104,4 @@ TEST(StatisticsCalculator, ExpandedSamplesCorrection) {
   EXPECT_EQ((50u << 14) / k10MsSamples, stats_output.speech_expand_rate);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

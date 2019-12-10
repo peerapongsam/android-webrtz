@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class I420Encoder : public VideoEncoder {
  public:
@@ -134,6 +134,6 @@ class I420Decoder : public VideoDecoder {
   DecodedImageCallback* _decodeCompleteCallback;
 };  // class I420Decoder
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_I420_INCLUDE_I420_H_

@@ -10,9 +10,9 @@
 
 package org.appspot.apprtc;
 
-import org.webrtc.IceCandidate;
-import org.webrtc.PeerConnection;
-import org.webrtc.SessionDescription;
+import org.webrtz.IceCandidate;
+import org.webrtz.PeerConnection;
+import org.webrtz.SessionDescription;
 
 import java.util.List;
 

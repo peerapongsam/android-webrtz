@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr size_t kCounterThreshold = 5;
@@ -126,4 +126,4 @@ void RenderSignalAnalyzer::MaskRegionsAroundNarrowBands(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

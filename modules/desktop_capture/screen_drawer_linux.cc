@@ -20,7 +20,7 @@
 #include "rtc_base/ptr_util.h"
 #include "system_wrappers/include/sleep.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -178,4 +178,4 @@ std::unique_ptr<ScreenDrawer> ScreenDrawer::Create() {
   return nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

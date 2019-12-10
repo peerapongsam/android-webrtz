@@ -12,7 +12,7 @@
 
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 class DriftingClock : public Clock {
  public:
@@ -40,6 +40,6 @@ class DriftingClock : public Clock {
   const int64_t start_time_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_DRIFTING_CLOCK_H_

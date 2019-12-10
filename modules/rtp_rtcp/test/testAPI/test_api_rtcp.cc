@@ -23,7 +23,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 class RtcpCallback : public RtcpIntraFrameObserver {
@@ -145,7 +145,7 @@ class RtpRtcpRtcpTest : public ::testing::Test {
     // send RTP packet with the data "testtest"
     const uint8_t test[9] = "testtest";
     EXPECT_EQ(true,
-              module1->SendOutgoingData(webrtc::kAudioFrameSpeech, 96, 0, -1,
+              module1->SendOutgoingData(webrtz::kAudioFrameSpeech, 96, 0, -1,
                                         test, 8, nullptr, nullptr, nullptr));
   }
 
@@ -184,7 +184,7 @@ class RtpRtcpRtcpTest : public ::testing::Test {
 };
 
 TEST_F(RtpRtcpRtcpTest, RTCP_CNAME) {
-  uint32_t testOfCSRC[webrtc::kRtpCsrcSize];
+  uint32_t testOfCSRC[webrtz::kRtpCsrcSize];
   EXPECT_EQ(2, rtp_receiver2_->CSRCs(testOfCSRC));
   EXPECT_EQ(test_csrcs[0], testOfCSRC[0]);
   EXPECT_EQ(test_csrcs[1], testOfCSRC[1]);
@@ -249,4 +249,4 @@ TEST_F(RtpRtcpRtcpTest, RemoteRTCPStatRemote) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

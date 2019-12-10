@@ -18,7 +18,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 using ::testing::_;
 
@@ -578,4 +578,4 @@ TEST_P(ScreenshareRateAllocationTest, InactiveScreenshare) {
 
   EXPECT_EQ(0U, allocation.get_sum_kbps());
 }
-}  // namespace webrtc
+}  // namespace webrtz

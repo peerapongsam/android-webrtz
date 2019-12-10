@@ -58,7 +58,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #endif
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 rtclog::DelayBasedBweUpdate::DetectorState ConvertDetectorState(
@@ -710,7 +710,7 @@ std::string RtcEventLogEncoderLegacy::EncodeRtcpPacket(
 
 std::string RtcEventLogEncoderLegacy::EncodeRtpPacket(
     int64_t timestamp_us,
-    const webrtc::RtpPacket& header,
+    const webrtz::RtpPacket& header,
     size_t packet_length,
     int probe_cluster_id,
     bool is_incoming) {
@@ -754,6 +754,6 @@ std::string RtcEventLogEncoderLegacy::Serialize(rtclog::Event* event) {
   return output_string;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ENABLE_RTC_EVENT_LOG

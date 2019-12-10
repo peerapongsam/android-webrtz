@@ -30,7 +30,7 @@
 #include "sdk/objc/Framework/Classes/Common/helpers.h"
 #include "sdk/objc/Framework/Native/src/objc_video_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -184,4 +184,4 @@ void ObjCVideoEncoderFactory::DestroyVideoEncoder(VideoEncoder *encoder) {
   encoder = nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

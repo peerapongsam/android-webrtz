@@ -15,7 +15,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace rtclog {
 struct StreamConfig;
@@ -34,6 +34,6 @@ class RtcEventAudioSendStreamConfig final : public RtcEvent {
   const std::unique_ptr<const rtclog::StreamConfig> config_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_AUDIO_SEND_STREAM_CONFIG_H_

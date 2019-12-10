@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_probe_cluster_created.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventProbeClusterCreated::RtcEventProbeClusterCreated(int id,
                                                          int bitrate_bps,
@@ -29,4 +29,4 @@ bool RtcEventProbeClusterCreated::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

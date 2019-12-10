@@ -13,7 +13,7 @@
 #include "test/testsupport/frame_writer.h"
 
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 JpegFrameWriter::JpegFrameWriter(const std::string& /*output_filename*/) {}
@@ -28,4 +28,4 @@ bool JpegFrameWriter::WriteFrame(const VideoFrame& /*input_frame*/,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

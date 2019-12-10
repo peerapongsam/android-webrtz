@@ -34,7 +34,7 @@
 #include "video/overuse_frame_detector.h"
 #include "call/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SendStatisticsProxy;
 class VideoBitrateAllocationObserver;
@@ -294,6 +294,6 @@ class VideoStreamEncoder : public rtc::VideoSinkInterface<VideoFrame>,
   RTC_DISALLOW_COPY_AND_ASSIGN(VideoStreamEncoder);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_VIDEO_STREAM_ENCODER_H_

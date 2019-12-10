@@ -18,7 +18,7 @@
 #include "api/jsep.h"
 #include "pc/sessiondescription.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Returns a copy of the given session description.
 std::unique_ptr<SessionDescriptionInterface> CloneSessionDescription(
@@ -55,6 +55,6 @@ typedef std::function<void(cricket::ContentInfo*, cricket::TransportInfo*)>
 void SdpContentsForEach(SdpContentMutator fn,
                         cricket::SessionDescription* desc);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_SDPUTILS_H_

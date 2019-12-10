@@ -26,7 +26,7 @@
 #include "rtc_base/task_queue.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Holds all the parameters available for controlling the simulation.
@@ -194,6 +194,6 @@ class AudioProcessingSimulator {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_AUDIO_PROCESSING_SIMULATOR_H_

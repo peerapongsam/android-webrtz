@@ -17,7 +17,7 @@
 #include "rtc_base/callback.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Deprecated. Please use WrapI420Buffer(...) instead.
 class WrappedI420Buffer : public I420BufferInterface {
@@ -103,6 +103,6 @@ rtc::scoped_refptr<PlanarYuvBuffer> WrapYuvBuffer(
     int v_stride,
     const rtc::Callback0<void>& no_longer_used);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_INCLUDE_VIDEO_FRAME_BUFFER_H_

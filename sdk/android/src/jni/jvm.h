@@ -13,7 +13,7 @@
 
 #include <jni.h>
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 jint InitGlobalJniVariables(JavaVM* jvm);
@@ -27,6 +27,6 @@ JavaVM* GetJVM();
 JNIEnv* AttachCurrentThreadIfNeeded();
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_JVM_H_

@@ -17,7 +17,7 @@
 #include "media/base/codec.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 class VideoDecoder;
 }
 
@@ -27,28 +27,28 @@ struct VideoDecoderParams {
   std::string receive_stream_id;
 };
 
-// Deprecated. Use webrtc::VideoDecoderFactory instead.
+// Deprecated. Use webrtz::VideoDecoderFactory instead.
 // https://bugs.chromium.org/p/webrtc/issues/detail?id=7925
 class WebRtcVideoDecoderFactory {
  public:
   // Caller takes the ownership of the returned object and it should be released
   // by calling DestroyVideoDecoder().
-  virtual webrtc::VideoDecoder* CreateVideoDecoderWithParams(
+  virtual webrtz::VideoDecoder* CreateVideoDecoderWithParams(
       const VideoCodec& codec,
       VideoDecoderParams params);
 
   // DEPRECATED.
   // These methods should not be used by new code and will eventually be
   // removed. See http://crbug.com/webrtc/8140.
-  virtual webrtc::VideoDecoder* CreateVideoDecoder(webrtc::VideoCodecType type);
+  virtual webrtz::VideoDecoder* CreateVideoDecoder(webrtz::VideoCodecType type);
 
-  virtual webrtc::VideoDecoder* CreateVideoDecoderWithParams(
-      webrtc::VideoCodecType type,
+  virtual webrtz::VideoDecoder* CreateVideoDecoderWithParams(
+      webrtz::VideoCodecType type,
       VideoDecoderParams params);
 
   virtual ~WebRtcVideoDecoderFactory() {}
 
-  virtual void DestroyVideoDecoder(webrtc::VideoDecoder* decoder) = 0;
+  virtual void DestroyVideoDecoder(webrtz::VideoDecoder* decoder) = 0;
 };
 
 }  // namespace cricket

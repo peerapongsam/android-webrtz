@@ -20,7 +20,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #include "modules/audio_processing/debug.pb.h"
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 
 // Allocates new memory in the unique_ptr to fit the raw message and returns the
 // number of bytes read.
@@ -29,6 +29,6 @@ size_t ReadMessageBytesFromFile(FILE* file, std::unique_ptr<uint8_t[]>* bytes);
 // Returns true on success, false on error or end-of-file.
 bool ReadMessageFromFile(FILE* file, MessageLite* msg);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_PROTOBUF_UTILS_H_

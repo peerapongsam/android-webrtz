@@ -14,7 +14,7 @@
 
 using testing::InitGoogleTest;
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 static const int kIsacBlockDurationMs = 30;
@@ -95,4 +95,4 @@ TEST_F(NetEqIsacQualityTest, Test) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

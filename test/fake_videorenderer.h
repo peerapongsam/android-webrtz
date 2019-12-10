@@ -14,15 +14,15 @@
 #include "api/video/video_frame.h"
 #include "api/videosinkinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
-class FakeVideoRenderer : public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+class FakeVideoRenderer : public rtc::VideoSinkInterface<webrtz::VideoFrame> {
  public:
-  void OnFrame(const webrtc::VideoFrame& frame) override {}
+  void OnFrame(const webrtz::VideoFrame& frame) override {}
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FAKE_VIDEORENDERER_H_

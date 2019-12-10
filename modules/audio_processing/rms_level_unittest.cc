@@ -18,7 +18,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 constexpr int kSampleRateHz = 48000;
 constexpr size_t kBlockSizeSamples = kSampleRateHz / 100;
@@ -147,4 +147,4 @@ TEST(RmsLevelTest, ResetOnBlockSizeChange) {
   EXPECT_EQ(9, stats.peak);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

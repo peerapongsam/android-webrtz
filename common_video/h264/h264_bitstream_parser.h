@@ -21,7 +21,7 @@ namespace rtc {
 class BitBufferWriter;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 // Stateful H264 bitstream parser (due to SPS/PPS). Used to parse out QP values
 // from the bitstream.
@@ -60,6 +60,6 @@ class H264BitstreamParser {
   rtc::Optional<int32_t> last_slice_qp_delta_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_H264_H264_BITSTREAM_PARSER_H_

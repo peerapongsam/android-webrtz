@@ -23,7 +23,7 @@
 #include "rtc_base/rtccertificate.h"
 #include "rtc_base/rtccertificategenerator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // DTLS certificate request callback class.
 class WebRtcCertificateGeneratorCallback
@@ -148,6 +148,6 @@ class WebRtcSessionDescriptionFactory : public rtc::MessageHandler,
 
   RTC_DISALLOW_COPY_AND_ASSIGN(WebRtcSessionDescriptionFactory);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_WEBRTCSESSIONDESCRIPTIONFACTORY_H_

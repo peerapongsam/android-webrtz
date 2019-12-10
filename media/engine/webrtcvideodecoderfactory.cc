@@ -12,23 +12,23 @@
 
 namespace cricket {
 
-webrtc::VideoDecoder* WebRtcVideoDecoderFactory::CreateVideoDecoderWithParams(
+webrtz::VideoDecoder* WebRtcVideoDecoderFactory::CreateVideoDecoderWithParams(
     const VideoCodec& codec,
     VideoDecoderParams params) {
   // Default implementation that delegates to old version in order to preserve
   // backwards-compatability.
-  webrtc::VideoCodecType type = webrtc::PayloadStringToCodecType(codec.name);
+  webrtz::VideoCodecType type = webrtz::PayloadStringToCodecType(codec.name);
   return CreateVideoDecoderWithParams(type, params);
 }
 
-webrtc::VideoDecoder* WebRtcVideoDecoderFactory::CreateVideoDecoder(
-    webrtc::VideoCodecType type) {
+webrtz::VideoDecoder* WebRtcVideoDecoderFactory::CreateVideoDecoder(
+    webrtz::VideoCodecType type) {
   RTC_NOTREACHED();
   return nullptr;
 }
 
-webrtc::VideoDecoder* WebRtcVideoDecoderFactory::CreateVideoDecoderWithParams(
-    webrtc::VideoCodecType type,
+webrtz::VideoDecoder* WebRtcVideoDecoderFactory::CreateVideoDecoderWithParams(
+    webrtz::VideoCodecType type,
     VideoDecoderParams params) {
   return CreateVideoDecoder(type);
 }

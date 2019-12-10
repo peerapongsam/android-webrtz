@@ -16,7 +16,7 @@
 #include "modules/rtp_rtcp/source/rtp_packet_received.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 class DummyCallback : public RecoveredPacketReceiver {
@@ -69,4 +69,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -32,7 +32,7 @@ namespace cricket {
 // Implementation of UdpTransportInterface.
 // Used by OrtcFactory.
 class UdpTransport : public rtc::PacketTransportInternal,
-                     public webrtc::UdpTransportInterface {
+                     public webrtz::UdpTransportInterface {
  public:
   // |transport_name| is only used for identification/logging.
   // |socket| must be non-null.

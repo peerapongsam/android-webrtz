@@ -15,7 +15,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declaration.
 class DecoderDatabase;
@@ -64,5 +64,5 @@ class TimestampScaler {
   RTC_DISALLOW_COPY_AND_ASSIGN(TimestampScaler);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TIMESTAMP_SCALER_H_

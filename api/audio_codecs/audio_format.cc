@@ -12,7 +12,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 SdpAudioFormat::SdpAudioFormat(const SdpAudioFormat&) = default;
 SdpAudioFormat::SdpAudioFormat(SdpAudioFormat&&) = default;
@@ -127,4 +127,4 @@ std::ostream& operator<<(std::ostream& os, const AudioCodecSpec& acs) {
   return os;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

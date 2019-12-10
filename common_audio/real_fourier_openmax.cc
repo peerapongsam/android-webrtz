@@ -15,7 +15,7 @@
 #include "dl/sp/api/omxSP.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -65,5 +65,5 @@ void RealFourierOpenmax::Inverse(const complex<float>* src, float* dest) const {
   RTC_CHECK_EQ(r, OMX_Sts_NoErr);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

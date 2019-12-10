@@ -17,7 +17,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -175,4 +175,4 @@ FeedbackPacket* SendSideBweReceiver::GetFeedback(int64_t now_ms) {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

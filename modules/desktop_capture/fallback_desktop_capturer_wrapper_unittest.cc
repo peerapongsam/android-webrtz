@@ -19,7 +19,7 @@
 #include "modules/desktop_capture/fake_desktop_capturer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -202,4 +202,4 @@ TEST_F(FallbackDesktopCapturerWrapperTest, WithSharedMemory) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

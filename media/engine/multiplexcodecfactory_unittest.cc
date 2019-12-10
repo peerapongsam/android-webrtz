@@ -20,7 +20,7 @@
 #include "media/engine/internalencoderfactory.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(MultiplexDecoderFactory, CreateVideoDecoder) {
   std::unique_ptr<VideoDecoderFactory> internal_factory(
@@ -44,4 +44,4 @@ TEST(MultiplexEncoderFactory, CreateVideoEncoder) {
   EXPECT_TRUE(encoder);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

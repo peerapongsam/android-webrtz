@@ -58,7 +58,7 @@
 #define BWE_TEST_LOGGING_COMPILE_TIME_ENABLE 0
 #endif  // BWE_TEST_LOGGING_COMPILE_TIME_ENABLE
 
-namespace webrtc {
+namespace webrtz {
 namespace plotting {
 
 namespace {
@@ -132,23 +132,23 @@ int64_t WrappingDifference(uint32_t later, uint32_t earlier, int64_t modulus) {
 // is not stored in the event log.
 // TODO(ivoc): Remove this once this mapping is stored in the event log for
 //             audio streams. Tracking bug: webrtc:6399
-webrtc::RtpHeaderExtensionMap GetDefaultHeaderExtensionMap() {
-  webrtc::RtpHeaderExtensionMap default_map;
-  default_map.Register<AudioLevel>(webrtc::RtpExtension::kAudioLevelDefaultId);
+webrtz::RtpHeaderExtensionMap GetDefaultHeaderExtensionMap() {
+  webrtz::RtpHeaderExtensionMap default_map;
+  default_map.Register<AudioLevel>(webrtz::RtpExtension::kAudioLevelDefaultId);
   default_map.Register<TransmissionOffset>(
-      webrtc::RtpExtension::kTimestampOffsetDefaultId);
+      webrtz::RtpExtension::kTimestampOffsetDefaultId);
   default_map.Register<AbsoluteSendTime>(
-      webrtc::RtpExtension::kAbsSendTimeDefaultId);
+      webrtz::RtpExtension::kAbsSendTimeDefaultId);
   default_map.Register<VideoOrientation>(
-      webrtc::RtpExtension::kVideoRotationDefaultId);
+      webrtz::RtpExtension::kVideoRotationDefaultId);
   default_map.Register<VideoContentTypeExtension>(
-      webrtc::RtpExtension::kVideoContentTypeDefaultId);
+      webrtz::RtpExtension::kVideoContentTypeDefaultId);
   default_map.Register<VideoTimingExtension>(
-      webrtc::RtpExtension::kVideoTimingDefaultId);
+      webrtz::RtpExtension::kVideoTimingDefaultId);
   default_map.Register<TransportSequenceNumber>(
-      webrtc::RtpExtension::kTransportSequenceNumberDefaultId);
+      webrtz::RtpExtension::kTransportSequenceNumberDefaultId);
   default_map.Register<PlayoutDelayLimits>(
-      webrtc::RtpExtension::kPlayoutDelayDefaultId);
+      webrtz::RtpExtension::kPlayoutDelayDefaultId);
   return default_map;
 }
 
@@ -297,7 +297,7 @@ void MovingAverage(
     uint64_t end_time,
     uint64_t window_duration_us,
     uint64_t step,
-    webrtc::plotting::TimeSeries* result) {
+    webrtz::plotting::TimeSeries* result) {
   size_t window_index_begin = 0;
   size_t window_index_end = 0;
   ResultType sum_in_window = 0;
@@ -346,30 +346,30 @@ const char kNetworkTypeWifi[] = "wifi";
 const char kNetworkTypeVpn[] = "vpn";
 const char kNetworkTypeCellular[] = "cellular";
 
-std::string GetIceCandidateTypeAsString(webrtc::IceCandidateType type) {
+std::string GetIceCandidateTypeAsString(webrtz::IceCandidateType type) {
   switch (type) {
-    case webrtc::IceCandidateType::kLocal:
+    case webrtz::IceCandidateType::kLocal:
       return kIceCandidateTypeLocal;
-    case webrtc::IceCandidateType::kStun:
+    case webrtz::IceCandidateType::kStun:
       return kIceCandidateTypeStun;
-    case webrtc::IceCandidateType::kPrflx:
+    case webrtz::IceCandidateType::kPrflx:
       return kIceCandidateTypePrflx;
-    case webrtc::IceCandidateType::kRelay:
+    case webrtz::IceCandidateType::kRelay:
       return kIceCandidateTypeRelay;
     default:
       return kUnknownEnumValue;
   }
 }
 
-std::string GetProtocolAsString(webrtc::IceCandidatePairProtocol protocol) {
+std::string GetProtocolAsString(webrtz::IceCandidatePairProtocol protocol) {
   switch (protocol) {
-    case webrtc::IceCandidatePairProtocol::kUdp:
+    case webrtz::IceCandidatePairProtocol::kUdp:
       return kProtocolUdp;
-    case webrtc::IceCandidatePairProtocol::kTcp:
+    case webrtz::IceCandidatePairProtocol::kTcp:
       return kProtocolTcp;
-    case webrtc::IceCandidatePairProtocol::kSsltcp:
+    case webrtz::IceCandidatePairProtocol::kSsltcp:
       return kProtocolSsltcp;
-    case webrtc::IceCandidatePairProtocol::kTls:
+    case webrtz::IceCandidatePairProtocol::kTls:
       return kProtocolTls;
     default:
       return kUnknownEnumValue;
@@ -377,28 +377,28 @@ std::string GetProtocolAsString(webrtc::IceCandidatePairProtocol protocol) {
 }
 
 std::string GetAddressFamilyAsString(
-    webrtc::IceCandidatePairAddressFamily family) {
+    webrtz::IceCandidatePairAddressFamily family) {
   switch (family) {
-    case webrtc::IceCandidatePairAddressFamily::kIpv4:
+    case webrtz::IceCandidatePairAddressFamily::kIpv4:
       return kAddressFamilyIpv4;
-    case webrtc::IceCandidatePairAddressFamily::kIpv6:
+    case webrtz::IceCandidatePairAddressFamily::kIpv6:
       return kAddressFamilyIpv6;
     default:
       return kUnknownEnumValue;
   }
 }
 
-std::string GetNetworkTypeAsString(webrtc::IceCandidateNetworkType type) {
+std::string GetNetworkTypeAsString(webrtz::IceCandidateNetworkType type) {
   switch (type) {
-    case webrtc::IceCandidateNetworkType::kEthernet:
+    case webrtz::IceCandidateNetworkType::kEthernet:
       return kNetworkTypeEthernet;
-    case webrtc::IceCandidateNetworkType::kLoopback:
+    case webrtz::IceCandidateNetworkType::kLoopback:
       return kNetworkTypeLoopback;
-    case webrtc::IceCandidateNetworkType::kWifi:
+    case webrtz::IceCandidateNetworkType::kWifi:
       return kNetworkTypeWifi;
-    case webrtc::IceCandidateNetworkType::kVpn:
+    case webrtz::IceCandidateNetworkType::kVpn:
       return kNetworkTypeVpn;
-    case webrtc::IceCandidateNetworkType::kCellular:
+    case webrtz::IceCandidateNetworkType::kCellular:
       return kNetworkTypeCellular;
     default:
       return kUnknownEnumValue;
@@ -416,7 +416,7 @@ std::string GetCandidatePairLogDescriptionAsString(
       GetIceCandidateTypeAsString(config.local_candidate_type);
   std::string remote_candidate_type =
       GetIceCandidateTypeAsString(config.remote_candidate_type);
-  if (config.local_candidate_type == webrtc::IceCandidateType::kRelay) {
+  if (config.local_candidate_type == webrtz::IceCandidateType::kRelay) {
     local_candidate_type +=
         "(" + GetProtocolAsString(config.local_relay_protocol) + ")";
   }
@@ -524,7 +524,7 @@ EventLogAnalyzer::EventLogAnalyzer(const ParsedRtcEventLog& log)
         // Currently incoming RTCP packets are logged twice, both for audio and
         // video. Only act on one of them. Compare against the previous parsed
         // incoming RTCP packet.
-        if (direction == webrtc::kIncomingPacket) {
+        if (direction == webrtz::kIncomingPacket) {
           RTC_CHECK_LE(total_length, IP_PACKET_SIZE);
           if (total_length == last_incoming_rtcp_packet_length &&
               memcmp(last_incoming_rtcp_packet, packet, total_length) == 0) {
@@ -800,9 +800,9 @@ void EventLogAnalyzer::CreatePacketGraph(PacketDirection desired_direction,
   plot->SetXAxis(0, call_duration_s_, "Time (s)", kLeftMargin, kRightMargin);
   plot->SetSuggestedYAxis(0, 1, "Packet size (bytes)", kBottomMargin,
                           kTopMargin);
-  if (desired_direction == webrtc::PacketDirection::kIncomingPacket) {
+  if (desired_direction == webrtz::PacketDirection::kIncomingPacket) {
     plot->SetTitle("Incoming RTP packets");
-  } else if (desired_direction == webrtc::PacketDirection::kOutgoingPacket) {
+  } else if (desired_direction == webrtz::PacketDirection::kOutgoingPacket) {
     plot->SetTitle("Outgoing RTP packets");
   }
 }
@@ -843,9 +843,9 @@ void EventLogAnalyzer::CreateAccumulatedPacketsGraph(
 
   plot->SetXAxis(0, call_duration_s_, "Time (s)", kLeftMargin, kRightMargin);
   plot->SetSuggestedYAxis(0, 1, "Received Packets", kBottomMargin, kTopMargin);
-  if (desired_direction == webrtc::PacketDirection::kIncomingPacket) {
+  if (desired_direction == webrtz::PacketDirection::kIncomingPacket) {
     plot->SetTitle("Accumulated Incoming RTP/RTCP packets");
-  } else if (desired_direction == webrtc::PacketDirection::kOutgoingPacket) {
+  } else if (desired_direction == webrtz::PacketDirection::kOutgoingPacket) {
     plot->SetTitle("Accumulated Outgoing RTP/RTCP packets");
   }
 }
@@ -1281,9 +1281,9 @@ void EventLogAnalyzer::CreateTotalBitrateGraph(
 
   plot->SetXAxis(0, call_duration_s_, "Time (s)", kLeftMargin, kRightMargin);
   plot->SetSuggestedYAxis(0, 1, "Bitrate (kbps)", kBottomMargin, kTopMargin);
-  if (desired_direction == webrtc::PacketDirection::kIncomingPacket) {
+  if (desired_direction == webrtz::PacketDirection::kIncomingPacket) {
     plot->SetTitle("Incoming RTP bitrate");
-  } else if (desired_direction == webrtc::PacketDirection::kOutgoingPacket) {
+  } else if (desired_direction == webrtz::PacketDirection::kOutgoingPacket) {
     plot->SetTitle("Outgoing RTP bitrate");
   }
 }
@@ -1313,9 +1313,9 @@ void EventLogAnalyzer::CreateStreamBitrateGraph(
 
   plot->SetXAxis(0, call_duration_s_, "Time (s)", kLeftMargin, kRightMargin);
   plot->SetSuggestedYAxis(0, 1, "Bitrate (kbps)", kBottomMargin, kTopMargin);
-  if (desired_direction == webrtc::PacketDirection::kIncomingPacket) {
+  if (desired_direction == webrtz::PacketDirection::kIncomingPacket) {
     plot->SetTitle("Incoming bitrate per stream");
-  } else if (desired_direction == webrtc::PacketDirection::kOutgoingPacket) {
+  } else if (desired_direction == webrtz::PacketDirection::kOutgoingPacket) {
     plot->SetTitle("Outgoing bitrate per stream");
   }
 }
@@ -2340,4 +2340,4 @@ void EventLogAnalyzer::CreateTriageNotifications() {
 }
 
 }  // namespace plotting
-}  // namespace webrtc
+}  // namespace webrtz

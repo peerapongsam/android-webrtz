@@ -14,7 +14,7 @@
 #include "modules/audio_processing/beamformer/complex_matrix.h"
 #include "modules/audio_processing/beamformer/array_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper class for Beamformer in charge of generating covariance matrices. For
 // each function, the passed-in ComplexMatrix is expected to be of size
@@ -49,6 +49,6 @@ class CovarianceMatrixGenerator {
                                   ComplexMatrix<float>* mat);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_BEAMFORMER_BF_HELPERS_H_

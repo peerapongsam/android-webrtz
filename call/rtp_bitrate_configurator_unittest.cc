@@ -12,7 +12,7 @@
 #include "call/rtp_bitrate_configurator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 using rtc::nullopt;
 
 class RtpBitrateConfiguratorTest : public testing::Test {
@@ -296,4 +296,4 @@ TEST_F(RtpBitrateConfiguratorTest,
   mask.min_bitrate_bps = 3000;
   EXPECT_FALSE(configurator_->UpdateWithClientPreferences(mask).has_value());
 }
-}  // namespace webrtc
+}  // namespace webrtz

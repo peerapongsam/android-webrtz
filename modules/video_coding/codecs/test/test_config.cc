@@ -21,7 +21,7 @@
 #include "system_wrappers/include/cpu_info.h"
 #include "test/video_codec_settings.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -32,7 +32,7 @@ const int kMaxFramerateFps = 30;
 const int kMaxQp = 56;
 
 void ConfigureSimulcast(VideoCodec* codec_settings) {
-  const std::vector<webrtc::VideoStream> streams = cricket::GetSimulcastConfig(
+  const std::vector<webrtz::VideoStream> streams = cricket::GetSimulcastConfig(
       codec_settings->numberOfSimulcastStreams, codec_settings->width,
       codec_settings->height, kMaxBitrateBps, kMaxQp, kMaxFramerateFps, false);
 
@@ -114,7 +114,7 @@ void TestConfig::SetCodecSettings(VideoCodecType codec_type,
                                   bool resilience_on,
                                   size_t width,
                                   size_t height) {
-  webrtc::test::CodecSettings(codec_type, &codec_settings);
+  webrtz::test::CodecSettings(codec_type, &codec_settings);
 
   // TODO(brandtr): Move the setting of |width| and |height| to the tests, and
   // DCHECK that they are set before initializing the codec instead.
@@ -291,4 +291,4 @@ bool TestConfig::IsAsyncCodec() const {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

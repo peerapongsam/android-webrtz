@@ -12,7 +12,7 @@
 
 #include "modules/desktop_capture/win/screen_capture_utils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool DisplayConfigurationMonitor::IsChanged() {
   DesktopRect rect = GetFullscreenRect();
@@ -34,4 +34,4 @@ void DisplayConfigurationMonitor::Reset() {
   initialized_ = false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

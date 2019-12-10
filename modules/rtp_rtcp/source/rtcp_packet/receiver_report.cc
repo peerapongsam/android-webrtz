@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t ReceiverReport::kPacketType;
 constexpr size_t ReceiverReport::kMaxNumberOfReportBlocks;
@@ -107,4 +107,4 @@ bool ReceiverReport::SetReportBlocks(std::vector<ReportBlock> blocks) {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

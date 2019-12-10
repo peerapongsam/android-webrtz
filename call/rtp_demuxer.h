@@ -17,7 +17,7 @@
 #include <utility>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketReceived;
 class RtpPacketSinkInterface;
@@ -205,6 +205,6 @@ class RtpDemuxer {
   bool use_mid_ = true;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_DEMUXER_H_

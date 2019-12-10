@@ -20,7 +20,7 @@
 #include "api/audio_codecs/ilbc/audio_encoder_ilbc_config.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // ILBC encoder API for use as a template parameter to
 // CreateAudioEncoderFactory<...>().
@@ -38,6 +38,6 @@ struct AudioEncoderIlbc {
       rtc::Optional<AudioCodecPairId> codec_pair_id = rtc::nullopt);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_ILBC_AUDIO_ENCODER_ILBC_H_

@@ -175,7 +175,7 @@ MainWindow::UI GtkMainWnd::current_ui() {
 }
 
 
-void GtkMainWnd::StartLocalRenderer(webrtc::VideoTrackInterface* local_video) {
+void GtkMainWnd::StartLocalRenderer(webrtz::VideoTrackInterface* local_video) {
   local_renderer_.reset(new VideoRenderer(this, local_video));
 }
 
@@ -184,7 +184,7 @@ void GtkMainWnd::StopLocalRenderer() {
 }
 
 void GtkMainWnd::StartRemoteRenderer(
-    webrtc::VideoTrackInterface* remote_video) {
+    webrtz::VideoTrackInterface* remote_video) {
   remote_renderer_.reset(new VideoRenderer(this, remote_video));
 }
 
@@ -494,7 +494,7 @@ void GtkMainWnd::Draw(GtkWidget* widget, cairo_t* cr) {
 
 GtkMainWnd::VideoRenderer::VideoRenderer(
     GtkMainWnd* main_wnd,
-    webrtc::VideoTrackInterface* track_to_render)
+    webrtz::VideoTrackInterface* track_to_render)
     : width_(0),
       height_(0),
       main_wnd_(main_wnd),
@@ -520,13 +520,13 @@ void GtkMainWnd::VideoRenderer::SetSize(int width, int height) {
 }
 
 void GtkMainWnd::VideoRenderer::OnFrame(
-    const webrtc::VideoFrame& video_frame) {
+    const webrtz::VideoFrame& video_frame) {
   gdk_threads_enter();
 
-  rtc::scoped_refptr<webrtc::I420BufferInterface> buffer(
+  rtc::scoped_refptr<webrtz::I420BufferInterface> buffer(
       video_frame.video_frame_buffer()->ToI420());
-  if (video_frame.rotation() != webrtc::kVideoRotation_0) {
-    buffer = webrtc::I420Buffer::Rotate(*buffer, video_frame.rotation());
+  if (video_frame.rotation() != webrtz::kVideoRotation_0) {
+    buffer = webrtz::I420Buffer::Rotate(*buffer, video_frame.rotation());
   }
   SetSize(buffer->width(), buffer->height());
 

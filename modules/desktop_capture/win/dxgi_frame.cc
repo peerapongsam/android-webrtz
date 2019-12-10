@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DxgiFrame::DxgiFrame(SharedMemoryFactory* factory)
     : factory_(factory) {}
@@ -73,4 +73,4 @@ DxgiFrame::Context* DxgiFrame::context() {
   return &context_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

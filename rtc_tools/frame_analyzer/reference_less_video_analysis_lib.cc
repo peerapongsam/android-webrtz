@@ -138,32 +138,32 @@ void compute_metrics(const std::string& video_file_name,
   get_height_width_fps(&height, &width, &fps, video_file_name);
 
   int no_of_frames = 0;
-  int size = webrtc::test::GetI420FrameSize(width, height);
+  int size = webrtz::test::GetI420FrameSize(width, height);
 
   // Allocate buffers for test and reference frames.
   uint8_t* current_frame = new uint8_t[size];
   uint8_t* next_frame = new uint8_t[size];
 
   while (true) {
-    if (!(webrtc::test::ExtractFrameFromY4mFile (video_file_name.c_str(),
+    if (!(webrtz::test::ExtractFrameFromY4mFile (video_file_name.c_str(),
                                                  width, height,
                                                  no_of_frames,
                                                  current_frame))) {
       break;
     }
 
-    if (!(webrtc::test::ExtractFrameFromY4mFile (video_file_name.c_str(),
+    if (!(webrtz::test::ExtractFrameFromY4mFile (video_file_name.c_str(),
                                                  width, height,
                                                  no_of_frames + 1,
                                                  next_frame))) {
       break;
     }
 
-    double result_psnr = webrtc::test::CalculateMetrics(webrtc::test::kPSNR,
+    double result_psnr = webrtz::test::CalculateMetrics(webrtz::test::kPSNR,
                                                         current_frame,
                                                         next_frame,
                                                         width, height);
-    double result_ssim = webrtc::test::CalculateMetrics(webrtc::test::kSSIM,
+    double result_ssim = webrtz::test::CalculateMetrics(webrtz::test::kSSIM,
                                                         current_frame,
                                                         next_frame,
                                                         width, height);

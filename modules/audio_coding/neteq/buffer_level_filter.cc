@@ -12,7 +12,7 @@
 
 #include <algorithm>  // Provide access to std::max.
 
-namespace webrtc {
+namespace webrtz {
 
 BufferLevelFilter::BufferLevelFilter() {
   Reset();
@@ -62,4 +62,4 @@ int BufferLevelFilter::filtered_current_level() const {
   return filtered_current_level_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

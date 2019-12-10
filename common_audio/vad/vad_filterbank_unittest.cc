@@ -19,7 +19,7 @@ extern "C" {
 #include "common_audio/vad/vad_filterbank.h"
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const int kNumValidFrameLengths = 3;
@@ -91,4 +91,4 @@ TEST_F(VadTest, vad_filterbank) {
   free(self);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -20,7 +20,7 @@
 #include "modules/desktop_capture/mac/desktop_configuration.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class EventWrapper;
 
@@ -56,6 +56,6 @@ class DesktopConfigurationMonitor : public rtc::RefCountedBase {
   RTC_DISALLOW_COPY_AND_ASSIGN(DesktopConfigurationMonitor);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MAC_DESKTOP_CONFIGURATION_MONITOR_H_

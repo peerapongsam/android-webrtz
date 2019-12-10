@@ -64,7 +64,7 @@
     }                       \
   } while (0)
 
-namespace webrtc {
+namespace webrtz {
 
 constexpr int AudioProcessing::kNativeSampleRatesHz[];
 
@@ -149,9 +149,9 @@ class HighPassFilterImpl : public HighPassFilter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(HighPassFilterImpl);
 };
 
-webrtc::InternalAPMStreamsConfig ToStreamsConfig(
+webrtz::InternalAPMStreamsConfig ToStreamsConfig(
     const ProcessingConfig& api_format) {
-  webrtc::InternalAPMStreamsConfig result;
+  webrtz::InternalAPMStreamsConfig result;
   result.input_sample_rate = api_format.input_stream().sample_rate_hz();
   result.input_num_channels = api_format.input_stream().num_channels();
   result.output_num_channels = api_format.output_stream().num_channels();
@@ -349,11 +349,11 @@ AudioProcessingBuilder& AudioProcessingBuilder::SetEchoDetector(
 }
 
 AudioProcessing* AudioProcessingBuilder::Create() {
-  webrtc::Config config;
+  webrtz::Config config;
   return Create(config);
 }
 
-AudioProcessing* AudioProcessingBuilder::Create(const webrtc::Config& config) {
+AudioProcessing* AudioProcessingBuilder::Create(const webrtz::Config& config) {
   AudioProcessingImpl* apm = new rtc::RefCountedObject<AudioProcessingImpl>(
       config, std::move(capture_post_processing_),
       std::move(render_pre_processing_), std::move(echo_control_factory_),
@@ -365,14 +365,14 @@ AudioProcessing* AudioProcessingBuilder::Create(const webrtc::Config& config) {
   return apm;
 }
 
-AudioProcessingImpl::AudioProcessingImpl(const webrtc::Config& config)
+AudioProcessingImpl::AudioProcessingImpl(const webrtz::Config& config)
     : AudioProcessingImpl(config, nullptr, nullptr, nullptr, nullptr, nullptr) {
 }
 
 int AudioProcessingImpl::instance_count_ = 0;
 
 AudioProcessingImpl::AudioProcessingImpl(
-    const webrtc::Config& config,
+    const webrtz::Config& config,
     std::unique_ptr<CustomProcessing> capture_post_processor,
     std::unique_ptr<CustomProcessing> render_pre_processor,
     std::unique_ptr<EchoControlFactory> echo_control_factory,
@@ -718,7 +718,7 @@ void AudioProcessingImpl::ApplyConfig(const AudioProcessing::Config& config) {
                    << config_.gain_controller2.enabled;
 }
 
-void AudioProcessingImpl::SetExtraOptions(const webrtc::Config& config) {
+void AudioProcessingImpl::SetExtraOptions(const webrtz::Config& config) {
   // Run in a single-threaded manner when setting the extra options.
   rtc::CritScope cs_render(&crit_render_);
   rtc::CritScope cs_capture(&crit_capture_);
@@ -2031,4 +2031,4 @@ AudioProcessingImpl::ApmRenderState::ApmRenderState() = default;
 
 AudioProcessingImpl::ApmRenderState::~ApmRenderState() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

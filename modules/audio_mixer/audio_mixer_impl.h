@@ -24,7 +24,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 typedef std::vector<AudioFrame*> AudioFrameList;
 
@@ -111,6 +111,6 @@ class AudioMixerImpl : public AudioMixer {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioMixerImpl);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_MIXER_AUDIO_MIXER_IMPL_H_

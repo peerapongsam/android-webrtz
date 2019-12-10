@@ -18,7 +18,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace aec3 {
 namespace {
 
@@ -118,4 +118,4 @@ TEST(ComfortNoiseGenerator, CorrectLevel) {
 }
 
 }  // namespace aec3
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockBufferLevelFilter : public BufferLevelFilter {
  public:
@@ -33,5 +33,5 @@ class MockBufferLevelFilter : public BufferLevelFilter {
       int());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_BUFFER_LEVEL_FILTER_H_

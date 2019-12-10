@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using H264::kAud;
 using H264::kSps;
@@ -346,4 +346,4 @@ size_t AvccBufferWriter::BytesRemaining() const {
   return length_ - offset_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

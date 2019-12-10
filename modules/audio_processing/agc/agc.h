@@ -16,7 +16,7 @@
 #include "modules/audio_processing/vad/voice_activity_detector.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioFrame;
 class LoudnessHistogram;
@@ -51,6 +51,6 @@ class Agc {
   VoiceActivityDetector vad_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC_AGC_H_

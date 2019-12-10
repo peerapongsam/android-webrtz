@@ -16,7 +16,7 @@
 #include "api/audio/echo_canceller3_config.h"
 #include "api/audio/echo_control.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class EchoCanceller3Factory : public EchoControlFactory {
  public:
@@ -33,6 +33,6 @@ class EchoCanceller3Factory : public EchoControlFactory {
  private:
   const EchoCanceller3Config config_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_ECHO_CANCELLER3_FACTORY_H_

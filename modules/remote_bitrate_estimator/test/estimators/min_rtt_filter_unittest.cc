@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 TEST(MinRttFilterTest, InitializationCheck) {
@@ -39,4 +39,4 @@ TEST(MinRttFilterTest, MinRttExpired) {
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

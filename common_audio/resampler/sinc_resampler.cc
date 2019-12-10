@@ -96,7 +96,7 @@
 #include "system_wrappers/include/cpu_features_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -371,4 +371,4 @@ float SincResampler::Convolve_C(const float* input_ptr, const float* k1,
       kernel_interpolation_factor * sum2);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

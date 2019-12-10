@@ -16,7 +16,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper class to compute the inter-arrival time delta and the size delta
 // between two timestamp groups. A timestamp is a 32 bit unsigned number with
@@ -90,6 +90,6 @@ class InterArrival {
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(InterArrival);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_INTER_ARRIVAL_H_

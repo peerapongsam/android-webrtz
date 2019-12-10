@@ -24,7 +24,7 @@
 #include "third_party/libyuv/include/libyuv/convert.h"
 #include "third_party/libyuv/include/libyuv/scale.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const char kVp8GfBoostFieldTrial[] = "WebRTC-VP8-GfBoost";
 
@@ -106,7 +106,7 @@ bool ValidSimulcastTemporalLayers(const VideoCodec& codec, int num_streams) {
 }
 
 bool GetGfBoostPercentageFromFieldTrialGroup(int* boost_percentage) {
-  std::string group = webrtc::field_trial::FindFullName(kVp8GfBoostFieldTrial);
+  std::string group = webrtz::field_trial::FindFullName(kVp8GfBoostFieldTrial);
   if (group.empty())
     return false;
 
@@ -198,7 +198,7 @@ vpx_enc_frame_flags_t LibvpxVp8Encoder::EncodeFlags(
 }
 
 LibvpxVp8Encoder::LibvpxVp8Encoder()
-    : use_gf_boost_(webrtc::field_trial::IsEnabled(kVp8GfBoostFieldTrial)),
+    : use_gf_boost_(webrtz::field_trial::IsEnabled(kVp8GfBoostFieldTrial)),
       encoded_complete_callback_(nullptr),
       inited_(false),
       timestamp_(0),
@@ -977,4 +977,4 @@ int LibvpxVp8Encoder::RegisterEncodeCompleteCallback(
   return WEBRTC_VIDEO_CODEC_OK;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -26,7 +26,7 @@
 #include "modules/rtp_rtcp/source/rtp_receiver_strategy.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 bool InOrderPacket(rtc::Optional<uint16_t> latest_sequence_number,
@@ -408,4 +408,4 @@ void RtpReceiverImpl::RemoveOutdatedSources(int64_t now_ms) {
   ssrc_sources_.erase(ssrc_sources_.begin(), vec_it);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

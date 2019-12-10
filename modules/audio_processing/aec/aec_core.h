@@ -28,7 +28,7 @@ extern "C" {
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #define FRAME_LEN 80
 #define PART_LEN 64               // Length of partition
@@ -329,6 +329,6 @@ int WebRtcAec_system_delay(AecCore* self);
 // care.
 void WebRtcAec_SetSystemDelay(AecCore* self, int delay);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_AEC_CORE_H_

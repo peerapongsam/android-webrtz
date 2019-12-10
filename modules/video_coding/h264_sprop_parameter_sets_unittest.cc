@@ -16,7 +16,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class H264SpropParameterSetsTest : public testing::Test {
  public:
@@ -44,4 +44,4 @@ TEST_F(H264SpropParameterSetsTest, InvalidData) {
   EXPECT_FALSE(h264_sprop.DecodeSprop("iA=="));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

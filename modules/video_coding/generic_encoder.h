@@ -21,7 +21,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/race_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace media_optimization {
 class MediaOptimization;
@@ -158,6 +158,6 @@ class VCMGenericEncoder {
   VideoCodecType codec_type_ RTC_GUARDED_BY(race_checker_);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_GENERIC_ENCODER_H_

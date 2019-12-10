@@ -16,7 +16,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FixedDigitalLevelEstimator::FixedDigitalLevelEstimator(
     size_t sample_rate_hz,
@@ -97,4 +97,4 @@ void FixedDigitalLevelEstimator::SetSampleRate(size_t sample_rate_hz) {
       rtc::CheckedDivExact(samples_in_frame_, kSubFramesInFrame);
   CheckParameterCombination();
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // The function calculates the cross-correlation between two sequences
 // |sequence_1| and |sequence_2|. |sequence_1| is taken as reference, with
@@ -45,6 +45,6 @@ int CrossCorrelationWithAutoShift(const int16_t* sequence_1,
                                   int cross_correlation_step,
                                   int32_t* cross_correlation);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_NETEQ_CROSS_CORRELATION_H_

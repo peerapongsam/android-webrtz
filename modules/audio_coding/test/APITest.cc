@@ -30,7 +30,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #define TEST_DURATION_SEC 600
 #define NUMBER_OF_SENDER_TESTS 6
@@ -208,7 +208,7 @@ int16_t APITest::SetUp() {
   printf("Hit enter to accept the default values indicated in []\n\n");
 
   //--- Input A
-  std::string file_name = webrtc::test::ResourcePath(
+  std::string file_name = webrtz::test::ResourcePath(
       "audio_coding/testfile32kHz", "pcm");
   frequencyHz = 32000;
   printf("Enter input file at side A [%s]: ", file_name.c_str());
@@ -216,19 +216,19 @@ int16_t APITest::SetUp() {
   _inFileA.Open(file_name, frequencyHz, "rb", true);
 
   //--- Output A
-  std::string out_file_a = webrtc::test::OutputPath() + "outA.pcm";
+  std::string out_file_a = webrtz::test::OutputPath() + "outA.pcm";
   printf("Enter output file at side A [%s]: ", out_file_a.c_str());
   PCMFile::ChooseFile(&out_file_a, 499, &frequencyHz);
   _outFileA.Open(out_file_a, frequencyHz, "wb");
 
   //--- Input B
-  file_name = webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+  file_name = webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
   printf("\n\nEnter input file at side B [%s]: ", file_name.c_str());
   PCMFile::ChooseFile(&file_name, 499, &frequencyHz);
   _inFileB.Open(file_name, frequencyHz, "rb", true);
 
   //--- Output B
-  std::string out_file_b = webrtc::test::OutputPath() + "outB.pcm";
+  std::string out_file_b = webrtz::test::OutputPath() + "outB.pcm";
   printf("Enter output file at side B [%s]: ", out_file_b.c_str());
   PCMFile::ChooseFile(&out_file_b, 499, &frequencyHz);
   _outFileB.Open(out_file_b, frequencyHz, "wb");
@@ -1106,4 +1106,4 @@ void APITest::ChangeCodec(char side) {
   Wait(500);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

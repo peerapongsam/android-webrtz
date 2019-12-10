@@ -18,7 +18,7 @@
 #include "api/array_view.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 std::string GetApmRenderTestVectorFileName(int sample_rate_hz) {
@@ -144,4 +144,4 @@ void ReadFloatSamplesFromStereoFile(size_t samples_per_channel,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

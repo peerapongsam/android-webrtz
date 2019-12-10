@@ -22,7 +22,7 @@
 #include "rtc_base/socket.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtpTransportControllerSend
     : public RtpTransportControllerSendInterface {
@@ -52,5 +52,5 @@ class MockRtpTransportControllerSend
   MOCK_METHOD1(SetClientBitratePreferences,
                void(const BitrateConstraintsMask&));
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // CALL_TEST_MOCK_RTP_TRANSPORT_CONTROLLER_SEND_H_

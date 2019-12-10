@@ -10,7 +10,7 @@
 
 #include "modules/audio_coding/audio_network_adaptor/include/audio_network_adaptor_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioEncoderRuntimeConfig::AudioEncoderRuntimeConfig() = default;
 
@@ -31,4 +31,4 @@ bool AudioEncoderRuntimeConfig::operator==(
          num_channels == other.num_channels;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

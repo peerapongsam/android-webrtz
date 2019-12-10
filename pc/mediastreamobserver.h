@@ -15,7 +15,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/sigslot.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper class which will listen for changes to a stream and emit the
 // corresponding signals.
@@ -43,6 +43,6 @@ class MediaStreamObserver : public ObserverInterface {
   VideoTrackVector cached_video_tracks_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_MEDIASTREAMOBSERVER_H_

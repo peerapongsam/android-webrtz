@@ -30,8 +30,8 @@
   return self;
 }
 
-- (webrtc::RtpTransceiverInit)nativeInit {
-  webrtc::RtpTransceiverInit init;
+- (webrtz::RtpTransceiverInit)nativeInit {
+  webrtz::RtpTransceiverInit init;
   init.direction = [RTCRtpTransceiver nativeRtpTransceiverDirectionFromDirection:_direction];
   for (NSString *streamId in _streamIds) {
     init.stream_ids.push_back([streamId UTF8String]);
@@ -45,7 +45,7 @@
 @end
 
 @implementation RTCRtpTransceiver {
-  rtc::scoped_refptr<webrtc::RtpTransceiverInterface> _nativeRtpTransceiver;
+  rtc::scoped_refptr<webrtz::RtpTransceiverInterface> _nativeRtpTransceiver;
 }
 
 - (RTCRtpMediaType)mediaType {
@@ -116,12 +116,12 @@
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::RtpTransceiverInterface>)nativeRtpTransceiver {
+- (rtc::scoped_refptr<webrtz::RtpTransceiverInterface>)nativeRtpTransceiver {
   return _nativeRtpTransceiver;
 }
 
 - (instancetype)initWithNativeRtpTransceiver:
-        (rtc::scoped_refptr<webrtc::RtpTransceiverInterface>)nativeRtpTransceiver {
+        (rtc::scoped_refptr<webrtz::RtpTransceiverInterface>)nativeRtpTransceiver {
   NSParameterAssert(nativeRtpTransceiver);
   if (self = [super init]) {
     _nativeRtpTransceiver = nativeRtpTransceiver;
@@ -132,30 +132,30 @@
   return self;
 }
 
-+ (webrtc::RtpTransceiverDirection)nativeRtpTransceiverDirectionFromDirection:
++ (webrtz::RtpTransceiverDirection)nativeRtpTransceiverDirectionFromDirection:
         (RTCRtpTransceiverDirection)direction {
   switch (direction) {
     case RTCRtpTransceiverDirectionSendRecv:
-      return webrtc::RtpTransceiverDirection::kSendRecv;
+      return webrtz::RtpTransceiverDirection::kSendRecv;
     case RTCRtpTransceiverDirectionSendOnly:
-      return webrtc::RtpTransceiverDirection::kSendOnly;
+      return webrtz::RtpTransceiverDirection::kSendOnly;
     case RTCRtpTransceiverDirectionRecvOnly:
-      return webrtc::RtpTransceiverDirection::kRecvOnly;
+      return webrtz::RtpTransceiverDirection::kRecvOnly;
     case RTCRtpTransceiverDirectionInactive:
-      return webrtc::RtpTransceiverDirection::kInactive;
+      return webrtz::RtpTransceiverDirection::kInactive;
   }
 }
 
 + (RTCRtpTransceiverDirection)rtpTransceiverDirectionFromNativeDirection:
-        (webrtc::RtpTransceiverDirection)nativeDirection {
+        (webrtz::RtpTransceiverDirection)nativeDirection {
   switch (nativeDirection) {
-    case webrtc::RtpTransceiverDirection::kSendRecv:
+    case webrtz::RtpTransceiverDirection::kSendRecv:
       return RTCRtpTransceiverDirectionSendRecv;
-    case webrtc::RtpTransceiverDirection::kSendOnly:
+    case webrtz::RtpTransceiverDirection::kSendOnly:
       return RTCRtpTransceiverDirectionSendOnly;
-    case webrtc::RtpTransceiverDirection::kRecvOnly:
+    case webrtz::RtpTransceiverDirection::kRecvOnly:
       return RTCRtpTransceiverDirectionRecvOnly;
-    case webrtc::RtpTransceiverDirection::kInactive:
+    case webrtz::RtpTransceiverDirection::kInactive:
       return RTCRtpTransceiverDirectionInactive;
   }
 }

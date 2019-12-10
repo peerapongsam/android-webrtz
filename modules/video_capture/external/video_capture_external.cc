@@ -12,7 +12,7 @@
 #include "rtc_base/refcount.h"
 #include "rtc_base/refcountedobject.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace videocapturemodule {
 
@@ -23,4 +23,4 @@ rtc::scoped_refptr<VideoCaptureModule> VideoCaptureImpl::Create(
 
 }  // namespace videocapturemodule
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -26,8 +26,8 @@
 using ::testing::_;
 using ::testing::Invoke;
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 
 namespace {
 const PacedPacketInfo kPacingInfo0(0, 5, 2000);
@@ -39,7 +39,7 @@ const PacedPacketInfo kPacingInfo4(4, 22, 10000);
 
 namespace test {
 
-class MockPacketFeedbackObserver : public webrtc::PacketFeedbackObserver {
+class MockPacketFeedbackObserver : public webrtz::PacketFeedbackObserver {
  public:
   MOCK_METHOD2(OnPacketAdded, void(uint32_t ssrc, uint16_t seq_num));
   MOCK_METHOD1(OnPacketFeedbackVector,
@@ -386,5 +386,5 @@ TEST_F(TransportFeedbackAdapterTest, TimestampDeltas) {
   }
 }
 }  // namespace test
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

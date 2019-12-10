@@ -10,7 +10,7 @@
 
 #include "modules/video_capture/windows/video_capture_mf.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 
 VideoCaptureMF::VideoCaptureMF() {}
@@ -39,4 +39,4 @@ int32_t VideoCaptureMF::CaptureSettings(
 }
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

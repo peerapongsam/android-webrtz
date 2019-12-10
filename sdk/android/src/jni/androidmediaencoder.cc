@@ -52,7 +52,7 @@ using rtc::Bind;
 using rtc::Thread;
 using rtc::ThreadManager;
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Maximum supported HW video encoder fps.
@@ -88,7 +88,7 @@ namespace {
 // MediaCodecVideoEncoder is a VideoEncoder implementation that uses
 // Android's MediaCodec SDK API behind the scenes to implement (hopefully)
 // HW-backed video encode.  This C++ class is implemented as a very thin shim,
-// delegating all of the interesting work to org.webrtc.MediaCodecVideoEncoder.
+// delegating all of the interesting work to org.webrtz.MediaCodecVideoEncoder.
 // MediaCodecVideoEncoder must be operated on a single task queue, currently
 // this is the encoder queue from ViE encoder.
 class MediaCodecVideoEncoder : public VideoEncoder {
@@ -173,7 +173,7 @@ class MediaCodecVideoEncoder : public VideoEncoder {
                         const VideoFrame& frame,
                         int input_buffer_index);
   bool EncodeTexture(JNIEnv* jni, bool key_frame, const VideoFrame& frame);
-  // Encodes a new style org.webrtc.VideoFrame. Might be a I420 or a texture
+  // Encodes a new style org.webrtz.VideoFrame. Might be a I420 or a texture
   // frame.
   bool EncodeJavaFrame(JNIEnv* jni,
                        bool key_frame,
@@ -437,9 +437,9 @@ bool MediaCodecVideoEncoder::EncodeTask::Run() {
 }
 
 bool IsFormatSupported(
-    const std::vector<webrtc::SdpVideoFormat>& supported_formats,
+    const std::vector<webrtz::SdpVideoFormat>& supported_formats,
     const std::string& name) {
-  for (const webrtc::SdpVideoFormat& supported_format : supported_formats) {
+  for (const webrtz::SdpVideoFormat& supported_format : supported_formats) {
     if (cricket::CodecNamesEq(name, supported_format.name))
       return true;
   }
@@ -1406,4 +1406,4 @@ static void JNI_MediaCodecVideoEncoder_FillInputBuffer(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

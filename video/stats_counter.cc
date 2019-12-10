@@ -17,7 +17,7 @@
 #include "rtc_base/checks.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Default periodic time interval for processing samples.
@@ -459,4 +459,4 @@ int RateAccCounter::GetValueForEmptyInterval() const {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

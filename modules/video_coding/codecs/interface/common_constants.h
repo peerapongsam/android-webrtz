@@ -14,13 +14,13 @@
 #ifndef MODULES_VIDEO_CODING_CODECS_INTERFACE_COMMON_CONSTANTS_H_
 #define MODULES_VIDEO_CODING_CODECS_INTERFACE_COMMON_CONSTANTS_H_
 
-namespace webrtc {
+namespace webrtz {
 
 const int16_t kNoPictureId = -1;
 const int16_t kNoTl0PicIdx = -1;
 const uint8_t kNoTemporalIdx = 0xFF;
 const int kNoKeyIdx = -1;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_INTERFACE_COMMON_CONSTANTS_H_

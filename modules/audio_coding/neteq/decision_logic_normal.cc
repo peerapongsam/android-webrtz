@@ -22,7 +22,7 @@
 #include "modules/audio_coding/neteq/sync_buffer.h"
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Operations DecisionLogicNormal::GetDecisionSpecialized(
     const SyncBuffer& sync_buffer,
@@ -238,4 +238,4 @@ bool DecisionLogicNormal::MaxWaitForPacket() const {
   return num_consecutive_expands_ >= kMaxWaitForPacket;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

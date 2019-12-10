@@ -23,7 +23,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 const size_t kNumChannels = 1;
@@ -124,4 +124,4 @@ TEST_F(TimeStretchTest, AccelerateFastMode) {
   EXPECT_EQ(11, return_stats_[TimeStretch::kNoStretch]);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

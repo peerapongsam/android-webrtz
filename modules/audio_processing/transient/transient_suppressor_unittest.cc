@@ -13,7 +13,7 @@
 #include "modules/audio_processing/transient/common.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(TransientSuppressorTest, TypingDetectionLogicWorksAsExpectedForMono) {
   static const int kNumChannels = 1;
@@ -82,4 +82,4 @@ TEST(TransientSuppressorTest, TypingDetectionLogicWorksAsExpectedForMono) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

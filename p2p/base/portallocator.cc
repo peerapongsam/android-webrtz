@@ -116,7 +116,7 @@ bool PortAllocator::SetConfiguration(
     const std::vector<RelayServerConfig>& turn_servers,
     int candidate_pool_size,
     bool prune_turn_ports,
-    webrtc::TurnCustomizer* turn_customizer,
+    webrtz::TurnCustomizer* turn_customizer,
     const rtc::Optional<int>& stun_candidate_keepalive_interval) {
   bool ice_servers_changed =
       (stun_servers != stun_servers_ || turn_servers != turn_servers_);

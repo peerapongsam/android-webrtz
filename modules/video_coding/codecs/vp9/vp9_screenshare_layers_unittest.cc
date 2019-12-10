@@ -18,7 +18,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 typedef VP9EncoderImpl::SuperFrameRefSettings Settings;
 
@@ -321,4 +321,4 @@ TEST_F(ScreenshareLayerTestVP9, TimestampWrap) {
   EqualToExpected();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

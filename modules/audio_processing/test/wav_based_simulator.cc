@@ -16,7 +16,7 @@
 #include "modules/audio_processing/test/test_utils.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 std::vector<WavBasedSimulator::SimulationEventType>
@@ -184,4 +184,4 @@ void WavBasedSimulator::Initialize() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

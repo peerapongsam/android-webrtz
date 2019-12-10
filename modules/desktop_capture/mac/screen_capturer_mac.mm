@@ -19,7 +19,7 @@
 #include "rtc_base/timeutils.h"
 #include "sdk/objc/Framework/Classes/Common/scoped_cftyperef.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // CGDisplayStreamRefs need to be destroyed asynchronously after receiving a
 // kCGDisplayStreamFrameStatusStopped callback from CoreGraphics. This may
@@ -585,4 +585,4 @@ std::unique_ptr<DesktopFrame> ScreenCapturerMac::CreateFrame() {
   return frame;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

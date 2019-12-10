@@ -15,7 +15,7 @@
 #include "common_audio/channel_buffer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioRingBufferTest :
     public ::testing::TestWithParam< ::testing::tuple<int, int, int, int> > {
@@ -109,4 +109,4 @@ TEST_F(AudioRingBufferTest, MoveReadPosition) {
   EXPECT_EQ(2, output.channels()[0][0]);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

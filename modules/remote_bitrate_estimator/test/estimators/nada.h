@@ -25,7 +25,7 @@
 #include "modules/remote_bitrate_estimator/test/bwe.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ReceiveStatistics;
 
@@ -105,6 +105,6 @@ class NadaBweSender : public BweSender {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_ESTIMATORS_NADA_H_

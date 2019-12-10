@@ -14,7 +14,7 @@
 #include "api/stats/rtcstatsreport.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RTCStatsObtainer : public RTCStatsCollectorCallback {
  public:
@@ -48,6 +48,6 @@ class RTCStatsObtainer : public RTCStatsCollectorCallback {
   rtc::scoped_refptr<const RTCStatsReport>* report_ptr_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_RTCSTATSOBTAINER_H_

@@ -20,7 +20,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 class AudioCodingModule;
 class AudioDecoder;
 struct CodecInst;
@@ -93,5 +93,5 @@ class AcmReceiveTestToggleOutputFreqOldApi : public AcmReceiveTestOldApi {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_ACM2_ACM_RECEIVE_TEST_H_

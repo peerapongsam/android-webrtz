@@ -17,11 +17,11 @@
 #include "api/optional.h"
 #include "modules/congestion_controller/goog_cc/bitrate_estimator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct PacketFeedback;
 
-namespace webrtc_cc {
+namespace webrtz_cc {
 
 class AcknowledgedBitrateEstimator {
  public:
@@ -42,7 +42,7 @@ class AcknowledgedBitrateEstimator {
   std::unique_ptr<BitrateEstimator> bitrate_estimator_;
 };
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_GOOG_CC_ACKNOWLEDGED_BITRATE_ESTIMATOR_H_

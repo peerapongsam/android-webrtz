@@ -22,7 +22,7 @@
 #include "rtc_base/format_macros.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 static const size_t kFirstLineLength = 80;
@@ -664,4 +664,4 @@ RtpFileReader* RtpFileReader::Create(FileFormat format,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -30,7 +30,7 @@
 
 using testing::_;
 
-namespace webrtc {
+namespace webrtz {
 
 static const double kSampleRateRatio = 192000.0 / 44100.0;
 static const double kKernelInterpolationFactor = 0.5;
@@ -391,4 +391,4 @@ INSTANTIATE_TEST_CASE_P(
         std::make_tuple(96000, 192000, kResamplingRMSError, -73.52),
         std::make_tuple(192000, 192000, kResamplingRMSError, -73.52)));
 
-}  // namespace webrtc
+}  // namespace webrtz

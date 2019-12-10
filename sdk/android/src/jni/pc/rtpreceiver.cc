@@ -16,7 +16,7 @@
 #include "sdk/android/src/jni/pc/mediastreamtrack.h"
 #include "sdk/android/src/jni/pc/rtpparameters.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -130,4 +130,4 @@ static void JNI_RtpReceiver_UnsetObserver(JNIEnv* jni,
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

@@ -27,7 +27,7 @@
 #include "rtc_base/stringencode.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class StatsReport {
  public:
@@ -446,6 +446,6 @@ class StatsCollection {
   rtc::ThreadChecker thread_checker_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_STATSTYPES_H_

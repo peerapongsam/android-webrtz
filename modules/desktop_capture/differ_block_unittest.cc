@@ -11,7 +11,7 @@
 #include "modules/desktop_capture/differ_block.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Run 900 times to mimic 1280x720.
 // TODO(fbarchard): Remove benchmark once performance is non-issue.
@@ -83,4 +83,4 @@ TEST(BlockDifferenceTestFirst, BlockDifference) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

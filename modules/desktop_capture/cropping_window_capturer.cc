@@ -13,7 +13,7 @@
 #include "modules/desktop_capture/cropped_desktop_frame.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 CroppingWindowCapturer::CroppingWindowCapturer(
     const DesktopCaptureOptions& options)
@@ -121,4 +121,4 @@ std::unique_ptr<DesktopCapturer> CroppingWindowCapturer::CreateCapturer(
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

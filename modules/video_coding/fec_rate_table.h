@@ -14,7 +14,7 @@
 // This is a private header for media_opt_util.cc.
 // It should not be included by other files.
 
-namespace webrtc {
+namespace webrtz {
 
 // Table for Protection factor (code rate) of delta frames, for the XOR FEC.
 // Input is the packet loss and an effective rate (bits/frame).
@@ -456,6 +456,6 @@ static const unsigned char kFecRateTable[kFecRateTableSize] = {
     127, 127, 127, 127, 127, 127, 127, 127, 127, 127, 127, 127, 127, 127, 127,
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_FEC_RATE_TABLE_H_

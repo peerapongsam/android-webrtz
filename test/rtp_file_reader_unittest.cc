@@ -16,7 +16,7 @@
 #include "test/rtp_file_reader.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TestRtpFileReader : public ::testing::Test {
  public:
@@ -84,7 +84,7 @@ class TestPcapFileReader : public ::testing::Test {
     test::RtpPacket packet;
     while (rtp_packet_source_->NextPacket(&packet)) {
       RtpUtility::RtpHeaderParser rtp_header_parser(packet.data, packet.length);
-      webrtc::RTPHeader header;
+      webrtz::RTPHeader header;
       if (!rtp_header_parser.RTCP() &&
           rtp_header_parser.Parse(&header, nullptr)) {
         pps[header.ssrc]++;
@@ -123,4 +123,4 @@ TEST_F(TestPcapFileReader, TestThreeSsrc) {
   EXPECT_EQ(113, pps[0x59fe6ef0]);
   EXPECT_EQ(61, pps[0xed2bd2ac]);
 }
-}  // namespace webrtc
+}  // namespace webrtz

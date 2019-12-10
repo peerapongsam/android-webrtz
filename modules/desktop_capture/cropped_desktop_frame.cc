@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A DesktopFrame that is a sub-rect of another DesktopFrame.
 class CroppedDesktopFrame : public DesktopFrame {
@@ -59,4 +59,4 @@ CroppedDesktopFrame::CroppedDesktopFrame(std::unique_ptr<DesktopFrame> frame,
   mutable_updated_region()->Translate(-rect.left(), -rect.top());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

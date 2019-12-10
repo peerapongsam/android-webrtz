@@ -20,7 +20,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/thread.h"
 
-using webrtc::SdpType;
+using webrtz::SdpType;
 
 namespace {
 
@@ -39,10 +39,10 @@ struct CandidatesData : public rtc::MessageData {
   cricket::Candidates candidates;
 };
 
-webrtc::RTCError VerifyCandidate(const cricket::Candidate& cand) {
+webrtz::RTCError VerifyCandidate(const cricket::Candidate& cand) {
   // No address zero.
   if (cand.address().IsNil() || cand.address().IsAnyIP()) {
-    return webrtc::RTCError(webrtc::RTCErrorType::INVALID_PARAMETER,
+    return webrtz::RTCError(webrtz::RTCErrorType::INVALID_PARAMETER,
                             "candidate has address of zero");
   }
 
@@ -53,38 +53,38 @@ webrtc::RTCError VerifyCandidate(const cricket::Candidate& cand) {
     // Expected for active-only candidates per
     // http://tools.ietf.org/html/rfc6544#section-4.5 so no error.
     // Libjingle clients emit port 0, in "active" mode.
-    return webrtc::RTCError::OK();
+    return webrtz::RTCError::OK();
   }
   if (port < 1024) {
     if ((port != 80) && (port != 443)) {
-      return webrtc::RTCError(
-          webrtc::RTCErrorType::INVALID_PARAMETER,
+      return webrtz::RTCError(
+          webrtz::RTCErrorType::INVALID_PARAMETER,
           "candidate has port below 1024, but not 80 or 443");
     }
 
     if (cand.address().IsPrivateIP()) {
-      return webrtc::RTCError(
-          webrtc::RTCErrorType::INVALID_PARAMETER,
+      return webrtz::RTCError(
+          webrtz::RTCErrorType::INVALID_PARAMETER,
           "candidate has port of 80 or 443 with private IP address");
     }
   }
 
-  return webrtc::RTCError::OK();
+  return webrtz::RTCError::OK();
 }
 
-webrtc::RTCError VerifyCandidates(const cricket::Candidates& candidates) {
+webrtz::RTCError VerifyCandidates(const cricket::Candidates& candidates) {
   for (const cricket::Candidate& candidate : candidates) {
-    webrtc::RTCError error = VerifyCandidate(candidate);
+    webrtz::RTCError error = VerifyCandidate(candidate);
     if (!error.ok()) {
       return error;
     }
   }
-  return webrtc::RTCError::OK();
+  return webrtz::RTCError::OK();
 }
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 JsepTransportController::JsepTransportController(
     rtc::Thread* signaling_thread,
@@ -363,7 +363,7 @@ bool JsepTransportController::GetStats(const std::string& transport_name,
 }
 
 void JsepTransportController::SetMetricsObserver(
-    webrtc::MetricsObserverInterface* metrics_observer) {
+    webrtz::MetricsObserverInterface* metrics_observer) {
   if (!network_thread_->IsCurrent()) {
     network_thread_->Invoke<void>(
         RTC_FROM_HERE, [=] { SetMetricsObserver(metrics_observer); });
@@ -427,7 +427,7 @@ JsepTransportController::CreateDtlsTransport(const std::string& transport_name,
   return dtls;
 }
 
-std::unique_ptr<webrtc::RtpTransport>
+std::unique_ptr<webrtz::RtpTransport>
 JsepTransportController::CreateUnencryptedRtpTransport(
     const std::string& transport_name,
     rtc::PacketTransportInternal* rtp_packet_transport,
@@ -442,14 +442,14 @@ JsepTransportController::CreateUnencryptedRtpTransport(
   return unencrypted_rtp_transport;
 }
 
-std::unique_ptr<webrtc::SrtpTransport>
+std::unique_ptr<webrtz::SrtpTransport>
 JsepTransportController::CreateSdesTransport(
     const std::string& transport_name,
     cricket::DtlsTransportInternal* rtp_dtls_transport,
     cricket::DtlsTransportInternal* rtcp_dtls_transport) {
   RTC_DCHECK(network_thread_->IsCurrent());
   auto srtp_transport =
-      rtc::MakeUnique<webrtc::SrtpTransport>(rtcp_dtls_transport == nullptr);
+      rtc::MakeUnique<webrtz::SrtpTransport>(rtcp_dtls_transport == nullptr);
   RTC_DCHECK(rtp_dtls_transport);
   srtp_transport->SetRtpPacketTransport(rtp_dtls_transport);
   if (rtcp_dtls_transport) {
@@ -461,20 +461,20 @@ JsepTransportController::CreateSdesTransport(
   return srtp_transport;
 }
 
-std::unique_ptr<webrtc::DtlsSrtpTransport>
+std::unique_ptr<webrtz::DtlsSrtpTransport>
 JsepTransportController::CreateDtlsSrtpTransport(
     const std::string& transport_name,
     cricket::DtlsTransportInternal* rtp_dtls_transport,
     cricket::DtlsTransportInternal* rtcp_dtls_transport) {
   RTC_DCHECK(network_thread_->IsCurrent());
   auto srtp_transport =
-      rtc::MakeUnique<webrtc::SrtpTransport>(rtcp_dtls_transport == nullptr);
+      rtc::MakeUnique<webrtz::SrtpTransport>(rtcp_dtls_transport == nullptr);
   if (config_.enable_external_auth) {
     srtp_transport->EnableExternalAuth();
   }
 
   auto dtls_srtp_transport =
-      rtc::MakeUnique<webrtc::DtlsSrtpTransport>(std::move(srtp_transport));
+      rtc::MakeUnique<webrtz::DtlsSrtpTransport>(std::move(srtp_transport));
 
   dtls_srtp_transport->SetDtlsTransports(rtp_dtls_transport,
                                          rtcp_dtls_transport);
@@ -887,10 +887,10 @@ int JsepTransportController::GetRtpAbsSendTimeHeaderExtensionId(
       static_cast<const cricket::MediaContentDescription*>(
           content_info.description);
 
-  const webrtc::RtpExtension* send_time_extension =
-      webrtc::RtpExtension::FindHeaderExtensionByUri(
+  const webrtz::RtpExtension* send_time_extension =
+      webrtz::RtpExtension::FindHeaderExtensionByUri(
           content_desc->rtp_header_extensions(),
-          webrtc::RtpExtension::kAbsSendTimeUri);
+          webrtz::RtpExtension::kAbsSendTimeUri);
   return send_time_extension ? send_time_extension->id : -1;
 }
 
@@ -1217,4 +1217,4 @@ void JsepTransportController::OnDtlsHandshakeError(
   SignalDtlsHandshakeError(error);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

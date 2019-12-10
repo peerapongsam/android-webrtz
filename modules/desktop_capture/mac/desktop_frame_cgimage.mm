@@ -13,7 +13,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 std::unique_ptr<DesktopFrameCGImage> DesktopFrameCGImage::CreateForDisplay(
@@ -64,4 +64,4 @@ DesktopFrameCGImage::DesktopFrameCGImage(DesktopSize size,
 
 DesktopFrameCGImage::~DesktopFrameCGImage() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

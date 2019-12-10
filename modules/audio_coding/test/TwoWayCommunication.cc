@@ -29,7 +29,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #define MAX_FILE_NAME_LENGTH_BYTE 500
 
@@ -118,7 +118,7 @@ void TwoWayCommunication::SetUp() {
   uint16_t frequencyHz;
 
   //--- Input A
-  std::string in_file_name = webrtc::test::ResourcePath(
+  std::string in_file_name = webrtz::test::ResourcePath(
       "audio_coding/testfile32kHz", "pcm");
   frequencyHz = 32000;
   printf("Enter input file at side A [%s]: ", in_file_name.c_str());
@@ -126,15 +126,15 @@ void TwoWayCommunication::SetUp() {
   _inFileA.Open(in_file_name, frequencyHz, "rb");
 
   //--- Output A
-  std::string out_file_a = webrtc::test::OutputPath() + "outA.pcm";
+  std::string out_file_a = webrtz::test::OutputPath() + "outA.pcm";
   printf("Output file at side A: %s\n", out_file_a.c_str());
   printf("Sampling frequency (in Hz) of the above file: %u\n", frequencyHz);
   _outFileA.Open(out_file_a, frequencyHz, "wb");
-  std::string ref_file_name = webrtc::test::OutputPath() + "ref_outA.pcm";
+  std::string ref_file_name = webrtz::test::OutputPath() + "ref_outA.pcm";
   _outFileRefA.Open(ref_file_name, frequencyHz, "wb");
 
   //--- Input B
-  in_file_name = webrtc::test::ResourcePath("audio_coding/testfile32kHz",
+  in_file_name = webrtz::test::ResourcePath("audio_coding/testfile32kHz",
                                             "pcm");
   frequencyHz = 32000;
   printf("\n\nEnter input file at side B [%s]: ", in_file_name.c_str());
@@ -142,11 +142,11 @@ void TwoWayCommunication::SetUp() {
   _inFileB.Open(in_file_name, frequencyHz, "rb");
 
   //--- Output B
-  std::string out_file_b = webrtc::test::OutputPath() + "outB.pcm";
+  std::string out_file_b = webrtz::test::OutputPath() + "outB.pcm";
   printf("Output file at side B: %s\n", out_file_b.c_str());
   printf("Sampling frequency (in Hz) of the above file: %u\n", frequencyHz);
   _outFileB.Open(out_file_b, frequencyHz, "wb");
-  ref_file_name = webrtc::test::OutputPath() + "ref_outB.pcm";
+  ref_file_name = webrtz::test::OutputPath() + "ref_outB.pcm";
   _outFileRefB.Open(ref_file_name, frequencyHz, "wb");
 
   //--- Set A-to-B channel
@@ -200,25 +200,25 @@ void TwoWayCommunication::SetUpAutotest() {
   uint16_t frequencyHz;
 
   //--- Input A and B
-  std::string in_file_name = webrtc::test::ResourcePath(
+  std::string in_file_name = webrtz::test::ResourcePath(
       "audio_coding/testfile32kHz", "pcm");
   frequencyHz = 16000;
   _inFileA.Open(in_file_name, frequencyHz, "rb");
   _inFileB.Open(in_file_name, frequencyHz, "rb");
 
   //--- Output A
-  std::string output_file_a = webrtc::test::OutputPath() + "outAutotestA.pcm";
+  std::string output_file_a = webrtz::test::OutputPath() + "outAutotestA.pcm";
   frequencyHz = 16000;
   _outFileA.Open(output_file_a, frequencyHz, "wb");
-  std::string output_ref_file_a = webrtc::test::OutputPath()
+  std::string output_ref_file_a = webrtz::test::OutputPath()
       + "ref_outAutotestA.pcm";
   _outFileRefA.Open(output_ref_file_a, frequencyHz, "wb");
 
   //--- Output B
-  std::string output_file_b = webrtc::test::OutputPath() + "outAutotestB.pcm";
+  std::string output_file_b = webrtz::test::OutputPath() + "outAutotestB.pcm";
   frequencyHz = 16000;
   _outFileB.Open(output_file_b, frequencyHz, "wb");
-  std::string output_ref_file_b = webrtc::test::OutputPath()
+  std::string output_ref_file_b = webrtz::test::OutputPath()
       + "ref_outAutotestB.pcm";
   _outFileRefB.Open(output_ref_file_b, frequencyHz, "wb");
 
@@ -307,4 +307,4 @@ void TwoWayCommunication::Perform() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

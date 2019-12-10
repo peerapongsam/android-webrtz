@@ -18,7 +18,7 @@
 #include "modules/audio_coding/neteq/sync_buffer.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void ComfortNoise::Reset() {
   first_call_ = true;
@@ -121,4 +121,4 @@ int ComfortNoise::Generate(size_t requested_length,
   return kOK;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

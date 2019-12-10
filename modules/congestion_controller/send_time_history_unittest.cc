@@ -18,7 +18,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 static const int kDefaultHistoryLengthMs = 1000;
@@ -43,7 +43,7 @@ class LegacySendTimeHistoryTest : public ::testing::Test {
     history_.OnSentPacket(sequence_number, send_time_ms);
   }
 
-  webrtc::SimulatedClock clock_;
+  webrtz::SimulatedClock clock_;
   SendTimeHistory history_;
 };
 
@@ -234,4 +234,4 @@ TEST_F(LegacySendTimeHistoryTest, InterlievedGetAndRemove) {
   EXPECT_EQ(packets[2], packet3);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

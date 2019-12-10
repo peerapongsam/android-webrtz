@@ -25,7 +25,7 @@ extern "C" {
 #include "modules/audio_processing/aec/aec_core_optimized_methods.h"
 #include "modules/audio_processing/utility/ooura_fft.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum { kShiftExponentIntoTopMantissa = 8 };
 enum { kFloatExponentShift = 23 };
@@ -734,4 +734,4 @@ void WebRtcAec_InitAec_neon(void) {
   WebRtcAec_PartitionDelay = PartitionDelayNEON;
   WebRtcAec_WindowData = WindowDataNEON;
 }
-}  // namespace webrtc
+}  // namespace webrtz

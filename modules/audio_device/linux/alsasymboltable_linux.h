@@ -30,7 +30,7 @@
 
 #include "modules/audio_device/linux/latebindingsymboltable_linux.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace adm_linux_alsa {
 
 // The ALSA symbols we need, as an X-Macro list.
@@ -144,6 +144,6 @@ ALSA_SYMBOLS_LIST
 LATE_BINDING_SYMBOL_TABLE_DECLARE_END(AlsaSymbolTable)
 
 }  // namespace adm_linux_alsa
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_DEVICE_ALSASYMBOLTABLE_LINUX_H_

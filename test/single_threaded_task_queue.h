@@ -19,7 +19,7 @@
 #include "rtc_base/platform_thread.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // This class gives capabilities similar to rtc::TaskQueue, but ensures
@@ -92,6 +92,6 @@ class SingleThreadedTaskQueueForTesting {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_SINGLE_THREADED_TASK_QUEUE_H_

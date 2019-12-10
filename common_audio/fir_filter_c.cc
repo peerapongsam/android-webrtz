@@ -18,7 +18,7 @@
 #include "common_audio/fir_filter_sse.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FIRFilterC::~FIRFilterC() {
 }
@@ -62,4 +62,4 @@ void FIRFilterC::Filter(const float* in, size_t length, float* out) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

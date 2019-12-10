@@ -14,7 +14,7 @@ namespace {
 constexpr size_t kDtmfOutbandMax = 20;
 }
 
-namespace webrtc {
+namespace webrtz {
 DtmfQueue::DtmfQueue() {}
 
 DtmfQueue::~DtmfQueue() {}
@@ -44,4 +44,4 @@ bool DtmfQueue::PendingDtmf() const {
   rtc::CritScope lock(&dtmf_critsect_);
   return !queue_.empty();
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,7 +17,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // NOTE: This struct is still under development and may change without notice.
 struct AudioEncoderOpusConfig {
@@ -68,6 +68,6 @@ struct AudioEncoderOpusConfig {
   int payload_type;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_OPUS_AUDIO_ENCODER_OPUS_CONFIG_H_

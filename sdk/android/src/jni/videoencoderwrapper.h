@@ -23,7 +23,7 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/videoframe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Wraps a Java encoder and delegates all calls to it.
@@ -117,6 +117,6 @@ class VideoEncoderWrapper : public VideoEncoder {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_VIDEOENCODERWRAPPER_H_

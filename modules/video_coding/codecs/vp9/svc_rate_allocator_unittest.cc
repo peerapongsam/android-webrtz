@@ -14,7 +14,7 @@
 #include "modules/video_coding/codecs/vp9/svc_rate_allocator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 static VideoCodec Configure(size_t width,
                             size_t height,
@@ -142,4 +142,4 @@ TEST(SvcRateAllocatorTest, BitrateIsCapped) {
             layers[2].maxBitrate);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

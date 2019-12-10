@@ -22,7 +22,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace vcm {
 
 VideoReceiver::VideoReceiver(Clock* clock,
@@ -326,7 +326,7 @@ int32_t VideoReceiver::Decode(uint16_t maxWaitTimeMs) {
 // Used for the new jitter buffer.
 // TODO(philipel): Clean up among the Decode functions as we replace
 //                 VCMEncodedFrame with FrameObject.
-int32_t VideoReceiver::Decode(const webrtc::VCMEncodedFrame* frame) {
+int32_t VideoReceiver::Decode(const webrtz::VCMEncodedFrame* frame) {
   RTC_DCHECK_RUN_ON(&decoder_thread_checker_);
   if (pre_decode_image_callback_) {
     EncodedImage encoded_image(frame->EncodedImage());
@@ -505,4 +505,4 @@ bool VideoReceiver::IsDecoderThreadRunning() {
 }
 
 }  // namespace vcm
-}  // namespace webrtc
+}  // namespace webrtz

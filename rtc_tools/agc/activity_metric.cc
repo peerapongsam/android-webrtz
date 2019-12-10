@@ -49,7 +49,7 @@ DEFINE_float(activity_threshold, kDefaultActivityThreshold,
               "Activity threshold");
 DEFINE_bool(help, false, "prints this message");
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(turajs) A new CL will be committed soon where ExtractFeatures will
 // notify the caller of "silence" input, instead of bailing out. We would not
@@ -167,7 +167,7 @@ class AgcStat {
 
 
 void void_main(int argc, char* argv[]) {
-  webrtc::AgcStat agc_stat;
+  webrtz::AgcStat agc_stat;
 
   FILE* pcm_fid = fopen(argv[1], "rb");
   ASSERT_TRUE(pcm_fid != NULL) << "Cannot open PCM file " << argv[1];
@@ -226,7 +226,7 @@ void void_main(int argc, char* argv[]) {
     agc_stat.set_audio_content_file(audio_content_fid);
   }
 
-  webrtc::AudioFrame frame;
+  webrtz::AudioFrame frame;
   frame.num_channels_ = 1;
   frame.sample_rate_hz_ = 16000;
   frame.samples_per_channel_ = frame.sample_rate_hz_ / 100;
@@ -368,7 +368,7 @@ void void_main(int argc, char* argv[]) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
   if (argc == 1) {
@@ -390,6 +390,6 @@ int main(int argc, char* argv[]) {
     rtc::FlagList::Print(nullptr, false);
     return 0;
   }
-  webrtc::void_main(argc, argv);
+  webrtz::void_main(argc, argv);
   return 0;
 }

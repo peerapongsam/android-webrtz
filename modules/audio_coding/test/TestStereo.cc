@@ -23,7 +23,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for simulating packet handling
 TestPackStereo::TestPackStereo()
@@ -152,9 +152,9 @@ void TestStereo::Perform() {
   ACMVADMode vad_mode;
 
   // Open both mono and stereo test files in 32 kHz.
-  const std::string file_name_stereo = webrtc::test::ResourcePath(
+  const std::string file_name_stereo = webrtz::test::ResourcePath(
       "audio_coding/teststereo32kHz", "pcm");
-  const std::string file_name_mono = webrtc::test::ResourcePath(
+  const std::string file_name_mono = webrtz::test::ResourcePath(
       "audio_coding/testfile32kHz", "pcm");
   frequency_hz = 32000;
   in_file_stereo_ = new PCMFile();
@@ -830,7 +830,7 @@ void TestStereo::Run(TestPackStereo* channel, int in_channels, int out_channels,
 void TestStereo::OpenOutFile(int16_t test_number) {
   std::string file_name;
   std::stringstream file_stream;
-  file_stream << webrtc::test::OutputPath() << "teststereo_out_" << test_number
+  file_stream << webrtz::test::OutputPath() << "teststereo_out_" << test_number
       << ".pcm";
   file_name = file_stream.str();
   out_file_.Open(file_name, 32000, "wb");
@@ -849,4 +849,4 @@ void TestStereo::DisplaySendReceiveCodec() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "modules/audio_coding/neteq/tools/packet.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 ConstantPcmPacketSource::ConstantPcmPacketSource(size_t payload_len_samples,
@@ -67,4 +67,4 @@ void ConstantPcmPacketSource::WriteHeader(uint8_t* packet_memory) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -15,7 +15,7 @@
 #include "api/audio/echo_canceller3_config.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for applying a smoothly increasing limit for the suppression gain
 // during call startup and after in-call resets.
@@ -44,6 +44,6 @@ class SuppressionGainUpperLimiter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SuppressionGainUpperLimiter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_SUPPRESSION_GAIN_LIMITER_H_

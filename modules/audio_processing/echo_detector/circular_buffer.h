@@ -15,7 +15,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Ring buffer containing floating point values.
 struct CircularBuffer {
@@ -37,6 +37,6 @@ struct CircularBuffer {
   size_t nr_elements_in_buffer_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_ECHO_DETECTOR_CIRCULAR_BUFFER_H_

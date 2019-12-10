@@ -19,7 +19,7 @@
 #include "rtc_base/synchronization/rw_lock_wrapper.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPStream {
  public:
@@ -121,6 +121,6 @@ class RTPFile : public RTPStream {
   bool _rtpEOF;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_RTPFILE_H_

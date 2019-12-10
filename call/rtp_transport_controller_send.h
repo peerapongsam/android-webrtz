@@ -24,7 +24,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/networkroute.h"
 
-namespace webrtc {
+namespace webrtz {
 class Clock;
 class RtcEventLog;
 
@@ -105,6 +105,6 @@ class RtpTransportControllerSend final
   RTC_DISALLOW_COPY_AND_ASSIGN(RtpTransportControllerSend);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_TRANSPORT_CONTROLLER_SEND_H_

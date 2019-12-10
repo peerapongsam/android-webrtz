@@ -15,12 +15,12 @@
 #import "NSString+StdString.h"
 
 NSString * const kRTCMediaStreamTrackKindAudio =
-    @(webrtc::MediaStreamTrackInterface::kAudioKind);
+    @(webrtz::MediaStreamTrackInterface::kAudioKind);
 NSString * const kRTCMediaStreamTrackKindVideo =
-    @(webrtc::MediaStreamTrackInterface::kVideoKind);
+    @(webrtz::MediaStreamTrackInterface::kVideoKind);
 
 @implementation RTCMediaStreamTrack {
-  rtc::scoped_refptr<webrtc::MediaStreamTrackInterface> _nativeTrack;
+  rtc::scoped_refptr<webrtz::MediaStreamTrackInterface> _nativeTrack;
   RTCMediaStreamTrackType _type;
 }
 
@@ -69,12 +69,12 @@ NSString * const kRTCMediaStreamTrackKindVideo =
 
 #pragma mark - Private
 
-- (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeTrack {
+- (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeTrack {
   return _nativeTrack;
 }
 
 - (instancetype)initWithNativeTrack:
-    (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeTrack
+    (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeTrack
                                type:(RTCMediaStreamTrackType)type {
   NSParameterAssert(nativeTrack);
   if (self = [super init]) {
@@ -85,15 +85,15 @@ NSString * const kRTCMediaStreamTrackKindVideo =
 }
 
 - (instancetype)initWithNativeTrack:
-    (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeTrack {
+    (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeTrack {
   NSParameterAssert(nativeTrack);
   if (nativeTrack->kind() ==
-      std::string(webrtc::MediaStreamTrackInterface::kAudioKind)) {
+      std::string(webrtz::MediaStreamTrackInterface::kAudioKind)) {
     return [self initWithNativeTrack:nativeTrack
                                 type:RTCMediaStreamTrackTypeAudio];
   }
   if (nativeTrack->kind() ==
-      std::string(webrtc::MediaStreamTrackInterface::kVideoKind)) {
+      std::string(webrtz::MediaStreamTrackInterface::kVideoKind)) {
     return [self initWithNativeTrack:nativeTrack
                                 type:RTCMediaStreamTrackTypeVideo];
   }
@@ -107,22 +107,22 @@ NSString * const kRTCMediaStreamTrackKindVideo =
   return _nativeTrack == track.nativeTrack;
 }
 
-+ (webrtc::MediaStreamTrackInterface::TrackState)nativeTrackStateForState:
++ (webrtz::MediaStreamTrackInterface::TrackState)nativeTrackStateForState:
     (RTCMediaStreamTrackState)state {
   switch (state) {
     case RTCMediaStreamTrackStateLive:
-      return webrtc::MediaStreamTrackInterface::kLive;
+      return webrtz::MediaStreamTrackInterface::kLive;
     case RTCMediaStreamTrackStateEnded:
-      return webrtc::MediaStreamTrackInterface::kEnded;
+      return webrtz::MediaStreamTrackInterface::kEnded;
   }
 }
 
 + (RTCMediaStreamTrackState)trackStateForNativeState:
-    (webrtc::MediaStreamTrackInterface::TrackState)nativeState {
+    (webrtz::MediaStreamTrackInterface::TrackState)nativeState {
   switch (nativeState) {
-    case webrtc::MediaStreamTrackInterface::kLive:
+    case webrtz::MediaStreamTrackInterface::kLive:
       return RTCMediaStreamTrackStateLive;
-    case webrtc::MediaStreamTrackInterface::kEnded:
+    case webrtz::MediaStreamTrackInterface::kEnded:
       return RTCMediaStreamTrackStateEnded;
   }
 }
@@ -137,12 +137,12 @@ NSString * const kRTCMediaStreamTrackKindVideo =
 }
 
 + (RTCMediaStreamTrack *)mediaTrackForNativeTrack:
-        (rtc::scoped_refptr<webrtc::MediaStreamTrackInterface>)nativeTrack {
+        (rtc::scoped_refptr<webrtz::MediaStreamTrackInterface>)nativeTrack {
   NSParameterAssert(nativeTrack);
-  if (nativeTrack->kind() == webrtc::MediaStreamTrackInterface::kAudioKind) {
+  if (nativeTrack->kind() == webrtz::MediaStreamTrackInterface::kAudioKind) {
     return
         [[RTCAudioTrack alloc] initWithNativeTrack:nativeTrack type:RTCMediaStreamTrackTypeAudio];
-  } else if (nativeTrack->kind() == webrtc::MediaStreamTrackInterface::kVideoKind) {
+  } else if (nativeTrack->kind() == webrtz::MediaStreamTrackInterface::kVideoKind) {
     return
         [[RTCVideoTrack alloc] initWithNativeTrack:nativeTrack type:RTCMediaStreamTrackTypeVideo];
   } else {

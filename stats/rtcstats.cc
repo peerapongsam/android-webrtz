@@ -15,7 +15,7 @@
 
 #include "rtc_base/stringencode.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -233,4 +233,4 @@ WEBRTC_DEFINE_RTCSTATSMEMBER(std::vector<std::string>,
                              VectorOfStringsToString(value_),
                              VectorOfStringsToString(value_));
 
-}  // namespace webrtc
+}  // namespace webrtz

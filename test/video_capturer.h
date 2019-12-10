@@ -25,7 +25,7 @@ namespace cricket {
 class VideoAdapter;
 }  // namespace cricket
 
-namespace webrtc {
+namespace webrtz {
 class Clock;
 namespace test {
 
@@ -48,6 +48,6 @@ class VideoCapturer : public rtc::VideoSourceInterface<VideoFrame> {
   const std::unique_ptr<cricket::VideoAdapter> video_adapter_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_VIDEO_CAPTURER_H_

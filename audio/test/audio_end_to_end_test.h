@@ -16,7 +16,7 @@
 
 #include "test/call_test.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class AudioEndToEndTest : public test::EndToEndTest {
@@ -63,6 +63,6 @@ class AudioEndToEndTest : public test::EndToEndTest {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_TEST_AUDIO_END_TO_END_TEST_H_

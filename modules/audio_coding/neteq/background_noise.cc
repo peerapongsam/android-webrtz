@@ -20,7 +20,7 @@
 #include "modules/audio_coding/neteq/cross_correlation.h"
 #include "modules/audio_coding/neteq/post_decode_vad.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 const size_t BackgroundNoise::kMaxLpcOrder;
@@ -252,4 +252,4 @@ void BackgroundNoise::SaveParameters(size_t channel,
   initialized_ = true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

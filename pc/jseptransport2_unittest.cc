@@ -19,7 +19,7 @@
 #include "rtc_base/gunit.h"
 
 namespace cricket {
-using webrtc::SdpType;
+using webrtz::SdpType;
 
 static const char kIceUfrag1[] = "U001";
 static const char kIcePwd1[] = "TESTICEPWD00000000000001";
@@ -41,12 +41,12 @@ struct NegotiateRoleParams {
 
 class JsepTransport2Test : public testing::Test, public sigslot::has_slots<> {
  protected:
-  std::unique_ptr<webrtc::SrtpTransport> CreateSdesTransport(
+  std::unique_ptr<webrtz::SrtpTransport> CreateSdesTransport(
       rtc::PacketTransportInternal* rtp_packet_transport,
       rtc::PacketTransportInternal* rtcp_packet_transport) {
     bool rtcp_mux_enabled = (rtcp_packet_transport == nullptr);
     auto srtp_transport =
-        rtc::MakeUnique<webrtc::SrtpTransport>(rtcp_mux_enabled);
+        rtc::MakeUnique<webrtz::SrtpTransport>(rtcp_mux_enabled);
 
     srtp_transport->SetRtpPacketTransport(rtp_packet_transport);
     if (rtcp_packet_transport) {
@@ -55,14 +55,14 @@ class JsepTransport2Test : public testing::Test, public sigslot::has_slots<> {
     return srtp_transport;
   }
 
-  std::unique_ptr<webrtc::DtlsSrtpTransport> CreateDtlsSrtpTransport(
+  std::unique_ptr<webrtz::DtlsSrtpTransport> CreateDtlsSrtpTransport(
       cricket::DtlsTransportInternal* rtp_dtls_transport,
       cricket::DtlsTransportInternal* rtcp_dtls_transport) {
     bool rtcp_mux_enabled = (rtcp_dtls_transport == nullptr);
     auto srtp_transport =
-        rtc::MakeUnique<webrtc::SrtpTransport>(rtcp_mux_enabled);
+        rtc::MakeUnique<webrtz::SrtpTransport>(rtcp_mux_enabled);
     auto dtls_srtp_transport =
-        rtc::MakeUnique<webrtc::DtlsSrtpTransport>(std::move(srtp_transport));
+        rtc::MakeUnique<webrtz::DtlsSrtpTransport>(std::move(srtp_transport));
 
     dtls_srtp_transport->SetDtlsTransports(rtp_dtls_transport,
                                            rtcp_dtls_transport);
@@ -85,9 +85,9 @@ class JsepTransport2Test : public testing::Test, public sigslot::has_slots<> {
       rtcp_dtls_transport = rtc::MakeUnique<FakeDtlsTransport>(std::move(ice));
     }
 
-    std::unique_ptr<webrtc::RtpTransport> unencrypted_rtp_transport;
-    std::unique_ptr<webrtc::SrtpTransport> sdes_transport;
-    std::unique_ptr<webrtc::DtlsSrtpTransport> dtls_srtp_transport;
+    std::unique_ptr<webrtz::RtpTransport> unencrypted_rtp_transport;
+    std::unique_ptr<webrtz::SrtpTransport> sdes_transport;
+    std::unique_ptr<webrtz::DtlsSrtpTransport> dtls_srtp_transport;
     switch (srtp_mode) {
       case SrtpMode::kSdes:
         sdes_transport = CreateSdesTransport(rtp_dtls_transport.get(),
@@ -148,7 +148,7 @@ class JsepTransport2Test : public testing::Test, public sigslot::has_slots<> {
   bool signal_rtcp_mux_active_received_ = false;
   // The SrtpTransport is owned by |jsep_transport_|. Keep a raw pointer here
   // for testing.
-  webrtc::SrtpTransport* sdes_transport_ = nullptr;
+  webrtz::SrtpTransport* sdes_transport_ = nullptr;
 };
 
 // The parameterized tests cover both cases when RTCP mux is enable and

@@ -20,7 +20,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declaration.
 class DelayPeakDetector;
@@ -177,5 +177,5 @@ class DelayManager {
   RTC_DISALLOW_COPY_AND_ASSIGN(DelayManager);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_DELAY_MANAGER_H_

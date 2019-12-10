@@ -17,11 +17,11 @@
 
 #include "api/video_codecs/video_encoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<VideoEncoderFactory> ObjCToNativeVideoEncoderFactory(
     id<RTCVideoEncoderFactory> objc_video_encoder_factory);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_API_VIDEO_ENCODER_FACTORY_H_

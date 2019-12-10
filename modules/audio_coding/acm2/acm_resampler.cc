@@ -16,7 +16,7 @@
 #include "common_audio/resampler/include/resampler.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace acm2 {
 
 ACMResampler::ACMResampler() {
@@ -62,4 +62,4 @@ int ACMResampler::Resample10Msec(const int16_t* in_audio,
 }
 
 }  // namespace acm2
-}  // namespace webrtc
+}  // namespace webrtz

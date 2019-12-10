@@ -16,7 +16,7 @@
 
 #include "modules/rtp_rtcp/source/rtcp_packet/rtpfb.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 class CommonHeader;
 
@@ -150,5 +150,5 @@ class TransportFeedback : public Rtpfb {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_TRANSPORT_FEEDBACK_H_

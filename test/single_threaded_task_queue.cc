@@ -17,7 +17,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 SingleThreadedTaskQueueForTesting::QueuedTask::QueuedTask(
@@ -141,4 +141,4 @@ void SingleThreadedTaskQueueForTesting::RunLoop() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

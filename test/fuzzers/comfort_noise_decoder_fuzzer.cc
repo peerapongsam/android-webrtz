@@ -15,7 +15,7 @@
 #include "rtc_base/buffer.h"
 #include "test/fuzzers/fuzz_data_helper.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -56,4 +56,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   test::FuzzOneInputTest(rtc::ArrayView<const uint8_t>(data, size));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

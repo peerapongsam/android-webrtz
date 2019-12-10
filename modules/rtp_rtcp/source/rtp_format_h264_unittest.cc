@@ -21,7 +21,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::ElementsAreArray;
@@ -938,4 +938,4 @@ TEST_F(RtpDepacketizerH264Test, TestSeiPacket) {
   EXPECT_EQ(-1, h264.nalus[0].pps_id);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

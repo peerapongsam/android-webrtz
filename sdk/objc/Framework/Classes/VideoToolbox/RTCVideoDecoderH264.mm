@@ -125,7 +125,7 @@ void decompressionOutputCallback(void *decoderRef,
   }
 #endif
   rtc::ScopedCFTypeRef<CMVideoFormatDescriptionRef> inputFormat =
-      rtc::ScopedCF(webrtc::CreateVideoFormatDescription((uint8_t *)inputImage.buffer.bytes,
+      rtc::ScopedCF(webrtz::CreateVideoFormatDescription((uint8_t *)inputImage.buffer.bytes,
                                                          inputImage.buffer.length));
   if (inputFormat) {
     // Check if the video format has changed, and reinitialize decoder if
@@ -148,7 +148,7 @@ void decompressionOutputCallback(void *decoderRef,
     return WEBRTC_VIDEO_CODEC_ERROR;
   }
   CMSampleBufferRef sampleBuffer = nullptr;
-  if (!webrtc::H264AnnexBBufferToCMSampleBuffer((uint8_t *)inputImage.buffer.bytes,
+  if (!webrtz::H264AnnexBBufferToCMSampleBuffer((uint8_t *)inputImage.buffer.bytes,
                                                 inputImage.buffer.length,
                                                 _videoFormat,
                                                 &sampleBuffer)) {

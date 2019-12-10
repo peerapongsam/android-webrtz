@@ -17,7 +17,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Estimates the echo return loss based on the signal spectra.
 class ErlEstimator {
@@ -42,6 +42,6 @@ class ErlEstimator {
   RTC_DISALLOW_COPY_AND_ASSIGN(ErlEstimator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ERL_ESTIMATOR_H_

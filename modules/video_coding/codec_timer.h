@@ -17,7 +17,7 @@
 #include "rtc_base/numerics/percentile_filter.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMCodecTimer {
  public:
@@ -47,6 +47,6 @@ class VCMCodecTimer {
   PercentileFilter<int64_t> filter_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODEC_TIMER_H_

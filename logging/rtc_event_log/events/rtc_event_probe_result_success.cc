@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_probe_result_success.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventProbeResultSuccess::RtcEventProbeResultSuccess(int id, int bitrate_bps)
     : id_(id), bitrate_bps_(bitrate_bps) {}
@@ -23,4 +23,4 @@ bool RtcEventProbeResultSuccess::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

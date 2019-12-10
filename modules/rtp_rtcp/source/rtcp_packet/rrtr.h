@@ -15,7 +15,7 @@
 #include "rtc_base/basictypes.h"
 #include "system_wrappers/include/ntp_time.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 class Rrtr {
@@ -45,5 +45,5 @@ class Rrtr {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_RRTR_H_

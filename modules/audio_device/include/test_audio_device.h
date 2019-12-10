@@ -20,7 +20,7 @@
 #include "rtc_base/platform_file.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // TestAudioDeviceModule implements an AudioDevice module that can act both as a
 // capturer and a renderer. It will use 10ms audio frames.
@@ -166,6 +166,6 @@ class TestAudioDeviceModule : public AudioDeviceModule {
   virtual bool WaitForRecordingEnd(int timeout_ms = rtc::Event::kForever) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_INCLUDE_TEST_AUDIO_DEVICE_H_

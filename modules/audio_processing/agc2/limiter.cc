@@ -16,7 +16,7 @@
 #include "modules/audio_processing/agc2/agc2_common.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 double ComputeKneeStart(double max_input_level_db,
@@ -134,4 +134,4 @@ double Limiter::GetCompressorRegionOutputLevelDbfs(
   return (input_level_dbfs - max_input_level_db_) / compression_ratio_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

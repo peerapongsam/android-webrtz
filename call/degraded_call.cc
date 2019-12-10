@@ -14,7 +14,7 @@
 
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 DegradedCall::DegradedCall(
     std::unique_ptr<Call> call,
     rtc::Optional<FakeNetworkPipe::Config> send_config,
@@ -28,7 +28,7 @@ DegradedCall::DegradedCall(
       receive_config_(receive_config) {
   if (receive_config_) {
     receive_pipe_ =
-        rtc::MakeUnique<webrtc::FakeNetworkPipe>(clock_, *receive_config_);
+        rtc::MakeUnique<webrtz::FakeNetworkPipe>(clock_, *receive_config_);
     receive_pipe_->SetReceiver(call_->Receiver());
   }
   if (send_process_thread_) {
@@ -206,4 +206,4 @@ PacketReceiver::DeliveryStatus DegradedCall::DeliverPacket(
   return status;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -22,7 +22,7 @@
 #include "modules/audio_processing/aec3/render_buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ResidualEchoEstimator {
  public:
@@ -87,6 +87,6 @@ class ResidualEchoEstimator {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(ResidualEchoEstimator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_RESIDUAL_ECHO_ESTIMATOR_H_

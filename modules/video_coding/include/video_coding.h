@@ -28,7 +28,7 @@
 #include "modules/video_coding/include/video_coding_defines.h"
 #include "system_wrappers/include/event_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class EncodedImageCallback;
@@ -313,6 +313,6 @@ class VideoCodingModule : public Module {
       EncodedImageCallback* post_encode_callback) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INCLUDE_VIDEO_CODING_H_

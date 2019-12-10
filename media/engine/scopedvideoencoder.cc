@@ -18,23 +18,23 @@ namespace cricket {
 
 namespace {
 
-class ScopedVideoEncoder : public webrtc::VideoEncoder {
+class ScopedVideoEncoder : public webrtz::VideoEncoder {
  public:
   ScopedVideoEncoder(WebRtcVideoEncoderFactory* factory,
-                     webrtc::VideoEncoder* encoder);
+                     webrtz::VideoEncoder* encoder);
 
-  int32_t InitEncode(const webrtc::VideoCodec* codec_settings,
+  int32_t InitEncode(const webrtz::VideoCodec* codec_settings,
                      int32_t number_of_cores,
                      size_t max_payload_size) override;
   int32_t RegisterEncodeCompleteCallback(
-      webrtc::EncodedImageCallback* callback) override;
+      webrtz::EncodedImageCallback* callback) override;
   int32_t Release() override;
-  int32_t Encode(const webrtc::VideoFrame& frame,
-                 const webrtc::CodecSpecificInfo* codec_specific_info,
-                 const std::vector<webrtc::FrameType>* frame_types) override;
+  int32_t Encode(const webrtz::VideoFrame& frame,
+                 const webrtz::CodecSpecificInfo* codec_specific_info,
+                 const std::vector<webrtz::FrameType>* frame_types) override;
   int32_t SetChannelParameters(uint32_t packet_loss, int64_t rtt) override;
   int32_t SetRates(uint32_t bitrate, uint32_t framerate) override;
-  int32_t SetRateAllocation(const webrtc::BitrateAllocation& allocation,
+  int32_t SetRateAllocation(const webrtz::BitrateAllocation& allocation,
                             uint32_t framerate) override;
   ScalingSettings GetScalingSettings() const override;
   bool SupportsNativeHandle() const override;
@@ -44,14 +44,14 @@ class ScopedVideoEncoder : public webrtc::VideoEncoder {
 
  private:
   WebRtcVideoEncoderFactory* factory_;
-  webrtc::VideoEncoder* encoder_;
+  webrtz::VideoEncoder* encoder_;
 };
 
 ScopedVideoEncoder::ScopedVideoEncoder(WebRtcVideoEncoderFactory* factory,
-                                       webrtc::VideoEncoder* encoder)
+                                       webrtz::VideoEncoder* encoder)
     : factory_(factory), encoder_(encoder) {}
 
-int32_t ScopedVideoEncoder::InitEncode(const webrtc::VideoCodec* codec_settings,
+int32_t ScopedVideoEncoder::InitEncode(const webrtz::VideoCodec* codec_settings,
                                        int32_t number_of_cores,
                                        size_t max_payload_size) {
   return encoder_->InitEncode(codec_settings, number_of_cores,
@@ -59,7 +59,7 @@ int32_t ScopedVideoEncoder::InitEncode(const webrtc::VideoCodec* codec_settings,
 }
 
 int32_t ScopedVideoEncoder::RegisterEncodeCompleteCallback(
-    webrtc::EncodedImageCallback* callback) {
+    webrtz::EncodedImageCallback* callback) {
   return encoder_->RegisterEncodeCompleteCallback(callback);
 }
 
@@ -68,9 +68,9 @@ int32_t ScopedVideoEncoder::Release() {
 }
 
 int32_t ScopedVideoEncoder::Encode(
-    const webrtc::VideoFrame& frame,
-    const webrtc::CodecSpecificInfo* codec_specific_info,
-    const std::vector<webrtc::FrameType>* frame_types) {
+    const webrtz::VideoFrame& frame,
+    const webrtz::CodecSpecificInfo* codec_specific_info,
+    const std::vector<webrtz::FrameType>* frame_types) {
   return encoder_->Encode(frame, codec_specific_info, frame_types);
 }
 
@@ -84,12 +84,12 @@ int32_t ScopedVideoEncoder::SetRates(uint32_t bitrate, uint32_t framerate) {
 }
 
 int32_t ScopedVideoEncoder::SetRateAllocation(
-    const webrtc::BitrateAllocation& allocation,
+    const webrtz::BitrateAllocation& allocation,
     uint32_t framerate) {
   return encoder_->SetRateAllocation(allocation, framerate);
 }
 
-webrtc::VideoEncoder::ScalingSettings ScopedVideoEncoder::GetScalingSettings()
+webrtz::VideoEncoder::ScalingSettings ScopedVideoEncoder::GetScalingSettings()
     const {
   return encoder_->GetScalingSettings();
 }
@@ -108,13 +108,13 @@ ScopedVideoEncoder::~ScopedVideoEncoder() {
 
 }  // namespace
 
-std::unique_ptr<webrtc::VideoEncoder> CreateScopedVideoEncoder(
+std::unique_ptr<webrtz::VideoEncoder> CreateScopedVideoEncoder(
     WebRtcVideoEncoderFactory* factory,
     const VideoCodec& codec) {
-  webrtc::VideoEncoder* encoder = factory->CreateVideoEncoder(codec);
+  webrtz::VideoEncoder* encoder = factory->CreateVideoEncoder(codec);
   if (!encoder)
     return nullptr;
-  return std::unique_ptr<webrtc::VideoEncoder>(
+  return std::unique_ptr<webrtz::VideoEncoder>(
       new ScopedVideoEncoder(factory, encoder));
 }
 

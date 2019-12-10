@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockExpand : public Expand {
  public:
@@ -45,9 +45,9 @@ class MockExpand : public Expand {
       size_t());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
-namespace webrtc {
+namespace webrtz {
 
 class MockExpandFactory : public ExpandFactory {
  public:
@@ -60,5 +60,5 @@ class MockExpandFactory : public ExpandFactory {
                              size_t num_channels));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_EXPAND_H_

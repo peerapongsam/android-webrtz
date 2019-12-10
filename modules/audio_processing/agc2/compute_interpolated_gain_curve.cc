@@ -22,7 +22,7 @@
 #include "modules/audio_processing/agc2/limiter.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 std::pair<double, double> ComputeLinearApproximationParams(
@@ -225,4 +225,4 @@ InterpolatedParameters ComputeInterpolatedGainCurveApproximationParams() {
   return parameters;
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

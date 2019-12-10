@@ -14,7 +14,7 @@
 
 #include "rtc_base/numerics/sequence_number_util.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 Histogram::Histogram(size_t num_buckets, size_t max_num_values) {
   RTC_DCHECK_GT(num_buckets, 0);
@@ -58,4 +58,4 @@ size_t Histogram::NumValues() const {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

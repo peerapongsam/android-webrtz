@@ -38,7 +38,7 @@
     return false;                                           \
   }(op)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -451,4 +451,4 @@ SLuint32 OpenSLESRecorder::GetBufferCount() {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

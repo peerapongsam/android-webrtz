@@ -18,7 +18,7 @@
 #include "modules/audio_coding/codecs/opus/audio_decoder_opus.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioDecoderOpus::Config> AudioDecoderOpus::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -60,4 +60,4 @@ std::unique_ptr<AudioDecoder> AudioDecoderOpus::MakeAudioDecoder(
   return rtc::MakeUnique<AudioDecoderOpusImpl>(config.num_channels);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

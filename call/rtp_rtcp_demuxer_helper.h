@@ -19,7 +19,7 @@
 #include "api/optional.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(eladalon): Remove this in the next CL.
 template <typename Container>
@@ -93,6 +93,6 @@ bool MultimapHasKey(const Container& c,
 rtc::Optional<uint32_t> ParseRtcpPacketSenderSsrc(
     rtc::ArrayView<const uint8_t> packet);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_RTCP_DEMUXER_HELPER_H_

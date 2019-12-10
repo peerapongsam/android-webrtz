@@ -34,7 +34,7 @@ extern "C" {
 #include "system_wrappers/include/metrics.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 enum class DelaySource {
   kSystemDelay,    // The delay values come from the OS.
@@ -2049,4 +2049,4 @@ void WebRtcAec_SetSystemDelay(AecCore* self, int delay) {
   RTC_DCHECK_GE(delay, 0);
   self->system_delay = delay;
 }
-}  // namespace webrtc
+}  // namespace webrtz

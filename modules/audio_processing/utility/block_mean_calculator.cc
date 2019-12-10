@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 BlockMeanCalculator::BlockMeanCalculator(size_t block_length)
     : block_length_(block_length),
@@ -50,4 +50,4 @@ void BlockMeanCalculator::Clear() {
   sum_ = 0.0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 void PressEnterToContinue() {
@@ -19,4 +19,4 @@ void PressEnterToContinue() {
   while (getc(stdin) != '\n' && !feof(stdin));
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

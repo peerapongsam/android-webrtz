@@ -15,7 +15,7 @@
 
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ErleEstimator::ErleEstimator(float min_erle,
                              float max_erle_lf,
@@ -117,4 +117,4 @@ void ErleEstimator::Update(rtc::ArrayView<const float> render_spectrum,
                         : std::max(min_erle_, 0.97f * erle_time_domain_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

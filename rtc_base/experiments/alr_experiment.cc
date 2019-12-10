@@ -16,7 +16,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const char AlrExperimentSettings::kScreenshareProbingBweExperimentName[] =
     "WebRTC-ProbingScreenshareBwe";
@@ -80,4 +80,4 @@ AlrExperimentSettings::CreateFromFieldTrial(const char* experiment_name) {
   return ret;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

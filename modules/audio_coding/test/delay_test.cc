@@ -39,7 +39,7 @@ DEFINE_bool(packet_loss, false, "Apply packet loss, c.f. Channel{.cc, .h}.");
 DEFINE_bool(fec, false, "Use Forward Error Correction (FEC).");
 DEFINE_bool(help, false, "Print this message.");
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -83,7 +83,7 @@ class DelayTest {
 
   void Initialize() {
     test_cntr_ = 0;
-    std::string file_name = webrtc::test::ResourcePath(
+    std::string file_name = webrtz::test::ResourcePath(
         "audio_coding/testfile32kHz", "pcm");
     if (strlen(FLAG_input_file) > 0)
       file_name = FLAG_input_file;
@@ -174,7 +174,7 @@ class DelayTest {
     file_stream << "delay_test_" << FLAG_codec << "_" << FLAG_sample_rate_hz
         << "Hz" << "_" << FLAG_delay << "ms.pcm";
     std::cout << "Output file: " << file_stream.str() << std::endl << std::endl;
-    std::string file_name = webrtc::test::OutputPath() + file_stream.str();
+    std::string file_name = webrtz::test::OutputPath() + file_stream.str();
     out_file_b_.Open(file_name.c_str(), 32000, "wb");
   }
 
@@ -242,7 +242,7 @@ class DelayTest {
   int encoding_sample_rate_hz_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
   if (rtc::FlagList::SetFlagsFromCommandLine(&argc, argv, true)) {
@@ -253,7 +253,7 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  webrtc::TestSettings test_setting;
+  webrtz::TestSettings test_setting;
   strcpy(test_setting.codec.name, FLAG_codec);
 
   if (FLAG_sample_rate_hz != 8000 &&
@@ -273,7 +273,7 @@ int main(int argc, char* argv[]) {
   test_setting.acm.fec = FLAG_fec;
   test_setting.packet_loss = FLAG_packet_loss;
 
-  webrtc::DelayTest delay_test;
+  webrtz::DelayTest delay_test;
   delay_test.Initialize();
   delay_test.Perform(&test_setting, 1, 240, "delay_test");
   return 0;

@@ -27,7 +27,7 @@ class ByteBufferWriter;
 class StreamInterface;
 }
 
-namespace webrtc {
+namespace webrtz {
 class VideoFrame;
 }
 
@@ -80,7 +80,7 @@ struct RawRtcpPacket {
 // Test helper for testing VideoCapturer implementations.
 class VideoCapturerListener
     : public sigslot::has_slots<>,
-      public rtc::VideoSinkInterface<webrtc::VideoFrame> {
+      public rtc::VideoSinkInterface<webrtz::VideoFrame> {
  public:
   explicit VideoCapturerListener(VideoCapturer* cap);
   ~VideoCapturerListener();
@@ -92,7 +92,7 @@ class VideoCapturerListener
   bool resolution_changed() const { return resolution_changed_; }
 
   void OnStateChange(VideoCapturer* capturer, CaptureState state);
-  void OnFrame(const webrtc::VideoFrame& frame) override;
+  void OnFrame(const webrtz::VideoFrame& frame) override;
 
  private:
   VideoCapturer* capturer_;

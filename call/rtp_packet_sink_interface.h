@@ -10,7 +10,7 @@
 #ifndef CALL_RTP_PACKET_SINK_INTERFACE_H_
 #define CALL_RTP_PACKET_SINK_INTERFACE_H_
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketReceived;
 
@@ -21,6 +21,6 @@ class RtpPacketSinkInterface {
   virtual void OnRtpPacket(const RtpPacketReceived& packet) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTP_PACKET_SINK_INTERFACE_H_

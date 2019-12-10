@@ -18,7 +18,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // SDP specification for a single audio codec.
 // NOTE: This class is still under development and may change without notice.
@@ -137,6 +137,6 @@ struct AudioCodecSpec {
 
 std::ostream& operator<<(std::ostream& os, const AudioCodecSpec& acs);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_CODECS_AUDIO_FORMAT_H_

@@ -23,7 +23,7 @@ using ::testing::Exactly;
 using ::testing::InvokeWithoutArgs;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 // Interface used for testing here.
 class FakeInterface : public rtc::RefCountInterface {
@@ -311,4 +311,4 @@ TEST_F(OwnedProxyTest, BasicTest) {
   foo_proxy_->Bar();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

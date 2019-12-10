@@ -32,19 +32,19 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.webrtc.Camera1Enumerator;
-import org.webrtc.Camera2Enumerator;
-import org.webrtc.CameraEnumerator;
-import org.webrtc.IceCandidate;
-import org.webrtc.MediaCodecVideoEncoder;
-import org.webrtc.PeerConnection;
-import org.webrtc.PeerConnectionFactory;
-import org.webrtc.SessionDescription;
-import org.webrtc.StatsReport;
-import org.webrtc.VideoCapturer;
-import org.webrtc.VideoFrame;
-import org.webrtc.VideoRenderer;
-import org.webrtc.VideoSink;
+import org.webrtz.Camera1Enumerator;
+import org.webrtz.Camera2Enumerator;
+import org.webrtz.CameraEnumerator;
+import org.webrtz.IceCandidate;
+import org.webrtz.MediaCodecVideoEncoder;
+import org.webrtz.PeerConnection;
+import org.webrtz.PeerConnectionFactory;
+import org.webrtz.SessionDescription;
+import org.webrtz.StatsReport;
+import org.webrtz.VideoCapturer;
+import org.webrtz.VideoFrame;
+import org.webrtz.VideoRenderer;
+import org.webrtz.VideoSink;
 
 @RunWith(AndroidJUnit4.class)
 public class PeerConnectionClientTest implements PeerConnectionEvents {

@@ -29,7 +29,7 @@ const unsigned int kDefaultMaxQp = 56;
 // Max qp for lowest spatial resolution when doing simulcast.
 const unsigned int kLowestResMaxQp = 45;
 
-uint32_t SumStreamMaxBitrate(int streams, const webrtc::VideoCodec& codec) {
+uint32_t SumStreamMaxBitrate(int streams, const webrtz::VideoCodec& codec) {
   uint32_t bitrate_sum = 0;
   for (int i = 0; i < streams; ++i) {
     bitrate_sum += codec.simulcastStream[i].maxBitrate;
@@ -37,7 +37,7 @@ uint32_t SumStreamMaxBitrate(int streams, const webrtc::VideoCodec& codec) {
   return bitrate_sum;
 }
 
-int NumberOfStreams(const webrtc::VideoCodec& codec) {
+int NumberOfStreams(const webrtz::VideoCodec& codec) {
   int streams =
       codec.numberOfSimulcastStreams < 1 ? 1 : codec.numberOfSimulcastStreams;
   uint32_t simulcast_max_bitrate = SumStreamMaxBitrate(streams, codec);
@@ -47,7 +47,7 @@ int NumberOfStreams(const webrtc::VideoCodec& codec) {
   return streams;
 }
 
-bool ValidSimulcastResolutions(const webrtc::VideoCodec& codec,
+bool ValidSimulcastResolutions(const webrtz::VideoCodec& codec,
                                int num_streams) {
   if (codec.width != codec.simulcastStream[num_streams - 1].width ||
       codec.height != codec.simulcastStream[num_streams - 1].height) {
@@ -62,7 +62,7 @@ bool ValidSimulcastResolutions(const webrtc::VideoCodec& codec,
   return true;
 }
 
-int VerifyCodec(const webrtc::VideoCodec* inst) {
+int VerifyCodec(const webrtz::VideoCodec* inst) {
   if (inst == nullptr) {
     return WEBRTC_VIDEO_CODEC_ERR_PARAMETER;
   }
@@ -85,27 +85,27 @@ int VerifyCodec(const webrtc::VideoCodec* inst) {
 // An EncodedImageCallback implementation that forwards on calls to a
 // SimulcastEncoderAdapter, but with the stream index it's registered with as
 // the first parameter to Encoded.
-class AdapterEncodedImageCallback : public webrtc::EncodedImageCallback {
+class AdapterEncodedImageCallback : public webrtz::EncodedImageCallback {
  public:
-  AdapterEncodedImageCallback(webrtc::SimulcastEncoderAdapter* adapter,
+  AdapterEncodedImageCallback(webrtz::SimulcastEncoderAdapter* adapter,
                               size_t stream_idx)
       : adapter_(adapter), stream_idx_(stream_idx) {}
 
   EncodedImageCallback::Result OnEncodedImage(
-      const webrtc::EncodedImage& encoded_image,
-      const webrtc::CodecSpecificInfo* codec_specific_info,
-      const webrtc::RTPFragmentationHeader* fragmentation) override {
+      const webrtz::EncodedImage& encoded_image,
+      const webrtz::CodecSpecificInfo* codec_specific_info,
+      const webrtz::RTPFragmentationHeader* fragmentation) override {
     return adapter_->OnEncodedImage(stream_idx_, encoded_image,
                                     codec_specific_info, fragmentation);
   }
 
  private:
-  webrtc::SimulcastEncoderAdapter* const adapter_;
+  webrtz::SimulcastEncoderAdapter* const adapter_;
   const size_t stream_idx_;
 };
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 SimulcastEncoderAdapter::SimulcastEncoderAdapter(VideoEncoderFactory* factory)
     : inited_(0),
@@ -118,7 +118,7 @@ SimulcastEncoderAdapter::SimulcastEncoderAdapter(VideoEncoderFactory* factory)
   // the encoder task queue.
   encoder_queue_.Detach();
 
-  memset(&codec_, 0, sizeof(webrtc::VideoCodec));
+  memset(&codec_, 0, sizeof(webrtz::VideoCodec));
 }
 
 SimulcastEncoderAdapter::~SimulcastEncoderAdapter() {
@@ -340,7 +340,7 @@ int SimulcastEncoderAdapter::Encode(
 
       int ret = streaminfos_[stream_idx].encoder->Encode(
           VideoFrame(dst_buffer, input_image.timestamp(),
-                     input_image.render_time_ms(), webrtc::kVideoRotation_0),
+                     input_image.render_time_ms(), webrtz::kVideoRotation_0),
           codec_specific_info, &stream_frame_types);
       if (ret != WEBRTC_VIDEO_CODEC_OK) {
         return ret;
@@ -440,11 +440,11 @@ EncodedImageCallback::Result SimulcastEncoderAdapter::OnEncodedImage(
 }
 
 void SimulcastEncoderAdapter::PopulateStreamCodec(
-    const webrtc::VideoCodec& inst,
+    const webrtz::VideoCodec& inst,
     int stream_index,
     uint32_t start_bitrate_kbps,
     bool highest_resolution_stream,
-    webrtc::VideoCodec* stream_codec) {
+    webrtz::VideoCodec* stream_codec) {
   *stream_codec = inst;
 
   // Stream specific settings.
@@ -467,7 +467,7 @@ void SimulcastEncoderAdapter::PopulateStreamCodec(
     // kComplexityHigher, which maps to cpu_used = -4.
     int pixels_per_frame = stream_codec->width * stream_codec->height;
     if (pixels_per_frame < 352 * 288) {
-      stream_codec->VP8()->complexity = webrtc::kComplexityHigher;
+      stream_codec->VP8()->complexity = webrtz::kComplexityHigher;
     }
     // Turn off denoising for all streams but the highest resolution.
     stream_codec->VP8()->denoisingOn = false;
@@ -515,4 +515,4 @@ const char* SimulcastEncoderAdapter::ImplementationName() const {
   return implementation_name_.c_str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -20,7 +20,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 static const uint8_t kPiBytesf[4] = {0xDB, 0x0F, 0x49, 0x40};
 static const uint8_t kEBytesf[4] = {0x54, 0xF8, 0x2D, 0x40};
@@ -535,5 +535,5 @@ TEST_F(TransientFileUtilsTest, MAYBE_ExpectedErrorReturnValues) {
   EXPECT_EQ(0u, WriteDoubleBufferToFile(file.get(), 0, double_buffer.get()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

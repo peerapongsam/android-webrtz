@@ -15,7 +15,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct AudioEncoderRuntimeConfig;
 
@@ -32,6 +32,6 @@ class RtcEventAudioNetworkAdaptation final : public RtcEvent {
   const std::unique_ptr<const AudioEncoderRuntimeConfig> config_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_AUDIO_NETWORK_ADAPTATION_H_

@@ -16,7 +16,7 @@
 #include "rtc_base/arraysize.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace intelligibility {
 
@@ -76,4 +76,4 @@ TEST(IntelligibilityUtilsTest, TestGainApplier) {
 
 }  // namespace intelligibility
 
-}  // namespace webrtc
+}  // namespace webrtz

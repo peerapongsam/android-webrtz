@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoderPcmU final : public AudioDecoder {
  public:
@@ -65,6 +65,6 @@ class AudioDecoderPcmA final : public AudioDecoder {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioDecoderPcmA);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_G711_AUDIO_DECODER_PCM_H_

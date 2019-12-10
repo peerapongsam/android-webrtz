@@ -16,7 +16,7 @@
 #include "api/audio_codecs/audio_encoder.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioEncoderPcm : public AudioEncoder {
  public:
@@ -119,6 +119,6 @@ class AudioEncoderPcmU final : public AudioEncoderPcm {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioEncoderPcmU);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_CODECS_G711_AUDIO_ENCODER_PCM_H_

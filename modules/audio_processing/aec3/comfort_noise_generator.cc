@@ -22,7 +22,7 @@
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -216,4 +216,4 @@ void ComfortNoiseGenerator::Compute(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

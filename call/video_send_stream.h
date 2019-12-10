@@ -29,7 +29,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "rtc_base/platform_file.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoEncoder;
 
@@ -46,7 +46,7 @@ class VideoSendStream {
     bool is_flexfec = false;
     int width = 0;
     int height = 0;
-    // TODO(holmer): Move bitrate_bps out to the webrtc::Call layer.
+    // TODO(holmer): Move bitrate_bps out to the webrtz::Call layer.
     int total_bitrate_bps = 0;
     int retransmit_bitrate_bps = 0;
     int avg_delay_ms = 0;
@@ -90,8 +90,8 @@ class VideoSendStream {
     int number_of_quality_adapt_changes = 0;
     bool has_entered_low_resolution = false;
     std::map<uint32_t, StreamStats> substreams;
-    webrtc::VideoContentType content_type =
-        webrtc::VideoContentType::UNSPECIFIED;
+    webrtz::VideoContentType content_type =
+        webrtz::VideoContentType::UNSPECIFIED;
     uint32_t huge_frames_sent = 0;
   };
 
@@ -299,7 +299,7 @@ class VideoSendStream {
   };
 
   virtual void SetSource(
-      rtc::VideoSourceInterface<webrtc::VideoFrame>* source,
+      rtc::VideoSourceInterface<webrtz::VideoFrame>* source,
       const DegradationPreference& degradation_preference) = 0;
 
   // Set which streams to send. Must have at least as many SSRCs as configured
@@ -329,6 +329,6 @@ class VideoSendStream {
   virtual ~VideoSendStream() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_VIDEO_SEND_STREAM_H_

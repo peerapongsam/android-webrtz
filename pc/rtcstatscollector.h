@@ -33,7 +33,7 @@
 #include "rtc_base/sslidentity.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpSenderInternal;
 class RtpReceiverInternal;
@@ -270,6 +270,6 @@ const char* CandidateTypeToRTCIceCandidateTypeForTesting(
 const char* DataStateToRTCDataChannelStateForTesting(
     DataChannelInterface::DataState state);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTCSTATSCOLLECTOR_H_

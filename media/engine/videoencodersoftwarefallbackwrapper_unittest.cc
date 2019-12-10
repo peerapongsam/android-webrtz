@@ -23,7 +23,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const int kWidth = 320;
 const int kHeight = 240;
@@ -157,7 +157,7 @@ void VideoEncoderSoftwareFallbackWrapperTest::EncodeFrame(int expected_ret) {
   I420Buffer::SetBlack(buffer);
   std::vector<FrameType> types(1, kVideoFrameKey);
 
-  frame_.reset(new VideoFrame(buffer, 0, 0, webrtc::kVideoRotation_0));
+  frame_.reset(new VideoFrame(buffer, 0, 0, webrtz::kVideoRotation_0));
   EXPECT_EQ(expected_ret, fallback_wrapper_.Encode(*frame_, nullptr, &types));
 }
 
@@ -528,4 +528,4 @@ TEST_F(ForcedFallbackTestEnabled, ScalingDisabledIfResizeOff) {
   EXPECT_FALSE(settings.thresholds.has_value());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

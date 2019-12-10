@@ -21,7 +21,7 @@
 #include "modules/audio_processing/aec/aec_core.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum { kEstimateLengthFrames = 400 };
 
@@ -204,4 +204,4 @@ int EstimateSkew(const int* rawSkew,
   *skewEst = skew;
   return 0;
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr size_t kTargetBitrateHeaderSizeBytes = 4;
 constexpr uint8_t TargetBitrate::kBlockType;
@@ -124,4 +124,4 @@ void TargetBitrate::Create(uint8_t* buffer) const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

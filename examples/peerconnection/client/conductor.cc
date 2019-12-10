@@ -24,7 +24,7 @@
 #include "rtc_base/json.h"
 #include "rtc_base/logging.h"
 
-using webrtc::SdpType;
+using webrtz::SdpType;
 
 // Names used for a IceCandidate JSON object.
 const char kCandidateSdpMidName[] = "sdpMid";
@@ -39,7 +39,7 @@ const char kSessionDescriptionSdpName[] = "sdp";
 #define DTLS_OFF false
 
 class DummySetSessionDescriptionObserver
-    : public webrtc::SetSessionDescriptionObserver {
+    : public webrtz::SetSessionDescriptionObserver {
  public:
   static DummySetSessionDescriptionObserver* Create() {
     return
@@ -81,9 +81,9 @@ bool Conductor::InitializePeerConnection() {
   RTC_DCHECK(peer_connection_factory_.get() == NULL);
   RTC_DCHECK(peer_connection_.get() == NULL);
 
-  peer_connection_factory_ = webrtc::CreatePeerConnectionFactory(
-      webrtc::CreateBuiltinAudioEncoderFactory(),
-      webrtc::CreateBuiltinAudioDecoderFactory());
+  peer_connection_factory_ = webrtz::CreatePeerConnectionFactory(
+      webrtz::CreateBuiltinAudioEncoderFactory(),
+      webrtz::CreateBuiltinAudioDecoderFactory());
 
   if (!peer_connection_factory_.get()) {
     main_wnd_->MessageBox("Error",
@@ -103,7 +103,7 @@ bool Conductor::InitializePeerConnection() {
 
 bool Conductor::ReinitializePeerConnectionForLoopback() {
   loopback_ = true;
-  rtc::scoped_refptr<webrtc::StreamCollectionInterface> streams(
+  rtc::scoped_refptr<webrtz::StreamCollectionInterface> streams(
       peer_connection_->local_streams());
   peer_connection_ = NULL;
   if (CreatePeerConnection(DTLS_OFF)) {
@@ -118,17 +118,17 @@ bool Conductor::CreatePeerConnection(bool dtls) {
   RTC_DCHECK(peer_connection_factory_.get() != NULL);
   RTC_DCHECK(peer_connection_.get() == NULL);
 
-  webrtc::PeerConnectionInterface::RTCConfiguration config;
-  webrtc::PeerConnectionInterface::IceServer server;
+  webrtz::PeerConnectionInterface::RTCConfiguration config;
+  webrtz::PeerConnectionInterface::IceServer server;
   server.uri = GetPeerConnectionString();
   config.servers.push_back(server);
 
-  webrtc::FakeConstraints constraints;
+  webrtz::FakeConstraints constraints;
   if (dtls) {
-    constraints.AddOptional(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+    constraints.AddOptional(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                             "true");
   } else {
-    constraints.AddOptional(webrtc::MediaConstraintsInterface::kEnableDtlsSrtp,
+    constraints.AddOptional(webrtz::MediaConstraintsInterface::kEnableDtlsSrtp,
                             "false");
   }
 
@@ -161,18 +161,18 @@ void Conductor::EnsureStreamingUI() {
 
 // Called when a remote stream is added
 void Conductor::OnAddStream(
-    rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) {
+    rtc::scoped_refptr<webrtz::MediaStreamInterface> stream) {
   RTC_LOG(INFO) << __FUNCTION__ << " " << stream->id();
   main_wnd_->QueueUIThreadCallback(NEW_STREAM_ADDED, stream.release());
 }
 
 void Conductor::OnRemoveStream(
-    rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) {
+    rtc::scoped_refptr<webrtz::MediaStreamInterface> stream) {
   RTC_LOG(INFO) << __FUNCTION__ << " " << stream->id();
   main_wnd_->QueueUIThreadCallback(STREAM_REMOVED, stream.release());
 }
 
-void Conductor::OnIceCandidate(const webrtc::IceCandidateInterface* candidate) {
+void Conductor::OnIceCandidate(const webrtz::IceCandidateInterface* candidate) {
   RTC_LOG(INFO) << __FUNCTION__ << " " << candidate->sdp_mline_index();
   // For loopback test. To save some connecting delay.
   if (loopback_) {
@@ -276,7 +276,7 @@ void Conductor::OnMessageFromPeer(int peer_id, const std::string& message) {
       }
       return;
     }
-    rtc::Optional<SdpType> type_maybe = webrtc::SdpTypeFromString(type_str);
+    rtc::Optional<SdpType> type_maybe = webrtz::SdpTypeFromString(type_str);
     if (!type_maybe) {
       RTC_LOG(LS_ERROR) << "Unknown SDP type: " << type_str;
       return;
@@ -288,9 +288,9 @@ void Conductor::OnMessageFromPeer(int peer_id, const std::string& message) {
       RTC_LOG(WARNING) << "Can't parse received session description message.";
       return;
     }
-    webrtc::SdpParseError error;
-    std::unique_ptr<webrtc::SessionDescriptionInterface> session_description =
-        webrtc::CreateSessionDescription(type, sdp, &error);
+    webrtz::SdpParseError error;
+    std::unique_ptr<webrtz::SessionDescriptionInterface> session_description =
+        webrtz::CreateSessionDescription(type, sdp, &error);
     if (!session_description) {
       RTC_LOG(WARNING) << "Can't parse received session description message. "
                        << "SdpParseError was: " << error.description;
@@ -316,9 +316,9 @@ void Conductor::OnMessageFromPeer(int peer_id, const std::string& message) {
       RTC_LOG(WARNING) << "Can't parse received message.";
       return;
     }
-    webrtc::SdpParseError error;
-    std::unique_ptr<webrtc::IceCandidateInterface> candidate(
-        webrtc::CreateIceCandidate(sdp_mid, sdp_mlineindex, sdp, &error));
+    webrtz::SdpParseError error;
+    std::unique_ptr<webrtz::IceCandidateInterface> candidate(
+        webrtz::CreateIceCandidate(sdp_mid, sdp_mlineindex, sdp, &error));
     if (!candidate.get()) {
       RTC_LOG(WARNING) << "Can't parse received candidate message. "
                        << "SdpParseError was: " << error.description;
@@ -380,8 +380,8 @@ void Conductor::ConnectToPeer(int peer_id) {
 std::unique_ptr<cricket::VideoCapturer> Conductor::OpenVideoCaptureDevice() {
   std::vector<std::string> device_names;
   {
-    std::unique_ptr<webrtc::VideoCaptureModule::DeviceInfo> info(
-        webrtc::VideoCaptureFactory::CreateDeviceInfo());
+    std::unique_ptr<webrtz::VideoCaptureModule::DeviceInfo> info(
+        webrtz::VideoCaptureFactory::CreateDeviceInfo());
     if (!info) {
       return nullptr;
     }
@@ -411,11 +411,11 @@ void Conductor::AddStreams() {
   if (active_streams_.find(kStreamId) != active_streams_.end())
     return;  // Already added.
 
-  rtc::scoped_refptr<webrtc::AudioTrackInterface> audio_track(
+  rtc::scoped_refptr<webrtz::AudioTrackInterface> audio_track(
       peer_connection_factory_->CreateAudioTrack(
           kAudioLabel, peer_connection_factory_->CreateAudioSource(NULL)));
 
-  rtc::scoped_refptr<webrtc::VideoTrackInterface> video_track;
+  rtc::scoped_refptr<webrtz::VideoTrackInterface> video_track;
   auto video_device(OpenVideoCaptureDevice());
   if (video_device) {
     video_track =
@@ -428,7 +428,7 @@ void Conductor::AddStreams() {
     RTC_LOG(LS_ERROR) << "OpenVideoCaptureDevice failed";
   }
 
-  rtc::scoped_refptr<webrtc::MediaStreamInterface> stream =
+  rtc::scoped_refptr<webrtz::MediaStreamInterface> stream =
       peer_connection_factory_->CreateLocalMediaStream(kStreamId);
 
   stream->AddTrack(audio_track);
@@ -439,7 +439,7 @@ void Conductor::AddStreams() {
     RTC_LOG(LS_ERROR) << "Adding stream to PeerConnection failed";
   }
   typedef std::pair<std::string,
-                    rtc::scoped_refptr<webrtc::MediaStreamInterface> >
+                    rtc::scoped_refptr<webrtz::MediaStreamInterface> >
       MediaStreamPair;
   active_streams_.insert(MediaStreamPair(stream->id(), stream));
   main_wnd_->SwitchToStreamingUI();
@@ -503,13 +503,13 @@ void Conductor::UIThreadCallback(int msg_id, void* data) {
     }
 
     case NEW_STREAM_ADDED: {
-      webrtc::MediaStreamInterface* stream =
-          reinterpret_cast<webrtc::MediaStreamInterface*>(
+      webrtz::MediaStreamInterface* stream =
+          reinterpret_cast<webrtz::MediaStreamInterface*>(
           data);
-      webrtc::VideoTrackVector tracks = stream->GetVideoTracks();
+      webrtz::VideoTrackVector tracks = stream->GetVideoTracks();
       // Only render the first track.
       if (!tracks.empty()) {
-        webrtc::VideoTrackInterface* track = tracks[0];
+        webrtz::VideoTrackInterface* track = tracks[0];
         main_wnd_->StartRemoteRenderer(track);
       }
       stream->Release();
@@ -518,8 +518,8 @@ void Conductor::UIThreadCallback(int msg_id, void* data) {
 
     case STREAM_REMOVED: {
       // Remote peer stopped sending a stream.
-      webrtc::MediaStreamInterface* stream =
-          reinterpret_cast<webrtc::MediaStreamInterface*>(
+      webrtz::MediaStreamInterface* stream =
+          reinterpret_cast<webrtz::MediaStreamInterface*>(
           data);
       stream->Release();
       break;
@@ -531,7 +531,7 @@ void Conductor::UIThreadCallback(int msg_id, void* data) {
   }
 }
 
-void Conductor::OnSuccess(webrtc::SessionDescriptionInterface* desc) {
+void Conductor::OnSuccess(webrtz::SessionDescriptionInterface* desc) {
   peer_connection_->SetLocalDescription(
       DummySetSessionDescriptionObserver::Create(), desc);
 
@@ -541,8 +541,8 @@ void Conductor::OnSuccess(webrtc::SessionDescriptionInterface* desc) {
   // For loopback test. To save some connecting delay.
   if (loopback_) {
     // Replace message type from "offer" to "answer"
-    std::unique_ptr<webrtc::SessionDescriptionInterface> session_description =
-        webrtc::CreateSessionDescription(SdpType::kAnswer, sdp);
+    std::unique_ptr<webrtz::SessionDescriptionInterface> session_description =
+        webrtz::CreateSessionDescription(SdpType::kAnswer, sdp);
     peer_connection_->SetRemoteDescription(
         DummySetSessionDescriptionObserver::Create(),
         session_description.release());
@@ -552,7 +552,7 @@ void Conductor::OnSuccess(webrtc::SessionDescriptionInterface* desc) {
   Json::StyledWriter writer;
   Json::Value jmessage;
   jmessage[kSessionDescriptionTypeName] =
-      webrtc::SdpTypeToString(desc->GetType());
+      webrtz::SdpTypeToString(desc->GetType());
   jmessage[kSessionDescriptionSdpName] = sdp;
   SendMessage(writer.write(jmessage));
 }

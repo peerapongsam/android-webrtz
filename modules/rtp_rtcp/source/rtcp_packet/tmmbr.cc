@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Tmmbr::kFeedbackMessageType;
 // RFC 4585: Feedback format.
@@ -109,4 +109,4 @@ bool Tmmbr::Create(uint8_t* packet,
   return true;
 }
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

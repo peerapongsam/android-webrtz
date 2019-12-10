@@ -95,7 +95,7 @@ struct Codec {
   // and |other| are kept.
   void IntersectFeedbackParams(const Codec& other);
 
-  virtual webrtc::RtpCodecParameters ToCodecParameters() const;
+  virtual webrtz::RtpCodecParameters ToCodecParameters() const;
 
   Codec& operator=(const Codec& c);
   Codec& operator=(Codec&& c);
@@ -137,7 +137,7 @@ struct AudioCodec : public Codec {
 
   std::string ToString() const;
 
-  webrtc::RtpCodecParameters ToCodecParameters() const override;
+  webrtz::RtpCodecParameters ToCodecParameters() const override;
 
   AudioCodec& operator=(const AudioCodec& c);
   AudioCodec& operator=(AudioCodec&& c);
@@ -179,7 +179,7 @@ struct VideoCodec : public Codec {
   // Creates an empty codec.
   VideoCodec();
   VideoCodec(const VideoCodec& c);
-  explicit VideoCodec(const webrtc::SdpVideoFormat& c);
+  explicit VideoCodec(const webrtz::SdpVideoFormat& c);
   VideoCodec(VideoCodec&& c);
   ~VideoCodec() override = default;
 
@@ -190,7 +190,7 @@ struct VideoCodec : public Codec {
 
   std::string ToString() const;
 
-  webrtc::RtpCodecParameters ToCodecParameters() const override;
+  webrtz::RtpCodecParameters ToCodecParameters() const override;
 
   VideoCodec& operator=(const VideoCodec& c);
   VideoCodec& operator=(VideoCodec&& c);

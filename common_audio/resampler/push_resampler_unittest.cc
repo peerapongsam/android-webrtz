@@ -14,7 +14,7 @@
 
 // Quality testing of PushResampler is handled through output_mixer_unittest.cc.
 
-namespace webrtc {
+namespace webrtz {
 
 // The below tests are temporarily disabled on WEBRTC_WIN due to problems
 // with clang debug builds.
@@ -52,4 +52,4 @@ TEST(PushResamplerTest, VerifiesBadInputParameters4) {
 #endif
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

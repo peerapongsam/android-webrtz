@@ -16,7 +16,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockDesktopCapturerCallback : public DesktopCapturer::Callback {
  public:
@@ -33,6 +33,6 @@ class MockDesktopCapturerCallback : public DesktopCapturer::Callback {
   RTC_DISALLOW_COPY_AND_ASSIGN(MockDesktopCapturerCallback);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MOCK_DESKTOP_CAPTURER_CALLBACK_H_

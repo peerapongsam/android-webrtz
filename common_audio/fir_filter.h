@@ -13,7 +13,7 @@
 
 #include <string.h>
 
-namespace webrtc {
+namespace webrtz {
 
 // Finite Impulse Response filter using floating-point arithmetic.
 class FIRFilter {
@@ -25,6 +25,6 @@ class FIRFilter {
   virtual void Filter(const float* in, size_t length, float* out) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_FIR_FILTER_H_

@@ -28,7 +28,7 @@
 #include "sdk/android/src/jni/encodedimage.h"
 #include "sdk/android/src/jni/videocodecstatus.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 VideoEncoderWrapper::VideoEncoderWrapper(JNIEnv* jni,
@@ -461,4 +461,4 @@ std::string VideoEncoderWrapper::GetImplementationName(JNIEnv* jni) const {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

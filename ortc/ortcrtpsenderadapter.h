@@ -21,7 +21,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/sigslot.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of OrtcRtpSenderInterface that works with RtpTransportAdapter,
 // and wraps a VideoRtpSender/AudioRtpSender that's normally used with the
@@ -74,6 +74,6 @@ class OrtcRtpSenderAdapter : public OrtcRtpSenderInterface {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(OrtcRtpSenderAdapter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ORTC_ORTCRTPSENDERADAPTER_H_

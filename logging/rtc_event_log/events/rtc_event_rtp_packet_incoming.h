@@ -14,7 +14,7 @@
 #include "logging/rtc_event_log/events/rtc_event.h"
 #include "modules/rtp_rtcp/source/rtp_packet.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketReceived;
 
@@ -31,6 +31,6 @@ class RtcEventRtpPacketIncoming final : public RtcEvent {
   const size_t packet_length_;  // Length before stripping away all but header.
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_RTP_PACKET_INCOMING_H_

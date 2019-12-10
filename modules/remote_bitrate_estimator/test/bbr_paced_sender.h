@@ -17,7 +17,7 @@
 #include "modules/pacing/paced_sender.h"
 #include "modules/pacing/pacer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 class CongestionWindow;
@@ -89,5 +89,5 @@ class BbrPacedSender : public Pacer {
   size_t max_data_inflight_bytes_;
   std::unique_ptr<testing::bwe::CongestionWindow> congestion_window_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_BBR_PACED_SENDER_H_

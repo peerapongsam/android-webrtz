@@ -24,7 +24,7 @@ using ::testing::InSequence;
 using ::testing::Invoke;
 using ::testing::MockFunction;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const size_t kMaxNumSamples = 48 * 10 * 2;  // 10 ms @ 48 kHz stereo.
@@ -304,4 +304,4 @@ TEST_F(AudioEncoderCopyRedDeathTest, NullSpeechEncoder) {
 
 #endif  // GTEST_HAS_DEATH_TEST && !defined(WEBRTC_ANDROID)
 
-}  // namespace webrtc
+}  // namespace webrtz

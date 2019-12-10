@@ -19,7 +19,7 @@
 
 #include "pc/peerconnectioninternal.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Customized PeerConnection fakes can be created by subclassing
 // FakePeerConnectionBase then overriding the interesting methods. This class
@@ -320,6 +320,6 @@ class FakePeerConnectionBase : public PeerConnectionInternal {
   sigslot::signal1<DataChannel*> SignalDataChannelCreated_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_FAKEPEERCONNECTIONBASE_H_

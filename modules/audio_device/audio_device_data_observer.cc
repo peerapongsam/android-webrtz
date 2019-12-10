@@ -12,7 +12,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/refcountedobject.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -296,4 +296,4 @@ rtc::scoped_refptr<AudioDeviceModule> CreateAudioDeviceWithDataObserver(
   return CreateAudioDeviceWithDataObserver(audio_layer, observer);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

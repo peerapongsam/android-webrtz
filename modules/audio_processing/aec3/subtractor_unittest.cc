@@ -20,7 +20,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 float RunSubtractorTest(int num_blocks_to_process,
@@ -207,4 +207,4 @@ TEST(Subtractor, EchoPathChangeReset) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

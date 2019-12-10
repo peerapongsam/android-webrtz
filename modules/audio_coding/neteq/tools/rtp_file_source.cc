@@ -23,7 +23,7 @@
 #include "rtc_base/checks.h"
 #include "test/rtp_file_reader.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 RtpFileSource* RtpFileSource::Create(const std::string& file_name) {
@@ -98,4 +98,4 @@ bool RtpFileSource::OpenFile(const std::string& file_name) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

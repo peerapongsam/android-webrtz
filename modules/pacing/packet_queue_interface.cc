@@ -10,7 +10,7 @@
 
 #include "modules/pacing/packet_queue_interface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 PacketQueueInterface::Packet::Packet(RtpPacketSender::Priority priority,
                                      uint32_t ssrc,
@@ -43,4 +43,4 @@ bool PacketQueueInterface::Packet::operator<(
 
   return enqueue_order > other.enqueue_order;
 }
-}  // namespace webrtc
+}  // namespace webrtz

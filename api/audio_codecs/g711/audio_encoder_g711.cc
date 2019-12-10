@@ -20,7 +20,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/string_to_number.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::Optional<AudioEncoderG711::Config> AudioEncoderG711::SdpToConfig(
     const SdpAudioFormat& format) {
@@ -83,4 +83,4 @@ std::unique_ptr<AudioEncoder> AudioEncoderG711::MakeAudioEncoder(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

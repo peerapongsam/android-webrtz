@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::ElementsAreArray;
@@ -267,4 +267,4 @@ TEST(AudioUtilTest, DownmixToMonoTest) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

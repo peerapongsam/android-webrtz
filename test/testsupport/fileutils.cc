@@ -45,7 +45,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)  // For architecture defines
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 #if defined(WEBRTC_IOS)
@@ -367,4 +367,4 @@ size_t GetFileSize(const std::string& filename) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

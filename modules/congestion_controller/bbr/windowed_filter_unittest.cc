@@ -14,7 +14,7 @@
 #include "modules/congestion_controller/network_control/test/network_ostream_operators.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 namespace test {
 class WindowedFilterTest : public ::testing::Test {
@@ -354,4 +354,4 @@ TEST_F(WindowedFilterTest, ExpireCounterBasedMax) {
 
 }  // namespace test
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz

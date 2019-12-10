@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "video/stream_synchronization.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // These correspond to the same constants defined in vie_sync_module.cc.
 enum { kMaxVideoDiffMs = 80 };
@@ -565,4 +565,4 @@ TEST_F(StreamSynchronizationTest,
   BothDelayedVideoLaterTest(base_target_delay_ms);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

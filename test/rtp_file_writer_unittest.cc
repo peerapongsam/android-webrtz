@@ -17,7 +17,7 @@
 #include "test/rtp_file_writer.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpFileWriterTest : public ::testing::Test {
  public:
@@ -73,4 +73,4 @@ TEST_F(RtpFileWriterTest, WriteToRtpDump) {
   VerifyFileContents(10);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

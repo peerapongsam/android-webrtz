@@ -21,7 +21,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A collection of stats.
 // This is accessible as a map from |RTCStats::id| to |RTCStats|.
@@ -99,6 +99,6 @@ class RTCStatsReport : public rtc::RefCountInterface {
   StatsMap stats_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_STATS_RTCSTATSREPORT_H_

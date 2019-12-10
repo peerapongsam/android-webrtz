@@ -14,13 +14,13 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 std::vector<SpatialLayer> GetSvcConfig(size_t input_width,
                                        size_t input_height,
                                        size_t num_spatial_layers,
                                        size_t num_temporal_layers);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP9_SVC_CONFIG_H_

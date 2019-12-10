@@ -20,7 +20,7 @@
 #include "modules/remote_bitrate_estimator/test/bwe_test_logging.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -52,7 +52,7 @@ bool ResourceFileReader::Read(uint32_t* out) {
 
 ResourceFileReader* ResourceFileReader::Create(const std::string& filename,
                                                const std::string& extension) {
-  std::string filepath = webrtc::test::ResourcePath(filename, extension);
+  std::string filepath = webrtz::test::ResourcePath(filename, extension);
   FILE* file = fopen(filepath.c_str(), "rb");
   if (file == NULL) {
     BWE_TEST_LOGGING_CONTEXT("ResourceFileReader");
@@ -80,7 +80,7 @@ bool OutputFileWriter::Write(uint32_t value) {
 
 OutputFileWriter* OutputFileWriter::Create(const std::string& filename,
                                            const std::string& extension) {
-  std::string filepath = webrtc::test::OutputPath() + filename + "." +
+  std::string filepath = webrtz::test::OutputPath() + filename + "." +
       extension;
   FILE* file = fopen(filepath.c_str(), "wb");
   if (file == NULL) {
@@ -93,4 +93,4 @@ OutputFileWriter* OutputFileWriter::Create(const std::string& filename,
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,7 +17,7 @@
 #include "api/optional.h"
 #include "modules/congestion_controller/bitrate_estimator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 struct PacketFeedback;
 
@@ -39,6 +39,6 @@ class AcknowledgedBitrateEstimator {
   std::unique_ptr<BitrateEstimator> bitrate_estimator_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_ACKNOWLEDGED_BITRATE_ESTIMATOR_H_

@@ -14,7 +14,7 @@
 #include <limits>
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace units_internal {
 constexpr int64_t kPlusInfinityVal = std::numeric_limits<int64_t>::max();
 constexpr int64_t kMinusInfinityVal = std::numeric_limits<int64_t>::min();
@@ -390,6 +390,6 @@ TimeDelta operator/(const DataSize& size, const DataRate& rate);
 DataSize operator*(const DataRate& rate, const TimeDelta& duration);
 DataSize operator*(const TimeDelta& duration, const DataRate& rate);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_NETWORK_CONTROL_INCLUDE_NETWORK_UNITS_H_

@@ -23,7 +23,7 @@
 #include "modules/audio_processing/aec3/fft_data.h"
 #include "modules/audio_processing/aec3/render_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for buffering the incoming render blocks such that these may be
 // extracted with a specified delay.
@@ -78,6 +78,6 @@ class RenderDelayBuffer {
   virtual void SetAudioBufferDelay(size_t delay_ms) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_RENDER_DELAY_BUFFER_H_

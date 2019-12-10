@@ -17,7 +17,7 @@
 // these OSs regular critical sections have been used to approximate RW lock
 // functionality and will therefore have worse performance.
 
-namespace webrtc {
+namespace webrtz {
 
 class RTC_LOCKABLE RWLockWrapper {
  public:
@@ -61,6 +61,6 @@ class RTC_SCOPED_LOCKABLE WriteLockScoped {
   RWLockWrapper& rw_lock_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_SYNCHRONIZATION_RW_LOCK_WRAPPER_H_

@@ -17,7 +17,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 template <unsigned long M>                                    // NOLINT
 inline unsigned long Add(unsigned long a, unsigned long b) {  // NOLINT
@@ -138,6 +138,6 @@ inline T MinDiff(T a, T b) {
   return std::min(ForwardDiff<T, M>(a, b), ReverseDiff<T, M>(a, b));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_NUMERICS_MOD_OPS_H_

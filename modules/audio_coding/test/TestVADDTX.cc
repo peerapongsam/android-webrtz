@@ -19,7 +19,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #ifdef WEBRTC_CODEC_ISAC
 const CodecInst kIsacWb = {103, "ISAC", 16000, 480, 1, 32000};
@@ -206,11 +206,11 @@ void TestWebRtcVadDtx::Test(bool new_outfile) {
     output_file_num_++;
   }
   std::stringstream out_filename;
-  out_filename << webrtc::test::OutputPath()
+  out_filename << webrtz::test::OutputPath()
                << "testWebRtcVadDtx_outFile_"
                << output_file_num_
                << ".pcm";
-  Run(webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
+  Run(webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
       32000, 1, out_filename.str(), !new_outfile, expects);
 }
 
@@ -250,36 +250,36 @@ void TestOpusDtx::Perform() {
   int expects[] = {0, 1, 0, 0, 0};
 
   // Register Opus as send codec
-  std::string out_filename = webrtc::test::OutputPath() +
+  std::string out_filename = webrtz::test::OutputPath() +
       "testOpusDtx_outFile_mono.pcm";
   RegisterCodec(kOpus);
   EXPECT_EQ(0, acm_send_->DisableOpusDtx());
 
-  Run(webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
+  Run(webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
       32000, 1, out_filename, false, expects);
 
   EXPECT_EQ(0, acm_send_->EnableOpusDtx());
   expects[kEmptyFrame] = 1;
   expects[kAudioFrameCN] = 1;
-  Run(webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
+  Run(webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm"),
       32000, 1, out_filename, true, expects);
 
   // Register stereo Opus as send codec
-  out_filename = webrtc::test::OutputPath() + "testOpusDtx_outFile_stereo.pcm";
+  out_filename = webrtz::test::OutputPath() + "testOpusDtx_outFile_stereo.pcm";
   RegisterCodec(kOpusStereo);
   EXPECT_EQ(0, acm_send_->DisableOpusDtx());
   expects[kEmptyFrame] = 0;
   expects[kAudioFrameCN] = 0;
-  Run(webrtc::test::ResourcePath("audio_coding/teststereo32kHz", "pcm"),
+  Run(webrtz::test::ResourcePath("audio_coding/teststereo32kHz", "pcm"),
       32000, 2, out_filename, false, expects);
 
   EXPECT_EQ(0, acm_send_->EnableOpusDtx());
 
   expects[kEmptyFrame] = 1;
   expects[kAudioFrameCN] = 1;
-  Run(webrtc::test::ResourcePath("audio_coding/teststereo32kHz", "pcm"),
+  Run(webrtz::test::ResourcePath("audio_coding/teststereo32kHz", "pcm"),
       32000, 2, out_filename, true, expects);
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

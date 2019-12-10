@@ -19,7 +19,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class PostDecodeVad;
@@ -133,5 +133,5 @@ class BackgroundNoise {
   RTC_DISALLOW_COPY_AND_ASSIGN(BackgroundNoise);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_BACKGROUND_NOISE_H_

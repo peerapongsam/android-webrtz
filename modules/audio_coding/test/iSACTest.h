@@ -25,7 +25,7 @@
 #define MAX_FILE_NAME_LENGTH_BYTE 500
 #define NO_OF_CLIENTS             15
 
-namespace webrtc {
+namespace webrtz {
 
 struct ACMTestISACConfig {
   int32_t currentRateBitPerSec;
@@ -75,6 +75,6 @@ class ISACTest : public ACMTest {
   int _testMode;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_ISACTEST_H_

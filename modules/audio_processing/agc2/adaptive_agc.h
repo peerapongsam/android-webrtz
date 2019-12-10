@@ -19,7 +19,7 @@
 #include "modules/audio_processing/include/audio_frame_view.h"
 #include "modules/audio_processing/vad/vad_with_level.h"
 
-namespace webrtc {
+namespace webrtz {
 class ApmDataDumper;
 
 class AdaptiveAgc {
@@ -36,6 +36,6 @@ class AdaptiveAgc {
   NoiseLevelEstimator noise_level_estimator_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_ADAPTIVE_AGC_H_

@@ -22,16 +22,16 @@
 
 #include "rtc_base/logging.h"
 
-using namespace webrtc;
-using namespace webrtc::videocapturemodule;
+using namespace webrtz;
+using namespace webrtz::videocapturemodule;
 
 @interface RTCVideoCaptureIosObjC (hidden)
 - (int)changeCaptureInputWithName:(NSString*)captureDeviceName;
 @end
 
 @implementation RTCVideoCaptureIosObjC {
-  webrtc::videocapturemodule::VideoCaptureIos* _owner;
-  webrtc::VideoCaptureCapability _capability;
+  webrtz::videocapturemodule::VideoCaptureIos* _owner;
+  webrtz::VideoCaptureCapability _capability;
   AVCaptureSession* _captureSession;
   BOOL _orientationHasChanged;
   AVCaptureConnection* _connection;

@@ -144,7 +144,7 @@
 // By default, const char* argument values are assumed to have long-lived scope
 // and will not be copied. Use this macro to force a const char* to be copied.
 #define TRACE_STR_COPY(str) \
-    webrtc::trace_event_internal::TraceStringWithCopy(str)
+    webrtz::trace_event_internal::TraceStringWithCopy(str)
 
 // This will mark the trace event as disabled by default. The user will need
 // to explicitly enable the event.
@@ -153,7 +153,7 @@
 // By default, uint64 ID argument values are not mangled with the Process ID in
 // TRACE_EVENT_ASYNC macros. Use this macro to force Process ID mangling.
 #define TRACE_ID_MANGLE(id) \
-    webrtc::trace_event_internal::TraceID::ForceMangle(id)
+    webrtz::trace_event_internal::TraceID::ForceMangle(id)
 
 // Records a pair of begin and end events called "name" for the current
 // scope, with 0, 1 or 2 associated arguments. If the category is not
@@ -547,7 +547,7 @@
 // const unsigned char*
 //     TRACE_EVENT_API_GET_CATEGORY_ENABLED(const char* category_name)
 #define TRACE_EVENT_API_GET_CATEGORY_ENABLED \
-    webrtc::EventTracer::GetCategoryEnabled
+    webrtz::EventTracer::GetCategoryEnabled
 
 // Add a trace event to the platform tracing system.
 // void TRACE_EVENT_API_ADD_TRACE_EVENT(
@@ -560,7 +560,7 @@
 //                    const unsigned char* arg_types,
 //                    const unsigned long long* arg_values,
 //                    unsigned char flags)
-#define TRACE_EVENT_API_ADD_TRACE_EVENT webrtc::EventTracer::AddTraceEvent
+#define TRACE_EVENT_API_ADD_TRACE_EVENT webrtz::EventTracer::AddTraceEvent
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -591,9 +591,9 @@
     do { \
       INTERNAL_TRACE_EVENT_GET_CATEGORY_INFO(category); \
       if (*INTERNAL_TRACE_EVENT_UID(catstatic)) { \
-        webrtc::trace_event_internal::AddTraceEvent(          \
+        webrtz::trace_event_internal::AddTraceEvent(          \
             phase, INTERNAL_TRACE_EVENT_UID(catstatic), name, \
-            webrtc::trace_event_internal::kNoEventId, flags, ##__VA_ARGS__); \
+            webrtz::trace_event_internal::kNoEventId, flags, ##__VA_ARGS__); \
       } \
     } while (0)
 
@@ -602,13 +602,13 @@
 // ends.
 #define INTERNAL_TRACE_EVENT_ADD_SCOPED(category, name, ...) \
     INTERNAL_TRACE_EVENT_GET_CATEGORY_INFO(category); \
-    webrtc::trace_event_internal::TraceEndOnScopeClose  \
+    webrtz::trace_event_internal::TraceEndOnScopeClose  \
         INTERNAL_TRACE_EVENT_UID(profileScope); \
     if (*INTERNAL_TRACE_EVENT_UID(catstatic)) { \
-      webrtc::trace_event_internal::AddTraceEvent(      \
+      webrtz::trace_event_internal::AddTraceEvent(      \
           TRACE_EVENT_PHASE_BEGIN, \
           INTERNAL_TRACE_EVENT_UID(catstatic), \
-          name, webrtc::trace_event_internal::kNoEventId,       \
+          name, webrtz::trace_event_internal::kNoEventId,       \
           TRACE_EVENT_FLAG_NONE, ##__VA_ARGS__); \
       INTERNAL_TRACE_EVENT_UID(profileScope).Initialize( \
           INTERNAL_TRACE_EVENT_UID(catstatic), name); \
@@ -622,9 +622,9 @@
       INTERNAL_TRACE_EVENT_GET_CATEGORY_INFO(category); \
       if (*INTERNAL_TRACE_EVENT_UID(catstatic)) { \
         unsigned char trace_event_flags = flags | TRACE_EVENT_FLAG_HAS_ID; \
-        webrtc::trace_event_internal::TraceID trace_event_trace_id( \
+        webrtz::trace_event_internal::TraceID trace_event_trace_id( \
             id, &trace_event_flags); \
-        webrtc::trace_event_internal::AddTraceEvent( \
+        webrtz::trace_event_internal::AddTraceEvent( \
             phase, INTERNAL_TRACE_EVENT_UID(catstatic), \
             name, trace_event_trace_id.data(), trace_event_flags, \
             ##__VA_ARGS__); \
@@ -664,7 +664,7 @@
 #define TRACE_VALUE_TYPE_STRING       (static_cast<unsigned char>(6))
 #define TRACE_VALUE_TYPE_COPY_STRING  (static_cast<unsigned char>(7))
 
-namespace webrtc {
+namespace webrtz {
 namespace trace_event_internal {
 
 // Specify these values when the corresponding argument of AddTraceEvent is not
@@ -910,6 +910,6 @@ class TraceEndOnScopeClose {
 };
 
 }  // namespace trace_event_internal
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_TRACE_EVENT_H_

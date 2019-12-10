@@ -23,7 +23,7 @@
 #include "rtc_base/stream.h"
 #include "rtc_base/stringutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 using namespace rtc;
@@ -228,6 +228,6 @@ public:
 };
 
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_BASE_TESTUTILS_H_

@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ShadowFilterUpdateGain::ShadowFilterUpdateGain(
     const EchoCanceller3Config::Filter::ShadowConfiguration& config,
@@ -98,4 +98,4 @@ void ShadowFilterUpdateGain::UpdateCurrentConfig() {
   RTC_DCHECK_LE(0, config_change_counter_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

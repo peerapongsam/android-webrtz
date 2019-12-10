@@ -18,7 +18,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr size_t kNumChannels = 1u;
@@ -122,7 +122,7 @@ TEST(BandwidthAdaptationTest, BandwidthAdaptationTest) {
 
   // Open speech file.
   const std::string kInputFileName =
-      webrtc::test::ResourcePath("audio_coding/speech_mono_32_48kHz", "pcm");
+      webrtz::test::ResourcePath("audio_coding/speech_mono_32_48kHz", "pcm");
   test::AudioLoop audio_loop;
   EXPECT_EQ(kSampleRateHz, encoder->SampleRateHz());
   ASSERT_TRUE(audio_loop.Init(kInputFileName, kMaxLoopLengthSamples,
@@ -148,4 +148,4 @@ TEST(BandwidthAdaptationTest, BandwidthAdaptationTest) {
             kMinWidebandRatio);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

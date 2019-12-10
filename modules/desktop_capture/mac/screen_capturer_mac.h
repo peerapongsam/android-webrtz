@@ -26,7 +26,7 @@
 #include "modules/desktop_capture/screen_capturer_helper.h"
 #include "modules/desktop_capture/shared_desktop_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DisplayStreamManager;
 
@@ -104,6 +104,6 @@ class ScreenCapturerMac final : public DesktopCapturer {
   RTC_DISALLOW_COPY_AND_ASSIGN(ScreenCapturerMac);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_MAC_SCREEN_CAPTURER_MAC_H_

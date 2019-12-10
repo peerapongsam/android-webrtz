@@ -24,7 +24,7 @@
 using cricket::FakeDtlsTransport;
 using cricket::Candidate;
 using cricket::Candidates;
-using webrtc::SdpType;
+using webrtz::SdpType;
 
 static const int kTimeout = 100;
 static const char kIceUfrag1[] = "u0001";
@@ -39,7 +39,7 @@ static const char kVideoMid1[] = "video1";
 static const char kVideoMid2[] = "video2";
 static const char kDataMid1[] = "data1";
 
-namespace webrtc {
+namespace webrtz {
 
 class FakeTransportFactory : public cricket::TransportFactoryInterface {
  public:
@@ -1409,4 +1409,4 @@ TEST_F(JsepTransportControllerTest, RemoveContentFromBundleGroup) {
                   .ok());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

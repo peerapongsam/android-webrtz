@@ -16,7 +16,7 @@
 
 #include "modules/desktop_capture/desktop_capture_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MouseCursorMonitor* MouseCursorMonitor::CreateForWindow(
     const DesktopCaptureOptions& options,
@@ -36,4 +36,4 @@ std::unique_ptr<MouseCursorMonitor> MouseCursorMonitor::Create(
       CreateForScreen(options, kFullDesktopScreenId));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

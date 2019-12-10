@@ -16,7 +16,7 @@
 #include "rtc_base/format_macros.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 int32_t Channel::SendData(FrameType frameType,
                           uint8_t payloadType,
@@ -418,4 +418,4 @@ double Channel::BitRate() {
   return rate;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

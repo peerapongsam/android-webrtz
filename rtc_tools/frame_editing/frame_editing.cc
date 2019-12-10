@@ -60,7 +60,7 @@ int main(int argc, char* argv[]) {
     "--out_path(string): The output file to which frames are written."
     " Default: output.yuv\n";
 
-  webrtc::test::CommandLineParser parser;
+  webrtz::test::CommandLineParser parser;
 
   // Init the parser and set the usage message
   parser.Init(argc, argv);
@@ -104,6 +104,6 @@ int main(int argc, char* argv[]) {
     fprintf(stderr, "Error: width or height cannot be <= 0!\n");
     return -3;
   }
-  return webrtc::EditFrames(in_path, width, height, first_frame_to_cut,
+  return webrtz::EditFrames(in_path, width, height, first_frame_to_cut,
                             interval, last_frame_to_cut, out_path);
 }

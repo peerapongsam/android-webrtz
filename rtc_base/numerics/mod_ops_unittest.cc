@@ -11,7 +11,7 @@
 #include "rtc_base/numerics/mod_ops.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 class TestModOps : public ::testing::Test {
  protected:
   // Can't use std::numeric_limits<unsigned long>::max() since
@@ -153,4 +153,4 @@ TEST_F(TestModOps, MinDiffWitDivisor) {
     ASSERT_EQ(D / 2 - i, (MinDiff<uint16_t, D>(0, D / 2 - i)));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

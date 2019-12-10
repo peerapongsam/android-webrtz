@@ -16,7 +16,7 @@
 #include "modules/audio_device/dummy/file_audio_device.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool FileAudioDeviceFactory::_isConfigured = false;
 char FileAudioDeviceFactory::_inputAudioFilename[MAX_FILENAME_LEN] = "";
@@ -56,4 +56,4 @@ void FileAudioDeviceFactory::SetFilenamesToUse(
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

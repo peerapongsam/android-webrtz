@@ -28,7 +28,7 @@
 #include "modules/audio_processing/utility/ooura_fft.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Proves linear echo cancellation functionality
 class Subtractor {
@@ -93,6 +93,6 @@ class Subtractor {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(Subtractor);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_SUBTRACTOR_H_

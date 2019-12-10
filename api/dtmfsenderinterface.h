@@ -16,7 +16,7 @@
 #include "api/mediastreaminterface.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // DtmfSender callback interface, used to implement RTCDtmfSender events.
 // Applications should implement this interface to get notifications from the
@@ -92,6 +92,6 @@ class DtmfSenderInterface : public rtc::RefCountInterface {
   virtual ~DtmfSenderInterface() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_DTMFSENDERINTERFACE_H_

@@ -10,7 +10,7 @@
 
 #include "api/rtpreceiverinterface.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpSource::RtpSource(int64_t timestamp_ms,
                      uint32_t source_id,
@@ -41,4 +41,4 @@ std::vector<RtpSource> RtpReceiverInterface::GetSources() const {
   return {};
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

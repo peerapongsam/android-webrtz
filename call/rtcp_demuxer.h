@@ -19,7 +19,7 @@
 #include "call/ssrc_binding_observer.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcpPacketSinkInterface;
 
@@ -80,6 +80,6 @@ class RtcpDemuxer : public SsrcBindingObserver {
   std::vector<RtcpPacketSinkInterface*> broadcast_sinks_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTCP_DEMUXER_H_

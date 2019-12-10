@@ -28,7 +28,7 @@
 
 #include <stdio.h>
 
-namespace webrtc {
+namespace webrtz {
 
 typedef const unsigned char* (*GetCategoryEnabledPtr)(const char* name);
 typedef void (*AddTraceEventPtr)(char phase,
@@ -68,7 +68,7 @@ class EventTracer {
       unsigned char flags);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace rtc {
 namespace tracing {

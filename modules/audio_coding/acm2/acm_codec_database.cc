@@ -25,7 +25,7 @@
 #error iSAC and iSACFX codecs cannot be enabled at the same time
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace acm2 {
 
@@ -340,4 +340,4 @@ int ACMCodecDB::ReceiverCodecNumber(const CodecInst& codec_inst) {
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz

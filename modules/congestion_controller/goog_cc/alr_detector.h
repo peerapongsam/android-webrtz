@@ -18,11 +18,11 @@
 #include "rtc_base/rate_statistics.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
-namespace webrtc_cc {
+namespace webrtz_cc {
 
 // Application limited region detector is a class that utilizes signals of
 // elapsed time and bytes sent to estimate whether network traffic is
@@ -71,7 +71,7 @@ class AlrDetector {
   RtcEventLog* event_log_;
 };
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_GOOG_CC_ALR_DETECTOR_H_

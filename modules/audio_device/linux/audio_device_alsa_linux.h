@@ -26,7 +26,7 @@
 #include <sys/soundcard.h>
 
 
-namespace webrtc
+namespace webrtz
 {
 class EventWrapper;
 

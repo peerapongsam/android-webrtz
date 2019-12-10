@@ -23,12 +23,12 @@
 RTC_PUSH_IGNORING_WUNDEF()
 #include "rtc_tools/network_tester/network_tester_packet.pb.h"
 RTC_POP_IGNORING_WUNDEF()
-using webrtc::network_tester::packet::NetworkTesterPacket;
+using webrtz::network_tester::packet::NetworkTesterPacket;
 #else
 class NetworkTesterPacket;
 #endif  // WEBRTC_NETWORK_TESTER_PROTO
 
-namespace webrtc {
+namespace webrtz {
 
 class TestController;
 
@@ -60,6 +60,6 @@ class PacketSender {
   RTC_DISALLOW_COPY_AND_ASSIGN(PacketSender);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_NETWORK_TESTER_PACKET_SENDER_H_

@@ -19,7 +19,7 @@
 #include "call/video_config.h"
 #include "call/video_send_stream.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoBitrateAllocator;
 class VideoCodec;
@@ -67,6 +67,6 @@ class VideoCodecInitializer {
       bool nack_enabled);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INCLUDE_VIDEO_CODEC_INITIALIZER_H_

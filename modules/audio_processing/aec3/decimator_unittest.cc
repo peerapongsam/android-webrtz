@@ -21,7 +21,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -145,4 +145,4 @@ TEST(Decimator, CorrectDownSamplingFactor) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

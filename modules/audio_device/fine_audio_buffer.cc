@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FineAudioBuffer::FineAudioBuffer(AudioDeviceBuffer* device_buffer,
                                  int sample_rate,
@@ -91,4 +91,4 @@ void FineAudioBuffer::DeliverRecordedData(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

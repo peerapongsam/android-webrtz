@@ -21,7 +21,7 @@
 #include "api/array_view.h"
 #include "modules/audio_processing/aec3/aec3_common.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Struct that holds imaginary data produced from 128 point real-valued FFTs.
 struct FftData {
@@ -91,6 +91,6 @@ struct FftData {
   std::array<float, kFftLengthBy2Plus1> im;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_FFT_DATA_H_

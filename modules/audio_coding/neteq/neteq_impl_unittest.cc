@@ -46,7 +46,7 @@ using ::testing::WithArg;
 using ::testing::Pointee;
 using ::testing::IsNull;
 
-namespace webrtc {
+namespace webrtz {
 
 // This function is called when inserting a packet list into the mock packet
 // buffer. The purpose is to delete all inserted packets properly, to avoid
@@ -1513,4 +1513,4 @@ TEST_F(NetEqImplTest120ms, Accelerate) {
   EXPECT_EQ(kAccelerate, neteq_->last_operation_for_test());
 }
 
-}// namespace webrtc
+}// namespace webrtz

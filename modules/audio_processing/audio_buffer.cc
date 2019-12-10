@@ -17,7 +17,7 @@
 #include "modules/audio_processing/common.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const size_t kSamplesPer16kHzChannel = 160;
@@ -472,4 +472,4 @@ void AudioBuffer::MergeFrequencyBands() {
   splitting_filter_->Synthesis(split_data_.get(), data_.get());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

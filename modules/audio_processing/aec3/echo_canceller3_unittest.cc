@@ -25,7 +25,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using testing::StrictMock;
@@ -229,9 +229,9 @@ class EchoCanceller3Tester {
         (kNumFramesToProcess *
          rtc::CheckedDivExact(LowestBandRate(sample_rate_hz_), 100)) /
         kBlockSize;
-    std::unique_ptr<testing::StrictMock<webrtc::test::MockBlockProcessor>>
+    std::unique_ptr<testing::StrictMock<webrtz::test::MockBlockProcessor>>
         block_processor_mock(
-            new StrictMock<webrtc::test::MockBlockProcessor>());
+            new StrictMock<webrtz::test::MockBlockProcessor>());
     EXPECT_CALL(*block_processor_mock, BufferRender(_))
         .Times(expected_num_block_to_process);
     EXPECT_CALL(*block_processor_mock, UpdateEchoLeakageStatus(_)).Times(0);
@@ -306,9 +306,9 @@ class EchoCanceller3Tester {
         (kNumFramesToProcess *
          rtc::CheckedDivExact(LowestBandRate(sample_rate_hz_), 100)) /
         kBlockSize;
-    std::unique_ptr<testing::StrictMock<webrtc::test::MockBlockProcessor>>
+    std::unique_ptr<testing::StrictMock<webrtz::test::MockBlockProcessor>>
         block_processor_mock(
-            new StrictMock<webrtc::test::MockBlockProcessor>());
+            new StrictMock<webrtz::test::MockBlockProcessor>());
     EXPECT_CALL(*block_processor_mock, BufferRender(_))
         .Times(expected_num_block_to_process);
     EXPECT_CALL(*block_processor_mock, ProcessCapture(_, _, _))
@@ -396,9 +396,9 @@ class EchoCanceller3Tester {
         (kNumFramesToProcess *
          rtc::CheckedDivExact(LowestBandRate(sample_rate_hz_), 100)) /
         kBlockSize;
-    std::unique_ptr<testing::StrictMock<webrtc::test::MockBlockProcessor>>
+    std::unique_ptr<testing::StrictMock<webrtz::test::MockBlockProcessor>>
         block_processor_mock(
-            new StrictMock<webrtc::test::MockBlockProcessor>());
+            new StrictMock<webrtz::test::MockBlockProcessor>());
     EXPECT_CALL(*block_processor_mock, BufferRender(_))
         .Times(expected_num_block_to_process);
     EXPECT_CALL(*block_processor_mock, UpdateEchoLeakageStatus(_)).Times(0);
@@ -745,4 +745,4 @@ TEST(EchoCanceller3InputCheck, DISABLED_WrongSampleRate) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

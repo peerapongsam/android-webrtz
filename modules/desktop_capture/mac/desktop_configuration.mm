@@ -24,7 +24,7 @@
 
 #endif  // MAC_OS_X_VERSION_10_7
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -184,4 +184,4 @@ MacDesktopConfiguration::FindDisplayConfigurationById(
   return NULL;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

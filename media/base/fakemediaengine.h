@@ -33,7 +33,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/stringutils.h"
 
-using webrtc::RtpExtension;
+using webrtz::RtpExtension;
 
 namespace cricket {
 
@@ -138,36 +138,36 @@ template <class Base> class RtpHelper : public Base {
     return RemoveStreamBySsrc(&receive_streams_, ssrc);
   }
 
-  virtual webrtc::RtpParameters GetRtpSendParameters(uint32_t ssrc) const {
+  virtual webrtz::RtpParameters GetRtpSendParameters(uint32_t ssrc) const {
     auto parameters_iterator = rtp_send_parameters_.find(ssrc);
     if (parameters_iterator != rtp_send_parameters_.end()) {
       return parameters_iterator->second;
     }
-    return webrtc::RtpParameters();
+    return webrtz::RtpParameters();
   }
-  virtual webrtc::RTCError SetRtpSendParameters(
+  virtual webrtz::RTCError SetRtpSendParameters(
       uint32_t ssrc,
-      const webrtc::RtpParameters& parameters) {
+      const webrtz::RtpParameters& parameters) {
     auto parameters_iterator = rtp_send_parameters_.find(ssrc);
     if (parameters_iterator != rtp_send_parameters_.end()) {
       parameters_iterator->second = parameters;
-      return webrtc::RTCError::OK();
+      return webrtz::RTCError::OK();
     }
     // Replicate the behavior of the real media channel: return false
     // when setting parameters for unknown SSRCs.
-    return webrtc::RTCError(webrtc::RTCErrorType::INTERNAL_ERROR);
+    return webrtz::RTCError(webrtz::RTCErrorType::INTERNAL_ERROR);
   }
 
-  virtual webrtc::RtpParameters GetRtpReceiveParameters(uint32_t ssrc) const {
+  virtual webrtz::RtpParameters GetRtpReceiveParameters(uint32_t ssrc) const {
     auto parameters_iterator = rtp_receive_parameters_.find(ssrc);
     if (parameters_iterator != rtp_receive_parameters_.end()) {
       return parameters_iterator->second;
     }
-    return webrtc::RtpParameters();
+    return webrtz::RtpParameters();
   }
   virtual bool SetRtpReceiveParameters(
       uint32_t ssrc,
-      const webrtc::RtpParameters& parameters) {
+      const webrtz::RtpParameters& parameters) {
     auto parameters_iterator = rtp_receive_parameters_.find(ssrc);
     if (parameters_iterator != rtp_receive_parameters_.end()) {
       parameters_iterator->second = parameters;
@@ -295,8 +295,8 @@ template <class Base> class RtpHelper : public Base {
   RtcpParameters send_rtcp_parameters_;
   RtcpParameters recv_rtcp_parameters_;
   std::set<uint32_t> muted_streams_;
-  std::map<uint32_t, webrtc::RtpParameters> rtp_send_parameters_;
-  std::map<uint32_t, webrtc::RtpParameters> rtp_receive_parameters_;
+  std::map<uint32_t, webrtz::RtpParameters> rtp_send_parameters_;
+  std::map<uint32_t, webrtz::RtpParameters> rtp_receive_parameters_;
   bool fail_set_send_codecs_;
   bool fail_set_recv_codecs_;
   uint32_t send_ssrc_;
@@ -423,12 +423,12 @@ class FakeVoiceMediaChannel : public RtpHelper<VoiceMediaChannel> {
 
   virtual void SetRawAudioSink(
       uint32_t ssrc,
-      std::unique_ptr<webrtc::AudioSinkInterface> sink) {
+      std::unique_ptr<webrtz::AudioSinkInterface> sink) {
     sink_ = std::move(sink);
   }
 
-  virtual std::vector<webrtc::RtpSource> GetSources(uint32_t ssrc) const {
-    return std::vector<webrtc::RtpSource>();
+  virtual std::vector<webrtz::RtpSource> GetSources(uint32_t ssrc) const {
+    return std::vector<webrtz::RtpSource>();
   }
 
  private:
@@ -503,7 +503,7 @@ class FakeVoiceMediaChannel : public RtpHelper<VoiceMediaChannel> {
   std::vector<DtmfInfo> dtmf_info_queue_;
   AudioOptions options_;
   std::map<uint32_t, std::unique_ptr<VoiceChannelAudioSink>> local_sinks_;
-  std::unique_ptr<webrtc::AudioSinkInterface> sink_;
+  std::unique_ptr<webrtz::AudioSinkInterface> sink_;
   int max_bps_;
 };
 
@@ -530,7 +530,7 @@ class FakeVideoMediaChannel : public RtpHelper<VideoMediaChannel> {
   const std::vector<VideoCodec>& codecs() const { return send_codecs(); }
   bool rendering() const { return playout(); }
   const VideoOptions& options() const { return options_; }
-  const std::map<uint32_t, rtc::VideoSinkInterface<webrtc::VideoFrame>*>&
+  const std::map<uint32_t, rtc::VideoSinkInterface<webrtz::VideoFrame>*>&
   sinks() const {
     return sinks_;
   }
@@ -561,7 +561,7 @@ class FakeVideoMediaChannel : public RtpHelper<VideoMediaChannel> {
     return true;
   }
   bool SetSink(uint32_t ssrc,
-               rtc::VideoSinkInterface<webrtc::VideoFrame>* sink) override {
+               rtc::VideoSinkInterface<webrtz::VideoFrame>* sink) override {
     if (ssrc != 0 && sinks_.find(ssrc) == sinks_.end()) {
       return false;
     }
@@ -579,7 +579,7 @@ class FakeVideoMediaChannel : public RtpHelper<VideoMediaChannel> {
       uint32_t ssrc,
       bool enable,
       const VideoOptions* options,
-      rtc::VideoSourceInterface<webrtc::VideoFrame>* source) override {
+      rtc::VideoSourceInterface<webrtz::VideoFrame>* source) override {
     if (!RtpHelper<VideoMediaChannel>::MuteStream(ssrc, !enable)) {
       return false;
     }
@@ -642,8 +642,8 @@ class FakeVideoMediaChannel : public RtpHelper<VideoMediaChannel> {
   FakeVideoEngine* engine_;
   std::vector<VideoCodec> recv_codecs_;
   std::vector<VideoCodec> send_codecs_;
-  std::map<uint32_t, rtc::VideoSinkInterface<webrtc::VideoFrame>*> sinks_;
-  std::map<uint32_t, rtc::VideoSourceInterface<webrtc::VideoFrame>*> sources_;
+  std::map<uint32_t, rtc::VideoSinkInterface<webrtz::VideoFrame>*> sinks_;
+  std::map<uint32_t, rtc::VideoSourceInterface<webrtz::VideoFrame>*> sources_;
   VideoOptions options_;
   int max_bps_;
 };
@@ -776,11 +776,11 @@ class FakeVoiceEngine : public FakeBaseEngine {
     codecs_.push_back(AudioCodec(101, "fake_audio_codec", 0, 0, 1));
   }
   void Init() {}
-  rtc::scoped_refptr<webrtc::AudioState> GetAudioState() const {
-    return rtc::scoped_refptr<webrtc::AudioState>();
+  rtc::scoped_refptr<webrtz::AudioState> GetAudioState() const {
+    return rtc::scoped_refptr<webrtz::AudioState>();
   }
 
-  VoiceMediaChannel* CreateChannel(webrtc::Call* call,
+  VoiceMediaChannel* CreateChannel(webrtz::Call* call,
                                    const MediaConfig& config,
                                    const AudioOptions& options) {
     if (fail_create_channel_) {
@@ -839,7 +839,7 @@ class FakeVideoEngine : public FakeBaseEngine {
     return true;
   }
 
-  VideoMediaChannel* CreateChannel(webrtc::Call* call,
+  VideoMediaChannel* CreateChannel(webrtz::Call* call,
                                    const MediaConfig& config,
                                    const VideoOptions& options) {
     if (fail_create_channel_) {

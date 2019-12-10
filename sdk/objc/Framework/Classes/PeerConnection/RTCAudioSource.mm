@@ -19,7 +19,7 @@
 @synthesize nativeAudioSource = _nativeAudioSource;
 
 - (instancetype)initWithNativeAudioSource:
-    (rtc::scoped_refptr<webrtc::AudioSourceInterface>)nativeAudioSource {
+    (rtc::scoped_refptr<webrtz::AudioSourceInterface>)nativeAudioSource {
   RTC_DCHECK(nativeAudioSource);
   if (self = [super initWithNativeMediaSource:nativeAudioSource
                                          type:RTCMediaSourceTypeAudio]) {
@@ -29,7 +29,7 @@
 }
 
 - (instancetype)initWithNativeMediaSource:
-    (rtc::scoped_refptr<webrtc::MediaSourceInterface>)nativeMediaSource
+    (rtc::scoped_refptr<webrtz::MediaSourceInterface>)nativeMediaSource
                                      type:(RTCMediaSourceType)type {
   RTC_NOTREACHED();
   return nil;

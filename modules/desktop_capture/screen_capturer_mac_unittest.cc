@@ -26,7 +26,7 @@ using ::testing::_;
 using ::testing::AnyNumber;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 class ScreenCapturerMacTest : public testing::Test {
  public:
@@ -98,4 +98,4 @@ TEST_F(ScreenCapturerMacTest, Capture) {
   capturer_->CaptureFrame();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -167,7 +167,7 @@ rtc_source_set("audio_device_generic") {
   }
 }
 
-# Contains default implementations of webrtc::AudioDeviceModule for Windows,
+# Contains default implementations of webrtz::AudioDeviceModule for Windows,
 # Linux, Mac, iOS and Android.
 rtc_source_set("audio_device_impl") {
   visibility = [ "*" ]
@@ -482,12 +482,12 @@ if (rtc_include_tests) {
 if (!build_with_chromium && is_android) {
   rtc_android_library("audio_device_java") {
     java_files = [
-      "android/java/src/org/webrtc/voiceengine/BuildInfo.java",
-      "android/java/src/org/webrtc/voiceengine/WebRtcAudioEffects.java",
-      "android/java/src/org/webrtc/voiceengine/WebRtcAudioManager.java",
-      "android/java/src/org/webrtc/voiceengine/WebRtcAudioRecord.java",
-      "android/java/src/org/webrtc/voiceengine/WebRtcAudioTrack.java",
-      "android/java/src/org/webrtc/voiceengine/WebRtcAudioUtils.java",
+      "android/java/src/org/webrtz/voiceengine/BuildInfo.java",
+      "android/java/src/org/webrtz/voiceengine/WebRtcAudioEffects.java",
+      "android/java/src/org/webrtz/voiceengine/WebRtcAudioManager.java",
+      "android/java/src/org/webrtz/voiceengine/WebRtcAudioRecord.java",
+      "android/java/src/org/webrtz/voiceengine/WebRtcAudioTrack.java",
+      "android/java/src/org/webrtz/voiceengine/WebRtcAudioUtils.java",
     ]
     deps = [
       "../../rtc_base:base_java",

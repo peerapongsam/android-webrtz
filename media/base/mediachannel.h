@@ -49,7 +49,7 @@ namespace rtc {
 class Timing;
 }
 
-namespace webrtc {
+namespace webrtz {
 class AudioSinkInterface;
 class VideoFrame;
 }
@@ -399,8 +399,8 @@ struct VoiceSenderInfo : public MediaSenderInfo {
   float residual_echo_likelihood = 0.0f;
   float residual_echo_likelihood_recent_max = 0.0f;
   bool typing_noise_detected = false;
-  webrtc::ANAStats ana_statistics;
-  webrtc::AudioProcessingStats apm_statistics;
+  webrtz::ANAStats ana_statistics;
+  webrtz::AudioProcessingStats apm_statistics;
 };
 
 struct VoiceReceiverInfo : public MediaReceiverInfo {
@@ -467,7 +467,7 @@ struct VideoSenderInfo : public MediaSenderInfo {
   uint32_t frames_encoded = 0;
   bool has_entered_low_resolution = false;
   rtc::Optional<uint64_t> qp_sum;
-  webrtc::VideoContentType content_type = webrtc::VideoContentType::UNSPECIFIED;
+  webrtz::VideoContentType content_type = webrtz::VideoContentType::UNSPECIFIED;
   // https://w3c.github.io/webrtc-stats/#dom-rtcvideosenderstats-hugeframessent
   uint32_t huge_frames_sent = 0;
 };
@@ -495,7 +495,7 @@ struct VideoReceiverInfo : public MediaReceiverInfo {
   rtc::Optional<uint64_t> qp_sum;
   int64_t interframe_delay_max_ms = -1;
 
-  webrtc::VideoContentType content_type = webrtc::VideoContentType::UNSPECIFIED;
+  webrtz::VideoContentType content_type = webrtz::VideoContentType::UNSPECIFIED;
 
   // All stats below are gathered per-VideoReceiver, but some will be correlated
   // across MediaStreamTracks.  NOTE(hta): when sinking stats into per-SSRC
@@ -522,7 +522,7 @@ struct VideoReceiverInfo : public MediaReceiverInfo {
 
   // Timing frame info: all important timestamps for a full lifetime of a
   // single 'timing frame'.
-  rtc::Optional<webrtc::TimingFrameInfo> timing_frame_info;
+  rtc::Optional<webrtz::TimingFrameInfo> timing_frame_info;
 };
 
 struct DataSenderInfo : public MediaSenderInfo {
@@ -544,7 +544,7 @@ struct BandwidthEstimationInfo {
 };
 
 // Maps from payload type to |RtpCodecParameters|.
-typedef std::map<int, webrtc::RtpCodecParameters> RtpCodecParametersMap;
+typedef std::map<int, webrtz::RtpCodecParameters> RtpCodecParametersMap;
 
 struct VoiceMediaInfo {
   void Clear() {
@@ -594,7 +594,7 @@ struct RtpParameters {
   virtual ~RtpParameters() = default;
 
   std::vector<Codec> codecs;
-  std::vector<webrtc::RtpExtension> extensions;
+  std::vector<webrtz::RtpExtension> extensions;
   // TODO(pthatcher): Add streams.
   RtcpParameters rtcp;
 
@@ -657,20 +657,20 @@ class VoiceMediaChannel : public MediaChannel {
   virtual ~VoiceMediaChannel() {}
   virtual bool SetSendParameters(const AudioSendParameters& params) = 0;
   virtual bool SetRecvParameters(const AudioRecvParameters& params) = 0;
-  virtual webrtc::RtpParameters GetRtpSendParameters(uint32_t ssrc) const = 0;
-  virtual webrtc::RTCError SetRtpSendParameters(
+  virtual webrtz::RtpParameters GetRtpSendParameters(uint32_t ssrc) const = 0;
+  virtual webrtz::RTCError SetRtpSendParameters(
       uint32_t ssrc,
-      const webrtc::RtpParameters& parameters) = 0;
+      const webrtz::RtpParameters& parameters) = 0;
   // Get the receive parameters for the incoming stream identified by |ssrc|.
   // If |ssrc| is 0, retrieve the receive parameters for the default receive
   // stream, which is used when SSRCs are not signaled. Note that calling with
   // an |ssrc| of 0 will return encoding parameters with an unset |ssrc|
   // member.
-  virtual webrtc::RtpParameters GetRtpReceiveParameters(
+  virtual webrtz::RtpParameters GetRtpReceiveParameters(
       uint32_t ssrc) const = 0;
   virtual bool SetRtpReceiveParameters(
       uint32_t ssrc,
-      const webrtc::RtpParameters& parameters) = 0;
+      const webrtz::RtpParameters& parameters) = 0;
   // Starts or stops playout of received audio.
   virtual void SetPlayout(bool playout) = 0;
   // Starts or stops sending (and potentially capture) of local audio.
@@ -694,9 +694,9 @@ class VoiceMediaChannel : public MediaChannel {
 
   virtual void SetRawAudioSink(
       uint32_t ssrc,
-      std::unique_ptr<webrtc::AudioSinkInterface> sink) = 0;
+      std::unique_ptr<webrtz::AudioSinkInterface> sink) = 0;
 
-  virtual std::vector<webrtc::RtpSource> GetSources(uint32_t ssrc) const = 0;
+  virtual std::vector<webrtz::RtpSource> GetSources(uint32_t ssrc) const = 0;
 };
 
 // TODO(deadbeef): Rename to VideoSenderParameters, since they're intended to
@@ -732,20 +732,20 @@ class VideoMediaChannel : public MediaChannel {
 
   virtual bool SetSendParameters(const VideoSendParameters& params) = 0;
   virtual bool SetRecvParameters(const VideoRecvParameters& params) = 0;
-  virtual webrtc::RtpParameters GetRtpSendParameters(uint32_t ssrc) const = 0;
-  virtual webrtc::RTCError SetRtpSendParameters(
+  virtual webrtz::RtpParameters GetRtpSendParameters(uint32_t ssrc) const = 0;
+  virtual webrtz::RTCError SetRtpSendParameters(
       uint32_t ssrc,
-      const webrtc::RtpParameters& parameters) = 0;
+      const webrtz::RtpParameters& parameters) = 0;
   // Get the receive parameters for the incoming stream identified by |ssrc|.
   // If |ssrc| is 0, retrieve the receive parameters for the default receive
   // stream, which is used when SSRCs are not signaled. Note that calling with
   // an |ssrc| of 0 will return encoding parameters with an unset |ssrc|
   // member.
-  virtual webrtc::RtpParameters GetRtpReceiveParameters(
+  virtual webrtz::RtpParameters GetRtpReceiveParameters(
       uint32_t ssrc) const = 0;
   virtual bool SetRtpReceiveParameters(
       uint32_t ssrc,
-      const webrtc::RtpParameters& parameters) = 0;
+      const webrtz::RtpParameters& parameters) = 0;
   // Gets the currently set codecs/payload types to be used for outgoing media.
   virtual bool GetSendCodec(VideoCodec* send_codec) = 0;
   // Starts or stops transmission (and potentially capture) of local video.
@@ -756,14 +756,14 @@ class VideoMediaChannel : public MediaChannel {
       uint32_t ssrc,
       bool enable,
       const VideoOptions* options,
-      rtc::VideoSourceInterface<webrtc::VideoFrame>* source) = 0;
+      rtc::VideoSourceInterface<webrtz::VideoFrame>* source) = 0;
   // Sets the sink object to be used for the specified stream.
   // If SSRC is 0, the sink is used for the 'default' stream.
   virtual bool SetSink(uint32_t ssrc,
-                       rtc::VideoSinkInterface<webrtc::VideoFrame>* sink) = 0;
+                       rtc::VideoSinkInterface<webrtz::VideoFrame>* sink) = 0;
   // This fills the "bitrate parts" (rtx, video bitrate) of the
   // BandwidthEstimationInfo, since that part that isn't possible to get
-  // through webrtc::Call::GetStats, as they are statistics of the send
+  // through webrtz::Call::GetStats, as they are statistics of the send
   // streams.
   // TODO(holmer): We should change this so that either BWE graphs doesn't
   // need access to bitrates of the streams, or change the (RTC)StatsCollector

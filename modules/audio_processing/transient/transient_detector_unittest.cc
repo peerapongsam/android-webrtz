@@ -21,7 +21,7 @@
 #include "test/testsupport/fileutils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kSampleRatesHz[] = {ts::kSampleRate8kHz,
                                      ts::kSampleRate16kHz,
@@ -101,4 +101,4 @@ TEST(TransientDetectorTest, CorrectnessBasedOnFiles) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -116,7 +116,7 @@ void VideoCapturerListener::OnStateChange(VideoCapturer* capturer,
   last_capture_state_ = result;
 }
 
-void VideoCapturerListener::OnFrame(const webrtc::VideoFrame& frame) {
+void VideoCapturerListener::OnFrame(const webrtz::VideoFrame& frame) {
   ++frame_count_;
   if (1 == frame_count_) {
     frame_width_ = frame.width();

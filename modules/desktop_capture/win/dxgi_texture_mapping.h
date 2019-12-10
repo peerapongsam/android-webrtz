@@ -18,7 +18,7 @@
 #include "modules/desktop_capture/desktop_region.h"
 #include "modules/desktop_capture/win/dxgi_texture.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A DxgiTexture which directly maps bitmap from IDXGIResource. This class is
 // used when DXGI_OUTDUPL_DESC.DesktopImageInSystemMemory is true. (This usually
@@ -42,6 +42,6 @@ class DxgiTextureMapping : public DxgiTexture {
   IDXGIOutputDuplication* const duplication_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_TEXTURE_MAPPING_H_

@@ -17,7 +17,7 @@
 #include "modules/audio_coding/neteq/tools/rtp_file_source.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 NetEqPacketSourceInput::NetEqPacketSourceInput() : next_output_event_ms_(0) {}
@@ -112,4 +112,4 @@ PacketSource* NetEqEventLogInput::source() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

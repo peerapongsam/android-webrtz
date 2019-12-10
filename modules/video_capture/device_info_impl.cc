@@ -20,7 +20,7 @@
 #define abs(a) (a >= 0 ? a : -a)
 #endif
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 
 DeviceInfoImpl::DeviceInfoImpl()
@@ -228,4 +228,4 @@ int32_t DeviceInfoImpl::GetOrientation(const char* deviceUniqueIdUTF8,
   return -1;
 }
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

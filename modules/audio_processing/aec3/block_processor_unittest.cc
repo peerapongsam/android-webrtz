@@ -25,7 +25,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using testing::AtLeast;
@@ -112,9 +112,9 @@ TEST(BlockProcessor, DISABLED_DelayControllerIntegration) {
   Random random_generator(42U);
   for (auto rate : {8000, 16000, 32000, 48000}) {
     SCOPED_TRACE(ProduceDebugText(rate));
-    std::unique_ptr<testing::StrictMock<webrtc::test::MockRenderDelayBuffer>>
+    std::unique_ptr<testing::StrictMock<webrtz::test::MockRenderDelayBuffer>>
         render_delay_buffer_mock(
-            new StrictMock<webrtc::test::MockRenderDelayBuffer>(rate));
+            new StrictMock<webrtz::test::MockRenderDelayBuffer>(rate));
     EXPECT_CALL(*render_delay_buffer_mock, Insert(_))
         .Times(kNumBlocks)
         .WillRepeatedly(Return(RenderDelayBuffer::BufferingEvent::kNone));
@@ -147,15 +147,15 @@ TEST(BlockProcessor, DISABLED_SubmoduleIntegration) {
   Random random_generator(42U);
   for (auto rate : {8000, 16000, 32000, 48000}) {
     SCOPED_TRACE(ProduceDebugText(rate));
-    std::unique_ptr<testing::StrictMock<webrtc::test::MockRenderDelayBuffer>>
+    std::unique_ptr<testing::StrictMock<webrtz::test::MockRenderDelayBuffer>>
         render_delay_buffer_mock(
-            new StrictMock<webrtc::test::MockRenderDelayBuffer>(rate));
+            new StrictMock<webrtz::test::MockRenderDelayBuffer>(rate));
     std::unique_ptr<
-        testing::StrictMock<webrtc::test::MockRenderDelayController>>
+        testing::StrictMock<webrtz::test::MockRenderDelayController>>
         render_delay_controller_mock(
-            new StrictMock<webrtc::test::MockRenderDelayController>());
-    std::unique_ptr<testing::StrictMock<webrtc::test::MockEchoRemover>>
-        echo_remover_mock(new StrictMock<webrtc::test::MockEchoRemover>());
+            new StrictMock<webrtz::test::MockRenderDelayController>());
+    std::unique_ptr<testing::StrictMock<webrtz::test::MockEchoRemover>>
+        echo_remover_mock(new StrictMock<webrtz::test::MockEchoRemover>());
 
     EXPECT_CALL(*render_delay_buffer_mock, Insert(_))
         .Times(kNumBlocks - 1)
@@ -255,4 +255,4 @@ TEST(BlockProcessor, DISABLED_WrongSampleRate) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

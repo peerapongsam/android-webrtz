@@ -15,7 +15,7 @@
 #include "modules/remote_bitrate_estimator/include/bwe_defines.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DelayIncreaseDetectorInterface {
  public:
@@ -32,6 +32,6 @@ class DelayIncreaseDetectorInterface {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(DelayIncreaseDetectorInterface);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_DELAY_INCREASE_DETECTOR_INTERFACE_H_

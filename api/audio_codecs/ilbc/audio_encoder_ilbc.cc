@@ -20,7 +20,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/string_to_number.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 int GetIlbcBitrate(int ptime) {
   switch (ptime) {
@@ -79,4 +79,4 @@ std::unique_ptr<AudioEncoder> AudioEncoderIlbc::MakeAudioEncoder(
   return rtc::MakeUnique<AudioEncoderIlbcImpl>(config, payload_type);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

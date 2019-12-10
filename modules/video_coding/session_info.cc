@@ -13,7 +13,7 @@
 #include "modules/video_coding/packet.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -526,4 +526,4 @@ void VCMSessionInfo::InformOfEmptyPacket(uint16_t seq_num) {
     empty_seq_num_low_ = seq_num;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

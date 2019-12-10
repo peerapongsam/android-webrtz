@@ -75,12 +75,12 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  webrtc::test::SetExecutablePath(argv[0]);
-  webrtc::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
+  webrtz::test::SetExecutablePath(argv[0]);
+  webrtz::test::ValidateFieldTrialsStringOrDie(FLAG_force_fieldtrials);
   // InitFieldTrialsFromString stores the char*, so the char array must outlive
   // the application.
-  webrtc::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
-  webrtc::metrics::Enable();
+  webrtz::field_trial::InitFieldTrialsFromString(FLAG_force_fieldtrials);
+  webrtz::metrics::Enable();
 
 
   rtc::LogMessage::SetLogToStderr(FLAG_logs);
@@ -97,7 +97,7 @@ int main(int argc, char* argv[]) {
 
   std::string chartjson_result_file = FLAG_isolated_script_test_perf_output;
   if (!chartjson_result_file.empty()) {
-    webrtc::test::WritePerfResults(chartjson_result_file);
+    webrtz::test::WritePerfResults(chartjson_result_file);
   }
 
   return exit_code;

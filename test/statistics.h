@@ -12,7 +12,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class Statistics {
@@ -35,6 +35,6 @@ class Statistics {
   uint64_t count_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_STATISTICS_H_

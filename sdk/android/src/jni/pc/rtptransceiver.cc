@@ -20,7 +20,7 @@
 #include "sdk/android/src/jni/pc/rtpreceiver.h"
 #include "sdk/android/src/jni/pc/rtpsender.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 namespace {
@@ -148,4 +148,4 @@ void JNI_RtpTransceiver_SetDirection(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

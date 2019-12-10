@@ -22,7 +22,7 @@
 #include "modules/audio_processing/transient/wpd_tree.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kTransientLengthMs = 30;
 static const int kChunksAtStartupLeftToDelete =
@@ -173,4 +173,4 @@ float TransientDetector::ReferenceDetectionValue(const float* data,
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

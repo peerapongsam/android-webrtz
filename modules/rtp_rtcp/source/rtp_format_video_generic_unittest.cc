@@ -22,7 +22,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::Each;
@@ -189,4 +189,4 @@ TEST(RtpPacketizerVideoGeneric,
   EXPECT_EQ(num_packets, kMinNumPackets);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

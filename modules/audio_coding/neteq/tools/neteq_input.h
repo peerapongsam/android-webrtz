@@ -21,7 +21,7 @@
 #include "modules/audio_coding/neteq/tools/packet_source.h"
 #include "rtc_base/buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Interface class for input to the NetEqTest class.
@@ -79,5 +79,5 @@ class NetEqInput {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_NETEQ_INPUT_H_

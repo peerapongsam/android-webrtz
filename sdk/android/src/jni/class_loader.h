@@ -15,10 +15,10 @@
 
 #include "sdk/android/native_api/jni/class_loader.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
-using ::webrtc::InitClassLoader;
+using ::webrtz::InitClassLoader;
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_CLASS_LOADER_H_

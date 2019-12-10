@@ -11,7 +11,7 @@
 #include "api/mediastreaminterface.h"
 #include "sdk/android/generated_peerconnection_jni/jni/MediaSource_jni.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static ScopedJavaLocalRef<jobject>
@@ -21,4 +21,4 @@ JNI_MediaSource_GetState(JNIEnv* jni, const JavaParamRef<jclass>&, jlong j_p) {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

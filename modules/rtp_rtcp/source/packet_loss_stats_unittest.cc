@@ -11,7 +11,7 @@
 #include "modules/rtp_rtcp/source/packet_loss_stats.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class PacketLossStatsTest : public ::testing::Test {
  protected:
@@ -194,4 +194,4 @@ TEST_F(PacketLossStatsTest, OutOfOrderWrapped) {
   EXPECT_EQ(400, stats_.GetMultipleLossPacketCount());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

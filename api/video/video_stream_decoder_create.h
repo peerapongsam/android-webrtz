@@ -17,7 +17,7 @@
 
 #include "api/video/video_stream_decoder.h"
 
-namespace webrtc {
+namespace webrtz {
 // The |decoder_settings| parameter is a map between:
 // <payload type> -->  <<video format>, <number of cores>>.
 // The video format is used when instantiating a decoder, and
@@ -27,6 +27,6 @@ std::unique_ptr<VideoStreamDecoder> CreateVideoStreamDecoder(
     VideoDecoderFactory* decoder_factory,
     std::map<int, std::pair<SdpVideoFormat, int>> decoder_settings);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_VIDEO_STREAM_DECODER_CREATE_H_

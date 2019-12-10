@@ -23,7 +23,7 @@
 }
 
 - (instancetype)initWithNativeParameters:
-    (const webrtc::RtpParameters &)nativeParameters {
+    (const webrtz::RtpParameters &)nativeParameters {
   if (self = [self init]) {
     NSMutableArray *encodings = [[NSMutableArray alloc] init];
     for (const auto &encoding : nativeParameters.encodings) {
@@ -42,8 +42,8 @@
   return self;
 }
 
-- (webrtc::RtpParameters)nativeParameters {
-    webrtc::RtpParameters parameters;
+- (webrtz::RtpParameters)nativeParameters {
+    webrtz::RtpParameters parameters;
   for (RTCRtpEncodingParameters *encoding in _encodings) {
     parameters.encodings.push_back(encoding.nativeParameters);
   }

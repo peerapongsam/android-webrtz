@@ -20,7 +20,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(WPDTreeTest, Construction) {
   const size_t kTestBufferSize = 100;
@@ -190,4 +190,4 @@ TEST(WPDTreeTest, CorrectnessBasedOnMatlabFiles) {
   test_file->CloseFile();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

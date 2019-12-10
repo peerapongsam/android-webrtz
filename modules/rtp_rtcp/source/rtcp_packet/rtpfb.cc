@@ -12,7 +12,7 @@
 
 #include "modules/rtp_rtcp/source/byte_io.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr uint8_t Rtpfb::kPacketType;
 // RFC 4585, Section 6.1: Feedback format.
@@ -42,4 +42,4 @@ void Rtpfb::CreateCommonFeedback(uint8_t* payload) const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

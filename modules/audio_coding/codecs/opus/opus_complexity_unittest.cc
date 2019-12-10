@@ -16,7 +16,7 @@
 #include "test/testsupport/fileutils.h"
 #include "test/testsupport/perf_test.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 int64_t RunComplexityTest(const AudioEncoderOpusConfig& config) {
@@ -25,7 +25,7 @@ int64_t RunComplexityTest(const AudioEncoderOpusConfig& config) {
   const auto encoder = AudioEncoderOpus::MakeAudioEncoder(config, payload_type);
   // Open speech file.
   const std::string kInputFileName =
-      webrtc::test::ResourcePath("audio_coding/speech_mono_32_48kHz", "pcm");
+      webrtz::test::ResourcePath("audio_coding/speech_mono_32_48kHz", "pcm");
   test::AudioLoop audio_loop;
   constexpr int kSampleRateHz = 48000;
   EXPECT_EQ(kSampleRateHz, encoder->SampleRateHz());
@@ -95,4 +95,4 @@ TEST(AudioEncoderOpusComplexityAdaptationTest, AdaptationOff) {
                     100.0 * runtime_10999bps / runtime_15500bps, "percent",
                     true);
 }
-}  // namespace webrtc
+}  // namespace webrtz

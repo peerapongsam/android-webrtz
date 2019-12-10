@@ -22,7 +22,7 @@ RTC_FWD_DECL_OBJC_CLASS(RTCVideoFrame);
 @interface RTCObjCVideoSourceAdapter : NSObject<RTCVideoCapturerDelegate>
 @end
 
-namespace webrtc {
+namespace webrtz {
 
 class ObjCVideoTrackSource : public rtc::AdaptedVideoTrackSource {
  public:
@@ -54,6 +54,6 @@ class ObjCVideoTrackSource : public rtc::AdaptedVideoTrackSource {
   RTCObjCVideoSourceAdapter* adapter_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_CLASSES_VIDEO_OBJCVIDEOTRACKSOURCE_H_

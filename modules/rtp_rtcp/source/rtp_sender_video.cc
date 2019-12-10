@@ -30,7 +30,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr size_t kRedForFecHeaderLength = 1;
@@ -541,4 +541,4 @@ bool RTPSenderVideo::UpdateConditionalRetransmit(
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

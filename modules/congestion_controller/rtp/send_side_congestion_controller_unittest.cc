@@ -31,14 +31,14 @@ using testing::Return;
 using testing::SaveArg;
 using testing::StrictMock;
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 namespace test {
 
 namespace {
-using webrtc::test::MockCongestionObserver;
-const webrtc::PacedPacketInfo kPacingInfo0(0, 5, 2000);
-const webrtc::PacedPacketInfo kPacingInfo1(1, 8, 4000);
+using webrtz::test::MockCongestionObserver;
+const webrtz::PacedPacketInfo kPacingInfo0(0, 5, 2000);
+const webrtz::PacedPacketInfo kPacingInfo1(1, 8, 4000);
 
 const uint32_t kInitialBitrateBps = 60000;
 const float kDefaultPacingRate = 2.5f;
@@ -477,7 +477,7 @@ TEST_F(SendSideCongestionControllerTest, UpdatesDelayBasedEstimate) {
 }
 
 TEST_F(SendSideCongestionControllerTest, PacerQueueEncodeRatePushback) {
-  ::webrtc::test::ScopedFieldTrials pushback_field_trial(
+  ::webrtz::test::ScopedFieldTrials pushback_field_trial(
       "WebRTC-PacerPushbackExperiment/Enabled/");
   SetUp();
 
@@ -515,5 +515,5 @@ TEST_F(SendSideCongestionControllerTest, PacerQueueEncodeRatePushback) {
 }
 
 }  // namespace test
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

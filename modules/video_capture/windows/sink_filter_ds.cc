@@ -39,7 +39,7 @@ DEFINE_GUID(CLSID_SINKFILTER,
             0x12,
             0xc3);
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 
 typedef struct tagTHREADNAME_INFO {
@@ -445,4 +445,4 @@ STDMETHODIMP CaptureSinkFilter::GetClassID(OUT CLSID* pCLSID) {
 }
 
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

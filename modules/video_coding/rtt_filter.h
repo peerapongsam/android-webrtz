@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMRttFilter {
  public:
@@ -61,6 +61,6 @@ class VCMRttFilter {
   int64_t _driftBuf[kMaxDriftJumpCount];
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_RTT_FILTER_H_

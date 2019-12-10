@@ -29,7 +29,7 @@
 // 4. Parse the flags by calling ProcessFlags.
 // 5. Get the values of the flags using GetFlag.
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class CommandLineParser {
@@ -95,6 +95,6 @@ class CommandLineParser {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_SIMPLE_COMMAND_LINE_PARSER_H_

@@ -23,7 +23,7 @@
 #include "system_wrappers/include/clock.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 rtc::scoped_refptr<PacketBuffer> PacketBuffer::Create(
@@ -506,4 +506,4 @@ void PacketBuffer::OnTimestampReceived(uint32_t rtp_timestamp) {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 
 @protocol RTCVideoEncoderFactory;
 
-namespace webrtc {
+namespace webrtz {
 
 // TODO(andersc): Remove the inheritance from cricket::WebRtcVideoEncoderFactory
 // when the legacy path in [RTCPeerConnectionFactory init] is no longer needed.
@@ -47,6 +47,6 @@ class ObjCVideoEncoderFactory : public VideoEncoderFactory,
   mutable std::vector<cricket::VideoCodec> supported_codecs_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_SRC_OBJC_VIDEO_ENCODER_FACTORY_H_

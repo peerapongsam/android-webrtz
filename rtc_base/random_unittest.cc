@@ -17,7 +17,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 // Computes the positive remainder of x/n.
@@ -300,4 +300,4 @@ TEST(RandomNumberGeneratorTest, Gaussian) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

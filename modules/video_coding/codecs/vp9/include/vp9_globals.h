@@ -18,7 +18,7 @@
 
 #include "modules/video_coding/codecs/interface/common_constants.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const int16_t kMaxOneBytePictureId = 0x7F;    // 7 bits
 const int16_t kMaxTwoBytePictureId = 0x7FFF;  // 15 bits
@@ -213,6 +213,6 @@ struct RTPVideoHeaderVP9 {
   bool end_of_superframe;  // This frame is last frame in superframe.
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP9_INCLUDE_VP9_GLOBALS_H_

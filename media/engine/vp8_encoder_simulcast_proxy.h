@@ -18,7 +18,7 @@
 #include "api/video_codecs/video_encoder_factory.h"
 #include "modules/video_coding/codecs/vp8/include/vp8.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class provides fallback to SimulcastEncoderAdapter if default VP8Encoder
 // doesn't support simulcast for provided settings.
@@ -51,6 +51,6 @@ class VP8EncoderSimulcastProxy : public VP8Encoder {
   EncodedImageCallback* callback_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_ENGINE_VP8_ENCODER_SIMULCAST_PROXY_H_

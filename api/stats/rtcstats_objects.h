@@ -17,7 +17,7 @@
 
 #include "api/stats/rtcstats.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // https://w3c.github.io/webrtc-pc/#idl-def-rtcdatachannelstate
 struct RTCDataChannelState {
@@ -437,6 +437,6 @@ class RTCTransportStats final : public RTCStats {
   RTCStatsMember<std::string> remote_certificate_id;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_STATS_RTCSTATS_OBJECTS_H_

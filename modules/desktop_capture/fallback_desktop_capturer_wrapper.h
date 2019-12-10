@@ -18,7 +18,7 @@
 #include "modules/desktop_capture/desktop_frame.h"
 #include "modules/desktop_capture/shared_memory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A DesktopCapturer wrapper owns two DesktopCapturer implementations. If the
 // main DesktopCapturer fails, it uses the secondary one instead. Two capturers
@@ -58,6 +58,6 @@ class FallbackDesktopCapturerWrapper final : public DesktopCapturer,
   DesktopCapturer::Callback* callback_ = nullptr;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_FALLBACK_DESKTOP_CAPTURER_WRAPPER_H_

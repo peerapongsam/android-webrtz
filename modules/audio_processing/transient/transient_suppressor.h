@@ -18,7 +18,7 @@
 #include "rtc_base/gtest_prod_util.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class TransientDetector;
 
@@ -115,6 +115,6 @@ class TransientSuppressor {
   bool using_reference_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_TRANSIENT_SUPPRESSOR_H_

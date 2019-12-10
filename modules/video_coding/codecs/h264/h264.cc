@@ -23,7 +23,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -104,4 +104,4 @@ bool H264Decoder::IsSupported() {
   return IsH264CodecSupported();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

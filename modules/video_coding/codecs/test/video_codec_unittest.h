@@ -25,7 +25,7 @@
 #include "test/frame_generator.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoCodecUnitTest : public ::testing::Test {
  public:
@@ -40,7 +40,7 @@ class VideoCodecUnitTest : public ::testing::Test {
         last_input_frame_timestamp_(0) {}
 
  protected:
-  class FakeEncodeCompleteCallback : public webrtc::EncodedImageCallback {
+  class FakeEncodeCompleteCallback : public webrtz::EncodedImageCallback {
    public:
     explicit FakeEncodeCompleteCallback(VideoCodecUnitTest* test)
         : test_(test) {}
@@ -53,7 +53,7 @@ class VideoCodecUnitTest : public ::testing::Test {
     VideoCodecUnitTest* const test_;
   };
 
-  class FakeDecodeCompleteCallback : public webrtc::DecodedImageCallback {
+  class FakeDecodeCompleteCallback : public webrtz::DecodedImageCallback {
    public:
     explicit FakeDecodeCompleteCallback(VideoCodecUnitTest* test)
         : test_(test) {}
@@ -126,6 +126,6 @@ class VideoCodecUnitTest : public ::testing::Test {
   uint32_t last_input_frame_timestamp_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_TEST_VIDEO_CODEC_UNITTEST_H_

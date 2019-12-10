@@ -20,7 +20,7 @@ VideoSourceBase::VideoSourceBase() {
 VideoSourceBase::~VideoSourceBase() = default;
 
 void VideoSourceBase::AddOrUpdateSink(
-    VideoSinkInterface<webrtc::VideoFrame>* sink,
+    VideoSinkInterface<webrtz::VideoFrame>* sink,
     const VideoSinkWants& wants) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   RTC_DCHECK(sink != nullptr);
@@ -33,7 +33,7 @@ void VideoSourceBase::AddOrUpdateSink(
   }
 }
 
-void VideoSourceBase::RemoveSink(VideoSinkInterface<webrtc::VideoFrame>* sink) {
+void VideoSourceBase::RemoveSink(VideoSinkInterface<webrtz::VideoFrame>* sink) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   RTC_DCHECK(sink != nullptr);
   RTC_DCHECK(FindSinkPair(sink));
@@ -45,7 +45,7 @@ void VideoSourceBase::RemoveSink(VideoSinkInterface<webrtc::VideoFrame>* sink) {
 }
 
 VideoSourceBase::SinkPair* VideoSourceBase::FindSinkPair(
-    const VideoSinkInterface<webrtc::VideoFrame>* sink) {
+    const VideoSinkInterface<webrtz::VideoFrame>* sink) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   auto sink_pair_it = std::find_if(
       sinks_.begin(), sinks_.end(),

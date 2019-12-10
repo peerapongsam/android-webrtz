@@ -53,7 +53,7 @@ class FileTest : public ::testing::Test {
  protected:
   std::string path_;
   void SetUp() override {
-    path_ = webrtc::test::TempFilename(webrtc::test::OutputPath(), "test_file");
+    path_ = webrtz::test::TempFilename(webrtz::test::OutputPath(), "test_file");
     ASSERT_FALSE(path_.empty());
   }
   void TearDown() override { RemoveFile(path_); }

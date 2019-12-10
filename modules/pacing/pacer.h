@@ -14,7 +14,7 @@
 #include "modules/include/module.h"
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 class Pacer : public Module, public RtpPacketSender {
  public:
   virtual void SetEstimatedBitrate(uint32_t bitrate_bps) {}
@@ -35,5 +35,5 @@ class Pacer : public Module, public RtpPacketSender {
   void Process() override = 0;
   ~Pacer() override {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_PACING_PACER_H_

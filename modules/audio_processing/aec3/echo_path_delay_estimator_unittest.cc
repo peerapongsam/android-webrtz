@@ -22,7 +22,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 std::string ProduceDebugText(size_t delay, size_t down_sampling_factor) {
@@ -169,4 +169,4 @@ TEST(EchoPathDelayEstimator, NullDataDumper) {
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

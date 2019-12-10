@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/trace_event.h"
 
-namespace webrtc {
+namespace webrtz {
 RTPReceiverStrategy* RTPReceiverStrategy::CreateAudioStrategy(
     RtpData* data_callback) {
   return new RTPReceiverAudio(data_callback);
@@ -280,4 +280,4 @@ int32_t RTPReceiverAudio::ParseAudioCodecSpecific(
   return data_callback_->OnReceivedPayloadData(payload_data,
                                                payload_data_length, rtp_header);
 }
-}  // namespace webrtc
+}  // namespace webrtz

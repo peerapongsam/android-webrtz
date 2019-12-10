@@ -57,7 +57,7 @@ Window GetTopLevelWindow(Display* display, Window window) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 class MouseCursorMonitorX11 : public MouseCursorMonitor,
                               public SharedXDisplay::XEventHandler {
@@ -276,4 +276,4 @@ std::unique_ptr<MouseCursorMonitor> MouseCursorMonitor::Create(
       CreateForScreen(options, kFullDesktopScreenId));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

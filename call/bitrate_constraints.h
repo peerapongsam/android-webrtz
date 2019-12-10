@@ -15,7 +15,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 // TODO(srte): BitrateConstraints and BitrateConstraintsMask should be merged.
 // Both represent the same kind data, but are using different default
 // initializer and representation of unset values.
@@ -51,5 +51,5 @@ static T MinPositive(T a, T b) {
   }
   return std::min(a, b);
 }
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // CALL_BITRATE_CONSTRAINTS_H_

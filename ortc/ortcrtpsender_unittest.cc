@@ -19,7 +19,7 @@
 #include "pc/test/fakevideotracksource.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This test uses an individual RtpSender using only the public interface, and
 // verifies that its behaves as designed at an API level. Also tests that
@@ -58,7 +58,7 @@ class OrtcRtpSenderTest : public testing::Test {
 
   rtc::scoped_refptr<VideoTrackInterface> CreateVideoTrack(
       const std::string& id) {
-    return rtc::scoped_refptr<webrtc::VideoTrackInterface>(
+    return rtc::scoped_refptr<webrtz::VideoTrackInterface>(
         ortc_factory_->CreateVideoTrack(id, FakeVideoTrackSource::Create()));
   }
 
@@ -667,4 +667,4 @@ TEST_F(OrtcRtpSenderTest, GetKind) {
   EXPECT_EQ(cricket::MEDIA_TYPE_VIDEO, video_sender->GetKind());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

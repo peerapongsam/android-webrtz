@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/audio_generator/file_audio_generator.h"
 
-namespace webrtc {
+namespace webrtz {
 
 FileAudioGenerator::FileAudioGenerator(
     std::unique_ptr<WavReader> input_audio_file) {
@@ -33,4 +33,4 @@ size_t FileAudioGenerator::SampleRateHz() {
   return sample_rate_hz_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

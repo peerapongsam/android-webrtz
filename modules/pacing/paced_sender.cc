@@ -43,7 +43,7 @@ const int64_t kMaxIntervalTimeMs = 30;
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 const int64_t PacedSender::kMaxQueueLengthMs = 2000;
 const float PacedSender::kDefaultPaceMultiplier = 2.5f;
@@ -425,4 +425,4 @@ void PacedSender::SetQueueTimeLimit(int limit_ms) {
   queue_time_limit = limit_ms;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

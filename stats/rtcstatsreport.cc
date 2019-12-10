@@ -12,7 +12,7 @@
 
 #include <sstream>
 
-namespace webrtc {
+namespace webrtz {
 
 RTCStatsReport::ConstIterator::ConstIterator(
     const rtc::scoped_refptr<const RTCStatsReport>& report,
@@ -133,4 +133,4 @@ std::string RTCStatsReport::ToJson() const {
   return oss.str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

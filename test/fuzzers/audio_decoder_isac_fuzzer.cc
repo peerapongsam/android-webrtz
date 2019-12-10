@@ -11,7 +11,7 @@
 #include "modules/audio_coding/codecs/isac/main/include/audio_decoder_isac.h"
 #include "test/fuzzers/audio_decoder_fuzzer.h"
 
-namespace webrtc {
+namespace webrtz {
 void FuzzOneInput(const uint8_t* data, size_t size) {
   const int sample_rate_hz = size % 2 == 0 ? 16000 : 32000;     // 16 or 32 kHz.
   static const size_t kAllocatedOuputSizeSamples = 32000 / 10;  // 100 ms.
@@ -20,4 +20,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   FuzzAudioDecoder(DecoderFunctionType::kNormalDecode, data, size, &dec,
                    sample_rate_hz, sizeof(output), output);
 }
-}  // namespace webrtc
+}  // namespace webrtz

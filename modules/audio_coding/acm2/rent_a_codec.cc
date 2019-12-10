@@ -41,7 +41,7 @@
 #include "modules/audio_coding/codecs/isac/locked_bandwidth_info.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 namespace acm2 {
 
 rtc::Optional<RentACodec::CodecId> RentACodec::CodecIdByParams(
@@ -307,4 +307,4 @@ std::unique_ptr<AudioDecoder> RentACodec::RentIsacDecoder(int sample_rate_hz) {
 }
 
 }  // namespace acm2
-}  // namespace webrtc
+}  // namespace webrtz

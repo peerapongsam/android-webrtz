@@ -18,7 +18,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -85,6 +85,6 @@ class OpenSLEngineManager {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_AUDIO_DEVICE_OPENSLES_COMMON_H_

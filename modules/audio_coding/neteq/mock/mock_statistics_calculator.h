@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockStatisticsCalculator : public StatisticsCalculator {
  public:
@@ -23,5 +23,5 @@ class MockStatisticsCalculator : public StatisticsCalculator {
   MOCK_METHOD1(SecondaryPacketsDiscarded, void(size_t num_packets));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_MOCK_MOCK_STATISTICS_CALCULATOR_H_

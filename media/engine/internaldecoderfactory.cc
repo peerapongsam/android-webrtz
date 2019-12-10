@@ -20,7 +20,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::vector<SdpVideoFormat> InternalDecoderFactory::GetSupportedFormats()
     const {
@@ -54,4 +54,4 @@ std::unique_ptr<VideoDecoder> InternalDecoderFactory::CreateVideoDecoder(
   return nullptr;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

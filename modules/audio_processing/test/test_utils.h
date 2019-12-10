@@ -24,7 +24,7 @@
 #include "modules/include/module_common_types.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const AudioProcessing::Error kNoErr = AudioProcessing::kNoError;
 #define EXPECT_NOERR(expr) EXPECT_EQ(kNoErr, (expr))
@@ -153,6 +153,6 @@ std::vector<Point> ParseArrayGeometry(const std::string& mic_positions,
 // Same as above, but without the num_mics check for when it isn't available.
 std::vector<Point> ParseArrayGeometry(const std::string& mic_positions);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TEST_TEST_UTILS_H_

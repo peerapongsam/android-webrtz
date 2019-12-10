@@ -22,7 +22,7 @@
 #include "modules/desktop_capture/win/scoped_thread_desktop.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // ScreenCapturerWinGdi captures 32bit RGB using GDI.
 //
@@ -78,6 +78,6 @@ class ScreenCapturerWinGdi : public DesktopCapturer {
   RTC_DISALLOW_COPY_AND_ASSIGN(ScreenCapturerWinGdi);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_SCREEN_CAPTURER_WIN_GDI_H_

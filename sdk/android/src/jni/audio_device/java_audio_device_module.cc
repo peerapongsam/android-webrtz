@@ -13,7 +13,7 @@
 #include "sdk/android/src/jni/audio_device/audio_track_jni.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static jlong JNI_JavaAudioDeviceModule_CreateAudioDeviceModule(
@@ -47,4 +47,4 @@ static jlong JNI_JavaAudioDeviceModule_CreateAudioDeviceModule(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

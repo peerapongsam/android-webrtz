@@ -12,7 +12,7 @@
 
 #include <unistd.h>  // getpid()
 
-namespace webrtc {
+namespace webrtz {
 
 #define WEBRTC_CA_RETURN_ON_ERR(expr)                                \
   do {                                                               \
@@ -912,5 +912,5 @@ void AudioMixerManagerMac::logCAMsg(const rtc::LoggingSeverity sev,
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 // EOF

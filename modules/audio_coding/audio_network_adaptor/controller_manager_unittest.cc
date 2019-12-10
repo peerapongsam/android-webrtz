@@ -28,7 +28,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 RTC_POP_IGNORING_WUNDEF()
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::_;
 using ::testing::NiceMock;
@@ -469,4 +469,4 @@ TEST(ControllerManagerTest, CreateFromConfigStringAndCheckReordering) {
 }
 #endif  // WEBRTC_ENABLE_PROTOBUF
 
-}  // namespace webrtc
+}  // namespace webrtz

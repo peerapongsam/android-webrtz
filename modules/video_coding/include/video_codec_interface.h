@@ -21,7 +21,7 @@
 #include "modules/video_coding/include/video_error_codes.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPFragmentationHeader;  // forward declaration
 
@@ -97,6 +97,6 @@ struct CodecSpecificInfo {
   CodecSpecificInfoUnion codecSpecific;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INCLUDE_VIDEO_CODEC_INTERFACE_H_

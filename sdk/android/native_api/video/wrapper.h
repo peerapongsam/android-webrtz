@@ -18,7 +18,7 @@
 #include "api/video/video_frame.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Creates an instance of rtc::VideoSinkInterface<VideoFrame> from Java
 // VideoSink.
@@ -31,6 +31,6 @@ std::unique_ptr<rtc::VideoSinkInterface<VideoFrame>> JavaToNativeVideoSink(
 ScopedJavaLocalRef<jobject> NativeToJavaVideoFrame(JNIEnv* jni,
                                                    const VideoFrame& frame);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_VIDEO_WRAPPER_H_

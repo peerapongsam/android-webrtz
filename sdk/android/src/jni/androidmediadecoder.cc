@@ -40,7 +40,7 @@ using rtc::Bind;
 using rtc::Thread;
 using rtc::ThreadManager;
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Logging macros.
@@ -879,4 +879,4 @@ const char* MediaCodecVideoDecoder::ImplementationName() const {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

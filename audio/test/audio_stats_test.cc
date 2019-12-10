@@ -13,7 +13,7 @@
 #include "system_wrappers/include/sleep.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -114,4 +114,4 @@ TEST_F(AudioStatsTest, DISABLED_NoLoss) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "logging/rtc_event_log/events/rtc_event.h"
 #include "logging/rtc_event_log/rtc_stream_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventVideoReceiveStreamConfig final : public RtcEvent {
  public:
@@ -31,6 +31,6 @@ class RtcEventVideoReceiveStreamConfig final : public RtcEvent {
   const std::unique_ptr<const rtclog::StreamConfig> config_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_VIDEO_RECEIVE_STREAM_CONFIG_H_

@@ -14,7 +14,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -162,4 +162,4 @@ void FlexfecReceiver::ProcessReceivedPacket(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

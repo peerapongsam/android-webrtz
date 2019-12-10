@@ -28,7 +28,7 @@
 #include "test/testsupport/frame_reader.h"
 #include "test/testsupport/frame_writer.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Rates for the encoder and the frame number when to change profile.
@@ -76,7 +76,7 @@ class VideoProcessorIntegrationTest : public testing::Test {
   // Verifies that all H.264 keyframes contain SPS/PPS/IDR NALUs.
   class H264KeyframeChecker : public TestConfig::EncodedFrameChecker {
    public:
-    void CheckEncodedFrame(webrtc::VideoCodecType codec,
+    void CheckEncodedFrame(webrtz::VideoCodecType codec,
                            const EncodedImage& encoded_frame) const override;
   };
 
@@ -140,6 +140,6 @@ class VideoProcessorIntegrationTest : public testing::Test {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_TEST_VIDEOPROCESSOR_INTEGRATIONTEST_H_

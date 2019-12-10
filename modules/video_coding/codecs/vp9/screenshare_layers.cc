@@ -11,7 +11,7 @@
 #include <algorithm>
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ScreenshareLayersVP9::ScreenshareLayersVP9(uint8_t num_layers)
     : num_layers_(num_layers),
@@ -90,4 +90,4 @@ ScreenshareLayersVP9::GetSuperFrameSettings(uint32_t timestamp,
   return settings;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

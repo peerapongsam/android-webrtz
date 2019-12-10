@@ -19,7 +19,7 @@
 #include "modules/remote_bitrate_estimator/test/metric_recorder.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -67,5 +67,5 @@ class PacketReceiver : public PacketProcessor {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_PACKET_RECEIVER_H_

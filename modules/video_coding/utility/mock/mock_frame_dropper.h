@@ -16,7 +16,7 @@
 #include "test/gmock.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class MockFrameDropper : public FrameDropper {
  public:
@@ -29,6 +29,6 @@ class MockFrameDropper : public FrameDropper {
   MOCK_CONST_METHOD1(ActualFrameRate, float(uint32_t inputFrameRate));
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_UTILITY_MOCK_MOCK_FRAME_DROPPER_H_

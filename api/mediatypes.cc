@@ -22,9 +22,9 @@ namespace cricket {
 std::string MediaTypeToString(MediaType type) {
   switch (type) {
     case MEDIA_TYPE_AUDIO:
-      return webrtc::MediaStreamTrackInterface::kAudioKind;
+      return webrtz::MediaStreamTrackInterface::kAudioKind;
     case MEDIA_TYPE_VIDEO:
-      return webrtc::MediaStreamTrackInterface::kVideoKind;
+      return webrtz::MediaStreamTrackInterface::kVideoKind;
     case MEDIA_TYPE_DATA:
       return kMediaTypeData;
   }
@@ -34,9 +34,9 @@ std::string MediaTypeToString(MediaType type) {
 }
 
 MediaType MediaTypeFromString(const std::string& type_str) {
-  if (type_str == webrtc::MediaStreamTrackInterface::kAudioKind) {
+  if (type_str == webrtz::MediaStreamTrackInterface::kAudioKind) {
     return MEDIA_TYPE_AUDIO;
-  } else if (type_str == webrtc::MediaStreamTrackInterface::kVideoKind) {
+  } else if (type_str == webrtz::MediaStreamTrackInterface::kVideoKind) {
     return MEDIA_TYPE_VIDEO;
   } else if (type_str == kMediaTypeData) {
     return MEDIA_TYPE_DATA;

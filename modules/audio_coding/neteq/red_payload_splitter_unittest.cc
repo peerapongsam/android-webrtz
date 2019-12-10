@@ -27,7 +27,7 @@
 using ::testing::Return;
 using ::testing::ReturnNull;
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kRedPayloadType = 100;
 static const size_t kPayloadLength = 10;
@@ -343,4 +343,4 @@ TEST(RedPayloadSplitter, WrongPayloadLength) {
   packet_list.pop_front();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

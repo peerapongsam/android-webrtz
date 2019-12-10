@@ -15,7 +15,7 @@
 #include "modules/audio_processing/logging/apm_data_dumper.h"
 #include "rtc_base/numerics/safe_minmax.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 void ShiftBuffer(std::array<float, kPeakEnveloperBufferSize>* buffer_) {
@@ -87,4 +87,4 @@ void SaturationProtector::DebugDumpEstimate() const {
   apm_data_dumper_->DumpRaw("agc2_adaptive_saturation_margin_db", last_margin_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

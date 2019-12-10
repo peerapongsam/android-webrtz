@@ -45,7 +45,7 @@
 #pragma mark - Private
 
 - (instancetype)initWithNativeCandidate:
-    (const webrtc::IceCandidateInterface *)candidate {
+    (const webrtz::IceCandidateInterface *)candidate {
   NSParameterAssert(candidate);
   std::string sdp;
   candidate->ToString(&sdp);
@@ -58,10 +58,10 @@
   return rtcCandidate;
 }
 
-- (std::unique_ptr<webrtc::IceCandidateInterface>)nativeCandidate {
-  webrtc::SdpParseError error;
+- (std::unique_ptr<webrtz::IceCandidateInterface>)nativeCandidate {
+  webrtz::SdpParseError error;
 
-  webrtc::IceCandidateInterface *candidate = webrtc::CreateIceCandidate(
+  webrtz::IceCandidateInterface *candidate = webrtz::CreateIceCandidate(
       _sdpMid.stdString, _sdpMLineIndex, _sdp.stdString, &error);
 
   if (!candidate) {
@@ -70,7 +70,7 @@
            error.line.c_str());
   }
 
-  return std::unique_ptr<webrtc::IceCandidateInterface>(candidate);
+  return std::unique_ptr<webrtz::IceCandidateInterface>(candidate);
 }
 
 @end

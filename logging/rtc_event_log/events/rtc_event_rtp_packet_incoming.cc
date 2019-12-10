@@ -12,7 +12,7 @@
 
 #include "modules/rtp_rtcp/source/rtp_packet_received.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventRtpPacketIncoming::RtcEventRtpPacketIncoming(
     const RtpPacketReceived& packet)
@@ -30,4 +30,4 @@ bool RtcEventRtpPacketIncoming::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

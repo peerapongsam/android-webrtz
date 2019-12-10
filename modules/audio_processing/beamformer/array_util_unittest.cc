@@ -18,7 +18,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool operator==(const Point& lhs, const Point& rhs) {
   return lhs.x() == rhs.x() && lhs.y() == rhs.y() && lhs.z() == rhs.z();
@@ -182,4 +182,4 @@ TEST(ArrayUtilTest, RadiansToDegrees) {
   EXPECT_FLOAT_EQ(-180.f, RadiansToDegrees(-M_PI));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

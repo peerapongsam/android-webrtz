@@ -92,7 +92,7 @@ int CompareCandidatePairsByNetworkPreference(
 
 uint32_t GetWeakPingIntervalInFieldTrial() {
   uint32_t weak_ping_interval = ::strtoul(
-      webrtc::field_trial::FindFullName("WebRTC-StunInterPacketDelay").c_str(),
+      webrtz::field_trial::FindFullName("WebRTC-StunInterPacketDelay").c_str(),
       nullptr, 10);
   if (weak_ping_interval) {
     return static_cast<int>(weak_ping_interval);
@@ -104,8 +104,8 @@ uint32_t GetWeakPingIntervalInFieldTrial() {
 
 namespace cricket {
 
-using webrtc::RTCErrorType;
-using webrtc::RTCError;
+using webrtz::RTCErrorType;
+using webrtz::RTCError;
 
 bool IceCredentialsChanged(const std::string& old_ufrag,
                            const std::string& old_pwd,
@@ -121,7 +121,7 @@ bool IceCredentialsChanged(const std::string& old_ufrag,
 P2PTransportChannel::P2PTransportChannel(const std::string& transport_name,
                                          int component,
                                          PortAllocator* allocator,
-                                         webrtc::RtcEventLog* event_log)
+                                         webrtz::RtcEventLog* event_log)
     : transport_name_(transport_name),
       component_(component),
       allocator_(allocator),
@@ -199,7 +199,7 @@ void P2PTransportChannel::AddConnection(Connection* connection) {
   had_connection_ = true;
 
   connection->set_ice_event_log(&ice_event_log_);
-  LogCandidatePairEvent(connection, webrtc::IceCandidatePairEventType::kAdded);
+  LogCandidatePairEvent(connection, webrtz::IceCandidatePairEventType::kAdded);
 }
 
 // Determines whether we should switch the selected connection to
@@ -637,7 +637,7 @@ int P2PTransportChannel::check_receiving_interval() const {
 }
 
 void P2PTransportChannel::SetMetricsObserver(
-    webrtc::MetricsObserverInterface* observer) {
+    webrtz::MetricsObserverInterface* observer) {
   metrics_observer_ = observer;
 }
 
@@ -669,7 +669,7 @@ void P2PTransportChannel::MaybeStartGathering() {
         state = IceRestartState::DISCONNECTED;
       }
       metrics_observer_->IncrementEnumCounter(
-          webrtc::kEnumCounterIceRestart, static_cast<int>(state),
+          webrtz::kEnumCounterIceRestart, static_cast<int>(state),
           static_cast<int>(IceRestartState::MAX_VALUE));
     }
 
@@ -1645,7 +1645,7 @@ void P2PTransportChannel::SwitchSelectedConnection(Connection* conn) {
   // destroyed, so don't use it.
   Connection* old_selected_connection = selected_connection_;
   selected_connection_ = conn;
-  LogCandidatePairEvent(conn, webrtc::IceCandidatePairEventType::kSelected);
+  LogCandidatePairEvent(conn, webrtz::IceCandidatePairEventType::kSelected);
   network_route_.reset();
   if (selected_connection_) {
     ++nomination_;
@@ -2371,7 +2371,7 @@ int P2PTransportChannel::SampleRegatherAllNetworksInterval() {
 
 void P2PTransportChannel::LogCandidatePairEvent(
     Connection* conn,
-    webrtc::IceCandidatePairEventType type) {
+    webrtz::IceCandidatePairEventType type) {
   if (conn == nullptr) {
     return;
   }

@@ -17,7 +17,7 @@
 
 namespace cricket {
 
-class TestTurnCustomizer : public webrtc::TurnCustomizer {
+class TestTurnCustomizer : public webrtz::TurnCustomizer {
  public:
   TestTurnCustomizer() {}
   virtual ~TestTurnCustomizer() {}

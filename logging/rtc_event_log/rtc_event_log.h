@@ -19,7 +19,7 @@
 #include "logging/rtc_event_log/events/rtc_event.h"
 #include "rtc_base/task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum PacketDirection { kIncomingPacket = 0, kOutgoingPacket };
 
@@ -69,6 +69,6 @@ class RtcEventLogNullImpl : public RtcEventLog {
   void Log(std::unique_ptr<RtcEvent> event) override {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_RTC_EVENT_LOG_H_

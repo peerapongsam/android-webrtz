@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 namespace {
 
@@ -90,4 +90,4 @@ TEST(RtcpPacketVoipMetricTest, Parse) {
 
 }  // namespace
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

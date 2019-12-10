@@ -22,7 +22,7 @@
 #include "test/gmock.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using ::testing::_;
 using ::testing::Return;
@@ -50,7 +50,7 @@ class NetEqExternalDecoderUnitTest : public test::NetEqExternalDecoderTest {
     Init();
 
     const std::string file_name =
-        webrtc::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
+        webrtz::test::ResourcePath("audio_coding/testfile32kHz", "pcm");
     input_file_.reset(new test::InputAudioFile(file_name));
   }
 
@@ -454,4 +454,4 @@ TEST_F(ShortTimestampJumpTest, JumpShorterThanHalfRangeAndWrap) {
   EXPECT_EQ(kRecovered, test_state_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

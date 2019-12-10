@@ -19,7 +19,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 BEGIN_OWNED_PROXY_MAP(RtpTransport)
 PROXY_SIGNALING_THREAD_DESTRUCTOR()
@@ -184,12 +184,12 @@ RtpTransportAdapter::~RtpTransportAdapter() {
 RTCError RtpTransportAdapter::SetParameters(
     const RtpTransportParameters& parameters) {
   if (!parameters.rtcp.mux && parameters_.rtcp.mux) {
-    LOG_AND_RETURN_ERROR(webrtc::RTCErrorType::INVALID_STATE,
+    LOG_AND_RETURN_ERROR(webrtz::RTCErrorType::INVALID_STATE,
                          "Can't disable RTCP muxing after enabling.");
   }
   if (!parameters.rtcp.cname.empty() &&
       parameters.rtcp.cname != parameters_.rtcp.cname) {
-    LOG_AND_RETURN_ERROR(webrtc::RTCErrorType::UNSUPPORTED_OPERATION,
+    LOG_AND_RETURN_ERROR(webrtz::RTCErrorType::UNSUPPORTED_OPERATION,
                          "Changing the RTCP CNAME is currently unsupported.");
   }
   // If the CNAME is empty, use the existing one.
@@ -227,4 +227,4 @@ RTCError RtpTransportAdapter::SetSrtpReceiveKey(
   return transport_->SetSrtpReceiveKey(params);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -9,7 +9,7 @@
 
 #include "modules/desktop_capture/mock_desktop_capturer_callback.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockDesktopCapturerCallback::MockDesktopCapturerCallback() = default;
 MockDesktopCapturerCallback::~MockDesktopCapturerCallback() = default;
@@ -20,4 +20,4 @@ void MockDesktopCapturerCallback::OnCaptureResult(
   OnCaptureResultPtr(result, &frame);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

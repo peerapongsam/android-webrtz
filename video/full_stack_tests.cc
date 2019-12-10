@@ -14,7 +14,7 @@
 #include "test/gtest.h"
 #include "video/video_quality_test.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 static const int kFullStackTestDurationSecs = 45;
@@ -757,7 +757,7 @@ TEST_F(FullStackTest, MAYBE_SimulcastFullHdOveruse) {
                                       DefaultVideoStream(simulcast, 0),
                                       DefaultVideoStream(simulcast, 0)};
   simulcast.ss[0] = {streams, 2, 1, 0, std::vector<SpatialLayer>(), true};
-  webrtc::test::ScopedFieldTrials override_trials(
+  webrtz::test::ScopedFieldTrials override_trials(
       "WebRTC-ForceSimulatedOveruseIntervalMs/1000-50000-300/");
   RunTest(simulcast);
 }
@@ -1014,4 +1014,4 @@ INSTANTIATE_TEST_CASE_P(FullStackTest,
                         DualStreamsTest,
                         ::testing::Values(0, 1));
 
-}  // namespace webrtc
+}  // namespace webrtz

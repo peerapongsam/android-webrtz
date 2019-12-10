@@ -19,7 +19,7 @@
 #include "modules/congestion_controller/delay_increase_detector_interface.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TrendlineEstimator : public DelayIncreaseDetectorInterface {
  public:
@@ -87,6 +87,6 @@ class TrendlineEstimator : public DelayIncreaseDetectorInterface {
 
   RTC_DISALLOW_COPY_AND_ASSIGN(TrendlineEstimator);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_TRENDLINE_ESTIMATOR_H_

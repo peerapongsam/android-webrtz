@@ -23,7 +23,7 @@
 #include "rtc_base/trace_event.h"
 #include "rtc_base/zero_memory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 SrtpTransport::SrtpTransport(bool rtcp_mux_enabled)
     : RtpTransportInternalAdapter(new RtpTransport(rtcp_mux_enabled)) {
@@ -55,12 +55,12 @@ void SrtpTransport::ConnectToRtpTransport() {
 RTCError SrtpTransport::SetSrtpSendKey(const cricket::CryptoParams& params) {
   if (send_params_) {
     LOG_AND_RETURN_ERROR(
-        webrtc::RTCErrorType::UNSUPPORTED_OPERATION,
+        webrtz::RTCErrorType::UNSUPPORTED_OPERATION,
         "Setting the SRTP send key twice is currently unsupported.");
   }
   if (recv_params_ && recv_params_->cipher_suite != params.cipher_suite) {
     LOG_AND_RETURN_ERROR(
-        webrtc::RTCErrorType::UNSUPPORTED_OPERATION,
+        webrtz::RTCErrorType::UNSUPPORTED_OPERATION,
         "The send key and receive key must have the same cipher suite.");
   }
 
@@ -95,12 +95,12 @@ RTCError SrtpTransport::SetSrtpSendKey(const cricket::CryptoParams& params) {
 RTCError SrtpTransport::SetSrtpReceiveKey(const cricket::CryptoParams& params) {
   if (recv_params_) {
     LOG_AND_RETURN_ERROR(
-        webrtc::RTCErrorType::UNSUPPORTED_OPERATION,
+        webrtz::RTCErrorType::UNSUPPORTED_OPERATION,
         "Setting the SRTP send key twice is currently unsupported.");
   }
   if (send_params_ && send_params_->cipher_suite != params.cipher_suite) {
     LOG_AND_RETURN_ERROR(
-        webrtc::RTCErrorType::UNSUPPORTED_OPERATION,
+        webrtz::RTCErrorType::UNSUPPORTED_OPERATION,
         "The send key and receive key must have the same cipher suite.");
   }
 
@@ -533,4 +533,4 @@ void SrtpTransport::SetMetricsObserver(
   rtp_transport_->SetMetricsObserver(metrics_observer);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

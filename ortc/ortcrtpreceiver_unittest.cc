@@ -19,7 +19,7 @@
 #include "pc/test/fakevideotracksource.h"
 #include "rtc_base/gunit.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This test uses an individual RtpReceiver using only the public interface,
 // and verifies that it behaves as designed at an API level. Also tests that
@@ -547,4 +547,4 @@ TEST_F(OrtcRtpReceiverTest, GetKind) {
   EXPECT_EQ(cricket::MEDIA_TYPE_VIDEO, video_receiver->GetKind());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

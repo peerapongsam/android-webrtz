@@ -19,7 +19,7 @@
 #include "modules/audio_coding/neteq/dsp_helper.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TimeStretch::ReturnCodes TimeStretch::Process(const int16_t* input,
                                               size_t input_len,
@@ -211,4 +211,4 @@ bool TimeStretch::SpeechDetection(int32_t vec1_energy, int32_t vec2_energy,
   return left_side > right_side;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

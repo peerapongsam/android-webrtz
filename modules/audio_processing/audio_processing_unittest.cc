@@ -50,7 +50,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #endif
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // TODO(ekmeyerson): Switch to using StreamConfig and ProcessingConfig where
@@ -1310,16 +1310,16 @@ TEST_F(ApmTest, AgcOnlyAdaptsWhenTargetSignalIsPresent) {
   const size_t kNumChunks = 700;
   const float kScaleFactor = 0.25f;
   Config config;
-  std::vector<webrtc::Point> geometry;
-  geometry.push_back(webrtc::Point(0.f, 0.f, 0.f));
-  geometry.push_back(webrtc::Point(0.05f, 0.f, 0.f));
+  std::vector<webrtz::Point> geometry;
+  geometry.push_back(webrtz::Point(0.f, 0.f, 0.f));
+  geometry.push_back(webrtz::Point(0.05f, 0.f, 0.f));
   config.Set<Beamforming>(new Beamforming(true, geometry));
   testing::NiceMock<MockNonlinearBeamformer>* beamformer =
       new testing::NiceMock<MockNonlinearBeamformer>(geometry, 1u);
   std::unique_ptr<AudioProcessing> apm(
       AudioProcessingBuilder()
           .SetNonlinearBeamformer(
-              std::unique_ptr<webrtc::NonlinearBeamformer>(beamformer))
+              std::unique_ptr<webrtz::NonlinearBeamformer>(beamformer))
           .Create(config));
   EXPECT_EQ(kNoErr, apm->gain_control()->Enable(true));
   ChannelBuffer<float> src_buf(kSamplesPerChannel, kNumInputChannels);
@@ -2822,7 +2822,7 @@ INSTANTIATE_TEST_CASE_P(
 
 TEST(ApmConfiguration, EnablePostProcessing) {
   // Verify that apm uses a capture post processing module if one is provided.
-  webrtc::Config webrtc_config;
+  webrtz::Config webrtc_config;
   auto mock_post_processor_ptr =
       new testing::NiceMock<test::MockCustomProcessing>();
   auto mock_post_processor =
@@ -2842,7 +2842,7 @@ TEST(ApmConfiguration, EnablePostProcessing) {
 
 TEST(ApmConfiguration, EnablePreProcessing) {
   // Verify that apm uses a capture post processing module if one is provided.
-  webrtc::Config webrtc_config;
+  webrtz::Config webrtc_config;
   auto mock_pre_processor_ptr =
       new testing::NiceMock<test::MockCustomProcessing>();
   auto mock_pre_processor =
@@ -2873,7 +2873,7 @@ class MyEchoControlFactory : public EchoControlFactory {
 
 TEST(ApmConfiguration, EchoControlInjection) {
   // Verify that apm uses an injected echo controller if one is provided.
-  webrtc::Config webrtc_config;
+  webrtz::Config webrtc_config;
   std::unique_ptr<EchoControlFactory> echo_control_factory(
       new MyEchoControlFactory());
 
@@ -3050,4 +3050,4 @@ TEST(MAYBE_ApmStatistics, AECMEnabledTest) {
   EXPECT_FALSE(stats.delay_median_ms);
   EXPECT_FALSE(stats.delay_standard_deviation_ms);
 }
-}  // namespace webrtc
+}  // namespace webrtz

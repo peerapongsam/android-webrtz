@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Struct for bundling a circular buffer of one dimensional vector objects
 // together with the read and write indices.
@@ -52,6 +52,6 @@ struct VectorBuffer {
   int read = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_VECTOR_BUFFER_H_

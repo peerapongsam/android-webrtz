@@ -18,7 +18,7 @@
 #include "common_audio/real_fourier.h"
 #include "rtc_base/memory/aligned_array.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Helper class for audio processing modules which operate on frequency domain
 // input derived from the windowed time domain audio stream.
@@ -125,7 +125,7 @@ class LappedTransform {
   AlignedArray<std::complex<float> > cplx_post_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_LAPPED_TRANSFORM_H_
 

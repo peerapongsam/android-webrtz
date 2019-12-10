@@ -12,7 +12,7 @@
 
 #include "api/array_view.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class represents a receiver of unparsed RTCP packets.
 // TODO(eladalon): Replace this by demuxing over parsed rather than raw data.
@@ -24,6 +24,6 @@ class RtcpPacketSinkInterface {
   virtual void OnRtcpPacket(rtc::ArrayView<const uint8_t> packet) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_RTCP_PACKET_SINK_INTERFACE_H_

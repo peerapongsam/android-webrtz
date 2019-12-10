@@ -10,13 +10,13 @@
 #ifndef TEST_RUN_TEST_H_
 #define TEST_RUN_TEST_H_
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Running a test function on a separate thread, if required by the OS.
 void RunTest(void(*test)());
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_RUN_TEST_H_

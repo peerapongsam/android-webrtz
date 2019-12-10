@@ -20,7 +20,7 @@
 #include "api/rtceventlogoutput.h"
 #include "rtc_base/platform_file.h"  // Can't neatly forward PlatformFile.
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLogOutputFile final : public RtcEventLogOutput {
  public:
@@ -52,6 +52,6 @@ class RtcEventLogOutputFile final : public RtcEventLogOutput {
   FILE* file_{nullptr};
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_OUTPUT_RTC_EVENT_LOG_OUTPUT_FILE_H_

@@ -13,7 +13,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 class Clock;
 class RemoteBitrateEstimator;
 class RemoteBitrateObserver;
@@ -26,11 +26,11 @@ class RtpFileReader;
 bool ParseArgsAndSetupEstimator(
     int argc,
     char** argv,
-    webrtc::Clock* clock,
-    webrtc::RemoteBitrateObserver* observer,
-    webrtc::test::RtpFileReader** rtp_reader,
-    webrtc::RtpHeaderParser** parser,
-    webrtc::RemoteBitrateEstimator** estimator,
+    webrtz::Clock* clock,
+    webrtz::RemoteBitrateObserver* observer,
+    webrtz::test::RtpFileReader** rtp_reader,
+    webrtz::RtpHeaderParser** parser,
+    webrtz::RemoteBitrateEstimator** estimator,
     std::string* estimator_used);
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TOOLS_BWE_RTP_H_

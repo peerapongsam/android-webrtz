@@ -20,7 +20,7 @@
 #include "pc/srtptransport.h"
 #include "rtc_base/buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class is intended to be used as an RtpTransport and it wraps both an
 // SrtpTransport and DtlsTransports(RTP/RTCP). When the DTLS handshake is
@@ -29,7 +29,7 @@ namespace webrtc {
 class DtlsSrtpTransport : public RtpTransportInternalAdapter {
  public:
   explicit DtlsSrtpTransport(
-      std::unique_ptr<webrtc::SrtpTransport> srtp_transport);
+      std::unique_ptr<webrtz::SrtpTransport> srtp_transport);
 
   // Set P2P layer RTP/RTCP DtlsTransports. When using RTCP-muxing,
   // |rtcp_dtls_transport| is null.
@@ -108,6 +108,6 @@ class DtlsSrtpTransport : public RtpTransportInternalAdapter {
   rtc::Optional<std::vector<int>> recv_extension_ids_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_DTLSSRTPTRANSPORT_H_

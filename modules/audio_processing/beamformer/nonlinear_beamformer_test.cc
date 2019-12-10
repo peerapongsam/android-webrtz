@@ -26,7 +26,7 @@ DEFINE_string(mic_positions, "",
     "For a two element array: \"x1 y1 z1 x2 y2 z2\"");
 DEFINE_bool(help, false, "Prints this message.");
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kChunksPerSecond = 100;
@@ -89,8 +89,8 @@ int main(int argc, char* argv[]) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 int main(int argc, char* argv[]) {
-  return webrtc::main(argc, argv);
+  return webrtz::main(argc, argv);
 }

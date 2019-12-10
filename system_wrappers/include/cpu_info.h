@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class CpuInfo {
  public:
@@ -23,6 +23,6 @@ class CpuInfo {
   CpuInfo() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SYSTEM_WRAPPERS_INCLUDE_CPU_INFO_H_

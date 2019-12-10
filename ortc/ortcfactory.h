@@ -21,7 +21,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Implementation of OrtcFactoryInterface.
 //
@@ -151,6 +151,6 @@ class OrtcFactory : public OrtcFactoryInterface {
   RTC_DISALLOW_COPY_AND_ASSIGN(OrtcFactory);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ORTC_ORTCFACTORY_H_

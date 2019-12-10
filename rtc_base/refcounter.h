@@ -13,8 +13,8 @@
 #include "rtc_base/atomicops.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
-namespace webrtc_impl {
+namespace webrtz {
+namespace webrtz_impl {
 
 class RefCounter {
  public:
@@ -46,7 +46,7 @@ class RefCounter {
   volatile int ref_count_;
 };
 
-}  // namespace webrtc_impl
-}  // namespace webrtc
+}  // namespace webrtz_impl
+}  // namespace webrtz
 
 #endif  // RTC_BASE_REFCOUNTER_H_

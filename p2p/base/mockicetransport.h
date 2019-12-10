@@ -59,7 +59,7 @@ class MockIceTransport : public IceTransportInternal {
   void SetIceConfig(const IceConfig& config) override {}
   rtc::Optional<int> GetRttEstimate() override { return rtc::nullopt; }
   void MaybeStartGathering() override {}
-  void SetMetricsObserver(webrtc::MetricsObserverInterface* observer) override {
+  void SetMetricsObserver(webrtz::MetricsObserverInterface* observer) override {
   }
   void AddRemoteCandidate(const Candidate& candidate) override {}
   void RemoveRemoteCandidate(const Candidate& candidate) override {}

@@ -20,7 +20,7 @@
 #include "modules/audio_coding/neteq/tools/audio_sink.h"
 #include "modules/audio_coding/neteq/tools/neteq_input.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class NetEqTestErrorCallback {
@@ -103,5 +103,5 @@ class NetEqTest {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_NETEQ_TEST_H_

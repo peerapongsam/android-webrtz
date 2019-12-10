@@ -32,7 +32,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 // Interval for updating SS data.
 static const uint32_t kSsCleanupIntervalSec = 60;
 
@@ -1306,4 +1306,4 @@ void VCMJitterBuffer::RecycleFrameBuffer(VCMFrameBuffer* frame) {
   free_frames_.push_back(frame);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

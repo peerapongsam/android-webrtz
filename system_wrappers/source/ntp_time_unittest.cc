@@ -12,7 +12,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const uint32_t kNtpSec = 0x12345678;
@@ -62,4 +62,4 @@ TEST(NtpTimeTest, CanExplicitlyConvertToAndFromUint64) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

@@ -46,12 +46,12 @@ class MAYBE_OptionsFileTest : public testing::Test {
  public:
   MAYBE_OptionsFileTest() {
     test_file_ =
-        webrtc::test::TempFilename(webrtc::test::OutputPath(), ".testfile");
+        webrtz::test::TempFilename(webrtz::test::OutputPath(), ".testfile");
     OpenStore();
   }
 
   ~MAYBE_OptionsFileTest() override {
-    webrtc::test::RemoveFile(test_file_);
+    webrtz::test::RemoveFile(test_file_);
   }
 
  protected:

@@ -15,7 +15,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 class RetransmissionEndToEndTest
     : public test::CallTest,
       public testing::WithParamInterface<std::string> {
@@ -495,4 +495,4 @@ TEST_P(RetransmissionEndToEndTest, DecodesRetransmittedFrameByRedOverRtx) {
   DecodesRetransmittedFrame(true, true);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

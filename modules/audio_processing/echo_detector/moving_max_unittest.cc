@@ -11,7 +11,7 @@
 #include "modules/audio_processing/echo_detector/moving_max.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Test if the maximum is correctly found.
 TEST(MovingMaxTests, SimpleTest) {
@@ -64,4 +64,4 @@ TEST(MovingMaxTests, DecayTest) {
   EXPECT_LT(test_moving_max.max(), 0.01f);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

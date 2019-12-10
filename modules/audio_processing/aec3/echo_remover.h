@@ -20,7 +20,7 @@
 #include "modules/audio_processing/aec3/echo_path_variability.h"
 #include "modules/audio_processing/aec3/render_buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class for removing the echo from the capture signal.
 class EchoRemover {
@@ -50,6 +50,6 @@ class EchoRemover {
   virtual void UpdateEchoLeakageStatus(bool leakage_detected) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_ECHO_REMOVER_H_

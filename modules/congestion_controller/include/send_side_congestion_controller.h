@@ -31,7 +31,7 @@ namespace rtc {
 struct SentPacket;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 class BitrateController;
 class Clock;
@@ -166,6 +166,6 @@ class SendSideCongestionController
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(SendSideCongestionController);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_INCLUDE_SEND_SIDE_CONGESTION_CONTROLLER_H_

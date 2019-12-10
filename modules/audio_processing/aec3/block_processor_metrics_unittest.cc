@@ -13,7 +13,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Verify the general functionality of BlockProcessorMetrics.
 TEST(BlockProcessorMetrics, NormalUsage) {
@@ -31,4 +31,4 @@ TEST(BlockProcessorMetrics, NormalUsage) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

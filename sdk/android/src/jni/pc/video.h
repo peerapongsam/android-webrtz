@@ -22,12 +22,12 @@ class WebRtcVideoEncoderFactory;
 class WebRtcVideoDecoderFactory;
 }  // namespace cricket
 
-namespace webrtc {
+namespace webrtz {
 class VideoEncoderFactory;
 class VideoDecoderFactory;
-}  // namespace webrtc
+}  // namespace webrtz
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 class SurfaceTextureHelper;
@@ -62,6 +62,6 @@ VideoDecoderFactory* WrapLegacyVideoDecoderFactory(
     cricket::WebRtcVideoDecoderFactory* legacy_decoder_factory);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_VIDEO_H_

@@ -13,7 +13,7 @@
 #include "modules/audio_processing/utility/ooura_fft_tables_common.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #if defined(MIPS_FPU_LE)
 void bitrv2_128_mips(float* a) {
@@ -1182,4 +1182,4 @@ void rftbsub_128_mips(float* a) {
 }
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

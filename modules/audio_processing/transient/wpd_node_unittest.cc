@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const size_t kDataLength = 5;
 static const float kTolerance = 0.0001f;
@@ -62,4 +62,4 @@ TEST(WPDNodeTest, ExpectedErrorReturnValue) {
   EXPECT_EQ(-1, node.set_data(NULL, kDataLength));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

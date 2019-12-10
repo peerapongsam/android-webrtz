@@ -41,9 +41,9 @@
 #include "rtc_base/random.h"
 #include "rtc_base/sigslot.h"
 
-namespace webrtc {
+namespace webrtz {
 class RtcEventLog;
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace cricket {
 
@@ -78,7 +78,7 @@ class P2PTransportChannel : public IceTransportInternal,
   P2PTransportChannel(const std::string& transport_name,
                       int component,
                       PortAllocator* allocator,
-                      webrtc::RtcEventLog* event_log = nullptr);
+                      webrtz::RtcEventLog* event_log = nullptr);
   ~P2PTransportChannel() override;
 
   // From TransportChannelImpl:
@@ -107,8 +107,8 @@ class P2PTransportChannel : public IceTransportInternal,
   // TODO(deadbeef): Use rtc::Optional instead of negative values.
   void SetIceConfig(const IceConfig& config) override;
   const IceConfig& config() const;
-  static webrtc::RTCError ValidateIceConfig(const IceConfig& config);
-  void SetMetricsObserver(webrtc::MetricsObserverInterface* observer) override;
+  static webrtz::RTCError ValidateIceConfig(const IceConfig& config);
+  void SetMetricsObserver(webrtz::MetricsObserverInterface* observer) override;
 
   // From TransportChannel:
   int SendPacket(const char* data,
@@ -294,7 +294,7 @@ class P2PTransportChannel : public IceTransportInternal,
   void OnRegatherOnAllNetworks();
 
   void LogCandidatePairEvent(Connection* conn,
-                             webrtc::IceCandidatePairEventType type);
+                             webrtz::IceCandidatePairEventType type);
 
   uint32_t GetNominationAttr(Connection* conn) const;
   bool GetUseCandidateAttr(Connection* conn, NominationMode mode) const;
@@ -398,7 +398,7 @@ class P2PTransportChannel : public IceTransportInternal,
   IceGatheringState gathering_state_;
 
   // Used to generate random intervals for regather_all_networks_interval_range.
-  webrtc::Random rand_;
+  webrtz::Random rand_;
 
   int64_t last_ping_sent_ms_ = 0;
   int weak_ping_interval_ = WEAK_PING_INTERVAL;
@@ -412,11 +412,11 @@ class P2PTransportChannel : public IceTransportInternal,
   bool receiving_ = false;
   bool writable_ = false;
 
-  webrtc::MetricsObserverInterface* metrics_observer_ = nullptr;
+  webrtz::MetricsObserverInterface* metrics_observer_ = nullptr;
 
   rtc::Optional<rtc::NetworkRoute> network_route_;
 
-  webrtc::IceEventLog ice_event_log_;
+  webrtz::IceEventLog ice_event_log_;
 
   RTC_DISALLOW_COPY_AND_ASSIGN(P2PTransportChannel);
 };

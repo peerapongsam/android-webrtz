@@ -16,7 +16,7 @@
 #include "modules/audio_coding/audio_network_adaptor/controller_manager.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockControllerManager : public ControllerManager {
  public:
@@ -28,6 +28,6 @@ class MockControllerManager : public ControllerManager {
   MOCK_CONST_METHOD0(GetControllers, std::vector<Controller*>());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_MOCK_MOCK_CONTROLLER_MANAGER_H_

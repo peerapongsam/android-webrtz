@@ -13,7 +13,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -100,4 +100,4 @@ void BlockProcessorMetrics::ResetMetrics() {
   buffer_render_calls_ = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

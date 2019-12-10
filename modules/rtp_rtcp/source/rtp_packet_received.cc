@@ -15,7 +15,7 @@
 #include "modules/rtp_rtcp/source/rtp_header_extensions.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtpPacketReceived::RtpPacketReceived() = default;
 RtpPacketReceived::RtpPacketReceived(const ExtensionManager* extensions)
@@ -67,4 +67,4 @@ void RtpPacketReceived::GetHeader(RTPHeader* header) const {
   GetExtension<PlayoutDelayLimits>(&header->extension.playout_delay);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

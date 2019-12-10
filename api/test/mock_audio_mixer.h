@@ -15,7 +15,7 @@
 
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockAudioMixer : public AudioMixer {
@@ -27,6 +27,6 @@ class MockAudioMixer : public AudioMixer {
                     AudioFrame* audio_frame_for_mixing));
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_TEST_MOCK_AUDIO_MIXER_H_

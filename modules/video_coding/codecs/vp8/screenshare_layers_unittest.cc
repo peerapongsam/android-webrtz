@@ -25,7 +25,7 @@ using ::testing::ElementsAre;
 using ::testing::NiceMock;
 using ::testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // 5 frames per second at 90 kHz.
 const uint32_t kTimestampDelta5Fps = 90000 / 5;
@@ -642,4 +642,4 @@ TEST_F(ScreenshareLayerTest, AdjustsBitrateWhenDroppingFrames) {
   EXPECT_EQ(cfg_.rc_target_bitrate, default_bitrate * 2);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

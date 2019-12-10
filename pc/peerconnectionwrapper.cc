@@ -22,7 +22,7 @@
 #include "rtc_base/gunit.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using RTCOfferAnswerOptions = PeerConnectionInterface::RTCOfferAnswerOptions;
 
@@ -313,10 +313,10 @@ bool PeerConnectionWrapper::IsIceConnected() {
   return observer()->ice_connected_;
 }
 
-rtc::scoped_refptr<const webrtc::RTCStatsReport>
+rtc::scoped_refptr<const webrtz::RTCStatsReport>
 PeerConnectionWrapper::GetStats() {
-  rtc::scoped_refptr<webrtc::MockRTCStatsCollectorCallback> callback(
-      new rtc::RefCountedObject<webrtc::MockRTCStatsCollectorCallback>());
+  rtc::scoped_refptr<webrtz::MockRTCStatsCollectorCallback> callback(
+      new rtc::RefCountedObject<webrtz::MockRTCStatsCollectorCallback>());
   pc()->GetStats(callback);
   EXPECT_TRUE_WAIT(callback->called(), kDefaultTimeout);
   return callback->report();
@@ -330,4 +330,4 @@ PeerConnectionWrapper::RegisterFakeMetricsObserver() {
   return fake_metrics_observer_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -21,10 +21,10 @@
 using ::testing::Exactly;
 using ::testing::Return;
 
-using webrtc::BitrateController;
-using webrtc::BitrateObserver;
-using webrtc::PacedSender;
-using webrtc::RtcpBandwidthObserver;
+using webrtz::BitrateController;
+using webrtz::BitrateObserver;
+using webrtz::PacedSender;
+using webrtz::RtcpBandwidthObserver;
 
 uint8_t WeightedLoss(int num_packets1, uint8_t fraction_loss1,
                      int num_packets2, uint8_t fraction_loss2) {
@@ -34,10 +34,10 @@ uint8_t WeightedLoss(int num_packets1, uint8_t fraction_loss1,
   return (weighted_sum + total_num_packets / 2) / total_num_packets;
 }
 
-webrtc::RTCPReportBlock CreateReportBlock(
+webrtz::RTCPReportBlock CreateReportBlock(
     uint32_t remote_ssrc, uint32_t source_ssrc,
     uint8_t fraction_lost, uint32_t extended_high_sequence_number) {
-  return webrtc::RTCPReportBlock(remote_ssrc, source_ssrc, fraction_lost, 0,
+  return webrtz::RTCPReportBlock(remote_ssrc, source_ssrc, fraction_lost, 0,
                                  extended_high_sequence_number, 0, 0, 0);
 }
 
@@ -86,11 +86,11 @@ class BitrateControllerTest : public ::testing::Test {
   const int kDefaultMinBitrateBps = 10000;
   const int kDefaultMaxBitrateBps = 1000000000;
 
-  webrtc::SimulatedClock clock_;
+  webrtz::SimulatedClock clock_;
   TestBitrateObserver bitrate_observer_;
   std::unique_ptr<BitrateController> controller_;
   RtcpBandwidthObserver* bandwidth_observer_;
-  testing::NiceMock<webrtc::MockRtcEventLog> event_log_;
+  testing::NiceMock<webrtz::MockRtcEventLog> event_log_;
 };
 
 TEST_F(BitrateControllerTest, DefaultMinMaxBitrate) {
@@ -98,7 +98,7 @@ TEST_F(BitrateControllerTest, DefaultMinMaxBitrate) {
   controller_->SetMinMaxBitrate(0, 0);
   EXPECT_EQ(kStartBitrateBps, bitrate_observer_.last_bitrate_);
   bandwidth_observer_->OnReceivedEstimatedBitrate(kDefaultMinBitrateBps / 2);
-  EXPECT_EQ(webrtc::congestion_controller::GetMinBitrateBps(),
+  EXPECT_EQ(webrtz::congestion_controller::GetMinBitrateBps(),
             bitrate_observer_.last_bitrate_);
   bandwidth_observer_->OnReceivedEstimatedBitrate(2 * kDefaultMaxBitrateBps);
   clock_.AdvanceTimeMilliseconds(1000);
@@ -109,7 +109,7 @@ TEST_F(BitrateControllerTest, DefaultMinMaxBitrate) {
 TEST_F(BitrateControllerTest, OneBitrateObserverOneRtcpObserver) {
   // First REMB applies immediately.
   int64_t time_ms = 1001;
-  webrtc::ReportBlockList report_blocks;
+  webrtz::ReportBlockList report_blocks;
   report_blocks.push_back(CreateReportBlock(1, 2, 0, 1));
   bandwidth_observer_->OnReceivedEstimatedBitrate(200000);
   EXPECT_EQ(200000, bitrate_observer_.last_bitrate_);
@@ -169,7 +169,7 @@ TEST_F(BitrateControllerTest, OneBitrateObserverOneRtcpObserver) {
   EXPECT_EQ(300000, bitrate_observer_.last_bitrate_);
 
   // Test that a low delay-based estimate limits the combined estimate.
-  webrtc::DelayBasedBwe::Result result(false, 280000);
+  webrtz::DelayBasedBwe::Result result(false, 280000);
   controller_->OnDelayBasedBweResult(result);
   EXPECT_EQ(280000, bitrate_observer_.last_bitrate_);
 
@@ -190,7 +190,7 @@ TEST_F(BitrateControllerTest, OneBitrateObserverTwoRtcpObservers) {
   const uint32_t kMediaSsrc2 = 4;
 
   int64_t time_ms = 1;
-  webrtc::ReportBlockList report_blocks;
+  webrtz::ReportBlockList report_blocks;
   report_blocks = {CreateReportBlock(kSenderSsrc1, kMediaSsrc1, 0, 1)};
   bandwidth_observer_->OnReceivedRtcpReceiverReport(report_blocks, 50, time_ms);
   time_ms += 500;
@@ -284,7 +284,7 @@ TEST_F(BitrateControllerTest, OneBitrateObserverMultipleReportBlocks) {
 
   // REMBs during the first 2 seconds apply immediately.
   int64_t time_ms = 1001;
-  webrtc::ReportBlockList report_blocks;
+  webrtz::ReportBlockList report_blocks;
   report_blocks.push_back(CreateReportBlock(1, 2, 0, sequence_number[0]));
   bandwidth_observer_->OnReceivedEstimatedBitrate(kStartBitrate);
   bandwidth_observer_->OnReceivedRtcpReceiverReport(report_blocks, 50, time_ms);
@@ -404,14 +404,14 @@ TEST_F(BitrateControllerTest, SetReservedBitrate) {
 
 TEST_F(BitrateControllerTest, TimeoutsWithoutFeedback) {
   {
-    webrtc::test::ScopedFieldTrials override_field_trials(
+    webrtz::test::ScopedFieldTrials override_field_trials(
         "WebRTC-FeedbackTimeout/Enabled/");
     SetUp();
     int expected_bitrate_bps = 300000;
     controller_->SetBitrates(300000, kDefaultMinBitrateBps,
                              kDefaultMaxBitrateBps);
 
-    webrtc::ReportBlockList report_blocks;
+    webrtz::ReportBlockList report_blocks;
     report_blocks.push_back(CreateReportBlock(1, 2, 0, 1));
     bandwidth_observer_->OnReceivedRtcpReceiverReport(
         report_blocks, 50, clock_.TimeInMilliseconds());
@@ -467,7 +467,7 @@ TEST_F(BitrateControllerTest, StopIncreaseWithoutPacketReports) {
   controller_->SetBitrates(300000, kDefaultMinBitrateBps,
                            kDefaultMaxBitrateBps);
 
-  webrtc::ReportBlockList report_blocks;
+  webrtz::ReportBlockList report_blocks;
   report_blocks.push_back(CreateReportBlock(1, 2, 0, 1));
   bandwidth_observer_->OnReceivedRtcpReceiverReport(
       report_blocks, 50, clock_.TimeInMilliseconds());

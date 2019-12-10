@@ -24,13 +24,13 @@
 #include "system_wrappers/include/clock.h"
 #include "test/frame_utils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
 // Helper method for keeping a reference to passed pointers.
-void KeepBufferRefs(rtc::scoped_refptr<webrtc::VideoFrameBuffer>,
-                    rtc::scoped_refptr<webrtc::VideoFrameBuffer>) {}
+void KeepBufferRefs(rtc::scoped_refptr<webrtz::VideoFrameBuffer>,
+                    rtc::scoped_refptr<webrtz::VideoFrameBuffer>) {}
 
 // SquareGenerator is a FrameGenerator that draws a given amount of randomly
 // sized and colored squares. Between each new generated frame, the squares
@@ -90,7 +90,7 @@ class SquareGenerator : public FrameGenerator {
     for (const auto& square : squares_)
       square->Draw(buffer);
 
-    frame_.reset(new VideoFrame(buffer, 0, 0, webrtc::kVideoRotation_0));
+    frame_.reset(new VideoFrame(buffer, 0, 0, webrtz::kVideoRotation_0));
     return frame_.get();
   }
 
@@ -132,7 +132,7 @@ class SquareGenerator : public FrameGenerator {
         return;
 
       // Optionally draw on alpha plane if given.
-      const webrtc::I420ABufferInterface* yuva_buffer =
+      const webrtz::I420ABufferInterface* yuva_buffer =
           frame_buffer->GetI420A();
       for (int y = y_; y < y_ + length_; ++y) {
         uint8_t* pos_y = (const_cast<uint8_t*>(yuva_buffer->DataA()) + x_ +
@@ -193,7 +193,7 @@ class YuvFileGenerator : public FrameGenerator {
       current_display_count_ = 0;
 
     temp_frame_.reset(
-        new VideoFrame(last_read_buffer_, 0, 0, webrtc::kVideoRotation_0));
+        new VideoFrame(last_read_buffer_, 0, 0, webrtz::kVideoRotation_0));
     return temp_frame_.get();
   }
 
@@ -250,7 +250,7 @@ class SlideGenerator : public FrameGenerator {
       current_display_count_ = 0;
 
     frame_.reset(
-        new VideoFrame(buffer_, 0, 0, webrtc::kVideoRotation_0));
+        new VideoFrame(buffer_, 0, 0, webrtz::kVideoRotation_0));
     return frame_.get();
   }
 
@@ -382,8 +382,8 @@ class ScrollingImageFrameGenerator : public FrameGenerator {
     int offset_v = (i420_buffer->StrideV() * (pixels_scrolled_y / 2)) +
                    (pixels_scrolled_x / 2);
 
-    current_frame_ = webrtc::VideoFrame(
-        new rtc::RefCountedObject<webrtc::WrappedI420Buffer>(
+    current_frame_ = webrtz::VideoFrame(
+        new rtc::RefCountedObject<webrtz::WrappedI420Buffer>(
             target_width_, target_height_, &i420_buffer->DataY()[offset_y],
             i420_buffer->StrideY(), &i420_buffer->DataU()[offset_u],
             i420_buffer->StrideU(), &i420_buffer->DataV()[offset_v],
@@ -497,4 +497,4 @@ FrameGenerator::CreateScrollingInputFromYuvFiles(
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

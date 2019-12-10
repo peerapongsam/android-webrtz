@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 AudioVector::AudioVector()
     : AudioVector(kDefaultInitialSize) {
@@ -383,4 +383,4 @@ void AudioVector::InsertZerosByPushFront(size_t length,
     PushFront(temp_array.get(), position);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

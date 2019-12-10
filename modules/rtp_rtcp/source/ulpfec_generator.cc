@@ -20,7 +20,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -252,4 +252,4 @@ void UlpfecGenerator::ResetState() {
   num_protected_frames_ = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

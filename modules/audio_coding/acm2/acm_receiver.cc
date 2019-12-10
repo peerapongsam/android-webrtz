@@ -29,7 +29,7 @@
 #include "rtc_base/strings/audio_format_to_string.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace acm2 {
 
@@ -415,4 +415,4 @@ void AcmReceiver::GetDecodingCallStatistics(
 
 }  // namespace acm2
 
-}  // namespace webrtc
+}  // namespace webrtz

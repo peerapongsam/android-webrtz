@@ -17,7 +17,7 @@
 
 // Provides a set of static methods to perform dyadic decimations.
 
-namespace webrtc {
+namespace webrtz {
 
 // Returns the proper length of the output buffer that you should use for the
 // given |in_length| and decimation |odd_sequence|.
@@ -65,6 +65,6 @@ static size_t DyadicDecimate(const T* in,
   return output_samples;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_TRANSIENT_DYADIC_DECIMATOR_H_

@@ -26,7 +26,7 @@ struct PacketOptions;
 struct PacketTime;
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 
 // This represents the internal interface beneath SrtpTransportInterface;
 // it is not accessible to API consumers but is accessible to internal classes
@@ -89,6 +89,6 @@ class RtpTransportInternal : public SrtpTransportInterface,
       rtc::scoped_refptr<MetricsObserverInterface> metrics_observer) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPTRANSPORTINTERNAL_H_

@@ -17,7 +17,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 class RtpPacketToSend;
 
 class RtpPacketizer {
@@ -66,5 +66,5 @@ class RtpDepacketizer {
                      const uint8_t* payload_data,
                      size_t payload_data_length) = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_FORMAT_H_

@@ -15,7 +15,7 @@
 
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Used to specify which enum counter type we're incrementing in
 // MetricsObserverInterface::IncrementEnumCounter.
@@ -189,6 +189,6 @@ class MetricsObserverInterface : public rtc::RefCountInterface {
 
 typedef MetricsObserverInterface UMAObserver;
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_UMAMETRICS_H_

@@ -35,7 +35,7 @@ class Candidate;
 class SessionDescription;
 }  // namespace cricket
 
-namespace webrtc {
+namespace webrtz {
 
 struct SdpParseError {
  public:
@@ -233,6 +233,6 @@ class SetSessionDescriptionObserver : public rtc::RefCountInterface {
   ~SetSessionDescriptionObserver() override = default;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_JSEP_H_

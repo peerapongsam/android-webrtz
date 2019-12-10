@@ -20,7 +20,7 @@
 #include "modules/utility/include/process_thread.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DegradedCall : public Call, private Transport, private PacketReceiver {
  public:
@@ -99,6 +99,6 @@ class DegradedCall : public Call, private Transport, private PacketReceiver {
   std::unique_ptr<FakeNetworkPipe> receive_pipe_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_DEGRADED_CALL_H_

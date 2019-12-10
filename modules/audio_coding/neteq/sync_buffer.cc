@@ -13,7 +13,7 @@
 #include "modules/audio_coding/neteq/sync_buffer.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 size_t SyncBuffer::FutureLength() const {
   return Size() - next_index_;
@@ -105,4 +105,4 @@ void SyncBuffer::set_dtmf_index(size_t value) {
   dtmf_index_ = std::min(value, Size());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

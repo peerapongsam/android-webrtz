@@ -23239,7 +23239,7 @@ namespace {
 // clang-format on
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 namespace fec_private_tables {
 
 const uint8_t kPacketMaskRandomTbl[] = {
@@ -23295,4 +23295,4 @@ const uint8_t kPacketMaskRandomTbl[] = {
 };
 
 }  // namespace fec_private_tables
-}  // namespace webrtc
+}  // namespace webrtz

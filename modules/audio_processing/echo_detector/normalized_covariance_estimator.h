@@ -11,7 +11,7 @@
 #ifndef MODULES_AUDIO_PROCESSING_ECHO_DETECTOR_NORMALIZED_COVARIANCE_ESTIMATOR_H_
 #define MODULES_AUDIO_PROCESSING_ECHO_DETECTOR_NORMALIZED_COVARIANCE_ESTIMATOR_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // This class iteratively estimates the normalized covariance between two
 // signals.
@@ -38,6 +38,6 @@ class NormalizedCovarianceEstimator {
   float covariance_ = 0.f;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_ECHO_DETECTOR_NORMALIZED_COVARIANCE_ESTIMATOR_H_

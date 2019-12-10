@@ -31,7 +31,7 @@ RTC_PUSH_IGNORING_WUNDEF()
 #endif
 RTC_POP_IGNORING_WUNDEF()
 
-namespace webrtc {
+namespace webrtz {
 
 class CaptureStreamInfo {
  public:
@@ -61,6 +61,6 @@ class CaptureStreamInfo {
   std::unique_ptr<WriteToFileTask> task_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_CAPTURE_STREAM_INFO_H_

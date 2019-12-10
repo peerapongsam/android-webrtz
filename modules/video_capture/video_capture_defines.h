@@ -15,7 +15,7 @@
 #include "modules/include/module_common_types.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc
+namespace webrtz
 {
 // Defines
 #ifndef NULL
@@ -78,6 +78,6 @@ protected:
     ~VideoCaptureExternal() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CAPTURE_VIDEO_CAPTURE_DEFINES_H_

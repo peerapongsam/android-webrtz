@@ -25,7 +25,7 @@
     return false;                \
   }
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Length of VP9 payload descriptors' fixed part.
 const size_t kFixedPayloadDescriptorBytes = 1;
@@ -766,4 +766,4 @@ bool RtpDepacketizerVp9::Parse(ParsedPayload* parsed_payload,
 
   return true;
 }
-}  // namespace webrtc
+}  // namespace webrtz

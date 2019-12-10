@@ -22,7 +22,7 @@
 #include "modules/video_coding/codecs/vp8/temporal_layers.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class SimulcastRateAllocator : public VideoBitrateAllocator {
  public:
@@ -56,6 +56,6 @@ class SimulcastRateAllocator : public VideoBitrateAllocator {
   RTC_DISALLOW_COPY_AND_ASSIGN(SimulcastRateAllocator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_CODECS_VP8_SIMULCAST_RATE_ALLOCATOR_H_

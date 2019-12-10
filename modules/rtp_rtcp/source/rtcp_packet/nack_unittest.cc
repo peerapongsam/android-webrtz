@@ -14,7 +14,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::_;
@@ -24,7 +24,7 @@ using ::testing::Invoke;
 using ::testing::MockFunction;
 using ::testing::UnorderedElementsAreArray;
 using ::testing::make_tuple;
-using ::webrtc::rtcp::Nack;
+using ::webrtz::rtcp::Nack;
 
 constexpr uint32_t kSenderSsrc = 0x12345678;
 constexpr uint32_t kRemoteSsrc = 0x23456789;
@@ -168,4 +168,4 @@ TEST(RtcpPacketNackTest, ParseFailsWithTooSmallBuffer) {
   EXPECT_FALSE(test::ParseSinglePacket(kTooSmallPacket, &parsed));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 #include "modules/audio_processing/beamformer/matrix_test_helpers.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(ComplexMatrixTest, TestPointwiseConjugate) {
   const int kNumRows = 2;
@@ -99,4 +99,4 @@ TEST(ComplexMatrixTest, TestZeroImag) {
                                                         actual_result);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

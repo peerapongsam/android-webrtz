@@ -15,7 +15,7 @@
 #include "modules/video_coding/jitter_buffer_common.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMPacket {
  public:
@@ -53,5 +53,5 @@ class VCMPacket {
   void CopyCodecSpecifics(const RTPVideoHeader& videoHeader);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CODING_PACKET_H_

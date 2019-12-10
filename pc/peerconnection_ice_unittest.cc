@@ -27,7 +27,7 @@
 #include "rtc_base/ptr_util.h"
 #include "rtc_base/virtualsocketserver.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using RTCConfiguration = PeerConnectionInterface::RTCConfiguration;
 using RTCOfferAnswerOptions = PeerConnectionInterface::RTCOfferAnswerOptions;
@@ -932,4 +932,4 @@ TEST_F(PeerConnectionIceConfigTest, SetStunCandidateKeepaliveInterval) {
   EXPECT_EQ(actual_stun_keepalive_interval.value_or(-1), 321);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

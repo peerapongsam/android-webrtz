@@ -19,7 +19,7 @@
 #include "modules/desktop_capture/desktop_frame.h"
 #include "modules/desktop_capture/desktop_geometry.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DesktopRegion;
 
@@ -68,6 +68,6 @@ class DxgiTexture {
   std::unique_ptr<DesktopFrame> frame_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_TEXTURE_H_

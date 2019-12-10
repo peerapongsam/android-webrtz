@@ -18,7 +18,7 @@
 #include "rtc_base/thread.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Uncomment this define to enable verbose logging for every encoded/decoded
@@ -83,6 +83,6 @@ static inline bool CheckException(JNIEnv* jni) {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_ANDROIDMEDIACODECCOMMON_H_

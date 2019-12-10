@@ -21,12 +21,12 @@
 #include "typedefs.h"  // NOLINT(build/include)
 
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class GlRenderer : public VideoRenderer {
  public:
-  void OnFrame(const webrtc::VideoFrame& frame) override;
+  void OnFrame(const webrtz::VideoFrame& frame) override;
 
  protected:
   GlRenderer();

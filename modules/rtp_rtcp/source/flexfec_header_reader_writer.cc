@@ -19,7 +19,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -312,4 +312,4 @@ void FlexfecHeaderWriter::FinalizeFecHeader(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

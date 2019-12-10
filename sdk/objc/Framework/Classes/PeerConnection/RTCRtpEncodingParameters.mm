@@ -21,7 +21,7 @@
 }
 
 - (instancetype)initWithNativeParameters:
-    (const webrtc::RtpEncodingParameters &)nativeParameters {
+    (const webrtz::RtpEncodingParameters &)nativeParameters {
   if (self = [self init]) {
     _isActive = nativeParameters.active;
     if (nativeParameters.max_bitrate_bps) {
@@ -35,8 +35,8 @@
   return self;
 }
 
-- (webrtc::RtpEncodingParameters)nativeParameters {
-  webrtc::RtpEncodingParameters parameters;
+- (webrtz::RtpEncodingParameters)nativeParameters {
+  webrtz::RtpEncodingParameters parameters;
   parameters.active = _isActive;
   if (_maxBitrateBps != nil) {
     parameters.max_bitrate_bps = rtc::Optional<int>(_maxBitrateBps.intValue);

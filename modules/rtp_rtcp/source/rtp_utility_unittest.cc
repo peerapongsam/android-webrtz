@@ -15,7 +15,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using ::testing::ElementsAreArray;
@@ -269,4 +269,4 @@ TEST(RtpHeaderParser, ParseWithCsrcsExtensionAndPadding) {
   EXPECT_EQ(0x56ce, header.extension.transmissionTimeOffset);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

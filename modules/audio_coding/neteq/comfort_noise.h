@@ -15,7 +15,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class DecoderDatabase;
@@ -67,5 +67,5 @@ class ComfortNoise {
   RTC_DISALLOW_COPY_AND_ASSIGN(ComfortNoise);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_COMFORT_NOISE_H_

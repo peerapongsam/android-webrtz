@@ -20,7 +20,7 @@
 #include "system_wrappers/include/clock.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static const int kOneSecond90Khz = 90000;
 static const int kMinTimeBetweenSyncs = kOneSecond90Khz * 2;
@@ -469,4 +469,4 @@ void ScreenshareLayers::UpdateHistograms() {
     }
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

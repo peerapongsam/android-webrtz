@@ -24,7 +24,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace aec3 {
 
@@ -616,4 +616,4 @@ void AdaptiveFirFilter::Constrain() {
                                 : 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

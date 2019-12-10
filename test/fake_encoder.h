@@ -21,7 +21,7 @@
 #include "rtc_base/task_queue.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class FakeEncoder : public VideoEncoder {
@@ -132,6 +132,6 @@ class MultithreadedFakeH264Encoder : public test::FakeH264Encoder {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FAKE_ENCODER_H_

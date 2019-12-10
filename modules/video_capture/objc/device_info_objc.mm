@@ -51,8 +51,8 @@
   return [[AVCaptureDevice deviceWithUniqueID:uniqueId] localizedName];
 }
 
-+ (webrtc::VideoCaptureCapability)capabilityForPreset:(NSString*)preset {
-  webrtc::VideoCaptureCapability capability;
++ (webrtz::VideoCaptureCapability)capabilityForPreset:(NSString*)preset {
+  webrtz::VideoCaptureCapability capability;
 
   // TODO(tkchin): Maybe query AVCaptureDevice for supported formats, and
   // then get the dimensions / frame rate from each supported format
@@ -60,19 +60,19 @@
     capability.width = 352;
     capability.height = 288;
     capability.maxFPS = 30;
-    capability.videoType = webrtc::VideoType::kNV12;
+    capability.videoType = webrtz::VideoType::kNV12;
     capability.interlaced = false;
   } else if ([preset isEqualToString:AVCaptureSessionPreset640x480]) {
     capability.width = 640;
     capability.height = 480;
     capability.maxFPS = 30;
-    capability.videoType = webrtc::VideoType::kNV12;
+    capability.videoType = webrtz::VideoType::kNV12;
     capability.interlaced = false;
   } else if ([preset isEqualToString:AVCaptureSessionPreset1280x720]) {
     capability.width = 1280;
     capability.height = 720;
     capability.maxFPS = 30;
-    capability.videoType = webrtc::VideoType::kNV12;
+    capability.videoType = webrtz::VideoType::kNV12;
     capability.interlaced = false;
   }
 

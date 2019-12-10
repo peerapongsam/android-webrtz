@@ -19,7 +19,7 @@
 #include "modules/video_coding/utility/moving_average.h"
 #include "rtc_base/sequenced_task_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // An interface for signaling requests to limit or increase the resolution or
 // framerate of the captured video stream.
@@ -79,6 +79,6 @@ class QualityScaler {
 
   VideoEncoder::QpThresholds thresholds_ RTC_GUARDED_BY(&task_checker_);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_UTILITY_QUALITY_SCALER_H_

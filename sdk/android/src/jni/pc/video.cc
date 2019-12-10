@@ -30,7 +30,7 @@
 #include "sdk/android/src/jni/videodecoderfactorywrapper.h"
 #include "sdk/android/src/jni/videoencoderfactorywrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 VideoEncoderFactory* CreateVideoEncoderFactory(
@@ -118,4 +118,4 @@ VideoDecoderFactory* WrapLegacyVideoDecoderFactory(
 #endif
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

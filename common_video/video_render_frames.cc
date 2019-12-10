@@ -16,7 +16,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Don't render frames with timestamp older than 500ms from now.
 const int kOldRenderTimestampMS = 500;
@@ -97,4 +97,4 @@ bool VideoRenderFrames::HasPendingFrames() const {
   return !incoming_frames_.empty();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

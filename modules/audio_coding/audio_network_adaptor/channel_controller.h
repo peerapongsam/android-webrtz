@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/controller.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ChannelController final : public Controller {
  public:
@@ -48,6 +48,6 @@ class ChannelController final : public Controller {
   RTC_DISALLOW_COPY_AND_ASSIGN(ChannelController);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_AUDIO_NETWORK_ADAPTOR_CHANNEL_CONTROLLER_H_

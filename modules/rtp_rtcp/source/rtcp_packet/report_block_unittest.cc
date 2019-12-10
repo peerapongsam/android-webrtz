@@ -15,9 +15,9 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-using webrtc::rtcp::ReportBlock;
+using webrtz::rtcp::ReportBlock;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const uint32_t kRemoteSsrc = 0x23456789;
@@ -92,4 +92,4 @@ TEST(RtcpPacketReportBlockTest, ValidateCumulativeLost) {
 }
 
 }  // namespace
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,7 +17,7 @@
 #include "modules/include/module_common_types.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace test {
 
@@ -48,6 +48,6 @@ class MockAecDump : public AecDump {
 
 }  // namespace test
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC_DUMP_MOCK_AEC_DUMP_H_

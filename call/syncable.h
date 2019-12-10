@@ -18,7 +18,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Syncable {
  public:
@@ -38,6 +38,6 @@ class Syncable {
   virtual uint32_t GetPlayoutTimestamp() const = 0;
   virtual void SetMinimumPlayoutDelay(int delay_ms) = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_SYNCABLE_H_

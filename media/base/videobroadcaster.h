@@ -30,13 +30,13 @@ namespace rtc {
 // Video frames can be broadcasted on any thread. I.e VideoBroadcaster::OnFrame
 // can be called on any thread.
 class VideoBroadcaster : public VideoSourceBase,
-                         public VideoSinkInterface<webrtc::VideoFrame> {
+                         public VideoSinkInterface<webrtz::VideoFrame> {
  public:
   VideoBroadcaster();
   ~VideoBroadcaster() override;
-  void AddOrUpdateSink(VideoSinkInterface<webrtc::VideoFrame>* sink,
+  void AddOrUpdateSink(VideoSinkInterface<webrtz::VideoFrame>* sink,
                        const VideoSinkWants& wants) override;
-  void RemoveSink(VideoSinkInterface<webrtc::VideoFrame>* sink) override;
+  void RemoveSink(VideoSinkInterface<webrtz::VideoFrame>* sink) override;
 
   // Returns true if the next frame will be delivered to at least one sink.
   bool frame_wanted() const;
@@ -49,13 +49,13 @@ class VideoBroadcaster : public VideoSourceBase,
   // it will never receive a frame with pending rotation. Our caller
   // may pass in frames without precise synchronization with changes
   // to the VideoSinkWants.
-  void OnFrame(const webrtc::VideoFrame& frame) override;
+  void OnFrame(const webrtz::VideoFrame& frame) override;
 
   void OnDiscardedFrame() override;
 
  protected:
   void UpdateWants() RTC_EXCLUSIVE_LOCKS_REQUIRED(sinks_and_wants_lock_);
-  const rtc::scoped_refptr<webrtc::VideoFrameBuffer>& GetBlackFrameBuffer(
+  const rtc::scoped_refptr<webrtz::VideoFrameBuffer>& GetBlackFrameBuffer(
       int width,
       int height) RTC_EXCLUSIVE_LOCKS_REQUIRED(sinks_and_wants_lock_);
 
@@ -63,7 +63,7 @@ class VideoBroadcaster : public VideoSourceBase,
   rtc::CriticalSection sinks_and_wants_lock_;
 
   VideoSinkWants current_wants_ RTC_GUARDED_BY(sinks_and_wants_lock_);
-  rtc::scoped_refptr<webrtc::VideoFrameBuffer> black_frame_buffer_;
+  rtc::scoped_refptr<webrtz::VideoFrameBuffer> black_frame_buffer_;
 };
 
 }  // namespace rtc

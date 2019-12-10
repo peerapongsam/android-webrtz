@@ -17,7 +17,7 @@ namespace cricket {
 
 // Abstract interface for providing the audio data.
 // TODO(deadbeef): Rename this to AudioSourceInterface, and rename
-// webrtc::AudioSourceInterface to AudioTrackSourceInterface.
+// webrtz::AudioSourceInterface to AudioTrackSourceInterface.
 class AudioSource {
  public:
   class Sink {

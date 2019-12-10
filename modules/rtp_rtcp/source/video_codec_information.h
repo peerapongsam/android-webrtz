@@ -14,7 +14,7 @@
 #include "modules/rtp_rtcp/source/rtp_rtcp_config.h"
 #include "modules/rtp_rtcp/source/rtp_utility.h"
 
-namespace webrtc {
+namespace webrtz {
 class VideoCodecInformation {
  public:
   virtual void Reset() = 0;
@@ -22,6 +22,6 @@ class VideoCodecInformation {
   virtual RtpVideoCodecTypes Type() = 0;
   virtual ~VideoCodecInformation() {}
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_VIDEO_CODEC_INFORMATION_H_

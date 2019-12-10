@@ -18,7 +18,7 @@
 #include "api/optional.h"
 #include "modules/audio_coding/neteq/tools/input_audio_file.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Provides an AudioDecoder implementation that delivers audio data from a file.
@@ -69,5 +69,5 @@ class FakeDecodeFromFile : public AudioDecoder {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_FAKE_DECODE_FROM_FILE_H_

@@ -16,7 +16,7 @@
 #include "test/field_trial.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int kNumProbesCluster0 = 5;
@@ -233,4 +233,4 @@ TEST_F(LegacyDelayBasedBweTest, TestInitialOveruse) {
   EXPECT_NEAR(bitrate_observer_.latest_bitrate(), kStartBitrate / 2, 15000);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

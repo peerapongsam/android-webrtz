@@ -35,7 +35,7 @@ constexpr int kBitrateProbingError = 150000;
 const float kPaceMultiplier = 2.5f;
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 static const int kTargetBitrateBps = 800000;
@@ -1186,4 +1186,4 @@ TEST_F(PacedSenderTest, QueueTimePausedDuringPush) {
 // racy condition so can't easily be tested).
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

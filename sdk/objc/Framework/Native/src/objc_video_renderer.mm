@@ -15,7 +15,7 @@
 
 #include "sdk/objc/Framework/Native/src/objc_video_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ObjCVideoRenderer::ObjCVideoRenderer(id<RTCVideoRenderer> renderer)
     : renderer_(renderer), size_(CGSizeZero) {}
@@ -34,4 +34,4 @@ void ObjCVideoRenderer::OnFrame(const VideoFrame& nativeVideoFrame) {
   [renderer_ renderFrame:videoFrame];
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

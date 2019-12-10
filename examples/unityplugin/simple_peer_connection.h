@@ -22,10 +22,10 @@
 #include "examples/unityplugin/unity_plugin_apis.h"
 #include "examples/unityplugin/video_observer.h"
 
-class SimplePeerConnection : public webrtc::PeerConnectionObserver,
-                             public webrtc::CreateSessionDescriptionObserver,
-                             public webrtc::DataChannelObserver,
-                             public webrtc::AudioTrackSinkInterface {
+class SimplePeerConnection : public webrtz::PeerConnectionObserver,
+                             public webrtz::CreateSessionDescriptionObserver,
+                             public webrtz::DataChannelObserver,
+                             public webrtz::AudioTrackSinkInterface {
  public:
   SimplePeerConnection() {}
   ~SimplePeerConnection() {}
@@ -71,28 +71,28 @@ class SimplePeerConnection : public webrtc::PeerConnectionObserver,
 
   // PeerConnectionObserver implementation.
   void OnSignalingChange(
-      webrtc::PeerConnectionInterface::SignalingState new_state) override {}
+      webrtz::PeerConnectionInterface::SignalingState new_state) override {}
   void OnAddStream(
-      rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) override;
+      rtc::scoped_refptr<webrtz::MediaStreamInterface> stream) override;
   void OnRemoveStream(
-      rtc::scoped_refptr<webrtc::MediaStreamInterface> stream) override {}
+      rtc::scoped_refptr<webrtz::MediaStreamInterface> stream) override {}
   void OnDataChannel(
-      rtc::scoped_refptr<webrtc::DataChannelInterface> channel) override;
+      rtc::scoped_refptr<webrtz::DataChannelInterface> channel) override;
   void OnRenegotiationNeeded() override {}
   void OnIceConnectionChange(
-      webrtc::PeerConnectionInterface::IceConnectionState new_state) override {}
+      webrtz::PeerConnectionInterface::IceConnectionState new_state) override {}
   void OnIceGatheringChange(
-      webrtc::PeerConnectionInterface::IceGatheringState new_state) override {}
-  void OnIceCandidate(const webrtc::IceCandidateInterface* candidate) override;
+      webrtz::PeerConnectionInterface::IceGatheringState new_state) override {}
+  void OnIceCandidate(const webrtz::IceCandidateInterface* candidate) override;
   void OnIceConnectionReceivingChange(bool receiving) override {}
 
   // CreateSessionDescriptionObserver implementation.
-  void OnSuccess(webrtc::SessionDescriptionInterface* desc) override;
+  void OnSuccess(webrtz::SessionDescriptionInterface* desc) override;
   void OnFailure(const std::string& error) override;
 
   // DataChannelObserver implementation.
   void OnStateChange() override;
-  void OnMessage(const webrtc::DataBuffer& buffer) override;
+  void OnMessage(const webrtz::DataBuffer& buffer) override;
 
   // AudioTrackSinkInterface implementation.
   void OnData(const void* audio_data,
@@ -105,16 +105,16 @@ class SimplePeerConnection : public webrtc::PeerConnectionObserver,
   std::vector<uint32_t> GetRemoteAudioTrackSsrcs();
 
  private:
-  rtc::scoped_refptr<webrtc::PeerConnectionInterface> peer_connection_;
-  rtc::scoped_refptr<webrtc::DataChannelInterface> data_channel_;
-  std::map<std::string, rtc::scoped_refptr<webrtc::MediaStreamInterface> >
+  rtc::scoped_refptr<webrtz::PeerConnectionInterface> peer_connection_;
+  rtc::scoped_refptr<webrtz::DataChannelInterface> data_channel_;
+  std::map<std::string, rtc::scoped_refptr<webrtz::MediaStreamInterface> >
       active_streams_;
 
   std::unique_ptr<VideoObserver> local_video_observer_;
   std::unique_ptr<VideoObserver> remote_video_observer_;
 
-  webrtc::MediaStreamInterface* remote_stream_ = nullptr;
-  webrtc::PeerConnectionInterface::RTCConfiguration config_;
+  webrtz::MediaStreamInterface* remote_stream_ = nullptr;
+  webrtz::PeerConnectionInterface::RTCConfiguration config_;
 
   LOCALDATACHANNELREADY_CALLBACK OnLocalDataChannelReady = nullptr;
   DATAFROMEDATECHANNELREADY_CALLBACK OnDataFromDataChannelReady = nullptr;

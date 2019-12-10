@@ -18,7 +18,7 @@
 #include "modules/audio_coding/test/Channel.h"
 #include "modules/audio_coding/test/PCMFile.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TestRedFec : public ACMTest {
  public:
@@ -45,6 +45,6 @@ class TestRedFec : public ACMTest {
   int16_t _testCntr;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_TESTREDFEC_H_

@@ -15,7 +15,7 @@
 
 #include "modules/audio_device/audio_device_generic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceDummy : public AudioDeviceGeneric {
  public:
@@ -109,6 +109,6 @@ class AudioDeviceDummy : public AudioDeviceGeneric {
   void AttachAudioBuffer(AudioDeviceBuffer* audioBuffer) override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_DEVICE_AUDIO_DEVICE_DUMMY_H_

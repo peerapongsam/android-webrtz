@@ -17,7 +17,7 @@
 #include "api/rtpsenderinterface.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockRtpSender : public rtc::RefCountedObject<RtpSenderInterface> {
  public:
@@ -32,6 +32,6 @@ class MockRtpSender : public rtc::RefCountedObject<RtpSenderInterface> {
   MOCK_CONST_METHOD0(GetDtmfSender, rtc::scoped_refptr<DtmfSenderInterface>());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_TEST_MOCK_RTPSENDER_H_

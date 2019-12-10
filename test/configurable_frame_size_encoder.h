@@ -16,7 +16,7 @@
 
 #include "api/video_codecs/video_encoder.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class ConfigurableFrameSizeEncoder : public VideoEncoder {
@@ -52,6 +52,6 @@ class ConfigurableFrameSizeEncoder : public VideoEncoder {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_CONFIGURABLE_FRAME_SIZE_ENCODER_H_

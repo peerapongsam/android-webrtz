@@ -21,7 +21,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Returns true if |size| and |alignment| are valid combinations.
 bool CorrectUsage(size_t size, size_t alignment) {
@@ -79,4 +79,4 @@ TEST(AlignedMalloc, AlignTo128Bytes) {
   EXPECT_TRUE(CorrectUsage(size, alignment));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -30,7 +30,7 @@
 #include "rtc_base/thread_checker.h"
 #include "rtc_base/timestampaligner.h"
 
-namespace webrtc {
+namespace webrtz {
 class VideoFrame;
 }
 
@@ -73,7 +73,7 @@ enum CaptureState {
 //   thread safe.
 //
 class VideoCapturer : public sigslot::has_slots<>,
-                      public rtc::VideoSourceInterface<webrtc::VideoFrame> {
+                      public rtc::VideoSourceInterface<webrtz::VideoFrame> {
  public:
   VideoCapturer();
 
@@ -173,9 +173,9 @@ class VideoCapturer : public sigslot::has_slots<>,
   bool GetInputSize(int* width, int* height);
 
   // Implements VideoSourceInterface
-  void AddOrUpdateSink(rtc::VideoSinkInterface<webrtc::VideoFrame>* sink,
+  void AddOrUpdateSink(rtc::VideoSinkInterface<webrtz::VideoFrame>* sink,
                        const rtc::VideoSinkWants& wants) override;
-  void RemoveSink(rtc::VideoSinkInterface<webrtc::VideoFrame>* sink) override;
+  void RemoveSink(rtc::VideoSinkInterface<webrtz::VideoFrame>* sink) override;
 
  protected:
   // OnSinkWantsChanged can be overridden to change the default behavior
@@ -214,7 +214,7 @@ class VideoCapturer : public sigslot::has_slots<>,
   // VideoFrame. OnFrame can be called directly by an implementation
   // that does not use SignalFrameCaptured or OnFrameCaptured. The
   // orig_width and orig_height are used only to produce stats.
-  void OnFrame(const webrtc::VideoFrame& frame,
+  void OnFrame(const webrtz::VideoFrame& frame,
                int orig_width,
                int orig_height);
 

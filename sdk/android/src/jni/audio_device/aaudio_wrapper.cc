@@ -31,7 +31,7 @@
     }                                                                         \
   } while (0)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -498,4 +498,4 @@ bool AAudioWrapper::OptimizeBuffers() {
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

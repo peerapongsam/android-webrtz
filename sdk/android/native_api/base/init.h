@@ -13,11 +13,11 @@
 
 #include <jni.h>
 
-namespace webrtc {
+namespace webrtz {
 
 // Initializes global state needed by WebRTC Android NDK.
 void InitAndroid(JavaVM* jvm);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_NATIVE_API_BASE_INIT_H_

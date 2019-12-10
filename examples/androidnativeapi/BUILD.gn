@@ -6,8 +6,8 @@ rtc_android_apk("androidnativeapi") {
   android_manifest = "AndroidManifest.xml"
 
   java_files = [
-    "java/org/webrtc/examples/androidnativeapi/MainActivity.java",
-    "java/org/webrtc/examples/androidnativeapi/CallClient.java",
+    "java/org/webrtz/examples/androidnativeapi/MainActivity.java",
+    "java/org/webrtz/examples/androidnativeapi/CallClient.java",
   ]
 
   deps = [
@@ -22,7 +22,7 @@ rtc_android_apk("androidnativeapi") {
 generate_jni("generated_jni") {
   testonly = true
   sources = [
-    "java/org/webrtc/examples/androidnativeapi/CallClient.java",
+    "java/org/webrtz/examples/androidnativeapi/CallClient.java",
   ]
   jni_package = ""
   jni_generator_include = "//sdk/android/src/jni/jni_generator_helper.h"
@@ -73,5 +73,5 @@ rtc_shared_library("examples_androidnativeapi_jni") {
 android_resources("resources") {
   testonly = true
   resource_dirs = [ "res" ]
-  custom_package = "org.webrtc.examples.androidnativeapi"
+  custom_package = "org.webrtz.examples.androidnativeapi"
 }

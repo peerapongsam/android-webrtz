@@ -15,7 +15,7 @@
 
 #include <string>
 
-namespace webrtc {
+namespace webrtz {
 
 enum class IceCandidatePairEventType {
   // Config event types for events related to the candiate pair creation and
@@ -46,6 +46,6 @@ class RtcEventIceCandidatePair final : public RtcEvent {
   const uint32_t candidate_pair_id_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_ICE_CANDIDATE_PAIR_H_

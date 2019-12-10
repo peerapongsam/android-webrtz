@@ -49,11 +49,11 @@ const int kDefaultRtcpCnameLength = 16;
 // feedback mechanism is supported, but an enum value wasn't added to
 // rtpparameters.h).
 template <typename C>
-webrtc::RtpCapabilities ToRtpCapabilitiesWithAsserts(
+webrtz::RtpCapabilities ToRtpCapabilitiesWithAsserts(
     const std::vector<C>& cricket_codecs,
     const cricket::RtpHeaderExtensions& cricket_extensions) {
-  webrtc::RtpCapabilities capabilities =
-      webrtc::ToRtpCapabilities(cricket_codecs, cricket_extensions);
+  webrtz::RtpCapabilities capabilities =
+      webrtz::ToRtpCapabilities(cricket_codecs, cricket_extensions);
   RTC_DCHECK_EQ(capabilities.codecs.size(), cricket_codecs.size());
   for (size_t i = 0; i < capabilities.codecs.size(); ++i) {
     RTC_DCHECK_EQ(capabilities.codecs[i].rtcp_feedback.size(),
@@ -66,7 +66,7 @@ webrtc::RtpCapabilities ToRtpCapabilitiesWithAsserts(
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 // Note that this proxy class uses the network thread as the "worker" thread.
 BEGIN_OWNED_PROXY_MAP(OrtcFactory)
@@ -552,7 +552,7 @@ OrtcFactory::CreateMediaEngine_w() {
   return std::unique_ptr<cricket::MediaEngineInterface>(
       cricket::WebRtcMediaEngineFactory::Create(
           adm_, audio_encoder_factory_, audio_decoder_factory_, nullptr,
-          nullptr, nullptr, webrtc::AudioProcessingBuilder().Create()));
+          nullptr, nullptr, webrtz::AudioProcessingBuilder().Create()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

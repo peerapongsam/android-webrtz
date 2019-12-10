@@ -10,7 +10,7 @@
 
 #include "modules/desktop_capture/desktop_capture_options.h"
 
-namespace webrtc {
+namespace webrtz {
 
 DesktopCaptureOptions::DesktopCaptureOptions() {}
 DesktopCaptureOptions::DesktopCaptureOptions(
@@ -38,4 +38,4 @@ DesktopCaptureOptions DesktopCaptureOptions::CreateDefault() {
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

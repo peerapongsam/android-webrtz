@@ -18,7 +18,7 @@
 #include "rtc_base/basictypes.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 class CompoundPacket : public RtcpPacket {
@@ -44,5 +44,5 @@ class CompoundPacket : public RtcpPacket {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_COMPOUND_PACKET_H_

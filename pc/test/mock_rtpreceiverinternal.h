@@ -17,7 +17,7 @@
 #include "pc/rtpreceiver.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The definition of MockRtpReceiver is copied in to avoid multiple inheritance.
 class MockRtpReceiverInternal : public RtpReceiverInternal {
@@ -47,6 +47,6 @@ class MockRtpReceiverInternal : public RtpReceiverInternal {
   MOCK_CONST_METHOD0(AttachmentId, int());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_TEST_MOCK_RTPRECEIVERINTERNAL_H_

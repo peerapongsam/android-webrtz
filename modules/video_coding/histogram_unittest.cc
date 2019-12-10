@@ -11,7 +11,7 @@
 #include "modules/video_coding/histogram.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 class TestHistogram : public ::testing::Test {
@@ -73,4 +73,4 @@ TEST_F(TestHistogram, ReplaceOldValues) {
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

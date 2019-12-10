@@ -13,7 +13,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 constexpr size_t RtcpPacket::kHeaderLength;
 
@@ -84,4 +84,4 @@ void RtcpPacket::CreateHeader(
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

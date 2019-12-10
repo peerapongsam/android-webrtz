@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_rtcp_packet_outgoing.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventRtcpPacketOutgoing::RtcEventRtcpPacketOutgoing(
     rtc::ArrayView<const uint8_t> packet)
@@ -26,4 +26,4 @@ bool RtcEventRtcpPacketOutgoing::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

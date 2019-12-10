@@ -17,7 +17,7 @@
 #include "test/gtest.h"
 #include "test/rtcp_packet_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 class StatsEndToEndTest : public test::CallTest {};
 
 TEST_F(StatsEndToEndTest, GetStats) {
@@ -751,4 +751,4 @@ TEST_F(StatsEndToEndTest, CallReportsRttForSender) {
     DestroyCalls();
   });
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,9 +10,9 @@
 
 #include "modules/rtp_rtcp/mocks/mock_rtcp_bandwidth_observer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 MockRtcpBandwidthObserver::MockRtcpBandwidthObserver() = default;
 MockRtcpBandwidthObserver::~MockRtcpBandwidthObserver() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

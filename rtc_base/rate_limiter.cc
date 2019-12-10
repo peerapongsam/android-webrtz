@@ -11,7 +11,7 @@
 #include "rtc_base/rate_limiter.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RateLimiter::RateLimiter(const Clock* clock, int64_t max_window_ms)
     : clock_(clock),
@@ -62,4 +62,4 @@ bool RateLimiter::SetWindowSize(int64_t window_size_ms) {
                                      clock_->TimeInMilliseconds());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

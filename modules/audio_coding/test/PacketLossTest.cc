@@ -16,7 +16,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 ReceiverWithPacketLoss::ReceiverWithPacketLoss()
     : loss_rate_(0),
@@ -135,7 +135,7 @@ void PacketLossTest::Perform() {
   int codec_id = acm->Codec("opus", 48000, channels_);
 
   RTPFile rtpFile;
-  std::string fileName = webrtc::test::TempFilename(webrtc::test::OutputPath(),
+  std::string fileName = webrtz::test::TempFilename(webrtz::test::OutputPath(),
                                                     "packet_loss_test");
 
   // Encode to file
@@ -168,4 +168,4 @@ void PacketLossTest::Perform() {
 #endif
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

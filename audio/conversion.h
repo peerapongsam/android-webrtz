@@ -11,7 +11,7 @@
 #ifndef AUDIO_CONVERSION_H_
 #define AUDIO_CONVERSION_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // Convert fixed point number with 8 bit fractional part, to floating point.
 inline float Q8ToFloat(uint32_t v) {
@@ -22,6 +22,6 @@ inline float Q8ToFloat(uint32_t v) {
 inline float Q14ToFloat(uint32_t v) {
   return static_cast<float>(v) / (1 << 14);
 }
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // AUDIO_CONVERSION_H_

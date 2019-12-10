@@ -24,7 +24,7 @@
 #include "modules/desktop_capture/win/dxgi_frame.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // ScreenCapturerWinDirectx captures 32bit RGBA using DirectX.
 class ScreenCapturerWinDirectx : public DesktopCapturer {
@@ -90,6 +90,6 @@ class ScreenCapturerWinDirectx : public DesktopCapturer {
   RTC_DISALLOW_COPY_AND_ASSIGN(ScreenCapturerWinDirectx);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_SCREEN_CAPTURER_WIN_DIRECTX_H_

@@ -36,18 +36,18 @@ static ClassReferenceHolder* g_class_reference_holder = nullptr;
 
 void LoadGlobalClassReferenceHolder() {
   RTC_CHECK(g_class_reference_holder == nullptr);
-  g_class_reference_holder = new ClassReferenceHolder(webrtc::jni::GetEnv());
+  g_class_reference_holder = new ClassReferenceHolder(webrtz::jni::GetEnv());
 }
 
 void FreeGlobalClassReferenceHolder() {
   g_class_reference_holder->FreeReferences(
-      webrtc::jni::AttachCurrentThreadIfNeeded());
+      webrtz::jni::AttachCurrentThreadIfNeeded());
   delete g_class_reference_holder;
   g_class_reference_holder = nullptr;
 }
 
 ClassReferenceHolder::ClassReferenceHolder(JNIEnv* jni) {
-  LoadClass(jni, "org/webrtc/UnityUtility");
+  LoadClass(jni, "org/webrtz/UnityUtility");
 }
 
 ClassReferenceHolder::~ClassReferenceHolder() {

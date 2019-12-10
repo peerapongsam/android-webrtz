@@ -21,7 +21,7 @@
 #include "rtc_base/deprecation.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 const uint8_t kRtpMarkerBitMask = 0x80;
 
@@ -63,6 +63,6 @@ class RtpHeaderParser {
   const uint8_t* const _ptrRTPDataEnd;
 };
 }  // namespace RtpUtility
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_UTILITY_H_

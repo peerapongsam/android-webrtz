@@ -8,10 +8,10 @@
  *  be found in the AUTHORS file in the root of the source tree.
  */
 
-namespace webrtc {
+namespace webrtz {
 namespace audiodevicemodule {
 
 void EnsureInitialized();
 
 }  // namespace audiodevicemodule
-}  // namespace webrtc
+}  // namespace webrtz

@@ -22,7 +22,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 namespace {
@@ -259,4 +259,4 @@ void H264SpsPpsTracker::InsertSpsPpsNalus(const std::vector<uint8_t>& sps,
 }
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,10 +17,10 @@
 #include "modules/pacing/paced_sender.h"
 #include "rtc_base/sequenced_task_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 class Clock;
 
-namespace webrtc_cc {
+namespace webrtz_cc {
 
 // Wrapper class to control pacer using task queues. Note that this class is
 // only designed to be used from a single task queue and has no built in
@@ -48,6 +48,6 @@ class PacerController {
   rtc::SequencedTaskChecker sequenced_checker_;
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(PacerController);
 };
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz
 #endif  // MODULES_CONGESTION_CONTROLLER_RTP_PACER_CONTROLLER_H_

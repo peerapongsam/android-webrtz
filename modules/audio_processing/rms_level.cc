@@ -16,7 +16,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 static constexpr float kMaxSquaredLevel = 32768 * 32768;
 // kMinLevel is the level corresponding to kMinLevelDb, that is 10^(-127/10).
@@ -104,4 +104,4 @@ void RmsLevel::CheckBlockSize(size_t block_size) {
     block_size_ = block_size;
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

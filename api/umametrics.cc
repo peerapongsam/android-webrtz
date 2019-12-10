@@ -10,7 +10,7 @@
 
 #include "api/umametrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void MetricsObserverInterface::IncrementSparseEnumCounter(
     PeerConnectionEnumCounterType type,
@@ -18,4 +18,4 @@ void MetricsObserverInterface::IncrementSparseEnumCounter(
   IncrementEnumCounter(type, counter, 0 /* Ignored */);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

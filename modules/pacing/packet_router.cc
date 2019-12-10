@@ -20,7 +20,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 constexpr int kRembSendIntervalMs = 200;
@@ -296,4 +296,4 @@ void PacketRouter::DetermineActiveRembModule() {
   active_remb_module_ = new_active_remb_module;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

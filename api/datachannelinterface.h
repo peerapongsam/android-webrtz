@@ -21,7 +21,7 @@
 #include "rtc_base/copyonwritebuffer.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // C++ version of: https://www.w3.org/TR/webrtc/#idl-def-rtcdatachannelinit
 // TODO(deadbeef): Use rtc::Optional for the "-1 if unset" things.
@@ -178,6 +178,6 @@ class DataChannelInterface : public rtc::RefCountInterface {
   virtual ~DataChannelInterface() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_DATACHANNELINTERFACE_H_

@@ -15,7 +15,7 @@
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 #include "rtc_base/numerics/safe_conversions.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -441,4 +441,4 @@ void WebRtcCng_K2a16(int16_t* k, int useOrder, int16_t* a) {
 
 }  // namespace
 
-}  // namespace webrtc
+}  // namespace webrtz

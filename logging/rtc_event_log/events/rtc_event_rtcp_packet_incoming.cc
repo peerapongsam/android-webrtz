@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_rtcp_packet_incoming.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventRtcpPacketIncoming::RtcEventRtcpPacketIncoming(
     rtc::ArrayView<const uint8_t> packet)
@@ -26,4 +26,4 @@ bool RtcEventRtcpPacketIncoming::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

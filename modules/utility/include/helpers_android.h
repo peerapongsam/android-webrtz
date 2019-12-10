@@ -29,7 +29,7 @@
 #define JNI_FUNCTION_ALIGN
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 // Return a |JNIEnv*| usable on this thread or NULL if this thread is detached.
 JNIEnv* GetEnv(JavaVM* jvm);
@@ -68,6 +68,6 @@ class AttachThreadScoped {
   JNIEnv* env_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_UTILITY_INCLUDE_HELPERS_ANDROID_H_

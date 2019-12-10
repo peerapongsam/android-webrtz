@@ -34,7 +34,7 @@
 #import "sdk/objc/Framework/Headers/WebRTC/RTCAudioSession.h"
 #import "sdk/objc/Framework/Headers/WebRTC/RTCAudioSessionConfiguration.h"
 
-namespace webrtc {
+namespace webrtz {
 
 #define LOGI() RTC_LOG(LS_INFO) << "AudioDeviceIOS::"
 
@@ -906,4 +906,4 @@ void AudioDeviceIOS::ShutdownPlayOrRecord() {
   [session unlockForConfiguration];
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

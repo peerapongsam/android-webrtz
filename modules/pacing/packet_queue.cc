@@ -23,7 +23,7 @@
 #include "system_wrappers/include/clock.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 PacketQueue::PacketQueue(const Clock* clock)
     : bytes_(0),
@@ -125,4 +125,4 @@ int64_t PacketQueue::AverageQueueTimeMs() const {
   return queue_time_sum_ / packet_list_.size();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

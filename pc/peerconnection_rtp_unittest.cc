@@ -33,9 +33,9 @@
 #include "test/gmock.h"
 
 // This file contains tests for RTP Media API-related behavior of
-// |webrtc::PeerConnection|, see https://w3c.github.io/webrtc-pc/#rtp-media-api.
+// |webrtz::PeerConnection|, see https://w3c.github.io/webrtc-pc/#rtp-media-api.
 
-namespace webrtc {
+namespace webrtz {
 
 using RTCConfiguration = PeerConnectionInterface::RTCConfiguration;
 using ::testing::ElementsAre;
@@ -45,13 +45,13 @@ const uint32_t kDefaultTimeout = 10000u;
 
 template <typename MethodFunctor>
 class OnSuccessObserver : public rtc::RefCountedObject<
-                              webrtc::SetRemoteDescriptionObserverInterface> {
+                              webrtz::SetRemoteDescriptionObserverInterface> {
  public:
   explicit OnSuccessObserver(MethodFunctor on_success)
       : on_success_(std::move(on_success)) {}
 
-  // webrtc::SetRemoteDescriptionObserverInterface implementation.
-  void OnSetRemoteDescriptionComplete(webrtc::RTCError error) override {
+  // webrtz::SetRemoteDescriptionObserverInterface implementation.
+  void OnSetRemoteDescriptionComplete(webrtz::RTCError error) override {
     RTC_CHECK(error.ok());
     on_success_();
   }
@@ -102,7 +102,7 @@ class PeerConnectionRtpTest : public testing::Test {
   rtc::scoped_refptr<PeerConnectionFactoryInterface> pc_factory_;
 };
 
-// These tests cover |webrtc::PeerConnectionObserver| callbacks firing upon
+// These tests cover |webrtz::PeerConnectionObserver| callbacks firing upon
 // setting the remote description.
 class PeerConnectionRtpCallbacksTest : public PeerConnectionRtpTest {};
 
@@ -431,8 +431,8 @@ TEST_F(PeerConnectionRtpObserverTest,
   ASSERT_TRUE(callee->SetRemoteDescription(caller->CreateOfferAndSetAsLocal()));
 
   ASSERT_EQ(callee->pc()->GetReceivers().size(), 2u);
-  rtc::scoped_refptr<webrtc::RtpReceiverInterface> receiver1;
-  rtc::scoped_refptr<webrtc::RtpReceiverInterface> receiver2;
+  rtc::scoped_refptr<webrtz::RtpReceiverInterface> receiver1;
+  rtc::scoped_refptr<webrtz::RtpReceiverInterface> receiver2;
   if (callee->pc()->GetReceivers()[0]->track()->id() == "audio_track1") {
     receiver1 = callee->pc()->GetReceivers()[0];
     receiver2 = callee->pc()->GetReceivers()[1];
@@ -450,7 +450,7 @@ TEST_F(PeerConnectionRtpObserverTest,
   // TODO(hbos): When we implement Unified Plan, receivers will not be removed.
   // Instead, the transceiver owning the receiver will become inactive.
   EXPECT_EQ(
-      std::vector<rtc::scoped_refptr<webrtc::RtpReceiverInterface>>{receiver2},
+      std::vector<rtc::scoped_refptr<webrtz::RtpReceiverInterface>>{receiver2},
       callee->pc()->GetReceivers());
 
   // Remove "audio_track2".
@@ -634,8 +634,8 @@ TEST_F(PeerConnectionRtpLegacyObserverTest,
   auto caller = CreatePeerConnection();
   auto callee = CreatePeerConnection();
 
-  rtc::scoped_refptr<webrtc::MockSetSessionDescriptionObserver> observer =
-      new rtc::RefCountedObject<webrtc::MockSetSessionDescriptionObserver>();
+  rtc::scoped_refptr<webrtz::MockSetSessionDescriptionObserver> observer =
+      new rtc::RefCountedObject<webrtz::MockSetSessionDescriptionObserver>();
 
   auto offer = caller->CreateOfferAndSetAsLocal();
   callee->pc()->SetRemoteDescription(observer, offer.release());
@@ -1323,4 +1323,4 @@ TEST_F(PeerConnectionSenderTest, CreateTwoSendersWithSameTrack) {
   EXPECT_FALSE(caller->CreateOfferAndSetAsLocal());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

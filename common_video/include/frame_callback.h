@@ -16,7 +16,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoFrame;
 
@@ -54,6 +54,6 @@ class EncodedFrameObserver {
   virtual ~EncodedFrameObserver() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_INCLUDE_FRAME_CALLBACK_H_

@@ -14,7 +14,7 @@
 #include "modules/video_coding/utility/vp8_header_parser.h"
 #include "modules/video_coding/utility/vp9_uncompressed_header_parser.h"
 
-namespace webrtc {
+namespace webrtz {
 
 bool QpParser::GetQp(const VCMEncodedFrame& frame, int* qp) {
   switch (frame.CodecSpecific()->codecType) {
@@ -29,4 +29,4 @@ bool QpParser::GetQp(const VCMEncodedFrame& frame, int* qp) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

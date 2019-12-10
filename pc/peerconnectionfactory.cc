@@ -43,7 +43,7 @@
 #include "pc/videocapturertracksource.h"
 #include "pc/videotrack.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::scoped_refptr<PeerConnectionFactoryInterface>
 CreateModularPeerConnectionFactory(
@@ -91,7 +91,7 @@ PeerConnectionFactory::PeerConnectionFactory(
     rtc::Thread* worker_thread,
     rtc::Thread* signaling_thread,
     std::unique_ptr<cricket::MediaEngineInterface> media_engine,
-    std::unique_ptr<webrtc::CallFactoryInterface> call_factory,
+    std::unique_ptr<webrtz::CallFactoryInterface> call_factory,
     std::unique_ptr<RtcEventLogFactoryInterface> event_log_factory)
     : PeerConnectionFactory(network_thread,
                             worker_thread,
@@ -106,7 +106,7 @@ PeerConnectionFactory::PeerConnectionFactory(
     rtc::Thread* worker_thread,
     rtc::Thread* signaling_thread,
     std::unique_ptr<cricket::MediaEngineInterface> media_engine,
-    std::unique_ptr<webrtc::CallFactoryInterface> call_factory,
+    std::unique_ptr<webrtz::CallFactoryInterface> call_factory,
     std::unique_ptr<RtcEventLogFactoryInterface> event_log_factory,
     std::unique_ptr<FecControllerFactoryInterface> fec_controller_factory)
     : wraps_current_thread_(false),
@@ -368,7 +368,7 @@ std::unique_ptr<Call> PeerConnectionFactory::CreateCall_w(
   const int kStartBandwidthBps = 300000;
   const int kMaxBandwidthBps = 2000000;
 
-  webrtc::Call::Config call_config(event_log);
+  webrtz::Call::Config call_config(event_log);
   if (!channel_manager_->media_engine() || !call_factory_) {
     return nullptr;
   }
@@ -382,4 +382,4 @@ std::unique_ptr<Call> PeerConnectionFactory::CreateCall_w(
   return std::unique_ptr<Call>(call_factory_->CreateCall(call_config));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

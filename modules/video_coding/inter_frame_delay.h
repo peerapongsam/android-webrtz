@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VCMInterFrameDelay {
  public:
@@ -62,6 +62,6 @@ class VCMInterFrameDelay {
   int64_t _dTS;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INTER_FRAME_DELAY_H_

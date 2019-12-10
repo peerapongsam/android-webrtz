@@ -17,7 +17,7 @@
 #include "api/jsep.h"
 #include "sdk/android/native_api/jni/scoped_java_ref.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 std::unique_ptr<SessionDescriptionInterface> JavaToNativeSessionDescription(
@@ -29,6 +29,6 @@ ScopedJavaLocalRef<jobject> NativeToJavaSessionDescription(
     const SessionDescriptionInterface* desc);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_PC_SESSIONDESCRIPTION_H_

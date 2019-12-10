@@ -16,7 +16,7 @@
 #include "modules/include/module_common_types.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 ///////////////////////////////////////////////////////////////////////////
 // enum ACMVADMode
@@ -46,6 +46,6 @@ enum OpusApplicationMode {
  kAudio = 1,
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_INCLUDE_AUDIO_CODING_MODULE_TYPEDEFS_H_

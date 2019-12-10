@@ -20,7 +20,7 @@
 #include "rtc_base/buffer.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketizerH264 : public RtpPacketizer {
  public:
@@ -117,5 +117,5 @@ class RtpDepacketizerH264 : public RtpDepacketizer {
   size_t length_;
   std::unique_ptr<rtc::Buffer> modified_buffer_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_FORMAT_H264_H_

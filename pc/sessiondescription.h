@@ -29,7 +29,7 @@ typedef std::vector<AudioCodec> AudioCodecs;
 typedef std::vector<VideoCodec> VideoCodecs;
 typedef std::vector<DataCodec> DataCodecs;
 typedef std::vector<CryptoParams> CryptoParamsVec;
-typedef std::vector<webrtc::RtpExtension> RtpHeaderExtensions;
+typedef std::vector<webrtz::RtpExtension> RtpHeaderExtensions;
 
 // RTC4585 RTP/AVPF
 extern const char kMediaProtocolAvpf[];
@@ -85,8 +85,8 @@ class MediaContentDescription {
   std::string protocol() const { return protocol_; }
   void set_protocol(const std::string& protocol) { protocol_ = protocol; }
 
-  webrtc::RtpTransceiverDirection direction() const { return direction_; }
-  void set_direction(webrtc::RtpTransceiverDirection direction) {
+  webrtz::RtpTransceiverDirection direction() const { return direction_; }
+  void set_direction(webrtz::RtpTransceiverDirection direction) {
     direction_ = direction;
   }
 
@@ -114,12 +114,12 @@ class MediaContentDescription {
     rtp_header_extensions_ = extensions;
     rtp_header_extensions_set_ = true;
   }
-  void AddRtpHeaderExtension(const webrtc::RtpExtension& ext) {
+  void AddRtpHeaderExtension(const webrtz::RtpExtension& ext) {
     rtp_header_extensions_.push_back(ext);
     rtp_header_extensions_set_ = true;
   }
   void AddRtpHeaderExtension(const cricket::RtpHeaderExtension& ext) {
-    webrtc::RtpExtension webrtc_extension;
+    webrtz::RtpExtension webrtc_extension;
     webrtc_extension.uri = ext.uri;
     webrtc_extension.id = ext.id;
     rtp_header_extensions_.push_back(webrtc_extension);
@@ -189,12 +189,12 @@ class MediaContentDescription {
   int bandwidth_ = kAutoBandwidth;
   std::string protocol_;
   std::vector<CryptoParams> cryptos_;
-  std::vector<webrtc::RtpExtension> rtp_header_extensions_;
+  std::vector<webrtz::RtpExtension> rtp_header_extensions_;
   bool rtp_header_extensions_set_ = false;
   StreamParamsVec streams_;
   bool conference_mode_ = false;
-  webrtc::RtpTransceiverDirection direction_ =
-      webrtc::RtpTransceiverDirection::kSendRecv;
+  webrtz::RtpTransceiverDirection direction_ =
+      webrtz::RtpTransceiverDirection::kSendRecv;
   rtc::SocketAddress connection_address_;
 };
 

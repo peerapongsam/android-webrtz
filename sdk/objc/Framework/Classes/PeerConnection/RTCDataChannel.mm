@@ -14,7 +14,7 @@
 
 #include <memory>
 
-namespace webrtc {
+namespace webrtz {
 
 class DataChannelDelegateAdapter : public DataChannelObserver {
  public:
@@ -46,7 +46,7 @@ class DataChannelDelegateAdapter : public DataChannelObserver {
 
 
 @implementation RTCDataBuffer {
-  std::unique_ptr<webrtc::DataBuffer> _dataBuffer;
+  std::unique_ptr<webrtz::DataBuffer> _dataBuffer;
 }
 
 - (instancetype)initWithData:(NSData *)data isBinary:(BOOL)isBinary {
@@ -54,7 +54,7 @@ class DataChannelDelegateAdapter : public DataChannelObserver {
   if (self = [super init]) {
     rtc::CopyOnWriteBuffer buffer(
         reinterpret_cast<const uint8_t*>(data.bytes), data.length);
-    _dataBuffer.reset(new webrtc::DataBuffer(buffer, isBinary));
+    _dataBuffer.reset(new webrtz::DataBuffer(buffer, isBinary));
   }
   return self;
 }
@@ -70,14 +70,14 @@ class DataChannelDelegateAdapter : public DataChannelObserver {
 
 #pragma mark - Private
 
-- (instancetype)initWithNativeBuffer:(const webrtc::DataBuffer&)nativeBuffer {
+- (instancetype)initWithNativeBuffer:(const webrtz::DataBuffer&)nativeBuffer {
   if (self = [super init]) {
-    _dataBuffer.reset(new webrtc::DataBuffer(nativeBuffer));
+    _dataBuffer.reset(new webrtz::DataBuffer(nativeBuffer));
   }
   return self;
 }
 
-- (const webrtc::DataBuffer *)nativeDataBuffer {
+- (const webrtz::DataBuffer *)nativeDataBuffer {
   return _dataBuffer.get();
 }
 
@@ -85,8 +85,8 @@ class DataChannelDelegateAdapter : public DataChannelObserver {
 
 
 @implementation RTCDataChannel {
-  rtc::scoped_refptr<webrtc::DataChannelInterface> _nativeDataChannel;
-  std::unique_ptr<webrtc::DataChannelDelegateAdapter> _observer;
+  rtc::scoped_refptr<webrtz::DataChannelInterface> _nativeDataChannel;
+  std::unique_ptr<webrtz::DataChannelDelegateAdapter> _observer;
   BOOL _isObserverRegistered;
 }
 
@@ -166,40 +166,40 @@ class DataChannelDelegateAdapter : public DataChannelObserver {
 #pragma mark - Private
 
 - (instancetype)initWithNativeDataChannel:
-    (rtc::scoped_refptr<webrtc::DataChannelInterface>)nativeDataChannel {
+    (rtc::scoped_refptr<webrtz::DataChannelInterface>)nativeDataChannel {
   NSParameterAssert(nativeDataChannel);
   if (self = [super init]) {
     _nativeDataChannel = nativeDataChannel;
-    _observer.reset(new webrtc::DataChannelDelegateAdapter(self));
+    _observer.reset(new webrtz::DataChannelDelegateAdapter(self));
     _nativeDataChannel->RegisterObserver(_observer.get());
   }
   return self;
 }
 
-+ (webrtc::DataChannelInterface::DataState)
++ (webrtz::DataChannelInterface::DataState)
     nativeDataChannelStateForState:(RTCDataChannelState)state {
   switch (state) {
     case RTCDataChannelStateConnecting:
-      return webrtc::DataChannelInterface::DataState::kConnecting;
+      return webrtz::DataChannelInterface::DataState::kConnecting;
     case RTCDataChannelStateOpen:
-      return webrtc::DataChannelInterface::DataState::kOpen;
+      return webrtz::DataChannelInterface::DataState::kOpen;
     case RTCDataChannelStateClosing:
-      return webrtc::DataChannelInterface::DataState::kClosing;
+      return webrtz::DataChannelInterface::DataState::kClosing;
     case RTCDataChannelStateClosed:
-      return webrtc::DataChannelInterface::DataState::kClosed;
+      return webrtz::DataChannelInterface::DataState::kClosed;
   }
 }
 
 + (RTCDataChannelState)dataChannelStateForNativeState:
-    (webrtc::DataChannelInterface::DataState)nativeState {
+    (webrtz::DataChannelInterface::DataState)nativeState {
   switch (nativeState) {
-    case webrtc::DataChannelInterface::DataState::kConnecting:
+    case webrtz::DataChannelInterface::DataState::kConnecting:
       return RTCDataChannelStateConnecting;
-    case webrtc::DataChannelInterface::DataState::kOpen:
+    case webrtz::DataChannelInterface::DataState::kOpen:
       return RTCDataChannelStateOpen;
-    case webrtc::DataChannelInterface::DataState::kClosing:
+    case webrtz::DataChannelInterface::DataState::kClosing:
       return RTCDataChannelStateClosing;
-    case webrtc::DataChannelInterface::DataState::kClosed:
+    case webrtz::DataChannelInterface::DataState::kClosed:
       return RTCDataChannelStateClosed;
   }
 }

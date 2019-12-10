@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/aec3/echo_path_variability.h"
 
-namespace webrtc {
+namespace webrtz {
 
 EchoPathVariability::EchoPathVariability(bool gain_change,
                                          DelayAdjustment delay_change,
@@ -19,4 +19,4 @@ EchoPathVariability::EchoPathVariability(bool gain_change,
       delay_change(delay_change),
       clock_drift(clock_drift) {}
 
-}  // namespace webrtc
+}  // namespace webrtz

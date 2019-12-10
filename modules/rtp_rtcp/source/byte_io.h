@@ -40,7 +40,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // According to ISO C standard ISO/IEC 9899, section 6.2.6.2 (2), the three
 // representations of signed integers allowed are two's complement, one's
@@ -403,6 +403,6 @@ class ByteWriter<T, 8, false> {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_BYTE_IO_H_

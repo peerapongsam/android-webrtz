@@ -15,7 +15,7 @@
 #include "test/gmock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Verify that the default value for ms_per_tick is 10.
 TEST(TickTimer, DefaultMsPerTick) {
@@ -132,4 +132,4 @@ TEST(TickTimer, Countdown) {
   tt.Increment(1234);
   EXPECT_TRUE(cd->Finished());
 }
-}  // namespace webrtc
+}  // namespace webrtz

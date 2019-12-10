@@ -12,7 +12,7 @@
 
 #include "modules/video_processing/util/denoiser_filter_neon.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const int kSumDiffThresholdHighNeon = 600;
 
@@ -192,4 +192,4 @@ DenoiserDecision DenoiserFilterNEON::MbDenoise(const uint8_t* mc_running_avg_y,
   return FILTER_BLOCK;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

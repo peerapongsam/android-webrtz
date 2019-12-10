@@ -16,8 +16,8 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
-namespace webrtc_cc {
+namespace webrtz {
+namespace webrtz_cc {
 
 namespace {
 bool IsInSendTimeHistory(const PacketFeedback& packet) {
@@ -65,5 +65,5 @@ void AcknowledgedBitrateEstimator::MaybeExpectFastRateChange(
   }
 }
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz

@@ -20,7 +20,7 @@
 #include "modules/audio_coding/test/RTPFile.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #define MAX_INCOMING_PAYLOAD 8096
 
@@ -118,6 +118,6 @@ class EncodeDecodeTest : public ACMTest {
   Receiver _receiver;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_CODING_TEST_ENCODEDECODETEST_H_

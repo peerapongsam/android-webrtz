@@ -31,7 +31,7 @@
   RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:@[
       @"stun:stun1.example.net" ]];
 
-  webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
+  webrtz::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
   EXPECT_EQ(1u, iceStruct.urls.size());
   EXPECT_EQ("stun:stun1.example.net", iceStruct.urls.front());
   EXPECT_EQ("", iceStruct.username);
@@ -42,7 +42,7 @@
   RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:@[
       @"turn1:turn1.example.net", @"turn2:turn2.example.net" ]];
 
-  webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
+  webrtz::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
   EXPECT_EQ(2u, iceStruct.urls.size());
   EXPECT_EQ("turn1:turn1.example.net", iceStruct.urls.front());
   EXPECT_EQ("turn2:turn2.example.net", iceStruct.urls.back());
@@ -55,7 +55,7 @@
       initWithURLStrings:@[ @"turn1:turn1.example.net" ]
                 username:@"username"
               credential:@"credential"];
-  webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
+  webrtz::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
   EXPECT_EQ(1u, iceStruct.urls.size());
   EXPECT_EQ("turn1:turn1.example.net", iceStruct.urls.front());
   EXPECT_EQ("username", iceStruct.username);
@@ -68,7 +68,7 @@
                                                        credential:@"credential"
                                                     tlsCertPolicy:RTCTlsCertPolicySecure
                                                          hostname:@"hostname"];
-  webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
+  webrtz::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
   EXPECT_EQ(1u, iceStruct.urls.size());
   EXPECT_EQ("turn1:turn1.example.net", iceStruct.urls.front());
   EXPECT_EQ("username", iceStruct.username);
@@ -83,7 +83,7 @@
                                                     tlsCertPolicy:RTCTlsCertPolicySecure
                                                          hostname:@"hostname"
                                                  tlsAlpnProtocols:@[ @"proto1", @"proto2" ]];
-  webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
+  webrtz::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
   EXPECT_EQ(1u, iceStruct.urls.size());
   EXPECT_EQ("turn1:turn1.example.net", iceStruct.urls.front());
   EXPECT_EQ("username", iceStruct.username);
@@ -100,7 +100,7 @@
                                                          hostname:@"hostname"
                                                  tlsAlpnProtocols:@[ @"proto1", @"proto2" ]
                                                 tlsEllipticCurves:@[ @"curve1", @"curve2" ]];
-  webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
+  webrtz::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
   EXPECT_EQ(1u, iceStruct.urls.size());
   EXPECT_EQ("turn1:turn1.example.net", iceStruct.urls.front());
   EXPECT_EQ("username", iceStruct.username);
@@ -111,7 +111,7 @@
 }
 
 - (void)testInitFromNativeServer {
-  webrtc::PeerConnectionInterface::IceServer nativeServer;
+  webrtz::PeerConnectionInterface::IceServer nativeServer;
   nativeServer.username = "username";
   nativeServer.password = "password";
   nativeServer.urls.push_back("stun:stun.example.net");

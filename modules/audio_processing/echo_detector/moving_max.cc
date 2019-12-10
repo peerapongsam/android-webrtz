@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Parameter for controlling how fast the estimated maximum decays after the
@@ -49,4 +49,4 @@ void MovingMax::Clear() {
   counter_ = 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

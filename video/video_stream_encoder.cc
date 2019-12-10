@@ -31,7 +31,7 @@
 #include "video/overuse_frame_detector.h"
 #include "video/send_statistics_proxy.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -1226,4 +1226,4 @@ std::string VideoStreamEncoder::AdaptCounter::ToString(
   return ss.str();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

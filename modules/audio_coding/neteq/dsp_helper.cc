@@ -17,7 +17,7 @@
 
 #include "common_audio/signal_processing/include/signal_processing_library.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Table of constants used in method DspHelper::ParabolicFit().
 const int16_t DspHelper::kParabolaCoefficients[17][3] = {
@@ -365,4 +365,4 @@ int DspHelper::DownsampleTo4kHz(const int16_t* input, size_t input_length,
       output_length, filter_coefficients, filter_length, factor, filter_delay);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

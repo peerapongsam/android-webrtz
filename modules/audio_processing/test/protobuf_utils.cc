@@ -11,7 +11,7 @@
 #include "modules/audio_processing/test/protobuf_utils.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 size_t ReadMessageBytesFromFile(FILE* file, std::unique_ptr<uint8_t[]>* bytes) {
   // The "wire format" for the size is little-endian. Assume we're running on
@@ -40,4 +40,4 @@ bool ReadMessageFromFile(FILE* file, MessageLite* msg) {
   return msg->ParseFromArray(bytes.get(), size);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

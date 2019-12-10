@@ -10,11 +10,11 @@
 
 #include "test/fuzzers/fuzz_data_helper.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 FuzzDataHelper::FuzzDataHelper(rtc::ArrayView<const uint8_t> data)
     : data_(data) {}
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -17,7 +17,7 @@
 #include "modules/video_coding/packet.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(TestDecodingState, Sanity) {
   VCMDecodingState dec_state;
@@ -696,4 +696,4 @@ TEST(TestDecodingState, FrameContinuityFlexibleModeGeneral) {
   EXPECT_FALSE(dec_state.ContinuousFrame(&frame));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

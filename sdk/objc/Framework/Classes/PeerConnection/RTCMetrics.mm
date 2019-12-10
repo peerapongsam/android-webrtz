@@ -13,13 +13,13 @@
 #import "RTCMetricsSampleInfo+Private.h"
 
 void RTCEnableMetrics(void) {
-  webrtc::metrics::Enable();
+  webrtz::metrics::Enable();
 }
 
 NSArray<RTCMetricsSampleInfo *> *RTCGetAndResetMetrics(void) {
-  std::map<std::string, std::unique_ptr<webrtc::metrics::SampleInfo>>
+  std::map<std::string, std::unique_ptr<webrtz::metrics::SampleInfo>>
       histograms;
-  webrtc::metrics::GetAndReset(&histograms);
+  webrtz::metrics::GetAndReset(&histograms);
 
   NSMutableArray *metrics =
       [NSMutableArray arrayWithCapacity:histograms.size()];

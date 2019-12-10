@@ -12,7 +12,7 @@
 
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcpNackStats::RtcpNackStats()
     : max_sequence_number_(0),
@@ -28,4 +28,4 @@ void RtcpNackStats::ReportRequest(uint16_t sequence_number) {
   ++requests_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

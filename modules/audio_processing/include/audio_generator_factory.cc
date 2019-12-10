@@ -14,7 +14,7 @@
 #include "modules/audio_processing/audio_generator/file_audio_generator.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<AudioGenerator> AudioGeneratorFactory::Create(
     const std::string& file_name) {
@@ -22,4 +22,4 @@ std::unique_ptr<AudioGenerator> AudioGeneratorFactory::Create(
   return rtc::MakeUnique<FileAudioGenerator>(std::move(input_audio_file));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

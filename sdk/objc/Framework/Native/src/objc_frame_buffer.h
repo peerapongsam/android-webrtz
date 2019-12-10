@@ -17,7 +17,7 @@
 
 @protocol RTCVideoFrameBuffer;
 
-namespace webrtc {
+namespace webrtz {
 
 class ObjCFrameBuffer : public VideoFrameBuffer {
  public:
@@ -42,6 +42,6 @@ class ObjCFrameBuffer : public VideoFrameBuffer {
 id<RTCVideoFrameBuffer> ToObjCVideoFrameBuffer(
     const rtc::scoped_refptr<VideoFrameBuffer>& buffer);
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_OBJC_FRAMEWORK_NATIVE_SRC_OBJC_FRAME_BUFFER_H_

@@ -21,7 +21,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDeviceBuffer;
 class FineAudioBuffer;
@@ -141,6 +141,6 @@ class AAudioPlayer final : public AAudioObserverInterface,
   double latency_millis_ RTC_GUARDED_BY(thread_checker_aaudio_) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_ANDROID_AAUDIO_PLAYER_H_

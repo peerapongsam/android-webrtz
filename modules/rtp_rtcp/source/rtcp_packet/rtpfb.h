@@ -15,7 +15,7 @@
 #include "modules/rtp_rtcp/source/rtcp_packet.h"
 #include "rtc_base/basictypes.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 // RTPFB: Transport layer feedback message.
@@ -44,5 +44,5 @@ class Rtpfb : public RtcpPacket {
 };
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_PACKET_RTPFB_H_

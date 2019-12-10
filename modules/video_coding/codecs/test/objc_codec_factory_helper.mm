@@ -14,7 +14,7 @@
 #include "sdk/objc/Framework/Native/api/video_decoder_factory.h"
 #include "sdk/objc/Framework/Native/api/video_encoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 std::unique_ptr<VideoEncoderFactory> CreateObjCEncoderFactory() {
@@ -26,4 +26,4 @@ std::unique_ptr<VideoDecoderFactory> CreateObjCDecoderFactory() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

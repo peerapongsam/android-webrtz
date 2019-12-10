@@ -16,7 +16,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 class CongestionWindow {
@@ -44,6 +44,6 @@ class CongestionWindow {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_ESTIMATORS_CONGESTION_WINDOW_H_

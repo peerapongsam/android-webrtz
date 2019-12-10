@@ -15,7 +15,7 @@
 #include "rtc_base/arraysize.h"
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class BiQuadFilter {
  public:
@@ -51,6 +51,6 @@ class BiQuadFilter {
   RTC_DISALLOW_COPY_AND_ASSIGN(BiQuadFilter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_BIQUAD_FILTER_H_

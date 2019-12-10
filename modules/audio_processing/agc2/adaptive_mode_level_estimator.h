@@ -14,7 +14,7 @@
 #include "modules/audio_processing/agc2/saturation_protector.h"
 #include "modules/audio_processing/vad/vad_with_level.h"
 
-namespace webrtc {
+namespace webrtz {
 class ApmDataDumper;
 
 class AdaptiveModeLevelEstimator {
@@ -34,6 +34,6 @@ class AdaptiveModeLevelEstimator {
   ApmDataDumper* const apm_data_dumper_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AGC2_ADAPTIVE_MODE_LEVEL_ESTIMATOR_H_

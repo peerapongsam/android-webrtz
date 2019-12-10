@@ -16,7 +16,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 SharedDesktopFrame::~SharedDesktopFrame() {}
 
@@ -58,4 +58,4 @@ SharedDesktopFrame::SharedDesktopFrame(rtc::scoped_refptr<Core> core)
   CopyFrameInfoFrom(*(core_->get()));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

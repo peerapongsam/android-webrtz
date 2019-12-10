@@ -18,25 +18,25 @@
 #include "api/video_codecs/video_decoder_factory.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
-class MockVideoDecoderFactory : public webrtc::VideoDecoderFactory {
+class MockVideoDecoderFactory : public webrtz::VideoDecoderFactory {
  public:
   MOCK_CONST_METHOD0(GetSupportedFormats,
-                     std::vector<webrtc::SdpVideoFormat>());
+                     std::vector<webrtz::SdpVideoFormat>());
 
   // We need to proxy to a return type that is copyable.
-  std::unique_ptr<webrtc::VideoDecoder> CreateVideoDecoder(
-      const webrtc::SdpVideoFormat& format) {
-    return std::unique_ptr<webrtc::VideoDecoder>(
+  std::unique_ptr<webrtz::VideoDecoder> CreateVideoDecoder(
+      const webrtz::SdpVideoFormat& format) {
+    return std::unique_ptr<webrtz::VideoDecoder>(
         CreateVideoDecoderProxy(format));
   }
   MOCK_METHOD1(CreateVideoDecoderProxy,
-               webrtc::VideoDecoder*(const webrtc::SdpVideoFormat&));
+               webrtz::VideoDecoder*(const webrtz::SdpVideoFormat&));
 
   MOCK_METHOD0(Die, void());
   ~MockVideoDecoderFactory() { Die(); }
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_TEST_MOCK_VIDEO_DECODER_FACTORY_H_

@@ -18,7 +18,7 @@
 #include "modules/audio_coding/neteq/audio_multi_vector.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class DtmfToneGeneratorTest : public ::testing::Test {
  protected:
@@ -177,4 +177,4 @@ TEST(DtmfToneGenerator, TestErrors) {
             tone_gen.Generate(kNumSamples, NULL));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

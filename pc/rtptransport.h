@@ -26,7 +26,7 @@ class PacketTransportInternal;
 
 }  // namespace rtc
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpTransport : public RtpTransportInternal {
  public:
@@ -131,6 +131,6 @@ class RtpTransport : public RtpTransportInternal {
   RtpTransportParameters parameters_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_RTPTRANSPORT_H_

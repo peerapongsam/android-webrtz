@@ -14,7 +14,7 @@
 #include <memory>
 #include <vector>
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoEncoder;
 struct SdpVideoFormat;
@@ -30,9 +30,9 @@ class VideoEncoderFactory {
     bool is_hardware_accelerated;
     // |has_internal_source| is true if encoders created by this factory of the
     // given codec will use internal camera sources, meaning that they don't
-    // require/expect frames to be delivered via webrtc::VideoEncoder::Encode.
+    // require/expect frames to be delivered via webrtz::VideoEncoder::Encode.
     // This flag is used as the internal_source parameter to
-    // webrtc::ViEExternalCodec::RegisterExternalSendCodec.
+    // webrtz::ViEExternalCodec::RegisterExternalSendCodec.
     bool has_internal_source;
   };
 
@@ -52,6 +52,6 @@ class VideoEncoderFactory {
   virtual ~VideoEncoderFactory() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_CODECS_VIDEO_ENCODER_FACTORY_H_

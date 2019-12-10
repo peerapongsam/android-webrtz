@@ -17,7 +17,7 @@
 #include "rtc_base/logging.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 enum SpsMode {
   kNoRewriteRequired_PocCorrect,
@@ -186,4 +186,4 @@ REWRITE_TEST(RewriteSuboptimalVui,
              kRewriteRequired_VuiSuboptimal,
              SpsVuiRewriter::ParseResult::kVuiRewritten);
 
-}  // namespace webrtc
+}  // namespace webrtz

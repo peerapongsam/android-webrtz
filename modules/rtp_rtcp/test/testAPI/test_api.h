@@ -20,7 +20,7 @@
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This class sends all its packet straight to the provided RtpRtcp module.
 // with optional packet loss.
@@ -56,17 +56,17 @@ class TestRtpReceiver : public RtpData {
   int32_t OnReceivedPayloadData(
       const uint8_t* payload_data,
       size_t payload_size,
-      const webrtc::WebRtcRTPHeader* rtp_header) override;
+      const webrtz::WebRtcRTPHeader* rtp_header) override;
 
   const uint8_t* payload_data() const { return payload_data_; }
   size_t payload_size() const { return payload_size_; }
-  webrtc::WebRtcRTPHeader rtp_header() const { return rtp_header_; }
+  webrtz::WebRtcRTPHeader rtp_header() const { return rtp_header_; }
 
  private:
   uint8_t payload_data_[1500];
   size_t payload_size_;
-  webrtc::WebRtcRTPHeader rtp_header_;
+  webrtz::WebRtcRTPHeader rtp_header_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_TEST_TESTAPI_TEST_API_H_

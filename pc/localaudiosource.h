@@ -18,7 +18,7 @@
 // LocalAudioSource implements AudioSourceInterface.
 // This contains settings for switching audio processing on and off.
 
-namespace webrtc {
+namespace webrtz {
 
 class MediaConstraintsInterface;
 
@@ -50,6 +50,6 @@ class LocalAudioSource : public Notifier<AudioSourceInterface> {
   cricket::AudioOptions options_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_LOCALAUDIOSOURCE_H_

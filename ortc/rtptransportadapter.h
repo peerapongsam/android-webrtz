@@ -25,7 +25,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/sigslot.h"
 
-namespace webrtc {
+namespace webrtz {
 // This class is a wrapper over an RtpTransport or an SrtpTransport. The base
 // class RtpTransportInternalAdapter keeps a raw pointer, |transport_|, of the
 // transport object and implements both the public SrtpTransportInterface and
@@ -121,6 +121,6 @@ class RtpTransportAdapter : public RtpTransportInternalAdapter {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RtpTransportAdapter);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // ORTC_RTPTRANSPORTADAPTER_H_

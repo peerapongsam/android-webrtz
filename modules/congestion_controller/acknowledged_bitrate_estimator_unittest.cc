@@ -23,7 +23,7 @@ using testing::NiceMock;
 using testing::InSequence;
 using testing::Return;
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -132,4 +132,4 @@ TEST(LegacyTestAcknowledgedBitrateEstimator, ReturnBitrate) {
   EXPECT_EQ(return_value, states.acknowledged_bitrate_estimator->bitrate_bps());
 }
 
-}  // namespace webrtc*/
+}  // namespace webrtz*/

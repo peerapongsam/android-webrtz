@@ -19,7 +19,7 @@ extern "C" {
 #include "common_audio/vad/vad_sp.h"
 }
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 TEST_F(VadTest, vad_sp) {
@@ -73,4 +73,4 @@ TEST_F(VadTest, vad_sp) {
   free(self);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -10,7 +10,7 @@
 #include "modules/congestion_controller/network_control/include/network_units_to_string.h"
 #include "rtc_base/strings/string_builder.h"
 
-namespace webrtc {
+namespace webrtz {
 std::string ToString(const DataRate& value) {
   char buf[64];
   rtc::SimpleStringBuilder sb(buf);
@@ -61,4 +61,4 @@ std::string ToString(const TimeDelta& value) {
   }
   return sb.str();
 }
-}  // namespace webrtc
+}  // namespace webrtz

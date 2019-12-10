@@ -14,7 +14,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void ClearDesktopFrame(DesktopFrame* frame) {
   RTC_DCHECK(frame);
@@ -46,4 +46,4 @@ bool DesktopFrameDataEquals(const DesktopFrame& left,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

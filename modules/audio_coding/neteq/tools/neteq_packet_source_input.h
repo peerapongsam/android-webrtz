@@ -17,7 +17,7 @@
 #include "modules/audio_coding/neteq/tools/neteq_input.h"
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class RtpFileSource;
@@ -26,7 +26,7 @@ class RtcEventLogSource;
 // An adapter class to dress up a PacketSource object as a NetEqInput.
 class NetEqPacketSourceInput : public NetEqInput {
  public:
-  using RtpHeaderExtensionMap = std::map<int, webrtc::RTPExtensionType>;
+  using RtpHeaderExtensionMap = std::map<int, webrtz::RTPExtensionType>;
 
   NetEqPacketSourceInput();
   rtc::Optional<int64_t> NextPacketTime() const override;
@@ -80,5 +80,5 @@ class NetEqEventLogInput final : public NetEqPacketSourceInput {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_NETEQ_PACKET_SOURCE_INPUT_H_

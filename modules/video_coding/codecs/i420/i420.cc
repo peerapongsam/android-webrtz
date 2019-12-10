@@ -21,7 +21,7 @@ namespace {
 const size_t kI420HeaderSize = 4;
 }
 
-namespace webrtc {
+namespace webrtz {
 
 I420Encoder::I420Encoder()
     : _inited(false), _encodedImage(), _encodedCompleteCallback(NULL) {}
@@ -183,7 +183,7 @@ int I420Decoder::Decode(const EncodedImage& inputImage,
     return WEBRTC_VIDEO_CODEC_ERROR;
   }
   // Set decoded image parameters.
-  rtc::scoped_refptr<webrtc::I420Buffer> frame_buffer =
+  rtc::scoped_refptr<webrtz::I420Buffer> frame_buffer =
       I420Buffer::Create(width, height);
 
   // Converting from raw buffer I420Buffer.
@@ -202,7 +202,7 @@ int I420Decoder::Decode(const EncodedImage& inputImage,
   }
 
   VideoFrame decoded_image(frame_buffer, inputImage._timeStamp, 0,
-                           webrtc::kVideoRotation_0);
+                           webrtz::kVideoRotation_0);
   _decodeCompleteCallback->Decoded(decoded_image);
   return WEBRTC_VIDEO_CODEC_OK;
 }
@@ -227,4 +227,4 @@ int I420Decoder::RegisterDecodeCompleteCallback(
 int I420Decoder::Release() {
   return WEBRTC_VIDEO_CODEC_OK;
 }
-}  // namespace webrtc
+}  // namespace webrtz

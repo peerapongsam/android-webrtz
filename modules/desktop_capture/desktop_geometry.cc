@@ -12,7 +12,7 @@
 
 #include <algorithm>
 
-namespace webrtc {
+namespace webrtz {
 
 bool DesktopRect::Contains(const DesktopVector& point) const {
   return point.x() >= left() && point.x() < right() &&
@@ -75,5 +75,5 @@ void DesktopRect::Scale(double horizontal, double vertical) {
   bottom_ += height() * (vertical - 1);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 

@@ -12,7 +12,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ScreenCapturerHelperTest : public testing::Test {
  protected:
@@ -184,4 +184,4 @@ TEST_F(ScreenCapturerHelperTest, ExpandToGrid) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,15 +18,15 @@
  * The AudioSourceInterface object passed to this RTCAudioSource during
  * construction.
  */
-@property(nonatomic, readonly) rtc::scoped_refptr<webrtc::AudioSourceInterface> nativeAudioSource;
+@property(nonatomic, readonly) rtc::scoped_refptr<webrtz::AudioSourceInterface> nativeAudioSource;
 
 /** Initialize an RTCAudioSource from a native AudioSourceInterface. */
 - (instancetype)initWithNativeAudioSource:
-    (rtc::scoped_refptr<webrtc::AudioSourceInterface>)nativeAudioSource
+    (rtc::scoped_refptr<webrtz::AudioSourceInterface>)nativeAudioSource
     NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithNativeMediaSource:
-    (rtc::scoped_refptr<webrtc::MediaSourceInterface>)nativeMediaSource
+    (rtc::scoped_refptr<webrtz::MediaSourceInterface>)nativeMediaSource
                                      type:(RTCMediaSourceType)type NS_UNAVAILABLE;
 
 @end

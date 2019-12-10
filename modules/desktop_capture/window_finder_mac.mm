@@ -19,7 +19,7 @@
 #include "modules/desktop_capture/mac/desktop_configuration_monitor.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 WindowFinderMac::WindowFinderMac(
     rtc::scoped_refptr<DesktopConfigurationMonitor> configuration_monitor)
@@ -59,4 +59,4 @@ std::unique_ptr<WindowFinder> WindowFinder::Create(
   return rtc::MakeUnique<WindowFinderMac>(options.configuration_monitor);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

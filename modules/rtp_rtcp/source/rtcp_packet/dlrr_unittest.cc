@@ -13,10 +13,10 @@
 #include "modules/rtp_rtcp/source/byte_io.h"
 #include "test/gtest.h"
 
-using webrtc::rtcp::Dlrr;
-using webrtc::rtcp::ReceiveTimeInfo;
+using webrtz::rtcp::Dlrr;
+using webrtz::rtcp::ReceiveTimeInfo;
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const uint32_t kSsrc = 0x12345678;
 const uint32_t kLastRR = 0x23344556;
@@ -89,4 +89,4 @@ TEST(RtcpPacketDlrrTest, CreateAndParseManySubBlocks) {
   EXPECT_TRUE(parsed.Parse(buffer, block_length));
   EXPECT_EQ(kManyDlrrItems, parsed.sub_blocks().size());
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // Setup a log file to write the output to instead of stdout because we don't
@@ -27,7 +27,7 @@ namespace test {
 class VideoQualityAnalysisTest : public ::testing::Test {
  protected:
   void SetUp() {
-    std::string log_filename = TempFilename(webrtc::test::OutputPath(),
+    std::string log_filename = TempFilename(webrtz::test::OutputPath(),
                                             "VideoQualityAnalysisTest.log");
     logfile_ = fopen(log_filename.c_str(), "w");
     ASSERT_TRUE(logfile_ != NULL);
@@ -43,10 +43,10 @@ class VideoQualityAnalysisTest : public ::testing::Test {
 
 TEST_F(VideoQualityAnalysisTest, MatchExtractedY4mFrame) {
   std::string video_file =
-         webrtc::test::ResourcePath("reference_less_video_test_file", "y4m");
+         webrtz::test::ResourcePath("reference_less_video_test_file", "y4m");
 
   std::string extracted_frame_from_video_file =
-         webrtc::test::ResourcePath("video_quality_analysis_frame", "txt");
+         webrtz::test::ResourcePath("video_quality_analysis_frame", "txt");
 
   int frame_height = 720, frame_width = 1280;
   int frame_number = 2;
@@ -147,7 +147,7 @@ TEST_F(VideoQualityAnalysisTest,
   std::ofstream stats_file;
 
   std::string log_filename =
-      TempFilename(webrtc::test::OutputPath(), "log.log");
+      TempFilename(webrtz::test::OutputPath(), "log.log");
   FILE* logfile = fopen(log_filename.c_str(), "w");
   ASSERT_TRUE(logfile != NULL);
   stats_file.open(stats_filename_ref_.c_str());
@@ -191,7 +191,7 @@ TEST_F(VideoQualityAnalysisTest,
   std::ofstream stats_file;
 
   std::string log_filename =
-      TempFilename(webrtc::test::OutputPath(), "log.log");
+      TempFilename(webrtz::test::OutputPath(), "log.log");
   FILE* logfile = fopen(log_filename.c_str(), "w");
   ASSERT_TRUE(logfile != NULL);
   stats_file.open(stats_filename_ref_.c_str());
@@ -339,4 +339,4 @@ TEST_F(VideoQualityAnalysisTest, CalculateFrameClustersEmpty) {
   ASSERT_EQ(expected, clusters);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

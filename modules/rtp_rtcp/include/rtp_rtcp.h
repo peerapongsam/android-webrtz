@@ -24,7 +24,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/deprecation.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Forward declarations.
 class OverheadObserver;
@@ -453,6 +453,6 @@ class RtpRtcp : public Module, public RtcpFeedbackSenderInterface {
   virtual int32_t RequestKeyFrame() = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_INCLUDE_RTP_RTCP_H_

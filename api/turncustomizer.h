@@ -19,7 +19,7 @@ class StunMessage;
 }  // namespace cricket
 
 
-namespace webrtc {
+namespace webrtz {
 
 class TurnCustomizer {
  public:
@@ -41,6 +41,6 @@ class TurnCustomizer {
   virtual ~TurnCustomizer() {}
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_TURNCUSTOMIZER_H_

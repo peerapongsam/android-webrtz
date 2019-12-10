@@ -18,7 +18,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 enum class BlockProcessorApiCall { kCapture, kRender };
@@ -281,4 +281,4 @@ BlockProcessor* BlockProcessor::Create(
       std::move(delay_controller), std::move(echo_remover));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 WindowFinderX11::WindowFinderX11(XAtomCache* cache)
     : cache_(cache) {
@@ -48,4 +48,4 @@ std::unique_ptr<WindowFinder> WindowFinder::Create(
   return rtc::MakeUnique<WindowFinderX11>(options.cache);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

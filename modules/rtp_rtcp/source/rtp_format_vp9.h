@@ -29,7 +29,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpPacketizerVp9 : public RtpPacketizer {
  public:
@@ -97,5 +97,5 @@ class RtpDepacketizerVp9 : public RtpDepacketizer {
              size_t payload_length) override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_FORMAT_VP9_H_

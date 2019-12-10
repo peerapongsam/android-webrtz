@@ -14,7 +14,7 @@
 
 #include "logging/rtc_event_log/rtc_stream_config.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventAudioReceiveStreamConfig::RtcEventAudioReceiveStreamConfig(
     std::unique_ptr<rtclog::StreamConfig> config)
@@ -30,4 +30,4 @@ bool RtcEventAudioReceiveStreamConfig::IsConfigEvent() const {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

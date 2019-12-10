@@ -13,7 +13,7 @@
 #include "rtc_base/atomicops.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -401,4 +401,4 @@ void EchoCanceller3::EmptyRenderQueue() {
         render_transfer_queue_.Remove(&render_queue_output_frame_);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

@@ -21,7 +21,7 @@
 #include "system_wrappers/include/sleep.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 const int kKeyframeSizeFactor = 10;
@@ -374,4 +374,4 @@ int32_t MultithreadedFakeH264Encoder::Release() {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

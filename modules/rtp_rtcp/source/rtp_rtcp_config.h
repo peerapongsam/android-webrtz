@@ -12,7 +12,7 @@
 #define MODULES_RTP_RTCP_SOURCE_RTP_RTCP_CONFIG_H_
 
 // Configuration file for RTP utilities (RTPSender, RTPReceiver ...)
-namespace webrtc {
+namespace webrtz {
 enum { NACK_BYTECOUNT_SIZE = 60 };  // size of our NACK history
 // A sanity for the NACK list parsing at the send-side.
 enum { kSendSideNackListSizeSanity = 20000 };
@@ -38,6 +38,6 @@ enum { BW_HISTORY_SIZE = 35 };
 enum { RTP_MAX_BURST_SLEEP_TIME = 500 };
 enum { RTP_AUDIO_LEVEL_UNIQUE_ID = 0xbede };
 enum { RTP_MAX_PACKETS_PER_FRAME = 512 };  // must be multiple of 32
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_RTCP_CONFIG_H_

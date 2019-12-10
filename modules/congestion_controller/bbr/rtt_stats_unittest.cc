@@ -14,7 +14,7 @@
 
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 namespace test {
 
@@ -157,4 +157,4 @@ TEST_F(RttStatsTest, ResetAfterConnectionMigrations) {
 
 }  // namespace test
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz

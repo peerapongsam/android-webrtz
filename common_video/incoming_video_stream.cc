@@ -17,7 +17,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/event_wrapper.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 const char kIncomingQueueName[] = "IncomingVideoStream";
 }
@@ -80,4 +80,4 @@ void IncomingVideoStream::Dequeue() {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

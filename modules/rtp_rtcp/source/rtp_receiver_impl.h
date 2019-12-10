@@ -23,7 +23,7 @@
 #include "rtc_base/criticalsection.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtpReceiverImpl : public RtpReceiver {
  public:
@@ -108,5 +108,5 @@ class RtpReceiverImpl : public RtpReceiver {
   std::list<RtpSource> csrc_sources_;
   std::vector<RtpSource> ssrc_sources_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_RECEIVER_IMPL_H_

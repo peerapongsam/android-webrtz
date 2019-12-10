@@ -19,7 +19,7 @@
 #error "Set WEBRTC_APM_DEBUG_DUMP to either 0 or 1"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -71,4 +71,4 @@ WavWriter* ApmDataDumper::GetWavFile(const char* name,
 
 #endif
 
-}  // namespace webrtc
+}  // namespace webrtz

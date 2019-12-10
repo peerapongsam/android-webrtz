@@ -19,7 +19,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class MockAudioEncoderFactory : public testing::NiceMock<AudioEncoderFactory> {
  public:
@@ -44,16 +44,16 @@ class MockAudioEncoderFactory : public testing::NiceMock<AudioEncoderFactory> {
   // Creates a MockAudioEncoderFactory with no formats and that may not be
   // invoked to create a codec - useful for initializing a voice engine, for
   // example.
-  static rtc::scoped_refptr<webrtc::MockAudioEncoderFactory>
+  static rtc::scoped_refptr<webrtz::MockAudioEncoderFactory>
   CreateUnusedFactory() {
     using testing::_;
     using testing::AnyNumber;
     using testing::Return;
 
-    rtc::scoped_refptr<webrtc::MockAudioEncoderFactory> factory =
-        new rtc::RefCountedObject<webrtc::MockAudioEncoderFactory>;
+    rtc::scoped_refptr<webrtz::MockAudioEncoderFactory> factory =
+        new rtc::RefCountedObject<webrtz::MockAudioEncoderFactory>;
     ON_CALL(*factory.get(), GetSupportedEncoders())
-        .WillByDefault(Return(std::vector<webrtc::AudioCodecSpec>()));
+        .WillByDefault(Return(std::vector<webrtz::AudioCodecSpec>()));
     ON_CALL(*factory.get(), QueryAudioEncoder(_))
         .WillByDefault(Return(rtc::nullopt));
 
@@ -66,17 +66,17 @@ class MockAudioEncoderFactory : public testing::NiceMock<AudioEncoderFactory> {
   // Creates a MockAudioEncoderFactory with no formats that may be invoked to
   // create a codec any number of times. It will, though, return nullptr on each
   // call, since it supports no codecs.
-  static rtc::scoped_refptr<webrtc::MockAudioEncoderFactory>
+  static rtc::scoped_refptr<webrtz::MockAudioEncoderFactory>
   CreateEmptyFactory() {
     using testing::_;
     using testing::AnyNumber;
     using testing::Return;
     using testing::SetArgPointee;
 
-    rtc::scoped_refptr<webrtc::MockAudioEncoderFactory> factory =
-        new rtc::RefCountedObject<webrtc::MockAudioEncoderFactory>;
+    rtc::scoped_refptr<webrtz::MockAudioEncoderFactory> factory =
+        new rtc::RefCountedObject<webrtz::MockAudioEncoderFactory>;
     ON_CALL(*factory.get(), GetSupportedEncoders())
-        .WillByDefault(Return(std::vector<webrtc::AudioCodecSpec>()));
+        .WillByDefault(Return(std::vector<webrtz::AudioCodecSpec>()));
     ON_CALL(*factory.get(), QueryAudioEncoder(_))
         .WillByDefault(Return(rtc::nullopt));
     ON_CALL(*factory.get(), MakeAudioEncoderMock(_, _, _, _))
@@ -90,6 +90,6 @@ class MockAudioEncoderFactory : public testing::NiceMock<AudioEncoderFactory> {
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_MOCK_AUDIO_ENCODER_FACTORY_H_

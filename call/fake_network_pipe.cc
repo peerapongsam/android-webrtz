@@ -22,7 +22,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr int64_t kDefaultProcessIntervalMs = 5;
@@ -472,4 +472,4 @@ void FakeNetworkPipe::SetTimeToNextProcess(int64_t skip_ms) {
   next_process_time_ += skip_ms;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

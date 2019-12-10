@@ -27,7 +27,7 @@
 #include "rtc_base/criticalsection.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A controller for all the objects we need to call Windows DirectX capture APIs
 // It's a singleton because only one IDXGIOutputDuplication instance per monitor
@@ -233,6 +233,6 @@ class DxgiDuplicatorController {
   uint32_t succeeded_duplications_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_WIN_DXGI_DUPLICATOR_CONTROLLER_H_

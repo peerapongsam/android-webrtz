@@ -17,7 +17,7 @@
 #include "common_types.h"  // NOLINT(build/include)
 #include "modules/include/module_fec_types.h"
 
-namespace webrtc {
+namespace webrtz {
 // TODO(yinwa): work in progress. API in class FecController should not be
 // used by other users until this comment is removed.
 
@@ -87,5 +87,5 @@ class FecControllerFactoryInterface {
   virtual ~FecControllerFactoryInterface() = default;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // API_FEC_CONTROLLER_H_

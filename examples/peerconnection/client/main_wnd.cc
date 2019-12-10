@@ -199,7 +199,7 @@ void MainWnd::MessageBox(const char* caption, const char* text, bool is_error) {
 }
 
 
-void MainWnd::StartLocalRenderer(webrtc::VideoTrackInterface* local_video) {
+void MainWnd::StartLocalRenderer(webrtz::VideoTrackInterface* local_video) {
   local_renderer_.reset(new VideoRenderer(handle(), 1, 1, local_video));
 }
 
@@ -207,7 +207,7 @@ void MainWnd::StopLocalRenderer() {
   local_renderer_.reset();
 }
 
-void MainWnd::StartRemoteRenderer(webrtc::VideoTrackInterface* remote_video) {
+void MainWnd::StartRemoteRenderer(webrtz::VideoTrackInterface* remote_video) {
   remote_renderer_.reset(new VideoRenderer(handle(), 1, 1, remote_video));
 }
 
@@ -566,7 +566,7 @@ void MainWnd::HandleTabbing() {
 
 MainWnd::VideoRenderer::VideoRenderer(
     HWND wnd, int width, int height,
-    webrtc::VideoTrackInterface* track_to_render)
+    webrtz::VideoTrackInterface* track_to_render)
     : wnd_(wnd), rendered_track_(track_to_render) {
   ::InitializeCriticalSection(&buffer_lock_);
   ZeroMemory(&bmi_, sizeof(bmi_));
@@ -601,15 +601,15 @@ void MainWnd::VideoRenderer::SetSize(int width, int height) {
 }
 
 void MainWnd::VideoRenderer::OnFrame(
-    const webrtc::VideoFrame& video_frame) {
+    const webrtz::VideoFrame& video_frame) {
 
   {
     AutoLock<VideoRenderer> lock(this);
 
-    rtc::scoped_refptr<webrtc::I420BufferInterface> buffer(
+    rtc::scoped_refptr<webrtz::I420BufferInterface> buffer(
         video_frame.video_frame_buffer()->ToI420());
-    if (video_frame.rotation() != webrtc::kVideoRotation_0) {
-      buffer = webrtc::I420Buffer::Rotate(*buffer, video_frame.rotation());
+    if (video_frame.rotation() != webrtz::kVideoRotation_0) {
+      buffer = webrtz::I420Buffer::Rotate(*buffer, video_frame.rotation());
     }
 
     SetSize(buffer->width(), buffer->height());

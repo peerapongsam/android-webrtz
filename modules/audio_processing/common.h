@@ -14,7 +14,7 @@
 #include "modules/audio_processing/include/audio_processing.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 static inline size_t ChannelsFromLayout(AudioProcessing::ChannelLayout layout) {
   switch (layout) {
@@ -29,6 +29,6 @@ static inline size_t ChannelsFromLayout(AudioProcessing::ChannelLayout layout) {
   return 0;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_COMMON_H_

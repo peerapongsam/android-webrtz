@@ -12,7 +12,7 @@
 #include "modules/congestion_controller/network_control/include/network_units.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 namespace test {
 namespace {
@@ -128,4 +128,4 @@ TEST(DataTransferTrackerTest, RemovesOldData) {
 }
 }  // namespace test
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz

@@ -14,7 +14,7 @@
 #include "modules/audio_coding/audio_network_adaptor/frame_length_controller.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -378,4 +378,4 @@ TEST(FrameLengthControllerTest, CheckBehaviorOnChangingNetworkMetrics) {
   CheckDecision(controller.get(), 20);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace voe {
 
 void RemixAndResample(const AudioFrame& src_frame,
@@ -88,4 +88,4 @@ void RemixAndResample(const int16_t* src_data,
 }
 
 }  // namespace voe
-}  // namespace webrtc
+}  // namespace webrtz

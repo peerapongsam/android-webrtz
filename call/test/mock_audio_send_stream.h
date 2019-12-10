@@ -16,22 +16,22 @@
 #include "call/audio_send_stream.h"
 #include "test/gmock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class MockAudioSendStream : public AudioSendStream {
  public:
-  MOCK_CONST_METHOD0(GetConfig, const webrtc::AudioSendStream::Config&());
+  MOCK_CONST_METHOD0(GetConfig, const webrtz::AudioSendStream::Config&());
   MOCK_METHOD1(Reconfigure, void(const Config& config));
   MOCK_METHOD0(Start, void());
   MOCK_METHOD0(Stop, void());
   // GMock doesn't like move-only types, such as std::unique_ptr.
   virtual void SendAudioData(
-      std::unique_ptr<webrtc::AudioFrame> audio_frame) {
+      std::unique_ptr<webrtz::AudioFrame> audio_frame) {
     SendAudioDataForMock(audio_frame.get());
   }
   MOCK_METHOD1(SendAudioDataForMock,
-               void(webrtc::AudioFrame* audio_frame));
+               void(webrtz::AudioFrame* audio_frame));
   MOCK_METHOD4(SendTelephoneEvent,
                bool(int payload_type, int payload_frequency, int event,
                     int duration_ms));
@@ -40,6 +40,6 @@ class MockAudioSendStream : public AudioSendStream {
   MOCK_CONST_METHOD1(GetStats, Stats(bool has_remote_tracks));
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // CALL_TEST_MOCK_AUDIO_SEND_STREAM_H_

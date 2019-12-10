@@ -19,7 +19,7 @@
 #include "rtc_base/criticalsection.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 class Clock;
 namespace test {
 
@@ -103,6 +103,6 @@ class FrameGenerator {
       int width, int height, int frame_repeat_count);
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_FRAME_GENERATOR_H_

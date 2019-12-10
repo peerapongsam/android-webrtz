@@ -27,7 +27,7 @@
 @synthesize qpMax = _qpMax;
 @synthesize mode = _mode;
 
-- (instancetype)initWithNativeVideoCodec:(const webrtc::VideoCodec *)videoCodec {
+- (instancetype)initWithNativeVideoCodec:(const webrtz::VideoCodec *)videoCodec {
   if (self = [super init]) {
     if (videoCodec) {
       const char *codecName = CodecTypeToPayloadString(videoCodec->codecType);
@@ -48,8 +48,8 @@
   return self;
 }
 
-- (webrtc::VideoCodec)nativeVideoCodec {
-  webrtc::VideoCodec videoCodec;
+- (webrtz::VideoCodec)nativeVideoCodec {
+  webrtz::VideoCodec videoCodec;
   videoCodec.width = _width;
   videoCodec.height = _height;
   videoCodec.startBitrate = _startBitrate;
@@ -58,7 +58,7 @@
   videoCodec.targetBitrate = _targetBitrate;
   videoCodec.maxBitrate = _maxBitrate;
   videoCodec.qpMax = _qpMax;
-  videoCodec.mode = (webrtc::VideoCodecMode)_mode;
+  videoCodec.mode = (webrtz::VideoCodecMode)_mode;
 
   return videoCodec;
 }

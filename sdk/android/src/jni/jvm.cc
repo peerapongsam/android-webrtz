@@ -20,7 +20,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static JavaVM* g_jvm = nullptr;
@@ -130,4 +130,4 @@ JNIEnv* AttachCurrentThreadIfNeeded() {
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

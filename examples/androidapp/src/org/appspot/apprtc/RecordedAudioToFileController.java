@@ -20,10 +20,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.concurrent.ExecutorService;
-import org.webrtc.audio.JavaAudioDeviceModule;
-import org.webrtc.audio.JavaAudioDeviceModule.SamplesReadyCallback;
-import org.webrtc.voiceengine.WebRtcAudioRecord;
-import org.webrtc.voiceengine.WebRtcAudioRecord.WebRtcAudioRecordSamplesReadyCallback;
+import org.webrtz.audio.JavaAudioDeviceModule;
+import org.webrtz.audio.JavaAudioDeviceModule.SamplesReadyCallback;
+import org.webrtz.voiceengine.WebRtcAudioRecord;
+import org.webrtz.voiceengine.WebRtcAudioRecord.WebRtcAudioRecordSamplesReadyCallback;
 
 /**
  * Implements the AudioRecordSamplesReadyCallback interface and writes

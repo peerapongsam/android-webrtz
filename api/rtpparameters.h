@@ -18,7 +18,7 @@
 #include "api/mediatypes.h"
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // These structures are intended to mirror those defined by:
 // http://draft.ortc.org/#rtcrtpdictionaries*
@@ -574,6 +574,6 @@ struct RtpParameters {
   bool operator!=(const RtpParameters& o) const { return !(*this == o); }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_RTPPARAMETERS_H_

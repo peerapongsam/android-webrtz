@@ -22,7 +22,7 @@
 #include "modules/pacing/paced_sender.h"
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventLog;
 
@@ -98,5 +98,5 @@ class BitrateController : public Module, public RtcpBandwidthObserver {
                                     uint8_t* fraction_loss,
                                     int64_t* rtt) = 0;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_BITRATE_CONTROLLER_INCLUDE_BITRATE_CONTROLLER_H_

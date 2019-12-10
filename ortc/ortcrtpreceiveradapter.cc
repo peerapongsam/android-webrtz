@@ -19,16 +19,16 @@
 
 namespace {
 
-void FillAudioReceiverParameters(webrtc::RtpParameters* parameters) {
-  for (webrtc::RtpCodecParameters& codec : parameters->codecs) {
+void FillAudioReceiverParameters(webrtz::RtpParameters* parameters) {
+  for (webrtz::RtpCodecParameters& codec : parameters->codecs) {
     if (!codec.num_channels) {
       codec.num_channels = 1;
     }
   }
 }
 
-void FillVideoReceiverParameters(webrtc::RtpParameters* parameters) {
-  for (webrtc::RtpCodecParameters& codec : parameters->codecs) {
+void FillVideoReceiverParameters(webrtz::RtpParameters* parameters) {
+  for (webrtz::RtpCodecParameters& codec : parameters->codecs) {
     if (!codec.clock_rate) {
       codec.clock_rate = cricket::kVideoCodecClockrate;
     }
@@ -37,7 +37,7 @@ void FillVideoReceiverParameters(webrtc::RtpParameters* parameters) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 BEGIN_OWNED_PROXY_MAP(OrtcRtpReceiver)
 PROXY_SIGNALING_THREAD_DESTRUCTOR()
@@ -104,7 +104,7 @@ RTCError OrtcRtpReceiverAdapter::Receive(const RtpParameters& parameters) {
       break;
     case cricket::MEDIA_TYPE_DATA:
       RTC_NOTREACHED();
-      return webrtc::RTCError(webrtc::RTCErrorType::INTERNAL_ERROR);
+      return webrtz::RTCError(webrtz::RTCErrorType::INTERNAL_ERROR);
   }
   last_applied_parameters_ = filled_parameters;
 
@@ -176,4 +176,4 @@ void OrtcRtpReceiverAdapter::MaybeRecreateInternalReceiver() {
   internal_receiver_->SetupMediaChannel(ssrc);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

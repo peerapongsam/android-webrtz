@@ -10,7 +10,7 @@
 
 #include "modules/audio_processing/include/audio_processing_statistics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioProcessingStats::AudioProcessingStats() = default;
 
@@ -19,4 +19,4 @@ AudioProcessingStats::AudioProcessingStats(const AudioProcessingStats& other) =
 
 AudioProcessingStats::~AudioProcessingStats() = default;
 
-}  // namespace webrtc
+}  // namespace webrtz

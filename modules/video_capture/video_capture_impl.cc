@@ -23,7 +23,7 @@
 #include "system_wrappers/include/clock.h"
 #include "third_party/libyuv/include/libyuv.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace videocapturemodule {
 rtc::scoped_refptr<VideoCaptureModule> VideoCaptureImpl::Create(
     VideoCaptureExternal*& externalCapture) {
@@ -255,4 +255,4 @@ uint32_t VideoCaptureImpl::CalculateFrameRate(int64_t now_ns) {
   return nrOfFrames;
 }
 }  // namespace videocapturemodule
-}  // namespace webrtc
+}  // namespace webrtz

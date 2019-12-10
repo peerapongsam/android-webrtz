@@ -17,7 +17,7 @@
 #include "rtc_base/refcountedobject.h"
 #include "rtc_base/scoped_ref_ptr.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // SharedDesktopFrame is a DesktopFrame that may have multiple instances all
 // sharing the same buffer.
@@ -58,6 +58,6 @@ class SharedDesktopFrame : public DesktopFrame {
   RTC_DISALLOW_COPY_AND_ASSIGN(SharedDesktopFrame);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_SHARED_DESKTOP_FRAME_H_

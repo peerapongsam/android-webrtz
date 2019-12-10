@@ -14,7 +14,7 @@
 #include "rtc_base/platform_thread.h"
 #include "system_wrappers/include/sleep.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const int kRecordingFixedSampleRate = 48000;
 const size_t kRecordingNumChannels = 2;
@@ -507,4 +507,4 @@ bool FileAudioDevice::RecThreadProcess() {
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

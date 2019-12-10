@@ -21,7 +21,7 @@
 #include "rtc_base/thread_checker.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Wraps a Java decoder and delegates all calls to it.
@@ -112,6 +112,6 @@ class VideoDecoderWrapper : public VideoDecoder {
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_VIDEODECODERWRAPPER_H_

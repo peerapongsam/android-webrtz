@@ -17,7 +17,7 @@
 #include "rtc_base/criticalsection.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 struct CodecInst;
 
@@ -77,6 +77,6 @@ class RTPReceiverStrategy {
   rtc::CriticalSection crit_sect_;
   RtpData* data_callback_;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTP_RECEIVER_STRATEGY_H_

@@ -11,7 +11,7 @@
 #ifndef MODULES_VIDEO_CODING_NACK_FEC_TABLES_H_
 #define MODULES_VIDEO_CODING_NACK_FEC_TABLES_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // Table for adjusting FEC rate for NACK/FEC protection method
 // Table values are built as a sigmoid function, ranging from 0 to 100, based on
@@ -26,6 +26,6 @@ const uint16_t VCMNackFecTable[100] = {
     100, 100, 100, 100, 100, 100, 100, 100, 100, 100,
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_NACK_FEC_TABLES_H_

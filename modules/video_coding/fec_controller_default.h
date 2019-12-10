@@ -19,7 +19,7 @@
 #include "rtc_base/criticalsection.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FecControllerDefault : public FecController {
  public:
@@ -54,5 +54,5 @@ class FecControllerDefault : public FecController {
   RTC_DISALLOW_COPY_AND_ASSIGN(FecControllerDefault);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CODING_FEC_CONTROLLER_DEFAULT_H_

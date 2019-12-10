@@ -38,7 +38,7 @@
 // turn is replaced by the third best. The newest sample replaces the third
 // best.
 
-namespace webrtc {
+namespace webrtz {
 namespace bbr {
 
 // Compares two values and returns true if the first is less than or equal
@@ -163,6 +163,6 @@ class WindowedFilter {
 };
 
 }  // namespace bbr
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_BBR_WINDOWED_FILTER_H_

@@ -16,7 +16,7 @@
 #include "logging/rtc_event_log/rtc_event_log.h"
 #include "rtc_base/task_queue.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // This interface exists to allow webrtc to be optionally built without
 // RtcEventLog support. A PeerConnectionFactory is constructed with an
@@ -35,6 +35,6 @@ class RtcEventLogFactoryInterface {
 
 std::unique_ptr<RtcEventLogFactoryInterface> CreateRtcEventLogFactory();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // LOGGING_RTC_EVENT_LOG_RTC_EVENT_LOG_FACTORY_INTERFACE_H_

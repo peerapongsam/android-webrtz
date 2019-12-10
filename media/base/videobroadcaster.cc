@@ -24,7 +24,7 @@ VideoBroadcaster::VideoBroadcaster() {
 VideoBroadcaster::~VideoBroadcaster() = default;
 
 void VideoBroadcaster::AddOrUpdateSink(
-    VideoSinkInterface<webrtc::VideoFrame>* sink,
+    VideoSinkInterface<webrtz::VideoFrame>* sink,
     const VideoSinkWants& wants) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   RTC_DCHECK(sink != nullptr);
@@ -34,7 +34,7 @@ void VideoBroadcaster::AddOrUpdateSink(
 }
 
 void VideoBroadcaster::RemoveSink(
-    VideoSinkInterface<webrtc::VideoFrame>* sink) {
+    VideoSinkInterface<webrtz::VideoFrame>* sink) {
   RTC_DCHECK(thread_checker_.CalledOnValidThread());
   RTC_DCHECK(sink != nullptr);
   rtc::CritScope cs(&sinks_and_wants_lock_);
@@ -52,11 +52,11 @@ VideoSinkWants VideoBroadcaster::wants() const {
   return current_wants_;
 }
 
-void VideoBroadcaster::OnFrame(const webrtc::VideoFrame& frame) {
+void VideoBroadcaster::OnFrame(const webrtz::VideoFrame& frame) {
   rtc::CritScope cs(&sinks_and_wants_lock_);
   for (auto& sink_pair : sink_pairs()) {
     if (sink_pair.wants.rotation_applied &&
-        frame.rotation() != webrtc::kVideoRotation_0) {
+        frame.rotation() != webrtz::kVideoRotation_0) {
       // Calls to OnFrame are not synchronized with changes to the sink wants.
       // When rotation_applied is set to true, one or a few frames may get here
       // with rotation still pending. Protect sinks that don't expect any
@@ -65,7 +65,7 @@ void VideoBroadcaster::OnFrame(const webrtc::VideoFrame& frame) {
       continue;
     }
     if (sink_pair.wants.black_frames) {
-      sink_pair.sink->OnFrame(webrtc::VideoFrame(
+      sink_pair.sink->OnFrame(webrtz::VideoFrame(
           GetBlackFrameBuffer(frame.width(), frame.height()), frame.rotation(),
           frame.timestamp_us()));
     } else {
@@ -116,13 +116,13 @@ void VideoBroadcaster::UpdateWants() {
   current_wants_ = wants;
 }
 
-const rtc::scoped_refptr<webrtc::VideoFrameBuffer>&
+const rtc::scoped_refptr<webrtz::VideoFrameBuffer>&
 VideoBroadcaster::GetBlackFrameBuffer(int width, int height) {
   if (!black_frame_buffer_ || black_frame_buffer_->width() != width ||
       black_frame_buffer_->height() != height) {
-    rtc::scoped_refptr<webrtc::I420Buffer> buffer =
-        webrtc::I420Buffer::Create(width, height);
-    webrtc::I420Buffer::SetBlack(buffer.get());
+    rtc::scoped_refptr<webrtz::I420Buffer> buffer =
+        webrtz::I420Buffer::Create(width, height);
+    webrtz::I420Buffer::SetBlack(buffer.get());
     black_frame_buffer_ = buffer;
   }
 

@@ -17,7 +17,7 @@
 #include "common_audio/real_fourier.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void LappedTransform::BlockThunk::ProcessBlock(const float* const* input,
                                                size_t num_frames,
@@ -100,4 +100,4 @@ void LappedTransform::ProcessChunk(const float* const* in_chunk,
                         num_out_channels_, out_chunk);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

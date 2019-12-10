@@ -20,11 +20,11 @@
 #include "sdk/android/src/jni/jni_helpers.h"
 #include "sdk/android/src/jni/surfacetexturehelper.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // TODO(sakal): Remove once clients have migrated.
-using ::webrtc::JavaParamRef;
+using ::webrtz::JavaParamRef;
 
 class SurfaceTextureHelper;
 
@@ -165,6 +165,6 @@ int64_t GetJavaVideoFrameTimestampNs(JNIEnv* jni,
                                      const JavaRef<jobject>& j_video_frame);
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_VIDEOFRAME_H_

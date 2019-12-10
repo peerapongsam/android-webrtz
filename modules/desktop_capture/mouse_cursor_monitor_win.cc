@@ -24,7 +24,7 @@
 #include "modules/desktop_capture/win/window_capture_utils.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -214,4 +214,4 @@ std::unique_ptr<MouseCursorMonitor> MouseCursorMonitor::Create(
       CreateForScreen(options, kFullDesktopScreenId));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

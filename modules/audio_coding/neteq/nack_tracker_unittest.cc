@@ -19,7 +19,7 @@
 #include "test/gtest.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 const int kNackThreshold = 3;
@@ -480,4 +480,4 @@ TEST(NackTrackerTest, RoudTripTimeIsApplied) {
   EXPECT_EQ(5, nack_list[1]);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

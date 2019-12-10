@@ -13,7 +13,7 @@
 
 #include <memory>
 
-namespace webrtc {
+namespace webrtz {
 
 // These classes are not part of the API, and are treated as opaque pointers.
 class Call;
@@ -31,6 +31,6 @@ class CallFactoryInterface {
 
 std::unique_ptr<CallFactoryInterface> CreateCallFactory();
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_CALL_CALLFACTORYINTERFACE_H_

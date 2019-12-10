@@ -22,7 +22,7 @@
 #include "modules/desktop_capture/mac/full_screen_chrome_window_detector.h"
 #endif
 
-namespace webrtc {
+namespace webrtz {
 
 // An object that stores initialization parameters for screen and window
 // capturers.
@@ -137,6 +137,6 @@ class DesktopCaptureOptions {
   bool detect_updated_region_ = false;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_DESKTOP_CAPTURE_OPTIONS_H_

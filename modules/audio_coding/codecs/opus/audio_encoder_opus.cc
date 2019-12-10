@@ -30,7 +30,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/field_trial.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -397,9 +397,9 @@ AudioEncoderOpusImpl::AudioEncoderOpusImpl(
     std::unique_ptr<SmoothingFilter> bitrate_smoother)
     : payload_type_(payload_type),
       send_side_bwe_with_overhead_(
-          webrtc::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
+          webrtz::field_trial::IsEnabled("WebRTC-SendSideBwe-WithOverhead")),
       adjust_bandwidth_(
-          webrtc::field_trial::IsEnabled("WebRTC-AdjustOpusBandwidth")),
+          webrtz::field_trial::IsEnabled("WebRTC-AdjustOpusBandwidth")),
       bitrate_changed_(true),
       packet_loss_rate_(0.0),
       inst_(nullptr),
@@ -816,4 +816,4 @@ ANAStats AudioEncoderOpusImpl::GetANAStats() const {
   return ANAStats();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

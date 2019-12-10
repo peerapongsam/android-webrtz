@@ -13,7 +13,7 @@
 #include "sdk/android/native_api/jni/java_types.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 static jlong JNI_CallSessionFileRotatingLogSink_AddSink(
@@ -79,4 +79,4 @@ JNI_CallSessionFileRotatingLogSink_GetLogData(
 }
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz

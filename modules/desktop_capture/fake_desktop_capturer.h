@@ -18,7 +18,7 @@
 #include "modules/desktop_capture/desktop_frame_generator.h"
 #include "modules/desktop_capture/shared_memory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // A fake implementation of DesktopCapturer or its derived interfaces to
 // generate DesktopFrame for testing purpose.
@@ -71,6 +71,6 @@ class FakeDesktopCapturer : public DesktopCapturer {
   int num_capture_attempts_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_DESKTOP_CAPTURE_FAKE_DESKTOP_CAPTURER_H_

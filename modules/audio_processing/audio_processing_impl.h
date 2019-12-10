@@ -29,7 +29,7 @@
 #include "rtc_base/system/file_wrapper.h"
 #include "rtc_base/thread_annotations.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class ApmDataDumper;
 class AudioConverter;
@@ -39,10 +39,10 @@ class AudioProcessingImpl : public AudioProcessing {
  public:
   // Methods forcing APM to run in a single-threaded manner.
   // Acquires both the render and capture locks.
-  explicit AudioProcessingImpl(const webrtc::Config& config);
+  explicit AudioProcessingImpl(const webrtz::Config& config);
   // AudioProcessingImpl takes ownership of capture post processor and
   // beamformer.
-  AudioProcessingImpl(const webrtc::Config& config,
+  AudioProcessingImpl(const webrtz::Config& config,
                       std::unique_ptr<CustomProcessing> capture_post_processor,
                       std::unique_ptr<CustomProcessing> render_pre_processor,
                       std::unique_ptr<EchoControlFactory> echo_control_factory,
@@ -58,7 +58,7 @@ class AudioProcessingImpl : public AudioProcessing {
                  ChannelLayout render_input_layout) override;
   int Initialize(const ProcessingConfig& processing_config) override;
   void ApplyConfig(const AudioProcessing::Config& config) override;
-  void SetExtraOptions(const webrtc::Config& config) override;
+  void SetExtraOptions(const webrtz::Config& config) override;
   void UpdateHistogramsOnCallEnd() override;
   void AttachAecDump(std::unique_ptr<AecDump> aec_dump) override;
   void DetachAecDump() override;
@@ -430,6 +430,6 @@ class AudioProcessingImpl : public AudioProcessing {
       red_render_signal_queue_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AUDIO_PROCESSING_IMPL_H_

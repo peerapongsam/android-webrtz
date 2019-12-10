@@ -14,7 +14,7 @@
 #include "modules/audio_device/include/audio_device.h"
 #include "modules/audio_device/include/audio_device_default.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FakeAudioDeviceModule
     : public webrtc_impl::AudioDeviceModuleDefault<AudioDeviceModule> {
@@ -27,6 +27,6 @@ class FakeAudioDeviceModule
   }
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_DEVICE_INCLUDE_FAKE_AUDIO_DEVICE_H_

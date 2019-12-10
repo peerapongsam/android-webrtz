@@ -15,7 +15,7 @@
 #include "modules/desktop_capture/test_utils.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -444,4 +444,4 @@ TEST(DesktopFrameRotationTest, DISABLED_PerformanceTestOnLargeScreen) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "modules/include/module.h"
 #include "modules/video_capture/video_capture_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoCaptureModule: public rtc::RefCountInterface {
  public:
@@ -117,5 +117,5 @@ protected:
   virtual ~VideoCaptureModule() {};
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_VIDEO_CAPTURE_VIDEO_CAPTURE_H_

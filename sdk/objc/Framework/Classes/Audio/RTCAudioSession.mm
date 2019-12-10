@@ -22,7 +22,7 @@
 #import "RTCAudioSession+Private.h"
 
 
-NSString * const kRTCAudioSessionErrorDomain = @"org.webrtc.RTCAudioSession";
+NSString * const kRTCAudioSessionErrorDomain = @"org.webrtz.RTCAudioSession";
 NSInteger const kRTCAudioSessionErrorLockRequired = -1;
 NSInteger const kRTCAudioSessionErrorConfiguration = -2;
 NSString * const kRTCAudioSessionOutputVolumeSelector = @"outputVolume";

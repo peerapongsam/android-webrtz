@@ -18,7 +18,7 @@
 #include "modules/video_coding/media_opt_util.h"
 #include "rtc_base/criticalsection.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class Clock;
 class FrameDropper;
@@ -77,6 +77,6 @@ class MediaOptimization {
       crit_sect_);
 };
 }  // namespace media_optimization
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_MEDIA_OPTIMIZATION_H_

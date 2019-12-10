@@ -15,7 +15,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RtcEventAlrState final : public RtcEvent {
  public:
@@ -29,5 +29,5 @@ class RtcEventAlrState final : public RtcEvent {
   const bool in_alr_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // LOGGING_RTC_EVENT_LOG_EVENTS_RTC_EVENT_ALR_STATE_H_

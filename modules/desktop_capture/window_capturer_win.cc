@@ -22,7 +22,7 @@
 #include "rtc_base/logging.h"
 #include "rtc_base/win32.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -336,4 +336,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawWindowCapturer(
   return std::unique_ptr<DesktopCapturer>(new WindowCapturerWin());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

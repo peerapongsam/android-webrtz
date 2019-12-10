@@ -19,7 +19,7 @@
 #include "test/frame_utils.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -49,7 +49,7 @@ rtc::scoped_refptr<I420Buffer> CreateGradient(int width, int height) {
 // The offsets and sizes describe the rectangle extracted from the
 // original (gradient) frame, in relative coordinates where the
 // original frame correspond to the unit square, 0.0 <= x, y < 1.0.
-void CheckCrop(const webrtc::I420BufferInterface& frame,
+void CheckCrop(const webrtz::I420BufferInterface& frame,
                double offset_x,
                double offset_y,
                double rel_width,
@@ -80,8 +80,8 @@ void CheckCrop(const webrtc::I420BufferInterface& frame,
 
 void CheckRotate(int width,
                  int height,
-                 webrtc::VideoRotation rotation,
-                 const webrtc::I420BufferInterface& rotated) {
+                 webrtz::VideoRotation rotation,
+                 const webrtz::I420BufferInterface& rotated) {
   int rotated_width = width;
   int rotated_height = height;
 
@@ -117,7 +117,7 @@ void CheckRotate(int width,
 
 TEST(TestVideoFrame, WidthHeightValues) {
   VideoFrame frame(I420Buffer::Create(10, 10, 10, 14, 90),
-                   webrtc::kVideoRotation_0,
+                   webrtz::kVideoRotation_0,
                    789 * rtc::kNumMicrosecsPerMillisec);
   const int valid_value = 10;
   EXPECT_EQ(valid_value, frame.width());
@@ -188,7 +188,7 @@ TEST(TestVideoFrame, ShallowCopy) {
 
 TEST(TestVideoFrame, TextureInitialValues) {
   VideoFrame frame = test::FakeNativeBuffer::CreateFrame(
-      640, 480, 100, 10, webrtc::kVideoRotation_0);
+      640, 480, 100, 10, webrtz::kVideoRotation_0);
   EXPECT_EQ(640, frame.width());
   EXPECT_EQ(480, frame.height());
   EXPECT_EQ(100u, frame.timestamp());
@@ -280,7 +280,7 @@ TEST(TestI420FrameBuffer, CropAndScale16x9) {
 }
 
 class TestI420BufferRotate
-    : public ::testing::TestWithParam<webrtc::VideoRotation> {};
+    : public ::testing::TestWithParam<webrtz::VideoRotation> {};
 
 TEST_P(TestI420BufferRotate, Rotates) {
   rtc::scoped_refptr<I420BufferInterface> buffer = CreateGradient(640, 480);
@@ -295,4 +295,4 @@ INSTANTIATE_TEST_CASE_P(Rotate, TestI420BufferRotate,
                                           kVideoRotation_180,
                                           kVideoRotation_270));
 
-}  // namespace webrtc
+}  // namespace webrtz

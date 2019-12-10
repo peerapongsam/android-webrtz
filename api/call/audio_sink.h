@@ -19,7 +19,7 @@
 #include <inttypes.h>
 #include <stddef.h>
 
-namespace webrtc {
+namespace webrtz {
 
 // Represents a simple push audio sink.
 class AudioSinkInterface {
@@ -48,6 +48,6 @@ class AudioSinkInterface {
   virtual void OnData(const Data& audio) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_CALL_AUDIO_SINK_H_

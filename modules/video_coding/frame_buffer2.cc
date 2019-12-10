@@ -24,7 +24,7 @@
 #include "system_wrappers/include/field_trial.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace video_coding {
 
 namespace {
@@ -155,7 +155,7 @@ FrameBuffer::ReturnReason FrameBuffer::NextFrame(
         timing_->SetJitterDelay(jitter_estimator_->GetJitterEstimate(rtt_mult));
         timing_->UpdateCurrentDelay(frame->RenderTime(), now_ms);
       } else {
-        if (webrtc::field_trial::IsEnabled("WebRTC-AddRttToPlayoutDelay"))
+        if (webrtz::field_trial::IsEnabled("WebRTC-AddRttToPlayoutDelay"))
           jitter_estimator_->FrameNacked();
       }
 
@@ -607,4 +607,4 @@ FrameBuffer::FrameInfo::FrameInfo(FrameInfo&&) = default;
 FrameBuffer::FrameInfo::~FrameInfo() = default;
 
 }  // namespace video_coding
-}  // namespace webrtc
+}  // namespace webrtz

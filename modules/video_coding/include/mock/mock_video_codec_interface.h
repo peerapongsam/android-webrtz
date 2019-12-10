@@ -18,7 +18,7 @@
 #include "test/gmock.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class MockEncodedImageCallback : public EncodedImageCallback {
  public:
@@ -81,6 +81,6 @@ class MockVideoDecoder : public VideoDecoder {
   MOCK_METHOD0(Copy, VideoDecoder*());
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INCLUDE_MOCK_MOCK_VIDEO_CODEC_INTERFACE_H_

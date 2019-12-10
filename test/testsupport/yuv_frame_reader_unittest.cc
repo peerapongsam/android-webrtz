@@ -16,7 +16,7 @@
 #include "test/testsupport/fileutils.h"
 #include "test/testsupport/frame_reader.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -33,7 +33,7 @@ class YuvFrameReaderTest : public testing::Test {
   ~YuvFrameReaderTest() override = default;
 
   void SetUp() override {
-    temp_filename_ = webrtc::test::TempFilename(webrtc::test::OutputPath(),
+    temp_filename_ = webrtz::test::TempFilename(webrtz::test::OutputPath(),
                                                 "yuv_frame_reader_unittest");
     FILE* dummy = fopen(temp_filename_.c_str(), "wb");
     fprintf(dummy, "%s", kInputFileContents.c_str());
@@ -79,4 +79,4 @@ TEST_F(YuvFrameReaderTest, ReadFrameUninitialized) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

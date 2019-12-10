@@ -52,7 +52,7 @@ using ::testing::Return;
 #endif
 #define PRINT(...) fprintf(stderr, __VA_ARGS__);
 
-namespace webrtc {
+namespace webrtz {
 
 // Number of callbacks (input or output) the tests waits for before we set
 // an event indicating that the test was OK.
@@ -530,7 +530,7 @@ class AudioDeviceTest : public ::testing::Test {
     char fname[64];
     snprintf(fname, sizeof(fname), "audio_device/audio_short%d",
              sample_rate / 1000);
-    std::string file_name(webrtc::test::ResourcePath(fname, "pcm"));
+    std::string file_name(webrtz::test::ResourcePath(fname, "pcm"));
     EXPECT_TRUE(test::FileExists(file_name));
 #ifdef ENABLE_DEBUG_PRINTF
     PRINTD("file name: %s\n", file_name.c_str());
@@ -847,10 +847,10 @@ TEST_F(AudioDeviceTest, DISABLED_MeasureLoopbackLatency) {
 // flag in AudioDeviceIOS.InitPlayOrRecord.
 TEST_F(AudioDeviceTest, testInterruptedAudioSession) {
   RTCAudioSession *session = [RTCAudioSession sharedInstance];
-  std::unique_ptr<webrtc::AudioDeviceIOS> audio_device;
-  audio_device.reset(new webrtc::AudioDeviceIOS());
-  std::unique_ptr<webrtc::AudioDeviceBuffer> audio_buffer;
-  audio_buffer.reset(new webrtc::AudioDeviceBuffer());
+  std::unique_ptr<webrtz::AudioDeviceIOS> audio_device;
+  audio_device.reset(new webrtz::AudioDeviceIOS());
+  std::unique_ptr<webrtz::AudioDeviceBuffer> audio_buffer;
+  audio_buffer.reset(new webrtz::AudioDeviceBuffer());
   audio_device->AttachAudioBuffer(audio_buffer.get());
   audio_device->Init();
   audio_device->InitPlayout();
@@ -877,4 +877,4 @@ TEST_F(AudioDeviceTest, testInterruptedAudioSession) {
   EXPECT_FALSE(audio_device->is_interrupted_);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

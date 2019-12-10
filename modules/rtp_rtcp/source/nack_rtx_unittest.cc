@@ -25,7 +25,7 @@
 #include "rtc_base/rate_limiter.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 const int kVideoNackListSize = 30;
 const uint32_t kTestSsrc = 3456;
@@ -51,7 +51,7 @@ class VerifyingMediaStream : public RtpPacketSinkInterface {
   std::list<uint16_t> sequence_numbers_;
 };
 
-class RtxLoopBackTransport : public webrtc::Transport {
+class RtxLoopBackTransport : public webrtz::Transport {
  public:
   explicit RtxLoopBackTransport(uint32_t rtx_ssrc)
       : count_(0),
@@ -207,7 +207,7 @@ class RtpRtcpRtxNackTest : public ::testing::Test {
     uint16_t nack_list[kVideoNackListSize];
     for (int frame = 0; frame < kNumFrames; ++frame) {
       EXPECT_TRUE(rtp_rtcp_module_->SendOutgoingData(
-          webrtc::kVideoFrameDelta, kPayloadType, timestamp, timestamp / 90,
+          webrtz::kVideoFrameDelta, kPayloadType, timestamp, timestamp / 90,
           payload_data, payload_data_length, nullptr, nullptr, nullptr));
       // Min required delay until retransmit = 5 + RTT ms (RTT = 0).
       fake_clock.AdvanceTimeMilliseconds(5);
@@ -255,7 +255,7 @@ TEST_F(RtpRtcpRtxNackTest, LongNackList) {
   // enough packets.
   for (int frame = 0; frame < kNumFrames; ++frame) {
     EXPECT_TRUE(rtp_rtcp_module_->SendOutgoingData(
-        webrtc::kVideoFrameDelta, kPayloadType, timestamp, timestamp / 90,
+        webrtz::kVideoFrameDelta, kPayloadType, timestamp, timestamp / 90,
         payload_data, payload_data_length, nullptr, nullptr, nullptr));
     // Prepare next frame.
     timestamp += 3000;
@@ -287,4 +287,4 @@ TEST_F(RtpRtcpRtxNackTest, RtxNack) {
   EXPECT_TRUE(ExpectedPacketsReceived());
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

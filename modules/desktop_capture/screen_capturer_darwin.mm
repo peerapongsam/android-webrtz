@@ -12,7 +12,7 @@
 
 #include "modules/desktop_capture/mac/screen_capturer_mac.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // static
 std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawScreenCapturer(
@@ -30,4 +30,4 @@ std::unique_ptr<DesktopCapturer> DesktopCapturer::CreateRawScreenCapturer(
   return capturer;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

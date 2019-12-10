@@ -12,7 +12,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TestEstimator : public VCMJitterEstimator {
  public:
@@ -158,4 +158,4 @@ TEST_F(TestVCMJitterEstimator, TestConvergence) {
   EXPECT_NE(low_rate_iterations, 0);
   EXPECT_LE(low_rate_iterations, regular_iterations);
 }
-}  // namespace webrtc
+}  // namespace webrtz

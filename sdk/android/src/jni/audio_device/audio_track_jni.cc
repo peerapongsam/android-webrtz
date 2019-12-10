@@ -20,7 +20,7 @@
 #include "sdk/android/generated_java_audio_device_jni/jni/WebRtcAudioTrack_jni.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace android_adm {
 
@@ -218,4 +218,4 @@ void AudioTrackJni::GetPlayoutData(JNIEnv* env,
 
 }  // namespace android_adm
 
-}  // namespace webrtc
+}  // namespace webrtz

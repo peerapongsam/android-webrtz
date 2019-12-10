@@ -17,7 +17,7 @@
 #include "modules/audio_coding/neteq/tools/neteq_input.h"
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 // This class provides a NetEqInput that takes audio from a generator object and
@@ -67,5 +67,5 @@ class EncodeNetEqInput : public NetEqInput {
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_ENCODE_NETEQ_INPUT_H_

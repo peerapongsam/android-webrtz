@@ -18,7 +18,7 @@
 #include "third_party/libyuv/include/libyuv/compare.h"
 #include "third_party/libyuv/include/libyuv/convert.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 struct AnalysisResult {
@@ -144,6 +144,6 @@ bool ExtractFrameFromY4mFile(const char* i420_file_name,
                              uint8_t* result_frame);
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // RTC_TOOLS_FRAME_ANALYZER_VIDEO_QUALITY_ANALYSIS_H_

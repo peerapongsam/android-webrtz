@@ -15,7 +15,7 @@
 #include "media/base/mediaconstants.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 TEST(InternalDecoderFactory, TestVP8) {
   InternalDecoderFactory factory;
@@ -24,4 +24,4 @@ TEST(InternalDecoderFactory, TestVP8) {
   EXPECT_TRUE(decoder);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

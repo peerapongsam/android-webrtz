@@ -77,7 +77,7 @@ class RelayServer : public rtc::MessageHandler,
                    RelayServerConnection*> ConnectionMap;
 
   rtc::Thread* thread_;
-  webrtc::Random random_;
+  webrtz::Random random_;
   bool log_bindings_;
   SocketList internal_sockets_;
   SocketList external_sockets_;

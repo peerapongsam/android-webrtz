@@ -16,7 +16,7 @@
 #include "api/jsepsessiondescription.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 std::unique_ptr<SessionDescriptionInterface> CloneSessionDescription(
     const SessionDescriptionInterface* sdesc) {
@@ -63,4 +63,4 @@ void SdpContentsForEach(SdpContentMutator fn,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

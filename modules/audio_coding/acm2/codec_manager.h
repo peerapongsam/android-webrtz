@@ -21,7 +21,7 @@
 #include "rtc_base/constructormagic.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioDecoder;
 class AudioEncoder;
@@ -71,5 +71,5 @@ class CodecManager final {
 };
 
 }  // namespace acm2
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_ACM2_CODEC_MANAGER_H_

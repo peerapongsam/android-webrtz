@@ -16,9 +16,9 @@
 
 #include "modules/rtp_rtcp/include/rtp_rtcp_defines.h"
 
-namespace webrtc {
+namespace webrtz {
 class RtcEventLog;
-namespace webrtc_cc {
+namespace webrtz_cc {
 
 class ProbeBitrateEstimator {
  public:
@@ -51,7 +51,7 @@ class ProbeBitrateEstimator {
   rtc::Optional<int> estimated_bitrate_bps_;
 };
 
-}  // namespace webrtc_cc
-}  // namespace webrtc
+}  // namespace webrtz_cc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_GOOG_CC_PROBE_BITRATE_ESTIMATOR_H_

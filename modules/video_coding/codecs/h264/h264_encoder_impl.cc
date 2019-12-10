@@ -25,7 +25,7 @@
 #include "rtc_base/timeutils.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -509,4 +509,4 @@ VideoEncoder::ScalingSettings H264EncoderImpl::GetScalingSettings() const {
                                        kHighH264QpThreshold);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

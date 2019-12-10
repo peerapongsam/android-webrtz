@@ -18,8 +18,8 @@
 
 namespace cricket {
 
-webrtc::SdpAudioFormat AudioCodecToSdpAudioFormat(const AudioCodec& ac) {
-  return webrtc::SdpAudioFormat(ac.name, ac.clockrate, ac.channels, ac.params);
+webrtz::SdpAudioFormat AudioCodecToSdpAudioFormat(const AudioCodec& ac) {
+  return webrtz::SdpAudioFormat(ac.name, ac.clockrate, ac.channels, ac.params);
 }
 
 PayloadTypeMapper::PayloadTypeMapper()
@@ -86,7 +86,7 @@ PayloadTypeMapper::PayloadTypeMapper()
 PayloadTypeMapper::~PayloadTypeMapper() = default;
 
 rtc::Optional<int> PayloadTypeMapper::GetMappingFor(
-    const webrtc::SdpAudioFormat& format) {
+    const webrtz::SdpAudioFormat& format) {
   auto iter = mappings_.find(format);
   if (iter != mappings_.end())
     return iter->second;
@@ -106,7 +106,7 @@ rtc::Optional<int> PayloadTypeMapper::GetMappingFor(
 }
 
 rtc::Optional<int> PayloadTypeMapper::FindMappingFor(
-    const webrtc::SdpAudioFormat& format) const {
+    const webrtz::SdpAudioFormat& format) const {
   auto iter = mappings_.find(format);
   if (iter != mappings_.end())
     return iter->second;
@@ -115,7 +115,7 @@ rtc::Optional<int> PayloadTypeMapper::FindMappingFor(
 }
 
 rtc::Optional<AudioCodec> PayloadTypeMapper::ToAudioCodec(
-    const webrtc::SdpAudioFormat& format) {
+    const webrtz::SdpAudioFormat& format) {
   // TODO(ossu): We can safely set bitrate to zero here, since that field is
   // not presented in the SDP. It is used to ferry around some target bitrate
   // values for certain codecs (ISAC and Opus) and in ways it really
@@ -133,8 +133,8 @@ rtc::Optional<AudioCodec> PayloadTypeMapper::ToAudioCodec(
 }
 
 bool PayloadTypeMapper::SdpAudioFormatOrdering::operator()(
-    const webrtc::SdpAudioFormat& a,
-    const webrtc::SdpAudioFormat& b) const {
+    const webrtz::SdpAudioFormat& a,
+    const webrtz::SdpAudioFormat& b) const {
   if (a.clockrate_hz == b.clockrate_hz) {
     if (a.num_channels == b.num_channels) {
       int name_cmp = STR_CASE_CMP(a.name.c_str(), b.name.c_str());

@@ -19,7 +19,7 @@
 #include "api/rtpsenderinterface.h"
 #include "rtc_base/refcount.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // https://w3c.github.io/webrtc-pc/#dom-rtcrtptransceiverdirection
 enum class RtpTransceiverDirection {
@@ -125,6 +125,6 @@ class RtpTransceiverInterface : public rtc::RefCountInterface {
   virtual ~RtpTransceiverInterface() = default;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_RTPTRANSCEIVERINTERFACE_H_

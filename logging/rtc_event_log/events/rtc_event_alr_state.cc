@@ -10,7 +10,7 @@
 
 #include "logging/rtc_event_log/events/rtc_event_alr_state.h"
 
-namespace webrtc {
+namespace webrtz {
 
 RtcEventAlrState::RtcEventAlrState(bool in_alr) : in_alr_(in_alr) {}
 
@@ -24,4 +24,4 @@ bool RtcEventAlrState::IsConfigEvent() const {
   return false;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

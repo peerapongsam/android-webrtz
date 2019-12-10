@@ -20,7 +20,7 @@
 #include "rtc_base/logging.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -245,4 +245,4 @@ MouseCursor* CreateMouseCursorFromHCursor(HDC dc, HCURSOR cursor) {
       image.release(), DesktopVector(hotspot_x, hotspot_y));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -37,7 +37,7 @@ DEFINE_string(input_file_2, "", "Second input. Default none.");
 DEFINE_string(input_file_3, "", "Third input. Default none.");
 DEFINE_string(input_file_4, "", "Fourth input. Default none.");
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class FilePlayingSource : public AudioMixer::Source {
@@ -88,7 +88,7 @@ class FilePlayingSource : public AudioMixer::Source {
   bool file_has_ended_ = false;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 namespace {
 
@@ -111,16 +111,16 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-  rtc::scoped_refptr<webrtc::AudioMixerImpl> mixer(
-      webrtc::AudioMixerImpl::Create(
-          std::unique_ptr<webrtc::OutputRateCalculator>(
-              new webrtc::DefaultOutputRateCalculator()),
+  rtc::scoped_refptr<webrtz::AudioMixerImpl> mixer(
+      webrtz::AudioMixerImpl::Create(
+          std::unique_ptr<webrtz::OutputRateCalculator>(
+              new webrtz::DefaultOutputRateCalculator()),
           false));
   mixer->SetLimiterType(
-      static_cast<webrtc::FrameCombiner::LimiterType>(FLAG_limiter));
+      static_cast<webrtz::FrameCombiner::LimiterType>(FLAG_limiter));
 
   const std::vector<std::string> input_files = parse_input_files();
-  std::vector<webrtc::test::FilePlayingSource> sources;
+  std::vector<webrtz::test::FilePlayingSource> sources;
   const int num_channels = FLAG_stereo ? 2 : 1;
   for (auto input_file : input_files) {
     sources.emplace_back(input_file);
@@ -155,9 +155,9 @@ int main(int argc, char* argv[]) {
   }
   std::cout << "Now mixing\n...\n";
 
-  webrtc::WavWriter wav_writer(FLAG_output_file, sample_rate, num_channels);
+  webrtz::WavWriter wav_writer(FLAG_output_file, sample_rate, num_channels);
 
-  webrtc::AudioFrame frame;
+  webrtz::AudioFrame frame;
 
   bool all_streams_finished = false;
   while (!all_streams_finished) {
@@ -170,7 +170,7 @@ int main(int argc, char* argv[]) {
 
     all_streams_finished =
         std::all_of(sources.begin(), sources.end(),
-                    [](const webrtc::test::FilePlayingSource& source) {
+                    [](const webrtz::test::FilePlayingSource& source) {
                       return source.FileHasEnded();
                     });
   }

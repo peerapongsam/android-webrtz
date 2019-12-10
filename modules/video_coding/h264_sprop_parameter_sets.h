@@ -16,7 +16,7 @@
 
 #include "rtc_base/constructormagic.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class H264SpropParameterSets {
  public:
@@ -31,6 +31,6 @@ class H264SpropParameterSets {
   RTC_DISALLOW_COPY_AND_ASSIGN(H264SpropParameterSets);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_H264_SPROP_PARAMETER_SETS_H_

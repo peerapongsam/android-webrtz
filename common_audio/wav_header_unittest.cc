@@ -13,7 +13,7 @@
 #include "common_audio/wav_header.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Doesn't take ownership of the buffer.
 class ReadableWavBuffer : public ReadableWav {
@@ -320,4 +320,4 @@ TEST(WavHeaderTest, ReadAtypicalWavHeader) {
   EXPECT_EQ(123457689u, num_samples);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

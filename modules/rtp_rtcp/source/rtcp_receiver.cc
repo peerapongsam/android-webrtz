@@ -43,7 +43,7 @@
 #include "rtc_base/trace_event.h"
 #include "system_wrappers/include/ntp_time.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 using rtcp::CommonHeader;
@@ -1049,4 +1049,4 @@ std::vector<rtcp::TmmbItem> RTCPReceiver::TmmbrReceived() {
   return candidates;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

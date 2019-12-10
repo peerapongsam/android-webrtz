@@ -33,7 +33,7 @@
 #include "rtc_base/arraysize.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // The filter coefficient a = 2*cos(2*pi*f/fs) for the low frequency tone, for
 // sample rates fs = {8000, 16000, 32000, 48000} Hz, and events 0 through 15.
@@ -215,4 +215,4 @@ bool DtmfToneGenerator::initialized() const {
   return initialized_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

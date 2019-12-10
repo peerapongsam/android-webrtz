@@ -14,7 +14,7 @@
 
 #include <cmath>
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 float BesselJ0(float x) {
@@ -111,4 +111,4 @@ void CovarianceMatrixGenerator::PhaseAlignmentMasks(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

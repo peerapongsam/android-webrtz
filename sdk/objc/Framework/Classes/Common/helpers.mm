@@ -21,7 +21,7 @@
 #include "rtc_base/logging.h"
 #include "sdk/objc/Framework/Classes/Common/helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace ios {
 
 NSString* NSStringFromStdString(const std::string& stdString) {
@@ -107,5 +107,5 @@ int GetProcessorCount() {
 }
 
 }  // namespace ios
-}  // namespace webrtc
+}  // namespace webrtz
 

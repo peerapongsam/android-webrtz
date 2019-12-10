@@ -17,7 +17,7 @@
 #include "modules/audio_processing/beamformer/matrix_test_helpers.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using std::complex;
 
@@ -227,4 +227,4 @@ TEST(CovarianceMatrixGeneratorTest, TestAngledCovarianceMatrix3Mics) {
 // PhaseAlignmentMasks is tested by AngledCovarianceMatrix and by
 // InitBeamformerWeights in BeamformerUnittest.
 
-}  // namespace webrtc
+}  // namespace webrtz

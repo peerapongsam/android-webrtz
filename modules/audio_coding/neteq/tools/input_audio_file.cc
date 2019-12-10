@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 InputAudioFile::InputAudioFile(const std::string file_name, bool loop_at_end)
@@ -87,4 +87,4 @@ void InputAudioFile::DuplicateInterleaved(const int16_t* source, size_t samples,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

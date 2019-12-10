@@ -17,11 +17,11 @@
 #include "rtc_base/event.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
-void CopyFromConfigToEvent(const webrtc::InternalAPMConfig& config,
-                           webrtc::audioproc::Config* pb_cfg) {
+void CopyFromConfigToEvent(const webrtz::InternalAPMConfig& config,
+                           webrtz::audioproc::Config* pb_cfg) {
   pb_cfg->set_aec_enabled(config.aec_enabled);
   pb_cfg->set_aec_delay_agnostic_enabled(config.aec_delay_agnostic_enabled);
   pb_cfg->set_aec_drift_compensation_enabled(
@@ -207,4 +207,4 @@ std::unique_ptr<AecDump> AecDumpFactory::Create(FILE* handle,
   return rtc::MakeUnique<AecDumpImpl>(std::move(debug_file), max_log_size_bytes,
                                       worker_queue);
 }
-}  // namespace webrtc
+}  // namespace webrtz

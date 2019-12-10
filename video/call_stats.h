@@ -21,7 +21,7 @@
 #include "rtc_base/thread_checker.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class CallStatsObserver;
 
@@ -118,6 +118,6 @@ class CallStats : public Module, public RtcpRttStats {
   RTC_DISALLOW_COPY_AND_ASSIGN(CallStats);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // VIDEO_CALL_STATS_H_

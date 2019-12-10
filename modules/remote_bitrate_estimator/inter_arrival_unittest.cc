@@ -14,7 +14,7 @@
 #include "modules/remote_bitrate_estimator/inter_arrival.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 enum {
@@ -533,4 +533,4 @@ TEST_F(InterArrivalTest, NegativeArrivalTimeJump) {
   EXPECT_EQ(size_delta, 0);
 }
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

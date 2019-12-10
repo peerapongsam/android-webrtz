@@ -18,7 +18,7 @@
 #include "modules/remote_bitrate_estimator/test/estimators/max_bandwidth_filter.h"
 #include "modules/remote_bitrate_estimator/test/estimators/min_rtt_filter.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 namespace {
@@ -550,4 +550,4 @@ FeedbackPacket* BbrBweReceiver::GetFeedback(int64_t now_ms) {
 }
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

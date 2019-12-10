@@ -16,7 +16,7 @@
 #include "modules/congestion_controller/network_control/include/network_types.h"
 #include "modules/congestion_controller/network_control/include/network_units.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class TargetTransferRateObserver {
  public:
@@ -104,6 +104,6 @@ class NetworkControllerFactoryInterface {
   virtual TimeDelta GetProcessInterval() const = 0;
   virtual ~NetworkControllerFactoryInterface() = default;
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_CONGESTION_CONTROLLER_NETWORK_CONTROL_INCLUDE_NETWORK_CONTROL_H_

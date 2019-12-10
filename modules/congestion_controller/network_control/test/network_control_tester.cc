@@ -15,7 +15,7 @@
 
 #include "modules/congestion_controller/network_control/include/network_control.h"
 #include "rtc_base/logging.h"
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 NetworkControlState::NetworkControlState() = default;
@@ -143,4 +143,4 @@ void NetworkControllerTester::RunSimulation(TimeDelta duration,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "common_audio/fir_filter.h"
 #include "rtc_base/memory/aligned_malloc.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class FIRFilterSSE2 : public FIRFilter {
  public:
@@ -34,6 +34,6 @@ class FIRFilterSSE2 : public FIRFilter {
   std::unique_ptr<float[], AlignedFreeDeleter> state_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_FIR_FILTER_SSE_H_

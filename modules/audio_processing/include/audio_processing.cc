@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 Beamforming::Beamforming()
     : enabled(false),
@@ -33,4 +33,4 @@ Beamforming::Beamforming(bool enabled,
 
 Beamforming::~Beamforming() {}
 
-}  // namespace webrtc
+}  // namespace webrtz

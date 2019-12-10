@@ -17,7 +17,7 @@
 
 #include "modules/include/module_common_types.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void Rtcp::Init(uint16_t start_sequence_number) {
   cycles_ = 0;
@@ -93,4 +93,4 @@ void Rtcp::GetStatistics(bool no_reset, RtcpStatistics* stats) {
   stats->jitter = jitter_ >> 4;  // Scaling from Q4.
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

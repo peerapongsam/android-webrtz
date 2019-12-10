@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 struct ExtensionInfo {
@@ -147,4 +147,4 @@ bool RtpHeaderExtensionMap::Register(int id,
   return true;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

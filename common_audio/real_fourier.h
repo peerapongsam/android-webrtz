@@ -20,7 +20,7 @@
 // input lengths. Also contains helper functions for buffer allocation, taking
 // care of any memory alignment requirements the underlying library might have.
 
-namespace webrtc {
+namespace webrtz {
 
 class RealFourier {
  public:
@@ -69,7 +69,7 @@ class RealFourier {
   virtual int order() const = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_AUDIO_REAL_FOURIER_H_
 

@@ -15,7 +15,7 @@
 #include "api/optional.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Computes the root mean square (RMS) level in dBFs (decibels from digital
 // full-scale) of audio data. The computation follows RFC 6465:
@@ -69,7 +69,7 @@ class RmsLevel {
   rtc::Optional<size_t> block_size_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_RMS_LEVEL_H_
 

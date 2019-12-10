@@ -14,7 +14,7 @@
 #include "modules/congestion_controller/bbr/bbr_network_controller.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 BbrNetworkControllerFactory::BbrNetworkControllerFactory() {}
 
@@ -28,4 +28,4 @@ TimeDelta BbrNetworkControllerFactory::GetProcessInterval() const {
   return TimeDelta::PlusInfinity();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -16,7 +16,7 @@
 #include "media/engine/webrtcvideodecoderfactory.h"
 #include "sdk/android/src/jni/jni_helpers.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace jni {
 
 // Implementation of Android MediaCodec based decoder factory.
@@ -41,6 +41,6 @@ class MediaCodecVideoDecoderFactory
 };
 
 }  // namespace jni
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // SDK_ANDROID_SRC_JNI_ANDROIDMEDIADECODER_H_

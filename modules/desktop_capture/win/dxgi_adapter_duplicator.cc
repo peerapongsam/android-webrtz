@@ -18,7 +18,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using Microsoft::WRL::ComPtr;
 
@@ -184,4 +184,4 @@ void DxgiAdapterDuplicator::TranslateRect(const DesktopVector& position) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

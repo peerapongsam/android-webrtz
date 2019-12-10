@@ -15,7 +15,7 @@
 #include "modules/audio_coding/audio_network_adaptor/event_log_writer.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -235,4 +235,4 @@ TEST(EventLogWriterTest, LogAfterGradualChange) {
     state.event_log_writer->MaybeLogEncoderConfig(state.runtime_config);
   }
 }
-}  // namespace webrtc
+}  // namespace webrtz

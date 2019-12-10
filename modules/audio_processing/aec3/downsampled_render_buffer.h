@@ -16,7 +16,7 @@
 #include "modules/audio_processing/aec3/aec3_common.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Holds the circular buffer of the downsampled render data.
 struct DownsampledRenderBuffer {
@@ -52,6 +52,6 @@ struct DownsampledRenderBuffer {
   int read = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AEC3_DOWNSAMPLED_RENDER_BUFFER_H_

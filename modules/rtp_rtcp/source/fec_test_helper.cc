@@ -18,7 +18,7 @@
 #include "modules/rtp_rtcp/source/rtp_utility.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace fec {
 
@@ -72,11 +72,11 @@ ForwardErrorCorrection::PacketList MediaPacketGenerator::ConstructMediaPackets(
     // Only push one (fake) frame to the FEC.
     media_packet->data[1] &= 0x7f;
 
-    webrtc::ByteWriter<uint16_t>::WriteBigEndian(&media_packet->data[2],
+    webrtz::ByteWriter<uint16_t>::WriteBigEndian(&media_packet->data[2],
                                                  seq_num);
-    webrtc::ByteWriter<uint32_t>::WriteBigEndian(&media_packet->data[4],
+    webrtz::ByteWriter<uint32_t>::WriteBigEndian(&media_packet->data[4],
                                                  time_stamp);
-    webrtc::ByteWriter<uint32_t>::WriteBigEndian(&media_packet->data[8], ssrc_);
+    webrtz::ByteWriter<uint32_t>::WriteBigEndian(&media_packet->data[8], ssrc_);
 
     // Generate random values for payload.
     for (size_t j = 12; j < media_packet->length; ++j)
@@ -225,4 +225,4 @@ void UlpfecPacketGenerator::SetRedHeader(uint8_t payload_type,
 
 }  // namespace fec
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

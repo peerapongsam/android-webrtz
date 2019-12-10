@@ -28,7 +28,7 @@
 #include "rtc_base/weak_ptr.h"
 #include "system_wrappers/include/ntp_time.h"
 
-namespace webrtc {
+namespace webrtz {
 //
 // Manage incoming and outgoing rtcp messages for multiple BUNDLED streams.
 //
@@ -100,6 +100,6 @@ class RtcpTransceiverImpl {
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RtcpTransceiverImpl);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_TRANSCEIVER_IMPL_H_

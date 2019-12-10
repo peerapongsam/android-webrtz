@@ -14,7 +14,7 @@
 #include "modules/include/module_common_types.h"
 #include "modules/video_coding/timestamp_map.h"
 
-namespace webrtc {
+namespace webrtz {
 
 VCMTimestampMap::VCMTimestampMap(size_t capacity)
     : ring_buffer_(new TimestampDataTuple[capacity]),
@@ -60,4 +60,4 @@ VCMFrameInformation* VCMTimestampMap::Pop(uint32_t timestamp) {
 bool VCMTimestampMap::IsEmpty() const {
   return (next_add_idx_ == next_pop_idx_);
 }
-}  // namespace webrtc
+}  // namespace webrtz

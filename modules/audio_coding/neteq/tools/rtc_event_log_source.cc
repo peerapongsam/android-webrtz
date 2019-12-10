@@ -19,7 +19,7 @@
 #include "modules/rtp_rtcp/include/rtp_header_parser.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 RtcEventLogSource* RtcEventLogSource::Create(const std::string& file_name) {
@@ -66,7 +66,7 @@ std::unique_ptr<Packet> RtcEventLogSource::NextPacket() {
       }
 
       if (parsed_stream_.GetMediaType(packet->header().ssrc, direction) !=
-          webrtc::ParsedRtcEventLog::MediaType::AUDIO) {
+          webrtz::ParsedRtcEventLog::MediaType::AUDIO) {
         continue;
       }
 
@@ -105,4 +105,4 @@ bool RtcEventLogSource::OpenFile(const std::string& file_name) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -21,7 +21,7 @@
 #include "modules/audio_coding/neteq/tools/neteq_test.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class NetEqDelayAnalyzer : public test::NetEqPostInsertPacket,
@@ -72,5 +72,5 @@ class NetEqDelayAnalyzer : public test::NetEqPostInsertPacket,
 };
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_CODING_NETEQ_TOOLS_NETEQ_DELAY_ANALYZER_H_

@@ -20,7 +20,7 @@
 #include "common_video/include/video_frame.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class RTPFragmentationHeader;
 // TODO(pbos): Expose these through a public (root) header or change these APIs.
@@ -75,6 +75,6 @@ class VideoDecoder {
   virtual const char* ImplementationName() const;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_VIDEO_CODECS_VIDEO_DECODER_H_

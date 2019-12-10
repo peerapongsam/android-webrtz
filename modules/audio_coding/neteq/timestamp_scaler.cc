@@ -13,7 +13,7 @@
 #include "modules/audio_coding/neteq/decoder_database.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 void TimestampScaler::Reset() {
   first_packet_received_ = false;
@@ -84,4 +84,4 @@ uint32_t TimestampScaler::ToExternal(uint32_t internal_timestamp) const {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

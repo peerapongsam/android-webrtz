@@ -34,7 +34,7 @@
 #include "test/mock_audio_encoder_factory.h"
 #include "test/mock_transport.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 
@@ -269,7 +269,7 @@ struct ConfigHelper {
     using testing::SetArgReferee;
 
     std::vector<ReportBlock> report_blocks;
-    webrtc::ReportBlock block = kReportBlock;
+    webrtz::ReportBlock block = kReportBlock;
     report_blocks.push_back(block);  // Has wrong SSRC.
     block.source_SSRC = kSsrc;
     report_blocks.push_back(block);  // Correct block.
@@ -553,4 +553,4 @@ TEST(AudioSendStreamTest, UpdateLifetime) {
   EXPECT_EQ(helper.active_lifetime()->Length(), kTimeBetweenSendRtpCallsMs);
 }
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

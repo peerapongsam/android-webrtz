@@ -19,7 +19,7 @@
 #include "modules/congestion_controller/send_time_history.h"
 #include "modules/remote_bitrate_estimator/test/bwe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -71,6 +71,6 @@ class SendSideBweReceiver : public BweReceiver {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_ESTIMATORS_SEND_SIDE_H_

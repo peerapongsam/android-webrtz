@@ -152,7 +152,7 @@ PerfResultsLogger& GetPerfResultsLogger() {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 void ClearPerfResults() {
@@ -206,4 +206,4 @@ void PrintResultList(const std::string& measurement,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

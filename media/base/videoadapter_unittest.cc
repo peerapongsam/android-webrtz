@@ -67,7 +67,7 @@ class VideoAdapterTest : public testing::Test {
           dropped_frames_(0),
           last_adapt_was_no_op_(false) {}
 
-    void AdaptFrame(const webrtc::VideoFrame& frame) {
+    void AdaptFrame(const webrtz::VideoFrame& frame) {
       const int in_width = frame.width();
       const int in_height = frame.height();
       int cropped_width;

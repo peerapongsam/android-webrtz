@@ -15,7 +15,7 @@
 
 #include "modules/remote_bitrate_estimator/test/bwe.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 class TcpBweReceiver : public BweReceiver {
@@ -34,5 +34,5 @@ class TcpBweReceiver : public BweReceiver {
 };
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_REMOTE_BITRATE_ESTIMATOR_TEST_ESTIMATORS_TCP_H_

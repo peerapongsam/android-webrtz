@@ -20,7 +20,7 @@
 #include "modules/include/module_common_types.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class PushSincResampler;
 class IFChannelBuffer;
@@ -161,6 +161,6 @@ class AudioBuffer {
   std::vector<std::unique_ptr<PushSincResampler>> output_resamplers_;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_AUDIO_BUFFER_H_

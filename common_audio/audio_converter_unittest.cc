@@ -20,7 +20,7 @@
 #include "rtc_base/format_macros.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 typedef std::unique_ptr<ChannelBuffer<float>> ScopedBuffer;
 
@@ -158,4 +158,4 @@ TEST(AudioConverterTest, ConversionsPassSNRThreshold) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

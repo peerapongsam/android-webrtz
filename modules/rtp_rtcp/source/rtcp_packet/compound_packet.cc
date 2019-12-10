@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace rtcp {
 
 CompoundPacket::CompoundPacket() = default;
@@ -44,4 +44,4 @@ size_t CompoundPacket::BlockLength() const {
 }
 
 }  // namespace rtcp
-}  // namespace webrtc
+}  // namespace webrtz

@@ -21,7 +21,7 @@
 #include "system_wrappers/include/clock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -320,4 +320,4 @@ TEST(FlexfecSenderTest, SetsAndGetsRtpState) {
             updated_rtp_state.start_timestamp);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

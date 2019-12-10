@@ -10,7 +10,7 @@
 
 #include "modules/video_coding/codec_timer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -54,4 +54,4 @@ int64_t VCMCodecTimer::RequiredDecodeTimeMs() const {
 VCMCodecTimer::Sample::Sample(int64_t decode_time_ms, int64_t sample_time_ms)
     : decode_time_ms(decode_time_ms), sample_time_ms(sample_time_ms) {}
 
-}  // namespace webrtc
+}  // namespace webrtz

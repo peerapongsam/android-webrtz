@@ -18,7 +18,7 @@
 #include "test/video_renderer.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 class D3dRenderer : public VideoRenderer {
@@ -27,7 +27,7 @@ class D3dRenderer : public VideoRenderer {
                              size_t height);
   virtual ~D3dRenderer();
 
-  void OnFrame(const webrtc::VideoFrame& frame) override;
+  void OnFrame(const webrtz::VideoFrame& frame) override;
 
  private:
   D3dRenderer(size_t width, size_t height);
@@ -48,6 +48,6 @@ class D3dRenderer : public VideoRenderer {
   rtc::scoped_refptr<IDirect3DVertexBuffer9> vertex_buffer_;
 };
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // TEST_WIN_D3D_RENDERER_H_

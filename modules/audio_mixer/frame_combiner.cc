@@ -25,7 +25,7 @@
 #include "rtc_base/logging.h"
 #include "system_wrappers/include/metrics.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Stereo, 48 kHz, 10 ms.
@@ -41,7 +41,7 @@ std::unique_ptr<AudioProcessing> CreateLimiter() {
   std::unique_ptr<AudioProcessing> limiter(
       AudioProcessingBuilder().Create(config));
   RTC_DCHECK(limiter);
-  webrtc::AudioProcessing::Config apm_config;
+  webrtz::AudioProcessing::Config apm_config;
   apm_config.residual_echo_detector.enabled = false;
   limiter->ApplyConfig(apm_config);
 
@@ -69,7 +69,7 @@ void SetAudioFrameFields(const std::vector<AudioFrame*>& mix_list,
                          size_t number_of_streams,
                          AudioFrame* audio_frame_for_mixing) {
   const size_t samples_per_channel = static_cast<size_t>(
-      (sample_rate * webrtc::AudioMixerImpl::kFrameDurationInMs) / 1000);
+      (sample_rate * webrtz::AudioMixerImpl::kFrameDurationInMs) / 1000);
 
   // TODO(minyue): Issue bugs.webrtc.org/3390.
   // Audio frame timestamp. The 'timestamp_' field is set to dummy
@@ -221,7 +221,7 @@ void FrameCombiner::Combine(const std::vector<AudioFrame*>& mix_list,
                       number_of_streams, audio_frame_for_mixing);
 
   const size_t samples_per_channel = static_cast<size_t>(
-      (sample_rate * webrtc::AudioMixerImpl::kFrameDurationInMs) / 1000);
+      (sample_rate * webrtz::AudioMixerImpl::kFrameDurationInMs) / 1000);
 
   for (const auto* frame : mix_list) {
     RTC_DCHECK_EQ(samples_per_channel, frame->samples_per_channel_);
@@ -287,4 +287,4 @@ void FrameCombiner::LogMixingStats(const std::vector<AudioFrame*>& mix_list,
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

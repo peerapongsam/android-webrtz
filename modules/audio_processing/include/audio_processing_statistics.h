@@ -13,7 +13,7 @@
 
 #include "api/optional.h"
 
-namespace webrtc {
+namespace webrtz {
 // This version of the stats uses Optionals, it will replace the regular
 // AudioProcessingStatistics struct.
 struct AudioProcessingStats {
@@ -51,6 +51,6 @@ struct AudioProcessingStats {
   rtc::Optional<int32_t> delay_ms;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_AUDIO_PROCESSING_INCLUDE_AUDIO_PROCESSING_STATISTICS_H_

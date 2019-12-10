@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 // Used to estimate rolling average of packets per frame.
 static const float kFastConvergeMultiplier = 0.4f;
@@ -67,6 +67,6 @@ enum VCMNaluCompleteness {
   kNaluIncomplete,    // Packet is not beginning or end of NALU
   kNaluEnd,           // Packet is the end of a NALU
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_JITTER_BUFFER_COMMON_H_

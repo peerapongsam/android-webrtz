@@ -17,7 +17,7 @@
 #include "modules/remote_bitrate_estimator/test/packet_sender.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 namespace bwe {
 
@@ -446,4 +446,4 @@ double MetricRecorder::ObjectiveFunction() const {
 
 }  // namespace bwe
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

@@ -35,7 +35,7 @@
 #include "rtc_base/thread_annotations.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class ModuleRtpRtcpImpl;
 class RtcEventLog;
@@ -290,6 +290,6 @@ class RTCPSender {
 
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(RTCPSender);
 };
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_RTP_RTCP_SOURCE_RTCP_SENDER_H_

@@ -24,7 +24,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 
 // Method for performing the simulations needed to test the main filter update
@@ -236,4 +236,4 @@ TEST(ShadowFilterUpdateGain, SaturationBehavior) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

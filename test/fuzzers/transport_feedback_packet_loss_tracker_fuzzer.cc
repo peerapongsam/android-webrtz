@@ -16,7 +16,7 @@
 #include "modules/rtp_rtcp/source/byte_io.h"
 #include "modules/rtp_rtcp/source/rtcp_packet/transport_feedback.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -276,4 +276,4 @@ void FuzzOneInput(const uint8_t* data, size_t size) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

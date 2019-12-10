@@ -17,7 +17,7 @@
 #include "test/gtest.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 static const int kFrameWidth = 4;
@@ -186,4 +186,4 @@ TEST_F(FrameGeneratorTest, SlideGenerator) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

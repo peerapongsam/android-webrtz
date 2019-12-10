@@ -16,7 +16,7 @@
 #include "rtc_base/numerics/safe_conversions.h"
 #include "rtc_base/timeutils.h"
 
-namespace webrtc {
+namespace webrtz {
 
 AudioFrame::AudioFrame() {
   // Visual Studio doesn't like this in the class definition.
@@ -182,4 +182,4 @@ const int16_t* AudioFrame::empty_data() {
   return kEmptyData;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

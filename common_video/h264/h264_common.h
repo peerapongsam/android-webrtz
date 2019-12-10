@@ -16,7 +16,7 @@
 
 #include "rtc_base/buffer.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace H264 {
 // The size of a full NALU start sequence {0 0 0 1}, used for the first NALU
@@ -83,6 +83,6 @@ std::vector<uint8_t> ParseRbsp(const uint8_t* data, size_t length);
 // sequence.
 void WriteRbsp(const uint8_t* bytes, size_t length, rtc::Buffer* destination);
 }  // namespace H264
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_H264_H264_COMMON_H_

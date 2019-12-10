@@ -10,7 +10,7 @@
 
 #include "rtc_base/testutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace testing {
 
 StreamSink::StreamSink() = default;
@@ -85,4 +85,4 @@ void StreamSource::Close() {
 }
 
 }  // namespace testing
-}  // namespace webrtc
+}  // namespace webrtz

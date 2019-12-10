@@ -16,7 +16,7 @@
 #include "test/field_trial.h"
 #include "test/testsupport/fileutils.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 
 namespace {
@@ -98,4 +98,4 @@ TEST_F(VideoProcessorIntegrationTestMediaCodec,
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

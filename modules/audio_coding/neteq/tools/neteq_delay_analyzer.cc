@@ -19,7 +19,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 // Helper function for NetEqDelayAnalyzer::CreateGraphs. Returns the
@@ -333,4 +333,4 @@ void NetEqDelayAnalyzer::CreatePythonScript(
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

@@ -13,7 +13,7 @@
 #include "api/video/video_rotation.h"
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Please refer to http://www.etsi.org/deliver/etsi_ts/126100_126199/126114/
 // 12.07.00_60/ts_126114v120700p.pdf Section 7.4.5. The rotation of a frame is
@@ -52,5 +52,5 @@ inline VideoRotation ConvertCVOByteToVideoRotation(uint8_t cvo_byte) {
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_RTP_RTCP_INCLUDE_RTP_CVO_H_

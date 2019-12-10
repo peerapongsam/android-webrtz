@@ -39,7 +39,7 @@
     return false;                                           \
   }(op)
 
-namespace webrtc {
+namespace webrtz {
 
 OpenSLESRecorder::OpenSLESRecorder(AudioManager* audio_manager)
     : audio_manager_(audio_manager),
@@ -431,4 +431,4 @@ SLuint32 OpenSLESRecorder::GetBufferCount() {
   return state.count;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

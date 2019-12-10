@@ -15,7 +15,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 CaptureResultDesktopCapturerWrapper::CaptureResultDesktopCapturerWrapper(
     std::unique_ptr<DesktopCapturer> base_capturer,
@@ -46,4 +46,4 @@ void CaptureResultDesktopCapturerWrapper::OnCaptureResult(
   callback_->OnCaptureResult(result, std::move(frame));
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

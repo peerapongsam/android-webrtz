@@ -12,7 +12,7 @@
 
 #include "rtc_base/checks.h"
 
-namespace webrtc {
+namespace webrtz {
 
 rtc::scoped_refptr<I420BufferInterface> VideoFrameBuffer::GetI420() {
   RTC_CHECK(type() == Type::kI420);
@@ -77,4 +77,4 @@ int I444BufferInterface::ChromaHeight() const {
   return height();
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

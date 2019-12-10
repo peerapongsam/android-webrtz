@@ -13,7 +13,7 @@
 
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 #define MASK_32_BITS(x) (0xFFFFFFFF & (x))
 
@@ -36,6 +36,6 @@ inline int32_t VCMId(const int32_t vcmId, const int32_t receiverId = 0) {
   return static_cast<int32_t>((vcmId << 16) + receiverId);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_INTERNAL_DEFINES_H_

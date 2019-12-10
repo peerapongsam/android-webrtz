@@ -15,7 +15,7 @@
 #include <limits>
 #include <utility>
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 
@@ -264,4 +264,4 @@ size_t AudioEncoderCng::SamplesPer10msFrame() const {
   return rtc::CheckedDivExact(10 * SampleRateHz(), 1000);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

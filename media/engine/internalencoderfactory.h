@@ -16,7 +16,7 @@
 
 #include "api/video_codecs/video_encoder_factory.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class InternalEncoderFactory : public VideoEncoderFactory {
  public:
@@ -28,6 +28,6 @@ class InternalEncoderFactory : public VideoEncoderFactory {
       const SdpVideoFormat& format) override;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MEDIA_ENGINE_INTERNALENCODERFACTORY_H_

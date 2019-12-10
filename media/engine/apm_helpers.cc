@@ -14,7 +14,7 @@
 #include "modules/audio_processing/include/audio_processing.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace apm_helpers {
 
 void Init(AudioProcessing* apm) {
@@ -167,4 +167,4 @@ void SetTypingDetectionStatus(AudioProcessing* apm, bool enable) {
   RTC_LOG(LS_INFO) << "VAD set to " << enable << " for typing detection.";
 }
 }  // namespace apm_helpers
-}  // namespace webrtc
+}  // namespace webrtz

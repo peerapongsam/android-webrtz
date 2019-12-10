@@ -13,7 +13,7 @@
 
 #include "common_types.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 class VideoBitrateAllocator {
  public:
@@ -34,6 +34,6 @@ class VideoBitrateAllocationObserver {
       const BitrateAllocation& allocation) = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_INCLUDE_VIDEO_BITRATE_ALLOCATOR_H_

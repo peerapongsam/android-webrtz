@@ -20,7 +20,7 @@
 #include "rtc_base/ptr_util.h"
 #include "system_wrappers/include/clock.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace {
 // Min packet size for BestFittingPacket() to honor.
 constexpr size_t kMinPacketRequestBytes = 50;
@@ -287,4 +287,4 @@ RtpPacketHistory::PacketState RtpPacketHistory::StoredPacketToPacketState(
   return state;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

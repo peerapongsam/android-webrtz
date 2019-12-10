@@ -14,7 +14,7 @@
 #include "modules/audio_processing/aec3/echo_canceller3.h"
 #include "rtc_base/ptr_util.h"
 
-namespace webrtc {
+namespace webrtz {
 
 EchoCanceller3Factory::EchoCanceller3Factory() {}
 
@@ -24,4 +24,4 @@ EchoCanceller3Factory::EchoCanceller3Factory(const EchoCanceller3Config& config)
 std::unique_ptr<EchoControl> EchoCanceller3Factory::Create(int sample_rate_hz) {
   return rtc::MakeUnique<EchoCanceller3>(config_, sample_rate_hz, true);
 }
-}  // namespace webrtc
+}  // namespace webrtz

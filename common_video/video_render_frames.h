@@ -18,7 +18,7 @@
 #include "api/optional.h"
 #include "api/video/video_frame.h"
 
-namespace webrtc {
+namespace webrtz {
 
 // Class definitions
 class VideoRenderFrames {
@@ -47,6 +47,6 @@ class VideoRenderFrames {
   int64_t last_render_time_ms_ = 0;
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // COMMON_VIDEO_VIDEO_RENDER_FRAMES_H_

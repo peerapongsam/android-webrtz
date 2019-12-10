@@ -15,7 +15,7 @@
 #include "rtc_base/checks.h"
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 PlayoutDelayOracle::PlayoutDelayOracle()
     : high_sequence_number_(0),
@@ -63,4 +63,4 @@ void PlayoutDelayOracle::OnReceivedRtcpReportBlocks(
   }
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

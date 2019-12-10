@@ -16,7 +16,7 @@
 #include "rtc_base/constructormagic.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 const unsigned int kDefaultBitrateKbps = 1000;
 const unsigned int kDefaultFrameRate = 25;
@@ -67,6 +67,6 @@ class StreamGenerator {
   RTC_DISALLOW_COPY_AND_ASSIGN(StreamGenerator);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // MODULES_VIDEO_CODING_TEST_STREAM_GENERATOR_H_

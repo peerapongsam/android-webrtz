@@ -16,7 +16,7 @@
 #include "rtc_base/fakeclock.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 namespace test {
 namespace {
 inline size_t FrameSize(const size_t& min_frame_size,
@@ -307,4 +307,4 @@ TEST(TestVCMEncodedFrameCallback, RestoresCaptureTimestamps) {
 }
 
 }  // namespace test
-}  // namespace webrtc
+}  // namespace webrtz

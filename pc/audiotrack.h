@@ -20,7 +20,7 @@
 #include "rtc_base/scoped_ref_ptr.h"
 #include "rtc_base/thread_checker.h"
 
-namespace webrtc {
+namespace webrtz {
 
 class AudioTrack : public MediaStreamTrack<AudioTrackInterface>,
                    public ObserverInterface {
@@ -54,6 +54,6 @@ class AudioTrack : public MediaStreamTrack<AudioTrackInterface>,
   RTC_DISALLOW_IMPLICIT_CONSTRUCTORS(AudioTrack);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // PC_AUDIOTRACK_H_

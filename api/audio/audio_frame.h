@@ -18,7 +18,7 @@
 #include "rtc_base/deprecation.h"
 #include "typedefs.h"  // NOLINT(build/include)
 
-namespace webrtc {
+namespace webrtz {
 
 /* This class holds up to 60 ms of super-wideband (32 kHz) stereo audio. It
  * allows for adding and subtracting frames while keeping track of the resulting
@@ -147,6 +147,6 @@ class AudioFrame {
   RTC_DISALLOW_COPY_AND_ASSIGN(AudioFrame);
 };
 
-}  // namespace webrtc
+}  // namespace webrtz
 
 #endif  // API_AUDIO_AUDIO_FRAME_H_

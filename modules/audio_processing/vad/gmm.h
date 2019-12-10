@@ -11,7 +11,7 @@
 #ifndef MODULES_AUDIO_PROCESSING_VAD_GMM_H_
 #define MODULES_AUDIO_PROCESSING_VAD_GMM_H_
 
-namespace webrtc {
+namespace webrtz {
 
 // A structure that specifies a GMM.
 // A GMM is formulated as
@@ -41,5 +41,5 @@ struct GmmParameters {
 // acceptable dimension by the following function -1 is returned.
 double EvaluateGmm(const double* x, const GmmParameters& gmm_parameters);
 
-}  // namespace webrtc
+}  // namespace webrtz
 #endif  // MODULES_AUDIO_PROCESSING_VAD_GMM_H_

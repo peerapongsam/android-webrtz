@@ -94,7 +94,7 @@ TEST(CpuTimeTest, MAYBE_TEST(TwoThreads)) {
 
 TEST(CpuTimeTest, MAYBE_TEST(Sleeping)) {
   int64_t process_start_time_nanos = GetProcessCpuTimeNanos();
-  webrtc::SleepMs(kProcessingTimeMillisecs);
+  webrtz::SleepMs(kProcessingTimeMillisecs);
   int64_t process_duration_nanos =
       GetProcessCpuTimeNanos() - process_start_time_nanos;
   // Sleeping should not introduce any additional CPU time.

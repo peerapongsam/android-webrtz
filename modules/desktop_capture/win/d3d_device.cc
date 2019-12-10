@@ -14,7 +14,7 @@
 
 #include "rtc_base/logging.h"
 
-namespace webrtc {
+namespace webrtz {
 
 using Microsoft::WRL::ComPtr;
 
@@ -97,4 +97,4 @@ std::vector<D3dDevice> D3dDevice::EnumDevices() {
   return result;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

@@ -12,7 +12,7 @@
 #include "rtc_base/random.h"
 #include "test/gtest.h"
 
-namespace webrtc {
+namespace webrtz {
 
 namespace {
 constexpr size_t kWindowSize = 20;
@@ -69,4 +69,4 @@ TEST(DeprecatedMedianSlopeEstimator, JitteryLineSlopeZero) {
   TestEstimator(0, kAvgTimeBetweenPackets / 3.0, 0.02);
 }
 
-}  // namespace webrtc
+}  // namespace webrtz

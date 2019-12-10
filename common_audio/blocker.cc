@@ -96,7 +96,7 @@ size_t gcd(size_t a, size_t b) {
 
 }  // namespace
 
-namespace webrtc {
+namespace webrtz {
 
 Blocker::Blocker(size_t chunk_size,
                  size_t block_size,
@@ -235,4 +235,4 @@ void Blocker::ProcessChunk(const float* const* input,
   frame_offset_ = first_frame_in_block - chunk_size_;
 }
 
-}  // namespace webrtc
+}  // namespace webrtz
