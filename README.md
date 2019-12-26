@@ -1,5 +1,5 @@
 # WebRTZ
-This repo fork from google webRTC and change package name to webrtz to avoid conflict with some library
+This repo fork from [Google WebRTC](https://webrtc.org/native-code/android/) and change package name to webrtz to avoid conflict with some library
 
 # Install
 
